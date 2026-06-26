@@ -34,8 +34,8 @@ GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD", "")
 SENDER_NAME        = "Emanuel Conti"
 BRAND              = "SocialPerks"
 
-DELAY_EMAIL_2_DAYS = 4    # giorni tra email 1 → email 2
-DELAY_EMAIL_3_DAYS = 8    # giorni tra email 1 → email 3
+DELAY_EMAIL_2_DAYS = 3    # giorni tra email 1 → email 2
+DELAY_EMAIL_3_DAYS = 7    # giorni tra email 1 → email 3
 MAX_PER_DAY        = 15   # email max/giorno (evita spam flag)
 PAUSE_BETWEEN      = 12   # secondi di pausa tra email
 CHECK_HOUR         = 9    # ora del controllo giornaliero automatico
@@ -62,66 +62,63 @@ def get_template(step: int, restaurant_name: str) -> tuple[str, str]:
     """Ritorna (subject, body) per il dato step (1, 2 o 3)."""
 
     if step == 1:
-        subject = f"Collaboration contenu créatif – étudiants × {restaurant_name}"
-        body = f"""\
+        subject = f"Partenariat {BRAND} × {restaurant_name}"
+        body = """\
 Bonjour,
 
-Je me permets de vous contacter au nom de {BRAND}, une plateforme qui connecte \
-des étudiants créatifs (photographie, vidéo, Reels) avec des restaurants instagrammables \
-comme {restaurant_name}.
+Je me permets de vous contacter au nom de SocialPerks, une plateforme actuellement développée par des étudiants issus d'ESADE et du réseau international CEMS.
 
-Le principe est simple : nos étudiants viennent dîner chez vous et créent du contenu \
-professionnel pour vos réseaux sociaux, en échange d'un repas offert. Zéro frais pour vous.
+Notre ambition est de créer une plateforme qui aide les restaurants à gagner en visibilité auprès des étudiants, qu'ils soient locaux ou internationaux, tout en leur permettant de découvrir de nouveaux établissements partenaires.
 
-Ce que vous recevez gratuitement :
-• 8 à 15 photos haute qualité de vos plats et de votre salle
-• 1 à 3 Reels / vidéos courtes pour votre Instagram
-• Un regard frais et créatif sur votre établissement
+Le projet est actuellement en phase de lancement dans plusieurs villes européennes, avec l'objectif de constituer un réseau de partenaires de qualité dès aujourd'hui.
 
-Seriez-vous ouvert(e) à en discuter quelques minutes ?
+Nous invitons les restaurants intéressés à manifester leur intérêt en signant notre lettre d'intérêt, accessible ici :
 
-Je reste disponible pour un appel ou un café à votre convenance.
+https://socialperks-fr.vercel.app/
 
-Cordialement,
-{SENDER_NAME}
-{BRAND} — www.socialperks.fr"""
+Cette lettre ne constitue pas un engagement commercial. Elle nous permet simplement d'identifier les établissements souhaitant être informés et participer au lancement de la plateforme.
+
+Nous serions ravis de compter votre établissement parmi nos premiers partenaires.
+
+Bien cordialement,
+
+L'équipe SocialPerks"""
 
     elif step == 2:
-        subject = f"Re: Collaboration contenu – {BRAND} × {restaurant_name}"
-        body = f"""\
+        subject = f"Re: Partenariat {BRAND} × {restaurant_name}"
+        body = """\
 Bonjour,
 
-Je me permets de revenir vers vous suite à mon message de la semaine dernière.
+Je me permets de revenir vers vous concernant SocialPerks.
 
-{BRAND} propose à {restaurant_name} une collaboration sans frais : nos étudiants créent \
-du contenu photo/vidéo professionnel pour votre Instagram, en échange d'un repas offert.
+Nous constituons actuellement notre premier réseau de restaurants partenaires avant le lancement de la plateforme.
 
-Avez-vous eu l'occasion d'y réfléchir ? Je suis disponible pour répondre à toutes \
-vos questions ou vous montrer des exemples de collaborations précédentes.
+Si le projet vous intéresse, vous pouvez simplement signer notre lettre d'intérêt afin d'être informé des prochaines étapes :
 
-Cordialement,
-{SENDER_NAME}
-{BRAND} — www.socialperks.fr"""
+https://socialperks-fr.vercel.app/
+
+Je reste à votre disposition si vous avez la moindre question.
+
+Bien cordialement,
+
+L'équipe SocialPerks"""
 
     elif step == 3:
-        subject = f"Dernière prise de contact – {BRAND} × {restaurant_name}"
-        body = f"""\
+        subject = f"Dernier message – {BRAND} × {restaurant_name}"
+        body = """\
 Bonjour,
 
-C'est mon dernier message au sujet d'une possible collaboration entre {BRAND} \
-et {restaurant_name}.
+Il s'agit de mon dernier message concernant SocialPerks.
 
-Si le moment n'est pas opportun, ou si vous préférez être recontacté(e) plus tard, \
-faites-le moi savoir — je comprendrai tout à fait.
+Si vous souhaitez faire partie des premiers restaurants partenaires et suivre l'évolution du projet, vous pouvez manifester votre intérêt en remplissant notre lettre d'intérêt :
 
-Dans le cas contraire, je serais ravi(e) d'échanger avec vous : nos étudiants créent \
-gratuitement du contenu photo/vidéo professionnel pour votre Instagram.
+https://socialperks-fr.vercel.app/
 
-Merci pour votre temps et bonne continuation.
+Merci pour votre temps et au plaisir d'échanger avec vous.
 
-Cordialement,
-{SENDER_NAME}
-{BRAND} — www.socialperks.fr"""
+Bien cordialement,
+
+L'équipe SocialPerks"""
 
     else:
         raise ValueError(f"Step non valido: {step}")
