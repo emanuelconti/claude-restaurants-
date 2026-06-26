@@ -15,6 +15,7 @@ Setup:
 
 import sqlite3
 import smtplib
+import socket
 import time
 import logging
 import os
@@ -211,9 +212,17 @@ def send_email(to: str, subject: str, body: str) -> bool:
     msg.attach(MIMEText(body, "plain", "utf-8"))
 
     try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as srv:
-            srv.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-            srv.sendmail(GMAIL_USER, to, msg.as_string())
+        # Force IPv4 — patch getaddrinfo to filter out IPv6 results
+        _orig_gai = socket.getaddrinfo
+        socket.getaddrinfo = lambda *a, **kw: [
+            r for r in _orig_gai(*a, **kw) if r[0] == socket.AF_INET
+        ]
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as srv:
+                srv.login(GMAIL_USER, GMAIL_APP_PASSWORD)
+                srv.sendmail(GMAIL_USER, to, msg.as_string())
+        finally:
+            socket.getaddrinfo = _orig_gai
         log.info("✅ [STEP] → %s | %s", to, subject[:55])
         return True
     except smtplib.SMTPAuthenticationError:
