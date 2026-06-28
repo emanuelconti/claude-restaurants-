@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "SocialPerks Bot"
           git config user.email "socialperks-bot@github.com"
-          git add -f outreach_*.db
+          git add -f outreach_*.db outreach_tracking.db
           git diff --cached --quiet || git commit -m "Update outreach tracking [skip ci]"
           git push

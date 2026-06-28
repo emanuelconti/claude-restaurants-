@@ -44,7 +44,7 @@ BASE_DIR = Path(__file__).parent
 
 # Città → (excel_file, db_file)
 CITY_MAP = {
-    "paris":       ("SocialPerks_Restaurants_Paris.xlsx",       "outreach_paris.db"),
+    "paris":       ("SocialPerks_Restaurants_Paris.xlsx",       "outreach_tracking.db"),
     "paris_new":   ("SocialPerks_Restaurants_Paris_New.xlsx",   "outreach_paris_new.db"),
     "vienna":      ("SocialPerks_Restaurants_Vienna.xlsx",      "outreach_vienna.db"),
     "casablanca":  ("SocialPerks_Restaurants_Casablanca.xlsx",  "outreach_casablanca.db"),
