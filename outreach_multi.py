@@ -291,7 +291,7 @@ def run_daily_outreach() -> int:
 
     new_rests = conn.execute("""
         SELECT r.id, r.name, r.email FROM restaurants r
-        WHERE r.id NOT IN (SELECT restaurant_id FROM outreach WHERE step = 1)
+        WHERE r.id NOT IN (SELECT restaurant_id FROM outreach WHERE step = 1 AND status = 'sent')
           AND r.id NOT IN (SELECT restaurant_id FROM outreach WHERE status IN ('opted_out','replied'))
         LIMIT ?
     """, (MAX_PER_DAY,)).fetchall()
