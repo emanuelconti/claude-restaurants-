@@ -25,7 +25,7 @@ jobs:
 
       - name: Esegui outreach tutte le città
         env:
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD || 'ublm ewaw eoiy biet' }}
         run: python3 outreach_multi.py run --all
 
       - name: Salva stato tracking (tutti i DB)
