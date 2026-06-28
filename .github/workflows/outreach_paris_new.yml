@@ -1,0 +1,37 @@
+name: SocialPerks Outreach — Nuovi Parigi
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # ogni giorno alle 09:00 ora di Parigi (UTC+2)
+  workflow_dispatch:        # permette avvio manuale dal sito GitHub
+
+jobs:
+  outreach:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installa dipendenze
+        run: pip install -r requirements_outreach.txt
+
+      - name: Esegui outreach Nuovi Parigi
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python outreach_paris_new.py run
+
+      - name: Salva stato tracking
+        run: |
+          git config user.name "SocialPerks Bot"
+          git config user.email "socialperks-bot@github.com"
+          git add -f outreach_tracking_paris_new.db
+          git diff --cached --quiet || git commit -m "Update outreach tracking Paris New [skip ci]"
+          git push
