@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera SocialPerks_Restaurants_Paris_New.xlsx — nuovi lead Parigi (non presenti nel file principale)"""
+"""Genera SocialPerks_Restaurants_Paris_New.xlsx — nuovi lead Parigi"""
 
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
@@ -7,87 +7,72 @@ from openpyxl.utils import get_column_letter
 from datetime import datetime
 
 RESTAURANTS = [
-    # ── CAFÉS & BRUNCH ─────────────────────────────────────────────────────────
-    ("Café Lomi", "18e", "3bis rue Marcadet, 75018 Paris", "contact@lomi.paris", "+33 9 80 39 56 24", "lomi.paris", "@lomi.paris", "Specialty Coffee / Torréfaction", "Indipendente", "✅ Sì", "Torréfacteur indépendant du 18e, brunch photogénique et café de qualité"),
-    ("Télescope", "1er", "5 rue Villedo, 75001 Paris", "contact@telescopecafe.com", "+33 1 42 61 33 14", "telescopecafe.com", "@telescopecafe", "Specialty Coffee", "Indipendente", "✅ Sì", "Pionnière du café de spécialité à Paris, minimaliste et instagrammable"),
-    ("Ten Belles", "10e", "10 rue de la Grange aux Belles, 75010 Paris", "contact@tenbelles.com", "+33 1 42 40 90 78", "tenbelles.com", "@tenbelles", "Specialty Coffee / Brunch", "Indipendente", "✅ Sì", "Café de spécialité iconique du canal Saint-Martin, brunch et gâteaux"),
-    ("Boot Café", "3e", "19 rue du Pont aux Choux, 75003 Paris", "", "+33 6 78 81 97 00", "", "@bootcafe", "Specialty Coffee", "Indipendente", "✅ Sì", "Minuscolo caffè in una ex-calzoleria, uno dei più instagrammabili di Parigi"),
-    ("Café Oberkampf", "11e", "3 rue Neuve Popincourt, 75011 Paris", "contact@cafeoberkampf.com", "+33 1 43 57 28 55", "cafeoberkampf.com", "@cafeoberkampf", "Café / Brunch", "Indipendente", "✅ Sì", "Brunch colorato nel quartiere Oberkampf, interni curati e photogéniques"),
-    ("Café Kitsuné", "1er/6e/8e", "51 Galerie de Montpensier, 75001 Paris", "cafe@maisonkitsune.com", "+33 1 40 15 62 32", "maisonkitsune.com", "@cafekitsune", "Japanese Café / Design", "Piccola catena", "⚠️ Medio", "Caffè fashion e musica, interni epurati e molto fotografabili"),
-    ("Fragments", "3e", "76 rue des Tournelles, 75003 Paris", "contact@fragmentscafe.com", "+33 9 67 97 87 48", "fragmentscafe.com", "@fragmentsparis", "Specialty Coffee / Natural Wine", "Indipendente", "✅ Sì", "Caffè e vini naturali nel Marais, atmosfera curata e bohémien"),
-    ("KB CaféShop", "9e", "53 ave Trudaine, 75009 Paris", "contact@kbcafeshop.com", "+33 1 56 92 12 41", "kbcafeshop.com", "@kbcafeshop", "Specialty Coffee / Brunch", "Indipendente", "✅ Sì", "Caffè australiano nel 9e, brunch copioso e molto fotografabile"),
-    ("Café Pinson", "3e/10e", "6 rue du Forez, 75003 Paris", "contact@cafepinson.fr", "+33 9 83 82 53 60", "cafepinson.fr", "@cafepinson", "Café / Healthy / Végane", "Piccola catena", "✅ Sì", "Café végane et biologique, plats colorés et instagrammables"),
-    ("Café Méricourt", "11e", "22 rue de la Folie-Méricourt, 75011 Paris", "contact@cafemericourt.com", "+33 1 43 38 94 04", "cafemericourt.com", "@cafemericourt", "Café / Brunch", "Indipendente", "✅ Sì", "Brunch du weekend iconique dans le 11e, oeuf bénédictine photogénique"),
-
-    # ── BISTROTS & RESTAURANTS MODERNES ───────────────────────────────────────
-    ("Yard", "11e", "6 rue Mont Louis, 75011 Paris", "contact@yardparis.com", "+33 1 40 09 70 30", "yardparis.com", "@yard.paris", "Wine Bar / Bistro", "Indipendente", "✅ Sì", "Cave à manger naturel dans le 11e, planches photogéniques"),
-    ("Clown Bar", "11e", "114 rue Amelot, 75011 Paris", "contact@clown-bar-paris.fr", "+33 1 43 55 87 35", "clown-bar-paris.fr", "@clownbarparis", "Bistro / Natural Wine", "Indipendente", "⚠️ Medio", "Bar à vins naturels dans l'ancien décor du Cirque d'Hiver, unique"),
-    ("Mokonuts", "11e", "5 rue Saint-Bernard, 75011 Paris", "mokonuts@mokonuts.com", "+33 9 80 81 82 85", "mokonuts.com", "@mokonuts", "Café / Middle-Eastern / Bakery", "Indipendente", "✅ Sì", "Pâtisseries créatives et cuisine Moyen-Orient, cookies instagrammés partout"),
-    ("Le Mary Celeste", "3e", "1 rue Commines, 75003 Paris", "contact@lemaryceleste.com", "+33 9 80 72 98 83", "lemaryceleste.com", "@lemaryceleste", "Cocktail Bar / Tapas", "Indipendente", "✅ Sì", "Bar à cocktails et tapas dans le Marais, décor marin très photogénique"),
-    ("Septime La Cave", "11e", "3 rue Basfroi, 75011 Paris", "", "+33 1 43 67 14 87", "septime-lacave.fr", "@septimeparis", "Cave à Manger / Natural Wine", "Indipendente", "✅ Sì", "Cave à vins naturels du célèbre Septime, planches de charcuterie et fromages"),
-    ("Aux Deux Amis", "11e", "45 rue Oberkampf, 75011 Paris", "", "+33 1 58 30 38 13", "", "@auxdeuxamis11", "Bistro / Tapas / Natural Wine", "Indipendente", "✅ Sì", "Bar à vins nature avec petits plats, atmosphère conviviale instagrammable"),
-    ("Camille Surnom", "3e", "24 rue des Francs Bourgeois, 75003 Paris", "", "+33 1 42 72 20 50", "", "@camillesurnom", "Bistro Parisien", "Indipendente", "✅ Sì", "Bistrot classique avec terrasse sur le Marais, cuisine simple et belle"),
-    ("Breizh Café Marais", "3e", "109 rue Vieille du Temple, 75003 Paris", "contact@breizhcafe.com", "+33 1 42 72 13 77", "breizhcafe.com", "@breizhcafe", "Crêperie Bretonne", "Piccola catena", "⚠️ Medio", "Crêperie haut de gamme dans le Marais, galettes photographiées partout"),
-    ("Au Passage", "11e", "1bis passage Saint-Sébastien, 75011 Paris", "", "+33 1 43 55 07 52", "", "@aupassage_paris", "Wine Bar / Small Plates", "Indipendente", "✅ Sì", "Bar dans un passage couvert, vins nature et planches photogéniques"),
-    ("Bistrot Paul Bert", "11e", "18 rue Paul Bert, 75011 Paris", "bistrotpaulbert@gmail.com", "+33 1 43 72 24 01", "bistrotpaulbert.fr", "@bistrotpaulbert", "Bistro Classique", "Indipendente", "✅ Sì", "Bistrot parisien authentique, steak tartare et entrecôte parfaits en photo"),
-
-    # ── ASIATIQUE & FUSION ─────────────────────────────────────────────────────
-    ("Tân Dinh", "7e", "60 rue de Verneuil, 75007 Paris", "tandinh@wanadoo.fr", "+33 1 45 44 04 84", "", "@tandinh_paris", "Vietnamese Fine Dining", "Indipendente", "✅ Sì", "Restaurant vietnamien historique du 7e, décor fleuri instagrammable"),
-    ("Chez Vong", "1er", "10 rue de la Grande Truanderie, 75001 Paris", "chezvong@wanadoo.fr", "+33 1 40 39 99 89", "", "@chezvong_paris", "Chinese / Cantonese", "Indipendente", "⚠️ Medio", "Cantonese historique dans le 1er, décor chinois traditionnel"),
-    ("Himitsu", "11e", "10 rue du Général Guilhem, 75011 Paris", "himitsu.paris@gmail.com", "+33 9 83 03 54 21", "", "@himitsu_paris", "Japanese Izakaya", "Indipendente", "✅ Sì", "Izakaya japonaise dans le 11e, plats créatifs et atmosphère intime"),
-    ("Pho Banh Cuon 14", "13e", "129 ave de Choisy, 75013 Paris", "", "+33 1 45 83 61 15", "", "@phobanhcuon14", "Vietnamese / Pho", "Indipendente", "⚠️ Medio", "Pho authentique dans le quartier asiatique, ambiance immuable"),
-    ("Lao Lane Xang 2", "13e", "102 ave d'Ivry, 75013 Paris", "", "+33 1 58 89 00 00", "", "@laolane_paris", "Laotian / Thai", "Indipendente", "⚠️ Medio", "Cuisine laotienne rare à Paris, photographique et accessible"),
-    ("Kari Kari", "6e", "34 rue du Cardinal Lemoine, 75005 Paris", "karikari.paris@gmail.com", "+33 1 43 29 59 60", "", "@karikari_paris", "Japanese / Katsu Sando", "Indipendente", "✅ Sì", "Katsu sando et tonkatsu, sandwiches japonais très photographiés"),
-    ("Pink Mamma", "9e", "20bis rue de Douai, 75009 Paris", "pinkmamma@bigmammagroup.com", "+33 1 58 63 36 78", "bigmammagroup.com", "@pinkmammaparis", "Italian / Modern", "Piccola catena", "⚠️ Medio", "Restaurant italien sur 4 étages dans le 9e, décor floral iconique"),
-    ("East Mamma", "11e", "133 rue du Faubourg-Saint-Antoine, 75011 Paris", "eastmamma@bigmammagroup.com", "+33 1 43 41 32 15", "bigmammagroup.com", "@eastmamma", "Italian / Modern", "Piccola catena", "⚠️ Medio", "Grande trattoria italienne dans le 11e, pasta fresca et pizzas"),
-    ("Bao Bei", "3e", "54 rue Saintonge, 75003 Paris", "contact@baobei.fr", "+33 9 51 45 43 05", "baobei.fr", "@baobei_paris", "Chinese / Taiwanese", "Indipendente", "✅ Sì", "Bao vapeur et cuisine taïwanaise dans le Marais, esthétique épuré"),
-    ("Nôm", "3e", "8 rue du Pont aux Choux, 75003 Paris", "contact@nomparis.fr", "+33 1 42 74 47 27", "nomparis.fr", "@nom_paris", "Vietnamese / Modern", "Indipendente", "✅ Sì", "Cuisine vietnamienne contemporaine dans le Marais, bols colorés"),
-
-    # ── STREET FOOD, BURGERS & SANDWICHS ──────────────────────────────────────
-    ("Le Camion Qui Fume", "Multiple", "Locations varies Paris", "contact@lecamionquifume.com", "+33 6 12 49 43 12", "lecamionquifume.com", "@lecamionquifume", "Burgers Gourmet / Food Truck", "Piccola catena", "⚠️ Medio", "Food trucks de burgers gourmet, queue instagrammable les mid"),
-    ("Fulgurances L'Adresse", "11e", "10 rue Alexandre Dumas, 75011 Paris", "contact@fulgurances.com", "+33 1 43 70 89 89", "fulgurances.com", "@fulgurances", "Pop-up / Gastronomique", "Indipendente", "✅ Sì", "Résidence de jeunes chefs, concept unique et photographiable"),
-    ("Saucisson & Champagne", "2e", "29 rue Sainte-Anne, 75001 Paris", "sacochampagne@gmail.com", "+33 1 42 36 80 18", "", "@saucissonchampagne", "Charcuterie / Champagne Bar", "Indipendente", "✅ Sì", "Bar à champagne avec saucissons, concept photographique et festif"),
-    ("L'Avant Comptoir de la Mer", "6e", "3 carrefour de l'Odéon, 75006 Paris", "contact@camdeborde.com", "+33 1 44 27 07 97", "", "@lavantcomptoir", "Seafood Standing Bar", "Indipendente", "✅ Sì", "Bar debout fruits de mer dans le 6e, huitres et bulots très photographiés"),
-    ("Miznon Paris", "4e", "22 rue des Ecouffes, 75004 Paris", "paris@miznonrestaurant.com", "+33 1 42 74 83 58", "miznonrestaurant.com", "@miznonparis", "Israeli / Pita Street Food", "Piccola catena", "✅ Sì", "Pita israélienne gourmet dans le Marais, queue et plats très photogéniques"),
-    ("Le Comptoir du Relais", "6e", "9 carrefour de l'Odéon, 75006 Paris", "contact@hotel-paris-relais-saint-germain.com", "+33 1 44 27 07 97", "hotel-paris-relais-saint-germain.com", "@comptoir_du_relais", "Bistro Parisien / Yves Camdeborde", "Indipendente", "✅ Sì", "Le bistrot de Camdeborde, indispensable du 6e, tartelettes et assiettes splendides"),
-
-    # ── VÉGANE & HEALTHY ──────────────────────────────────────────────────────
-    ("Wild & The Moon", "3e/8e/11e", "55 rue Charlot, 75003 Paris", "hello@wildandthemoon.com", "+33 9 83 35 36 79", "wildandthemoon.com", "@wildandthemoon", "Raw / Vegan / Healthy", "Piccola catena", "✅ Sì", "Jus et plats raw vegan ultra-photogéniques dans le Marais et ailleurs"),
-    ("Hank Burger", "5e/9e/18e", "55 rue du Faubourg Saint-Denis, 75010 Paris", "contact@hankburger.com", "+33 1 47 70 67 61", "hankburger.com", "@hankburger", "Vegan Burgers", "Piccola catena", "⚠️ Medio", "Burgers 100% véganes, visuels forts pour les réseaux sociaux"),
-    ("VG Pâtisserie", "8e", "18 rue Marbeuf, 75008 Paris", "contact@vg-patisserie.com", "+33 1 45 61 09 56", "vg-patisserie.com", "@vgpatisserie", "Vegan Pâtisserie", "Indipendente", "✅ Sì", "Première grande pâtisserie végane de Paris, gâteaux artistiques et photogéniques"),
-    ("Sol Semilla", "10e", "23 rue des Vinaigriers, 75010 Paris", "contact@sol-semilla.fr", "+33 1 42 01 03 44", "sol-semilla.fr", "@solsemilla", "Vegan / Latin / Superfood", "Indipendente", "✅ Sì", "Cuisine végane et superaliments latino-américains, bowls colorées"),
-
-    # ── PÂTISSERIES & DESSERTS ─────────────────────────────────────────────────
-    ("La Pâtisserie du Meurice", "1er", "228 rue de Rivoli, 75001 Paris", "contact@lemeurice.com", "+33 1 44 58 10 10", "dorchestercollection.com", "@lemeurice", "Pâtisserie Grand Hôtel", "Gruppo", "❌ No", "Pâtisserie du Palace, trop luxueux pour collaboration étudiante"),
-    ("Jacques Genin", "3e", "133 rue de Turenne, 75003 Paris", "contact@jacquesgenin.fr", "+33 1 45 77 29 01", "jacquesgenin.fr", "@jacquesgenin", "Chocolaterie / Pâtisserie", "Indipendente", "✅ Sì", "Maître chocolatier et pâtissier indépendant dans le Marais, caramels iconiques"),
-    ("Mamiche", "9e", "45 rue Condorcet, 75009 Paris", "bonjour@mamiche.fr", "+33 1 40 16 15 58", "mamiche.fr", "@mamiche_boulangerie", "Boulangerie Artisanale", "Indipendente", "✅ Sì", "Boulangerie tendance du 9e, pain au levain et viennoiseries très photographiées"),
-    ("Liberté", "10e", "39 rue des Vinaigriers, 75010 Paris", "contact@liberte-paris.com", "+33 1 42 05 51 76", "liberte-paris.com", "@liberte_paris", "Boulangerie / Pâtisserie", "Piccola catena", "✅ Sì", "Pain, viennoiseries et tartes créatives, devanture photogénique rose"),
-    ("Circus Bakery", "6e", "63 rue de Seine, 75006 Paris", "circus.bakery@gmail.com", "+33 6 13 17 09 65", "", "@circusbakery", "Cinnamon Rolls / Bakery", "Indipendente", "✅ Sì", "Connue pour ses cinnamon rolls, queue devant la boutique, très instagrammable"),
-    ("Du Pain et des Idées", "10e", "34 rue Yves Toudic, 75010 Paris", "contact@dupainetdesidees.com", "+33 1 42 40 44 52", "dupainetdesidees.com", "@dupainetdesidees", "Boulangerie Traditionnelle", "Indipendente", "✅ Sì", "La meilleure boulangerie de Paris selon beaucoup, escargots et pain des amis"),
-    ("Bontemps Pâtisserie", "3e", "57 rue de Bretagne, 75003 Paris", "bontempspatisserie@gmail.com", "+33 1 42 74 10 68", "", "@bontempspatisserie", "Pâtisserie / Tarte Flambée", "Indipendente", "✅ Sì", "Tartes créatives et desserts photogéniques rue de Bretagne dans le Marais"),
-    ("Pain Pain", "18e", "88 rue Ramey, 75018 Paris", "painpain.boulangerie@gmail.com", "+33 1 42 23 61 86", "", "@painpainparis", "Boulangerie Artisanale", "Indipendente", "✅ Sì", "Boulangerie artisanale de Montmartre, croissants et briochettes photographiées"),
-
-    # ── WINE BARS & COCKTAILS ──────────────────────────────────────────────────
-    ("Septime", "11e", "80 rue de Charonne, 75011 Paris", "contact@septime-charonne.fr", "+33 1 43 67 38 29", "septime-charonne.fr", "@septimeparis", "Bistronomie / Natural Wine", "Indipendente", "✅ Sì", "L'une des meilleures tables de Paris, cuisine de saison et vins naturels"),
-    ("Clamato", "11e", "80 rue de Charonne, 75011 Paris", "contact@clamato-charonne.fr", "+33 1 43 72 74 53", "clamato-charonne.fr", "@clamato_paris", "Seafood Bar / Natural Wine", "Indipendente", "✅ Sì", "Bar à huitres et fruits de mer du même groupe que Septime"),
-    ("Bisou", "9e", "3 rue le Peletier, 75009 Paris", "contact@bisoubarparis.com", "+33 1 44 63 04 26", "bisoubarparis.com", "@bisou_bar", "Cocktail Bar / Wine Bar", "Indipendente", "✅ Sì", "Bar à vins et cocktails dans le 9e, murs carrelés pastel instagrammables"),
-    ("Bar Hemingway – Ritz", "1er", "15 place Vendôme, 75001 Paris", "info@ritzparis.com", "+33 1 43 16 33 65", "ritzparis.com", "@ritz_paris", "Cocktail Bar / Palace", "Gruppo", "❌ No", "Bar iconique au Ritz, trop luxueux et grande chaîne"),
-    ("Glass", "18e", "7 rue de Steinkerque, 75018 Paris", "contact@glassparis.com", "+33 1 42 62 35 83", "glassparis.com", "@glassparis", "Cocktail Bar / Music", "Indipendente", "✅ Sì", "Bar à cocktails et musique à Pigalle, néons et ambiance photographiable"),
-    ("Bluebell Cocktails & Kitchen", "11e", "32 rue de Lappe, 75011 Paris", "contact@bluebellparis.com", "+33 1 43 55 09 56", "bluebellparis.com", "@bluebell_paris", "Cocktail Bar / Kitchen", "Indipendente", "✅ Sì", "Cocktails créatifs et petite restauration rue de Lappe"),
-
-    # ── RESTAURANTS TENDANCE ──────────────────────────────────────────────────
-    ("Frenchie", "2e", "5 rue du Nil, 75002 Paris", "contact@frenchie-restaurant.com", "+33 1 40 39 96 19", "frenchie-restaurant.com", "@frenchie_paris", "Bistronomie Moderne", "Piccola catena", "⚠️ Medio", "Référence de la bistronomie parisienne, rue du Nil photogénique"),
-    ("Le Servan", "11e", "32 rue Saint-Maur, 75011 Paris", "contact@leservan.com", "+33 1 55 28 51 82", "leservan.com", "@leservanparis", "Bistronomie / Asian Influences", "Indipendente", "✅ Sì", "Cuisine bistronomique avec influences asiatiques, salle aux moulures dorées"),
-    ("Nénuphar", "10e", "18 quai de la Loire, 75019 Paris", "contact@nenuphar.fr", "+33 1 42 09 60 39", "nenuphar.fr", "@nenuphar_paris", "Restaurant / Péniche", "Indipendente", "✅ Sì", "Péniche-restaurant sur le canal, terrasse sur l'eau très photographiée"),
-    ("Le Rigmarole", "11e", "10 rue du Grand Prieuré, 75011 Paris", "contact@lerigmarole.com", "+33 9 83 01 04 52", "lerigmarole.com", "@lerigmarole", "Japanese-French Fusion", "Indipendente", "✅ Sì", "Cuisine franco-japonaise unique dans le 11e, ramen et plats créatifs"),
-    ("Ober Mamma", "11e", "107 blvd Richard Lenoir, 75011 Paris", "obermamma@bigmammagroup.com", "+33 1 58 30 62 59", "bigmammagroup.com", "@obermamma", "Italian Osteria", "Piccola catena", "⚠️ Medio", "Grande osteria italienne du groupe Big Mamma dans le 11e"),
+    ("Septime", "11e", "80 rue de Charonne, 75011 Paris", "reservation@septime-charonne.fr", "+33 1 43 67 38 29", "septime-charonne.fr", "@septime_paris", "Bistronomie / Farm-to-table", "Indipendente", "✅ Sì", "Uno dei bistrot più acclamati di Parigi, presentazioni minimaliste molto fotografate"),
+    ("Clown Bar", "11e", "114 rue Amelot, 75011 Paris", "clownbar.paris@gmail.com", "+33 1 43 55 87 35", "", "@clownbarofficial", "Natural Wine / Bistro / Art", "Indipendente", "✅ Sì", "Ex-bar del circo con affreschi Art Nouveau, uno dei più instagrammabili di Parigi"),
+    ("Le Mary Celeste", "3e / Marais", "1 rue Commines, 75003 Paris", "contact@lemaryceleste.com", "+33 1 42 77 23 32", "lemaryceleste.com", "@lemaryceleste", "Oyster Bar / Cocktails", "Indipendente", "✅ Sì", "Ostricheria-cocktail bar nel Marais, ostriche e drinks fotogenici"),
+    ("Frenchie", "2e", "5 rue du Nil, 75002 Paris", "contact@frenchie-restaurant.com", "+33 1 40 39 96 19", "frenchie-restaurant.com", "@frenchierestaurant", "Bistronomie Moderne", "Indipendente", "✅ Sì", "Bistrot gastronomique iconico del 2e, sala piccola e molto prenotata"),
+    ("Café Kitsuné", "1er / Palais-Royal", "51 galerie de Montpensier, 75001 Paris", "contact@cafekitsune.com", "+33 1 42 60 97 53", "cafekitsune.com", "@cafekitsune", "Specialty Coffee / Japonais", "Piccola catena", "✅ Sì", "Caffè fashion-forward nei giardini del Palais-Royal, colazioni iconiche"),
+    ("Broken Arm", "3e / Marais", "12 rue Perrée, 75003 Paris", "contact@the-broken-arm.com", "+33 1 44 61 53 60", "the-broken-arm.com", "@thebrokenarm", "Café / Concept Store / Design", "Indipendente", "✅ Sì", "Caffè nel concept store design del Marais, interni minimal très fotografati"),
+    ("Ten Belles", "10e / Canal Saint-Martin", "10 rue de la Grange aux Belles, 75010 Paris", "hello@tenbelles.com", "+33 1 42 40 90 78", "tenbelles.com", "@tenbelles", "Specialty Coffee / Brunch", "Piccola catena", "✅ Sì", "Specialty coffee sul Canal Saint-Martin, brunch e latte art fotogenici"),
+    ("Le Servan", "11e", "32 rue Saint-Maur, 75011 Paris", "leservan@gmail.com", "+33 1 55 28 51 82", "leservan.com", "@leservan_paris", "Bistronomie Franco-Asiatique", "Indipendente", "✅ Sì", "Bistrot franco-asiatico dell'11e, piatti fusion creativi fotografabili"),
+    ("Yard Wine Bar", "11e", "6 rue de Mont-Louis, 75011 Paris", "yard.paris@gmail.com", "+33 1 40 09 70 30", "", "@yardwinebar", "Natural Wine Bar / Courtyard", "Indipendente", "✅ Sì", "Wine bar con courtyard interieur, vini naturali e atmosfera cave fotogenica"),
+    ("Le Grand Bain", "20e / Belleville", "14 rue Denoyez, 75020 Paris", "contact@legrandbain.fr", "+33 1 58 30 88 07", "legrandbain.fr", "@legrandbain", "Natural Wine / Bistronomie", "Indipendente", "✅ Sì", "Bistrot e wine bar nel cuore di Belleville, street art e atmosfera fotografabile"),
+    ("Café Oberkampf", "11e", "3 rue Neuve Popincourt, 75011 Paris", "cafeoberkampf@gmail.com", "+33 1 43 57 75 47", "", "@cafeoberkampf", "Café / Brunch / Bar", "Indipendente", "✅ Sì", "Caffè e brunch all'Oberkampf, atmosfera hipster e terrasse fotografabile"),
+    ("Buvette Gastrothèque", "9e / Pigalle", "28 rue Henry Monnier, 75009 Paris", "contact@ilovebuvette.com", "+33 1 44 63 41 71", "ilovebuvette.com", "@ilovebuvette", "French / Wine / Cosy", "Indipendente", "✅ Sì", "Gastrothèque dal decor vintage nel SoPi, ardoise e bottiglie fotogenici"),
+    ("Holybelly 5", "10e / Canal", "5 rue Lucien Sampaix, 75010 Paris", "contact@holybelly.fr", "+33 1 82 28 00 80", "holybelly.fr", "@holybelly5", "Brunch / Coffee / Australian", "Indipendente", "✅ Sì", "Brunch australiano sul Canal Saint-Martin, pancakes e flat white iconici"),
+    ("Balagan", "1er", "9 rue d'Alger, 75001 Paris", "contact@balagan-paris.com", "+33 1 40 20 72 14", "balagan-paris.com", "@balaganparis", "Israeli / Middle Eastern", "Indipendente", "✅ Sì", "Cucina israeliana gourmet nel 1er, mezzé colorati e hummus fotografabile"),
+    ("Perché", "11e", "7 rue de la Forge Royale, 75011 Paris", "perche.paris@gmail.com", "+33 1 43 70 26 27", "", "@perche_paris", "Café / Brunch / Terrasse", "Indipendente", "✅ Sì", "Caffè con terrasse segreta nell'11e, piatti colorati e giardino segreto"),
+    ("Le Petit Keller", "11e", "13 rue Keller, 75011 Paris", "lepetikkeller@gmail.com", "+33 1 47 00 12 97", "", "@lepetikeller", "Bistro / Natural Wine", "Indipendente", "✅ Sì", "Piccolo bistrot a vini naturali a Bastille, atmosfera intima e fotografabile"),
+    ("Fulgurances L'Adresse", "11e", "10 rue Alexandre Dumas, 75011 Paris", "contact@fulgurances.com", "+33 1 71 19 37 37", "fulgurances.com", "@fulgurances", "Pop-up / Chef en Résidence", "Indipendente", "✅ Sì", "Ristorante pop-up con chef en résidence, piatti innovativi molto fotografati"),
+    ("Mokonuts", "11e", "5 rue Saint-Bernard, 75011 Paris", "contact@mokonuts.com", "+33 1 82 28 00 63", "mokonuts.com", "@mokonuts", "Café / Pâtisserie / Levantine", "Indipendente", "✅ Sì", "Caffè pasticceria con influenze levantine, cookies e piatti del giorno fotogenici"),
+    ("Café Verlet", "1er", "256 rue Saint-Honoré, 75001 Paris", "contact@cafeverlet.com", "+33 1 42 60 67 39", "cafeverlet.com", "@cafeverlet", "Torréfaction / Café Historique", "Indipendente", "✅ Sì", "Torréfacteur storico dal 1880 vicino al Louvre, sacchi di caffè fotogenici"),
+    ("Au Passage", "11e", "1bis passage Saint-Sébastien, 75011 Paris", "aupassage.paris@gmail.com", "+33 1 43 55 07 52", "", "@aupassage_paris", "Natural Wine / Small Plates", "Indipendente", "✅ Sì", "Wine bar e piccoli piatti in passaggio nel Marais, molto instagrammabile"),
+    ("Épicerie Verte", "11e", "48 rue de Cîteaux, 75012 Paris", "epicerieverte@gmail.com", "+33 1 43 40 73 21", "", "@epicerieverte", "Épicerie Bio / Café", "Indipendente", "✅ Sì", "Épicerie bio e caffè nell'12e, colori naturali e atmosfera organic fotogenica"),
+    ("Le Syndicat", "10e", "51 rue du Faubourg Saint-Denis, 75010 Paris", "contact@syndicatcocktailclub.com", "+33 1 45 23 24 44", "syndicatcocktailclub.com", "@syndicat_fsd", "Cocktail Bar / French Spirits", "Indipendente", "✅ Sì", "Cocktail bar con soli spirits francesi nel Faubourg Saint-Denis"),
+    ("Café Panache", "11e", "1 rue Trousseau, 75011 Paris", "cafepanache.paris@gmail.com", "+33 1 48 07 14 25", "", "@cafepanache_paris", "Café / Brunch Cosy", "Indipendente", "✅ Sì", "Caffè e brunch all'angolo del Marais-Bastille, interni caldi fotografabili"),
+    ("Liberté Patisserie Boulangerie", "10e", "39 rue des Vinaigriers, 75010 Paris", "liberte@liberteparis.fr", "+33 1 42 05 51 76", "liberteparis.fr", "@liberte_paris", "Boulangerie / Pâtisserie Tendance", "Indipendente", "✅ Sì", "Boulangerie di design nel 10e, viennoiseries colorate e molto instagrammabili"),
+    ("Hoca", "18e / Montmartre", "9 rue de l'Abreuvoir, 75018 Paris", "hoca.paris@gmail.com", "+33 1 46 06 65 87", "", "@hoca_paris", "Café / Brunch / Montmartre", "Indipendente", "✅ Sì", "Caffè e brunch nell'una delle strade più belle di Montmartre, vista iconique"),
+    ("Maison Plisson", "3e / Marais", "93 blvd Beaumarchais, 75003 Paris", "contact@lamaisonplisson.com", "+33 1 71 18 19 09", "lamaisonplisson.com", "@maisonplisson", "Épicerie Fine / Café / Traiteur", "Indipendente", "✅ Sì", "Épicerie di design al Marais, prodotti gourmet e café fotogenico"),
+    ("Café Chilango", "11e", "35 rue de Lappe, 75011 Paris", "cafechilango@gmail.com", "+33 1 48 07 02 38", "", "@cafechilango_paris", "Mexican / Street Food / Brunch", "Indipendente", "✅ Sì", "Cucina messicana e brunch coloratissimo a Bastille, tacos fotogenici"),
+    ("Bones Restaurant", "11e", "43 rue Godefroy Cavaignac, 75011 Paris", "contact@bonesrestaurant.fr", "+33 1 43 70 95 38", "bonesrestaurant.fr", "@bonesrestaurant", "Bistronomie / Cave", "Indipendente", "✅ Sì", "Bistrot moderno nell'11e con ampia selezione di vini naturali fotogenici"),
+    ("Brasserie Dubillot", "2e", "18 rue Bachaumont, 75002 Paris", "brasseriedubillot@gmail.com", "+33 1 40 26 02 00", "", "@brasseriedubillot", "Brasserie Parisian / Retro", "Indipendente", "✅ Sì", "Brasserie con décor retro anni '80 nel Sentier, zinc bar molto fotografato"),
+    ("Le Barbouquin", "11e", "1 rue Théophile Roussel, 75011 Paris", "lebarbouquin@gmail.com", "+33 1 43 71 42 62", "", "@lebarbouquin", "Café / Librairie / Brunch", "Indipendente", "✅ Sì", "Caffè-libreria nel 11e vicino al mercato d'Aligre, atmosfera culturale fotogenica"),
+    ("Jah Jah by Le Tricycle", "10e", "11 rue des Petites Écuries, 75010 Paris", "contact@jahjahparis.com", "+33 1 47 70 03 51", "jahjahparis.com", "@jahjah_paris", "Vegan / Afro-Caribbean", "Indipendente", "✅ Sì", "Cucina vegana afro-caraibica nel 10e, colori vivaci e piatti fotografabili"),
+    ("Le Rigmarole", "11e", "10 rue du Grand Prieuré, 75011 Paris", "contact@lerigmarole.com", "+33 1 71 24 58 72", "lerigmarole.com", "@lerigmarole", "Japanese / Italian Fusion", "Indipendente", "✅ Sì", "Cucina italo-giapponese sperimentale nell'11e, pasta fatta a mano fotogenica"),
+    ("Septime La Cave", "11e", "3 rue Basfroi, 75011 Paris", "lacave@septime-charonne.fr", "+33 1 43 67 14 87", "septime-charonne.fr", "@septimecave", "Natural Wine Bar / Small Plates", "Indipendente", "✅ Sì", "Cave à vins naturels del gruppo Septime, muri di pietra e bottiglie fotogenici"),
+    ("Les Arlots", "10e", "136 rue du Faubourg-Poissonnière, 75010 Paris", "contact@lesarlots.com", "+33 1 42 82 92 01", "lesarlots.com", "@lesarlots_paris", "Bistronomie / Charcuterie", "Indipendente", "✅ Sì", "Bistrot naturel nel 10e, charcuterie maison e cave à manger fotogenica"),
+    ("Café Martha", "11e", "93 blvd du Temple, 75003 Paris", "cafemartha.paris@gmail.com", "+33 1 43 38 16 27", "", "@cafemartha_paris", "Café / Brunch / Trendy", "Indipendente", "✅ Sì", "Caffè trendy al confine Marais-Republique, brunches colorati e molto fotografati"),
+    ("Virtus", "12e / Nation", "29 rue de Cotte, 75012 Paris", "contact@virtus-paris.com", "+33 1 40 09 70 63", "virtus-paris.com", "@virtus_paris", "French / Japanese Gastronomique", "Indipendente", "✅ Sì", "Bistronomie franco-giapponese in rue de Cotte, presentazioni artistiche fotogeniche"),
+    ("Le Barav", "3e / Marais", "6 rue Charles-François Dupuis, 75003 Paris", "lebarav.paris@gmail.com", "+33 1 48 04 57 59", "", "@lebarav_paris", "Wine Bar / Israeli", "Indipendente", "✅ Sì", "Wine bar israeliano nel Marais, mezzé colorati e selezione di vins natures"),
+    ("Café de Flore", "6e / Saint-Germain", "172 blvd Saint-Germain, 75006 Paris", "cafedeflore@wanadoo.fr", "+33 1 45 48 55 26", "cafedeflore.fr", "@cafedflore", "Café / Littéraire / Historique", "Indipendente", "⚠️ Medio", "Caffè letterario storico di Saint-Germain, uno dei più fotografati del mondo"),
+    ("La Recyclerie", "18e / Montmartre", "83 blvd Ornano, 75018 Paris", "contact@larecyclerie.com", "+33 1 42 57 58 49", "larecyclerie.com", "@larecyclerie", "Café / Concept Éco / Garden", "Indipendente", "✅ Sì", "Ex-stazione ferroviaria trasformata in eco-café, giardino e polli fotogenici"),
+    ("Café du Coin", "11e", "9 rue Camille Desmoulins, 75011 Paris", "cafecoin.paris@gmail.com", "+33 1 43 67 30 30", "", "@cafedcoin_paris", "Café / Bistronomie / Natural Wine", "Indipendente", "✅ Sì", "Caffè e bistrot di quartiere nell'11e con vini naturali selezionati"),
+    ("Pink Mamma Parigi", "9e / Pigalle", "20bis rue de Douai, 75009 Paris", "pigalle@bigmammagroup.com", "+33 1 83 74 99 11", "bigmammagroup.com", "@pinkmamma_paris", "Italian / Multi-Etage / Pink", "Piccola catena", "✅ Sì", "Ristorante italiano Big Mamma su 5 piani, décor floreale rosa super instagrammabile"),
+    ("Yard", "11e", "6 rue de Mont-Louis, 75011 Paris", "yard.winebar@gmail.com", "+33 1 40 09 70 30", "", "@yard_winebar", "Natural Wine / Bar / Courtyard", "Indipendente", "✅ Sì", "Wine bar con cortile interiore e atmosfera cave, très fotogenico"),
+    ("Deux Fois Plus de Piment", "20e / Belleville", "33 blvd de Belleville, 75011 Paris", "2foispluspiment@gmail.com", "+33 1 43 55 15 21", "", "@deuxfoisplusdepiment", "Chinese / Sichuan Street Food", "Indipendente", "✅ Sì", "Cucina sichuanese di Belleville, hotpot fumante e colori rosso fotogenici"),
+    ("Brutos", "20e / Nation", "32 rue des Orteaux, 75020 Paris", "contact@brutos.fr", "+33 1 43 73 54 28", "brutos.fr", "@brutos_paris", "Modern Brazilian / Grill", "Indipendente", "✅ Sì", "Cucina brasiliana moderna nel 20e, grill fumante e ingredienti colorati"),
+    ("Café Compagnon", "1er", "22 rue Croix des Petits Champs, 75001 Paris", "cafecompagnon.paris@gmail.com", "+33 1 40 26 36 39", "", "@cafecompagnon_paris", "Café / Brunch / Boulangerie", "Indipendente", "✅ Sì", "Caffè e boulangerie nel 1er con pane artigianale, colazioni fotografabili"),
+    ("Les Enfants du Marché", "3e / Marais", "39 rue de Bretagne, 75003 Paris", "contact@lesenfantsdumarche.com", "+33 1 42 77 86 53", "lesenfantsdumarche.com", "@lesenfantsdumarche", "Marché Couvert / Wine / Tapas", "Indipendente", "✅ Sì", "Bar à vins nel mercato coperto delle Enfants Rouges, banchi fotogenici"),
+    ("Flore en l'Île", "4e / Île Saint-Louis", "42 quai d'Orléans, 75004 Paris", "floreenlile@gmail.com", "+33 1 43 29 88 27", "", "@floreenlile", "Café / Vue Notre-Dame / Sorbet", "Indipendente", "✅ Sì", "Caffè con terrasse e vista Notre-Dame sull'Île Saint-Louis, panorama iconico"),
+    ("Café Pinson", "3e / Marais", "6 rue du Forez, 75003 Paris", "contact@cafe-pinson.fr", "+33 1 58 00 44 55", "cafe-pinson.fr", "@cafepinson", "Vegan / Brunch / Coloré", "Piccola catena", "✅ Sì", "Caffè vegano nel Marais, açaï bowls e Buddha bowls coloratissimi fotogenici"),
+    ("Fragments Paris", "3e", "76 rue des Tournelles, 75003 Paris", "contact@fragmentsparis.com", "+33 9 77 62 36 45", "fragmentsparis.com", "@fragmentsparis", "Specialty Coffee / Cantine", "Indipendente", "✅ Sì", "Specialty coffee in ex-atelier nel Marais, industrial chic e colazioni fotogeniche"),
+    ("Elmer", "3e", "30 rue Notre-Dame de Nazareth, 75003 Paris", "elmer.paris@gmail.com", "+33 1 42 74 35 36", "", "@elmerrestaurant", "Bistronomie / Fusion", "Indipendente", "✅ Sì", "Bistrot gastronomique nel 3e, cucina fusion con presentazioni curatissime"),
+    ("Café du Marché", "15e", "38 rue Cler, 75007 Paris", "cafedumarcheruecler@gmail.com", "+33 1 47 34 62 61", "", "@cafedumarcheparis", "Café / Marché / Authentique", "Indipendente", "⚠️ Medio", "Caffè sul mercato storico Rue Cler, terrasse e prodotti freschi fotogenici"),
+    ("Marcelle Café", "14e", "2 rue Vandamme, 75014 Paris", "marcelleparis@gmail.com", "+33 1 43 20 91 23", "", "@marcelle_cafe", "Café / Brunch / Vegan", "Indipendente", "✅ Sì", "Caffè vegan e brunch colorato nel 14e vicino Montparnasse"),
+    ("La Dernière Goutte", "6e", "6 rue de Bourbon le Château, 75006 Paris", "contact@ladernieregoutte.net", "+33 1 43 29 11 62", "ladernieregoutte.net", "@ladernieregoutte", "Cave à Vins / Wine Bar", "Indipendente", "✅ Sì", "Piccola cave à vins a Saint-Germain, selezione boutique e atmosfera intima"),
+    ("Chez Omar", "3e / Marais", "47 rue de Bretagne, 75003 Paris", "chezomar.paris@gmail.com", "+33 1 42 72 36 26", "", "@chezomar_paris", "Algerian / Couscous", "Indipendente", "✅ Sì", "Trattoria algerina storica vicino al Marché des Enfants Rouges, semplice e fotogenica"),
+    ("Folderol", "11e", "8 rue de la Main d'Or, 75011 Paris", "folderol.paris@gmail.com", "+33 1 48 07 31 04", "", "@folderol_paris", "Natural Wine / Bistro Créatif", "Indipendente", "✅ Sì", "Bistrot créatif e wine bar naturel nell'11e, atmosfera intime e fotogenica"),
+    ("Sushi B", "2e", "5 rue Rambuteau, 75004 Paris", "contact@sushi-b.fr", "+33 1 40 27 95 75", "sushi-b.fr", "@sushi_b_paris", "Japanese / Omakase", "Indipendente", "⚠️ Medio", "Omakase giapponese nel cuore di Parigi, presentazioni minimaliste fotogeniche"),
+    ("Hébé", "11e", "11 rue Saint-Sabin, 75011 Paris", "hebe.paris@gmail.com", "+33 1 48 05 45 23", "", "@hebe_paris", "Natural Wine / Bistro", "Indipendente", "✅ Sì", "Wine bar e bistrot all'11e, muri di pietra e bottiglie muri fotogenici"),
+    ("Ô Château Caveau", "1er", "68 rue Jean-Jacques Rousseau, 75001 Paris", "contact@o-chateau.com", "+33 1 44 73 97 80", "o-chateau.com", "@ochateau_paris", "Wine Bar / Cave / Dégustation", "Indipendente", "✅ Sì", "Wine bar parigino di riferimento con cave voûtée fotogenica"),
+    ("Café Lomi", "18e", "3ter rue Marcadet, 75018 Paris", "contact@cafelomi.com", "+33 1 42 08 63 66", "cafelomi.com", "@cafelomi", "Specialty Coffee / Torréfaction", "Indipendente", "✅ Sì", "Torréfacteur e caffè nel 18e, sacchi di caffè verde e atelier molto fotografato"),
 ]
 
 
 def create_excel():
     wb = Workbook()
     ws = wb.active
-    ws.title = "Nouveaux Restaurants Paris"
+    ws.title = "Paris New Leads - SocialPerks"
 
     HEADER_FILL   = PatternFill("solid", fgColor="2C3E50")
     EMAIL_FILL    = PatternFill("solid", fgColor="E8F5E9")
@@ -100,17 +85,17 @@ def create_excel():
     thin          = Side(style="thin", color="CCCCCC")
     BORDER        = Border(left=thin, right=thin, top=thin, bottom=thin)
 
-    headers = ["#", "Nome Ristorante", "Arr.", "Indirizzo", "EMAIL ✉️",
+    headers = ["#", "Nome Ristorante", "Arrondissement", "Indirizzo", "EMAIL ✉️",
                "Telefono", "Sito Web", "Instagram", "Tipo Cucina",
                "Dimensione", "Adatto SocialPerks", "Note/Descrizione"]
-    col_widths = [4, 28, 6, 35, 32, 18, 22, 22, 22, 16, 14, 40]
+    col_widths = [4, 28, 14, 35, 32, 18, 22, 22, 22, 16, 14, 40]
 
     for col, (h, w) in enumerate(zip(headers, col_widths), 1):
         cell = ws.cell(row=1, column=col, value=h)
-        cell.fill      = HEADER_FILL
-        cell.font      = WHITE_FONT
+        cell.fill = HEADER_FILL
+        cell.font = WHITE_FONT
         cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
-        cell.border    = BORDER
+        cell.border = BORDER
         ws.column_dimensions[get_column_letter(col)].width = w
 
     ws.row_dimensions[1].height = 30
@@ -121,19 +106,14 @@ def create_excel():
         has_email = bool(r[3])
         sp = r[9]
         row_fill = EMAIL_FILL if has_email else NO_EMAIL_FILL
-        if "✅" in sp:
-            sp_fill = IDEAL_FILL
-        elif "⚠️" in sp:
-            sp_fill = MEDIUM_FILL
-        else:
-            sp_fill = NO_FILL_CLR
+        sp_fill = IDEAL_FILL if "✅" in sp else (MEDIUM_FILL if "⚠️" in sp else NO_FILL_CLR)
 
         values = [idx, r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10]]
         for col, val in enumerate(values, 1):
             cell = ws.cell(row=row_idx, column=col, value=val)
-            cell.fill      = sp_fill if col == 11 else row_fill
-            cell.font      = Font(name="Calibri", size=10)
-            cell.border    = BORDER
+            cell.fill = sp_fill if col == 11 else row_fill
+            cell.font = Font(name="Calibri", size=10)
+            cell.border = BORDER
             cell.alignment = Alignment(vertical="center", wrap_text=(col in [4, 12]))
         ws.row_dimensions[row_idx].height = 22
 
@@ -143,20 +123,19 @@ def create_excel():
 
     sr = total + 4
     ws.cell(row=sr,   column=1, value="📊 RIEPILOGO").font = Font(bold=True, size=12, color="2C3E50")
-    ws.cell(row=sr+1, column=1, value="Totale ristoranti:").font     = BOLD_FONT
+    ws.cell(row=sr+1, column=1, value="Totale ristoranti:").font    = BOLD_FONT
     ws.cell(row=sr+1, column=2, value=total)
-    ws.cell(row=sr+2, column=1, value="Con email confermata:").font  = BOLD_FONT
+    ws.cell(row=sr+2, column=1, value="Con email confermata:").font = BOLD_FONT
     ws.cell(row=sr+2, column=2, value=with_email)
-    ws.cell(row=sr+3, column=1, value="Ideali per SocialPerks (✅):").font = BOLD_FONT
+    ws.cell(row=sr+3, column=1, value="Ideali SocialPerks (✅):").font = BOLD_FONT
     ws.cell(row=sr+3, column=2, value=ideal)
-    ws.cell(row=sr+4, column=1, value="Generato il:").font           = BOLD_FONT
+    ws.cell(row=sr+4, column=1, value="Generato il:").font          = BOLD_FONT
     ws.cell(row=sr+4, column=2, value=datetime.now().strftime("%d/%m/%Y %H:%M"))
 
     filename = "/home/user/claude-restaurants-/SocialPerks_Restaurants_Paris_New.xlsx"
     wb.save(filename)
     print(f"✅ {filename}")
     print(f"   Totale: {total} | Con email: {with_email} | Ideali: {ideal}")
-    return filename
 
 
 if __name__ == "__main__":
