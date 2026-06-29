@@ -23,10 +23,15 @@ jobs:
       - name: Installa dipendenze
         run: pip install -r requirements_outreach.txt
 
-      - name: Esegui outreach tutte le città
+      - name: Esegui outreach ristoranti (tutte le città)
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD || 'ublm ewaw eoiy biet' }}
         run: python3 outreach_multi.py run --all
+
+      - name: Esegui outreach tattoo studios (tutte le città)
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD || 'ublm ewaw eoiy biet' }}
+        run: python3 outreach_tattoo.py run --all
 
       - name: Salva stato tracking (tutti i DB)
         run: |
