@@ -1,9 +1,7 @@
 name: SocialPerks Outreach — Casablanca
 
 on:
-  schedule:
-    - cron: '30 7 * * *'   # ogni giorno alle 09:30 ora di Parigi (UTC+2) — sfalsato di 30 min
-  workflow_dispatch:         # permette avvio manuale dal sito GitHub
+  workflow_dispatch:        # SOLO manuale — schedule DISABILITATO
 
 jobs:
   outreach:

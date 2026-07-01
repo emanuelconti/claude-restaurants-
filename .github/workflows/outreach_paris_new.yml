@@ -1,9 +1,7 @@
 name: SocialPerks Outreach — Nuovi Parigi
 
 on:
-  schedule:
-    - cron: '0 7 * * *'   # ogni giorno alle 09:00 ora di Parigi (UTC+2)
-  workflow_dispatch:        # permette avvio manuale dal sito GitHub
+  workflow_dispatch:        # SOLO manuale — schedule DISABILITATO
 
 jobs:
   outreach:
