@@ -75,6 +75,38 @@ Subscriptions tab with a short text overlay. Titles + descriptions below
 
 ---
 
+## Directories — list once, they send traffic on their own
+
+Higher-intent than social posts, because people land here already searching
+for a template to buy.
+
+- **Etsy** — the single biggest channel for this product category. Budget
+  templates sell year-round on Etsy through search, not virality.
+- **Creative Market** — same buyer intent as Etsy, different audience
+- **Gumroad Discover** — automatic once listed
+- **r/GoogleSheets and r/excel** wikis/resource threads — some have a
+  pinned "share your templates" thread, check before posting fresh
+
+## Micro-influencer shoutouts — often cheaper and better ROI than ads
+
+Budget templates sell disproportionately well through small finance
+TikTok/Instagram accounts (5k-50k followers) doing a single feature/story
+post, because their audience already trusts them on this exact topic. A
+paid shoutout from a relevant small creator (typically €20-80) frequently
+converts better per euro than the same amount in Meta/TikTok ads, and it's
+a real alternative use of part of the €200 budget:
+
+1. Search TikTok/Instagram for "budget spreadsheet" or "budgeting tips"
+   accounts in the 5k-50k follower range
+2. DM 8-10 of them: "would you be up for a paid mention of a budget
+   template I made? happy to send it over free either way"
+3. Send the template free regardless of whether they say yes — some will
+   post organically without payment if they genuinely like it
+4. Budget €20-40 per confirmed post, test 3-4 creators before committing
+   more
+
+---
+
 ## Reddit — r/personalfinance, r/budget, r/povertyfinance (check each sub's self-promo rules first — many require participation before posting a link)
 
 **Title:** I built myself a one-page budget dashboard because I was tired of switching tabs — sharing the structure in case it helps anyone

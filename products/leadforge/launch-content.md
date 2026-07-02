@@ -1,99 +1,144 @@
-# LeadForge — Ready-to-post launch content
+# LeadForge — Launch content that actually moves product
 
-Copy-paste these as-is, or tweak the bracketed parts. Post in this order:
-Reddit/X/LinkedIn first (days 1–5), Product Hunt once you have a few sales
-as social proof (day 5+).
+No LinkedIn — wrong audience for a $49 dev tool, and generic "build in
+public" LinkedIn posts get ignored. Everything below is either a channel
+with actual buyer intent (directories people search when shopping for a
+tool) or the one channel that's genuinely unfair for this specific product:
+using LeadForge to sell LeadForge.
+
+---
+
+## The unfair advantage: cold-email people who'd actually buy this
+
+You already own a working cold-email sequencer. The people most likely to
+buy LeadForge — freelancers and small agencies doing outreach by hand — are
+themselves reachable by cold email. Use the product on itself.
+
+1. Build a list of ~150-300 freelance marketers / small agency
+   founders / outreach consultants. Fastest sources: search
+   "freelance lead generation" or "cold email consultant" on LinkedIn or
+   Google, scrape names/emails from agency directories (Clutch, Upwork
+   profiles list contact info sometimes), or buy a cheap targeted list on
+   Apollo.io's free tier (25 free exports/month).
+2. Drop them into `leads.csv` in the same format as everything else.
+3. Rewrite the 3 templates in `config.py` to pitch LeadForge itself — draft
+   below.
+4. Run it exactly like you would for a client campaign. Daily cap 15,
+   same pacing.
+
+This is the highest-intent channel you have: everyone on that list has
+already proven, by doing outreach for a living, that they'd use a tool like
+this. Nothing else on this page targets that precisely.
+
+**Step 1 template:**
+```
+Subject: the tool I use for my own outreach
+
+Hey {name},
+
+Guessing you send cold email for a living or for clients. I got tired of
+paying for Instantly/Lemlist for what's really a scheduler + a database, so
+I built my own — then packaged it since a few people asked.
+
+No monthly fee, runs on your own Gmail, does the sequencing/tracking/pacing
+part for you. This email came from it, actually.
+
+If that's useful: [link]
+
+- [your name]
+```
+
+**Step 2 (day 3):**
+```
+Subject: Re: the tool I use for my own outreach
+
+Following up — if cold email is part of how you get clients, this replaces
+whatever you're paying monthly for it now. $49 once.
+
+[link]
+```
+
+**Step 3 (day 7, last one):**
+```
+Subject: last one
+
+Not going to keep emailing about this. Link's here if it's ever useful:
+[link]
+```
+
+Keep this list separate from any client work — it's your own funnel, not
+outreach you're running on someone else's behalf.
 
 ---
 
 ## Reddit — r/Entrepreneur, r/freelance, r/smallbusiness, r/SaaS
 
-Post as a **text post**, not a link post — link posts get auto-removed on
-most of these subs. Put the landing page link only in a comment or your
-profile, not the post body, and only after the post gets traction.
+Text post, not a link post — link posts get auto-removed on most of these.
+Don't put the link in the body. Put it in a comment once someone asks, or
+in your profile.
 
 **Title:**
-> I got tired of paying $99/mo for cold email software, so I built my own script — here's what's in it
+> Built my own cold email tool because Instantly wanted $97/mo for a scheduler and a database
 
 **Body:**
 ```
-For the last few months I've been running cold outreach campaigns (thousands
-of emails sent) to land partnerships, and every tool out there wanted
-$50-300/month for what is, underneath, a scheduler + a database + an SMTP
-call.
+Been doing outreach for partnerships/clients for a while and got annoyed
+paying monthly for tools that are, underneath, a send schedule + a tracking
+table + rate limiting so you don't get flagged as spam. That's not $97/mo
+of infrastructure.
 
-So I built my own: a Python script that
-- sends a 3-step follow-up sequence (initial, follow-up, last touch)
-- tracks every lead in SQLite so nothing gets double-emailed
-- respects a daily send cap so it doesn't trip spam filters
-- stops the sequence the second someone replies or opts out
+Wrote my own in Python. Runs off a normal Gmail account with an app
+password. Tracks who's been sent what in SQLite so nobody gets double
+emailed. Stops the second someone replies or opts out.
 
-It runs on a normal Gmail account with an app password. No monthly fee,
-because it's not a service — it's a script you own.
-
-Happy to answer questions about the setup or the anti-spam pacing if
-anyone's curious. Turned it into a small packaged version for anyone who
-doesn't want to build it from scratch — link in my profile if you want it,
-not trying to spam the sub with it here.
+Not selling anything here, just sharing because I see this complaint a lot
+in this sub specifically. If anyone wants the packaged version instead of
+building it themselves, it's in my post history / profile.
 ```
+
+Reply to every comment. This post lives or dies on the comments, not the
+post itself — that's where people ask "does this work with X" and you
+close them.
 
 ---
 
-## X / Twitter — build-in-public thread
+## X / Twitter
 
-**Tweet 1 (hook):**
-> I sent 3,000+ cold emails without a $99/mo SaaS.
+Skip the "thread with hook" format — it reads as templated now and people
+scroll past it. One post, plainly stated, with a real screenshot attached
+(use `landing-page/assets/terminal.png`, already in this repo).
+
+> spent 3 years paying for cold email tools that are basically a for-loop
+> with a database
 >
-> Here's the exact script I use — thread 🧵
-
-**Tweet 2:**
-> Every cold email tool does the same 3 things:
-> 1. Send a sequence on a schedule
-> 2. Track who replied / opted out
-> 3. Not get you flagged as spam
+> built my own, it's just python + sqlite, runs on gmail
 >
-> That's a database and an SMTP call. Doesn't need to cost $300/mo.
+> packaged it up: [link] — $49 once, no subscription
 
-**Tweet 3:**
-> So I built LeadForge: Python script, SQLite tracking, runs on your own
-> Gmail. Daily send cap + pacing built in so you don't get blacklisted.
->
-> [screenshot of `leadforge.py status` output]
+Follow-up reply a day later, only if the first post got any traction:
 
-**Tweet 4:**
-> Stops the sequence the moment someone replies. No more accidentally
-> emailing someone who already said no.
-
-**Tweet 5 (CTA):**
-> Packaged it up for anyone who wants the setup without writing it from
-> scratch: [landing page link]
->
-> $49, one-time, yours to keep.
+> a few people asked what's actually in it — daily send cap, 3-step
+> sequence, stops automatically when someone replies. that's it, that's the
+> whole product. no dashboard to log into.
 
 ---
 
-## LinkedIn — single post
+## Directories — submit once, they keep sending traffic for free
 
-```
-I stopped paying for cold email software.
+These are places people actively search when comparison-shopping cold
+email tools. Higher intent than social, and it's a 5-minute form each.
 
-Every tool in this space (Lemlist, Instantly, Apollo...) charges a monthly
-fee for the same core mechanics: a send schedule, a tracking database, and
-pacing to avoid spam filters.
+- **AlternativeTo** — list LeadForge as an alternative to Lemlist,
+  Instantly, Apollo, Woodpecker. This is the single highest-intent listing
+  available: people land there already comparing tools.
+- **SaaSHub** — same idea, submit under "cold email software"
+- **BetaList** — for the pre-launch/early-adopter crowd
+- **Indie Hackers** — post in "Show IH", their product-showcase thread, not
+  as a separate self-promo post
+- **SideProjectors / StartupBase** — quick listings, low effort
+- **Gumroad Discover** — automatic once the product's listed, no extra work
 
-I built a script that does exactly that, runs on a normal Gmail account, and
-costs $0/month because it's not a service — you own it outright.
-
-If you're a freelancer or small agency doing your own outreach and tired of
-subscription pricing for a tool you use for one campaign a quarter, I
-packaged it: [landing page link]
-
-#coldemail #freelancing #outreach #smallbusiness
-```
-
----
-
-## Product Hunt listing (use once you have 3-5 sales as proof)
+## Product Hunt (once you have 3–5 sales as proof)
 
 **Name:** LeadForge — Cold email outreach without the subscription
 

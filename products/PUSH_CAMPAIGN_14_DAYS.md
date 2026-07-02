@@ -15,7 +15,7 @@ pagamenti più sotto in questo file).
 |---|---|---|
 | 1 | Pubblica il post Reddit (r/Entrepreneur o r/freelance) — testo in `leadforge/launch-content.md` | Pubblica 1 video TikTok/Reel (script "The subscriptions reveal") — testo in `zenbudget/launch-content.md` |
 | 2 | Pubblica il thread X — testo pronto | Crea e pubblica 3 pin Pinterest (titoli/desc pronti) |
-| 3 | Pubblica il post LinkedIn | Pubblica 2° video ("One dashboard") |
+| 3 | Avvia la mini-campagna LeadForge-su-se-stesso: importa 150-300 lead di freelance/agenzie e lancia il primo step (sezione "The unfair advantage" in `launch-content.md`) | Pubblica 2° video ("One dashboard") |
 | 4 | Rispondi ai commenti/DM dei giorni 1-3, nessun nuovo post | Pubblica 3° video ("Filling in a transaction live") |
 | 5 | Lista su Gumroad Discover (gratis, si attiva da solo caricando il prodotto) | Lista su Etsy con la copy pronta |
 | 6 | Riposta il thread X su un secondo sub Reddit (r/SaaS o r/smallbusiness) | Pubblica 4° e 5° video |

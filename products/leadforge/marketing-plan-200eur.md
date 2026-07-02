@@ -19,13 +19,15 @@ anything:
 1. Post in **r/Entrepreneur, r/freelance, r/smallbusiness, r/SaaS** — not a
    direct ad post (gets removed), but a "I built a tool that replaced my
    $99/mo cold email SaaS, AMA" value post linking to the landing page.
-2. Post on **X/Twitter and LinkedIn** as a build-in-public thread: "I sent
-   3,000+ cold emails to land partnerships without paying for [SaaS]. Here's
-   the exact script." Include a screenshot of the tracking DB / stats.
-3. List it on **Gumroad Discover** and **Product Hunt** (free) — schedule the
-   PH launch for a Tuesday–Thursday.
-4. Post in 2–3 relevant **Facebook/Discord/Slack groups** for freelancers or
-   agency owners (search "freelance marketers community").
+2. Post on **X/Twitter**, plain and specific, not a hyped-up thread —
+   see `launch-content.md` for the exact copy that avoids sounding templated.
+3. List it on **Gumroad Discover**, **AlternativeTo**, **SaaSHub** and
+   **Product Hunt** (all free) — the first two are high-intent: people land
+   there already comparison-shopping cold email tools.
+4. Run LeadForge on itself against a list of freelance marketers / small
+   agency owners (see "The unfair advantage" in `launch-content.md`) — this
+   is the single highest-converting channel available since the list is
+   made entirely of people who already do outreach for a living.
 
 ## Step 2 — Paid boost (days 5–14, €200)
 
