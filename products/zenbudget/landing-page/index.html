@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZenBudget — The Finance Planner That Fits On One Screen</title>
+<meta name="description" content="A complete Excel/Google Sheets budget planner with a live dashboard, savings goals, debt payoff and subscription tracker. Instant download, $19.">
+<style>
+  :root{
+    --bg:#fbfaf7; --panel:#ffffff; --border:#e7e2d8; --text:#1f2430; --muted:#6b7280;
+    --accent:#10b981; --accent-2:#f59e0b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header.hero{padding:80px 0 56px;text-align:center}
+  .badge{display:inline-block;padding:6px 14px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:24px;background:var(--panel)}
+  h1{font-size:42px;line-height:1.15;margin:0 0 18px;letter-spacing:-0.02em}
+  h1 span{color:var(--accent)}
+  .sub{color:var(--muted);font-size:18px;max-width:600px;margin:0 auto 32px}
+  .cta{display:inline-block;background:var(--accent);color:#06120c;font-weight:700;padding:16px 34px;border-radius:10px;text-decoration:none;font-size:17px}
+  .price-note{color:var(--muted);font-size:14px;margin-top:14px}
+  section{padding:52px 0;border-top:1px solid var(--border)}
+  h2{font-size:26px;margin:0 0 30px;text-align:center}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .card h3{margin:0 0 8px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .tab{background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:9px 16px;font-size:14px}
+  .pricing{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center;max-width:400px;margin:0 auto}
+  .pricing .amount{font-size:48px;font-weight:800}
+  .pricing .amount small{font-size:16px;color:var(--muted);font-weight:500}
+  .pricing ul{list-style:none;padding:0;margin:22px 0;text-align:left}
+  .pricing li{padding:7px 0;color:var(--muted);font-size:14.5px}
+  .pricing li:before{content:"✓ ";color:var(--accent);font-weight:700}
+  footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}h1{font-size:30px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Instant download · Excel & Google Sheets</span>
+    <h1>The budget planner<br>that <span>actually</span> gets used.</h1>
+    <p class="sub">One dashboard. Every number pulled automatically from your transactions.
+    No app to install, no account to create — just open the spreadsheet.</p>
+    <a class="cta" href="#buy">Get ZenBudget — $19</a>
+    <div class="price-note">One-time payment · Works forever · Yours to keep</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>8 tabs, all connected</h2>
+    <div class="tabs">
+      <span class="tab">📊 Dashboard</span>
+      <span class="tab">💰 Monthly Budget</span>
+      <span class="tab">🧾 Transactions</span>
+      <span class="tab">🎯 Savings Goals</span>
+      <span class="tab">💳 Debt Payoff</span>
+      <span class="tab">🔁 Subscriptions</span>
+      <span class="tab">📅 Yearly Overview</span>
+      <span class="tab">📘 How to use</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why people keep this one open</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>It updates itself</h3>
+        <p>Log a transaction once — your dashboard, category breakdown and savings rate recalculate automatically. No manual math.</p>
+      </div>
+      <div class="card">
+        <h3>Finds the money leaks</h3>
+        <p>The Subscriptions tab alone usually finds enough forgotten charges to pay for the planner in the first five minutes.</p>
+      </div>
+      <div class="card">
+        <h3>Built for real life</h3>
+        <p>Savings goals with progress bars, a debt payoff estimator, and a 12-month view — not just a bare spreadsheet grid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <h2>Get instant access</h2>
+    <div class="pricing">
+      <div class="amount">$19 <small>one-time</small></div>
+      <ul>
+        <li>Full ZenBudget .xlsx file</li>
+        <li>Works in Excel and Google Sheets</li>
+        <li>Live dashboard with charts</li>
+        <li>Built-in how-to-use guide</li>
+        <li>Yours forever, no subscription</li>
+      </ul>
+      <a class="cta" href="REPLACE_WITH_YOUR_GUMROAD_LINK" style="display:block">Buy now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ZenBudget is a spreadsheet template. It doesn't connect to your bank or store any financial data —
+  everything stays in your own file, on your own device.
+</footer>
+
+</body>
+</html>
