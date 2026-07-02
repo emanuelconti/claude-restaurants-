@@ -15,11 +15,15 @@ Questa cartella contiene **due prodotti digitali finiti**, pronti da vendere onl
 
 Entrambi sono venduti come **download digitale istantaneo**: il cliente paga, riceve il file, fine. Zero costi di produzione ricorrenti.
 
-## Passo 1 — Crea l'account Gumroad (10 minuti, gratis)
+## Passo 1 — Crea l'account Gumroad e inserisci dove farti pagare (10 minuti, gratis)
 
 1. Vai su gumroad.com → crea un account gratuito
-2. Collega un metodo di incasso (Stripe/PayPal integrato — Gumroad gestisce i pagamenti, trattiene ~10% di commissione)
-3. Verifica l'identità se richiesto (necessario per ricevere pagamenti reali)
+2. Vai su **Settings → Payments** (menu in alto a destra, icona profilo → Settings → tab "Payments")
+3. Qui inserisci **IBAN** (Gumroad usa Stripe per il payout diretto sul conto corrente) oppure colleghi un account **PayPal** — scegli uno dei due, non servono entrambi
+4. Se richiesto, verifica l'identità (documento + eventuale codice fiscale) — necessario perché Gumroad deve fare i controlli anti-riciclaggio prima di girarti soldi veri
+5. Gumroad trattiene ~10% di commissione su ogni vendita e ti gira il resto in automatico (di solito settimanalmente, sotto una soglia minima)
+
+Questo è l'unico posto dove serve inserire dati di pagamento — non li metti da nessun'altra parte (le landing page che ho creato linkano solo al checkout Gumroad, non gestiscono direttamente soldi o IBAN).
 
 ## Passo 2 — Carica LeadForge
 
@@ -57,6 +61,12 @@ Ogni prodotto ha il suo piano dettagliato:
 
 **In sintesi per entrambi:** prima 5-7 giorni di distribuzione gratuita (Reddit, X, TikTok/Pinterest a seconda del prodotto) per generare le prime vendite e riprova sociale, poi spingi con ads (Meta/TikTok/Reddit) SOLO sul contenuto che ha già funzionato organicamente. Non buttare i 200€ tutti insieme il primo giorno.
 
+Per l'esecuzione giorno-per-giorno con le azioni già scritte pronte da
+incollare, usa **`PUSH_CAMPAIGN_14_DAYS.md`** — è il calendario operativo
+dei due piani marketing messi insieme. Io non posso pubblicare al posto tuo
+(non ho accesso ai tuoi account social/Gumroad), ma ogni riga del calendario
+rimanda al testo esatto già pronto in `*/launch-content.md`.
+
 ## Checklist pratica
 
 - [ ] Account Gumroad creato e verificato
@@ -66,6 +76,41 @@ Ogni prodotto ha il suo piano dettagliato:
 - [ ] Landing page pubblicate (Vercel/Netlify) o si usa la pagina Gumroad diretta
 - [ ] 3-5 post organici pubblicati (settimana 1)
 - [ ] Budget ads impostato SOLO dopo aver visto cosa converte organicamente
+
+## Partita IVA: la risposta onesta, non quella comoda
+
+Non posso dirti "no, non serve, 100%" perché non è vero in assoluto e darti
+una risposta sbagliata su un tema fiscale ti espone a rischi reali (sanzioni,
+contributi arretrati). La regola italiana, in sintesi:
+
+- **Prestazione occasionale** (senza partita IVA) è legale per un'attività
+  *sporadica, non organizzata, non continuativa*. Il reddito va dichiarato
+  come "redditi diversi" nella dichiarazione dei redditi. Se supera **5.000€
+  netti/anno**, scatta l'obbligo di iscrizione alla Gestione Separata INPS
+  sulla parte eccedente.
+- **Il problema non è solo la soglia dei 5.000€.** L'Agenzia delle Entrate
+  guarda anche l'**abitualità**: uno shop Gumroad sempre aperto, con
+  marketing continuo, pensato per generare vendite ricorrenti nel tempo, è
+  strutturalmente più vicino a un'attività commerciale abituale che a una
+  prestazione occasionale — anche restando sotto i 5.000€. Non c'è un
+  interruttore netto, è una valutazione caso per caso.
+- **La soluzione standard per chi fa esattamente questo tipo di micro-business**
+  è il **regime forfettario**: apertura partita IVA economica (spesso
+  gestibile online in un giorno), tassazione agevolata (5% i primi 5 anni per
+  chi parte, poi 15%, su un reddito imponibile forfettizzato), niente IVA da
+  versare sulle fatture, contabilità semplificata. Per cifre come quelle di
+  cui parliamo qui (poche centinaia/migliaia di euro) è pensato apposta per
+  questo.
+
+**Cosa farei io al posto tuo:** se questo è un test con poche vendite
+occasionali, molti operano come "occasionale" sotto i 5.000€ nel primo
+periodo. Ma se il piano è farne un'attività continuativa (ed è esattamente
+quello che questa campagna è pensata per avviare), vale la pena aprire una
+partita IVA forfettaria da subito — i costi sono bassi e ti toglie il
+rischio. Una chiamata con un commercialista (spesso la prima è gratuita)
+chiarisce la tua situazione specifica in 15 minuti: non è qualcosa che posso
+confermarti io con certezza al posto di un professionista che vede i tuoi
+numeri reali.
 
 ## Cosa realisticamente aspettarsi
 
