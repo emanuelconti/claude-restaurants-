@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070d;
+  --foreground: #e8ecf5;
+  --surface: #0b0f1a;
+  --surface-raised: #101625;
+  --border-subtle: #1e2434;
+  --muted: #8992a9;
+
+  --accent: #4f6bff;
+  --accent-soft: #7c93ff;
+  --accent-contrast: #04060c;
+
+  --risk-unacceptable: #ef4444;
+  --risk-high: #f97316;
+  --risk-limited: #eab308;
+  --risk-minimal: #22c55e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border-subtle: var(--border-subtle);
+  --color-muted: var(--muted);
+
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --color-risk-unacceptable: var(--risk-unacceptable);
+  --color-risk-high: var(--risk-high);
+  --color-risk-limited: var(--risk-limited);
+  --color-risk-minimal: var(--risk-minimal);
+
+  --font-sans: var(--font-inter);
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(232, 236, 245, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 236, 245, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glow {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(79, 107, 255, 0.25),
+    transparent 60%
+  );
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+}

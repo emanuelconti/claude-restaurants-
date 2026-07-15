@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "title": "SincronIA Compliance — Cumplimiento del Reglamento de IA de la UE",
+    "description": "Escanea las herramientas de IA que usa tu negocio y descubre en minutos qué exige el Reglamento (UE) 2024/1689 y la normativa española."
+  },
+  "nav": {
+    "brand": "SincronIA",
+    "product": "Compliance",
+    "home": "Inicio",
+    "scanner": "Escáner",
+    "start": "Escanear gratis"
+  },
+  "locale": {
+    "switchLabel": "Idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "eyebrow": "Reglamento (UE) 2024/1689 · Ley de IA europea",
+    "headline": "La Ley de IA europea también se aplica a tu negocio.",
+    "headlineAccent": "Aunque solo uses IA.",
+    "subheadline": "Clínicas, peluquerías, farmacias y negocios locales ya usan WhatsApp con IA, agentes de voz o ChatGPT sin saber qué obligaciones legales activan. Descúbrelo en menos de 5 minutos.",
+    "ctaPrimary": "Escanea tu negocio gratis",
+    "ctaSecondary": "Cómo funciona",
+    "trustBadge1": "Motor de reglas basado en el Reglamento (UE) 2024/1689",
+    "trustBadge2": "Módulo específico para España (AESIA, AEPD)",
+    "trustBadge3": "Informe descargable en español o inglés"
+  },
+  "countdown": {
+    "label": "Faltan para que se apliquen las obligaciones clave de alto riesgo",
+    "date": "2 de agosto de 2026",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Min",
+    "seconds": "Seg",
+    "expired": "El plazo del 2 de agosto de 2026 ya se ha cumplido."
+  },
+  "features": {
+    "eyebrow": "Por qué existe SincronIA Compliance",
+    "title": "El cumplimiento normativo de la IA, hecho para pymes reales",
+    "subtitle": "No hace falta un departamento legal. Hace falta saber, en tu idioma, qué obligaciones tienes y qué hacer primero.",
+    "items": [
+      {
+        "title": "Catálogo de IA de pymes españolas",
+        "description": "Identificamos herramientas reales: IA en WhatsApp Business, agentes de voz tipo Vapi, agendas inteligentes, ChatGPT, Copilot, funciones de IA en tu CRM y más."
+      },
+      {
+        "title": "Clasificación de riesgo automática",
+        "description": "Cada herramienta se clasifica según el Reglamento de IA: riesgo inaceptable, alto, limitado o mínimo, con el artículo exacto que aplica."
+      },
+      {
+        "title": "Módulo España: AESIA y AEPD",
+        "description": "Referencias a la autoridad nacional de supervisión (AESIA), el sandbox regulatorio español y la normativa de protección de datos cuando hay datos de salud."
+      },
+      {
+        "title": "Alerta para datos de salud",
+        "description": "Clínicas dentales y centros de salud reciben un aviso destacado: los datos de pacientes son categoría especial y exigen garantías adicionales bajo el RGPD."
+      },
+      {
+        "title": "Informe bilingüe descargable",
+        "description": "Genera un informe en PDF, en español o inglés, con la clasificación, las obligaciones y los próximos pasos para cada herramienta."
+      },
+      {
+        "title": "Sin jerga legal innecesaria",
+        "description": "Explicamos cada obligación en lenguaje claro, pensado para quien dirige un negocio, no para abogados."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "De la duda a la claridad en tres pasos",
+    "steps": [
+      {
+        "title": "Cuéntanos sobre tu negocio",
+        "description": "Sector, tamaño y si tratas datos sensibles como historiales de salud."
+      },
+      {
+        "title": "Selecciona tus herramientas de IA",
+        "description": "Marca las que ya usas: WhatsApp con IA, agente de voz, agenda automática, ChatGPT, Copilot, tu CRM..."
+      },
+      {
+        "title": "Recibe tu clasificación y tu informe",
+        "description": "Nivel de riesgo, obligaciones concretas y un informe descargable listo para guardar o compartir."
+      }
+    ]
+  },
+  "spainSection": {
+    "eyebrow": "Módulo España",
+    "title": "El Reglamento europeo, aplicado a la realidad española",
+    "aesiaTitle": "AESIA",
+    "aesiaBody": "La Agencia Española de Supervisión de Inteligencia Artificial es la autoridad nacional de referencia para la vigilancia del mercado de sistemas de IA en España.",
+    "sandboxTitle": "Sandbox regulatorio",
+    "sandboxBody": "España pilotó el primer entorno de pruebas controladas de IA de la UE, marco de referencia para entender cómo se supervisarán los sistemas de alto riesgo.",
+    "aepdTitle": "AEPD y datos de salud",
+    "aepdBody": "Si tu negocio trata datos de salud (clínicas dentales, centros médicos), esos datos son categoría especial según el RGPD y la LOPDGDD, con exigencias reforzadas más allá de la Ley de IA."
+  },
+  "cta": {
+    "title": "¿Sabes qué obligaciones activa tu IA?",
+    "subtitle": "El escáner es gratuito, tarda cinco minutos y no requiere registro.",
+    "button": "Empezar escaneo gratis"
+  },
+  "footer": {
+    "tagline": "Automatización de IA para pymes, con el cumplimiento resuelto.",
+    "product": "Producto",
+    "scanner": "Escáner de cumplimiento",
+    "company": "Empresa",
+    "sincronia": "SincronIA",
+    "legal": "Legal",
+    "disclaimer": "Aviso legal",
+    "disclaimerShort": "SincronIA Compliance ofrece orientación informativa y no constituye asesoramiento legal. Consulta a un profesional del derecho para decisiones vinculantes.",
+    "rights": "Todos los derechos reservados."
+  },
+  "scanner": {
+    "title": "Escáner de cumplimiento",
+    "stepLabel": "Paso {current} de {total}",
+    "back": "Atrás",
+    "next": "Continuar",
+    "restart": "Empezar de nuevo",
+    "business": {
+      "title": "Cuéntanos sobre tu negocio",
+      "subtitle": "Esto nos ayuda a aplicar correctamente el módulo España y las alertas de datos sensibles.",
+      "nameLabel": "Nombre del negocio (opcional)",
+      "namePlaceholder": "p. ej. Clínica Dental Martínez",
+      "sectorLabel": "Sector",
+      "employeesLabel": "Número de empleados",
+      "sectors": {
+        "dental-clinic": "Clínica dental",
+        "medical-clinic": "Clínica médica o centro de salud",
+        "beauty-salon": "Peluquería o centro de estética",
+        "pharmacy": "Farmacia",
+        "legal-professional-services": "Despacho legal o servicios profesionales",
+        "financial-insurance-services": "Servicios financieros o seguros",
+        "retail-hospitality": "Comercio u hostelería",
+        "other-local-services": "Otro negocio local"
+      },
+      "employeeRanges": {
+        "solo": "Autónomo / 1 persona",
+        "small": "2-9 empleados",
+        "medium": "10-49 empleados",
+        "large": "50+ empleados"
+      }
+    },
+    "tools": {
+      "title": "¿Qué herramientas de IA usa tu negocio?",
+      "subtitle": "Selecciona todas las que apliquen. Puedes añadir contexto en el siguiente paso.",
+      "noneSelected": "Selecciona al menos una herramienta para continuar.",
+      "categories": {
+        "conversational": "Atención al cliente",
+        "voice": "Voz",
+        "scheduling": "Agenda",
+        "general-assistant": "Asistente general",
+        "productivity": "Productividad",
+        "crm": "CRM y ventas",
+        "content": "Contenido y marketing",
+        "analytics": "Analítica",
+        "hr": "Recursos humanos",
+        "biometric": "Biometría"
+      },
+      "items": {
+        "whatsapp-ai": {
+          "name": "IA en WhatsApp Business",
+          "description": "Chatbot o asistente automático que responde a clientes por WhatsApp."
+        },
+        "voice-receptionist": {
+          "name": "Recepcionista de voz con IA",
+          "description": "Agente de voz (tipo Vapi) que atiende llamadas, agenda citas o resuelve dudas."
+        },
+        "appointment-scheduler": {
+          "name": "Agenda inteligente con IA",
+          "description": "Sistema que gestiona o prioriza citas de forma automática."
+        },
+        "chatgpt-assistant": {
+          "name": "ChatGPT u otro asistente de lenguaje",
+          "description": "Uso de ChatGPT u otro modelo similar para redactar, resumir o responder."
+        },
+        "copilot-assistant": {
+          "name": "Microsoft Copilot",
+          "description": "Asistente de IA integrado en Office, Outlook o Windows."
+        },
+        "crm-ai-scoring": {
+          "name": "IA en tu CRM",
+          "description": "Puntuación de clientes potenciales, segmentación o recomendaciones automáticas."
+        },
+        "content-generation-ai": {
+          "name": "Generación de contenido con IA",
+          "description": "Imágenes, vídeos o textos generados por IA para marketing (antes/después, anuncios, redes)."
+        },
+        "sentiment-emotion-ai": {
+          "name": "Análisis de sentimiento o emoción",
+          "description": "Detección del tono, emoción o satisfacción en llamadas, reseñas o mensajes."
+        },
+        "recruitment-ai": {
+          "name": "IA para selección de personal",
+          "description": "Cribado automático de currículums o candidatos para contratación."
+        },
+        "biometric-attendance-ai": {
+          "name": "Reconocimiento biométrico",
+          "description": "Fichaje o control de acceso por huella, rostro o voz."
+        }
+      }
+    },
+    "context": {
+      "title": "Un poco más de contexto",
+      "subtitle": "Estas respuestas afinan la clasificación de riesgo de cada herramienta seleccionada.",
+      "questions": {
+        "employeeUse": "¿Se usa para evaluar, vigilar o tomar decisiones sobre empleados (contratación, rendimiento, horarios)?",
+        "automatedDecision": "¿Toma decisiones automáticas que afectan al acceso, precio o condiciones de un servicio, sin revisión humana?",
+        "emotionAnalysis": "¿Analiza emociones, tono de voz o estado de ánimo de personas?",
+        "customerFacing": "¿Interactúa directamente con clientes o pacientes?"
+      },
+      "yes": "Sí",
+      "no": "No"
+    },
+    "results": {
+      "title": "Resultado de tu escaneo",
+      "subtitle": "Clasificación preliminar según el Reglamento (UE) 2024/1689 y el módulo España.",
+      "overallTitle": "Nivel de riesgo más alto detectado",
+      "toolsTitle": "Detalle por herramienta",
+      "obligationsTitle": "Obligaciones",
+      "articlesTitle": "Base legal",
+      "warningsTitle": "Puntos de atención",
+      "spainTitle": "Módulo España",
+      "healthDataAlert": {
+        "title": "Datos de salud detectados",
+        "body": "Tu sector trata datos de salud, considerados categoría especial por el artículo 9 del RGPD y la LOPDGDD. Además de la Ley de IA, necesitas base legal reforzada, y en muchos casos una evaluación de impacto (EIPD), antes de usar IA sobre estos datos."
+      },
+      "aiLiteracyNote": {
+        "title": "Obligación transversal: formación en IA",
+        "body": "Desde el 2 de febrero de 2025, el artículo 4 del Reglamento exige que el personal que use o supervise sistemas de IA tenga la formación adecuada, sea cual sea el nivel de riesgo."
+      },
+      "downloadReport": "Descargar informe en PDF",
+      "generatingReport": "Generando informe…",
+      "disclaimer": "Esta clasificación es orientativa y se basa en las respuestas proporcionadas. No sustituye el asesoramiento de un profesional del derecho.",
+      "noTools": "No se ha seleccionado ninguna herramienta.",
+      "tierSummary": {
+        "unacceptable": "Al menos una práctica podría estar prohibida. Requiere revisión legal inmediata.",
+        "high": "Al menos una herramienta se clasifica como de alto riesgo. Aplican obligaciones reforzadas antes del 2 de agosto de 2026.",
+        "limited": "Tus herramientas requieren principalmente obligaciones de transparencia.",
+        "minimal": "Riesgo mínimo detectado. Aun así, recuerda la obligación de formación en IA."
+      }
+    }
+  },
+  "riskTiers": {
+    "unacceptable": {
+      "label": "Riesgo inaceptable",
+      "shortLabel": "Prohibido"
+    },
+    "high": {
+      "label": "Alto riesgo",
+      "shortLabel": "Alto riesgo"
+    },
+    "limited": {
+      "label": "Riesgo limitado",
+      "shortLabel": "Transparencia"
+    },
+    "minimal": {
+      "label": "Riesgo mínimo",
+      "shortLabel": "Riesgo mínimo"
+    }
+  },
+  "report": {
+    "title": "Informe de cumplimiento — SincronIA Compliance",
+    "generatedOn": "Generado el",
+    "businessSection": "Datos del negocio",
+    "sector": "Sector",
+    "employees": "Empleados",
+    "toolsSection": "Herramientas de IA analizadas",
+    "overallRisk": "Riesgo más alto detectado",
+    "obligations": "Obligaciones",
+    "legalBasis": "Base legal",
+    "warnings": "Puntos de atención",
+    "spainModule": "Módulo España",
+    "footerNote": "Este informe es orientativo, generado automáticamente por SincronIA Compliance a partir de las respuestas del usuario. No constituye asesoramiento legal."
+  },
+  "codes": {
+    "articles": {
+      "ART_4": "Artículo 4 — Alfabetización en IA",
+      "ART_5_1_F": "Artículo 5.1.f — Prácticas prohibidas (reconocimiento de emociones en el trabajo)",
+      "ANNEX_III_1": "Anexo III.1 — Identificación y categorización biométrica",
+      "ANNEX_III_4": "Anexo III.4 — Empleo y gestión de trabajadores",
+      "ANNEX_III_5": "Anexo III.5 — Acceso a servicios privados esenciales",
+      "ART_50_1": "Artículo 50.1 — Transparencia frente a personas usuarias",
+      "ART_50_3": "Artículo 50.3 — Transparencia en reconocimiento de emociones",
+      "ART_50_4": "Artículo 50.4 — Etiquetado de contenido sintético"
+    },
+    "obligations": {
+      "AI_LITERACY": {
+        "label": "Formar al personal en el uso de la IA",
+        "description": "Garantiza que las personas que usan o supervisan el sistema entienden sus capacidades, límites y riesgos."
+      },
+      "PROHIBITED_STOP_USE": {
+        "label": "Dejar de usar esta práctica de inmediato",
+        "description": "El Reglamento prohíbe esta práctica salvo excepciones muy limitadas. Consulta con un profesional del derecho antes de continuar."
+      },
+      "HIGH_RISK_DEPLOYER_OBLIGATIONS": {
+        "label": "Cumplir las obligaciones de responsable del despliegue",
+        "description": "Usa el sistema conforme a las instrucciones del proveedor, supervisa su funcionamiento y conserva los registros generados automáticamente."
+      },
+      "HIGH_RISK_HUMAN_OVERSIGHT": {
+        "label": "Asignar supervisión humana efectiva",
+        "description": "Designa a una persona con capacidad real de revisar, pausar o corregir las decisiones del sistema."
+      },
+      "HIGH_RISK_LOGGING": {
+        "label": "Conservar los registros de funcionamiento",
+        "description": "Guarda los registros generados automáticamente durante el periodo exigido, para poder demostrar el uso conforme del sistema."
+      },
+      "HIGH_RISK_FRIA": {
+        "label": "Evaluar el impacto en derechos fundamentales",
+        "description": "Antes de desplegar el sistema, valora su impacto en los derechos de las personas afectadas (evaluación de impacto sobre derechos fundamentales)."
+      },
+      "TRANSPARENCY_DISCLOSE_AI": {
+        "label": "Informar de que se interactúa con una IA",
+        "description": "Indica de forma clara, antes o durante la interacción, que la persona está hablando con un sistema de IA."
+      },
+      "TRANSPARENCY_LABEL_SYNTHETIC": {
+        "label": "Etiquetar el contenido generado por IA",
+        "description": "Marca de forma visible o legible por máquina las imágenes, vídeos o audios generados o manipulados por IA."
+      },
+      "TRANSPARENCY_EMOTION_NOTICE": {
+        "label": "Avisar del uso de reconocimiento de emociones",
+        "description": "Informa a las personas expuestas de que el sistema analiza su estado emocional."
+      },
+      "VOLUNTARY_CODE_CONDUCT": {
+        "label": "Adoptar buenas prácticas voluntarias",
+        "description": "Aunque no es obligatorio, se recomienda adherirse a códigos de conducta voluntarios de transparencia y buen uso de la IA."
+      }
+    },
+    "warnings": {
+      "WARN_VERIFY_EXCEPTION": "El artículo 5 prevé excepciones muy limitadas (por ejemplo, motivos médicos o de seguridad). Confirma con un profesional del derecho si tu caso podría estar exceptuado antes de tomar cualquier decisión.",
+      "WARN_BIOMETRIC_VERIFICATION_SCOPE": "Si el sistema solo verifica la identidad de una persona (comparación 1:1, por ejemplo para fichar), podría quedar fuera de la definición estricta de «identificación biométrica». Confírmalo con un profesional del derecho para precisar la clasificación.",
+      "WARN_HUMAN_REVIEW_RECOMMENDED": "Añadir una revisión humana antes de que la decisión surta efecto reduce el riesgo regulatorio y mejora la confianza de tus clientes.",
+      "WARN_GPAI_PROVIDER_OBLIGATIONS": "El proveedor del modelo (OpenAI, Microsoft u otro) tiene sus propias obligaciones como proveedor de IA de propósito general. Esto no elimina tus obligaciones como empresa que usa la herramienta."
+    },
+    "spainNotes": {
+      "SPAIN_AESIA_INFO": {
+        "label": "AESIA es tu autoridad de referencia",
+        "description": "La Agencia Española de Supervisión de Inteligencia Artificial vigila el cumplimiento del Reglamento en España. Guarda esta clasificación como parte de tu documentación interna."
+      },
+      "SPAIN_AEPD_HEALTH": {
+        "label": "Datos de salud: categoría especial",
+        "description": "Los datos de pacientes son categoría especial según el artículo 9 del RGPD y la LOPDGDD. Revisa tu base legal y valora si necesitas una evaluación de impacto (EIPD) ante la AEPD."
+      }
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "title": "SincronIA Compliance — EU AI Act compliance",
+    "description": "Scan the AI tools your business uses and find out in minutes what Regulation (EU) 2024/1689 and Spanish law require."
+  },
+  "nav": {
+    "brand": "SincronIA",
+    "product": "Compliance",
+    "home": "Home",
+    "scanner": "Scanner",
+    "start": "Free scan"
+  },
+  "locale": {
+    "switchLabel": "Language",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "eyebrow": "Regulation (EU) 2024/1689 · The European AI Act",
+    "headline": "The European AI Act also applies to your business.",
+    "headlineAccent": "Even if you just use AI.",
+    "subheadline": "Clinics, salons, pharmacies and local businesses already use AI in WhatsApp, voice agents or ChatGPT without knowing which legal obligations they trigger. Find out in under 5 minutes.",
+    "ctaPrimary": "Scan your business for free",
+    "ctaSecondary": "How it works",
+    "trustBadge1": "Rules engine built on Regulation (EU) 2024/1689",
+    "trustBadge2": "Spain-specific module (AESIA, AEPD)",
+    "trustBadge3": "Downloadable report in Spanish or English"
+  },
+  "countdown": {
+    "label": "Until the key high-risk obligations become applicable",
+    "date": "August 2, 2026",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Min",
+    "seconds": "Sec",
+    "expired": "The August 2, 2026 deadline has already passed."
+  },
+  "features": {
+    "eyebrow": "Why SincronIA Compliance exists",
+    "title": "AI compliance, built for real SMEs",
+    "subtitle": "You don't need a legal department. You need to know, in your own language, what your obligations are and what to do first.",
+    "items": [
+      {
+        "title": "Catalog of Spanish SME AI tools",
+        "description": "We recognize real-world tools: AI in WhatsApp Business, Vapi-style voice agents, smart scheduling, ChatGPT, Copilot, AI features inside your CRM and more."
+      },
+      {
+        "title": "Automatic risk classification",
+        "description": "Every tool is classified under the AI Act: unacceptable, high, limited or minimal risk, with the exact article that applies."
+      },
+      {
+        "title": "Spain module: AESIA and AEPD",
+        "description": "References to the national supervisory authority (AESIA), the Spanish regulatory sandbox, and data protection rules when health data is involved."
+      },
+      {
+        "title": "Health data alert",
+        "description": "Dental clinics and health centers get a prominent alert: patient data is a special category and requires extra safeguards under the GDPR."
+      },
+      {
+        "title": "Downloadable bilingual report",
+        "description": "Generate a PDF report, in Spanish or English, with the classification, obligations and next steps for every tool."
+      },
+      {
+        "title": "No unnecessary legal jargon",
+        "description": "We explain every obligation in plain language, written for the person running the business, not for lawyers."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "From uncertainty to clarity in three steps",
+    "steps": [
+      {
+        "title": "Tell us about your business",
+        "description": "Sector, size, and whether you handle sensitive data such as health records."
+      },
+      {
+        "title": "Select your AI tools",
+        "description": "Check the ones you already use: AI in WhatsApp, a voice agent, automatic scheduling, ChatGPT, Copilot, your CRM..."
+      },
+      {
+        "title": "Get your classification and report",
+        "description": "Risk level, concrete obligations, and a downloadable report ready to save or share."
+      }
+    ]
+  },
+  "spainSection": {
+    "eyebrow": "Spain module",
+    "title": "The European Regulation, applied to Spain",
+    "aesiaTitle": "AESIA",
+    "aesiaBody": "The Spanish AI Supervision Agency is the national reference authority for market surveillance of AI systems in Spain.",
+    "sandboxTitle": "Regulatory sandbox",
+    "sandboxBody": "Spain piloted the EU's first controlled AI testing environment, a reference framework for understanding how high-risk systems will be supervised.",
+    "aepdTitle": "AEPD and health data",
+    "aepdBody": "If your business handles health data (dental clinics, medical centers), that data is a special category under the GDPR and LOPDGDD, with reinforced requirements beyond the AI Act."
+  },
+  "cta": {
+    "title": "Do you know which obligations your AI triggers?",
+    "subtitle": "The scanner is free, takes five minutes, and requires no sign-up.",
+    "button": "Start free scan"
+  },
+  "footer": {
+    "tagline": "AI automation for SMEs, with compliance solved.",
+    "product": "Product",
+    "scanner": "Compliance scanner",
+    "company": "Company",
+    "sincronia": "SincronIA",
+    "legal": "Legal",
+    "disclaimer": "Legal notice",
+    "disclaimerShort": "SincronIA Compliance provides informational guidance and does not constitute legal advice. Consult a legal professional for binding decisions.",
+    "rights": "All rights reserved."
+  },
+  "scanner": {
+    "title": "Compliance scanner",
+    "stepLabel": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Continue",
+    "restart": "Start over",
+    "business": {
+      "title": "Tell us about your business",
+      "subtitle": "This helps us apply the Spain module and sensitive-data alerts correctly.",
+      "nameLabel": "Business name (optional)",
+      "namePlaceholder": "e.g. Martínez Dental Clinic",
+      "sectorLabel": "Sector",
+      "employeesLabel": "Number of employees",
+      "sectors": {
+        "dental-clinic": "Dental clinic",
+        "medical-clinic": "Medical clinic or health center",
+        "beauty-salon": "Hair salon or beauty center",
+        "pharmacy": "Pharmacy",
+        "legal-professional-services": "Law firm or professional services",
+        "financial-insurance-services": "Financial or insurance services",
+        "retail-hospitality": "Retail or hospitality",
+        "other-local-services": "Other local business"
+      },
+      "employeeRanges": {
+        "solo": "Sole trader / 1 person",
+        "small": "2-9 employees",
+        "medium": "10-49 employees",
+        "large": "50+ employees"
+      }
+    },
+    "tools": {
+      "title": "Which AI tools does your business use?",
+      "subtitle": "Select all that apply. You can add context in the next step.",
+      "noneSelected": "Select at least one tool to continue.",
+      "categories": {
+        "conversational": "Customer service",
+        "voice": "Voice",
+        "scheduling": "Scheduling",
+        "general-assistant": "General assistant",
+        "productivity": "Productivity",
+        "crm": "CRM & sales",
+        "content": "Content & marketing",
+        "analytics": "Analytics",
+        "hr": "Human resources",
+        "biometric": "Biometrics"
+      },
+      "items": {
+        "whatsapp-ai": {
+          "name": "WhatsApp Business AI",
+          "description": "Chatbot or automated assistant that replies to customers on WhatsApp."
+        },
+        "voice-receptionist": {
+          "name": "AI voice receptionist",
+          "description": "Voice agent (Vapi-style) that answers calls, books appointments or resolves queries."
+        },
+        "appointment-scheduler": {
+          "name": "AI-powered scheduling",
+          "description": "System that manages or prioritizes appointments automatically."
+        },
+        "chatgpt-assistant": {
+          "name": "ChatGPT or another language assistant",
+          "description": "Using ChatGPT or a similar model to draft, summarize or answer."
+        },
+        "copilot-assistant": {
+          "name": "Microsoft Copilot",
+          "description": "AI assistant built into Office, Outlook or Windows."
+        },
+        "crm-ai-scoring": {
+          "name": "AI in your CRM",
+          "description": "Lead scoring, segmentation or automated recommendations."
+        },
+        "content-generation-ai": {
+          "name": "AI content generation",
+          "description": "AI-generated images, video or text for marketing (before/after, ads, social media)."
+        },
+        "sentiment-emotion-ai": {
+          "name": "Sentiment or emotion analysis",
+          "description": "Detecting tone, emotion or satisfaction in calls, reviews or messages."
+        },
+        "recruitment-ai": {
+          "name": "AI for hiring",
+          "description": "Automated screening of resumes or candidates for recruitment."
+        },
+        "biometric-attendance-ai": {
+          "name": "Biometric recognition",
+          "description": "Clocking in or access control via fingerprint, face or voice."
+        }
+      }
+    },
+    "context": {
+      "title": "A bit more context",
+      "subtitle": "These answers fine-tune the risk classification of each selected tool.",
+      "questions": {
+        "employeeUse": "Is it used to evaluate, monitor or make decisions about employees (hiring, performance, scheduling)?",
+        "automatedDecision": "Does it make automated decisions affecting access, price or terms of a service, without human review?",
+        "emotionAnalysis": "Does it analyze emotions, tone of voice or mood of people?",
+        "customerFacing": "Does it interact directly with customers or patients?"
+      },
+      "yes": "Yes",
+      "no": "No"
+    },
+    "results": {
+      "title": "Your scan results",
+      "subtitle": "Preliminary classification under Regulation (EU) 2024/1689 and the Spain module.",
+      "overallTitle": "Highest risk level detected",
+      "toolsTitle": "Breakdown by tool",
+      "obligationsTitle": "Obligations",
+      "articlesTitle": "Legal basis",
+      "warningsTitle": "Points of attention",
+      "spainTitle": "Spain module",
+      "healthDataAlert": {
+        "title": "Health data detected",
+        "body": "Your sector handles health data, a special category under Article 9 GDPR and the LOPDGDD. Beyond the AI Act, you need a reinforced legal basis, and in many cases a data protection impact assessment (DPIA), before using AI on this data."
+      },
+      "aiLiteracyNote": {
+        "title": "Cross-cutting obligation: AI literacy",
+        "body": "Since February 2, 2025, Article 4 of the Regulation requires staff who use or oversee AI systems to have adequate training, regardless of risk level."
+      },
+      "downloadReport": "Download PDF report",
+      "generatingReport": "Generating report…",
+      "disclaimer": "This classification is indicative and based on the answers provided. It does not replace advice from a legal professional.",
+      "noTools": "No tools selected.",
+      "tierSummary": {
+        "unacceptable": "At least one practice may be prohibited. Immediate legal review required.",
+        "high": "At least one tool is classified as high-risk. Reinforced obligations apply before August 2, 2026.",
+        "limited": "Your tools mainly trigger transparency obligations.",
+        "minimal": "Minimal risk detected. Still, remember the AI literacy obligation."
+      }
+    }
+  },
+  "riskTiers": {
+    "unacceptable": {
+      "label": "Unacceptable risk",
+      "shortLabel": "Prohibited"
+    },
+    "high": {
+      "label": "High risk",
+      "shortLabel": "High risk"
+    },
+    "limited": {
+      "label": "Limited risk",
+      "shortLabel": "Transparency"
+    },
+    "minimal": {
+      "label": "Minimal risk",
+      "shortLabel": "Minimal risk"
+    }
+  },
+  "report": {
+    "title": "Compliance report — SincronIA Compliance",
+    "generatedOn": "Generated on",
+    "businessSection": "Business details",
+    "sector": "Sector",
+    "employees": "Employees",
+    "toolsSection": "AI tools analyzed",
+    "overallRisk": "Highest risk detected",
+    "obligations": "Obligations",
+    "legalBasis": "Legal basis",
+    "warnings": "Points of attention",
+    "spainModule": "Spain module",
+    "footerNote": "This report is indicative, automatically generated by SincronIA Compliance from the user's answers. It does not constitute legal advice."
+  },
+  "codes": {
+    "articles": {
+      "ART_4": "Article 4 — AI literacy",
+      "ART_5_1_F": "Article 5.1.f — Prohibited practices (workplace emotion recognition)",
+      "ANNEX_III_1": "Annex III.1 — Biometric identification and categorization",
+      "ANNEX_III_4": "Annex III.4 — Employment and worker management",
+      "ANNEX_III_5": "Annex III.5 — Access to essential private services",
+      "ART_50_1": "Article 50.1 — Transparency towards natural persons",
+      "ART_50_3": "Article 50.3 — Transparency for emotion recognition",
+      "ART_50_4": "Article 50.4 — Labeling of synthetic content"
+    },
+    "obligations": {
+      "AI_LITERACY": {
+        "label": "Train staff on AI use",
+        "description": "Make sure people who use or oversee the system understand its capabilities, limitations and risks."
+      },
+      "PROHIBITED_STOP_USE": {
+        "label": "Stop using this practice immediately",
+        "description": "The Regulation prohibits this practice except in very limited exceptions. Consult a legal professional before continuing."
+      },
+      "HIGH_RISK_DEPLOYER_OBLIGATIONS": {
+        "label": "Meet deployer obligations",
+        "description": "Use the system according to the provider's instructions, monitor its operation, and keep the automatically generated logs."
+      },
+      "HIGH_RISK_HUMAN_OVERSIGHT": {
+        "label": "Assign effective human oversight",
+        "description": "Designate someone with the real ability to review, pause or correct the system's decisions."
+      },
+      "HIGH_RISK_LOGGING": {
+        "label": "Retain operation logs",
+        "description": "Keep the automatically generated logs for the required period, so you can demonstrate compliant use of the system."
+      },
+      "HIGH_RISK_FRIA": {
+        "label": "Assess the impact on fundamental rights",
+        "description": "Before deploying the system, assess its impact on the rights of affected people (fundamental rights impact assessment)."
+      },
+      "TRANSPARENCY_DISCLOSE_AI": {
+        "label": "Disclose that people are interacting with AI",
+        "description": "Clearly indicate, before or during the interaction, that the person is talking to an AI system."
+      },
+      "TRANSPARENCY_LABEL_SYNTHETIC": {
+        "label": "Label AI-generated content",
+        "description": "Visibly or machine-readably mark images, video or audio generated or manipulated by AI."
+      },
+      "TRANSPARENCY_EMOTION_NOTICE": {
+        "label": "Notify use of emotion recognition",
+        "description": "Inform exposed individuals that the system analyzes their emotional state."
+      },
+      "VOLUNTARY_CODE_CONDUCT": {
+        "label": "Adopt voluntary good practices",
+        "description": "Although not mandatory, adhering to voluntary codes of conduct on transparency and responsible AI use is recommended."
+      }
+    },
+    "warnings": {
+      "WARN_VERIFY_EXCEPTION": "Article 5 provides for very limited exceptions (e.g. medical or safety reasons). Confirm with a legal professional whether your case could be exempt before making any decision.",
+      "WARN_BIOMETRIC_VERIFICATION_SCOPE": "If the system only verifies a person's identity (1:1 match, e.g. for clocking in), it may fall outside the strict definition of 'biometric identification'. Confirm with a legal professional to refine the classification.",
+      "WARN_HUMAN_REVIEW_RECOMMENDED": "Adding human review before the decision takes effect reduces regulatory risk and improves customer trust.",
+      "WARN_GPAI_PROVIDER_OBLIGATIONS": "The model provider (OpenAI, Microsoft or other) has its own obligations as a general-purpose AI provider. This does not remove your obligations as the business using the tool."
+    },
+    "spainNotes": {
+      "SPAIN_AESIA_INFO": {
+        "label": "AESIA is your reference authority",
+        "description": "The Spanish AI Supervision Agency oversees compliance with the Regulation in Spain. Keep this classification as part of your internal documentation."
+      },
+      "SPAIN_AEPD_HEALTH": {
+        "label": "Health data: special category",
+        "description": "Patient data is a special category under Article 9 GDPR and the LOPDGDD. Review your legal basis and consider whether you need a data protection impact assessment (DPIA) before the AEPD."
+      }
+    }
+  }
+}
