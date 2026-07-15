@@ -1,0 +1,18 @@
+{
+  "name": "sincronia-compliance-widget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --minify --legal-comments=none --format=iife --global-name=SincroniaComplianceWidget --external:html2canvas --external:canvg --external:dompurify --outfile=dist/sincronia-compliance-widget.js",
+    "build:dev": "esbuild src/index.ts --bundle --format=iife --global-name=SincroniaComplianceWidget --external:html2canvas --external:canvg --external:dompurify --outfile=dist/sincronia-compliance-widget.dev.js --sourcemap",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "typescript": "^5.9.3"
+  }
+}

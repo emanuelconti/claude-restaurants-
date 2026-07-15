@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The embeddable widget is a separate sub-project with its own
+    // tooling (esbuild/tsc) and lint scope.
+    "widget/**",
   ]),
 ]);
 

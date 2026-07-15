@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Host site demo — SincronIA Compliance widget</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4f1ea; color: #222; margin: 0; padding: 40px; }
+  h1 { color: #a33; }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  p { line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>My Existing Business Website (English, built elsewhere)</h1>
+    <p>This page simulates a pre-existing site with its own unrelated fonts and colors, to prove the widget below is visually isolated (Shadow DOM) and doesn't collide with host page styles.</p>
+
+    <div data-sincronia-compliance-widget data-locale="en"></div>
+
+    <p style="margin-top:40px;">More host page content below the widget.</p>
+  </div>
+
+  <script src="dist/sincronia-compliance-widget.js"></script>
+</body>
+</html>
