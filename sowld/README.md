@@ -9,7 +9,22 @@ in the Framer site (Part A). The Framer site just collects waitlist
 emails; this tool is what you (or a scheduled job) run to get deal
 alerts. The two are independent deliverables.
 
-## Quick start
+## Quick start (easiest — guided script)
+
+Requires Python 3 installed (Mac/Linux already have it; on Windows use
+[WSL](https://learn.microsoft.com/windows/wsl/install) or Git Bash).
+
+```bash
+cd sowld
+bash avvia.sh
+```
+
+First run: it sets everything up automatically and asks you to paste your
+Anthropic API key once (get one free at console.anthropic.com/, click
+"API Keys" → "Create Key"). Every run after that just asks what you're
+looking for and in which city — nothing else to configure.
+
+## Quick start (manual)
 
 ```bash
 cd sowld
