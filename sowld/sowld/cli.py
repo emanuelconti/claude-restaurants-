@@ -13,7 +13,8 @@ import sys
 
 from dotenv import load_dotenv
 
-from .fetch import fetch_listings
+from .fetch import DEFAULT_SOURCE, SOURCES, fetch_listings
+from .mailer import send_deals_email
 from .output import print_table, save_csv
 from .parse import parse_listings
 from .scoring import DEFAULT_THRESHOLD, filter_and_rank
@@ -27,6 +28,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("query", help='What to search for, e.g. "road bike"')
     parser.add_argument("location", help='City to search near, e.g. "Barcelona"')
+    parser.add_argument(
+        "--source",
+        choices=sorted(SOURCES),
+        default=DEFAULT_SOURCE,
+        help=f"Marketplace to search (default {DEFAULT_SOURCE})",
+    )
     parser.add_argument(
         "--threshold",
         type=float,
@@ -49,6 +56,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Also send the results to Telegram (needs TELEGRAM_BOT_TOKEN/CHAT_ID)",
     )
+    parser.add_argument(
+        "--email",
+        action="store_true",
+        help="Also send the results by email (needs GMAIL_USER/GMAIL_APP_PASSWORD)",
+    )
     return parser
 
 
@@ -60,8 +72,10 @@ def main(argv: list[str] | None = None) -> None:
     if not api_key:
         sys.exit("ANTHROPIC_API_KEY is not set. Add it to your .env file.")
 
-    print(f"Fetching listings for '{args.query}' near {args.location}...")
-    listings = fetch_listings(args.query, args.location, max_results=args.max_results)
+    print(f"Fetching listings for '{args.query}' near {args.location} on {args.source}...")
+    listings = fetch_listings(
+        args.query, args.location, source=args.source, max_results=args.max_results
+    )
     print(f"Found {len(listings)} listings. Parsing with Claude...")
 
     parsed = parse_listings(listings, api_key=api_key)
@@ -75,6 +89,10 @@ def main(argv: list[str] | None = None) -> None:
     if args.telegram:
         send_deals(deals)
         print("Sent to Telegram.")
+
+    if args.email:
+        send_deals_email(deals)
+        print("Sent by email.")
 
 
 if __name__ == "__main__":

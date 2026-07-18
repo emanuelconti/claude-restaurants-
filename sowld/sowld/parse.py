@@ -13,7 +13,7 @@ from typing import Optional
 
 from anthropic import Anthropic
 
-from .fetch import Listing
+from .sources.common import Listing
 
 MODEL = "claude-sonnet-5"
 
