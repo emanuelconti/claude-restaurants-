@@ -8,6 +8,7 @@ of being a script someone has to run themselves.
 
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 
@@ -110,10 +111,41 @@ def billing_checkout(request: Request):
     base_url = str(request.base_url).rstrip("/")
     url = create_checkout_session(
         customer_email=user.email,
-        success_url=f"{base_url}/app?checkout=success",
+        success_url=f"{base_url}/app?session_id={{CHECKOUT_SESSION_ID}}",
         cancel_url=f"{base_url}/app",
     )
     return RedirectResponse(url, status_code=303)
+
+
+def _activate_from_checkout_session(user_id: int, session_id: str) -> bool:
+    """Confirm a checkout session directly with Stripe and activate the
+    subscription immediately, instead of waiting on the webhook.
+
+    The webhook (below) is still the source of truth for renewals and
+    cancellations, but relying on it alone for this first activation is
+    fragile: Render's free tier can spin an idle instance down, and a
+    delayed wake-up can make Stripe's webhook delivery time out.
+    """
+    try:
+        session = stripe.checkout.Session.retrieve(session_id)
+    except stripe.error.StripeError:
+        return False
+    if session.payment_status != "paid":
+        return False
+
+    db = SessionLocal()
+    try:
+        db_user = db.get(User, user_id)
+        details_email = session.customer_details.email if session.customer_details else None
+        if not db_user or details_email != db_user.email:
+            return False
+        db_user.stripe_customer_id = session.customer
+        db_user.stripe_subscription_id = session.subscription
+        db_user.subscription_status = "active"
+        db.commit()
+        return True
+    finally:
+        db.close()
 
 
 @app.get("/billing/portal")
@@ -165,6 +197,12 @@ def app_home(request: Request):
     user = get_current_user(request)
     if not user:
         return RedirectResponse("/login", status_code=303)
+
+    session_id = request.query_params.get("session_id")
+    if session_id and not user.is_subscribed:
+        if _activate_from_checkout_session(user.id, session_id):
+            user = get_current_user(request)
+
     if not user.is_subscribed:
         return templates.TemplateResponse(request, "subscribe.html", {"user": user})
     return templates.TemplateResponse(

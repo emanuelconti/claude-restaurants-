@@ -10,6 +10,9 @@ _tmp_db = tempfile.NamedTemporaryFile(suffix=".db", delete=False)
 os.environ["DATABASE_URL"] = f"sqlite:///{_tmp_db.name}"
 os.environ.setdefault("SESSION_SECRET_KEY", "test-secret")
 
+from types import SimpleNamespace
+from unittest.mock import patch
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -74,3 +77,34 @@ def test_billing_checkout_without_stripe_config_returns_503(client):
     client.post("/signup", data={"email": "checkout@example.com", "password": "supersecret123"})
     resp = client.get("/billing/checkout", follow_redirects=False)
     assert resp.status_code == 503
+
+
+def _fake_paid_session(email):
+    return SimpleNamespace(
+        payment_status="paid",
+        customer="cus_fake",
+        subscription="sub_fake",
+        customer_details=SimpleNamespace(email=email),
+    )
+
+
+def test_app_activates_subscription_from_checkout_session_id(client):
+    client.post("/signup", data={"email": "paid@example.com", "password": "supersecret123"})
+    with patch(
+        "webapp.main.stripe.checkout.Session.retrieve",
+        return_value=_fake_paid_session("paid@example.com"),
+    ):
+        resp = client.get("/app?session_id=cs_test_fake")
+    assert resp.status_code == 200
+    assert "Trova un affare" in resp.text  # dashboard, not the subscribe page
+
+
+def test_app_ignores_session_id_for_a_different_email(client):
+    client.post("/signup", data={"email": "mismatch@example.com", "password": "supersecret123"})
+    with patch(
+        "webapp.main.stripe.checkout.Session.retrieve",
+        return_value=_fake_paid_session("someone-else@example.com"),
+    ):
+        resp = client.get("/app?session_id=cs_test_fake")
+    assert resp.status_code == 200
+    assert "Abbonati" in resp.text  # still locked
