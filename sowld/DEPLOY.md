@@ -85,6 +85,31 @@ test**. Solo quando vuoi davvero incassare pagamenti reali: torna su
 Stripe, disattiva "Test mode", ripeti i passi 2-4 con le chiavi *live*
 (`sk_live_...`, nuovo Price ID, nuovo webhook) al posto di quelle test.
 
+## Passo 6 — Database persistente (fallo prima di avere clienti veri)
+
+Di default il sito usa SQLite, un semplice file — su Render questo file
+**si azzera a ogni deploy**, cancellando tutti gli account registrati.
+Va benissimo mentre stai ancora testando (è normale dover rifare
+signup/pagamento ogni volta che aggiorno il codice), ma prima di lanciare
+davvero il prodotto serve un database che non si cancella mai.
+
+1. Su Render: **New +** → **Postgres**
+2. Dai un nome (es. "sowld-db"), scegli la regione più vicina a quella del
+   servizio web, piano **Free** (gratuito 30 giorni, poi ~7$/mese — vedi
+   sotto)
+3. Crea. Dopo qualche secondo, apri il database e cerca il campo
+   **"Internal Database URL"** — copialo (inizia con `postgres://`)
+4. Torna sul servizio `sowld` → Environment Variables → modifica
+   `DATABASE_URL`, sostituendo il valore con quello appena copiato
+5. Salva — Render fa un nuovo deploy. Da questo momento gli account
+   restano salvati per sempre, anche quando aggiorno il codice
+
+Nota sul piano gratuito di Postgres su Render: è gratis per un periodo
+limitato (in genere 30 giorni), poi Render lo sospende se non passi a un
+piano a pagamento (da ~7$/mese) — quando sarai pronto ad avere clienti
+veri che pagano, questo costo fisso mensile va messo in conto insieme
+agli altri.
+
 ## Il link per Framer
 
 Una volta online, l'URL da inserire nel sito Framer (Part A) come pulsante
@@ -97,15 +122,14 @@ momento — Render supporta domini personalizzati gratuitamente).
 
 ## Limiti onesti di questa versione
 
-- **Il database è SQLite su disco effimero**: sul piano free di Render il
-  filesystem si resetta a ogni riavvio/deploy — utenti e abbonamenti
-  registrati vengono persi. Va benissimo per testare il flusso adesso;
-  prima di avere clienti veri, serve un database persistente (Render
-  offre Postgres gratuito per 90 giorni, poi a pagamento) — è un cambio
-  di poche righe in `webapp/db.py` (`DATABASE_URL`).
 - **Ricerca sincrona**: la pagina resta in caricamento per tutta la durata
   della ricerca (10-30 secondi). Va bene per pochi utenti; con più
   traffico servirebbe eseguirla in background.
-- **Kleinanzeigen/Subito sono ancora sperimentali** (vedi README.md) — il
-  primo vero test in produzione potrebbe richiedere un aggiustamento ai
-  selettori.
+- **Wallapop, Leboncoin e Subito.it sono bloccati** da protezioni
+  anti-bot (verificato dal vivo) — solo Vinted è affidabile oggi,
+  Kleinanzeigen è incostante. Vedi README.md, sezione "Multiple
+  marketplaces", per i dettagli.
+- **Limite di ricerche mensili per utente**: 50 di default
+  (`MONTHLY_SEARCH_LIMIT` nelle Environment Variables), per tenere sotto
+  controllo il costo massimo dell'API Anthropic per cliente. Alzalo se il
+  prezzo dell'abbonamento lo giustifica.

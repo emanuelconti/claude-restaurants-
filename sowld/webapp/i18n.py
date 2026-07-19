@@ -58,6 +58,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "dashboard.beta_suffix": " (in development)",
         "error.stripe_not_configured": "Stripe is not configured on this server yet.",
         "error.anthropic_not_configured": "ANTHROPIC_API_KEY is not configured on this server.",
+        "error.usage_limit_reached": "You've reached this month's search limit for your plan. It resets 30 days after your first search.",
     },
     "es": {
         "nav.login": "Acceder",
@@ -97,6 +98,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "dashboard.beta_suffix": " (en desarrollo)",
         "error.stripe_not_configured": "Stripe todavía no está configurado en este servidor.",
         "error.anthropic_not_configured": "ANTHROPIC_API_KEY no está configurada en este servidor.",
+        "error.usage_limit_reached": "Has alcanzado el límite de búsquedas de este mes para tu plan. Se reinicia 30 días después de tu primera búsqueda.",
     },
     "fr": {
         "nav.login": "Connexion",
@@ -136,6 +138,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "dashboard.beta_suffix": " (en développement)",
         "error.stripe_not_configured": "Stripe n'est pas encore configuré sur ce serveur.",
         "error.anthropic_not_configured": "ANTHROPIC_API_KEY n'est pas configurée sur ce serveur.",
+        "error.usage_limit_reached": "Vous avez atteint la limite de recherches de ce mois pour votre abonnement. Elle se réinitialise 30 jours après votre première recherche.",
     },
     "de": {
         "nav.login": "Anmelden",
@@ -175,6 +178,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "dashboard.beta_suffix": " (in Entwicklung)",
         "error.stripe_not_configured": "Stripe ist auf diesem Server noch nicht konfiguriert.",
         "error.anthropic_not_configured": "ANTHROPIC_API_KEY ist auf diesem Server nicht konfiguriert.",
+        "error.usage_limit_reached": "Du hast das monatliche Suchlimit deines Abos erreicht. Es wird 30 Tage nach deiner ersten Suche zurückgesetzt.",
     },
     "it": {
         "nav.login": "Accedi",
@@ -214,6 +218,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "dashboard.beta_suffix": " (in sviluppo)",
         "error.stripe_not_configured": "Stripe non è ancora configurato su questo server.",
         "error.anthropic_not_configured": "ANTHROPIC_API_KEY non è configurata su questo server.",
+        "error.usage_limit_reached": "Hai raggiunto il limite di ricerche di questo mese per il tuo piano. Si azzera 30 giorni dopo la tua prima ricerca.",
     },
 }
 

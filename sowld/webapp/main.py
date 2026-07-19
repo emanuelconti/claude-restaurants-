@@ -26,7 +26,7 @@ from .auth import get_current_user
 from .auth import login as start_session
 from .auth import logout as end_session
 from .billing import create_billing_portal_session, create_checkout_session, is_configured
-from .db import SessionLocal, User, hash_password, init_db, verify_password
+from .db import SessionLocal, User, hash_password, init_db, try_consume_search, verify_password
 from .i18n import LANGUAGES, get_translator, resolve_language
 
 app = FastAPI(title="Sowld")
@@ -253,6 +253,8 @@ def app_search(
     deals = []
     if not api_key:
         error = ctx["t"]("error.anthropic_not_configured")
+    elif not try_consume_search(user.id):
+        error = ctx["t"]("error.usage_limit_reached")
     else:
         try:
             listings = fetch_listings(query, location, source=source, max_results=40)

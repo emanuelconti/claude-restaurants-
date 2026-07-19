@@ -16,6 +16,7 @@ from unittest.mock import patch
 import pytest
 from fastapi.testclient import TestClient
 
+from webapp.db import MONTHLY_SEARCH_LIMIT, SessionLocal, User, hash_password, try_consume_search
 from webapp.main import app
 
 
@@ -108,3 +109,31 @@ def test_app_ignores_session_id_for_a_different_email(client):
         resp = client.get("/app?session_id=cs_test_fake")
     assert resp.status_code == 200
     assert "Abbonati" in resp.text  # still locked
+
+
+def _make_user(email: str) -> int:
+    db = SessionLocal()
+    try:
+        user = User(email=email, password_hash=hash_password("supersecret123"))
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+        return user.id
+    finally:
+        db.close()
+
+
+def test_try_consume_search_allows_up_to_the_monthly_limit_then_blocks():
+    user_id = _make_user("limits@example.com")
+    for _ in range(MONTHLY_SEARCH_LIMIT):
+        assert try_consume_search(user_id) is True
+    assert try_consume_search(user_id) is False
+
+
+def test_try_consume_search_counts_are_per_user():
+    user_a = _make_user("usera@example.com")
+    user_b = _make_user("userb@example.com")
+    for _ in range(MONTHLY_SEARCH_LIMIT):
+        try_consume_search(user_a)
+    assert try_consume_search(user_a) is False
+    assert try_consume_search(user_b) is True
