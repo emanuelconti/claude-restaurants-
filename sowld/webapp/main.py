@@ -17,7 +17,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
-from sowld.fetch import DEFAULT_SOURCE, SOURCES, fetch_listings
+from sowld.fetch import BETA_SOURCES, DEFAULT_SOURCE, SOURCES, fetch_listings
 from sowld.parse import parse_listings
 from sowld.scoring import DEFAULT_THRESHOLD, filter_and_rank
 from sowld.valuation import compute_fair_values
@@ -223,7 +223,14 @@ def app_home(request: Request):
     return templates.TemplateResponse(
         request,
         "dashboard.html",
-        {**ctx, "user": user, "sources": sorted(SOURCES), "source": DEFAULT_SOURCE, "results": None},
+        {
+            **ctx,
+            "user": user,
+            "sources": sorted(SOURCES),
+            "beta_sources": BETA_SOURCES,
+            "source": DEFAULT_SOURCE,
+            "results": None,
+        },
     )
 
 
@@ -262,6 +269,7 @@ def app_search(
             **ctx,
             "user": user,
             "sources": sorted(SOURCES),
+            "beta_sources": BETA_SOURCES,
             "results": deals,
             "query": query,
             "location": location,

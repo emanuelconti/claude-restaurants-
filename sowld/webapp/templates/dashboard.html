@@ -9,11 +9,12 @@
   <input type="text" name="location" placeholder="{{ t('dashboard.location_placeholder') }}" value="{{ location or '' }}" required>
   <select name="source">
     {% for s in sources %}
-      <option value="{{ s }}" {% if s == source %}selected{% endif %}>{{ s }}</option>
+      <option value="{{ s }}" {% if s == source %}selected{% endif %}>{{ s }}{% if s in beta_sources %}{{ t('dashboard.beta_suffix') }}{% endif %}</option>
     {% endfor %}
   </select>
   <button type="submit" class="lime">{{ t('dashboard.submit') }}</button>
 </form>
+<p class="lead" style="font-size:0.82rem;margin-top:-0.5rem;">{{ t('dashboard.beta_notice') }}</p>
 
 {% if results is not none %}
   {% if results %}
