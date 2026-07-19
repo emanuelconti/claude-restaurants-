@@ -71,7 +71,7 @@
   <a class="logo" href="/">Sowld</a>
   <div class="lang-switch">
     {% for code, name in languages.items() %}
-      <a href="{{ request.url.path }}?lang={{ code }}" class="{{ 'active' if code == lang else '' }}" title="{{ name }}">{{ code.upper() }}</a>
+      <a href="{{ lang_switch_path }}?lang={{ code }}" class="{{ 'active' if code == lang else '' }}" title="{{ name }}">{{ code.upper() }}</a>
     {% endfor %}
   </div>
   <nav>

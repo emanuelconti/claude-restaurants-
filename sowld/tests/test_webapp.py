@@ -111,6 +111,26 @@ def test_app_ignores_session_id_for_a_different_email(client):
     assert "Abbonati" in resp.text  # still locked
 
 
+def test_language_switcher_avoids_the_post_only_search_path(client, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    client.post("/signup", data={"email": "langswitch@example.com", "password": "supersecret123"})
+
+    db = SessionLocal()
+    try:
+        user = db.query(User).filter(User.email == "langswitch@example.com").first()
+        user.subscription_status = "active"
+        db.commit()
+    finally:
+        db.close()
+
+    resp = client.post(
+        "/app/search", data={"query": "bici", "location": "Roma", "source": "vinted"}
+    )
+    assert resp.status_code == 200
+    assert 'href="/app/search?lang=' not in resp.text
+    assert 'href="/app?lang=en"' in resp.text
+
+
 def _make_user(email: str) -> int:
     db = SessionLocal()
     try:

@@ -41,7 +41,17 @@ init_db()
 
 def _base_context(request: Request) -> dict:
     lang = resolve_language(request)
-    return {"lang": lang, "languages": LANGUAGES, "t": get_translator(lang)}
+    # /app/search only accepts POST; reusing it verbatim for the language
+    # switcher's GET links (after a search, the browser's address bar sits
+    # on /app/search) would 405. Send the switcher back to /app instead.
+    path = request.url.path
+    lang_switch_path = "/app" if path == "/app/search" else path
+    return {
+        "lang": lang,
+        "languages": LANGUAGES,
+        "t": get_translator(lang),
+        "lang_switch_path": lang_switch_path,
+    }
 
 
 @app.get("/", response_class=HTMLResponse)
