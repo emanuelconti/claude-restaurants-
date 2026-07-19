@@ -11,12 +11,15 @@ function returning list[Listing], then register it in SOURCES below.
 
 from __future__ import annotations
 
-from .sources import leboncoin, wallapop
+from .sources import kleinanzeigen, leboncoin, subito, vinted, wallapop
 from .sources.common import Listing
 
 SOURCES = {
     "wallapop": wallapop.fetch_listings,
     "leboncoin": leboncoin.fetch_listings,
+    "vinted": vinted.fetch_listings,
+    "kleinanzeigen": kleinanzeigen.fetch_listings,
+    "subito": subito.fetch_listings,
 }
 
 DEFAULT_SOURCE = "wallapop"
