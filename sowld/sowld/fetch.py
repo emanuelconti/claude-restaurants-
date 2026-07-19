@@ -22,7 +22,10 @@ SOURCES = {
     "subito": subito.fetch_listings,
 }
 
-DEFAULT_SOURCE = "wallapop"
+# Verified live (2026-07-19): wallapop/leboncoin/subito are blocked by
+# anti-bot protection (see README "Multiple marketplaces"), kleinanzeigen
+# is unreliable. vinted is the only source confirmed working consistently.
+DEFAULT_SOURCE = "vinted"
 
 
 def fetch_listings(

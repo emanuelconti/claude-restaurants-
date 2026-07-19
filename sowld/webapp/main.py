@@ -223,7 +223,7 @@ def app_home(request: Request):
     return templates.TemplateResponse(
         request,
         "dashboard.html",
-        {**ctx, "user": user, "sources": sorted(SOURCES), "results": None},
+        {**ctx, "user": user, "sources": sorted(SOURCES), "source": DEFAULT_SOURCE, "results": None},
     )
 
 

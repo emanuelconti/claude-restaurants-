@@ -85,46 +85,65 @@ python -m sowld "road bike" "Barcelona" --email       # needs GMAIL_USER/GMAIL_A
 ## Multiple marketplaces
 
 Five of Europe's main second-hand marketplaces are wired up, selected
-with `--source`:
+with `--source`. **Verified live** (2026-07-19) — three of the five are
+blocked by anti-bot protection that isn't fixable by tweaking headers:
 
-| `--source`      | Country / reach       | Confidence |
+| `--source`      | Country / reach       | Live status |
 | :--------------- | :--------------------- | :--------- |
-| `wallapop`       | Spain                  | Reverse-engineered internal API — same pattern the SOW itself proposes for V0. |
-| `leboncoin`      | France                 | Reverse-engineered internal API, same caveats as Wallapop. |
-| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | Reverse-engineered but **well-documented by the community** (e.g. the pyVinted project) — the highest-confidence of the non-official sources. |
-| `kleinanzeigen`  | Germany                | **Experimental.** HTML scrape (JSON-LD first, CSS fallback) — not yet exercised against a live page, see below. |
-| `subito`         | Italy                  | **Experimental.** Same approach and caveat as Kleinanzeigen. |
+| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Working.** Verified against live search results. The reliable default. |
+| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Parser is correct when it does get real HTML. |
+| `wallapop`       | Spain                  | **Blocked.** Returns HTTP 403 even with full browser headers (Accept, Accept-Language, Referer, a real Safari user-agent) — an anti-bot system, not a missing header. |
+| `leboncoin`      | France                 | **Blocked.** Same 403 regardless of headers. |
+| `subito`         | Italy                  | **Blocked.** Same 403 regardless of headers. |
 
 Each source lives in its own file under `sowld/sources/` and just needs
 to return the shared `Listing` type — everything downstream (parsing,
 valuation, scoring, alerts) is source-agnostic and doesn't change per
-marketplace. Adding another one means writing a new `sources/<name>.py`
-with a matching `fetch_listings(query, location, max_results, delay)`
-function and registering it in `fetch.py`'s `SOURCES` dict.
+marketplace.
 
-Other platforms considered and why they're not in yet:
+### Why Wallapop/Leboncoin/Subito are blocked, and what would "fixing" them actually mean
 
-- **eBay**: has an official, free, legal **Browse API** — the cleanest
-  option of all, and the SOW suggests it later as a way to sanity-check
-  the median with real reference prices. Worth adding next.
-- **Marktplaats (Netherlands), OLX (Poland/Romania/Portugal)**: same
-  reverse-engineering approach as Kleinanzeigen/Subito would apply —
-  straightforward to add following that pattern once it's been validated.
-- **Facebook Marketplace / Groups**: not realistically scrapeable without
-  violating their ToS in a way this project won't do — skipped.
+These three return 403 on every request, including ones with a real
+browser's exact header set — that rules out a simple config fix. What's
+left is either they're blocking known cloud/datacenter IP ranges
+wholesale, or (more likely for consumer marketplaces this size) a bot
+detection layer like Cloudflare or DataDome that fingerprints the TLS
+handshake and JS environment, which no header can satisfy from a plain
+HTTP client.
 
-### About the two "experimental" sources
+Getting past that for real would mean running a full headless browser
+with stealth patches and likely rotating residential proxies — at that
+point it stops being "a low-volume personal script with a realistic
+user-agent" (what the SOW's grey-zone framing in §B3 allows) and starts
+being purpose-built evasion of security systems those companies
+deliberately run. That's a different, much riskier project, and it's not
+one this codebase takes on. If a future need justifies it, that's a
+conscious call to make with eyes open — not a silent scope creep.
 
-`kleinanzeigen.py` and `subito.py` were written without any way to test
-them against a live response — this environment currently has no network
-access to those sites. They try the page's embedded JSON-LD structured
-data first (a relatively stable target many sites use for SEO), and fall
-back to CSS-selector scraping with best-guess class names if no JSON-LD
-is found. **The first real run against each is the actual test.** If
-`fetch_listings` comes back empty, open the search URL in a browser,
-inspect a listing card's HTML, and update the selectors in `_scrape_html`
-— that's expected, one-time maintenance, not a sign something is
-fundamentally broken.
+### About the eBay Browse API
+
+Still the cleanest unexplored option: it's an **official, free, legal**
+API, and the SOW itself suggests it as a way to sanity-check the median
+with real reference prices later. Worth adding next, precisely because it
+doesn't have any of the problems above.
+
+### About kleinanzeigen.py
+
+`kleinanzeigen.py`'s CSS selectors are the *verified* real markup (an
+`<li class="j-adlistitem" data-href="...">` per listing) — not a guess.
+The unreliability is about how often the server serves that markup vs. an
+empty JS shell, not about the parser being wrong. If a run comes back
+empty, that's this rate-limiting behavior, not a bug to chase.
+
+### About subito.py
+
+`subito.py` was written without any way to test it against a live
+response before this environment had network access; now that it does,
+it's confirmed **blocked** the same way Wallapop and Leboncoin are (see
+above) — this isn't a parsing bug to fix, the requests themselves never
+get a real response. It still tries the page's embedded JSON-LD
+structured data first, and falls back to CSS-selector scraping, but
+neither path matters until the 403 itself is no longer happening.
 
 ## Alert channels: Telegram vs. email
 
@@ -151,11 +170,11 @@ sowld/
   fetch.py             dispatches to the right source module (step 1)
   sources/
     common.py          shared Listing type, geocoding, JSON-LD helper
-    wallapop.py         Wallapop fetch implementation
-    leboncoin.py        Leboncoin fetch implementation
-    vinted.py            Vinted fetch implementation
-    kleinanzeigen.py      Kleinanzeigen fetch implementation (experimental)
-    subito.py             Subito.it fetch implementation (experimental)
+    wallapop.py         Wallapop fetch implementation (blocked, see below)
+    leboncoin.py        Leboncoin fetch implementation (blocked, see below)
+    vinted.py            Vinted fetch implementation (working)
+    kleinanzeigen.py      Kleinanzeigen fetch implementation (unreliable)
+    subito.py             Subito.it fetch implementation (blocked, see below)
   parse.py             step 2 — Claude structures each listing
   valuation.py          step 3 — condition-adjusted median fair value per group
   scoring.py             step 4 — deal_score, filter, rank
@@ -184,11 +203,10 @@ pytest tests/
 - **None of these marketplaces have a public API.** Wallapop, Leboncoin
   and Vinted use reverse-engineered internal JSON endpoints; Kleinanzeigen
   and Subito.it scrape the search-results HTML page directly. All of
-  these are undocumented and can change or break without notice — if
-  `fetch_listings` starts returning nothing for a source, make a manual
-  request (or open the search URL in a browser) and check whether the
-  request/response shape has drifted. See "About the two experimental
-  sources" above for Kleinanzeigen/Subito specifically.
+  these are undocumented and can change without notice — and, as of this
+  writing, three of the five (Wallapop, Leboncoin, Subito) are outright
+  blocked by anti-bot protection. See "Why Wallapop/Leboncoin/Subito are
+  blocked" above.
 - This is the grey-zone, personal/low-volume use discussed in the
   strategy doc: keep request volume low, use a realistic user-agent (set
   already), respect rate limits, and store **no seller personal data** —

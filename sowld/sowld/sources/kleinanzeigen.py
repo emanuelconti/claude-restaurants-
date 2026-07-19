@@ -1,17 +1,16 @@
-"""Kleinanzeigen (Germany) fetch layer — EXPERIMENTAL, unverified.
+"""Kleinanzeigen (Germany) fetch layer.
 
 Kleinanzeigen (formerly eBay Kleinanzeigen) has no public search API, so
 this scrapes its search-results HTML page directly, the same page a
-browser loads. It's built more defensively than Wallapop/Vinted because of
-that: it first tries the page's JSON-LD structured data (see
-`sources.common.extract_json_ld_products`), which tends to survive
-redesigns better than hand-picked CSS classes, and falls back to a CSS
-selector scrape if no JSON-LD is present.
+browser loads. Verified against a live response: search-results pages
+don't carry Product/Offer JSON-LD (only WebSite/ImageObject), so this
+goes straight to CSS selectors against the real markup — each listing is
+an `<li class="j-adlistitem" data-href="...">`, which conveniently gives
+the URL as a plain attribute instead of needing to dig through an <a> tag.
 
-This has NOT been exercised against a live response — this environment
-has no network access to kleinanzeigen.de. The first real run is the real
-test: if `fetch_listings` returns nothing, open the search URL in a
-browser, inspect an ad card's HTML, and update `_scrape_html` below.
+If this stops matching, Kleinanzeigen changed their markup — open the
+search URL in a browser, inspect a listing `<li>`, and update the
+selectors below.
 
 Same rules as the other sources (SOW Part B, §B3): low volume, realistic
 user-agent, no seller personal data kept.
@@ -24,9 +23,10 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from .common import REQUEST_TIMEOUT, USER_AGENT, Listing, extract_json_ld_products
+from .common import REQUEST_TIMEOUT, USER_AGENT, Listing
 
 SEARCH_URL = "https://www.kleinanzeigen.de/s-suchanfrage.html"
+BASE_URL = "https://www.kleinanzeigen.de"
 
 
 def _parse_price(text: str) -> float:
@@ -34,52 +34,21 @@ def _parse_price(text: str) -> float:
     return float(digits) if digits else 0.0
 
 
-def _from_json_ld(html: str, fallback_location: str) -> list[Listing]:
-    listings = []
-    for product in extract_json_ld_products(html):
-        offers = product.get("offers") or {}
-        price = offers.get("price") if isinstance(offers, dict) else None
-        try:
-            price = float(price) if price is not None else 0.0
-        except (TypeError, ValueError):
-            price = 0.0
-        title = (product.get("name") or "").strip()
-        if not title or price <= 0:
-            continue
-        image = product.get("image")
-        photo_urls = [image] if isinstance(image, str) else (image or [])
-        listings.append(
-            Listing(
-                title=title,
-                price=price,
-                description=(product.get("description") or "").strip(),
-                url=product.get("url") or (offers.get("url") if isinstance(offers, dict) else ""),
-                location=fallback_location,
-                photo_urls=photo_urls,
-                source="kleinanzeigen",
-            )
-        )
-    return listings
-
-
 def _scrape_html(html: str, fallback_location: str) -> list[Listing]:
-    """CSS-selector fallback. Selectors are best-effort guesses based on
-    Kleinanzeigen's known markup conventions — verify against a live page."""
     soup = BeautifulSoup(html, "html.parser")
     listings = []
-    for card in soup.select("article.aditem"):
-        title_el = card.select_one("a.ellipsis") or card.select_one("h2")
+    for card in soup.select("li.j-adlistitem[data-href]"):
+        title_el = card.select_one(".adlist--item--boldtitle a")
         title = title_el.get_text(strip=True) if title_el else ""
 
-        price_el = card.select_one(".aditem-main--middle--price-shipping--price")
+        price_el = card.select_one(".adlist--item--price")
         price = _parse_price(price_el.get_text()) if price_el else 0.0
 
-        desc_el = card.select_one(".aditem-main--middle--description")
+        desc_el = card.select_one(".long-description") or card.select_one(".description-preview")
         description = desc_el.get_text(strip=True) if desc_el else ""
 
-        link_el = card.select_one("a[href]")
-        href = link_el["href"] if link_el else ""
-        url = f"https://www.kleinanzeigen.de{href}" if href.startswith("/") else href
+        href = card.get("data-href", "")
+        url = f"{BASE_URL}{href}" if href.startswith("/") else href
 
         img_el = card.select_one("img[src]")
         photo_urls = [img_el["src"]] if img_el else []
@@ -118,8 +87,4 @@ def fetch_listings(
     resp.raise_for_status()
     time.sleep(delay)
 
-    listings = _from_json_ld(resp.text, location)
-    if not listings:
-        listings = _scrape_html(resp.text, location)
-
-    return listings[:max_results]
+    return _scrape_html(resp.text, location)[:max_results]
