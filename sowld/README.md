@@ -1,13 +1,22 @@
-# Sowld — Part B: the one function
+# Sowld — Part B: the one function (+ hosted platform)
 
 V0 of the AI buying agent for second-hand goods. One command answers:
 "find undervalued road bikes in Barcelona." Nothing else — this is the
 proof that the core idea works (see the SOW, Part B).
 
-This is a **backend script, not a web widget** — there's nothing to embed
-in the Framer site (Part A). The Framer site just collects waitlist
-emails; this tool is what you (or a scheduled job) run to get deal
-alerts. The two are independent deliverables.
+Two ways to use it, in the same codebase:
+
+- **CLI (`sowld/`, this README)** — a script you run yourself, no hosting,
+  no accounts beyond an Anthropic API key. Good for validating the idea
+  and for your own personal use.
+- **Hosted platform (`webapp/`, see [DEPLOY.md](DEPLOY.md))** — a real
+  website with signup, login and a Stripe subscription, that gates the
+  same search behind a paywall. This is what you'd link to from the
+  Framer site (Part A) as an actual product, not just a waitlist.
+
+They share all the underlying logic (`fetch` → `parse` → `valuation` →
+`scoring`) — the webapp is a thin paid front door on top of everything
+below.
 
 ## Quick start (easiest — guided script)
 

@@ -1,3 +1,6 @@
 deals.csv
 .venv/
 venv/
+*.db
+__pycache__/
+*.pyc

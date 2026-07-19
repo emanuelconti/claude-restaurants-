@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Sowld — trova affari nell'usato{% endblock %}
+{% block content %}
+<h1>Trova l'affare prima di chiunque altro.</h1>
+<p class="lead">Sowld cerca tra i marketplace dell'usato in Europa e ti segnala solo gli annunci sottoprezzati.</p>
+{% if user %}
+  <a href="/app"><button class="lime">Vai alla piattaforma</button></a>
+{% else %}
+  <a href="/signup"><button class="lime">Inizia ora</button></a>
+{% endif %}
+{% endblock %}
