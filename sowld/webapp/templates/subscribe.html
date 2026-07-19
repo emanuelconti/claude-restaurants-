@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Abbonati — Sowld{% endblock %}
+{% block title %}Sowld{% endblock %}
 {% block content %}
-<h1>Un ultimo passo</h1>
-<p class="lead">Il tuo account è pronto, ma serve un abbonamento attivo per usare la ricerca.</p>
-<a href="/billing/checkout"><button class="lime">Abbonati ora</button></a>
+<h1>{{ t('subscribe.title') }}</h1>
+<p class="lead">{{ t('subscribe.lead') }}</p>
+<a href="/billing/checkout"><button class="lime">{{ t('subscribe.cta') }}</button></a>
 {% endblock %}

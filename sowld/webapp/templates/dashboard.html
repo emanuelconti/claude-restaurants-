@@ -1,36 +1,36 @@
 {% extends "base.html" %}
-{% block title %}Cerca — Sowld{% endblock %}
+{% block title %}Sowld{% endblock %}
 {% block content %}
-<h1>Trova un affare</h1>
-<p class="lead"><a class="plain" href="/billing/portal">Gestisci abbonamento</a></p>
+<h1>{{ t('dashboard.title') }}</h1>
+<p class="lead"><a class="plain" href="/billing/portal">{{ t('dashboard.manage_subscription') }}</a></p>
 {% if error %}<p class="error">{{ error }}</p>{% endif %}
 <form method="post" action="/app/search">
-  <input type="text" name="query" placeholder='Cosa cerchi? Es. &quot;bici da corsa&quot;' value="{{ query or '' }}" required>
-  <input type="text" name="location" placeholder='In che città? Es. &quot;Barcellona&quot;' value="{{ location or '' }}" required>
+  <input type="text" name="query" placeholder="{{ t('dashboard.query_placeholder') }}" value="{{ query or '' }}" required>
+  <input type="text" name="location" placeholder="{{ t('dashboard.location_placeholder') }}" value="{{ location or '' }}" required>
   <select name="source">
     {% for s in sources %}
       <option value="{{ s }}" {% if s == source %}selected{% endif %}>{{ s }}</option>
     {% endfor %}
   </select>
-  <button type="submit" class="lime">Cerca</button>
+  <button type="submit" class="lime">{{ t('dashboard.submit') }}</button>
 </form>
 
 {% if results is not none %}
   {% if results %}
     <table>
-      <tr><th>Sconto</th><th>Titolo</th><th>Prezzo</th><th>Valore giusto</th><th></th></tr>
+      <tr><th>{{ t('dashboard.col_score') }}</th><th>{{ t('dashboard.col_title') }}</th><th>{{ t('dashboard.col_price') }}</th><th>{{ t('dashboard.col_fair_value') }}</th><th></th></tr>
       {% for d in results %}
       <tr>
         <td><span class="score">{{ (d.deal_score * 100) | round | int }}%</span></td>
         <td>{{ d.parsed.listing.title }}</td>
         <td>{{ d.parsed.listing.price | round | int }}€</td>
         <td>{{ d.fair_value | round | int }}€</td>
-        <td><a href="{{ d.parsed.listing.url }}" target="_blank" class="plain">Vedi →</a></td>
+        <td><a href="{{ d.parsed.listing.url }}" target="_blank" class="plain">{{ t('dashboard.view_link') }}</a></td>
       </tr>
       {% endfor %}
     </table>
   {% else %}
-    <p class="lead">Nessun affare trovato questa volta. Prova un'altra ricerca.</p>
+    <p class="lead">{{ t('dashboard.no_results') }}</p>
   {% endif %}
 {% endif %}
 {% endblock %}

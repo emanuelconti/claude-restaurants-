@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Sowld — trova affari nell'usato{% endblock %}
+{% block title %}Sowld{% endblock %}
 {% block content %}
-<h1>Trova l'affare prima di chiunque altro.</h1>
-<p class="lead">Sowld cerca tra i marketplace dell'usato in Europa e ti segnala solo gli annunci sottoprezzati.</p>
+<h1>{{ t('landing.title') }}</h1>
+<p class="lead">{{ t('landing.lead') }}</p>
 {% if user %}
-  <a href="/app"><button class="lime">Vai alla piattaforma</button></a>
+  <a href="/app"><button class="lime">{{ t('landing.cta_platform') }}</button></a>
 {% else %}
-  <a href="/signup"><button class="lime">Inizia ora</button></a>
+  <a href="/signup"><button class="lime">{{ t('landing.cta_start') }}</button></a>
 {% endif %}
 {% endblock %}

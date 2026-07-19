@@ -8,7 +8,6 @@ of being a script someone has to run themselves.
 
 from __future__ import annotations
 
-import json
 import os
 from pathlib import Path
 
@@ -28,6 +27,7 @@ from .auth import login as start_session
 from .auth import logout as end_session
 from .billing import create_billing_portal_session, create_checkout_session, is_configured
 from .db import SessionLocal, User, hash_password, init_db, verify_password
+from .i18n import LANGUAGES, get_translator, resolve_language
 
 app = FastAPI(title="Sowld")
 app.add_middleware(
@@ -39,27 +39,37 @@ templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 init_db()
 
 
+def _base_context(request: Request) -> dict:
+    lang = resolve_language(request)
+    return {"lang": lang, "languages": LANGUAGES, "t": get_translator(lang)}
+
+
 @app.get("/", response_class=HTMLResponse)
 def landing(request: Request):
     return templates.TemplateResponse(
-        request, "landing.html", {"user": get_current_user(request)}
+        request,
+        "landing.html",
+        {**_base_context(request), "user": get_current_user(request)},
     )
 
 
 @app.get("/signup", response_class=HTMLResponse)
 def signup_form(request: Request):
-    return templates.TemplateResponse(request, "signup.html", {"user": None, "error": None})
+    return templates.TemplateResponse(
+        request, "signup.html", {**_base_context(request), "user": None, "error": None}
+    )
 
 
 @app.post("/signup")
 def signup_submit(request: Request, email: str = Form(...), password: str = Form(...)):
+    ctx = _base_context(request)
     db = SessionLocal()
     try:
         if db.query(User).filter(User.email == email).first():
             return templates.TemplateResponse(
                 request,
                 "signup.html",
-                {"user": None, "error": "Email già registrata."},
+                {**ctx, "user": None, "error": ctx["t"]("signup.error_duplicate")},
                 status_code=400,
             )
         user = User(email=email, password_hash=hash_password(password))
@@ -74,11 +84,14 @@ def signup_submit(request: Request, email: str = Form(...), password: str = Form
 
 @app.get("/login", response_class=HTMLResponse)
 def login_form(request: Request):
-    return templates.TemplateResponse(request, "login.html", {"user": None, "error": None})
+    return templates.TemplateResponse(
+        request, "login.html", {**_base_context(request), "user": None, "error": None}
+    )
 
 
 @app.post("/login")
 def login_submit(request: Request, email: str = Form(...), password: str = Form(...)):
+    ctx = _base_context(request)
     db = SessionLocal()
     try:
         user = db.query(User).filter(User.email == email).first()
@@ -86,7 +99,7 @@ def login_submit(request: Request, email: str = Form(...), password: str = Form(
             return templates.TemplateResponse(
                 request,
                 "login.html",
-                {"user": None, "error": "Email o password errati."},
+                {**ctx, "user": None, "error": ctx["t"]("login.error_invalid")},
                 status_code=400,
             )
         start_session(request, user)
@@ -103,11 +116,12 @@ def logout_submit(request: Request):
 
 @app.get("/billing/checkout")
 def billing_checkout(request: Request):
+    ctx = _base_context(request)
     user = get_current_user(request)
     if not user:
         return RedirectResponse("/login", status_code=303)
     if not is_configured():
-        return HTMLResponse("Stripe non è ancora configurato su questo server.", status_code=503)
+        return HTMLResponse(ctx["t"]("error.stripe_not_configured"), status_code=503)
     base_url = str(request.base_url).rstrip("/")
     url = create_checkout_session(
         customer_email=user.email,
@@ -194,6 +208,7 @@ async def stripe_webhook(request: Request):
 
 @app.get("/app", response_class=HTMLResponse)
 def app_home(request: Request):
+    ctx = _base_context(request)
     user = get_current_user(request)
     if not user:
         return RedirectResponse("/login", status_code=303)
@@ -204,11 +219,11 @@ def app_home(request: Request):
             user = get_current_user(request)
 
     if not user.is_subscribed:
-        return templates.TemplateResponse(request, "subscribe.html", {"user": user})
+        return templates.TemplateResponse(request, "subscribe.html", {**ctx, "user": user})
     return templates.TemplateResponse(
         request,
         "dashboard.html",
-        {"user": user, "sources": sorted(SOURCES), "results": None},
+        {**ctx, "user": user, "sources": sorted(SOURCES), "results": None},
     )
 
 
@@ -219,6 +234,7 @@ def app_search(
     location: str = Form(...),
     source: str = Form(DEFAULT_SOURCE),
 ):
+    ctx = _base_context(request)
     user = get_current_user(request)
     if not user:
         return RedirectResponse("/login", status_code=303)
@@ -229,7 +245,7 @@ def app_search(
     error = None
     deals = []
     if not api_key:
-        error = "ANTHROPIC_API_KEY non è configurata su questo server."
+        error = ctx["t"]("error.anthropic_not_configured")
     else:
         try:
             listings = fetch_listings(query, location, source=source, max_results=40)
@@ -243,6 +259,7 @@ def app_search(
         request,
         "dashboard.html",
         {
+            **ctx,
             "user": user,
             "sources": sorted(SOURCES),
             "results": deals,

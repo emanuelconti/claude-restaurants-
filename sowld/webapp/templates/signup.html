@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Registrati — Sowld{% endblock %}
+{% block title %}Sowld{% endblock %}
 {% block content %}
-<h1>Crea il tuo account</h1>
+<h1>{{ t('signup.title') }}</h1>
 {% if error %}<p class="error">{{ error }}</p>{% endif %}
 <form method="post" action="/signup">
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="password" name="password" placeholder="Password" minlength="8" required>
-  <button type="submit" class="lime">Crea account</button>
+  <input type="email" name="email" placeholder="{{ t('signup.email') }}" required>
+  <input type="password" name="password" placeholder="{{ t('signup.password') }}" minlength="8" required>
+  <button type="submit" class="lime">{{ t('signup.submit') }}</button>
 </form>
-<p><a class="plain" href="/login">Hai già un account? Accedi</a></p>
+<p><a class="plain" href="/login">{{ t('signup.have_account') }}</a></p>
 {% endblock %}
