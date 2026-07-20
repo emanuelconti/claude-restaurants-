@@ -23,14 +23,17 @@ SOURCES = {
     "ebay": ebay.fetch_listings,
 }
 
-# Verified live (2026-07-19): wallapop/leboncoin/subito are blocked by
-# anti-bot protection (see README "Multiple marketplaces"), kleinanzeigen
-# is unreliable. vinted is the only source confirmed working consistently.
-DEFAULT_SOURCE = "vinted"
+# Verified live (2026-07-20): wallapop/leboncoin/subito are blocked by
+# anti-bot protection, and vinted — reliable as of 2026-07-19 — started
+# returning a Cloudflare "challenge" response today (same protection tier
+# as the other three, not a config issue). kleinanzeigen is unreliable.
+# ebay is the only source with zero blocking risk (official API).
+# See README "Multiple marketplaces" for the live-status table.
+DEFAULT_SOURCE = "ebay"
 
 # Sources whose access is still being worked on — surfaced in the UI so
 # users aren't left guessing why a search on one of these comes up empty.
-BETA_SOURCES = {"wallapop", "leboncoin", "subito", "kleinanzeigen"}
+BETA_SOURCES = {"wallapop", "leboncoin", "subito", "kleinanzeigen", "vinted"}
 
 
 def fetch_listings(

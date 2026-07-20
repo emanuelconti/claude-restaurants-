@@ -85,17 +85,22 @@ python -m sowld "road bike" "Barcelona" --email       # needs GMAIL_USER/GMAIL_A
 ## Multiple marketplaces
 
 Six sources are wired up, selected with `--source`. **Verified live**
-(2026-07-19) — three of the six are blocked by anti-bot protection that
-isn't fixable by tweaking headers:
+(2026-07-20) — five of the six are blocked or unreliable, all due to
+anti-bot protection that isn't fixable by tweaking headers:
 
 | `--source`      | Country / reach       | Live status |
 | :--------------- | :--------------------- | :--------- |
-| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Working.** Verified against live search results. The reliable default. Now retries with backoff on transient failures (see `sources/common.py`). |
-| `ebay`           | US/UK/DE/FR/IT/ES/AT/CH/NL/BE/PL/IE | **Working, official.** Real OAuth2 app credentials, eBay's Browse API — no scraping, no anti-bot risk, ever. Needs `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` (see below). |
-| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Now retries a few times before giving up (see `sources/common.py`). |
+| `ebay`           | US/UK/DE/FR/IT/ES/AT/CH/NL/BE/PL/IE | **Working, official — the default.** Real OAuth2 app credentials, eBay's Browse API — no scraping, no anti-bot risk, ever. Needs `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` (see below). |
+| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Blocked as of 2026-07-20.** Was the reliable one through 2026-07-19; now returns a Cloudflare "challenge" response (`cf-mitigated: challenge`) on the homepage itself, before the search call even runs. Same protection tier as Wallapop/Leboncoin/Subito, not a config regression — see below. |
+| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Retries a few times before giving up (see `sources/common.py`). |
 | `wallapop`       | Spain                  | **Blocked.** Returns HTTP 403 even with full browser headers (Accept, Accept-Language, Referer, a real Safari user-agent) — an anti-bot system, not a missing header. |
 | `leboncoin`      | France                 | **Blocked.** Same 403 regardless of headers. |
 | `subito`         | Italy                  | **Blocked.** Same 403 regardless of headers. |
+
+Vinted going from "reliable" to "Cloudflare-blocked" in the space of a
+day is the clearest evidence yet that scraping these sites isn't a stable
+foundation — it's not that our code got worse, the site's own protection
+got stricter. `ebay` is the only source that can't have this happen to it.
 
 ### Retry behavior (added 2026-07-20)
 
@@ -117,11 +122,12 @@ to return the shared `Listing` type — everything downstream (parsing,
 valuation, scoring, alerts) is source-agnostic and doesn't change per
 marketplace.
 
-### Why Wallapop/Leboncoin/Subito are blocked, and what would "fixing" them actually mean
+### Why Wallapop/Leboncoin/Subito/Vinted are blocked, and what would "fixing" them actually mean
 
-These three return 403 on every request, including ones with a real
-browser's exact header set — that rules out a simple config fix. What's
-left is either they're blocking known cloud/datacenter IP ranges
+These four return 403 (or, for Vinted, a Cloudflare challenge) on every
+request, including ones with a real browser's exact header set — that
+rules out a simple config fix. What's left is either they're blocking
+known cloud/datacenter IP ranges
 wholesale, or (more likely for consumer marketplaces this size) a bot
 detection layer like Cloudflare or DataDome that fingerprints the TLS
 handshake and JS environment, which no header can satisfy from a plain
