@@ -17,7 +17,13 @@ import time
 
 import requests
 
-from .common import REQUEST_TIMEOUT, USER_AGENT, Listing, geocode_location_detailed
+from .common import (
+    REQUEST_TIMEOUT,
+    USER_AGENT,
+    Listing,
+    geocode_location_detailed,
+    request_with_backoff,
+)
 
 # Country code -> Vinted domain. Not exhaustive — falls back to vinted.com
 # for countries Vinted doesn't have a dedicated site for.
@@ -76,22 +82,13 @@ def _item_to_listing(item: dict, domain: str, fallback_location: str) -> Listing
     )
 
 
-def fetch_listings(
-    query: str,
-    location: str,
-    max_results: int = 40,
-    delay: float = 1.0,
-) -> list[Listing]:
-    """Fetch current Vinted listings for `query`, on the domain for `location`'s country.
+def _do_search(domain: str, query: str, location: str, max_results: int) -> list[Listing]:
+    """One attempt: fresh session, homepage visit for cookies, then the search call.
 
-    Note: the endpoint occasionally 401s on the very first request until a
-    session cookie is set, which is why this visits the homepage once
-    before searching.
+    A fresh Session per attempt (rather than reusing one across retries) means
+    a retry after a bad/blocked response starts clean instead of replaying
+    whatever cookie state triggered the problem in the first place.
     """
-    geo = geocode_location_detailed(location)
-    domain = COUNTRY_DOMAINS.get(geo["country_code"], DEFAULT_DOMAIN)
-    time.sleep(delay)
-
     session = requests.Session()
     headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
     session.get(f"https://www.{domain}/", headers=headers, timeout=REQUEST_TIMEOUT)
@@ -113,3 +110,22 @@ def fetch_listings(
     raw_items = payload.get("items", [])
     listings = [_item_to_listing(item, domain, location) for item in raw_items[:max_results]]
     return [l for l in listings if l.title and l.price > 0]
+
+
+def fetch_listings(
+    query: str,
+    location: str,
+    max_results: int = 40,
+    delay: float = 1.5,
+) -> list[Listing]:
+    """Fetch current Vinted listings for `query`, on the domain for `location`'s country.
+
+    Retries with backoff on request failures — Vinted intermittently serves
+    an error under load rather than failing consistently, and a second
+    attempt a few seconds later often succeeds (see request_with_backoff).
+    """
+    geo = geocode_location_detailed(location)
+    domain = COUNTRY_DOMAINS.get(geo["country_code"], DEFAULT_DOMAIN)
+    time.sleep(delay)
+
+    return request_with_backoff(lambda: _do_search(domain, query, location, max_results))

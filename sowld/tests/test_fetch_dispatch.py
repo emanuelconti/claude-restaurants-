@@ -1,16 +1,22 @@
 import sys
+import time
 from pathlib import Path
 
 import pytest
+import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from sowld.fetch import DEFAULT_SOURCE, SOURCES, fetch_listings
-from sowld.sources.common import extract_json_ld_products
+from sowld.sources.common import (
+    extract_json_ld_products,
+    request_with_backoff,
+    retry_until_non_empty,
+)
 
 
 def test_all_expected_sources_registered():
-    assert set(SOURCES) == {"wallapop", "leboncoin", "vinted", "kleinanzeigen", "subito"}
+    assert set(SOURCES) == {"wallapop", "leboncoin", "vinted", "kleinanzeigen", "subito", "ebay"}
 
 
 def test_default_source_is_registered():
@@ -56,3 +62,42 @@ def test_extract_json_ld_products_ignores_invalid_json():
 
 def test_extract_json_ld_products_empty_when_absent():
     assert extract_json_ld_products("<html><body>no structured data here</body></html>") == []
+
+
+def test_request_with_backoff_succeeds_after_transient_failures():
+    calls = {"n": 0}
+
+    def flaky():
+        calls["n"] += 1
+        if calls["n"] < 3:
+            raise requests.ConnectionError("boom")
+        return "ok"
+
+    result = request_with_backoff(flaky, attempts=3, base_delay=0.01)
+    assert result == "ok"
+    assert calls["n"] == 3
+
+
+def test_request_with_backoff_raises_after_exhausting_attempts():
+    def always_fails():
+        raise requests.ConnectionError("boom")
+
+    with pytest.raises(requests.ConnectionError):
+        request_with_backoff(always_fails, attempts=2, base_delay=0.01)
+
+
+def test_retry_until_non_empty_stops_at_first_non_empty_result():
+    calls = {"n": 0}
+
+    def sometimes_empty():
+        calls["n"] += 1
+        return [] if calls["n"] < 2 else ["deal"]
+
+    result = retry_until_non_empty(sometimes_empty, attempts=3, base_delay=0.01)
+    assert result == ["deal"]
+    assert calls["n"] == 2
+
+
+def test_retry_until_non_empty_gives_up_and_returns_empty():
+    result = retry_until_non_empty(lambda: [], attempts=2, base_delay=0.01)
+    assert result == []

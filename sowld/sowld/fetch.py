@@ -11,7 +11,7 @@ function returning list[Listing], then register it in SOURCES below.
 
 from __future__ import annotations
 
-from .sources import kleinanzeigen, leboncoin, subito, vinted, wallapop
+from .sources import ebay, kleinanzeigen, leboncoin, subito, vinted, wallapop
 from .sources.common import Listing
 
 SOURCES = {
@@ -20,6 +20,7 @@ SOURCES = {
     "vinted": vinted.fetch_listings,
     "kleinanzeigen": kleinanzeigen.fetch_listings,
     "subito": subito.fetch_listings,
+    "ebay": ebay.fetch_listings,
 }
 
 # Verified live (2026-07-19): wallapop/leboncoin/subito are blocked by

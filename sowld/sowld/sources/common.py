@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import json
 import re
+import time
 from dataclasses import dataclass, field
+from typing import Callable, TypeVar
 
 import requests
 
@@ -15,6 +17,59 @@ GEOCODE_URL = "https://nominatim.openstreetmap.org/search"
 USER_AGENT = "SowldDealFinder/0.1 (personal, low-volume; https://github.com/)"
 
 REQUEST_TIMEOUT = 10  # seconds
+
+T = TypeVar("T")
+
+
+def request_with_backoff(
+    make_request: Callable[[], T],
+    attempts: int = 3,
+    base_delay: float = 2.0,
+) -> T:
+    """Retry a flaky request with exponential backoff (2s, 4s, 8s, ...).
+
+    For the sites that intermittently serve an empty/blocked response under
+    load rather than a hard, permanent failure (Vinted, Kleinanzeigen) — a
+    second or third attempt a few seconds later often just works. This does
+    not, and should not, retry against sites that return a hard 403 on
+    every attempt (Wallapop, Leboncoin, Subito) — that's a wall, not a
+    flake, and hammering it faster only makes things worse.
+    """
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            return make_request()
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < attempts - 1:
+                time.sleep(base_delay * (2**attempt))
+    assert last_error is not None
+    raise last_error
+
+
+def retry_until_non_empty(
+    make_request: Callable[[], list[T]],
+    attempts: int = 3,
+    base_delay: float = 2.0,
+) -> list[T]:
+    """Like request_with_backoff, but for sites that fail *quietly*.
+
+    Kleinanzeigen sometimes returns 200 OK with an empty JS shell instead
+    of the rendered listings — no exception to catch, just zero results.
+    Retries a few times with backoff before accepting "genuinely nothing
+    found" as the answer.
+    """
+    result: list[T] = []
+    for attempt in range(attempts):
+        try:
+            result = make_request()
+        except requests.RequestException:
+            result = []
+        if result:
+            return result
+        if attempt < attempts - 1:
+            time.sleep(base_delay * (2**attempt))
+    return result
 
 
 @dataclass

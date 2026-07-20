@@ -84,17 +84,33 @@ python -m sowld "road bike" "Barcelona" --email       # needs GMAIL_USER/GMAIL_A
 
 ## Multiple marketplaces
 
-Five of Europe's main second-hand marketplaces are wired up, selected
-with `--source`. **Verified live** (2026-07-19) — three of the five are
-blocked by anti-bot protection that isn't fixable by tweaking headers:
+Six sources are wired up, selected with `--source`. **Verified live**
+(2026-07-19) — three of the six are blocked by anti-bot protection that
+isn't fixable by tweaking headers:
 
 | `--source`      | Country / reach       | Live status |
 | :--------------- | :--------------------- | :--------- |
-| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Working.** Verified against live search results. The reliable default. |
-| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Parser is correct when it does get real HTML. |
+| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Working.** Verified against live search results. The reliable default. Now retries with backoff on transient failures (see `sources/common.py`). |
+| `ebay`           | US/UK/DE/FR/IT/ES/AT/CH/NL/BE/PL/IE | **Working, official.** Real OAuth2 app credentials, eBay's Browse API — no scraping, no anti-bot risk, ever. Needs `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` (see below). |
+| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Now retries a few times before giving up (see `sources/common.py`). |
 | `wallapop`       | Spain                  | **Blocked.** Returns HTTP 403 even with full browser headers (Accept, Accept-Language, Referer, a real Safari user-agent) — an anti-bot system, not a missing header. |
 | `leboncoin`      | France                 | **Blocked.** Same 403 regardless of headers. |
 | `subito`         | Italy                  | **Blocked.** Same 403 regardless of headers. |
+
+### Retry behavior (added 2026-07-20)
+
+`sources/common.py` has two retry helpers, used by `vinted.py` and
+`kleinanzeigen.py`:
+
+- `request_with_backoff` — retries on an actual request exception (2s,
+  4s, ... backoff). For failures that raise.
+- `retry_until_non_empty` — retries when the request *succeeds* (200 OK)
+  but comes back with zero listings, which is Kleinanzeigen's actual
+  failure mode (an unrendered JS shell, not an error).
+
+Neither is applied to Wallapop/Leboncoin/Subito — retrying a hard 403
+faster doesn't help and just hammers a server that's already refusing
+you, so those still fail on the first attempt as before.
 
 Each source lives in its own file under `sowld/sources/` and just needs
 to return the shared `Listing` type — everything downstream (parsing,
@@ -122,10 +138,26 @@ conscious call to make with eyes open — not a silent scope creep.
 
 ### About the eBay Browse API
 
-Still the cleanest unexplored option: it's an **official, free, legal**
-API, and the SOW itself suggests it as a way to sanity-check the median
-with real reference prices later. Worth adding next, precisely because it
-doesn't have any of the problems above.
+The cleanest source here: an **official, free, legal** API, so none of
+the blocking/rate-limiting problems above apply, ever. Setup:
+
+1. Go to **developer.ebay.com** → sign up → **My Account → Application
+   Keys**
+2. Create a **Production** keyset (not Sandbox — Sandbox only returns
+   fake test listings)
+3. Copy the **Client ID** and **Client Secret** into `EBAY_CLIENT_ID` /
+   `EBAY_CLIENT_SECRET`
+
+No callback URL or app review needed for this — the Browse API's
+client-credentials flow is available immediately on a new developer
+account. `sources/ebay.py` caches the OAuth token in memory and only
+re-authenticates when it's about to expire.
+
+One tradeoff: eBay's search results don't include a long description in
+the summary view, only the title and a plain-text `condition` field
+(e.g. "Used") — that's folded into what gets sent to the parsing step, so
+condition detection is a little thinner here than on sources with a full
+listing description.
 
 ### About kleinanzeigen.py
 

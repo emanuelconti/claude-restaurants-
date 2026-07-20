@@ -23,7 +23,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from .common import REQUEST_TIMEOUT, USER_AGENT, Listing
+from .common import REQUEST_TIMEOUT, USER_AGENT, Listing, retry_until_non_empty
 
 SEARCH_URL = "https://www.kleinanzeigen.de/s-suchanfrage.html"
 BASE_URL = "https://www.kleinanzeigen.de"
@@ -68,13 +68,7 @@ def _scrape_html(html: str, fallback_location: str) -> list[Listing]:
     return listings
 
 
-def fetch_listings(
-    query: str,
-    location: str,
-    max_results: int = 40,
-    delay: float = 1.0,
-) -> list[Listing]:
-    """Fetch current Kleinanzeigen listings for `query` near `location`."""
+def _do_search(query: str, location: str) -> list[Listing]:
     headers = {"User-Agent": USER_AGENT, "Accept": "text/html"}
     params = {
         "keywords": query,
@@ -85,6 +79,21 @@ def fetch_listings(
     }
     resp = requests.get(SEARCH_URL, params=params, headers=headers, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
-    time.sleep(delay)
+    return _scrape_html(resp.text, location)
 
-    return _scrape_html(resp.text, location)[:max_results]
+
+def fetch_listings(
+    query: str,
+    location: str,
+    max_results: int = 40,
+    delay: float = 1.5,
+) -> list[Listing]:
+    """Fetch current Kleinanzeigen listings for `query` near `location`.
+
+    Retries on empty results — the known failure mode here is a 200 OK
+    with an unrendered JS shell rather than an HTTP error (see module
+    docstring), so a plain retry-on-exception wouldn't catch it.
+    """
+    time.sleep(delay)
+    listings = retry_until_non_empty(lambda: _do_search(query, location))
+    return listings[:max_results]
