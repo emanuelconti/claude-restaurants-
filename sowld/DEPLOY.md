@@ -110,37 +110,6 @@ piano a pagamento (da ~7$/mese) — quando sarai pronto ad avere clienti
 veri che pagano, questo costo fisso mensile va messo in conto insieme
 agli altri.
 
-## Passo 7 — Avvisi automatici giornalieri (opzionale, ma è il vero valore del prodotto)
-
-Da ora ogni cliente può "salvare" una ricerca dalla dashboard. Perché
-scatti davvero l'invio quotidiano via email, serve un servizio esterno
-che chiami il sito una volta al giorno — Render lo chiama "Cron Job".
-
-1. Genera un segreto casuale (stesso comando usato per `SESSION_SECRET_KEY`):
-   ```
-   python3 -c "import secrets; print(secrets.token_hex(32))"
-   ```
-2. Sul servizio `sowld` → Environment Variables → aggiungi:
-   ```
-   CRON_SECRET = <il valore appena generato>
-   ```
-3. Su Render: **New +** → **Cron Job**
-4. Configuralo così:
-   - **Command**: usa un comando `curl` che chiama il tuo endpoint, es.
-     ```
-     curl -X POST https://sowld.onrender.com/cron/run-saved-searches -H "x-cron-secret: <lo stesso valore di CRON_SECRET>"
-     ```
-   - **Schedule**: `0 7 * * *` (ogni giorno alle 7:00 UTC — cambia l'ora a piacere)
-5. Salva
-
-Serve anche `GMAIL_USER`/`GMAIL_APP_PASSWORD` tra le Environment Variables
-del servizio `sowld` (stesso schema di `.env.example`) — è l'account da
-cui partiranno le email di avviso ai clienti.
-
-Senza questo passo, le ricerche salvate restano semplicemente lì, senza
-inviare nulla — il sito continua a funzionare normalmente per le
-ricerche manuali.
-
 ## Il link per Framer
 
 Una volta online, l'URL da inserire nel sito Framer (Part A) come pulsante
