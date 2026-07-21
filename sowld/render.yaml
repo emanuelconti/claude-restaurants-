@@ -2,6 +2,7 @@ services:
   - type: web
     name: sowld
     runtime: docker
+    rootDir: sowld
     dockerContext: .
     dockerfilePath: ./Dockerfile
     plan: free
