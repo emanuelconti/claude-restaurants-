@@ -16,23 +16,29 @@ FAKE_JSON_LD_PAGE = """
 """
 
 # Matches the real markup verified against a live kleinanzeigen.de response
-# (see sources/kleinanzeigen.py docstring) — a plain <li data-href="..."> per
-# listing, no Product/Offer JSON-LD on search-results pages.
+# (see sources/kleinanzeigen.py docstring) — an <article class="aditem"
+# data-href="..."> per listing, no Product/Offer JSON-LD on search-results
+# pages. Re-verified 2026-07-21: the site replaced the earlier
+# <li class="j-adlistitem"> structure with this one without notice.
 FAKE_KLEINANZEIGEN_HTML = """
 <html><body>
-<li class="j-adlistitem adlist--item" data-href="/s-anzeige/rennrad/123" data-adid="123">
-  <div class="adlist--item--descarea">
-    <strong class="adlist--item--boldtitle">
-      <a href="/s-anzeige/rennrad/123">Rennrad Trek Domane</a>
-    </strong>
-    <div class="adlist--item--description">
-      <div class="long-description">guter Zustand</div>
+<li class="ad-listitem fully-clickable-card">
+  <article class="aditem" data-adid="123" data-href="/s-anzeige/rennrad/123">
+    <div class="aditem-main">
+      <div class="aditem-main--middle">
+        <h2 class="text-module-begin">
+          <a class="ellipsis" href="/s-anzeige/rennrad/123">Rennrad Trek Domane</a>
+        </h2>
+        <p class="aditem-main--middle--description">guter Zustand</p>
+        <div class="aditem-main--middle--price-shipping">
+          <p class="aditem-main--middle--price-shipping--price">780 € VB</p>
+        </div>
+      </div>
     </div>
-    <div class="adlist--item--price">780 € VB</div>
-  </div>
-  <img src="https://example.com/rad.jpg" />
+    <img src="https://example.com/rad.jpg" />
+  </article>
 </li>
-<li class="adlist--item-banner j-liberty-wrapper">
+<li class="ad-listitem badge-topad is-topad">
   <div>this is a promoted banner, not a real ad, and must be skipped</div>
 </li>
 </body></html>
@@ -50,7 +56,7 @@ def test_kleinanzeigen_scrapes_real_markup_structure():
 
 
 def test_kleinanzeigen_skips_banner_items_without_data_href():
-    html = '<li class="adlist--item-banner j-liberty-wrapper"><div>ad banner</div></li>'
+    html = '<li class="ad-listitem badge-topad is-topad"><div>ad banner</div></li>'
     assert kleinanzeigen._scrape_html(html, "Berlin") == []
 
 

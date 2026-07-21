@@ -85,22 +85,26 @@ python -m sowld "road bike" "Barcelona" --email       # needs GMAIL_USER/GMAIL_A
 ## Multiple marketplaces
 
 Six sources are wired up, selected with `--source`. **Verified live**
-(2026-07-20) — five of the six are blocked or unreliable, all due to
-anti-bot protection that isn't fixable by tweaking headers:
+(2026-07-21) — eBay is the only one confirmed reliable; the other five
+are all blocked by anti-bot protection, none of it fixable by tweaking
+headers:
 
 | `--source`      | Country / reach       | Live status |
 | :--------------- | :--------------------- | :--------- |
 | `ebay`           | US/UK/DE/FR/IT/ES/AT/CH/NL/BE/PL/IE | **Working, official — the default.** Real OAuth2 app credentials, eBay's Browse API — no scraping, no anti-bot risk, ever. Needs `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` (see below). |
-| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Blocked as of 2026-07-20.** Was the reliable one through 2026-07-19; now returns a Cloudflare "challenge" response (`cf-mitigated: challenge`) on the homepage itself, before the search call even runs. Same protection tier as Wallapop/Leboncoin/Subito, not a config regression — see below. |
-| `kleinanzeigen`  | Germany                | **Unreliable.** Sometimes returns real listings, sometimes an empty JS shell requiring a browser to render — looks like rate-limiting/bot mitigation that kicks in after a few requests, not a hard block. Retries a few times before giving up (see `sources/common.py`). |
-| `wallapop`       | Spain                  | **Blocked.** Returns HTTP 403 even with full browser headers (Accept, Accept-Language, Referer, a real Safari user-agent) — an anti-bot system, not a missing header. |
-| `leboncoin`      | France                 | **Blocked.** Same 403 regardless of headers. |
+| `kleinanzeigen`  | Germany                | **Blocked (confirmed 2026-07-21), not just "unreliable."** The search page's markup itself changed since the previous check and has been updated in `kleinanzeigen.py` — that part is a genuine, legitimate fix. But the actual data is gated behind Akamai Bot Manager (`X-Akamai-Transformed` header, `bm_sz` cookie): 6/6 requests from Python's `requests` and from `httpx` with HTTP/2 and a full realistic Chrome header set all came back with an empty JS shell, while `curl` with the same headers succeeded 3/3 in the same minute. That's a client-fingerprint (TLS handshake) block, not a flaky rate limit — retrying more doesn't help, it's deterministic per client. |
+| `vinted`         | Pan-European (ES/FR/DE/IT/NL/PL/UK/...) | **Blocked as of 2026-07-20**, still blocked 2026-07-21. Returns a Cloudflare "challenge" response (`cf-mitigated: challenge`) on the homepage itself, before the search call even runs. |
+| `wallapop`       | Spain                  | **Blocked.** Its internal search API (`api.wallapop.com`) returns HTTP 403 from CloudFront even with full browser headers — an anti-bot system, not a missing header. |
+| `leboncoin`      | France                 | **Blocked.** Its internal search API (`api.leboncoin.fr`) returns a DataDome captcha challenge (403) regardless of headers — note the *public* `leboncoin.fr/recherche` marketing page now returns 200, but it's a client-side shell with no ad data in it, so that doesn't help; the actual data endpoint is still gated. |
 | `subito`         | Italy                  | **Blocked.** Same 403 regardless of headers. |
 
-Vinted going from "reliable" to "Cloudflare-blocked" in the space of a
-day is the clearest evidence yet that scraping these sites isn't a stable
-foundation — it's not that our code got worse, the site's own protection
-got stricter. `ebay` is the only source that can't have this happen to it.
+`ebay` is the only source with an official API, so it's the only one that
+can't have this happen to it. The other five all sit behind commercial
+anti-bot systems (Cloudflare, DataDome, Akamai) that fingerprint the TLS
+handshake and JS environment — no combination of headers, retries, or
+protocol version (HTTP/1.1 vs HTTP/2) changes that from a plain HTTP
+client, confirmed by direct testing on 2026-07-21 (see `kleinanzeigen`
+row above for the concrete before/after).
 
 ### Retry behavior (added 2026-07-20)
 
@@ -108,30 +112,38 @@ got stricter. `ebay` is the only source that can't have this happen to it.
 `kleinanzeigen.py`:
 
 - `request_with_backoff` — retries on an actual request exception (2s,
-  4s, ... backoff). For failures that raise.
+  4s, ... backoff). For genuine transient network failures.
 - `retry_until_non_empty` — retries when the request *succeeds* (200 OK)
-  but comes back with zero listings, which is Kleinanzeigen's actual
-  failure mode (an unrendered JS shell, not an error).
+  but comes back with zero listings. Originally written on the theory that
+  Kleinanzeigen's empty-shell response was intermittent rate-limiting;
+  2026-07-21 testing showed it's actually a deterministic client
+  fingerprint block (see table above), so this retry no longer meaningfully
+  helps there — kept in place since it's harmless and still useful for
+  any genuinely transient case, but it isn't "the fix" for Kleinanzeigen
+  anymore.
 
-Neither is applied to Wallapop/Leboncoin/Subito — retrying a hard 403
-faster doesn't help and just hammers a server that's already refusing
-you, so those still fail on the first attempt as before.
+Not applied to Wallapop/Leboncoin/Subito — retrying a hard 403 faster
+doesn't help and just hammers a server that's already refusing you, so
+those still fail on the first attempt as before.
 
 Each source lives in its own file under `sowld/sources/` and just needs
 to return the shared `Listing` type — everything downstream (parsing,
 valuation, scoring, alerts) is source-agnostic and doesn't change per
 marketplace.
 
-### Why Wallapop/Leboncoin/Subito/Vinted are blocked, and what would "fixing" them actually mean
+### Why Wallapop/Leboncoin/Subito/Vinted/Kleinanzeigen are blocked, and what would "fixing" them actually mean
 
-These four return 403 (or, for Vinted, a Cloudflare challenge) on every
-request, including ones with a real browser's exact header set — that
-rules out a simple config fix. What's left is either they're blocking
-known cloud/datacenter IP ranges
-wholesale, or (more likely for consumer marketplaces this size) a bot
-detection layer like Cloudflare or DataDome that fingerprints the TLS
-handshake and JS environment, which no header can satisfy from a plain
-HTTP client.
+These five all fail the same way at the core, even though the surface
+symptom differs (403 for Wallapop/Leboncoin/Subito, a Cloudflare
+challenge for Vinted, a silent empty-shell 200 for Kleinanzeigen) — every
+request, including ones with a real browser's exact header set, gets
+refused real data. That rules out a simple config fix. What's left is
+either they're blocking known cloud/datacenter IP ranges wholesale, or
+(confirmed directly for Kleinanzeigen, and consistent with the response
+headers on the others) a bot detection layer — Cloudflare, DataDome, or
+Akamai depending on the site — that fingerprints the TLS handshake and JS
+environment, which no header, retry, or protocol tweak can satisfy from a
+plain HTTP client.
 
 Getting past that for real would mean running a full headless browser
 with stealth patches and likely rotating residential proxies — at that
@@ -167,11 +179,17 @@ listing description.
 
 ### About kleinanzeigen.py
 
-`kleinanzeigen.py`'s CSS selectors are the *verified* real markup (an
-`<li class="j-adlistitem" data-href="...">` per listing) — not a guess.
-The unreliability is about how often the server serves that markup vs. an
-empty JS shell, not about the parser being wrong. If a run comes back
-empty, that's this rate-limiting behavior, not a bug to chase.
+`kleinanzeigen.py`'s CSS selectors are the *verified* real markup as of
+2026-07-21 (an `<article class="aditem" data-href="...">` per listing,
+replacing an earlier `<li class="j-adlistitem">` structure that was live
+the day before) — not a guess, confirmed against two independent live
+fetches. That said, getting the selectors right doesn't fix the actual
+problem: Akamai Bot Manager gates the real listing data behind a
+client-fingerprint check that a plain `requests`/`httpx` call never
+passes (see the table above), so a run through this codebase will
+consistently come back empty regardless of how current the selectors
+are. This is a bug in *documentation/expectations*, not in the parser —
+treat `kleinanzeigen` as blocked, same as the other non-eBay sources.
 
 ### About subito.py
 
@@ -210,9 +228,10 @@ sowld/
     common.py          shared Listing type, geocoding, JSON-LD helper
     wallapop.py         Wallapop fetch implementation (blocked, see below)
     leboncoin.py        Leboncoin fetch implementation (blocked, see below)
-    vinted.py            Vinted fetch implementation (working)
-    kleinanzeigen.py      Kleinanzeigen fetch implementation (unreliable)
+    vinted.py            Vinted fetch implementation (blocked, see below)
+    kleinanzeigen.py      Kleinanzeigen fetch implementation (blocked, see below)
     subito.py             Subito.it fetch implementation (blocked, see below)
+    ebay.py                eBay Browse API fetch implementation (working, official)
   parse.py             step 2 — Claude structures each listing
   valuation.py          step 3 — condition-adjusted median fair value per group
   scoring.py             step 4 — deal_score, filter, rank
@@ -242,9 +261,10 @@ pytest tests/
   and Vinted use reverse-engineered internal JSON endpoints; Kleinanzeigen
   and Subito.it scrape the search-results HTML page directly. All of
   these are undocumented and can change without notice — and, as of this
-  writing, three of the five (Wallapop, Leboncoin, Subito) are outright
-  blocked by anti-bot protection. See "Why Wallapop/Leboncoin/Subito are
-  blocked" above.
+  writing, all five are blocked by anti-bot protection (Cloudflare,
+  DataDome, or Akamai depending on the site). See "Why
+  Wallapop/Leboncoin/Subito/Vinted/Kleinanzeigen are blocked" above. `ebay`
+  is the only source without this problem.
 - This is the grey-zone, personal/low-volume use discussed in the
   strategy doc: keep request volume low, use a realistic user-agent (set
   already), respect rate limits, and store **no seller personal data** —

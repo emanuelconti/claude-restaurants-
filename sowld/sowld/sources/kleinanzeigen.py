@@ -5,11 +5,15 @@ this scrapes its search-results HTML page directly, the same page a
 browser loads. Verified against a live response: search-results pages
 don't carry Product/Offer JSON-LD (only WebSite/ImageObject), so this
 goes straight to CSS selectors against the real markup — each listing is
-an `<li class="j-adlistitem" data-href="...">`, which conveniently gives
-the URL as a plain attribute instead of needing to dig through an <a> tag.
+an `<article class="aditem" data-href="...">` (wrapped in an
+`<li class="ad-listitem">`), which conveniently gives the URL as a plain
+attribute instead of needing to dig through an <a> tag. (Re-verified live
+2026-07-21 — this replaced an earlier `<li class="j-adlistitem">`
+structure that was live the day before; the site changes this markup
+without notice.)
 
-If this stops matching, Kleinanzeigen changed their markup — open the
-search URL in a browser, inspect a listing `<li>`, and update the
+If this stops matching, Kleinanzeigen changed their markup again — open
+the search URL in a browser, inspect a listing card, and update the
 selectors below.
 
 Same rules as the other sources (SOW Part B, §B3): low volume, realistic
@@ -37,14 +41,14 @@ def _parse_price(text: str) -> float:
 def _scrape_html(html: str, fallback_location: str) -> list[Listing]:
     soup = BeautifulSoup(html, "html.parser")
     listings = []
-    for card in soup.select("li.j-adlistitem[data-href]"):
-        title_el = card.select_one(".adlist--item--boldtitle a")
+    for card in soup.select("article.aditem[data-href]"):
+        title_el = card.select_one("h2.text-module-begin a") or card.select_one(".aditem-main--middle a")
         title = title_el.get_text(strip=True) if title_el else ""
 
-        price_el = card.select_one(".adlist--item--price")
+        price_el = card.select_one(".aditem-main--middle--price-shipping--price")
         price = _parse_price(price_el.get_text()) if price_el else 0.0
 
-        desc_el = card.select_one(".long-description") or card.select_one(".description-preview")
+        desc_el = card.select_one(".aditem-main--middle--description")
         description = desc_el.get_text(strip=True) if desc_el else ""
 
         href = card.get("data-href", "")

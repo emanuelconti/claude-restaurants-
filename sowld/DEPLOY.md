@@ -125,13 +125,17 @@ momento — Render supporta domini personalizzati gratuitamente).
 - **Ricerca sincrona**: la pagina resta in caricamento per tutta la durata
   della ricerca (10-30 secondi). Va bene per pochi utenti; con più
   traffico servirebbe eseguirla in background.
-- **Wallapop, Leboncoin, Subito.it e ora anche Vinted sono bloccati** da
-  protezioni anti-bot (verificato dal vivo il 2026-07-20 — Vinted
-  funzionava ancora il giorno prima) — **eBay è l'unica fonte
-  affidabile al 100%** oggi, essendo l'unica con un'API ufficiale.
-  Configura `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` prima di considerare il
-  prodotto pronto per clienti veri. Kleinanzeigen resta incostante. Vedi
-  README.md, sezione "Multiple marketplaces", per i dettagli.
+- **Wallapop, Leboncoin, Subito.it, Vinted e ora anche Kleinanzeigen sono
+  bloccati** da protezioni anti-bot (verificato dal vivo il 2026-07-21) —
+  **eBay è l'unica fonte affidabile al 100%** oggi, essendo l'unica con
+  un'API ufficiale. Configura `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` prima
+  di considerare il prodotto pronto per clienti veri. Kleinanzeigen non è
+  più solo "incostante": test diretti del 2026-07-21 mostrano che il
+  blocco (Akamai) è sistematico per qualsiasi client Python — non basta
+  aggiornare i selettori HTML (già fatto), i dati veri restano dietro un
+  fingerprint del client che nessuna intestazione realistica riesce a
+  superare. Vedi README.md, sezione "Multiple marketplaces", per i
+  dettagli.
 - **Limite di ricerche mensili per utente**: 50 di default
   (`MONTHLY_SEARCH_LIMIT` nelle Environment Variables), per tenere sotto
   controllo il costo massimo dell'API Anthropic per cliente. Alzalo se il
