@@ -8,16 +8,19 @@ of being a script someone has to run themselves.
 
 from __future__ import annotations
 
+import hmac
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 import stripe
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
 from sowld.fetch import BETA_SOURCES, DEFAULT_SOURCE, SOURCES, fetch_listings
+from sowld.mailer import send_deals_email
 from sowld.parse import parse_listings
 from sowld.scoring import DEFAULT_THRESHOLD, filter_and_rank
 from sowld.valuation import compute_fair_values
@@ -26,7 +29,15 @@ from .auth import get_current_user
 from .auth import login as start_session
 from .auth import logout as end_session
 from .billing import create_billing_portal_session, create_checkout_session, is_configured
-from .db import SessionLocal, User, hash_password, init_db, try_consume_search, verify_password
+from .db import (
+    SavedSearch,
+    SessionLocal,
+    User,
+    hash_password,
+    init_db,
+    try_consume_search,
+    verify_password,
+)
 from .i18n import LANGUAGES, get_translator, resolve_language
 
 app = FastAPI(title="Sowld")
@@ -37,6 +48,19 @@ app.add_middleware(
 templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 
 init_db()
+
+
+def _saved_searches_for(user_id: int) -> list[SavedSearch]:
+    db = SessionLocal()
+    try:
+        return (
+            db.query(SavedSearch)
+            .filter(SavedSearch.user_id == user_id)
+            .order_by(SavedSearch.created_at.desc())
+            .all()
+        )
+    finally:
+        db.close()
 
 
 def _base_context(request: Request) -> dict:
@@ -240,6 +264,7 @@ def app_home(request: Request):
             "beta_sources": BETA_SOURCES,
             "source": DEFAULT_SOURCE,
             "results": None,
+            "saved_searches": _saved_searches_for(user.id),
         },
     )
 
@@ -287,5 +312,103 @@ def app_search(
             "location": location,
             "source": source,
             "error": error,
+            "saved_searches": _saved_searches_for(user.id),
         },
     )
+
+
+@app.post("/app/saved-searches")
+def create_saved_search(
+    request: Request,
+    query: str = Form(...),
+    location: str = Form(...),
+    source: str = Form(DEFAULT_SOURCE),
+):
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse("/login", status_code=303)
+    if not user.is_subscribed:
+        return RedirectResponse("/app", status_code=303)
+
+    db = SessionLocal()
+    try:
+        db.add(SavedSearch(user_id=user.id, query=query, location=location, source=source))
+        db.commit()
+    finally:
+        db.close()
+    return RedirectResponse("/app", status_code=303)
+
+
+@app.post("/app/saved-searches/{search_id}/delete")
+def delete_saved_search(request: Request, search_id: int):
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse("/login", status_code=303)
+
+    db = SessionLocal()
+    try:
+        saved = db.get(SavedSearch, search_id)
+        if saved and saved.user_id == user.id:
+            db.delete(saved)
+            db.commit()
+    finally:
+        db.close()
+    return RedirectResponse("/app", status_code=303)
+
+
+@app.post("/cron/run-saved-searches")
+async def run_saved_searches(request: Request):
+    """Run every saved search once and email each owner their deals.
+
+    Meant to be called once a day by an external scheduler (a Render Cron
+    Job, or any service that can POST with the shared secret — see
+    DEPLOY.md). Protected by CRON_SECRET rather than a login, since the
+    caller is a machine, not a browser with a session.
+    """
+    expected_secret = os.environ.get("CRON_SECRET", "")
+    provided_secret = request.headers.get("x-cron-secret", "")
+    if not expected_secret or not hmac.compare_digest(provided_secret, expected_secret):
+        return JSONResponse({"detail": "forbidden"}, status_code=403)
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return JSONResponse({"detail": "ANTHROPIC_API_KEY not configured"}, status_code=503)
+
+    db = SessionLocal()
+    try:
+        rows = (
+            db.query(SavedSearch, User)
+            .join(User, SavedSearch.user_id == User.id)
+            .filter(User.subscription_status == "active")
+            .all()
+        )
+    finally:
+        db.close()
+
+    ran, skipped, failed = 0, 0, 0
+    for saved, user in rows:
+        if not try_consume_search(user.id):
+            skipped += 1
+            continue
+        try:
+            listings = fetch_listings(
+                saved.query, saved.location, source=saved.source, max_results=40
+            )
+            parsed = parse_listings(listings, api_key=api_key)
+            valued = compute_fair_values(parsed)
+            deals = filter_and_rank(valued, threshold=DEFAULT_THRESHOLD)
+            send_deals_email(deals, to_address=user.email)
+
+            db = SessionLocal()
+            try:
+                db_saved = db.get(SavedSearch, saved.id)
+                if db_saved:
+                    db_saved.last_run_at = datetime.now(timezone.utc)
+                    db.commit()
+            finally:
+                db.close()
+            ran += 1
+        except Exception:  # one user's failure shouldn't stop the rest
+            failed += 1
+
+    return {"ran": ran, "skipped": skipped, "failed": failed, "total": len(rows)}

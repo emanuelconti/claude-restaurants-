@@ -13,6 +13,9 @@ Two ways to use it, in the same codebase:
   website with signup, login and a Stripe subscription, that gates the
   same search behind a paywall. This is what you'd link to from the
   Framer site (Part A) as an actual product, not just a waitlist.
+  Subscribers can also save a search and get a daily email with new
+  deals, instead of re-running the search by hand every time — see
+  DEPLOY.md "Passo 7" to wire up the daily cron job that sends these.
 
 They share all the underlying logic (`fetch` → `parse` → `valuation` →
 `scoring`) — the webapp is a thin paid front door on top of everything

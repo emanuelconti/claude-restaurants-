@@ -33,5 +33,29 @@
   {% else %}
     <p class="lead">{{ t('dashboard.no_results') }}</p>
   {% endif %}
+  <form method="post" action="/app/saved-searches" style="margin-top:1rem;">
+    <input type="hidden" name="query" value="{{ query }}">
+    <input type="hidden" name="location" value="{{ location }}">
+    <input type="hidden" name="source" value="{{ source }}">
+    <button type="submit">{{ t('dashboard.save_search') }}</button>
+  </form>
+{% endif %}
+
+{% if saved_searches %}
+<h2 style="font-size:1.05rem;margin-top:2.5rem;">{{ t('dashboard.saved_searches_title') }}</h2>
+<table>
+  {% for s in saved_searches %}
+  <tr>
+    <td>{{ s.query }}</td>
+    <td>{{ s.location }}</td>
+    <td>{{ s.source }}</td>
+    <td>
+      <form method="post" action="/app/saved-searches/{{ s.id }}/delete" style="margin:0;">
+        <button type="submit" style="padding:0.3rem 0.7rem;font-size:0.8rem;">{{ t('dashboard.delete') }}</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
 {% endif %}
 {% endblock %}
