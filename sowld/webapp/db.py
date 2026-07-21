@@ -22,7 +22,7 @@ import os
 import secrets
 from datetime import datetime, timezone
 
-from sqlalchemy import Column, DateTime, ForeignKey, Integer, String, create_engine
+from sqlalchemy import Column, DateTime, Integer, String, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./sowld.db")
@@ -53,26 +53,6 @@ class User(Base):
     @property
     def is_subscribed(self) -> bool:
         return self.subscription_status == "active"
-
-
-class SavedSearch(Base):
-    """A search a user wants repeated automatically instead of by hand.
-
-    Picked up daily by the cron-triggered endpoint in main.py, which runs
-    the same pipeline as a manual search and emails the results — the
-    "AI agent that watches for you" behavior the SOW describes, rather
-    than a tool you have to remember to re-open every day.
-    """
-
-    __tablename__ = "saved_searches"
-
-    id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
-    query = Column(String, nullable=False)
-    location = Column(String, nullable=False)
-    source = Column(String, nullable=False)
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
-    last_run_at = Column(DateTime, nullable=True)
 
 
 def init_db() -> None:

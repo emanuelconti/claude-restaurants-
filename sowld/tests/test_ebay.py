@@ -53,6 +53,33 @@ def test_get_access_token_uses_cache_without_a_new_request(monkeypatch):
     mock_post.assert_not_called()
 
 
+def test_fetch_listings_stores_the_searched_city_not_the_marketplace_id(monkeypatch):
+    # Regression: _do_search used to pass the eBay marketplace ID (e.g.
+    # "EBAY_IT") as the listing's location instead of the city the user
+    # actually searched for, silently corrupting the location column in
+    # CSV exports for the default (eBay) source.
+    monkeypatch.setattr(
+        ebay, "geocode_location_detailed", lambda location: {"country_code": "it"}
+    )
+    monkeypatch.setattr(ebay, "_get_access_token", lambda: "fake-token")
+    fake_response = type(
+        "Resp",
+        (),
+        {
+            "raise_for_status": lambda self: None,
+            "json": lambda self: {
+                "itemSummaries": [
+                    {"title": "Trek Domane SL6", "price": {"value": "780.0"}, "itemWebUrl": "u"}
+                ]
+            },
+        },
+    )()
+    with patch("sowld.sources.ebay.requests.get", return_value=fake_response):
+        listings = ebay.fetch_listings("road bike", "Roma", delay=0)
+    assert len(listings) == 1
+    assert listings[0].location == "Roma"
+
+
 def test_marketplace_ids_cover_expected_countries():
     assert ebay.MARKETPLACE_IDS["it"] == "EBAY_IT"
     assert ebay.MARKETPLACE_IDS["fr"] == "EBAY_FR"

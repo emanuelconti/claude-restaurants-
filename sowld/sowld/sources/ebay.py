@@ -104,7 +104,7 @@ def _item_to_listing(item: dict, fallback_location: str) -> Listing:
     )
 
 
-def _do_search(query: str, marketplace_id: str, max_results: int) -> list[Listing]:
+def _do_search(query: str, marketplace_id: str, max_results: int, location: str) -> list[Listing]:
     token = _get_access_token()
     headers = {
         "User-Agent": USER_AGENT,
@@ -117,7 +117,7 @@ def _do_search(query: str, marketplace_id: str, max_results: int) -> list[Listin
     payload = resp.json()
 
     raw_items = payload.get("itemSummaries", [])
-    return [_item_to_listing(item, marketplace_id) for item in raw_items]
+    return [_item_to_listing(item, location) for item in raw_items]
 
 
 def fetch_listings(
@@ -131,5 +131,7 @@ def fetch_listings(
     marketplace_id = MARKETPLACE_IDS.get(geo["country_code"], DEFAULT_MARKETPLACE)
     time.sleep(delay)
 
-    listings = request_with_backoff(lambda: _do_search(query, marketplace_id, max_results))
+    listings = request_with_backoff(
+        lambda: _do_search(query, marketplace_id, max_results, location)
+    )
     return [l for l in listings if l.title and l.price > 0][:max_results]

@@ -13,9 +13,6 @@ Two ways to use it, in the same codebase:
   website with signup, login and a Stripe subscription, that gates the
   same search behind a paywall. This is what you'd link to from the
   Framer site (Part A) as an actual product, not just a waitlist.
-  Subscribers can also save a search and get a daily email with new
-  deals, instead of re-running the search by hand every time — see
-  DEPLOY.md "Passo 7" to wire up the daily cron job that sends these.
 
 They share all the underlying logic (`fetch` → `parse` → `valuation` →
 `scoring`) — the webapp is a thin paid front door on top of everything
@@ -105,20 +102,23 @@ day is the clearest evidence yet that scraping these sites isn't a stable
 foundation — it's not that our code got worse, the site's own protection
 got stricter. `ebay` is the only source that can't have this happen to it.
 
-### Retry behavior (added 2026-07-20)
+### Retry behavior
 
-`sources/common.py` has two retry helpers, used by `vinted.py` and
-`kleinanzeigen.py`:
+`sources/common.py` has two retry helpers:
 
 - `request_with_backoff` — retries on an actual request exception (2s,
-  4s, ... backoff). For failures that raise.
+  4s, ... backoff). Used by `ebay.py`, whose failures are transient
+  (rate limits, network blips), not a permanent block.
 - `retry_until_non_empty` — retries when the request *succeeds* (200 OK)
   but comes back with zero listings, which is Kleinanzeigen's actual
-  failure mode (an unrendered JS shell, not an error).
+  failure mode (an unrendered JS shell, not an error). Used by
+  `kleinanzeigen.py`.
 
-Neither is applied to Wallapop/Leboncoin/Subito — retrying a hard 403
+Neither is applied to Wallapop/Leboncoin/Subito/Vinted — all four now
+hard-block every request (403 or a Cloudflare challenge), so retrying
 faster doesn't help and just hammers a server that's already refusing
-you, so those still fail on the first attempt as before.
+you, and makes a doomed search feel slower than it needs to. Those four
+still fail (or return the beta notice) on the first attempt.
 
 Each source lives in its own file under `sowld/sources/` and just needs
 to return the shared `Listing` type — everything downstream (parsing,

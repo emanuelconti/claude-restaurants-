@@ -17,13 +17,7 @@ import time
 
 import requests
 
-from .common import (
-    REQUEST_TIMEOUT,
-    USER_AGENT,
-    Listing,
-    geocode_location_detailed,
-    request_with_backoff,
-)
+from .common import REQUEST_TIMEOUT, USER_AGENT, Listing, geocode_location_detailed
 
 # Country code -> Vinted domain. Not exhaustive — falls back to vinted.com
 # for countries Vinted doesn't have a dedicated site for.
@@ -83,12 +77,7 @@ def _item_to_listing(item: dict, domain: str, fallback_location: str) -> Listing
 
 
 def _do_search(domain: str, query: str, location: str, max_results: int) -> list[Listing]:
-    """One attempt: fresh session, homepage visit for cookies, then the search call.
-
-    A fresh Session per attempt (rather than reusing one across retries) means
-    a retry after a bad/blocked response starts clean instead of replaying
-    whatever cookie state triggered the problem in the first place.
-    """
+    """Fresh session, homepage visit for cookies, then the search call."""
     session = requests.Session()
     headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
     session.get(f"https://www.{domain}/", headers=headers, timeout=REQUEST_TIMEOUT)
@@ -120,12 +109,13 @@ def fetch_listings(
 ) -> list[Listing]:
     """Fetch current Vinted listings for `query`, on the domain for `location`'s country.
 
-    Retries with backoff on request failures — Vinted intermittently serves
-    an error under load rather than failing consistently, and a second
-    attempt a few seconds later often succeeds (see request_with_backoff).
+    No retry here: Vinted now hard-blocks with a Cloudflare challenge on
+    every request (confirmed live 2026-07-20), same protection tier as
+    Wallapop/Leboncoin/Subito — retrying a hard block just adds delay
+    without any chance of succeeding, same reasoning as those three.
     """
     geo = geocode_location_detailed(location)
     domain = COUNTRY_DOMAINS.get(geo["country_code"], DEFAULT_DOMAIN)
     time.sleep(delay)
 
-    return request_with_backoff(lambda: _do_search(domain, query, location, max_results))
+    return _do_search(domain, query, location, max_results)

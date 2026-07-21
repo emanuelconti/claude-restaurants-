@@ -8,6 +8,7 @@ the valuation step handles missing data gracefully (see valuation.py).
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from typing import Optional
 
@@ -16,6 +17,13 @@ from anthropic import Anthropic
 from .sources.common import Listing
 
 MODEL = "claude-sonnet-5"
+
+# Listings are parsed one Claude call per listing — each call is I/O bound
+# (network round trip), so running them concurrently instead of one after
+# another cuts wall-clock time roughly by this factor instead of scaling
+# linearly with listing count (e.g. 40 listings serially could take
+# 40x a single call's latency; this bounds it to a handful of batches).
+MAX_PARSE_WORKERS = 8
 
 SYSTEM_PROMPT = """\
 You extract structured product data from second-hand marketplace listings.
@@ -98,6 +106,9 @@ def parse_listings(
     api_key: Optional[str] = None,
     client: Optional[Anthropic] = None,
 ) -> list[ParsedListing]:
-    """Parse every listing. Pass a pre-built `client` to reuse a connection/tests."""
+    """Parse every listing concurrently. Pass a pre-built `client` to reuse a connection/tests."""
+    if not listings:
+        return []
     client = client or Anthropic(api_key=api_key)
-    return [parse_listing(client, listing) for listing in listings]
+    with ThreadPoolExecutor(max_workers=min(MAX_PARSE_WORKERS, len(listings))) as pool:
+        return list(pool.map(lambda listing: parse_listing(client, listing), listings))
