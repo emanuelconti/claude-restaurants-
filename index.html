@@ -2,654 +2,685 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SocialPerks — Turn plans into packed venues</title>
-<meta name="description" content="SocialPerks routes groups already planning to go out toward venues that want customers now. One organiser, one booking, a full crew — venues pay only for verified visits.">
-
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f5f1">
+<title>SocialPerks — Great places. Better nights together.</title>
+<meta name="description" content="Venues launch campaigns for selected time slots. People discover them, bring their crew and unlock an experience after a verified visit.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SocialPerks — Turn plans into packed venues">
-<meta property="og:description" content="Not another booking app. SocialPerks routes groups already planning a night out toward venues that want customers now. Venues pay only for verified visits.">
-<meta property="og:image" content="https://socialperks.app/og-image.png">
+<meta property="og:title" content="SocialPerks — Great places. Better nights together.">
+<meta property="og:description" content="Venues launch campaigns. People bring their crews. SocialPerks verifies the visit.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SocialPerks — Turn plans into packed venues">
-<meta name="twitter:description" content="One organiser. One booking. A full crew. Venues pay only for verified visits.">
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23ff2f9c%22/><stop offset=%221%22 stop-color=%22%237c3cff%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22url(%23g)%22/><text x=%2250%22 y=%2270%22 font-size=%2262%22 fill=%22white%22 font-family=%22Arial%22 text-anchor=%22middle%22 font-weight=%22800%22>S</text></svg>">
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23f0449b%22/><stop offset=%221%22 stop-color=%22%237257e8%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22url(%23g)%22/><circle cx=%2278%22 cy=%2278%22 r=%2210%22 fill=%22%23dfff68%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#09080d;--panel:#121018;--muted:#a9a3b3;--line:rgba(255,255,255,.11);--pink:#ff2f9c;--purple:#7c3cff;--white:#fff;--ok:#3ddc84;--err:#ff5c6c}
+:root{
+ --bg:#f7f5f1;--surface:#fff;--ink:#151218;--muted:#756f78;--line:#e3ddde;
+ --purple:#7257e8;--pink:#f0449b;--lime:#dfff68;--soft:#f1edf8;
+ --shadow:0 24px 80px rgba(45,31,53,.11);--shadow2:0 12px 34px rgba(45,31,53,.08);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 85% 0%,rgba(124,60,255,.25),transparent 33%),radial-gradient(circle at 10% 12%,rgba(255,47,156,.19),transparent 31%),var(--bg);color:var(--white);font-family:'DM Sans',Arial,sans-serif}
+body{margin:0;background:
+radial-gradient(circle at 88% -10%,rgba(114,87,232,.12),transparent 30%),
+radial-gradient(circle at -4% 14%,rgba(240,68,155,.08),transparent 26%),var(--bg);
+color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button,input,select{font:inherit}
+button{cursor:pointer}
 a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+h1,h2,h3{font-family:"Manrope",sans-serif;letter-spacing:-.045em;margin-top:0}
+p{margin-top:0}
+.muted{color:var(--muted)}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:8px}
 
-:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:6px}
+.page{display:none;min-height:100vh}
+.page.active{display:block}
+.wrap{width:min(100% - 48px,1440px);margin-inline:auto}
 
-nav{position:sticky;top:0;z-index:30;background:rgba(9,8,13,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:12px;font:800 20px Manrope}
-.brand-mark{width:38px;height:38px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font:800 19px Manrope;color:#fff}
-.links{display:flex;gap:28px;color:#d7d2dc;font-size:14px}
-.links a{padding:4px 2px;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
-.links a:hover{color:#fff;border-color:var(--pink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:14px;padding:14px 20px;font-weight:700;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;box-shadow:none;font-family:inherit;font-size:15px}
+/* ---------- Nav ---------- */
+.topbar{position:sticky;top:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;
+background:rgba(247,245,241,.86);backdrop-filter:blur(20px);border-bottom:1px solid rgba(227,221,222,.85)}
+.brand{display:flex;align-items:center;gap:11px;font:800 20px "Manrope"}
+.logo{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--pink),var(--purple));position:relative;box-shadow:var(--shadow2);flex-shrink:0}
+.logo:after{content:"";position:absolute;width:11px;height:11px;border-radius:50%;right:-2px;bottom:-2px;background:var(--lime);border:2px solid var(--bg)}
+.navlinks{display:flex;gap:4px}
+.navlinks button{border:0;background:transparent;padding:10px 13px;border-radius:12px;font-weight:700;color:var(--muted);transition:background .15s,color .15s}
+.navlinks button:hover,.navlinks button.active{background:#fff;color:var(--ink)}
+.actions{display:flex;gap:10px;align-items:center}
+.btn{border:0;border-radius:14px;padding:12px 17px;font-weight:800;transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;font-family:inherit}
 .btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0);filter:brightness(.92)}
-.primary{background:linear-gradient(135deg,var(--pink),var(--purple));color:white;box-shadow:0 12px 36px rgba(124,60,255,.27)}
-.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line);color:white}
-.secondary:hover{background:rgba(255,255,255,.1)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:4px}
-.nav-toggle span{width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.btn:active{transform:translateY(0);filter:brightness(.94)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.gradient{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 14px 34px rgba(114,87,232,.22)}
+.btn.soft{background:#fff;border:1px solid var(--line)}
+.btn.block{width:100%}
+.nav-toggle{display:none;background:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.nav-toggle span{width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}
 .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.mobile-panel{display:none;border-top:1px solid var(--line);background:rgba(9,8,13,.98);padding:20px;position:sticky;top:74px;z-index:29}
-.mobile-panel.is-open{display:block}
-.mobile-panel a{display:block;padding:14px 4px;color:#e7e3ec;font-size:16px;border-bottom:1px solid var(--line)}
-.mobile-panel .btn{width:100%;margin-top:14px}
+.mobile-menu{display:none;position:sticky;top:69px;z-index:79;background:#fff;border-bottom:1px solid var(--line);padding:14px}
+.mobile-menu.is-open{display:block}
+.mobile-menu button{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);padding:15px 6px;font-weight:700;color:var(--ink)}
+.mobile-menu .btn{margin-top:12px}
 
-.hero{padding:80px 0 54px;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
-.eyebrow{display:inline-flex;padding:9px 12px;border:1px solid rgba(255,255,255,.13);border-radius:999px;color:#d8d2df;background:rgba(255,255,255,.04);font-size:13px}
-h1,h2,h3{font-family:Manrope;margin:0}
-h1{font-size:clamp(44px,7.3vw,100px);line-height:.98;letter-spacing:-.045em;margin-top:24px}
-.grad{background:linear-gradient(90deg,#fff 0%,#ffb8df 35%,#a58bff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{font-size:clamp(19px,2vw,25px);line-height:1.45;color:#beb8c5;max-width:690px;margin:28px 0 30px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:#aaa4b1;font-size:14px}
-.proof b{color:#fff}
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 34px;text-align:center}
+.eyebrow{display:inline-flex;background:var(--soft);color:var(--purple);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800}
+.hero h1{font-size:clamp(40px,6.2vw,96px);line-height:.98;max-width:1100px;margin:24px auto 20px}
+.grad{background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(16px,1.6vw,20px);line-height:1.55;max-width:760px;margin:0 auto;color:var(--muted)}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
 
-.phone-wrap{position:relative;min-height:610px;display:grid;place-items:center}
-.orb{position:absolute;width:430px;height:430px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));filter:blur(55px);opacity:.34}
-.phone{position:relative;width:320px;height:630px;padding:13px;border-radius:48px;background:#050507;border:1px solid rgba(255,255,255,.22);box-shadow:0 42px 90px rgba(0,0,0,.55);transform:rotate(3deg)}
-.screen{height:100%;border-radius:37px;overflow:hidden;background:linear-gradient(180deg,#211329 0%,#0d0a12 32%);padding:20px}
-.notch{width:94px;height:25px;border-radius:99px;background:#050507;margin:0 auto 18px}
-.apphead{display:flex;align-items:center;justify-content:space-between}
-.appbrand{font:800 18px Manrope}
-.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#ff78bf,#8a63ff)}
-.mini{color:#aaa3b0;font-size:12px;margin-top:24px;letter-spacing:.04em}
-.card{margin-top:12px;padding:18px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.12)}
-.venue{font-size:13px;color:#c7c1cc}
-.card h3{font-size:25px;margin:7px 0 8px}
-.perk{display:inline-flex;padding:7px 10px;border-radius:999px;background:rgba(255,47,156,.16);color:#ff92cd;font-size:12px;font-weight:700}
-.crew{display:flex;margin-top:18px}
-.crew i{width:34px;height:34px;border-radius:50%;border:2px solid #17121d;margin-left:-8px;background:linear-gradient(135deg,#fff,#7f68a0);font-style:normal}
-.crew i:first-child{margin-left:0}
-.accept{width:100%;margin-top:20px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:0;border-radius:15px;padding:14px;font-weight:800;cursor:pointer;font-family:inherit;font-size:15px;transition:transform .15s ease}
-.accept:hover{transform:translateY(-2px)}
-.bottom{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;color:#81798a;font-size:10px;text-align:center}
+/* ---------- Role cards (home) ---------- */
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:18px 0 62px}
+.role-card{border:1px solid var(--line);background:rgba(255,255,255,.9);border-radius:30px;padding:30px;box-shadow:var(--shadow);text-align:left}
+.role-card h2{font-size:clamp(28px,2.6vw,42px);margin-bottom:10px}
+.role-card p{font-size:17px;line-height:1.5}
+.role-visual{aspect-ratio:16/10;border-radius:24px;margin:24px 0;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.role-visual.people{background-image:linear-gradient(180deg,rgba(10,6,14,0) 40%,rgba(10,6,14,.62)),url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1400&q=80")}
+.role-visual.venues{background-image:linear-gradient(180deg,rgba(10,6,14,0) 40%,rgba(10,6,14,.62)),url("https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1400&q=80")}
+.visual-label{position:absolute;left:20px;right:20px;bottom:18px;color:#fff}
+.visual-label h3{font-size:clamp(20px,2vw,29px);margin:0 0 5px}
 
-section{padding:94px 0}
-.section-head{max-width:740px}
-.kicker{color:#ff82c8;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.12em}
-h2{font-size:clamp(34px,5vw,66px);line-height:1.05;letter-spacing:-.03em;margin-top:14px}
-.lede{color:#afa8b6;font-size:19px;line-height:1.55;margin-top:20px}
+/* ---------- Sections ---------- */
+section.section{padding:70px 0}
+.section-head{max-width:780px;margin-bottom:28px}
+.section-head h2{font-size:clamp(30px,4vw,54px);margin-bottom:12px}
+.section-head p{font-size:18px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.step-num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:16px}
 
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-.feature{padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025))}
-.num{font:800 13px Manrope;color:#ff74c1}
-.feature h3{font-size:23px;margin:26px 0 10px}
-.feature p{color:#aaa3b0;line-height:1.55;margin:0}
+/* ---------- Interactive preview shell (desktop-first, sidebar + workspace) ---------- */
+.preview-shell{width:100%;background:#fff;border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden}
+.preview-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.preview-body{display:grid;grid-template-columns:240px minmax(0,1fr)}
+.sidebar{padding:18px;background:#f1ece7;border-right:1px solid var(--line)}
+.side-title{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:8px 10px 12px}
+.side-btn{width:100%;text-align:left;border:0;background:transparent;padding:12px 13px;border-radius:13px;margin-bottom:5px;font-weight:800;color:var(--muted);transition:background .15s,color .15s}
+.side-btn.active{background:var(--ink);color:#fff}
+.workspace{padding:26px;min-width:0}
+.workspace h2{font-size:clamp(24px,2.4vw,36px);margin-bottom:6px}
+.view{display:none}
+.view.active{display:block;animation:fadeUp .35s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
-/* Product demo */
-.demo-shell{margin-top:44px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.045);overflow:hidden}
-.demo-steps{display:flex;gap:6px;padding:20px 24px 0;flex-wrap:wrap}
-.demo-step-btn{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#b8b1bf;padding:9px 14px;border-radius:99px;font-size:12.5px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;transition:background .15s,color .15s,border-color .15s}
-.demo-step-btn .dot{width:7px;height:7px;border-radius:50%;background:#4c4658}
-.demo-step-btn.is-active{background:#fff;color:#0c0910;border-color:#fff}
-.demo-step-btn.is-active .dot{background:var(--purple)}
-.demo-step-btn.is-done .dot{background:var(--pink)}
-.demo-body{padding:28px 30px 32px}
-.demo-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8f89a0;background:rgba(255,255,255,.05);border:1px solid var(--line);padding:6px 10px;border-radius:99px;margin-bottom:18px}
-.demo-view{display:none}
-.demo-view.is-active{display:block;animation:fadeUp .35s ease both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.discover-list{display:grid;gap:12px}
-.discover-card{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);cursor:pointer;transition:border-color .15s,background .15s;text-align:left;width:100%;color:#fff;font-family:inherit}
-.discover-card:hover{border-color:var(--pink);background:rgba(255,47,156,.06)}
-.discover-card h4{margin:2px 0 4px;font-family:Manrope;font-size:18px}
-.discover-card p{margin:0;color:#a9a3b3;font-size:13.5px}
-.discover-card .slots{font-size:12px;color:var(--ok);font-weight:700;white-space:nowrap}
-.campaign-detail{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start}
-.campaign-detail dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:18px 0 0;font-size:14.5px}
-.campaign-detail dt{color:#8f89a0}
-.campaign-detail dd{margin:0;font-weight:600}
-.size-picker{display:flex;gap:10px;margin:18px 0}
-.size-opt{border:1px solid var(--line);background:rgba(255,255,255,.03);color:#fff;padding:12px 18px;border-radius:14px;cursor:pointer;font-weight:700;font-family:inherit;transition:border-color .15s,background .15s}
-.size-opt.is-selected{border-color:var(--pink);background:rgba(255,47,156,.12)}
-.invite-grid{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-.invite-chip{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:8px 14px 8px 8px;border-radius:99px;cursor:pointer;font-size:13.5px;font-family:inherit;color:#cfc9d7;transition:border-color .15s,background .15s,color .15s}
-.invite-chip i{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#fff,#7f68a0);display:inline-block}
-.invite-chip.is-invited{border-color:var(--ok);background:rgba(61,220,132,.1);color:#fff}
-.confirm-box{border:1px solid var(--line);border-radius:20px;padding:24px;background:rgba(255,255,255,.03)}
-.confirm-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);color:#a9a3b3;font-size:14.5px}
-.confirm-row:last-child{border-bottom:0}
-.confirm-row b{color:#fff}
-.checkin-track{display:flex;gap:6px;margin-top:6px}
-.checkin-track i{flex:1;height:6px;border-radius:99px;background:#2a2632}
-.checkin-track i.done{background:var(--ok)}
-.demo-actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
-.demo-note{margin-top:18px;font-size:12px;color:#8f89a0;border-top:1px solid var(--line);padding-top:14px}
+.cards{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.photo{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+.photo.pizzeria{background-image:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80")}
+.photo.bicioci{background-image:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=80")}
+.photo.pipus{background-image:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80")}
+.badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);padding:8px 11px;border-radius:999px;font-size:12px;font-weight:900}
+.photo-copy{position:absolute;left:18px;right:18px;bottom:16px;color:#fff}
+.photo-copy h3{font-size:clamp(20px,2vw,29px);margin:0 0 4px}
+.card-body{padding:18px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.level{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--lime);font-size:12px;font-weight:900;white-space:nowrap}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.meta div{background:#faf8f5;border:1px solid var(--line);border-radius:14px;padding:11px}
+.meta b{display:block}
+.meta span{font-size:11px;color:var(--muted)}
+.stack{display:grid;gap:16px}
+.small .photo{aspect-ratio:16/9}
+.panel{border:1px solid var(--line);border-radius:22px;padding:19px;background:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpi{background:#faf8f5;border:1px solid var(--line);border-radius:18px;padding:18px}
+.kpi b{display:block;font-size:clamp(22px,2.2vw,30px)}
+.kpi span{font-size:12px;color:var(--muted)}
+.list{display:grid;gap:10px}
+.list-item{display:flex;justify-content:space-between;gap:12px;padding:13px 14px;border:1px solid var(--line);border-radius:15px;flex-wrap:wrap}
+.xp-bar{height:8px;border-radius:99px;background:#eee7f2;overflow:hidden;margin-top:10px}
+.xp-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--pink),var(--purple));transition:width .6s ease}
 
-.demo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.panel{border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.045);padding:30px}
-.panel h3{font-size:26px}
-.switch{display:flex;gap:8px;margin:20px 0}
-.tab{padding:10px 13px;border-radius:12px;border:1px solid var(--line);background:transparent;color:#b8b1bf;cursor:pointer;font-weight:700;font-family:inherit;transition:background .15s,color .15s}
-.tab.active{background:#fff;color:#0c0910}
-.metric{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);color:#aaa3b0}
-.metric b{color:#fff}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:grid;gap:6px}
+.field label{font-size:12px;color:var(--muted);font-weight:800}
+.field input,.field select{padding:13px;border:1px solid var(--line);border-radius:13px;background:#fff;width:100%}
+.field input:focus,.field select:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(114,87,232,.15)}
+.full{grid-column:1/-1}
 
-.cta-section{padding:70px 0 110px}
-.cta-box{padding:52px;border-radius:34px;background:linear-gradient(135deg,rgba(255,47,156,.18),rgba(124,60,255,.23));border:1px solid rgba(255,255,255,.16);display:grid;grid-template-columns:1fr .8fr;gap:32px;align-items:start}
-form{display:grid;gap:10px}
-input,select{width:100%;border:1px solid var(--line);background:rgba(8,7,11,.62);color:#fff;padding:15px 16px;border-radius:13px;font:inherit}
-input:focus,select:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,47,156,.18)}
-form .btn{width:100%}
-.tiny{font-size:12px;color:#928a9a}
-.form-status{display:none;align-items:center;gap:10px;padding:14px 16px;border-radius:13px;font-size:14px;font-weight:600}
-.form-status.is-visible{display:flex}
-.form-status.ok{background:rgba(61,220,132,.12);border:1px solid rgba(61,220,132,.4);color:var(--ok)}
-.form-status.err{background:rgba(255,92,108,.12);border:1px solid rgba(255,92,108,.4);color:var(--err)}
-button[disabled]{opacity:.6;cursor:not-allowed;transform:none !important}
+/* ---------- Download / waitlist ---------- */
+.download{padding:70px 0 90px}
+.download-card{background:#171319;color:#fff;border-radius:30px;padding:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.download-card h2{font-size:clamp(28px,3.4vw,48px);margin-bottom:10px}
+.waitlist-form{display:grid;gap:10px}
+.waitlist-form input,.waitlist-form select{padding:14px 15px;border-radius:13px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff}
+.waitlist-form input::placeholder{color:#8f8896}
+.waitlist-form input:focus,.waitlist-form select:focus{outline:none;border-color:var(--pink)}
+.store-row{display:flex;gap:10px;flex-wrap:wrap}
+.store-btn{border:1px solid rgba(255,255,255,.2);background:#fff;color:#171319;border-radius:14px;padding:12px 16px;font-weight:800;flex:1 1 auto}
+.store-btn[disabled]{opacity:.5;cursor:not-allowed}
+.store-btn.is-chosen{outline:2px solid var(--lime);outline-offset:2px}
+.form-note{font-size:12px;color:#a79fad}
 
-footer{border-top:1px solid var(--line);padding:30px 0 44px;color:#8f8796;font-size:13px}
+.footer{padding:28px 0 44px;color:var(--muted);font-size:13px}
+
+/* ---------- Toast ---------- */
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,18px);opacity:0;background:#171319;color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;transition:opacity .25s ease,transform .25s ease;z-index:100;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
 .hidden{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;overflow:hidden}
 
-@media(max-width:860px){
-  .links{display:none}
-  .nav .btn.primary{display:none}
-  .nav-toggle{display:flex}
-  .hero{grid-template-columns:1fr;padding-top:44px}
-  .phone-wrap{min-height:540px}
-  .phone{width:285px;height:560px}
-  .grid3,.demo,.cta-box,.campaign-detail{grid-template-columns:1fr}
-  h1{font-size:52px}
-  section{padding:64px 0}
-  .demo-body{padding:22px 18px 26px}
-}
-@media(max-width:520px){
-  .wrap{width:min(calc(100% - 24px),1180px)}
-  h1{font-size:42px}
-  .phone-wrap{min-height:500px}
-  .phone{transform:none;width:270px;height:530px}
-  .cta-box{padding:24px}
-  .demo-steps{padding:16px 14px 0}
-  .demo-step-btn{padding:8px 11px;font-size:11.5px}
-}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
 }
+
+/* ================= TABLET: 701px – 1024px ================= */
+@media (max-width:1024px) and (min-width:701px){
+  .wrap{width:min(100% - 40px,1024px)}
+  .role-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .preview-body{grid-template-columns:200px minmax(0,1fr)}
+  .cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr 1fr}
+  .download-card{grid-template-columns:1fr}
+}
+
+/* ================= MOBILE: ≤700px ================= */
+@media (max-width:700px){
+  .wrap{width:min(100% - 28px,700px)}
+  .topbar{padding:10px 14px}
+  .brand span{display:none}
+  .navlinks{display:none}
+  .actions .btn.soft{display:none}
+  .nav-toggle{display:flex}
+  .hero{padding:36px 0 24px;text-align:left}
+  .hero-actions{justify-content:flex-start}
+  .role-grid{grid-template-columns:1fr;padding-bottom:44px}
+  .role-card{padding:22px}
+  section.section{padding:48px 0}
+  .steps{grid-template-columns:1fr}
+  .preview-body{display:block}
+  .sidebar{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);gap:4px;-webkit-overflow-scrolling:touch}
+  .side-title{display:none}
+  .side-btn{width:auto;white-space:nowrap}
+  .workspace{padding:18px}
+  .cards{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .download-card{grid-template-columns:1fr;padding:26px}
+  .preview-top{align-items:flex-start}
+}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap nav">
-    <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">S</span>
-      <span>SocialPerks</span>
-    </a>
-    <div class="links">
-      <a href="#how">How it works</a>
-      <a href="#product">Product</a>
-      <a href="#pilot">Pilot</a>
-    </div>
-    <a class="btn primary" href="#early-access">Join the beta</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobilePanel">
+
+<header class="topbar">
+  <a class="brand" href="#" onclick="showPage(event,'home')"><span class="logo" aria-hidden="true"></span><span>SocialPerks</span></a>
+  <nav class="navlinks" aria-label="Primary">
+    <button id="nav-home" class="active" onclick="showPage(event,'home')">Home</button>
+    <button id="nav-people" onclick="showPage(event,'people')">For people</button>
+    <button id="nav-venues" onclick="showPage(event,'venues')">For venues</button>
+  </nav>
+  <div class="actions">
+    <button class="btn soft" onclick="showPage(event,'venues')">Venue access</button>
+    <button class="btn gradient" onclick="jumpTo(event,'download')">Get the app</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="mobile-panel" id="mobilePanel">
-    <a href="#how" data-close-menu>How it works</a>
-    <a href="#product" data-close-menu>Product</a>
-    <a href="#pilot" data-close-menu>Pilot</a>
-    <a class="btn primary" href="#early-access" data-close-menu>Join the beta</a>
-  </div>
-</nav>
+</header>
 
-<main id="top">
-<div class="wrap hero">
-  <div>
-    <span class="eyebrow">Barcelona pilot · 21 venues signed</span>
-    <h1>Turn tonight's plans into <span class="grad">packed venues.</span></h1>
-    <p class="sub">SocialPerks matches groups already planning to go out with local venues that want customers now. One organiser. One booking. A full crew.</p>
-    <div class="ctas">
-      <a class="btn primary" href="#early-access">Get early access →</a>
-      <a class="btn secondary" href="#product">See the product</a>
-    </div>
-    <div class="proof">
-      <span><b>4–6</b> customers per booking</span>
-      <span><b>Pay per verified visit</b></span>
-      <span><b>No blanket discounts</b></span>
-    </div>
-  </div>
-  <div class="phone-wrap">
-    <div class="orb" aria-hidden="true"></div>
-    <div class="phone">
-      <div class="screen">
-        <div class="notch"></div>
-        <div class="apphead">
-          <div class="appbrand">SocialPerks</div>
-          <div class="avatar" aria-hidden="true"></div>
-        </div>
-        <div class="mini">TONIGHT IN BARCELONA</div>
-        <div class="card">
-          <div class="venue">Luna Social Club · Eixample</div>
-          <h3>Friday night table for 4</h3>
-          <span class="perk">Reserved table + welcome round</span>
-          <div class="crew" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <button class="accept" id="buildCrewBtn" type="button">Build my crew</button>
-        </div>
-        <div class="card">
-          <div class="venue">Verified visit</div>
-          <h3>4 friends checked in</h3>
-          <div class="metric"><span>Venue pays</span><b>Only on result</b></div>
-        </div>
-        <div class="bottom" aria-hidden="true"><span>Discover</span><span>Crews</span><span>Rewards</span><span>Profile</span></div>
-      </div>
-    </div>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <button onclick="showPage(event,'home')">Home</button>
+  <button onclick="showPage(event,'people')">For people</button>
+  <button onclick="showPage(event,'venues')">For venues</button>
+  <button class="btn dark block" onclick="showPage(event,'venues')">Venue access</button>
+  <button class="btn gradient block" onclick="jumpTo(event,'download')">Get the app</button>
 </div>
 
-<section id="how">
+<!-- ================= HOME ================= -->
+<main id="home" class="page active">
   <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">How it works</div>
-      <h2>Demand, routed before the night starts.</h2>
-      <p class="lede">This is not another booking website. SocialPerks actively creates a reason for a whole group to choose one venue over another.</p>
-    </div>
-    <div class="grid3">
-      <article class="feature"><span class="num">01</span><h3>A venue opens a slot</h3><p>The venue publishes the night, group size and experience it wants to push.</p></article>
-      <article class="feature"><span class="num">02</span><h3>An organiser builds a crew</h3><p>The friend who always makes the plan reserves for everyone in one action.</p></article>
-      <article class="feature"><span class="num">03</span><h3>The group shows up</h3><p>Guests check in. The venue pays for verified customers — not impressions or clicks.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="product">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">The product</div>
-      <h2>Built for both sides of the night.</h2>
-      <p class="lede">Click through a real booking, from tonight's open campaigns to a venue watching verified customers walk in.</p>
-    </div>
-
-    <div class="demo-shell">
-      <div class="demo-steps" role="tablist" aria-label="Product walkthrough steps">
-        <button class="demo-step-btn is-active" data-step="1" role="tab" aria-selected="true"><span class="dot"></span>1. Discover</button>
-        <button class="demo-step-btn" data-step="2" role="tab" aria-selected="false"><span class="dot"></span>2. Campaign</button>
-        <button class="demo-step-btn" data-step="3" role="tab" aria-selected="false"><span class="dot"></span>3. Build a crew</button>
-        <button class="demo-step-btn" data-step="4" role="tab" aria-selected="false"><span class="dot"></span>4. Confirmation</button>
-        <button class="demo-step-btn" data-step="5" role="tab" aria-selected="false"><span class="dot"></span>5. Venue dashboard</button>
+    <section class="hero">
+      <span class="eyebrow">Barcelona pilot · 21 venues signed</span>
+      <h1>Great places.<br><span class="grad">Better nights together.</span></h1>
+      <p>Venues launch campaigns for selected time slots. People discover them, bring their crew and unlock an experience after a verified visit.</p>
+      <div class="hero-actions">
+        <button class="btn gradient" onclick="showPage(event,'people')">I'm going out</button>
+        <button class="btn soft" onclick="showPage(event,'venues')">I manage a venue</button>
       </div>
+    </section>
 
-      <div class="demo-body">
+    <section class="role-grid">
+      <article class="role-card">
+        <span class="eyebrow">For people</span>
+        <h2>Find a plan for your crew.</h2>
+        <p class="muted">Discover campaigns created by local venues, invite friends and earn rewards when your visit is verified.</p>
+        <div class="role-visual people"><div class="visual-label"><h3>Discover. Invite. Go.</h3><p>No ads to create. No campaigns to manage.</p></div></div>
+        <button class="btn gradient" onclick="showPage(event,'people')">Explore the customer app</button>
+      </article>
 
-        <div class="demo-view is-active" data-view="1">
-          <span class="demo-tag">Discover · tonight in Barcelona</span>
-          <div class="discover-list">
-            <button class="discover-card" data-venue="Luna Social Club" data-area="Eixample" data-slot="Friday, 9:00 PM" data-size="4" data-perk="Reserved table + welcome round" data-avail="3 of 8 tables left">
-              <div><h4>Luna Social Club · Eixample</h4><p>Friday night table for 4 · welcome round included</p></div>
-              <span class="slots">3 of 8 left</span>
-            </button>
-            <button class="discover-card" data-venue="Casa Marea" data-area="El Born" data-slot="Saturday, 8:30 PM" data-size="6" data-perk="Free starter platter for the table" data-avail="2 of 5 tables left">
-              <div><h4>Casa Marea · El Born</h4><p>Saturday group table for 6 · starter platter on the house</p></div>
-              <span class="slots">2 of 5 left</span>
-            </button>
-            <button class="discover-card" data-venue="Vermut Vermell" data-area="Gràcia" data-slot="Tonight, 7:00 PM" data-size="2" data-perk="Two vermouths, on the house" data-avail="6 of 10 left">
-              <div><h4>Vermut Vermell · Gràcia</h4><p>Tonight, table for 2 · vermouth round included</p></div>
-              <span class="slots">6 of 10 left</span>
-            </button>
-          </div>
-          <p class="demo-note">Product preview — this is simulated data for demonstration, not a live feed of real customers.</p>
+      <article class="role-card">
+        <span class="eyebrow">For venues</span>
+        <h2>Fill the slots you choose.</h2>
+        <p class="muted">Launch a campaign, define the target crew and pay only for customers whose arrival is verified.</p>
+        <div class="role-visual venues"><div class="visual-label"><h3>Create demand on purpose.</h3><p>The venue controls every campaign.</p></div></div>
+        <button class="btn dark" onclick="showPage(event,'venues')">Explore the venue platform</button>
+      </article>
+    </section>
+  </div>
+</main>
+
+<!-- ================= FOR PEOPLE ================= -->
+<main id="people" class="page">
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">The customer app</span>
+      <h1>Your crew.<br><span class="grad">Your next plan.</span></h1>
+      <p>Customers only discover campaigns already launched by venues. They choose one, build a crew, confirm attendance and unlock the reward after check-in.</p>
+      <div class="hero-actions">
+        <button class="btn gradient" onclick="jumpTo(event,'people-demo')">See the app preview</button>
+        <button class="btn soft" onclick="jumpTo(event,'download')">Get notified at launch</button>
+      </div>
+    </section>
+
+    <p class="muted" style="text-align:center;max-width:620px;margin:0 auto 10px;font-weight:700">Campaigns are created by venues. You simply choose one and bring your crew.</p>
+
+    <section class="section">
+      <div class="section-head"><h2>Simple from the first tap.</h2></div>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Discover</h3><p class="muted">Browse campaigns created by restaurants and venues around you.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Build your crew</h3><p class="muted">Invite friends and confirm the group for the selected campaign.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Check in and earn</h3><p class="muted">The venue verifies the visit and the app unlocks XP and rewards.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="people-demo">
+      <div class="preview-shell">
+        <div class="preview-top">
+          <div><strong>SocialPerks for people</strong><div class="muted">Interactive product preview — simulated data</div></div>
+          <button class="btn gradient" onclick="openPeopleView('crew')">Create a crew</button>
         </div>
+        <div class="preview-body">
+          <aside class="sidebar">
+            <div class="side-title">Customer app</div>
+            <button class="side-btn active people-nav" data-id="discover" onclick="openPeopleView('discover')">Discover</button>
+            <button class="side-btn people-nav" data-id="crew" onclick="openPeopleView('crew')">My crew</button>
+            <button class="side-btn people-nav" data-id="rewards" onclick="openPeopleView('rewards')">Rewards</button>
+            <button class="side-btn people-nav" data-id="profile" onclick="openPeopleView('profile')">Profile</button>
+          </aside>
+          <div class="workspace">
 
-        <div class="demo-view" data-view="2">
-          <span class="demo-tag">Campaign details</span>
-          <div class="campaign-detail">
-            <div>
-              <h3 id="campVenue">Luna Social Club</h3>
-              <p class="lede" style="margin-top:6px;font-size:15px" id="campArea">Eixample, Barcelona</p>
-              <dl>
-                <dt>Date &amp; time</dt><dd id="campSlot">Friday, 9:00 PM</dd>
-                <dt>Crew size</dt><dd id="campSize">4 people</dd>
-                <dt>Experience</dt><dd id="campPerk">Reserved table + welcome round</dd>
-                <dt>Availability</dt><dd id="campAvail">3 of 8 tables left</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="demo-actions">
-            <button class="btn primary" data-next="3" type="button">Build my crew →</button>
-            <button class="btn secondary" data-goto="1" type="button">← Back to discover</button>
-          </div>
-        </div>
-
-        <div class="demo-view" data-view="3">
-          <span class="demo-tag">Build a crew</span>
-          <h3>How many are coming?</h3>
-          <div class="size-picker" role="group" aria-label="Crew size">
-            <button class="size-opt" data-crew-size="2" type="button">2</button>
-            <button class="size-opt is-selected" data-crew-size="4" type="button">4</button>
-            <button class="size-opt" data-crew-size="6" type="button">6</button>
-          </div>
-          <h3 style="margin-top:22px">Invite your crew</h3>
-          <div class="invite-grid" id="inviteGrid">
-            <button class="invite-chip is-invited" data-name="You (organiser)" type="button"><i></i>You (organiser)</button>
-            <button class="invite-chip" data-name="Marta" type="button"><i></i>Marta</button>
-            <button class="invite-chip" data-name="Jordi" type="button"><i></i>Jordi</button>
-            <button class="invite-chip" data-name="Laia" type="button"><i></i>Laia</button>
-            <button class="invite-chip" data-name="Pau" type="button"><i></i>Pau</button>
-            <button class="invite-chip" data-name="Nuria" type="button"><i></i>Nuria</button>
-          </div>
-          <div class="demo-actions">
-            <button class="btn primary" data-next="4" type="button">Confirm booking →</button>
-            <button class="btn secondary" data-goto="2" type="button">← Back to campaign</button>
-          </div>
-        </div>
-
-        <div class="demo-view" data-view="4">
-          <span class="demo-tag">Confirmation</span>
-          <h3>Table reserved at <span id="confVenue">Luna Social Club</span></h3>
-          <div class="confirm-box" style="margin-top:18px">
-            <div class="confirm-row"><span>Time</span><b id="confSlot">Friday, 9:00 PM</b></div>
-            <div class="confirm-row"><span>Crew</span><b id="confCrew">4 people invited</b></div>
-            <div class="confirm-row"><span>Perk</span><b id="confPerk">Reserved table + welcome round</b></div>
-            <div class="confirm-row">
-              <span>Check-in status</span>
-              <b id="confCheckinLabel">0 / 4 checked in</b>
-            </div>
-          </div>
-          <div class="checkin-track" id="checkinTrack" aria-hidden="true"></div>
-          <div class="demo-actions">
-            <button class="btn primary" id="simulateCheckin" type="button">Simulate arrival at the venue</button>
-            <button class="btn secondary" data-next="5" type="button">See venue dashboard →</button>
-          </div>
-          <p class="demo-note">Product preview — check-in is simulated here; in the real app each guest checks in from their own phone.</p>
-        </div>
-
-        <div class="demo-view" data-view="5">
-          <span class="demo-tag">Venue dashboard</span>
-          <div class="demo" style="margin-top:0">
-            <div class="panel" style="padding:0;border:0;background:none">
-              <h3>Tonight's campaign</h3>
-              <div class="switch">
-                <button class="tab active" data-mode="venue" type="button">Venue view</button>
-                <button class="tab" data-mode="crew" type="button">Crew view</button>
-              </div>
-              <div id="metrics">
-                <div class="metric"><span>Tonight's campaign</span><b>6 groups</b></div>
-                <div class="metric"><span>Verified customers</span><b>24</b></div>
-                <div class="metric"><span>Acquisition model</span><b>Pay on result</b></div>
-                <div class="metric"><span>Estimated revenue tonight</span><b>€720</b></div>
+            <div id="p-discover" class="view active">
+              <h2>Gràcia &amp; El Born tonight</h2><p class="muted">Campaigns selected for your crew.</p>
+              <div class="cards">
+                <article class="card">
+                  <div class="photo pizzeria"><span class="badge">Best match · 2 slots left</span><div class="photo-copy"><h3>Pizzeria Semola</h3><p>Gràcia · Friday, 20:30</p></div></div>
+                  <div class="card-body">
+                    <div class="row"><strong>Reserved table + welcome round</strong><span class="level">+180 XP</span></div>
+                    <div class="meta"><div><b>4–6</b><span>crew size</span></div><div><b>Friday</b><span>time</span></div><div><b>Verified</b><span>visit</span></div></div>
+                    <button class="btn gradient block" onclick="openPeopleView('crew')">Build your crew</button>
+                  </div>
+                </article>
+                <div class="stack">
+                  <article class="card small">
+                    <div class="photo bicioci"><span class="badge">Café</span><div class="photo-copy"><h3 style="font-size:22px">BiciOci Café</h3><p>El Born · Saturday, 11:00</p></div></div>
+                    <div class="card-body"><div class="row"><strong>Brunch for the table</strong><button class="btn soft" onclick="openPeopleView('crew')">Open</button></div></div>
+                  </article>
+                  <article class="card small">
+                    <div class="photo pipus"><span class="badge">Experience</span><div class="photo-copy"><h3 style="font-size:22px">Restaurante Pipus</h3><p>Central Barcelona · 21:00</p></div></div>
+                    <div class="card-body"><div class="row"><strong>Welcome cocktail round</strong><button class="btn soft" onclick="openPeopleView('crew')">Open</button></div></div>
+                  </article>
+                </div>
               </div>
             </div>
-            <div class="panel" id="pilot" style="padding:0;border:0;background:none">
-              <h3>What is already real</h3>
-              <div class="metric"><span>Launch city</span><b>Barcelona</b></div>
-              <div class="metric"><span>Signed venues</span><b>21</b></div>
-              <div class="metric"><span>Initial verticals</span><b>Food, nightlife, experiences</b></div>
-              <div class="metric"><span>Next step</span><b>Live product pilot</b></div>
+
+            <div id="p-crew" class="view">
+              <h2>My crew</h2><p class="muted">Pizzeria Semola · Friday, 20:30</p>
+              <div class="grid3">
+                <div class="kpi"><span>Confirmed</span><b id="crewConfirmed">4/6</b></div>
+                <div class="kpi"><span>Potential XP</span><b>+180</b></div>
+                <div class="kpi"><span>Status</span><b style="font-size:20px" id="crewStatus">Almost ready</b></div>
+              </div>
+              <div class="panel" style="margin-top:16px">
+                <div class="list">
+                  <div class="list-item"><span>Emanuel</span><b>Organiser</b></div>
+                  <div class="list-item"><span>Mohamed</span><b>Confirmed</b></div>
+                  <div class="list-item" id="inviteRow"><span>Invite two more friends</span><button class="btn gradient" onclick="inviteFriend()">Copy invite link</button></div>
+                </div>
+              </div>
             </div>
+
+            <div id="p-rewards" class="view">
+              <h2>Rewards</h2><p class="muted">Earned after verified visits.</p>
+              <div class="grid3">
+                <div class="kpi"><span>Level</span><b>7</b></div>
+                <div class="kpi"><span>Total XP</span><b>2,480</b></div>
+                <div class="kpi"><span>Verified visits</span><b>14</b></div>
+              </div>
+              <div class="panel" style="margin-top:16px">
+                <div class="row"><strong>Progress to Level 8</strong><span class="muted">2,480 / 3,000 XP</span></div>
+                <div class="xp-bar"><i style="width:82%"></i></div>
+              </div>
+            </div>
+
+            <div id="p-profile" class="view">
+              <h2>Profile</h2>
+              <div class="panel">
+                <div class="row"><div><h3>Emanuel · Barcelona</h3><p class="muted">Level 7 organiser · 14 completed crews</p></div><span class="level">Top 8%</span></div>
+              </div>
+            </div>
+
           </div>
-          <p class="demo-note">Product preview — dashboard figures are simulated for demonstration, not live customer or revenue data.</p>
         </div>
-
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</main>
 
-<section class="cta-section" id="early-access">
+<!-- ================= FOR VENUES ================= -->
+<main id="venues" class="page">
   <div class="wrap">
-    <div class="cta-box">
+    <section class="hero">
+      <span class="eyebrow">The venue platform</span>
+      <h1>Choose the slot.<br><span class="grad">Launch the demand.</span></h1>
+      <p>Only restaurants and venues create campaigns. They choose the date, time, target groups and experience, then pay only for verified customers.</p>
+      <div class="hero-actions">
+        <button class="btn dark" onclick="jumpTo(event,'venue-demo')">See the dashboard</button>
+        <button class="btn soft" onclick="jumpTo(event,'venue-access')">Request venue access</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Built for restaurant owners, not marketers.</h2></div>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Select the slot</h3><p class="muted">Choose when you want more groups in the venue.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Launch the campaign</h3><p class="muted">Set target crews, crew size and the offered experience.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Pay for verified visits</h3><p class="muted">Track booked crews and pay only when customers arrive.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="venue-demo">
+      <div class="preview-shell">
+        <div class="preview-top">
+          <div><strong>SocialPerks for venues</strong><div class="muted">Professional venue workspace — simulated data</div></div>
+          <button class="btn dark" onclick="openVenueView('create')">Launch campaign</button>
+        </div>
+        <div class="preview-body">
+          <aside class="sidebar">
+            <div class="side-title">Venue platform</div>
+            <button class="side-btn active venue-nav" data-id="overview" onclick="openVenueView('overview')">Overview</button>
+            <button class="side-btn venue-nav" data-id="create" onclick="openVenueView('create')">Create campaign</button>
+            <button class="side-btn venue-nav" data-id="campaigns" onclick="openVenueView('campaigns')">Campaigns</button>
+            <button class="side-btn venue-nav" data-id="analytics" onclick="openVenueView('analytics')">Analytics</button>
+          </aside>
+          <div class="workspace">
+
+            <div id="v-overview" class="view active">
+              <h2>Pizzeria Semola</h2><p class="muted">Venue overview</p>
+              <div class="grid3">
+                <div class="kpi"><span>Verified customers</span><b>78</b></div>
+                <div class="kpi"><span>Revenue generated</span><b>€3.8k</b></div>
+                <div class="kpi"><span>Live campaigns</span><b>3</b></div>
+              </div>
+              <div class="panel" style="margin-top:16px">
+                <h3 style="font-size:20px;margin-bottom:12px">Upcoming arrivals</h3>
+                <div class="list">
+                  <div class="list-item"><span>Tuesday · 20:30</span><b>4 crews booked</b></div>
+                  <div class="list-item"><span>Thursday · 19:00</span><b>3 crews booked</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="v-create" class="view">
+              <h2>Create campaign</h2><p class="muted">Only the venue can publish this campaign.</p>
+              <div class="cards">
+                <div class="panel">
+                  <div class="form-grid">
+                    <div class="field"><label for="cDate">Date</label><input id="cDate" type="date"></div>
+                    <div class="field"><label for="cTime">Time</label><input id="cTime" type="time" value="20:30"></div>
+                    <div class="field"><label for="cTarget">Target crews</label><input id="cTarget" type="number" value="6" min="1"></div>
+                    <div class="field"><label for="cSize">Crew size</label><select id="cSize"><option>2–3 people</option><option selected>4–6 people</option><option>6+ people</option></select></div>
+                    <div class="field full"><label for="cPerk">Experience</label><input id="cPerk" value="Reserved table + welcome round"></div>
+                    <div class="field full"><button class="btn gradient block" onclick="launchCampaign()">Launch campaign</button></div>
+                  </div>
+                  <p class="muted" style="margin-top:12px">You pay only for verified customers.</p>
+                </div>
+                <article class="card">
+                  <div class="photo pizzeria"><span class="badge">Customer preview</span><div class="photo-copy" id="previewCopy"><h3>Pizzeria Semola</h3><p>Friday · 20:30</p></div></div>
+                  <div class="card-body"><strong id="previewPerk">Reserved table + welcome round</strong></div>
+                </article>
+              </div>
+            </div>
+
+            <div id="v-campaigns" class="view">
+              <h2>Campaigns</h2>
+              <div class="panel">
+                <div class="list" id="campaignsList">
+                  <div class="list-item"><span>Friday · 20:30</span><b>4/6 crews booked</b></div>
+                  <div class="list-item"><span>Sunday brunch</span><b>2/5 crews booked</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="v-analytics" class="view">
+              <h2>Analytics</h2>
+              <div class="grid3">
+                <div class="kpi"><span>Cost per verified visit</span><b>€4.20</b></div>
+                <div class="kpi"><span>Repeat crews</span><b>38%</b></div>
+                <div class="kpi"><span>Unverified visits billed</span><b>0</b></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="venue-access">
+      <div class="preview-shell" style="padding:6px">
+        <div style="padding:26px">
+          <h2 style="font-size:clamp(24px,3vw,34px)">Request venue access</h2>
+          <p class="muted" style="margin:8px 0 20px;max-width:560px">Tell us about your venue and we'll reach out personally before the Barcelona pilot expands.</p>
+          <form class="form-grid" id="venueForm" onsubmit="return submitVenueForm(event)">
+            <div class="field"><label for="vName">Venue name</label><input id="vName" required placeholder="e.g. Pizzeria Semola"></div>
+            <div class="field"><label for="vEmail">Contact email</label><input id="vEmail" type="email" required placeholder="you@venue.com"></div>
+            <div class="field"><label for="vCity">City</label><input id="vCity" required placeholder="Barcelona"></div>
+            <div class="field"><label for="vType">Venue type</label><select id="vType"><option>Restaurant</option><option>Bar</option><option>Café</option><option>Other</option></select></div>
+            <div class="field full"><button class="btn dark block" type="submit">Request venue access</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ================= DOWNLOAD / WAITLIST ================= -->
+<section class="download" id="download">
+  <div class="wrap">
+    <div class="download-card">
       <div>
-        <div class="kicker">Get early access</div>
-        <h2>Bring your crew—or fill your venue.</h2>
-        <p class="lede">Join the Barcelona beta. We will contact you personally.</p>
-        <p class="lede" id="pilotProof" style="font-size:15px;margin-top:14px">21 venues already signed for the pilot in Barcelona.</p>
+        <h2>SocialPerks is coming to Barcelona.</h2>
+        <p style="color:#cfc8d1;max-width:560px">The public app is not live yet. Join the launch list and be notified the moment SocialPerks becomes available.</p>
+        <p class="form-note" style="margin-top:14px">No app-store listing exists yet — nothing here links to a real download.</p>
       </div>
       <div>
-        <form name="early-access" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="earlyAccessForm">
-          <input type="hidden" name="form-name" value="early-access">
-          <p class="hidden"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-          <input required name="name" placeholder="Your name" autocomplete="name">
-          <input required type="email" name="email" placeholder="Email" autocomplete="email">
-          <select required name="role" id="roleSelect">
-            <option value="">I am a…</option>
-            <option>Venue owner / manager</option>
-            <option>Person who organises nights out</option>
-            <option>Investor / partner</option>
-          </select>
-          <input required name="city" placeholder="Your city" autocomplete="address-level2">
-          <button class="btn primary" type="submit" id="submitBtn">Join the beta →</button>
-          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-          <div class="tiny">No app-store claim until the beta build is actually available.</div>
+        <form class="waitlist-form" id="waitlistForm" onsubmit="return submitWaitlist(event)">
+          <input type="email" id="waitlistEmail" required placeholder="Your email">
+          <div class="store-row">
+            <button type="button" class="store-btn" id="btnIos" onclick="choosePlatform('iOS', this)">Join the iPhone waitlist</button>
+            <button type="button" class="store-btn" id="btnAndroid" onclick="choosePlatform('Android', this)">Join the Android waitlist</button>
+          </div>
+          <button class="btn gradient block" type="submit">Notify me</button>
+          <button class="store-btn" disabled>App Store · Coming soon</button>
         </form>
       </div>
     </div>
   </div>
 </section>
-</main>
 
-<footer>
-  <div class="wrap">© <span id="year"></span> SocialPerks · Barcelona · <a href="mailto:hello@socialperks.app">hello@socialperks.app</a></div>
-</footer>
+<footer class="footer"><div class="wrap">SocialPerks product preview · simulated data · Barcelona pilot</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
-  "use strict";
+"use strict";
 
-  document.getElementById('year').textContent = new Date().getFullYear();
+/* ---------- Navigation ---------- */
+function showPage(e, id){
+  if (e) e.preventDefault();
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.navlinks button').forEach(function(b){ b.classList.remove('active'); });
+  var nav = document.getElementById('nav-' + id);
+  if (nav) nav.classList.add('active');
+  closeMobileMenu();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+window.showPage = showPage;
 
-  /* Mobile nav */
-  var navToggle = document.getElementById('navToggle');
-  var mobilePanel = document.getElementById('mobilePanel');
-  navToggle.addEventListener('click', function(){
-    var open = mobilePanel.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  mobilePanel.querySelectorAll('[data-close-menu]').forEach(function(el){
-    el.addEventListener('click', function(){
-      mobilePanel.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  /* Hero "Build my crew" -> jump into the live demo at step 3 with hero's own campaign */
-  document.getElementById('buildCrewBtn').addEventListener('click', function(){
-    document.getElementById('product').scrollIntoView({behavior:'smooth'});
-    setDemoData({
-      venue:'Luna Social Club', area:'Eixample', slot:'Friday, 9:00 PM',
-      size:'4', perk:'Reserved table + welcome round', avail:'3 of 8 tables left'
-    });
-    goToStep(3);
-  });
-
-  /* ---------- Product demo state ---------- */
-  var steps = Array.prototype.slice.call(document.querySelectorAll('.demo-step-btn'));
-  var views = Array.prototype.slice.call(document.querySelectorAll('.demo-view'));
-  var currentCampaign = {
-    venue:'Luna Social Club', area:'Eixample', slot:'Friday, 9:00 PM',
-    size:'4', perk:'Reserved table + welcome round', avail:'3 of 8 tables left'
-  };
-  var crewSize = 4;
-  var invited = ['You (organiser)'];
-  var checkedIn = 0;
-
-  function goToStep(n){
-    steps.forEach(function(btn){
-      var active = parseInt(btn.dataset.step, 10) === n;
-      btn.classList.toggle('is-active', active);
-      btn.setAttribute('aria-selected', active ? 'true' : 'false');
-      if (parseInt(btn.dataset.step, 10) < n) btn.classList.add('is-done');
-    });
-    views.forEach(function(v){
-      v.classList.toggle('is-active', parseInt(v.dataset.view, 10) === n);
-    });
-    if (n === 2) renderCampaign();
-    if (n === 4) renderConfirmation();
+function jumpTo(e, id){
+  if (e) e.preventDefault();
+  var target = document.getElementById(id);
+  if (!target) return;
+  var page = target.closest('.page');
+  if (page && !page.classList.contains('active')) {
+    document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+    page.classList.add('active');
+    document.querySelectorAll('.navlinks button').forEach(function(b){ b.classList.remove('active'); });
+    var nav = document.getElementById('nav-' + page.id);
+    if (nav) nav.classList.add('active');
   }
+  closeMobileMenu();
+  requestAnimationFrame(function(){ target.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+}
+window.jumpTo = jumpTo;
 
-  steps.forEach(function(btn){
-    btn.addEventListener('click', function(){ goToStep(parseInt(btn.dataset.step, 10)); });
-  });
-  document.querySelectorAll('[data-goto]').forEach(function(btn){
-    btn.addEventListener('click', function(){ goToStep(parseInt(btn.dataset.goto, 10)); });
-  });
-  document.querySelectorAll('[data-next]').forEach(function(btn){
-    btn.addEventListener('click', function(){ goToStep(parseInt(btn.dataset.next, 10)); });
-  });
+var navToggle = document.getElementById('navToggle');
+var mobileMenu = document.getElementById('mobileMenu');
+function closeMobileMenu(){
+  mobileMenu.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+navToggle.addEventListener('click', function(){
+  var open = mobileMenu.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
 
-  function setDemoData(data){
-    currentCampaign = data;
-    crewSize = parseInt(data.size, 10) || 4;
+/* ---------- People app demo ---------- */
+var inviteCount = 2;
+function openPeopleView(id){
+  document.querySelectorAll('#people-demo .view').forEach(function(v){ v.classList.remove('active'); });
+  document.getElementById('p-' + id).classList.add('active');
+  document.querySelectorAll('.people-nav').forEach(function(b){ b.classList.toggle('active', b.dataset.id === id); });
+}
+window.openPeopleView = openPeopleView;
+
+function inviteFriend(){
+  if (inviteCount >= 6) { toast('Your crew is already full'); return; }
+  inviteCount++;
+  document.getElementById('crewConfirmed').textContent = inviteCount + '/6';
+  var remaining = 6 - inviteCount;
+  document.getElementById('crewStatus').textContent = remaining <= 0 ? 'Crew ready!' : 'Almost ready';
+  if (remaining <= 0) {
+    document.getElementById('inviteRow').innerHTML = '<span>Crew is complete</span><span class="level">Ready to check in</span>';
   }
+  toast('Invite link copied — send it to your crew');
+}
+window.inviteFriend = inviteFriend;
 
-  /* View 1: Discover */
-  document.querySelectorAll('.discover-card').forEach(function(card){
-    card.addEventListener('click', function(){
-      setDemoData({
-        venue: card.dataset.venue, area: card.dataset.area, slot: card.dataset.slot,
-        size: card.dataset.size, perk: card.dataset.perk, avail: card.dataset.avail
-      });
-      goToStep(2);
-    });
+/* ---------- Venue dashboard demo ---------- */
+function openVenueView(id){
+  document.querySelectorAll('#venue-demo .view').forEach(function(v){ v.classList.remove('active'); });
+  document.getElementById('v-' + id).classList.add('active');
+  document.querySelectorAll('.venue-nav').forEach(function(b){ b.classList.toggle('active', b.dataset.id === id); });
+}
+window.openVenueView = openVenueView;
+
+/* live customer-facing preview while creating a campaign */
+['cPerk'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', function(){
+    document.getElementById('previewPerk').textContent = document.getElementById('cPerk').value || 'Reserved table + welcome round';
   });
+});
+function fmtDate(v){
+  if (!v) return 'Friday';
+  var d = new Date(v + 'T00:00:00');
+  if (isNaN(d)) return v;
+  return d.toLocaleDateString(undefined, { weekday: 'long' });
+}
+document.getElementById('cDate').addEventListener('input', function(){
+  updatePreviewDate();
+});
+document.getElementById('cTime').addEventListener('input', function(){
+  updatePreviewDate();
+});
+function updatePreviewDate(){
+  var date = fmtDate(document.getElementById('cDate').value);
+  var time = document.getElementById('cTime').value || '20:30';
+  document.getElementById('previewCopy').querySelector('p').textContent = date + ' · ' + time;
+}
 
-  /* View 2: Campaign detail render */
-  function renderCampaign(){
-    document.getElementById('campVenue').textContent = currentCampaign.venue;
-    document.getElementById('campArea').textContent = currentCampaign.area + ', Barcelona';
-    document.getElementById('campSlot').textContent = currentCampaign.slot;
-    document.getElementById('campSize').textContent = currentCampaign.size + ' people';
-    document.getElementById('campPerk').textContent = currentCampaign.perk;
-    document.getElementById('campAvail').textContent = currentCampaign.avail;
-  }
+function launchCampaign(){
+  var target = document.getElementById('cTarget').value || '6';
+  var perk = document.getElementById('cPerk').value || 'Reserved table + welcome round';
+  var date = fmtDate(document.getElementById('cDate').value);
+  var time = document.getElementById('cTime').value || '20:30';
+  var list = document.getElementById('campaignsList');
+  var row = document.createElement('div');
+  row.className = 'list-item';
+  row.innerHTML = '<span>' + date + ' · ' + time + '</span><b>0/' + target + ' crews booked</b>';
+  list.insertBefore(row, list.firstChild);
+  toast('Campaign launched: ' + perk);
+  openVenueView('overview');
+}
+window.launchCampaign = launchCampaign;
 
-  /* View 3: crew size + invites */
-  var sizeOpts = Array.prototype.slice.call(document.querySelectorAll('.size-opt'));
-  sizeOpts.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      sizeOpts.forEach(function(b){ b.classList.remove('is-selected'); });
-      btn.classList.add('is-selected');
-      crewSize = parseInt(btn.dataset.crewSize, 10);
-    });
-  });
-  document.querySelectorAll('.invite-chip').forEach(function(chip){
-    if (chip.dataset.name === 'You (organiser)') return; /* organiser always in */
-    chip.addEventListener('click', function(){
-      var name = chip.dataset.name;
-      var idx = invited.indexOf(name);
-      if (idx === -1) { invited.push(name); chip.classList.add('is-invited'); }
-      else { invited.splice(idx, 1); chip.classList.remove('is-invited'); }
-    });
-  });
+/* ---------- Venue access form (mailto, no backend) ---------- */
+function submitVenueForm(e){
+  e.preventDefault();
+  var name = document.getElementById('vName').value.trim();
+  var email = document.getElementById('vEmail').value.trim();
+  var city = document.getElementById('vCity').value.trim();
+  var type = document.getElementById('vType').value;
+  var subject = encodeURIComponent('SocialPerks — venue access request');
+  var body = encodeURIComponent('Venue: ' + name + '\nEmail: ' + email + '\nCity: ' + city + '\nType: ' + type + '\n');
+  window.location.href = 'mailto:hello@socialperks.app?subject=' + subject + '&body=' + body;
+  toast("Opening your email client to send the request — we'll reach out personally.");
+  return false;
+}
+window.submitVenueForm = submitVenueForm;
 
-  /* View 4: confirmation + simulated check-in */
-  function personLabel(n){ return n === 1 ? 'person' : 'people'; }
+/* ---------- Waitlist form (mailto, no backend) ---------- */
+var chosenPlatform = null;
+function choosePlatform(name, btn){
+  chosenPlatform = name;
+  document.querySelectorAll('.store-row .store-btn').forEach(function(b){ b.classList.remove('is-chosen'); });
+  btn.classList.add('is-chosen');
+  toast(name + ' selected — add your email and hit notify me');
+}
+window.choosePlatform = choosePlatform;
 
-  function renderConfirmation(){
-    document.getElementById('confVenue').textContent = currentCampaign.venue;
-    document.getElementById('confSlot').textContent = currentCampaign.slot;
-    var n = Math.max(invited.length, 1);
-    document.getElementById('confCrew').textContent = n + ' ' + personLabel(n) + ' invited';
-    document.getElementById('confPerk').textContent = currentCampaign.perk;
-    checkedIn = 0;
-    renderCheckin();
-  }
-  function renderCheckin(){
-    var total = Math.max(invited.length, 1);
-    document.getElementById('confCheckinLabel').textContent = checkedIn + ' / ' + total + ' checked in';
-    var track = document.getElementById('checkinTrack');
-    track.innerHTML = '';
-    for (var i = 0; i < total; i++){
-      var bar = document.createElement('i');
-      if (i < checkedIn) bar.className = 'done';
-      track.appendChild(bar);
-    }
-  }
-  document.getElementById('simulateCheckin').addEventListener('click', function(){
-    var total = Math.max(invited.length, 1);
-    if (checkedIn < total) checkedIn++;
-    renderCheckin();
-  });
+function submitWaitlist(e){
+  e.preventDefault();
+  var email = document.getElementById('waitlistEmail').value.trim();
+  var platform = chosenPlatform ? chosenPlatform : 'iOS & Android';
+  var subject = encodeURIComponent('SocialPerks — launch waitlist');
+  var body = encodeURIComponent('Email: ' + email + '\nPlatform: ' + platform + '\n');
+  window.location.href = 'mailto:hello@socialperks.app?subject=' + subject + '&body=' + body;
+  toast("You're on the list for " + platform + " — opening your email to confirm.");
+  return false;
+}
+window.submitWaitlist = submitWaitlist;
 
-  /* View 5: venue/crew dashboard toggle */
-  var tabs = document.querySelectorAll('.tab');
-  var metrics = document.getElementById('metrics');
-  var venueHTML = metrics.innerHTML;
-  function renderCrewHTML(){
-    var n = Math.max(invited.length, 1);
-    return '<div class="metric"><span>Your crew</span><b>' + n + ' ' + personLabel(n) + '</b></div>' +
-      '<div class="metric"><span>Tonight\'s perk</span><b>' + currentCampaign.perk + '</b></div>' +
-      '<div class="metric"><span>Check-in</span><b>' + checkedIn + '/' + n + ' verified</b></div>' +
-      '<div class="metric"><span>Reward</span><b>+240 XP</b></div>';
-  }
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){
-      tabs.forEach(function(x){ x.classList.remove('active'); });
-      t.classList.add('active');
-      metrics.innerHTML = t.dataset.mode === 'crew' ? renderCrewHTML() : venueHTML;
-    });
-  });
+/* ---------- Toast ---------- */
+var toastTimer;
+function toast(msg){
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 2600);
+}
+window.toast = toast;
 
-  /* ---------- Early access form: Netlify AJAX submit with success/error states, mailto fallback ---------- */
-  var form = document.getElementById('earlyAccessForm');
-  var status = document.getElementById('formStatus');
-  var submitBtn = document.getElementById('submitBtn');
-
-  function encode(data) {
-    return Object.keys(data).map(function(key){
-      return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
-    }).join('&');
-  }
-
-  function showStatus(kind, message){
-    status.textContent = message;
-    status.className = 'form-status is-visible ' + kind;
-  }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    var formData = new FormData(form);
-    var payload = {};
-    formData.forEach(function(value, key){ payload[key] = value; });
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(payload)
-    }).then(function(response){
-      if (response.ok) {
-        showStatus('ok', "You're in — we'll reach out to " + payload.email + ' personally.');
-        form.reset();
-        submitBtn.textContent = 'Join the beta →';
-        submitBtn.disabled = false;
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    }).catch(function(){
-      /* Not hosted on Netlify (or offline) — fall back to a direct email so the action still completes */
-      var subject = encodeURIComponent('SocialPerks — early access request');
-      var body = encodeURIComponent(
-        'Name: ' + (payload.name || '') + '\n' +
-        'Email: ' + (payload.email || '') + '\n' +
-        'Role: ' + (payload.role || '') + '\n' +
-        'City: ' + (payload.city || '') + '\n'
-      );
-      window.location.href = 'mailto:hello@socialperks.app?subject=' + subject + '&body=' + body;
-      showStatus('err', "Couldn't submit directly here — opening your email client instead.");
-      submitBtn.textContent = 'Join the beta →';
-      submitBtn.disabled = false;
-    });
-  });
 })();
 </script>
 </body>
