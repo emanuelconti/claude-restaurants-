@@ -8,8 +8,15 @@
   :root {
     --ink: #0B0B0C;
     --paper: #FAFAF7;
+    --card: #FFFFFF;
     --lime: #C6F135;
+    --lime-dark: #AEDA1E;
     --muted: #6B6B70;
+    --border: #E7E7E2;
+    --error-bg: #FBEAE9;
+    --error-ink: #8C241C;
+    --radius: 12px;
+    --shadow: 0 1px 2px rgba(11,11,12,0.04), 0 8px 24px rgba(11,11,12,0.05);
   }
   * { box-sizing: border-box; }
   body {
@@ -17,53 +24,156 @@
     background: var(--paper);
     color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 2rem;
-    border-bottom: 1px solid #eee;
+    padding: 1.1rem 2rem;
+    border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
     gap: 0.75rem;
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
-  header a { color: var(--ink); text-decoration: none; font-weight: 600; }
-  .logo { font-size: 1.25rem; letter-spacing: -0.02em; }
-  .lang-switch { display: flex; gap: 0.5rem; align-items: center; }
+  header a { color: var(--ink); text-decoration: none; }
+  .logo {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .logo::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 3px;
+    background: var(--lime);
+    display: inline-block;
+  }
+  .lang-switch { display: flex; gap: 0.6rem; align-items: center; }
   .lang-switch a {
-    font-weight: 500;
-    font-size: 0.78rem;
+    font-weight: 600;
+    font-size: 0.75rem;
     color: var(--muted);
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.1rem;
+    border-bottom: 2px solid transparent;
   }
-  .lang-switch a.active { color: var(--ink); font-weight: 700; }
-  main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
-  h1 { font-size: 2rem; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-  p.lead { color: var(--muted); margin-bottom: 2rem; }
-  form { display: flex; flex-direction: column; gap: 0.75rem; max-width: 420px; }
+  .lang-switch a.active { color: var(--ink); border-color: var(--lime); }
+  nav { display: flex; align-items: center; gap: 1rem; font-size: 0.92rem; font-weight: 600; }
+  nav a:hover { color: var(--muted); }
+  .user-email { color: var(--muted); font-weight: 500; font-size: 0.88rem; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+  h1 { font-size: 2.1rem; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 0.6rem; }
+  h2 { font-size: 1.1rem; letter-spacing: -0.01em; margin: 0 0 1rem; }
+  p.lead { color: var(--muted); font-size: 1.05rem; line-height: 1.5; margin: 0 0 2rem; max-width: 46ch; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+  }
+
+  form { display: flex; flex-direction: column; gap: 0.85rem; max-width: 420px; }
+  form.inline-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+    align-items: stretch;
+  }
+  form.inline-form input { flex: 1 1 180px; }
+  form.inline-form select { flex: 0 0 auto; }
+
+  label { font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: -0.4rem; }
+
   input, select {
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font-size: 0.98rem;
+    background: var(--card);
+    color: var(--ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    font-family: inherit;
   }
+  input:focus, select:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(11,11,12,0.06);
+  }
+  input::placeholder { color: #A8A8AC; }
+
   button {
     background: var(--ink);
     color: var(--paper);
     border: none;
     padding: 0.85rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: 9px;
+    font-size: 0.98rem;
+    font-weight: 700;
     cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.05s ease;
   }
+  button:hover { opacity: 0.85; }
+  button:active { transform: scale(0.98); }
   button.lime { background: var(--lime); color: var(--ink); }
-  .error { color: #b3261e; margin-bottom: 1rem; }
-  table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
-  th, td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid #eee; }
-  .score { color: var(--ink); background: var(--lime); padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600; font-size: 0.8rem; }
-  a.plain { color: var(--muted); font-size: 0.9rem; }
+  button.lime:hover { background: var(--lime-dark); opacity: 1; }
+  button.ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+  button.ghost:hover { background: #F1F1EC; opacity: 1; }
+
+  .error {
+    color: var(--error-ink);
+    background: var(--error-bg);
+    border-radius: 9px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+  }
+
+  .table-wrap { overflow-x: auto; margin-top: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+  th {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    color: var(--muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+  }
+  td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #FBFBF8; }
+
+  .score {
+    color: var(--ink);
+    background: var(--lime);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  a.plain { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
+  a.plain:hover { color: var(--ink); text-decoration: underline; }
+  .hint { color: var(--muted); font-size: 0.82rem; margin-top: -0.25rem; }
+  .section-gap { margin-top: 2.75rem; }
 </style>
 </head>
 <body>
@@ -76,12 +186,12 @@
   </div>
   <nav>
     {% if user %}
-      <span style="color: var(--muted); margin-right: 1rem;">{{ user.email }}</span>
-      <form action="/logout" method="post" style="display:inline">
-        <button type="submit" style="padding: 0.4rem 0.9rem; font-size: 0.85rem;">{{ t('nav.logout') }}</button>
+      <span class="user-email">{{ user.email }}</span>
+      <form action="/logout" method="post" style="margin:0;">
+        <button type="submit" class="ghost" style="padding: 0.5rem 1rem; font-size: 0.85rem;">{{ t('nav.logout') }}</button>
       </form>
     {% else %}
-      <a href="/login" style="margin-right: 1rem;">{{ t('nav.login') }}</a>
+      <a href="/login">{{ t('nav.login') }}</a>
       <a href="/signup">{{ t('nav.signup') }}</a>
     {% endif %}
   </nav>
