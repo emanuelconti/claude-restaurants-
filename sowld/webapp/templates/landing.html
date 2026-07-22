@@ -1,12 +1,117 @@
 {% extends "base.html" %}
-{% block title %}Sowld{% endblock %}
+{% block title %}Sowld — {{ t('landing.title') }}{% endblock %}
+{% block body_class %}landing{% endblock %}
 {% block content %}
-<h1>{{ t('landing.title') }}</h1>
-<p class="lead">{{ t('landing.lead') }}</p>
-{% if user %}
-  <a href="/app"><button class="lime">{{ t('landing.cta_platform') }}</button></a>
-{% else %}
-  <a href="/signup"><button class="lime">{{ t('landing.cta_start') }}</button></a>
-{% endif %}
-{% endblock %}
 
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=2400&q=90');"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="eyebrow">{{ t('landing.eyebrow') }}</div>
+    <h1>{{ t('landing.title') }}</h1>
+    <p class="hero-sub">{{ t('landing.lead') }}</p>
+    <div class="hero-cta">
+      {% if user %}
+        <a href="/app"><button class="lime lg">{{ t('landing.cta_platform') }}</button></a>
+      {% else %}
+        <a href="/signup"><button class="lime lg">{{ t('landing.cta_start') }}</button></a>
+      {% endif %}
+      <a href="#come-funziona"><button class="ghost lg" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.3);">{{ t('landing.cta_how') }}</button></a>
+    </div>
+    <div class="hero-facts">
+      <span><strong>{{ t('landing.fact1_value') }}</strong>{{ t('landing.fact1_label') }}</span>
+      <span><strong>{{ t('landing.fact2_value') }}</strong>{{ t('landing.fact2_label') }}</span>
+      <span><strong>{{ t('landing.fact3_value') }}</strong>{{ t('landing.fact3_label') }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wide manifesto-grid">
+    <div class="manifesto-label">{{ t('landing.manifesto_label') }}</div>
+    <div class="reveal">
+      <h2>{{ t('landing.manifesto_title1') }}<br><span>{{ t('landing.manifesto_title2') }}</span></h2>
+      <p>{{ t('landing.manifesto_body') }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wide">
+    <div class="story-row reveal">
+      <div class="story-copy">
+        <small>{{ t('landing.story1_label') }}</small>
+        <h2>{{ t('landing.story1_title') }}</h2>
+        <p>{{ t('landing.story1_body') }}</p>
+      </div>
+      <div class="story-image" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=85');"></div>
+    </div>
+
+    <div class="story-row reverse reveal">
+      <div class="story-copy">
+        <small>{{ t('landing.story2_label') }}</small>
+        <h2>{{ t('landing.story2_title') }}</h2>
+        <p>{{ t('landing.story2_body') }}</p>
+      </div>
+      <div class="story-image" style="background-image:url('https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?auto=format&fit=crop&w=1600&q=85');"></div>
+    </div>
+  </div>
+</section>
+
+<section class="system" id="come-funziona">
+  <div class="wide">
+    <h2 class="system-title reveal">{{ t('landing.system_title1') }}<br>{{ t('landing.system_title2') }}</h2>
+    <div class="system-grid reveal">
+      <div class="system-item"><span>{{ t('landing.step1_kicker') }} · {{ t('landing.step1_title') }}</span><strong>{{ t('landing.step1_body') }}</strong></div>
+      <div class="system-item"><span>{{ t('landing.step2_kicker') }} · {{ t('landing.step2_title') }}</span><strong>{{ t('landing.step2_body') }}</strong></div>
+      <div class="system-item"><span>{{ t('landing.step3_kicker') }} · {{ t('landing.step3_title') }}</span><strong>{{ t('landing.step3_body') }}</strong></div>
+      <div class="system-item"><span>{{ t('landing.step4_kicker') }} · {{ t('landing.step4_title') }}</span><strong>{{ t('landing.step4_body') }}</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wide">
+    <div class="proof-head reveal">
+      <span>{{ t('landing.proof_label') }}</span>
+      <h2>{{ t('landing.proof_title1') }}<br>{{ t('landing.proof_title2') }}</h2>
+    </div>
+    <div class="proof-grid reveal">
+      <article>
+        <small>{{ t('landing.proof_col1_label') }}</small>
+        <strong>{{ t('landing.proof_col1_value') }}</strong>
+        <p>{{ t('landing.proof_col1_body') }}</p>
+      </article>
+      <article>
+        <small>{{ t('landing.proof_col2_label') }}</small>
+        <strong>{{ t('landing.proof_col2_value') }}</strong>
+        <p>{{ t('landing.proof_col2_body') }}</p>
+      </article>
+      <article class="proof-highlight">
+        <small>{{ t('landing.proof_col3_label') }}</small>
+        <strong>{{ t('landing.proof_col3_value') }}</strong>
+        <p>{{ t('landing.proof_col3_body') }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="launch">
+  <div class="wide">
+    <div class="launch-card reveal">
+      <h2>{{ t('landing.cta_title') }}</h2>
+      <p>{{ t('landing.cta_body') }}</p>
+      <div class="hero-cta">
+        {% if user %}
+          <a href="/app"><button class="lime lg">{{ t('landing.cta_platform') }}</button></a>
+        {% else %}
+          <a href="/signup"><button class="lime lg">{{ t('landing.cta_start') }}</button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="wide">Sowld — {{ t('landing.footer_tagline') }}</div></footer>
+{% endblock %}
