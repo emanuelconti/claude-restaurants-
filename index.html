@@ -421,12 +421,15 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
         <span class="eyebrow" style="color:var(--violet)">Request venue access</span>
         <h2 style="font-size:clamp(28px,3vw,40px);margin:14px 0 10px">Tell us about your venue.</h2>
         <p class="muted" style="max-width:560px;margin-bottom:10px">We'll reach out personally before the Barcelona pilot expands.</p>
-        <form class="form-grid" onsubmit="return submitVenueAccess(event)">
-          <div class="field"><label for="vName">Venue name</label><input id="vName" required placeholder="e.g. Casa Bonay"></div>
-          <div class="field"><label for="vEmail">Contact email</label><input id="vEmail" type="email" required placeholder="you@venue.com"></div>
-          <div class="field"><label for="vCity">City</label><input id="vCity" required value="Barcelona"></div>
-          <div class="field"><label for="vType">Venue type</label><select id="vType"><option>Restaurant</option><option>Bar</option><option>Café</option><option>Other</option></select></div>
-          <div class="field full"><button class="btn dark" style="width:100%" type="submit">Request venue access</button></div>
+        <form class="form-grid" name="venue-access" method="POST" data-netlify="true" netlify-honeypot="vBotField" onsubmit="return submitVenueAccess(event)">
+          <input type="hidden" name="form-name" value="venue-access">
+          <p style="position:absolute;left:-9999px"><label>Leave this empty: <input name="vBotField" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field"><label for="vName">Venue name</label><input id="vName" name="name" required placeholder="e.g. Casa Bonay"></div>
+          <div class="field"><label for="vEmail">Contact email</label><input id="vEmail" name="email" type="email" required placeholder="you@venue.com"></div>
+          <div class="field"><label for="vCity">City</label><input id="vCity" name="city" required value="Barcelona"></div>
+          <div class="field"><label for="vType">Venue type</label><select id="vType" name="type"><option>Restaurant</option><option>Bar</option><option>Café</option><option>Other</option></select></div>
+          <div class="field full"><button class="btn dark" style="width:100%" type="submit" id="vSubmitBtn">Request venue access</button></div>
+          <p class="muted" id="vFormStatus" style="grid-column:1/-1;font-size:13px;min-height:18px"></p>
         </form>
       </div>
     </section>
@@ -471,7 +474,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
           <button class="wait-tab active" type="button" data-type="customer" onclick="setWaitlistType('customer')">Customer</button>
           <button class="wait-tab" type="button" data-type="venue" onclick="setWaitlistType('venue')">Venue</button>
         </div>
-        <form id="waitlist-form" class="waitlist-form" novalidate>
+        <form id="waitlist-form" class="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="wlBotField" novalidate>
+          <input type="hidden" name="form-name" value="waitlist">
+          <p style="position:absolute;left:-9999px"><label>Leave this empty: <input name="wlBotField" tabindex="-1" autocomplete="off"></label></p>
           <label for="waitlist-email">Email address</label>
           <div class="waitlist-row">
             <input id="waitlist-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
@@ -526,16 +531,39 @@ function livePrev(){
   const e=document.getElementById('pv-exp'); if(e)e.textContent=document.getElementById('ce').value||'Your experience';
 }
 function launchCampaign(){localStorage.setItem('socialperks_campaign',new Date().toISOString());toast('Campaign published');openVenue('overview')}
-function submitVenueAccess(e){
+function encodeFormData(data){
+  return Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+}
+async function submitVenueAccess(e){
   e.preventDefault();
   const name=document.getElementById('vName').value.trim();
   const email=document.getElementById('vEmail').value.trim();
   const city=document.getElementById('vCity').value.trim();
   const type=document.getElementById('vType').value;
-  const subject=encodeURIComponent('SocialPerks — venue access request');
-  const body=encodeURIComponent('Venue: '+name+'\nEmail: '+email+'\nCity: '+city+'\nType: '+type+'\n');
-  window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
-  toast("Opening your email client — we'll reach out personally.");
+  const statusEl=document.getElementById('vFormStatus');
+  const btn=document.getElementById('vSubmitBtn');
+  const prevLabel=btn.textContent;
+  btn.disabled=true;btn.textContent='Sending…';
+  try{
+    const response=await fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:encodeFormData({'form-name':'venue-access',name,email,city,type})
+    });
+    if(!response.ok) throw new Error('Netlify Forms returned '+response.status);
+    statusEl.textContent="Sent — we'll reach out personally.";
+    statusEl.style.color='var(--violet)';
+    toast('Venue access request sent');
+    e.target.reset();
+  }catch(error){
+    console.error(error);
+    const subject=encodeURIComponent('SocialPerks — venue access request');
+    const body=encodeURIComponent('Venue: '+name+'\nEmail: '+email+'\nCity: '+city+'\nType: '+type+'\n');
+    window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
+    statusEl.textContent="Couldn't send directly — opening your email client instead.";
+    statusEl.style.color='#c0392b';
+  }
+  btn.disabled=false;btn.textContent=prevLabel;
   return false;
 }
 function copyInvite(){
@@ -552,7 +580,6 @@ function observe(){
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 }
 
-const WAITLIST_ENDPOINT = "";
 function setWaitlistType(type){
   document.getElementById('waitlist-type').value=type;
   document.querySelectorAll('.wait-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.type===type));
@@ -577,29 +604,30 @@ async function submitWaitlist(event){
     local.push(payload);
     localStorage.setItem('socialperks_waitlist',JSON.stringify(local));
   }
-  const subject=encodeURIComponent('SocialPerks — waitlist signup ('+type+')');
-  const body=encodeURIComponent('Email: '+email+'\nType: '+type+'\n');
+  const submitBtn=form.querySelector('button[type="submit"]');
+  const prevLabel=submitBtn?submitBtn.textContent:'';
+  if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='Sending…';}
   try{
-    if(WAITLIST_ENDPOINT){
-      const response=await fetch(WAITLIST_ENDPOINT,{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(payload)
-      });
-      if(!response.ok) throw new Error('Signup endpoint returned '+response.status);
-      status.textContent='You are on the list. We will contact you at '+email+'.';
-    }else{
-      window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
-      status.textContent='Opening your email client to confirm — saved locally too.';
-    }
+    const response=await fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:encodeFormData({'form-name':'waitlist',email,type})
+    });
+    if(!response.ok) throw new Error('Netlify Forms returned '+response.status);
+    status.textContent='You are on the list. We will contact you at '+email+'.';
     status.classList.add('success');
+    toast('Added to waitlist');
     form.reset();
     setWaitlistType(type);
   }catch(error){
-    status.textContent='The signup could not be sent. Please try again.';
-    status.classList.add('error');
     console.error(error);
+    const subject=encodeURIComponent('SocialPerks — waitlist signup ('+type+')');
+    const body=encodeURIComponent('Email: '+email+'\nType: '+type+'\n');
+    window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
+    status.textContent="Couldn't send directly — opening your email client instead.";
+    status.classList.add('error');
   }
+  if(submitBtn){submitBtn.disabled=false;submitBtn.textContent=prevLabel;}
 }
 document.getElementById('waitlist-form').addEventListener('submit',submitWaitlist);
 
