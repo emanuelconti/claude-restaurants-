@@ -534,7 +534,7 @@ function submitVenueAccess(e){
   const type=document.getElementById('vType').value;
   const subject=encodeURIComponent('SocialPerks — venue access request');
   const body=encodeURIComponent('Venue: '+name+'\nEmail: '+email+'\nCity: '+city+'\nType: '+type+'\n');
-  window.location.href='mailto:hello@socialperks.app?subject='+subject+'&body='+body;
+  window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
   toast("Opening your email client — we'll reach out personally.");
   return false;
 }
@@ -589,7 +589,7 @@ async function submitWaitlist(event){
       if(!response.ok) throw new Error('Signup endpoint returned '+response.status);
       status.textContent='You are on the list. We will contact you at '+email+'.';
     }else{
-      window.location.href='mailto:hello@socialperks.app?subject='+subject+'&body='+body;
+      window.location.href='mailto:socialperks.team@gmail.com?subject='+subject+'&body='+body;
       status.textContent='Opening your email client to confirm — saved locally too.';
     }
     status.classList.add('success');
