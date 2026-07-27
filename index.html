@@ -612,6 +612,7 @@ h1,h2,h3,h4,p,strong,span,label,button{overflow-wrap:break-word}
 </div>
 </div>
 </div>
+<div class="campaign-grid" id="home-campaign-grid" style="margin-top:22px"></div>
 </div>
 </section>
 
@@ -1337,7 +1338,7 @@ function selectCampaign(type,index){
   currentPeopleBusiness=type;
   currentCampaignIndex=index;
   showPage('people');
-  openPeople('campaigns');
+  openPeople('discover');
   setPeopleBusiness(type,index);
   setTimeout(()=>document.getElementById('people-demo').scrollIntoView({behavior:'smooth',block:'start'}),120);
 }
