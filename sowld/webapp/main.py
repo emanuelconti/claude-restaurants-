@@ -13,7 +13,7 @@ from pathlib import Path
 
 import stripe
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
@@ -26,7 +26,15 @@ from .auth import get_current_user
 from .auth import login as start_session
 from .auth import logout as end_session
 from .billing import create_billing_portal_session, create_checkout_session, is_configured
-from .db import SessionLocal, User, hash_password, init_db, try_consume_search, verify_password
+from .db import (
+    EarlyAccessSignup,
+    SessionLocal,
+    User,
+    hash_password,
+    init_db,
+    try_consume_search,
+    verify_password,
+)
 from .i18n import LANGUAGES, get_translator, resolve_language
 
 app = FastAPI(title="Sowld")
@@ -61,6 +69,43 @@ def landing(request: Request):
         "landing.html",
         {**_base_context(request), "user": get_current_user(request)},
     )
+
+
+@app.post("/api/early-access")
+async def early_access_signup(request: Request):
+    """Store a pre-launch waitlist application from the landing page.
+
+    Market-validation data only (email, country, category, buying habits) —
+    no account is created and nothing is charged. Called via fetch() from
+    landing.html's waitlist form.
+    """
+    try:
+        payload = await request.json()
+    except ValueError:
+        return JSONResponse({"detail": "invalid JSON body"}, status_code=400)
+
+    email = str(payload.get("email") or "").strip()
+    country = str(payload.get("country") or "").strip()
+    category = str(payload.get("category") or "").strip()
+    if not email or "@" not in email or not country or not category:
+        return JSONResponse({"detail": "email, country and category are required"}, status_code=400)
+
+    db = SessionLocal()
+    try:
+        db.add(
+            EarlyAccessSignup(
+                email=email,
+                country=country,
+                category=category,
+                frequency=str(payload.get("frequency") or "").strip() or None,
+                selected_profile=str(payload.get("selected-profile") or "").strip() or None,
+                day_one_trigger=str(payload.get("day-one-trigger") or "").strip() or None,
+            )
+        )
+        db.commit()
+    finally:
+        db.close()
+    return {"ok": True}
 
 
 @app.get("/signup", response_class=HTMLResponse)
