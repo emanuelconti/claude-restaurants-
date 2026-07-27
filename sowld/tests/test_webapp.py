@@ -16,7 +16,14 @@ from unittest.mock import patch
 import pytest
 from fastapi.testclient import TestClient
 
-from webapp.db import MONTHLY_SEARCH_LIMIT, SessionLocal, User, hash_password, try_consume_search
+from webapp.db import (
+    MONTHLY_SEARCH_LIMIT,
+    EarlyAccessSignup,
+    SessionLocal,
+    User,
+    hash_password,
+    try_consume_search,
+)
 from webapp.main import app
 
 
@@ -157,3 +164,61 @@ def test_try_consume_search_counts_are_per_user():
         try_consume_search(user_a)
     assert try_consume_search(user_a) is False
     assert try_consume_search(user_b) is True
+
+
+def test_early_access_signup_stores_application(client):
+    resp = client.post(
+        "/api/early-access",
+        json={
+            "email": "waitlist1@example.com",
+            "country": "Italy",
+            "category": "bikes",
+            "frequency": "monthly",
+            "selected-profile": "pro",
+            "day-one-trigger": "Finding a road bike under budget",
+            "consent": "on",
+        },
+    )
+    assert resp.status_code == 200
+    assert resp.json() == {"ok": True}
+
+    db = SessionLocal()
+    try:
+        saved = (
+            db.query(EarlyAccessSignup)
+            .filter(EarlyAccessSignup.email == "waitlist1@example.com")
+            .one()
+        )
+        assert saved.country == "Italy"
+        assert saved.category == "bikes"
+        assert saved.selected_profile == "pro"
+    finally:
+        db.close()
+
+
+def test_early_access_signup_rejects_missing_required_fields(client):
+    resp = client.post(
+        "/api/early-access",
+        json={"email": "incomplete@example.com", "country": "", "category": ""},
+    )
+    assert resp.status_code == 400
+
+    db = SessionLocal()
+    try:
+        assert (
+            db.query(EarlyAccessSignup)
+            .filter(EarlyAccessSignup.email == "incomplete@example.com")
+            .first()
+            is None
+        )
+    finally:
+        db.close()
+
+
+def test_early_access_signup_rejects_invalid_json(client):
+    resp = client.post(
+        "/api/early-access",
+        content=b"not json",
+        headers={"Content-Type": "application/json"},
+    )
+    assert resp.status_code == 400

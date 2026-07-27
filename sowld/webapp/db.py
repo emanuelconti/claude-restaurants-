@@ -55,6 +55,26 @@ class User(Base):
         return self.subscription_status == "active"
 
 
+class EarlyAccessSignup(Base):
+    """A waitlist application submitted from the pre-launch landing page.
+
+    No account, password or payment involved — this is market-validation
+    data (country, category, buying habits) collected before the product
+    or its data sources are actually built.
+    """
+
+    __tablename__ = "early_access_signups"
+
+    id = Column(Integer, primary_key=True)
+    email = Column(String, nullable=False, index=True)
+    country = Column(String, nullable=False)
+    category = Column(String, nullable=False)
+    frequency = Column(String, nullable=True)
+    selected_profile = Column(String, nullable=True)
+    day_one_trigger = Column(String, nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+
 def init_db() -> None:
     Base.metadata.create_all(engine)
 
