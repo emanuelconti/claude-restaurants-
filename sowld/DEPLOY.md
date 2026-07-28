@@ -128,8 +128,8 @@ salva già la richiesta nel database. Per ricevere anche una mail a
    mostra una password di 16 caratteri: copiala, la vedrai una sola volta.
 3. Su Render, nel servizio `sowld` → Environment Variables, aggiungi:
    ```
-   SMTP_USER = sowld.team@gmail.com
-   SMTP_PASSWORD = (i 16 caratteri dal passo precedente, senza spazi)
+   GMAIL_USER = sowld.team@gmail.com
+   GMAIL_APP_PASSWORD = (i 16 caratteri dal passo precedente, senza spazi)
    ```
 4. Salva — Render fa un nuovo deploy automatico. Da questo momento ogni
    iscrizione alla waitlist manda una mail a sowld.team@gmail.com.
