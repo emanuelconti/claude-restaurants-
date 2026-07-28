@@ -36,6 +36,7 @@ from .db import (
     verify_password,
 )
 from .i18n import LANGUAGES, get_translator, resolve_language
+from .notify import notify_new_signup
 
 app = FastAPI(title="Sowld")
 app.add_middleware(
@@ -105,6 +106,7 @@ async def early_access_signup(request: Request):
         db.commit()
     finally:
         db.close()
+    notify_new_signup(email, country, category)
     return {"ok": True}
 
 

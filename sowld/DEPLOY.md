@@ -113,6 +113,31 @@ piano a pagamento (da ~7$/mese) — quando sarai pronto ad avere clienti
 veri che pagano, questo costo fisso mensile va messo in conto insieme
 agli altri.
 
+## Passo 7 — Notifica email per ogni nuova iscrizione alla waitlist
+
+Quando qualcuno compila il form "Unisciti alla lista d'attesa", il sito
+salva già la richiesta nel database. Per ricevere anche una mail a
+**sowld.team@gmail.com** ogni volta che succede:
+
+1. Sull'account Google di `sowld.team@gmail.com`, attiva la **verifica in
+   due passaggi** (myaccount.google.com → Sicurezza → Verifica in due
+   passaggi) — è un requisito di Google per il passo successivo, non
+   opzionale.
+2. Vai su **myaccount.google.com/apppasswords**, crea una nuova "App
+   password" (dai un nome qualsiasi, es. "Sowld notifiche"). Google ti
+   mostra una password di 16 caratteri: copiala, la vedrai una sola volta.
+3. Su Render, nel servizio `sowld` → Environment Variables, aggiungi:
+   ```
+   SMTP_USER = sowld.team@gmail.com
+   SMTP_PASSWORD = (i 16 caratteri dal passo precedente, senza spazi)
+   ```
+4. Salva — Render fa un nuovo deploy automatico. Da questo momento ogni
+   iscrizione alla waitlist manda una mail a sowld.team@gmail.com.
+
+Se non configuri queste due variabili, il sito continua a funzionare
+normalmente: le iscrizioni vengono comunque salvate, semplicemente non
+arriva la notifica via mail.
+
 ## Il link per Framer
 
 Una volta online, l'URL da inserire nel sito Framer (Part A) come pulsante

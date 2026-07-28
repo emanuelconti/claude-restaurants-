@@ -215,6 +215,16 @@ def test_early_access_signup_rejects_missing_required_fields(client):
         db.close()
 
 
+def test_early_access_signup_triggers_notification(client):
+    with patch("webapp.main.notify_new_signup") as mock_notify:
+        resp = client.post(
+            "/api/early-access",
+            json={"email": "notify-me@example.com", "country": "France", "category": "photo"},
+        )
+    assert resp.status_code == 200
+    mock_notify.assert_called_once_with("notify-me@example.com", "France", "photo")
+
+
 def test_early_access_signup_rejects_invalid_json(client):
     resp = client.post(
         "/api/early-access",
