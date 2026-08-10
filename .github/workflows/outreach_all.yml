@@ -27,12 +27,12 @@ jobs:
 
       - name: Esegui outreach ristoranti (tutte le città)
         env:
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD || 'ublm ewaw eoiy biet' }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python3 outreach_multi.py run --all
 
       - name: Esegui outreach tattoo studios (tutte le città)
         env:
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD || 'ublm ewaw eoiy biet' }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python3 outreach_tattoo.py run --all
 
       - name: Salva stato tracking (tutti i DB)
