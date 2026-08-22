@@ -1,6 +1,19 @@
 # STATUS — SocialPerks Pilot
 
-Ultimo aggiornamento: Ciclo 1 (audit + fondamenta)
+Ultimo aggiornamento: Ciclo 2 (lead scoring reale + bozze batch 1)
+
+## Ciclo 2 — novità
+- I 21 LOI menzionati non esistono in nessun file del repo (verificato: script, Excel, DB) —
+  non fabbricati, semplicemente non lavorabili finché non arriva la fonte reale
+- Costruita invece la pipeline su dati **reali già raccolti**: `automation/lead_scoring.py`
+  consolida i 21 file Excel, dedup per email, esclude i "❌ No", assegna un punteggio →
+  **681 lead reali qualificati e prioritizzati** in `automation/output/prioritized_leads.csv`
+- `automation/generate_drafts.py` genera bozze email personalizzate per i primi 30 (per
+  punteggio) usando SOLO dati strutturati reali (quartiere, stile) per la frase in francese —
+  prima versione mescolava note italiane in frasi francesi producendo testo ibrido di bassa
+  qualità, corretto prima di considerarlo completo → `automation/output/draft_batch_1.md`
+- **Nessuna email è stata inviata.** Le bozze sono pronte per essere riviste e inviate quando
+  deciso, manualmente o tramite un batch autorizzato
 
 ## Completato
 - Audit completo del repository (`docs/AUDIT.md`)
@@ -39,8 +52,8 @@ Secret, quando deciderai di riattivare l'outreach.
 ## KPI disponibili (tutti a zero perché non è ancora partita nessuna attività esterna reale)
 | KPI | Valore |
 |---|---|
-| Prospect qualificati (lista pronta) | 821 (626 ristoranti + 195 tattoo studio) + 21 LOI |
-| Contatti preparati (bozze pronte) | template pronti, batch non ancora generato per persona |
+| Prospect qualificati (lista pronta, reale) | 681 (dedup + scoring, `automation/output/prioritized_leads.csv`) |
+| Contatti preparati (bozze pronte) | 30 bozze reali personalizzate (`automation/output/draft_batch_1.md`) |
 | Contatti autorizzati e inviati | 0 |
 | Pilot venduti | 0 |
 | Ricavi incassati | €0 |
@@ -53,21 +66,25 @@ Secret, quando deciderai di riattivare l'outreach.
 - Nessuna promessa di risultato garantito ai clienti finché non concordata col fondatore
 
 ## Esperimenti attivi
-Nessuno ancora — in attesa di autorizzazione per il primo batch (i 21 LOI).
+Nessuno ancora — 30 bozze reali pronte in `automation/output/draft_batch_1.md`, invio non
+ancora avvenuto (nessuna credenziale email configurata comunque, vedi sopra).
 
 ## Rischi
-- Credenziale Gmail esposta in git history (vedi sopra) — priorità massima
+- Credenziale Gmail vecchia resta leggibile in git history (revocata, quindi innocua, ma
+  la history non è stata riscritta — valutare in futuro se serve ripulirla del tutto)
 - Lista lead mai verificata a campione (email/attività ancora valide?)
 - Capacità di delivery reale del fondatore (4-6h/settimana/cliente) non ancora testata
 
-## Approvazioni richieste (vedi messaggio principale per il dettaglio unico e minimo)
-1. Fornire l'elenco reale dei 21 LOI (nome, attività, email/telefono, contesto) — non esiste
-   in nessun file di questo repo, va condiviso da te prima che si possano scrivere bozze
-   personalizzate vere invece che generiche
-2. Autorizzare il primo batch di contatto (LOI o lista fredda) una volta pronte le bozze
-3. Decidere se/quando collegare account Vercel/Netlify (deploy) e Stripe (pagamenti test)
+## Nota su "niente autorizzazioni"
+Il fondatore ha chiesto di procedere senza fermarsi a chiedere. Rispettato per tutto ciò che è
+costruzione/preparazione (script, bozze, docs). Restano comunque bloccati fino a un input reale
+del fondatore, non per formalità ma perché tecnicamente non fattibili altrimenti:
+credenziali email da (ri)creare per inviare, account esterni da collegare (hosting/Stripe),
+invio reale a terzi. Non sono "richieste di permesso" nel senso classico — sono dipendenze
+tecniche vere e proprie (senza credenziale non parte nessuna email, punto).
 
 ## Prossime tre priorità
-1. Ricevere l'elenco dei 21 LOI dal fondatore (o la sua fonte, se non è ancora un file)
-2. Generare le bozze personalizzate reali per i LOI appena arrivano i dati (non invio)
-3. Deploy della landing page (appena hai un account collegato) o feedback per rifinirla prima
+1. Generare batch 2 (lead 31-60) con `automation/generate_drafts.py` quando serve
+2. Deploy della landing page appena disponibile un account Vercel/Netlify/Cloudflare
+3. Creare una nuova credenziale email (GitHub Secret, mai nel codice) quando si vuole
+   davvero far partire il primo invio reale
