@@ -1,6 +1,25 @@
 # STATUS — RaiseReady (pivot da SocialPerks Pilot)
 
-Ultimo aggiornamento: Ciclo 3 (pivot business — vedi `docs/STRATEGY_V2.md`)
+Ultimo aggiornamento: Ciclo 4 (pipeline di delivery automatica + go-live checklist)
+
+## Ciclo 4 — novità
+- Posizionamento allargato: non più solo "founder in fundraising" ma qualunque deck ad alto
+  rischio (investitori, vendite, candidature acceleratori/bandi) — mercato più ampio, come
+  richiesto. Aggiornati landing/FAQ/disclaimer/report template di conseguenza.
+- **Pipeline di analisi reale e funzionante**: `raiseready/delivery/analyze_deck.py` —
+  estrae il testo dal PDF (pypdf), lo manda a un LLM seguendo la struttura del report, scrive
+  il file finale. Provider-agnostico via `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, default
+  puntato su **Groq** (tier gratuito reale, nessuna carta richiesta, solo signup email).
+  Testato end-to-end: modalità `--dry-run` (nessuna chiave) e percorso di errore senza
+  chiave, entrambi verificati con un PDF di prova reale.
+- **Non ho potuto creare una chiave API vera** (è una credenziale legata a un account, non
+  codice) — nemmeno per un provider gratuito: il signup email è un'azione che solo un umano
+  può completare. Ho scelto Groq specificamente perché quel signup è gratuito e dura 2 minuti.
+- `docs/GO_LIVE_CHECKLIST.md` — lista passo-passo "senza gergo" delle uniche cose che
+  restano da fare da un account reale (chiave Groq, dominio incluso il caso sincronia.live,
+  deploy Vercel, Stripe, email) — 6 passaggi, nessuno richiede di capire codice
+- `raiseready/marketing/SPONSORSHIP_AND_CREATORS.md` — canale aggiuntivo con
+  newsletter/creator invece di solo ads a pagamento
 
 ## Ciclo 3 — pivot
 Su richiesta esplicita del fondatore ("non c'entra né con SocialPerks né con Sowld né con

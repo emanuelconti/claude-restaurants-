@@ -25,10 +25,12 @@ Cosa funziona, cosa rischia di far perdere l'attenzione dell'investitore nei pri
 - [ ] Competitor slide che minimizza concorrenti reali
 - [ ] Metriche di traction senza contesto (numeri assoluti senza trend)
 
-## 4. Modello finanziario (solo tier Deck + Model)
-- Le assunzioni di crescita sono giustificate o arbitrarie?
-- L'unit economics regge (CAC, margine, payback)?
-- Ci sono incoerenze tra deck e numeri del modello?
+## 4. Numeri (solo tier Deck + Numbers, se applicabile: modello finanziario, budget,
+   proiezioni di vendita, previsioni di impatto)
+- Le assunzioni sono giustificate o arbitrarie?
+- I numeri chiave reggono (unit economics, CAC/margine/payback se investor deck; costi/ricavi
+  attesi se sales o grant deck)?
+- Ci sono incoerenze tra il deck e i numeri forniti?
 
 ## 5. Prossimi 3 passi consigliati
 In ordine di priorità, cosa sistemare prima del prossimo investor meeting.
