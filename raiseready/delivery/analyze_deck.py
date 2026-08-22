@@ -35,7 +35,11 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 log = logging.getLogger("analyze_deck")
 
 DEFAULT_BASE_URL = "https://api.groq.com/openai/v1"  # provider free-tier di default
-DEFAULT_MODEL = "llama-3.3-70b-versatile"             # modello gratuito su Groq
+DEFAULT_MODEL = "openai/gpt-oss-120b"                 # modello gratuito su Groq (verificato
+                                                       # live via /v1/models il 2026-08-22 —
+                                                       # Groq cambia il catalogo modelli nel
+                                                       # tempo, se dà 404 rilanciare con
+                                                       # LLM_MODEL=<altro id da /v1/models>)
 
 REPORT_TEMPLATE_PATH = Path(__file__).resolve().parent / "REPORT_TEMPLATE.md"
 
@@ -114,7 +118,14 @@ def call_llm(user_prompt: str) -> str:
             temperature=0.3,
         )
     except Exception as e:
-        log.error("Chiamata al modello fallita: %s", e)
+        log.error(
+            "Chiamata al modello fallita: %s\n"
+            "  Se l'errore parla di modello non trovato, i provider free-tier cambiano "
+            "spesso il catalogo — controlla i modelli disponibili ORA con:\n"
+            "  curl https://api.groq.com/openai/v1/models -H \"Authorization: Bearer $LLM_API_KEY\"\n"
+            "  e imposta LLM_MODEL=<id valido> prima di rilanciare.",
+            e,
+        )
         sys.exit(1)
 
     return resp.choices[0].message.content
