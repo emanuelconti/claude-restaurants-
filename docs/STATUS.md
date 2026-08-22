@@ -1,8 +1,37 @@
-# STATUS — SocialPerks Pilot
+# STATUS — RaiseReady (pivot da SocialPerks Pilot)
 
-Ultimo aggiornamento: Ciclo 2 (lead scoring reale + bozze batch 1)
+Ultimo aggiornamento: Ciclo 3 (pivot business — vedi `docs/STRATEGY_V2.md`)
 
-## Ciclo 2 — novità
+## Ciclo 3 — pivot
+Su richiesta esplicita del fondatore ("non c'entra né con SocialPerks né con Sowld né con
+quell'ecommerce"), il business primario cambia da SocialPerks Pilot a **RaiseReady**: deck
+review self-serve per founder in fundraising, zero coinvolgimento del fondatore in
+vendita/delivery (era il vincolo esplicito). Dettagli in `docs/STRATEGY_V2.md`.
+
+Costruito in questo ciclo, tutto verificato (HTML valido, screenshot desktop/mobile):
+- `raiseready/landing/index.html` — landing self-serve, dark theme, pricing €149/€349,
+  disclaimer "non è consulenza di investimento" ben visibile (necessario: territorio
+  finanziario regolamentato se non dichiarato chiaramente)
+- `raiseready/marketing/AD_COPY.md` — Google/Meta/LinkedIn ads pronti da incollare
+  (nessun account ads collegato, nessuna spesa avviata)
+- `raiseready/marketing/COMMUNITY_POSTS.md` — post pronti per Indie Hackers/Product
+  Hunt/r/startups, canale compatibile con "zero outreach 1:1"
+- `raiseready/marketing/DOMAIN_SHORTLIST.md` — 5 nomi dominio verificabili, nessuna
+  registrazione fatta (serve carta di pagamento reale)
+- `raiseready/marketing/promo-animation.html` + `VIDEO_SCRIPT.md` — promo animata
+  autoportante (nessun ffmpeg/TTS disponibile in questo ambiente per generare un .mp4
+  direttamente; la pagina è registrabile con qualsiasi screen recorder in 1 minuto)
+- `raiseready/delivery/README.md` + `REPORT_TEMPLATE.md` — pagamento (riusa scaffold
+  Stripe già in `payments/`) e struttura fissa del report da consegnare
+
+**Vincolo reale non aggirabile, dichiarato una volta sola:** dominio, ads a pagamento e
+Stripe live richiedono un metodo di pagamento reale che non ho — non li ho costruiti fingendo
+di poterli attivare. Tutto il resto è pronto.
+
+Gli asset SocialPerks (Ciclo 1-2) restano nel repo, non cancellati, semplicemente non più il
+focus primario — vedi sotto per lo storico.
+
+## Ciclo 2 — novità (storico SocialPerks, non più il business primario)
 - I 21 LOI menzionati non esistono in nessun file del repo (verificato: script, Excel, DB) —
   non fabbricati, semplicemente non lavorabili finché non arriva la fonte reale
 - Costruita invece la pipeline su dati **reali già raccolti**: `automation/lead_scoring.py`
