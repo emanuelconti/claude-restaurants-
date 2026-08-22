@@ -16,10 +16,14 @@ Ultimo aggiornamento: Ciclo 1 (audit + fondamenta)
   nessuna chiave configurata, nessun account collegato (`payments/`)
 - Piano 30 giorni con economics realistiche del target €1M (`docs/30_DAY_EXECUTION_PLAN.md`)
 
-## 🔴 Trovato e parzialmente risolto: credenziale esposta
-App Password Gmail reale era hardcoded in `outreach_tattoo.py` e
-`.github/workflows/outreach_all.yml` — rimossa dal codice ora. **Resta nella cronologia git**
-e **richiede revoca manuale da parte tua** su Google. Vedi `docs/AUDIT.md`.
+## ✅ Risolto: credenziale esposta
+App Password Gmail (nome "claude" nel tuo account, creata 26 giu — combacia con le date dei
+commit dell'automazione outreach) era hardcoded in `outreach_tattoo.py` e
+`.github/workflows/outreach_all.yml` — rimossa dal codice **e revocata su Google dal
+fondatore**. Resta comunque leggibile nella cronologia git (nessuna riscrittura history
+fatta finora, richiederebbe force-push esplicitamente autorizzato). Nessuna nuova credenziale
+è stata generata: l'invio email resta bloccato finché non ne crei una nuova come GitHub
+Secret, quando deciderai di riattivare l'outreach.
 
 ## Cosa funziona
 - La landing page apre e naviga correttamente (verificata via lettura/struttura HTML; da
@@ -57,11 +61,13 @@ Nessuno ancora — in attesa di autorizzazione per il primo batch (i 21 LOI).
 - Capacità di delivery reale del fondatore (4-6h/settimana/cliente) non ancora testata
 
 ## Approvazioni richieste (vedi messaggio principale per il dettaglio unico e minimo)
-1. Revocare la App Password Gmail esposta
-2. Autorizzare il primo batch di contatto verso i 21 LOI (bozze pronte in `sales/`)
+1. Fornire l'elenco reale dei 21 LOI (nome, attività, email/telefono, contesto) — non esiste
+   in nessun file di questo repo, va condiviso da te prima che si possano scrivere bozze
+   personalizzate vere invece che generiche
+2. Autorizzare il primo batch di contatto (LOI o lista fredda) una volta pronte le bozze
 3. Decidere se/quando collegare account Vercel/Netlify (deploy) e Stripe (pagamenti test)
 
 ## Prossime tre priorità
-1. Ricevere conferma che la credenziale è stata revocata
-2. Generare le 21 bozze personalizzate per i LOI (pronte per tua revisione, non invio)
+1. Ricevere l'elenco dei 21 LOI dal fondatore (o la sua fonte, se non è ancora un file)
+2. Generare le bozze personalizzate reali per i LOI appena arrivano i dati (non invio)
 3. Deploy della landing page (appena hai un account collegato) o feedback per rifinirla prima
