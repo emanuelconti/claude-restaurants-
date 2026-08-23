@@ -1,8 +1,8 @@
-# Norvia (norvia)
+# Fendria (fendria)
 
-Business primario attuale (dopo 2 pivot: SocialPerks Pilot → RaiseReady → Norvia).
+Business primario attuale (dopo 2 pivot: SocialPerks Pilot → RaiseReady → Fendria).
 Motivo del pivot finale: RaiseReady vendeva "un PDF scritto dall'AI" — mercato debole,
-nessuno paga per qualcosa che può ottenere gratis da un chatbot. Norvia vende accesso a
+nessuno paga per qualcosa che può ottenere gratis da un chatbot. Fendria vende accesso a
 informazione reale e verificata (bandi/finanziamenti pubblici) + giudizio esperto sulla
 candidatura — mercato consolidato, la gente paga consulenti per questo da sempre.
 
@@ -22,7 +22,7 @@ candidatura — mercato consolidato, la gente paga consulenti per questo da semp
 - Landing verificata: HTML valido, screenshot desktop/mobile
 
 ## Cosa manca prima di andare live
-Stesso schema di RaiseReady: dominio, deploy (Vercel, root directory `norvia/landing`),
+Stesso schema di RaiseReady: dominio, deploy (Vercel, root directory `fendria/landing`),
 Stripe (Payment Link €149 e €349), chiave LLM (già fornita e testata per RaiseReady, stessa
 può essere riusata qui — stesso meccanismo `LLM_API_KEY`).
 
