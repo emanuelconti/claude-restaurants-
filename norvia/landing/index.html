@@ -35,7 +35,21 @@
   .hero{padding:56px 0 36px;text-align:center}
   .kicker{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
     color:var(--accent);background:rgba(47,158,110,.14);padding:6px 12px;border-radius:999px;margin-bottom:20px}
-  h1{font-size:clamp(1.9rem,4.6vw,2.85rem);line-height:1.14;letter-spacing:-.02em;margin:0 auto 18px;max-width:780px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(1.9rem,4.6vw,2.85rem);line-height:1.14;letter-spacing:-.01em;margin:0 auto 18px;max-width:780px}
+  h2{font-family:Georgia,"Times New Roman",serif}
+  .compare{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .compare-head{display:grid;grid-template-columns:1fr 1fr}
+  .compare-head div{padding:14px 18px;font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:8px}
+  .compare-head .col-old{color:var(--ink-soft);border-bottom:2px solid var(--line)}
+  .compare-head .col-new{color:var(--accent);border-bottom:2px solid var(--accent)}
+  .compare-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+  .compare-row > div{padding:18px}
+  .compare-row .col-old{color:var(--ink-soft)}
+  .compare-row .col-old strong{display:block;color:var(--ink);font-weight:700;margin-bottom:4px}
+  .compare-row .col-new{background:rgba(47,158,110,.05)}
+  .compare-row .col-new strong{display:block;color:var(--accent);font-weight:700;margin-bottom:4px}
+  .compare-row p{margin:0;font-size:.9rem;line-height:1.5}
+  @media(max-width:640px){.compare-head div{font-size:.82rem;padding:10px 12px}.compare-row{grid-template-columns:1fr}.compare-row .col-old{border-bottom:1px solid var(--line)}.compare-row > div{padding:14px}}
   .lede{font-size:1.1rem;color:var(--ink-soft);max-width:620px;margin:0 auto 28px}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:18px}
   .fineprint{font-size:.82rem;color:var(--ink-soft)}
@@ -124,6 +138,35 @@
             francese intermedio. Ogni report viene controllato a mano prima di arrivarti,
             non e' un output AI grezzo e non rivisto.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <h2 data-i18n="compare_title">Cercare da soli, o con Norvia.</h2>
+      <p class="section-lede" data-i18n="compare_lede">La differenza non e' trovare un bando: e' capire in tempo quali contano davvero.</p>
+      <div class="compare">
+        <div class="compare-head">
+          <div class="col-old">✕ <span data-i18n="compare_col_old">Da soli</span></div>
+          <div class="col-new">✓ <span data-i18n="compare_col_new">Con Norvia</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="col-old"><strong data-i18n="compare1_old_h">Siti istituzionali separati</strong><p data-i18n="compare1_old_p">Ogni paese ha il proprio portale, in una lingua diversa dalla tua, con criteri difficili da confrontare tra loro.</p></div>
+          <div class="col-new"><strong data-i18n="compare1_new_h">Un profilo, tutte le fonti</strong><p data-i18n="compare1_new_p">Confrontiamo il tuo profilo con le fonti ufficiali di piu' paesi insieme, nella tua lingua.</p></div>
+        </div>
+        <div class="compare-row">
+          <div class="col-old"><strong data-i18n="compare2_old_h">Requisiti in linguaggio burocratico</strong><p data-i18n="compare2_old_p">Bandi scritti per addetti ai lavori, difficili da capire senza perdere ore.</p></div>
+          <div class="col-new"><strong data-i18n="compare2_new_h">Spiegati in chiaro</strong><p data-i18n="compare2_new_p">Un analista traduce ogni programma in: cosa copre, quanto vale, se fa per te.</p></div>
+        </div>
+        <div class="compare-row">
+          <div class="col-old"><strong data-i18n="compare3_old_h">Candidatura scritta senza riscontro</strong><p data-i18n="compare3_old_p">Nessuno controlla se il budget o la narrativa hanno senso prima dell'invio.</p></div>
+          <div class="col-new"><strong data-i18n="compare3_new_h">Revisione prima dell'invio</strong><p data-i18n="compare3_new_p">Controlliamo numeri e struttura della candidatura prima che parta.</p></div>
+        </div>
+        <div class="compare-row">
+          <div class="col-old"><strong data-i18n="compare4_old_h">Un documento, poi sei di nuovo solo</strong><p data-i18n="compare4_old_p">Ricevi l'informazione ma nessuno ti segue nei passaggi successivi.</p></div>
+          <div class="col-new"><strong data-i18n="compare4_new_h">Accompagnamento su richiesta</strong><p data-i18n="compare4_new_p">Se vuoi, ti seguiamo fino all'invio, non solo fino al report.</p></div>
         </div>
       </div>
     </div>
@@ -302,6 +345,16 @@ const translations = {
     hero_fineprint: "Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.",
     founder_title: "Chi c'e' dietro Norvia",
     founder_bio: "Emanuel Conti, background di finanza e FP&A (Nexans HQ Parigi), formazione CEMS/ESADE in International Management, italiano, inglese e spagnolo fluenti, francese intermedio. Ogni report viene controllato a mano prima di arrivarti, non e' un output AI grezzo e non rivisto.",
+    compare_title: "Cercare da soli, o con Norvia.", compare_lede: "La differenza non e' trovare un bando: e' capire in tempo quali contano davvero.",
+    compare_col_old: "Da soli", compare_col_new: "Con Norvia",
+    compare1_old_h: "Siti istituzionali separati", compare1_old_p: "Ogni paese ha il proprio portale, in una lingua diversa dalla tua, con criteri difficili da confrontare tra loro.",
+    compare1_new_h: "Un profilo, tutte le fonti", compare1_new_p: "Confrontiamo il tuo profilo con le fonti ufficiali di piu' paesi insieme, nella tua lingua.",
+    compare2_old_h: "Requisiti in linguaggio burocratico", compare2_old_p: "Bandi scritti per addetti ai lavori, difficili da capire senza perdere ore.",
+    compare2_new_h: "Spiegati in chiaro", compare2_new_p: "Un analista traduce ogni programma in: cosa copre, quanto vale, se fa per te.",
+    compare3_old_h: "Candidatura scritta senza riscontro", compare3_old_p: "Nessuno controlla se il budget o la narrativa hanno senso prima dell'invio.",
+    compare3_new_h: "Revisione prima dell'invio", compare3_new_p: "Controlliamo numeri e struttura della candidatura prima che parta.",
+    compare4_old_h: "Un documento, poi sei di nuovo solo", compare4_old_p: "Ricevi l'informazione ma nessuno ti segue nei passaggi successivi.",
+    compare4_new_h: "Accompagnamento su richiesta", compare4_new_p: "Se vuoi, ti seguiamo fino all'invio, non solo fino al report.",
     how_title: "Come funziona", how_lede: "Due passaggi, nessuna promessa di risultato che non possiamo mantenere.",
     how1_title: "Profilo", how1_body: "Ci dici paese, settore, fase dell'azienda e di cosa hai bisogno: R&D, digitalizzazione, espansione. Bastano tre minuti.",
     how2_title: "Verifica", how2_body: "Confrontiamo il profilo col database verificato. Un analista controlla i risultati e scrive perche' contano per te, con link ufficiali per ognuno.",
@@ -344,6 +397,16 @@ const translations = {
     hero_fineprint: "Cada programa del informe tiene un enlace a la fuente oficial. Lo compruebas tu mismo, no te pedimos que confies sin mas.",
     founder_title: "Quien esta detras de Norvia",
     founder_bio: "Emanuel Conti, experiencia en finanzas y FP&A (Nexans HQ Paris), formacion CEMS/ESADE en International Management, italiano, ingles y español con dominio fluido, frances intermedio. Cada informe se revisa a mano antes de llegarte, no es una salida de IA sin revisar.",
+    compare_title: "Buscar solo, o con Norvia.", compare_lede: "La diferencia no es encontrar una ayuda: es saber a tiempo cuales importan de verdad.",
+    compare_col_old: "Por tu cuenta", compare_col_new: "Con Norvia",
+    compare1_old_h: "Portales institucionales separados", compare1_old_p: "Cada pais tiene su propio portal, en un idioma distinto al tuyo, con criterios dificiles de comparar entre si.",
+    compare1_new_h: "Un perfil, todas las fuentes", compare1_new_p: "Comparamos tu perfil con las fuentes oficiales de varios paises a la vez, en tu idioma.",
+    compare2_old_h: "Requisitos en lenguaje burocratico", compare2_old_p: "Convocatorias escritas para especialistas, dificiles de entender sin perder horas.",
+    compare2_new_h: "Explicado con claridad", compare2_new_p: "Un analista traduce cada programa en: que cubre, cuanto vale, si encaja contigo.",
+    compare3_old_h: "Solicitud escrita sin revision", compare3_old_p: "Nadie comprueba si el presupuesto o el relato tienen sentido antes de enviarla.",
+    compare3_new_h: "Revision antes del envio", compare3_new_p: "Revisamos numeros y estructura de la solicitud antes de que salga.",
+    compare4_old_h: "Un documento, y luego otra vez solo", compare4_old_p: "Recibes la informacion pero nadie te acompaña en los siguientes pasos.",
+    compare4_new_h: "Acompañamiento si lo quieres", compare4_new_p: "Si quieres, te acompañamos hasta el envio, no solo hasta el informe.",
     how_title: "Como funciona", how_lede: "Dos pasos, sin promesas de resultado que no podamos cumplir.",
     how1_title: "Perfil", how1_body: "Nos cuentas pais, sector, fase de la empresa y que necesitas: I+D, digitalizacion, expansion. Tres minutos.",
     how2_title: "Verificacion", how2_body: "Comparamos tu perfil con la base de datos verificada. Un analista revisa los resultados y explica por que te interesan, con enlaces oficiales para cada uno.",
@@ -386,6 +449,16 @@ const translations = {
     hero_fineprint: "Cada programa no relatorio tem um link para a fonte oficial. Verifica voce mesmo, nao pedimos que confie sem mais.",
     founder_title: "Quem esta por tras do Norvia",
     founder_bio: "Emanuel Conti, experiencia em financas e FP&A (Nexans HQ Paris), formacao CEMS/ESADE em International Management, italiano, ingles e espanhol fluentes, frances intermedio. Cada relatorio e revisto manualmente antes de chegar ate voce, nao e uma saida de IA sem revisao.",
+    compare_title: "Procurar sozinho, ou com a Norvia.", compare_lede: "A diferenca nao e encontrar um apoio: e perceber a tempo quais importam mesmo.",
+    compare_col_old: "Por conta propria", compare_col_new: "Com a Norvia",
+    compare1_old_h: "Portais institucionais separados", compare1_old_p: "Cada pais tem o seu proprio portal, numa lingua diferente da sua, com criterios dificeis de comparar entre si.",
+    compare1_new_h: "Um perfil, todas as fontes", compare1_new_p: "Comparamos o seu perfil com as fontes oficiais de varios paises ao mesmo tempo, na sua lingua.",
+    compare2_old_h: "Requisitos em linguagem burocratica", compare2_old_p: "Programas escritos para especialistas, dificeis de perceber sem perder horas.",
+    compare2_new_h: "Explicado com clareza", compare2_new_p: "Um analista traduz cada programa em: o que cobre, quanto vale, se faz sentido para si.",
+    compare3_old_h: "Candidatura escrita sem revisao", compare3_old_p: "Ninguem verifica se o orcamento ou o texto fazem sentido antes do envio.",
+    compare3_new_h: "Revisao antes do envio", compare3_new_p: "Verificamos numeros e estrutura da candidatura antes de seguir.",
+    compare4_old_h: "Um documento, e depois esta sozinho outra vez", compare4_old_p: "Recebe a informacao mas ninguem o acompanha nos passos seguintes.",
+    compare4_new_h: "Acompanhamento se quiser", compare4_new_p: "Se quiser, acompanhamos-lhe ate ao envio, nao so ate ao relatorio.",
     how_title: "Como funciona", how_lede: "Dois passos, sem promessas de resultado que nao possamos cumprir.",
     how1_title: "Perfil", how1_body: "Diz-nos o pais, o setor, a fase da empresa e do que precisa: I&D, digitalizacao, expansao. Tres minutos.",
     how2_title: "Verificacao", how2_body: "Comparamos o perfil com a base de dados verificada. Um analista revê os resultados e explica porque interessam a voce, com links oficiais para cada um.",
@@ -428,6 +501,16 @@ const translations = {
     hero_fineprint: "Chaque programme du rapport a un lien vers la source officielle. Vous verifiez vous-meme, on ne vous demande pas de nous croire sur parole.",
     founder_title: "Qui est derriere Norvia",
     founder_bio: "Emanuel Conti, experience en finance et FP&A (Nexans HQ Paris), formation CEMS/ESADE en International Management, italien, anglais et espagnol courants, francais intermediaire. Chaque rapport est relu a la main avant de vous parvenir, ce n'est pas une sortie IA brute et non verifiee.",
+    compare_title: "Chercher seul, ou avec Norvia.", compare_lede: "La difference n'est pas de trouver une aide: c'est de savoir a temps lesquelles comptent vraiment.",
+    compare_col_old: "Seul", compare_col_new: "Avec Norvia",
+    compare1_old_h: "Portails institutionnels separes", compare1_old_p: "Chaque pays a son propre portail, dans une langue differente de la votre, avec des criteres difficiles a comparer entre eux.",
+    compare1_new_h: "Un profil, toutes les sources", compare1_new_p: "Nous comparons votre profil aux sources officielles de plusieurs pays a la fois, dans votre langue.",
+    compare2_old_h: "Criteres en langage administratif", compare2_old_p: "Des appels a projets ecrits pour des specialistes, difficiles a comprendre sans y passer des heures.",
+    compare2_new_h: "Explique clairement", compare2_new_p: "Un analyste traduit chaque programme: ce qu'il couvre, son montant, s'il vous correspond.",
+    compare3_old_h: "Dossier redige sans relecture", compare3_old_p: "Personne ne verifie si le budget ou le recit tiennent la route avant l'envoi.",
+    compare3_new_h: "Relecture avant l'envoi", compare3_new_p: "Nous verifions les chiffres et la structure du dossier avant qu'il ne parte.",
+    compare4_old_h: "Un document, puis a nouveau seul", compare4_old_p: "Vous recevez l'information mais personne ne vous accompagne pour la suite.",
+    compare4_new_h: "Accompagnement sur demande", compare4_new_p: "Si vous le souhaitez, nous vous accompagnons jusqu'a l'envoi, pas seulement jusqu'au rapport.",
     how_title: "Comment ca marche", how_lede: "Deux etapes, aucune promesse de resultat que nous ne pourrions pas tenir.",
     how1_title: "Profil", how1_body: "Vous nous indiquez le pays, le secteur, la phase de l'entreprise et votre besoin: R&D, digitalisation, expansion. Trois minutes suffisent.",
     how2_title: "Verification", how2_body: "Nous comparons le profil a la base de donnees verifiee. Un analyste controle les resultats et explique pourquoi ils comptent pour vous, avec un lien officiel pour chacun.",
@@ -470,6 +553,16 @@ const translations = {
     hero_fineprint: "Jedes Programm im Bericht hat einen Link zur offiziellen Quelle. Sie pruefen selbst nach, wir bitten Sie nicht, uns einfach zu glauben.",
     founder_title: "Wer hinter Norvia steht",
     founder_bio: "Emanuel Conti, Hintergrund in Finance und FP&A (Nexans HQ Paris), CEMS/ESADE-Ausbildung in International Management, fliessend Italienisch, Englisch und Spanisch, Franzoesisch auf Mittelstufe. Jeder Bericht wird von Hand geprueft, bevor er bei Ihnen ankommt, kein ungeprueftes KI-Ergebnis.",
+    compare_title: "Alleine suchen, oder mit Norvia.", compare_lede: "Der Unterschied liegt nicht darin, eine Foerderung zu finden, sondern rechtzeitig zu erkennen, welche wirklich zaehlen.",
+    compare_col_old: "Alleine", compare_col_new: "Mit Norvia",
+    compare1_old_h: "Getrennte offizielle Portale", compare1_old_p: "Jedes Land hat sein eigenes Portal, in einer anderen Sprache als Ihrer, mit schwer vergleichbaren Kriterien.",
+    compare1_new_h: "Ein Profil, alle Quellen", compare1_new_p: "Wir vergleichen Ihr Profil mit offiziellen Quellen mehrerer Laender zugleich, in Ihrer Sprache.",
+    compare2_old_h: "Voraussetzungen in Amtssprache", compare2_old_p: "Programme fuer Fachleute geschrieben, schwer verstaendlich, ohne stundenlanges Lesen.",
+    compare2_new_h: "Klar erklaert", compare2_new_p: "Ein Analyst uebersetzt jedes Programm: was es abdeckt, wie viel es wert ist, ob es zu Ihnen passt.",
+    compare3_old_h: "Antrag ohne Gegenpruefung", compare3_old_p: "Niemand prueft, ob Budget oder Text vor dem Versand Sinn ergeben.",
+    compare3_new_h: "Pruefung vor dem Versand", compare3_new_p: "Wir pruefen Zahlen und Aufbau des Antrags, bevor er verschickt wird.",
+    compare4_old_h: "Ein Dokument, dann wieder alleine", compare4_old_p: "Sie erhalten die Information, aber niemand begleitet Sie bei den naechsten Schritten.",
+    compare4_new_h: "Begleitung auf Wunsch", compare4_new_p: "Auf Wunsch begleiten wir Sie bis zum Versand, nicht nur bis zum Bericht.",
     how_title: "So funktioniert es", how_lede: "Zwei Schritte, keine Erfolgsversprechen, die wir nicht halten koennen.",
     how1_title: "Profil", how1_body: "Sie nennen uns Land, Branche, Unternehmensphase und Bedarf: F&E, Digitalisierung, Expansion. Drei Minuten reichen.",
     how2_title: "Pruefung", how2_body: "Wir vergleichen das Profil mit der gepruften Datenbank. Ein Analyst kontrolliert die Treffer und erklaert, warum sie fuer Sie relevant sind, mit offiziellem Link zu jedem.",
