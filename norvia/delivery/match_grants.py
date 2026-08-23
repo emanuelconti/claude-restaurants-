@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-GrantPath — motore di matching bandi/finanziamenti.
+Norvia — motore di matching bandi/finanziamenti.
 
 Prende un profilo azienda (paese, settore/parole chiave, fase) e lo confronta con il
-database REALE e verificato in fundmatch/data/programs.json (nessun bando è inventato:
+database REALE e verificato in norvia/data/programs.json (nessun bando è inventato:
 ogni riga ha un link ufficiale e una data di ultima verifica).
 
 Uso:

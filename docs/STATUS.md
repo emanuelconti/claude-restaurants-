@@ -1,21 +1,21 @@
-# STATUS — GrantPath (pivot da RaiseReady, pivot da SocialPerks Pilot)
+# STATUS — Norvia (pivot da RaiseReady, pivot da SocialPerks Pilot)
 
-Ultimo aggiornamento: Ciclo 5 (secondo pivot — vedi `fundmatch/README.md`)
+Ultimo aggiornamento: Ciclo 5 (secondo pivot — vedi `norvia/README.md`)
 
-## Ciclo 5 — secondo pivot: GrantPath
+## Ciclo 5 — secondo pivot: Norvia
 Motivo: RaiseReady vendeva "un PDF scritto dall'AI" — obiezione corretta del fondatore,
-nessuno paga per un output ottenibile gratis da un chatbot. **GrantPath** vende accesso a
+nessuno paga per un output ottenibile gratis da un chatbot. **Norvia** vende accesso a
 bandi/finanziamenti pubblici REALI (Horizon Europe, Bpifrance, ENISA, Invitalia, Eurostars,
 Interreg, Kit Digital — verificati via ricerca web, non inventati) + revisione della
 candidatura da parte di un analista — mercato consolidato, non commodity AI.
 
 Costruito e testato in questo ciclo:
-- `fundmatch/data/programs.json` — 10 programmi reali, ognuno con link ufficiale e data di
+- `norvia/data/programs.json` — 10 programmi reali, ognuno con link ufficiale e data di
   verifica (2026-08-22)
-- `fundmatch/delivery/match_grants.py` — matching profilo→programmi, **testato con la tua
+- `norvia/delivery/match_grants.py` — matching profilo→programmi, **testato con la tua
   chiave Groq reale**: la personalizzazione AI resta ancorata ai dati veri (dove non sa una
   scadenza esatta scrive "verificare sul sito ufficiale", non la inventa)
-- `fundmatch/landing/index.html` — sito con segnali di autorevolezza reali: credenziali del
+- `norvia/landing/index.html` — sito con segnali di autorevolezza reali: credenziali del
   fondatore (vere, dal CV), tabella programmi con link diretti alle fonti ufficiali,
   disclaimer "non garantiamo l'ottenimento di alcun finanziamento". Verificato: HTML valido,
   screenshot desktop/mobile puliti.
