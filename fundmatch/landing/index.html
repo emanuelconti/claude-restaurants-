@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GrantPath — Trova i bandi e finanziamenti giusti per la tua impresa</title>
-<meta name="description" content="Matching su bandi e finanziamenti reali (Horizon Europe, Bpifrance, ENISA, Invitalia e altri) + revisione della candidatura da parte di un analista con background finanziario.">
+<title>GrantPath</title>
+<meta name="description" content="Bandi e finanziamenti pubblici reali per la tua impresa, con link ufficiali, piu' revisione della candidatura.">
 <style>
   :root{
     --bg:#0f1216; --surface:#171b21; --ink:#eef1f5; --ink-soft:#98a2b3;
@@ -17,17 +17,22 @@
   a{color:inherit}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
   header.site{position:sticky;top:0;background:rgba(15,18,22,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px;flex-wrap:wrap}
   .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.01em}
   .brand span{color:var(--accent)}
-  nav.links{display:none;gap:26px;font-size:.92rem;color:var(--ink-soft)}
-  @media(min-width:760px){nav.links{display:flex}}
+  nav.links{display:none;gap:22px;font-size:.9rem;color:var(--ink-soft)}
+  @media(min-width:900px){nav.links{display:flex}}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .lang-switch{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .lang-switch button{border:none;background:transparent;color:var(--ink-soft);font-size:.78rem;font-weight:700;
+    padding:5px 9px;border-radius:999px;cursor:pointer}
+  .lang-switch button.active{background:var(--accent);color:var(--accent-ink)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;
     padding:12px 22px;font-weight:700;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer}
   .btn-primary{background:var(--accent);color:var(--accent-ink)}
   .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   section{padding:60px 0}
-  .hero{padding:66px 0 36px;text-align:center}
+  .hero{padding:56px 0 36px;text-align:center}
   .kicker{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
     color:var(--accent);background:rgba(47,158,110,.14);padding:6px 12px;border-radius:999px;margin-bottom:20px}
   h1{font-size:clamp(1.9rem,4.6vw,2.85rem);line-height:1.14;letter-spacing:-.02em;margin:0 auto 18px;max-width:780px}
@@ -71,31 +76,39 @@
   <div class="wrap nav">
     <a href="#" class="brand">Grant<span>Path</span></a>
     <nav class="links">
-      <a href="#how">Come funziona</a>
-      <a href="#programs">Bandi tracciati</a>
-      <a href="#pricing">Prezzi</a>
-      <a href="#faq">FAQ</a>
+      <a href="#how" data-i18n="nav_how">Come funziona</a>
+      <a href="#programs" data-i18n="nav_programs">Bandi tracciati</a>
+      <a href="#pricing" data-i18n="nav_pricing">Prezzi</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
     </nav>
-    <a href="#pricing" class="btn btn-primary">Trova i tuoi bandi</a>
+    <div class="nav-right">
+      <div class="lang-switch" id="lang-switch">
+        <button data-lang="it">IT</button>
+        <button data-lang="es">ES</button>
+        <button data-lang="pt">PT</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="de">DE</button>
+      </div>
+      <a href="#pricing" class="btn btn-primary" data-i18n="nav_cta">Trova i bandi</a>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="kicker">Italia · Francia · Spagna · programmi UE</span>
-      <h1>Trova i bandi e finanziamenti reali per cui la tua impresa è idonea.</h1>
-      <p class="lede">
-        Confrontiamo il tuo profilo con un database verificato di programmi reali —
-        Horizon Europe, Bpifrance, ENISA, Invitalia e altri — e ti diciamo esattamente
-        quali valgono la pena, con link ufficiali. Poi, se vuoi, revisioniamo anche la
-        candidatura prima che la invii.
+      <span class="kicker" data-i18n="hero_kicker">Italia · Francia · Spagna · Portogallo · Germania · programmi UE</span>
+      <h1 data-i18n="hero_h1">Trova i bandi e i finanziamenti per cui la tua impresa e' idonea.</h1>
+      <p class="lede" data-i18n="hero_lede">
+        Confrontiamo il tuo profilo con un database verificato di programmi reali:
+        Horizon Europe, Bpifrance, ENISA, Invitalia e altri. Ti diciamo quali valgono
+        la pena, con link ufficiali. Su richiesta revisioniamo anche la candidatura.
       </p>
       <div class="cta-row">
-        <a href="#pricing" class="btn btn-primary">Trova i tuoi bandi — da €149</a>
-        <a href="#programs" class="btn btn-ghost">Vedi i programmi tracciati</a>
+        <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta_primary">Trova i tuoi bandi, da €149</a>
+        <a href="#programs" class="btn btn-ghost" data-i18n="hero_cta_secondary">Vedi i programmi tracciati</a>
       </div>
-      <p class="fineprint">Ogni programma nel report ha un link alla fonte ufficiale — verifichi tu stesso, non ti chiediamo di fidarti e basta.</p>
+      <p class="fineprint" data-i18n="hero_fineprint">Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.</p>
     </div>
   </section>
 
@@ -104,12 +117,12 @@
       <div class="card founder">
         <div class="avatar">EC</div>
         <div>
-          <strong>Chi c'è dietro GrantPath</strong>
-          <p style="margin:6px 0 0;color:var(--ink-soft)">
-            Emanuel Conti — background di finanza/FP&amp;A (Nexans HQ Parigi), formazione
-            CEMS/ESADE in International Management, italiano/inglese/spagnolo fluenti,
-            francese intermedio. Ogni report è controllato a mano prima di arrivarti — non
-            un output AI grezzo e non rivisto.
+          <strong data-i18n="founder_title">Chi c'e' dietro GrantPath</strong>
+          <p style="margin:6px 0 0;color:var(--ink-soft)" data-i18n="founder_bio">
+            Emanuel Conti, background di finanza e FP&amp;A (Nexans HQ Parigi), formazione
+            CEMS/ESADE in International Management, italiano, inglese e spagnolo fluenti,
+            francese intermedio. Ogni report viene controllato a mano prima di arrivarti,
+            non e' un output AI grezzo e non rivisto.
           </p>
         </div>
       </div>
@@ -118,26 +131,26 @@
 
   <section id="how">
     <div class="wrap">
-      <h2>Come funziona</h2>
-      <p class="section-lede">Due passaggi, nessuna promessa di risultato che non possiamo mantenere.</p>
+      <h2 data-i18n="how_title">Come funziona</h2>
+      <p class="section-lede" data-i18n="how_lede">Due passaggi, nessuna promessa di risultato che non possiamo mantenere.</p>
       <div class="grid3">
         <div class="card">
           <div class="step-num">1</div>
-          <h3>Profilo</h3>
-          <p>Ci dici paese, settore, fase dell'azienda e di cosa hai bisogno (R&amp;D,
-          digitalizzazione, espansione...). 3 minuti.</p>
+          <h3 data-i18n="how1_title">Profilo</h3>
+          <p data-i18n="how1_body">Ci dici paese, settore, fase dell'azienda e di cosa hai bisogno: R&amp;D,
+          digitalizzazione, espansione. Bastano tre minuti.</p>
         </div>
         <div class="card">
           <div class="step-num">2</div>
-          <h3>Matching + verifica</h3>
-          <p>Confrontiamo il profilo col database verificato, un analista controlla i
-          risultati e scrive perché contano per te — con link ufficiali per ognuno.</p>
+          <h3 data-i18n="how2_title">Verifica</h3>
+          <p data-i18n="how2_body">Confrontiamo il profilo col database verificato. Un analista controlla i
+          risultati e scrive perche' contano per te, con link ufficiali per ognuno.</p>
         </div>
         <div class="card">
           <div class="step-num">3</div>
-          <h3>Report</h3>
-          <p>Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su
-          richiesta, revisioniamo anche la tua candidatura prima dell'invio.</p>
+          <h3 data-i18n="how3_title">Report</h3>
+          <p data-i18n="how3_body">Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su
+          richiesta revisioniamo anche la tua candidatura prima dell'invio.</p>
         </div>
       </div>
     </div>
@@ -145,69 +158,74 @@
 
   <section id="programs">
     <div class="wrap">
-      <h2>Alcuni dei programmi che tracciamo</h2>
-      <p class="section-lede">Elenco parziale, aggiornato manualmente — ogni riga verificata con fonte ufficiale.</p>
+      <h2 data-i18n="programs_title">Alcuni dei programmi che tracciamo</h2>
+      <p class="section-lede" data-i18n="programs_lede">Elenco parziale, aggiornato a mano. Ogni riga e' verificata con fonte ufficiale.</p>
       <div class="table-wrap">
         <table class="source-table">
           <thead>
-            <tr><th>Programma</th><th>Ambito</th><th>Importo</th><th>Fonte</th></tr>
+            <tr>
+              <th data-i18n="table_program">Programma</th>
+              <th data-i18n="table_scope">Ambito</th>
+              <th data-i18n="table_amount">Importo</th>
+              <th data-i18n="table_source">Fonte</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td>EIC Accelerator</td><td>UE (deep-tech)</td><td>Fino a €2.5M + equity</td><td><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">eic.ec.europa.eu</a></td></tr>
-            <tr><td>Smart&amp;Start Italia</td><td>Italia</td><td>Fino a €1.5M</td><td><a href="https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia" target="_blank" rel="noopener">invitalia.it</a></td></tr>
-            <tr><td>Bpifrance — Aide au développement</td><td>Francia</td><td>Fino a €2M</td><td><a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">bpifrance.fr</a></td></tr>
-            <tr><td>ENISA Startups y Pymes</td><td>Spagna</td><td>€25k–€1.5M</td><td><a href="https://www.enisa.es/" target="_blank" rel="noopener">enisa.es</a></td></tr>
-            <tr><td>Kit Digital</td><td>Spagna</td><td>Fino a €29k</td><td><a href="https://www.acelerapyme.gob.es/kit-digital" target="_blank" rel="noopener">acelerapyme.gob.es</a></td></tr>
+            <tr><td>EIC Accelerator</td><td data-i18n="scope_eu_deeptech">UE (deep-tech)</td><td>Fino a €2.5M + equity</td><td><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">eic.ec.europa.eu</a></td></tr>
+            <tr><td>Smart&amp;Start Italia</td><td data-i18n="scope_it">Italia</td><td>Fino a €1.5M</td><td><a href="https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia" target="_blank" rel="noopener">invitalia.it</a></td></tr>
+            <tr><td>Bpifrance, Aide au développement</td><td data-i18n="scope_fr">Francia</td><td>Fino a €2M</td><td><a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">bpifrance.fr</a></td></tr>
+            <tr><td>ENISA Startups y Pymes</td><td data-i18n="scope_es">Spagna</td><td>€25k–€1.5M</td><td><a href="https://www.enisa.es/" target="_blank" rel="noopener">enisa.es</a></td></tr>
+            <tr><td>Kit Digital</td><td data-i18n="scope_es">Spagna</td><td>Fino a €29k</td><td><a href="https://www.acelerapyme.gob.es/kit-digital" target="_blank" rel="noopener">acelerapyme.gob.es</a></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fineprint" style="margin-top:14px">+ Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri nel report completo.</p>
+      <p class="fineprint" style="margin-top:14px" data-i18n="programs_footnote">Nel report completo trovi anche Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri.</p>
     </div>
   </section>
 
   <section id="pricing">
     <div class="wrap">
-      <h2>Prezzi</h2>
-      <p class="section-lede">Pagamento una tantum. Nessun abbonamento nascosto.</p>
+      <h2 data-i18n="pricing_title">Prezzi</h2>
+      <p class="section-lede" data-i18n="pricing_lede">Pagamento una tantum. Nessun abbonamento nascosto.</p>
       <div class="grid2">
         <div class="price-card">
-          <h3>Funding Match Report</h3>
+          <h3 data-i18n="price1_title">Funding Match Report</h3>
           <div class="price">€149</div>
           <ul class="checklist">
-            <li>Elenco dei programmi compatibili col tuo profilo</li>
-            <li>Link ufficiali e importi per ognuno</li>
-            <li>Nota di priorità (quali valutare per primi)</li>
-            <li>Consegna in 48h</li>
+            <li data-i18n="price1_item1">Elenco dei programmi compatibili col tuo profilo</li>
+            <li data-i18n="price1_item2">Link ufficiali e importi per ognuno</li>
+            <li data-i18n="price1_item3">Nota di priorita': quali valutare per primi</li>
+            <li data-i18n="price1_item4">Consegna in 48 ore</li>
           </ul>
-          <a href="#contact" class="btn btn-ghost" style="width:100%">Richiedi il report</a>
+          <a href="#contact" class="btn btn-ghost" style="width:100%" data-i18n="price1_cta">Richiedi il report</a>
         </div>
         <div class="price-card featured">
-          <h3>Match + Revisione candidatura</h3>
+          <h3 data-i18n="price2_title">Match + revisione candidatura</h3>
           <div class="price">€349</div>
           <ul class="checklist">
-            <li>Tutto il Funding Match Report</li>
-            <li>Revisione della candidatura per il bando scelto</li>
-            <li>Feedback su budget/numeri della candidatura</li>
-            <li>Un giro di correzioni incluso</li>
+            <li data-i18n="price2_item1">Tutto il Funding Match Report</li>
+            <li data-i18n="price2_item2">Revisione della candidatura per il bando scelto</li>
+            <li data-i18n="price2_item3">Feedback su budget e numeri della candidatura</li>
+            <li data-i18n="price2_item4">Un giro di correzioni incluso</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="width:100%">Richiedi questo pacchetto</a>
+          <a href="#contact" class="btn btn-primary" style="width:100%" data-i18n="price2_cta">Richiedi questo pacchetto</a>
         </div>
       </div>
-      <p class="fineprint" style="margin-top:16px">
-        Per supporto continuativo su una candidatura specifica (fino all'invio), è disponibile
-        anche un accordo a success fee (percentuale solo su quanto effettivamente ottenuto) —
-        da concordare caso per caso dopo il primo report.
+      <p class="fineprint" style="margin-top:16px" data-i18n="pricing_footnote">
+        Per supporto continuativo su una candidatura specifica, fino all'invio, e' disponibile
+        anche un accordo a success fee: una percentuale solo su quanto effettivamente ottenuto,
+        da concordare dopo il primo report.
       </p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="disclaimer">
-        ⚠️ GrantPath fornisce informazioni su programmi pubblici di finanziamento e feedback
-        editoriale sulle candidature. <strong>Non garantiamo l'ottenimento di alcun
-        finanziamento</strong>, non diamo consulenza fiscale o legale, e ogni dato (importi,
-        scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire —
+      <div class="disclaimer" data-i18n="disclaimer_text">
+        ⚠️ GrantPath fornisce informazioni su programmi pubblici di finanziamento e un
+        feedback editoriale sulle candidature. Non garantiamo l'ottenimento di alcun
+        finanziamento, non diamo consulenza fiscale o legale, e ogni dato (importi,
+        scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire:
         i programmi pubblici cambiano condizioni nel tempo.
       </div>
     </div>
@@ -215,21 +233,21 @@
 
   <section id="faq">
     <div class="wrap">
-      <h2>Domande frequenti</h2>
+      <h2 data-i18n="faq_title">Domande frequenti</h2>
       <details>
-        <summary>Garantite che otterrò il finanziamento?</summary>
-        <p>No, e diffida di chiunque lo prometta — l'esito dipende dall'ente erogatore. Ti
-        aiutiamo a candidarti ai programmi giusti, con una candidatura più solida.</p>
+        <summary data-i18n="faq1_q">Garantite che ottero' il finanziamento?</summary>
+        <p data-i18n="faq1_a">No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti
+        aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.</p>
       </details>
       <details>
-        <summary>Da dove vengono i dati sui bandi?</summary>
-        <p>Da un database che manteniamo e verifichiamo manualmente contro le fonti
-        ufficiali di ogni ente (Commissione UE, Bpifrance, ENISA, Invitalia, ecc.) — ogni
-        riga riporta il link diretto e la data di ultima verifica.</p>
+        <summary data-i18n="faq2_q">Da dove vengono i dati sui bandi?</summary>
+        <p data-i18n="faq2_a">Da un database che manteniamo e verifichiamo a mano contro le fonti
+        ufficiali di ogni ente: Commissione UE, Bpifrance, ENISA, Invitalia e altri. Ogni
+        riga riporta il link diretto e la data dell'ultima verifica.</p>
       </details>
       <details>
-        <summary>E se non trovate nessun programma per me?</summary>
-        <p>Te lo diciamo onestamente invece di forzare match deboli — il database è
+        <summary data-i18n="faq3_q">E se non trovate nessun programma per me?</summary>
+        <p data-i18n="faq3_a">Te lo diciamo onestamente invece di forzare match deboli. Il database e'
         verificato ma non esaustivo, e te lo segnaliamo chiaramente nel report.</p>
       </details>
     </div>
@@ -238,12 +256,12 @@
   <section id="contact">
     <div class="wrap">
       <div class="card" style="text-align:center">
-        <h2>Pronto?</h2>
-        <p class="section-lede" style="margin:0 auto 20px">
-          Checkout non ancora collegato in questa anteprima — il link di pagamento arriva
-          appena Stripe è configurato.
+        <h2 data-i18n="contact_title">Pronto?</h2>
+        <p class="section-lede" style="margin:0 auto 20px" data-i18n="contact_lede">
+          Il checkout non e' ancora collegato in questa anteprima. Il link di pagamento
+          arriva appena Stripe e' configurato.
         </p>
-        <a href="mailto:hello@grantpath.example?subject=GrantPath%20—%20Funding%20Match" class="btn btn-primary">
+        <a href="mailto:hello@grantpath.example?subject=GrantPath" class="btn btn-primary">
           hello@grantpath.example
         </a>
       </div>
@@ -254,12 +272,237 @@
 <footer>
   <div class="wrap">
     <div class="brand">Grant<span>Path</span></div>
-    <p>Matching su bandi/finanziamenti reali + revisione candidature — non consulenza legale o fiscale.</p>
+    <p data-i18n="footer_tagline">Matching su bandi e finanziamenti reali, piu' revisione candidature. Non e' consulenza legale o fiscale.</p>
     <div class="foot-links">
       <a href="mailto:hello@grantpath.example">hello@grantpath.example</a>
     </div>
   </div>
 </footer>
+
+<script>
+const translations = {
+  it: {
+    nav_how: "Come funziona", nav_programs: "Bandi tracciati", nav_pricing: "Prezzi", nav_faq: "FAQ",
+    nav_cta: "Trova i bandi",
+    hero_kicker: "Italia · Francia · Spagna · Portogallo · Germania · programmi UE",
+    hero_h1: "Trova i bandi e i finanziamenti per cui la tua impresa e' idonea.",
+    hero_lede: "Confrontiamo il tuo profilo con un database verificato di programmi reali: Horizon Europe, Bpifrance, ENISA, Invitalia e altri. Ti diciamo quali valgono la pena, con link ufficiali. Su richiesta revisioniamo anche la candidatura.",
+    hero_cta_primary: "Trova i tuoi bandi, da €149",
+    hero_cta_secondary: "Vedi i programmi tracciati",
+    hero_fineprint: "Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.",
+    founder_title: "Chi c'e' dietro GrantPath",
+    founder_bio: "Emanuel Conti, background di finanza e FP&A (Nexans HQ Parigi), formazione CEMS/ESADE in International Management, italiano, inglese e spagnolo fluenti, francese intermedio. Ogni report viene controllato a mano prima di arrivarti, non e' un output AI grezzo e non rivisto.",
+    how_title: "Come funziona", how_lede: "Due passaggi, nessuna promessa di risultato che non possiamo mantenere.",
+    how1_title: "Profilo", how1_body: "Ci dici paese, settore, fase dell'azienda e di cosa hai bisogno: R&D, digitalizzazione, espansione. Bastano tre minuti.",
+    how2_title: "Verifica", how2_body: "Confrontiamo il profilo col database verificato. Un analista controlla i risultati e scrive perche' contano per te, con link ufficiali per ognuno.",
+    how3_title: "Report", how3_body: "Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su richiesta revisioniamo anche la tua candidatura prima dell'invio.",
+    programs_title: "Alcuni dei programmi che tracciamo",
+    programs_lede: "Elenco parziale, aggiornato a mano. Ogni riga e' verificata con fonte ufficiale.",
+    table_program: "Programma", table_scope: "Ambito", table_amount: "Importo", table_source: "Fonte",
+    scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "Spagna",
+    programs_footnote: "Nel report completo trovi anche Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri.",
+    pricing_title: "Prezzi", pricing_lede: "Pagamento una tantum. Nessun abbonamento nascosto.",
+    price1_title: "Funding Match Report",
+    price1_item1: "Elenco dei programmi compatibili col tuo profilo", price1_item2: "Link ufficiali e importi per ognuno",
+    price1_item3: "Nota di priorita': quali valutare per primi", price1_item4: "Consegna in 48 ore",
+    price1_cta: "Richiedi il report",
+    price2_title: "Match + revisione candidatura",
+    price2_item1: "Tutto il Funding Match Report", price2_item2: "Revisione della candidatura per il bando scelto",
+    price2_item3: "Feedback su budget e numeri della candidatura", price2_item4: "Un giro di correzioni incluso",
+    price2_cta: "Richiedi questo pacchetto",
+    pricing_footnote: "Per supporto continuativo su una candidatura specifica, fino all'invio, e' disponibile anche un accordo a success fee: una percentuale solo su quanto effettivamente ottenuto, da concordare dopo il primo report.",
+    disclaimer_text: "⚠️ GrantPath fornisce informazioni su programmi pubblici di finanziamento e un feedback editoriale sulle candidature. Non garantiamo l'ottenimento di alcun finanziamento, non diamo consulenza fiscale o legale, e ogni dato (importi, scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire: i programmi pubblici cambiano condizioni nel tempo.",
+    faq_title: "Domande frequenti",
+    faq1_q: "Garantite che ottero' il finanziamento?", faq1_a: "No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.",
+    faq2_q: "Da dove vengono i dati sui bandi?", faq2_a: "Da un database che manteniamo e verifichiamo a mano contro le fonti ufficiali di ogni ente: Commissione UE, Bpifrance, ENISA, Invitalia e altri. Ogni riga riporta il link diretto e la data dell'ultima verifica.",
+    faq3_q: "E se non trovate nessun programma per me?", faq3_a: "Te lo diciamo onestamente invece di forzare match deboli. Il database e' verificato ma non esaustivo, e te lo segnaliamo chiaramente nel report.",
+    contact_title: "Pronto?", contact_lede: "Il checkout non e' ancora collegato in questa anteprima. Il link di pagamento arriva appena Stripe e' configurato.",
+    footer_tagline: "Matching su bandi e finanziamenti reali, piu' revisione candidature. Non e' consulenza legale o fiscale."
+  },
+  es: {
+    nav_how: "Como funciona", nav_programs: "Ayudas que seguimos", nav_pricing: "Precios", nav_faq: "Preguntas",
+    nav_cta: "Encuentra tus ayudas",
+    hero_kicker: "Italia · Francia · España · Portugal · Alemania · programas de la UE",
+    hero_h1: "Encuentra las ayudas y financiaciones para las que tu empresa es elegible.",
+    hero_lede: "Comparamos tu perfil con una base de datos verificada de programas reales: Horizon Europe, Bpifrance, ENISA, Invitalia y otros. Te decimos cuales merecen la pena, con enlaces oficiales. Si quieres, tambien revisamos tu solicitud.",
+    hero_cta_primary: "Encuentra tus ayudas, desde 149 €",
+    hero_cta_secondary: "Ver los programas que seguimos",
+    hero_fineprint: "Cada programa del informe tiene un enlace a la fuente oficial. Lo compruebas tu mismo, no te pedimos que confies sin mas.",
+    founder_title: "Quien esta detras de GrantPath",
+    founder_bio: "Emanuel Conti, experiencia en finanzas y FP&A (Nexans HQ Paris), formacion CEMS/ESADE en International Management, italiano, ingles y español con dominio fluido, frances intermedio. Cada informe se revisa a mano antes de llegarte, no es una salida de IA sin revisar.",
+    how_title: "Como funciona", how_lede: "Dos pasos, sin promesas de resultado que no podamos cumplir.",
+    how1_title: "Perfil", how1_body: "Nos cuentas pais, sector, fase de la empresa y que necesitas: I+D, digitalizacion, expansion. Tres minutos.",
+    how2_title: "Verificacion", how2_body: "Comparamos tu perfil con la base de datos verificada. Un analista revisa los resultados y explica por que te interesan, con enlaces oficiales para cada uno.",
+    how3_title: "Informe", how3_body: "Recibes el listado con importes, requisitos, plazos conocidos y enlaces oficiales. Si lo pides, tambien revisamos tu solicitud antes de enviarla.",
+    programs_title: "Algunos de los programas que seguimos",
+    programs_lede: "Lista parcial, actualizada a mano. Cada fila esta verificada con su fuente oficial.",
+    table_program: "Programa", table_scope: "Ambito", table_amount: "Importe", table_source: "Fuente",
+    scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "España",
+    programs_footnote: "En el informe completo tambien encontraras Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia y otros.",
+    pricing_title: "Precios", pricing_lede: "Pago unico. Sin suscripciones ocultas.",
+    price1_title: "Informe de ayudas compatibles",
+    price1_item1: "Listado de programas compatibles con tu perfil", price1_item2: "Enlaces oficiales e importes de cada uno",
+    price1_item3: "Nota de prioridad: cuales revisar primero", price1_item4: "Entrega en 48 horas",
+    price1_cta: "Pedir el informe",
+    price2_title: "Informe + revision de la solicitud",
+    price2_item1: "Todo el informe de ayudas compatibles", price2_item2: "Revision de la solicitud para la ayuda elegida",
+    price2_item3: "Comentarios sobre el presupuesto y las cifras", price2_item4: "Una ronda de correcciones incluida",
+    price2_cta: "Pedir este paquete",
+    pricing_footnote: "Para acompañamiento continuo en una solicitud concreta, hasta el envio, tambien ofrecemos un acuerdo de success fee: un porcentaje solo sobre lo realmente conseguido, a acordar tras el primer informe.",
+    disclaimer_text: "⚠️ GrantPath ofrece informacion sobre programas publicos de financiacion y comentarios editoriales sobre solicitudes. No garantizamos la obtencion de ninguna financiacion, no damos asesoria fiscal ni legal, y cada dato (importes, plazos, requisitos) debe verificarse siempre en la fuente oficial antes de actuar: los programas publicos cambian de condiciones con el tiempo.",
+    faq_title: "Preguntas frecuentes",
+    faq1_q: "¿Garantizan que consiga la financiacion?", faq1_a: "No, y desconfia de quien lo prometa: el resultado depende del organismo que otorga la ayuda. Te ayudamos a presentarte a los programas correctos, con una solicitud mas solida.",
+    faq2_q: "¿De donde salen los datos sobre las ayudas?", faq2_a: "De una base de datos que mantenemos y verificamos a mano contra las fuentes oficiales de cada organismo: Comision Europea, Bpifrance, ENISA, Invitalia y otros. Cada fila incluye el enlace directo y la fecha de la ultima verificacion.",
+    faq3_q: "¿Y si no encuentran ningun programa para mi?", faq3_a: "Te lo decimos con honestidad en vez de forzar coincidencias debiles. La base de datos esta verificada pero no es exhaustiva, y te lo indicamos claramente en el informe.",
+    contact_title: "¿Listo?", contact_lede: "El pago aun no esta conectado en esta vista previa. El enlace de pago llegara en cuanto Stripe este configurado.",
+    footer_tagline: "Coincidencia con ayudas y financiaciones reales, mas revision de solicitudes. No es asesoria legal ni fiscal."
+  },
+  pt: {
+    nav_how: "Como funciona", nav_programs: "Programas que seguimos", nav_pricing: "Precos", nav_faq: "Perguntas",
+    nav_cta: "Encontrar os apoios",
+    hero_kicker: "Italia · Franca · Espanha · Portugal · Alemanha · programas da UE",
+    hero_h1: "Encontre os apoios e financiamentos para os quais a sua empresa e elegivel.",
+    hero_lede: "Comparamos o seu perfil com uma base de dados verificada de programas reais: Horizon Europe, Bpifrance, ENISA, Invitalia e outros. Dizemos quais valem a pena, com links oficiais. Se quiser, tambem revemos a candidatura.",
+    hero_cta_primary: "Encontrar os seus apoios, a partir de 149 €",
+    hero_cta_secondary: "Ver os programas que seguimos",
+    hero_fineprint: "Cada programa no relatorio tem um link para a fonte oficial. Verifica voce mesmo, nao pedimos que confie sem mais.",
+    founder_title: "Quem esta por tras do GrantPath",
+    founder_bio: "Emanuel Conti, experiencia em financas e FP&A (Nexans HQ Paris), formacao CEMS/ESADE em International Management, italiano, ingles e espanhol fluentes, frances intermedio. Cada relatorio e revisto manualmente antes de chegar ate voce, nao e uma saida de IA sem revisao.",
+    how_title: "Como funciona", how_lede: "Dois passos, sem promessas de resultado que nao possamos cumprir.",
+    how1_title: "Perfil", how1_body: "Diz-nos o pais, o setor, a fase da empresa e do que precisa: I&D, digitalizacao, expansao. Tres minutos.",
+    how2_title: "Verificacao", how2_body: "Comparamos o perfil com a base de dados verificada. Um analista revê os resultados e explica porque interessam a voce, com links oficiais para cada um.",
+    how3_title: "Relatorio", how3_body: "Recebe a lista com valores, requisitos, prazos conhecidos e links oficiais. Se pedir, tambem revemos a sua candidatura antes do envio.",
+    programs_title: "Alguns dos programas que seguimos",
+    programs_lede: "Lista parcial, atualizada manualmente. Cada linha esta verificada com fonte oficial.",
+    table_program: "Programa", table_scope: "Ambito", table_amount: "Valor", table_source: "Fonte",
+    scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Franca", scope_es: "Espanha",
+    programs_footnote: "No relatorio completo encontra tambem Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Franca e outros.",
+    pricing_title: "Precos", pricing_lede: "Pagamento unico. Sem subscricoes escondidas.",
+    price1_title: "Relatorio de apoios compativeis",
+    price1_item1: "Lista dos programas compativeis com o seu perfil", price1_item2: "Links oficiais e valores de cada um",
+    price1_item3: "Nota de prioridade: quais avaliar primeiro", price1_item4: "Entrega em 48 horas",
+    price1_cta: "Pedir o relatorio",
+    price2_title: "Relatorio + revisao da candidatura",
+    price2_item1: "Tudo o que esta no relatorio de apoios", price2_item2: "Revisao da candidatura para o programa escolhido",
+    price2_item3: "Comentarios sobre orcamento e numeros", price2_item4: "Uma ronda de correcoes incluida",
+    price2_cta: "Pedir este pacote",
+    pricing_footnote: "Para acompanhamento continuo numa candidatura especifica, ate ao envio, tambem oferecemos um acordo de success fee: uma percentagem apenas sobre o que for realmente obtido, a combinar depois do primeiro relatorio.",
+    disclaimer_text: "⚠️ O GrantPath fornece informacao sobre programas publicos de financiamento e comentarios editoriais sobre candidaturas. Nao garantimos a obtencao de qualquer financiamento, nao damos aconselhamento fiscal ou juridico, e cada dado (valores, prazos, requisitos) deve ser sempre confirmado na fonte oficial antes de agir: os programas publicos mudam de condicoes ao longo do tempo.",
+    faq_title: "Perguntas frequentes",
+    faq1_q: "Garantem que vou obter o financiamento?", faq1_a: "Nao, e desconfie de quem prometer isso: o resultado depende da entidade que atribui o apoio. Ajudamos voce a candidatar-se aos programas certos, com uma candidatura mais solida.",
+    faq2_q: "De onde vem os dados sobre os apoios?", faq2_a: "De uma base de dados que mantemos e verificamos manualmente com as fontes oficiais de cada entidade: Comissao Europeia, Bpifrance, ENISA, Invitalia e outras. Cada linha traz o link direto e a data da ultima verificacao.",
+    faq3_q: "E se nao encontrarem nenhum programa para mim?", faq3_a: "Dizemos isso com honestidade em vez de forcar correspondencias fracas. A base de dados e verificada mas nao e exaustiva, e isso fica claro no relatorio.",
+    contact_title: "Pronto?", contact_lede: "O checkout ainda nao esta ligado nesta pre-visualizacao. O link de pagamento chega assim que o Stripe estiver configurado.",
+    footer_tagline: "Correspondencia com apoios e financiamentos reais, mais revisao de candidaturas. Nao e aconselhamento juridico ou fiscal."
+  },
+  fr: {
+    nav_how: "Comment ca marche", nav_programs: "Aides suivies", nav_pricing: "Tarifs", nav_faq: "FAQ",
+    nav_cta: "Trouver mes aides",
+    hero_kicker: "Italie · France · Espagne · Portugal · Allemagne · programmes UE",
+    hero_h1: "Trouvez les aides et financements pour lesquels votre entreprise est eligible.",
+    hero_lede: "Nous comparons votre profil a une base de donnees verifiee de programmes reels: Horizon Europe, Bpifrance, ENISA, Invitalia et autres. Nous vous disons lesquels valent le coup, avec des liens officiels. Sur demande, nous revoyons aussi votre dossier.",
+    hero_cta_primary: "Trouver mes aides, des 149 €",
+    hero_cta_secondary: "Voir les programmes suivis",
+    hero_fineprint: "Chaque programme du rapport a un lien vers la source officielle. Vous verifiez vous-meme, on ne vous demande pas de nous croire sur parole.",
+    founder_title: "Qui est derriere GrantPath",
+    founder_bio: "Emanuel Conti, experience en finance et FP&A (Nexans HQ Paris), formation CEMS/ESADE en International Management, italien, anglais et espagnol courants, francais intermediaire. Chaque rapport est relu a la main avant de vous parvenir, ce n'est pas une sortie IA brute et non verifiee.",
+    how_title: "Comment ca marche", how_lede: "Deux etapes, aucune promesse de resultat que nous ne pourrions pas tenir.",
+    how1_title: "Profil", how1_body: "Vous nous indiquez le pays, le secteur, la phase de l'entreprise et votre besoin: R&D, digitalisation, expansion. Trois minutes suffisent.",
+    how2_title: "Verification", how2_body: "Nous comparons le profil a la base de donnees verifiee. Un analyste controle les resultats et explique pourquoi ils comptent pour vous, avec un lien officiel pour chacun.",
+    how3_title: "Rapport", how3_body: "Vous recevez la liste avec montants, criteres, echeances connues et liens officiels. Sur demande, nous revoyons aussi votre dossier avant l'envoi.",
+    programs_title: "Quelques programmes que nous suivons",
+    programs_lede: "Liste partielle, mise a jour a la main. Chaque ligne est verifiee avec sa source officielle.",
+    table_program: "Programme", table_scope: "Zone", table_amount: "Montant", table_source: "Source",
+    scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italie", scope_fr: "France", scope_es: "Espagne",
+    programs_footnote: "Le rapport complet inclut aussi Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italie-France et d'autres.",
+    pricing_title: "Tarifs", pricing_lede: "Paiement unique. Aucun abonnement cache.",
+    price1_title: "Rapport de correspondance",
+    price1_item1: "Liste des programmes compatibles avec votre profil", price1_item2: "Liens officiels et montants pour chacun",
+    price1_item3: "Note de priorite: lesquels regarder en premier", price1_item4: "Livraison en 48 heures",
+    price1_cta: "Demander le rapport",
+    price2_title: "Rapport + revision du dossier",
+    price2_item1: "Tout le rapport de correspondance", price2_item2: "Revision du dossier pour l'aide choisie",
+    price2_item3: "Retour sur le budget et les chiffres du dossier", price2_item4: "Un tour de corrections inclus",
+    price2_cta: "Demander cette formule",
+    pricing_footnote: "Pour un accompagnement continu sur un dossier precis, jusqu'a l'envoi, un accord au success fee est aussi possible: un pourcentage uniquement sur ce qui est reellement obtenu, a definir apres le premier rapport.",
+    disclaimer_text: "⚠️ GrantPath fournit des informations sur des programmes publics de financement et un avis editorial sur les dossiers. Nous ne garantissons l'obtention d'aucun financement, nous ne donnons pas de conseil fiscal ou juridique, et chaque donnee (montants, echeances, criteres) doit toujours etre reverifiee sur la source officielle avant d'agir: les programmes publics changent de conditions dans le temps.",
+    faq_title: "Questions frequentes",
+    faq1_q: "Garantissez-vous l'obtention du financement?", faq1_a: "Non, et mefiez-vous de quiconque le promet: le resultat depend de l'organisme qui accorde l'aide. Nous vous aidons a postuler aux bons programmes, avec un dossier plus solide.",
+    faq2_q: "D'ou viennent les donnees sur les aides?", faq2_a: "D'une base de donnees que nous tenons et verifions a la main aupres des sources officielles de chaque organisme: Commission europeenne, Bpifrance, ENISA, Invitalia et autres. Chaque ligne indique le lien direct et la date de derniere verification.",
+    faq3_q: "Et si vous ne trouvez aucun programme pour moi?", faq3_a: "Nous vous le disons honnetement plutot que de forcer des correspondances faibles. La base de donnees est verifiee mais pas exhaustive, et nous vous le signalons clairement dans le rapport.",
+    contact_title: "Pret?", contact_lede: "Le paiement n'est pas encore connecte dans cet apercu. Le lien de paiement arrivera des que Stripe sera configure.",
+    footer_tagline: "Correspondance avec des aides et financements reels, plus revision de dossiers. Ce n'est pas un conseil juridique ou fiscal."
+  },
+  de: {
+    nav_how: "So funktioniert es", nav_programs: "Erfasste Foerderungen", nav_pricing: "Preise", nav_faq: "FAQ",
+    nav_cta: "Foerderungen finden",
+    hero_kicker: "Italien · Frankreich · Spanien · Portugal · Deutschland · EU-Programme",
+    hero_h1: "Finden Sie die Foerderungen, fuer die Ihr Unternehmen infrage kommt.",
+    hero_lede: "Wir vergleichen Ihr Profil mit einer gepruften Datenbank echter Programme: Horizon Europe, Bpifrance, ENISA, Invitalia und andere. Wir sagen Ihnen, welche sich lohnen, mit offiziellen Links. Auf Wunsch pruefen wir auch Ihren Antrag.",
+    hero_cta_primary: "Foerderungen finden, ab 149 €",
+    hero_cta_secondary: "Erfasste Programme ansehen",
+    hero_fineprint: "Jedes Programm im Bericht hat einen Link zur offiziellen Quelle. Sie pruefen selbst nach, wir bitten Sie nicht, uns einfach zu glauben.",
+    founder_title: "Wer hinter GrantPath steht",
+    founder_bio: "Emanuel Conti, Hintergrund in Finance und FP&A (Nexans HQ Paris), CEMS/ESADE-Ausbildung in International Management, fliessend Italienisch, Englisch und Spanisch, Franzoesisch auf Mittelstufe. Jeder Bericht wird von Hand geprueft, bevor er bei Ihnen ankommt, kein ungeprueftes KI-Ergebnis.",
+    how_title: "So funktioniert es", how_lede: "Zwei Schritte, keine Erfolgsversprechen, die wir nicht halten koennen.",
+    how1_title: "Profil", how1_body: "Sie nennen uns Land, Branche, Unternehmensphase und Bedarf: F&E, Digitalisierung, Expansion. Drei Minuten reichen.",
+    how2_title: "Pruefung", how2_body: "Wir vergleichen das Profil mit der gepruften Datenbank. Ein Analyst kontrolliert die Treffer und erklaert, warum sie fuer Sie relevant sind, mit offiziellem Link zu jedem.",
+    how3_title: "Bericht", how3_body: "Sie erhalten die Liste mit Betraegen, Voraussetzungen, bekannten Fristen und offiziellen Links. Auf Wunsch pruefen wir auch Ihren Antrag vor dem Versand.",
+    programs_title: "Einige Programme, die wir erfassen",
+    programs_lede: "Teilweise Liste, von Hand aktualisiert. Jede Zeile ist mit offizieller Quelle geprueft.",
+    table_program: "Programm", table_scope: "Bereich", table_amount: "Betrag", table_source: "Quelle",
+    scope_eu_deeptech: "EU (Deep-Tech)", scope_it: "Italien", scope_fr: "Frankreich", scope_es: "Spanien",
+    programs_footnote: "Im vollstaendigen Bericht finden Sie auch Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italien-Frankreich und weitere.",
+    pricing_title: "Preise", pricing_lede: "Einmalige Zahlung. Kein verstecktes Abonnement.",
+    price1_title: "Funding Match Report",
+    price1_item1: "Liste der zu Ihrem Profil passenden Programme", price1_item2: "Offizielle Links und Betraege zu jedem",
+    price1_item3: "Prioritaetshinweis: was zuerst pruefen", price1_item4: "Lieferung in 48 Stunden",
+    price1_cta: "Bericht anfordern",
+    price2_title: "Match + Antragspruefung",
+    price2_item1: "Der komplette Funding Match Report", price2_item2: "Pruefung des Antrags fuer das gewaehlte Programm",
+    price2_item3: "Feedback zu Budget und Zahlen im Antrag", price2_item4: "Eine Korrekturrunde inklusive",
+    price2_cta: "Dieses Paket anfordern",
+    pricing_footnote: "Fuer laufende Unterstuetzung bei einem konkreten Antrag, bis zum Versand, bieten wir auch eine Erfolgshonorar-Vereinbarung: ein Prozentsatz nur auf tatsaechlich erhaltene Mittel, nach dem ersten Bericht zu vereinbaren.",
+    disclaimer_text: "⚠️ GrantPath liefert Informationen zu oeffentlichen Foerderprogrammen und redaktionelles Feedback zu Antraegen. Wir garantieren keine Foerderzusage, geben keine Steuer- oder Rechtsberatung, und jede Angabe (Betraege, Fristen, Voraussetzungen) sollte vor dem Handeln immer bei der offiziellen Quelle geprueft werden: oeffentliche Programme aendern ihre Bedingungen im Lauf der Zeit.",
+    faq_title: "Haeufige Fragen",
+    faq1_q: "Garantieren Sie, dass ich die Foerderung bekomme?", faq1_a: "Nein, und misstrauen Sie jedem, der das verspricht: das Ergebnis haengt von der foerdernden Stelle ab. Wir helfen Ihnen, sich bei den richtigen Programmen zu bewerben, mit einem stabileren Antrag.",
+    faq2_q: "Woher stammen die Daten zu den Foerderungen?", faq2_a: "Aus einer Datenbank, die wir pflegen und von Hand mit den offiziellen Quellen jeder Stelle abgleichen: EU-Kommission, Bpifrance, ENISA, Invitalia und andere. Jede Zeile enthaelt den direkten Link und das Datum der letzten Pruefung.",
+    faq3_q: "Und wenn Sie kein passendes Programm finden?", faq3_a: "Das sagen wir ehrlich, statt schwache Treffer zu erzwingen. Die Datenbank ist gepueft, aber nicht vollstaendig, und das steht klar im Bericht.",
+    contact_title: "Bereit?", contact_lede: "Der Checkout ist in dieser Vorschau noch nicht angebunden. Der Zahlungslink kommt, sobald Stripe eingerichtet ist.",
+    footer_tagline: "Abgleich mit echten Foerderungen und Finanzierungen, plus Antragspruefung. Keine Rechts- oder Steuerberatung."
+  }
+};
+
+function applyLang(lang) {
+  const dict = translations[lang] || translations.it;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.textContent = dict[key];
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('#lang-switch button').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  try { localStorage.setItem('gp_lang', lang); } catch (e) {}
+}
+
+document.querySelectorAll('#lang-switch button').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+});
+
+(function initLang() {
+  let lang = 'it';
+  try {
+    const saved = localStorage.getItem('gp_lang');
+    if (saved && translations[saved]) lang = saved;
+    else {
+      const nav = (navigator.language || 'it').slice(0, 2).toLowerCase();
+      if (translations[nav]) lang = nav;
+    }
+  } catch (e) {}
+  applyLang(lang);
+})();
+</script>
 
 </body>
 </html>
