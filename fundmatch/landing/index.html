@@ -186,8 +186,8 @@
   <section id="pricing">
     <div class="wrap">
       <h2 data-i18n="pricing_title">Prezzi</h2>
-      <p class="section-lede" data-i18n="pricing_lede">Pagamento una tantum. Nessun abbonamento nascosto.</p>
-      <div class="grid2">
+      <p class="section-lede" data-i18n="pricing_lede">Pagamento una tantum sui primi due pacchetti. Nessun abbonamento nascosto.</p>
+      <div class="grid3">
         <div class="price-card">
           <h3 data-i18n="price1_title">Funding Match Report</h3>
           <div class="price">€149</div>
@@ -199,7 +199,7 @@
           </ul>
           <a href="#contact" class="btn btn-ghost" style="width:100%" data-i18n="price1_cta">Richiedi il report</a>
         </div>
-        <div class="price-card featured">
+        <div class="price-card">
           <h3 data-i18n="price2_title">Match + revisione candidatura</h3>
           <div class="price">€349</div>
           <ul class="checklist">
@@ -208,13 +208,23 @@
             <li data-i18n="price2_item3">Feedback su budget e numeri della candidatura</li>
             <li data-i18n="price2_item4">Un giro di correzioni incluso</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="width:100%" data-i18n="price2_cta">Richiedi questo pacchetto</a>
+          <a href="#contact" class="btn btn-ghost" style="width:100%" data-i18n="price2_cta">Richiedi questo pacchetto</a>
+        </div>
+        <div class="price-card featured">
+          <h3 data-i18n="price3_title">Accompagnamento fino all'invio</h3>
+          <div class="price" style="font-size:1.3rem" data-i18n="price3_price">Quota fissa + success fee</div>
+          <ul class="checklist">
+            <li data-i18n="price3_item1">Tutto il Match + revisione candidatura</li>
+            <li data-i18n="price3_item2">Ti seguiamo passo passo fino all'invio, non solo un documento</li>
+            <li data-i18n="price3_item3">Rispondiamo alle tue domande lungo il percorso</li>
+            <li data-i18n="price3_item4">Success fee solo su quanto ottenuto davvero</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="width:100%" data-i18n="price3_cta">Parliamone</a>
         </div>
       </div>
       <p class="fineprint" style="margin-top:16px" data-i18n="pricing_footnote">
-        Per supporto continuativo su una candidatura specifica, fino all'invio, e' disponibile
-        anche un accordo a success fee: una percentuale solo su quanto effettivamente ottenuto,
-        da concordare dopo il primo report.
+        L'accompagnamento si concorda caso per caso dopo il primo report, in base alla
+        complessita' del bando scelto.
       </p>
     </div>
   </section>
@@ -301,7 +311,7 @@ const translations = {
     table_program: "Programma", table_scope: "Ambito", table_amount: "Importo", table_source: "Fonte",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "Spagna",
     programs_footnote: "Nel report completo trovi anche Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri.",
-    pricing_title: "Prezzi", pricing_lede: "Pagamento una tantum. Nessun abbonamento nascosto.",
+    pricing_title: "Prezzi", pricing_lede: "Pagamento una tantum sui primi due pacchetti. Nessun abbonamento nascosto.",
     price1_title: "Funding Match Report",
     price1_item1: "Elenco dei programmi compatibili col tuo profilo", price1_item2: "Link ufficiali e importi per ognuno",
     price1_item3: "Nota di priorita': quali valutare per primi", price1_item4: "Consegna in 48 ore",
@@ -310,7 +320,11 @@ const translations = {
     price2_item1: "Tutto il Funding Match Report", price2_item2: "Revisione della candidatura per il bando scelto",
     price2_item3: "Feedback su budget e numeri della candidatura", price2_item4: "Un giro di correzioni incluso",
     price2_cta: "Richiedi questo pacchetto",
-    pricing_footnote: "Per supporto continuativo su una candidatura specifica, fino all'invio, e' disponibile anche un accordo a success fee: una percentuale solo su quanto effettivamente ottenuto, da concordare dopo il primo report.",
+    price3_title: "Accompagnamento fino all'invio", price3_price: "Quota fissa + success fee",
+    price3_item1: "Tutto il Match + revisione candidatura", price3_item2: "Ti seguiamo passo passo fino all'invio, non solo un documento",
+    price3_item3: "Rispondiamo alle tue domande lungo il percorso", price3_item4: "Success fee solo su quanto ottenuto davvero",
+    price3_cta: "Parliamone",
+    pricing_footnote: "L'accompagnamento si concorda caso per caso dopo il primo report, in base alla complessita' del bando scelto.",
     disclaimer_text: "⚠️ GrantPath fornisce informazioni su programmi pubblici di finanziamento e un feedback editoriale sulle candidature. Non garantiamo l'ottenimento di alcun finanziamento, non diamo consulenza fiscale o legale, e ogni dato (importi, scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire: i programmi pubblici cambiano condizioni nel tempo.",
     faq_title: "Domande frequenti",
     faq1_q: "Garantite che ottero' il finanziamento?", faq1_a: "No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.",
@@ -339,7 +353,7 @@ const translations = {
     table_program: "Programa", table_scope: "Ambito", table_amount: "Importe", table_source: "Fuente",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "España",
     programs_footnote: "En el informe completo tambien encontraras Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia y otros.",
-    pricing_title: "Precios", pricing_lede: "Pago unico. Sin suscripciones ocultas.",
+    pricing_title: "Precios", pricing_lede: "Pago unico en los dos primeros paquetes. Sin suscripciones ocultas.",
     price1_title: "Informe de ayudas compatibles",
     price1_item1: "Listado de programas compatibles con tu perfil", price1_item2: "Enlaces oficiales e importes de cada uno",
     price1_item3: "Nota de prioridad: cuales revisar primero", price1_item4: "Entrega en 48 horas",
@@ -348,7 +362,11 @@ const translations = {
     price2_item1: "Todo el informe de ayudas compatibles", price2_item2: "Revision de la solicitud para la ayuda elegida",
     price2_item3: "Comentarios sobre el presupuesto y las cifras", price2_item4: "Una ronda de correcciones incluida",
     price2_cta: "Pedir este paquete",
-    pricing_footnote: "Para acompañamiento continuo en una solicitud concreta, hasta el envio, tambien ofrecemos un acuerdo de success fee: un porcentaje solo sobre lo realmente conseguido, a acordar tras el primer informe.",
+    price3_title: "Acompañamiento hasta el envio", price3_price: "Cuota fija + success fee",
+    price3_item1: "Todo el Match + revision de la solicitud", price3_item2: "Te acompañamos paso a paso hasta el envio, no es solo un documento",
+    price3_item3: "Respondemos tus dudas durante todo el proceso", price3_item4: "Success fee solo sobre lo realmente conseguido",
+    price3_cta: "Hablemos",
+    pricing_footnote: "El acompañamiento se acuerda caso por caso tras el primer informe, segun la complejidad de la ayuda elegida.",
     disclaimer_text: "⚠️ GrantPath ofrece informacion sobre programas publicos de financiacion y comentarios editoriales sobre solicitudes. No garantizamos la obtencion de ninguna financiacion, no damos asesoria fiscal ni legal, y cada dato (importes, plazos, requisitos) debe verificarse siempre en la fuente oficial antes de actuar: los programas publicos cambian de condiciones con el tiempo.",
     faq_title: "Preguntas frecuentes",
     faq1_q: "¿Garantizan que consiga la financiacion?", faq1_a: "No, y desconfia de quien lo prometa: el resultado depende del organismo que otorga la ayuda. Te ayudamos a presentarte a los programas correctos, con una solicitud mas solida.",
@@ -377,7 +395,7 @@ const translations = {
     table_program: "Programa", table_scope: "Ambito", table_amount: "Valor", table_source: "Fonte",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Franca", scope_es: "Espanha",
     programs_footnote: "No relatorio completo encontra tambem Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Franca e outros.",
-    pricing_title: "Precos", pricing_lede: "Pagamento unico. Sem subscricoes escondidas.",
+    pricing_title: "Precos", pricing_lede: "Pagamento unico nos dois primeiros pacotes. Sem subscricoes escondidas.",
     price1_title: "Relatorio de apoios compativeis",
     price1_item1: "Lista dos programas compativeis com o seu perfil", price1_item2: "Links oficiais e valores de cada um",
     price1_item3: "Nota de prioridade: quais avaliar primeiro", price1_item4: "Entrega em 48 horas",
@@ -386,7 +404,11 @@ const translations = {
     price2_item1: "Tudo o que esta no relatorio de apoios", price2_item2: "Revisao da candidatura para o programa escolhido",
     price2_item3: "Comentarios sobre orcamento e numeros", price2_item4: "Uma ronda de correcoes incluida",
     price2_cta: "Pedir este pacote",
-    pricing_footnote: "Para acompanhamento continuo numa candidatura especifica, ate ao envio, tambem oferecemos um acordo de success fee: uma percentagem apenas sobre o que for realmente obtido, a combinar depois do primeiro relatorio.",
+    price3_title: "Acompanhamento ate ao envio", price3_price: "Taxa fixa + success fee",
+    price3_item1: "Tudo o que esta no Match + revisao da candidatura", price3_item2: "Acompanhamos-lhe passo a passo ate ao envio, nao e so um documento",
+    price3_item3: "Respondemos as suas duvidas ao longo do processo", price3_item4: "Success fee apenas sobre o que for realmente obtido",
+    price3_cta: "Vamos falar",
+    pricing_footnote: "O acompanhamento e combinado caso a caso depois do primeiro relatorio, consoante a complexidade do programa escolhido.",
     disclaimer_text: "⚠️ O GrantPath fornece informacao sobre programas publicos de financiamento e comentarios editoriais sobre candidaturas. Nao garantimos a obtencao de qualquer financiamento, nao damos aconselhamento fiscal ou juridico, e cada dado (valores, prazos, requisitos) deve ser sempre confirmado na fonte oficial antes de agir: os programas publicos mudam de condicoes ao longo do tempo.",
     faq_title: "Perguntas frequentes",
     faq1_q: "Garantem que vou obter o financiamento?", faq1_a: "Nao, e desconfie de quem prometer isso: o resultado depende da entidade que atribui o apoio. Ajudamos voce a candidatar-se aos programas certos, com uma candidatura mais solida.",
@@ -415,7 +437,7 @@ const translations = {
     table_program: "Programme", table_scope: "Zone", table_amount: "Montant", table_source: "Source",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italie", scope_fr: "France", scope_es: "Espagne",
     programs_footnote: "Le rapport complet inclut aussi Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italie-France et d'autres.",
-    pricing_title: "Tarifs", pricing_lede: "Paiement unique. Aucun abonnement cache.",
+    pricing_title: "Tarifs", pricing_lede: "Paiement unique sur les deux premieres formules. Aucun abonnement cache.",
     price1_title: "Rapport de correspondance",
     price1_item1: "Liste des programmes compatibles avec votre profil", price1_item2: "Liens officiels et montants pour chacun",
     price1_item3: "Note de priorite: lesquels regarder en premier", price1_item4: "Livraison en 48 heures",
@@ -424,7 +446,11 @@ const translations = {
     price2_item1: "Tout le rapport de correspondance", price2_item2: "Revision du dossier pour l'aide choisie",
     price2_item3: "Retour sur le budget et les chiffres du dossier", price2_item4: "Un tour de corrections inclus",
     price2_cta: "Demander cette formule",
-    pricing_footnote: "Pour un accompagnement continu sur un dossier precis, jusqu'a l'envoi, un accord au success fee est aussi possible: un pourcentage uniquement sur ce qui est reellement obtenu, a definir apres le premier rapport.",
+    price3_title: "Accompagnement jusqu'a l'envoi", price3_price: "Forfait + success fee",
+    price3_item1: "Tout le Match + revision du dossier", price3_item2: "Nous vous accompagnons pas a pas jusqu'a l'envoi, pas seulement un document",
+    price3_item3: "Nous repondons a vos questions tout au long du parcours", price3_item4: "Success fee uniquement sur ce qui est reellement obtenu",
+    price3_cta: "On en parle",
+    pricing_footnote: "L'accompagnement se definit au cas par cas apres le premier rapport, selon la complexite du dossier choisi.",
     disclaimer_text: "⚠️ GrantPath fournit des informations sur des programmes publics de financement et un avis editorial sur les dossiers. Nous ne garantissons l'obtention d'aucun financement, nous ne donnons pas de conseil fiscal ou juridique, et chaque donnee (montants, echeances, criteres) doit toujours etre reverifiee sur la source officielle avant d'agir: les programmes publics changent de conditions dans le temps.",
     faq_title: "Questions frequentes",
     faq1_q: "Garantissez-vous l'obtention du financement?", faq1_a: "Non, et mefiez-vous de quiconque le promet: le resultat depend de l'organisme qui accorde l'aide. Nous vous aidons a postuler aux bons programmes, avec un dossier plus solide.",
@@ -453,7 +479,7 @@ const translations = {
     table_program: "Programm", table_scope: "Bereich", table_amount: "Betrag", table_source: "Quelle",
     scope_eu_deeptech: "EU (Deep-Tech)", scope_it: "Italien", scope_fr: "Frankreich", scope_es: "Spanien",
     programs_footnote: "Im vollstaendigen Bericht finden Sie auch Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italien-Frankreich und weitere.",
-    pricing_title: "Preise", pricing_lede: "Einmalige Zahlung. Kein verstecktes Abonnement.",
+    pricing_title: "Preise", pricing_lede: "Einmalige Zahlung bei den ersten beiden Paketen. Kein verstecktes Abonnement.",
     price1_title: "Funding Match Report",
     price1_item1: "Liste der zu Ihrem Profil passenden Programme", price1_item2: "Offizielle Links und Betraege zu jedem",
     price1_item3: "Prioritaetshinweis: was zuerst pruefen", price1_item4: "Lieferung in 48 Stunden",
@@ -462,7 +488,11 @@ const translations = {
     price2_item1: "Der komplette Funding Match Report", price2_item2: "Pruefung des Antrags fuer das gewaehlte Programm",
     price2_item3: "Feedback zu Budget und Zahlen im Antrag", price2_item4: "Eine Korrekturrunde inklusive",
     price2_cta: "Dieses Paket anfordern",
-    pricing_footnote: "Fuer laufende Unterstuetzung bei einem konkreten Antrag, bis zum Versand, bieten wir auch eine Erfolgshonorar-Vereinbarung: ein Prozentsatz nur auf tatsaechlich erhaltene Mittel, nach dem ersten Bericht zu vereinbaren.",
+    price3_title: "Begleitung bis zum Versand", price3_price: "Festpreis + Erfolgshonorar",
+    price3_item1: "Alles aus Match + Antragspruefung", price3_item2: "Wir begleiten Sie Schritt fuer Schritt bis zum Versand, nicht nur ein Dokument",
+    price3_item3: "Wir beantworten Ihre Fragen waehrend des gesamten Prozesses", price3_item4: "Erfolgshonorar nur auf tatsaechlich erhaltene Mittel",
+    price3_cta: "Lassen Sie uns reden",
+    pricing_footnote: "Die Begleitung wird nach dem ersten Bericht individuell vereinbart, je nach Komplexitaet des gewaehlten Programms.",
     disclaimer_text: "⚠️ GrantPath liefert Informationen zu oeffentlichen Foerderprogrammen und redaktionelles Feedback zu Antraegen. Wir garantieren keine Foerderzusage, geben keine Steuer- oder Rechtsberatung, und jede Angabe (Betraege, Fristen, Voraussetzungen) sollte vor dem Handeln immer bei der offiziellen Quelle geprueft werden: oeffentliche Programme aendern ihre Bedingungen im Lauf der Zeit.",
     faq_title: "Haeufige Fragen",
     faq1_q: "Garantieren Sie, dass ich die Foerderung bekomme?", faq1_a: "Nein, und misstrauen Sie jedem, der das verspricht: das Ergebnis haengt von der foerdernden Stelle ab. Wir helfen Ihnen, sich bei den richtigen Programmen zu bewerben, mit einem stabileren Antrag.",
