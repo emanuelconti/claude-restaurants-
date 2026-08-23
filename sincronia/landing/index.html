@@ -7,8 +7,8 @@
 <meta name="description" content="Bandi e finanziamenti pubblici reali per la tua impresa, con link ufficiali, piu' revisione della candidatura.">
 <style>
   :root{
-    --bg:#0f1216; --surface:#171b21; --ink:#eef1f5; --ink-soft:#98a2b3;
-    --accent:#2f9e6e; --accent-ink:#06120c; --line:#262c35; --warn:#e0a83f;
+    --bg:#faf7f2; --surface:#ffffff; --ink:#241f1a; --ink-soft:#6b6259;
+    --accent:#b5622e; --accent-ink:#ffffff; --line:#e8e0d5; --warn:#c98a2c;
     --maxw:1060px; --radius:14px;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
@@ -16,7 +16,7 @@
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-  header.site{position:sticky;top:0;background:rgba(15,18,22,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+  header.site{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px;flex-wrap:wrap}
   .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.01em}
   .brand span{color:var(--accent)}
@@ -34,7 +34,7 @@
   section{padding:60px 0}
   .hero{padding:56px 0 36px;text-align:center}
   .kicker{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
-    color:var(--accent);background:rgba(47,158,110,.14);padding:6px 12px;border-radius:999px;margin-bottom:20px}
+    color:var(--accent);background:rgba(181,98,46,.12);padding:6px 12px;border-radius:999px;margin-bottom:20px}
   h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(1.9rem,4.6vw,2.85rem);line-height:1.14;letter-spacing:-.01em;margin:0 auto 18px;max-width:780px}
   h2{font-family:Georgia,"Times New Roman",serif}
   .compare{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
@@ -46,7 +46,7 @@
   .compare-row > div{padding:18px}
   .compare-row .col-old{color:var(--ink-soft)}
   .compare-row .col-old strong{display:block;color:var(--ink);font-weight:700;margin-bottom:4px}
-  .compare-row .col-new{background:rgba(47,158,110,.05)}
+  .compare-row .col-new{background:rgba(181,98,46,.05)}
   .compare-row .col-new strong{display:block;color:var(--accent);font-weight:700;margin-bottom:4px}
   .compare-row p{margin:0;font-size:.9rem;line-height:1.5}
   @media(max-width:640px){.compare-head div{font-size:.82rem;padding:10px 12px}.compare-row{grid-template-columns:1fr}.compare-row .col-old{border-bottom:1px solid var(--line)}.compare-row > div{padding:14px}}
@@ -63,14 +63,14 @@
   .step-num{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);
     display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem;margin-bottom:12px}
   .price-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-  .price-card.featured{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,158,110,.12)}
+  .price-card.featured{border-color:var(--accent);box-shadow:0 0 0 3px rgba(181,98,46,.12)}
   .price{font-size:2rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
   .price small{font-size:.95rem;font-weight:600;color:var(--ink-soft)}
   ul.checklist{list-style:none;padding:0;margin:16px 0}
   ul.checklist li{padding-left:24px;position:relative;margin-bottom:9px;color:var(--ink-soft);font-size:.95rem}
   ul.checklist li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
-  .disclaimer{background:rgba(224,168,63,.1);border:1px solid rgba(224,168,63,.35);border-radius:var(--radius);
-    padding:16px 20px;font-size:.86rem;color:#f0c979}
+  .disclaimer{background:rgba(201,138,44,.12);border:1px solid rgba(201,138,44,.4);border-radius:var(--radius);
+    padding:16px 20px;font-size:.86rem;color:#7a4a12}
   .source-table{width:100%;border-collapse:collapse;font-size:.9rem}
   .source-table th, .source-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
   .source-table th{color:var(--ink-soft);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
@@ -126,35 +126,6 @@
     </div>
   </section>
 
-  <section id="author">
-    <div class="wrap">
-      <span class="kicker" data-i18n="author_kicker">Chi c'e' dietro</span>
-      <h2 data-i18n="author_title">Chi c'e' dietro Sincronia?</h2>
-      <div class="card founder">
-        <div class="avatar">EC</div>
-        <div>
-          <strong data-i18n="author_name">Emanuel Conti</strong>
-          <p style="margin:10px 0 0;color:var(--ink-soft)" data-i18n="author_p1">
-            Background di finanza e FP&amp;A: stage in M&amp;A e reporting finanziario alla sede
-            centrale di Nexans a Parigi. Formazione in International Management tra CEMS
-            (alleanza globale di 30+ business school, #4 al mondo nel QS MiM 2026), ESADE
-            Business School a Barcellona e LUISS a Roma.
-          </p>
-          <p style="margin:10px 0 0;color:var(--ink-soft)" data-i18n="author_p2">
-            Ha lavorato come consulente strategico per ING Wholesale Banking su casi d'uso
-            e impatto quantificato di nuove tecnologie, ed e' stato Community Director in un
-            programma di consulenza studentesca. Italiano madrelingua, inglese e spagnolo
-            fluenti, francese intermedio: la base per un servizio davvero multi-paese, non
-            solo tradotto.
-          </p>
-          <p style="margin:10px 0 0;color:var(--ink-soft)" data-i18n="author_p3">
-            Ogni report Sincronia viene controllato a mano prima di arrivarti. Non e' un output
-            AI grezzo e non rivisto.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="compare">
     <div class="wrap">
