@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Fendria — motore di matching bandi/finanziamenti.
+Sincronia — motore di matching bandi/finanziamenti.
 
 Prende un profilo azienda (paese, settore/parole chiave, fase) e lo confronta con il
-database REALE e verificato in fendria/data/programs.json (nessun bando è inventato:
+database REALE e verificato in sincronia/data/programs.json (nessun bando è inventato:
 ogni riga ha un link ufficiale e una data di ultima verifica).
 
 Uso:

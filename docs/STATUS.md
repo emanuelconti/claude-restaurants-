@@ -1,21 +1,21 @@
-# STATUS — Fendria (pivot da RaiseReady, pivot da SocialPerks Pilot)
+# STATUS — Sincronia (pivot da RaiseReady, pivot da SocialPerks Pilot)
 
-Ultimo aggiornamento: Ciclo 5 (secondo pivot — vedi `fendria/README.md`)
+Ultimo aggiornamento: Ciclo 5 (secondo pivot — vedi `sincronia/README.md`)
 
-## Ciclo 5 — secondo pivot: Fendria
+## Ciclo 5 — secondo pivot: Sincronia
 Motivo: RaiseReady vendeva "un PDF scritto dall'AI" — obiezione corretta del fondatore,
-nessuno paga per un output ottenibile gratis da un chatbot. **Fendria** vende accesso a
+nessuno paga per un output ottenibile gratis da un chatbot. **Sincronia** vende accesso a
 bandi/finanziamenti pubblici REALI (Horizon Europe, Bpifrance, ENISA, Invitalia, Eurostars,
 Interreg, Kit Digital — verificati via ricerca web, non inventati) + revisione della
 candidatura da parte di un analista — mercato consolidato, non commodity AI.
 
 Costruito e testato in questo ciclo:
-- `fendria/data/programs.json` — 10 programmi reali, ognuno con link ufficiale e data di
+- `sincronia/data/programs.json` — 10 programmi reali, ognuno con link ufficiale e data di
   verifica (2026-08-22)
-- `fendria/delivery/match_grants.py` — matching profilo→programmi, **testato con la tua
+- `sincronia/delivery/match_grants.py` — matching profilo→programmi, **testato con la tua
   chiave Groq reale**: la personalizzazione AI resta ancorata ai dati veri (dove non sa una
   scadenza esatta scrive "verificare sul sito ufficiale", non la inventa)
-- `fendria/landing/index.html` — sito con segnali di autorevolezza reali: credenziali del
+- `sincronia/landing/index.html` — sito con segnali di autorevolezza reali: credenziali del
   fondatore (vere, dal CV), tabella programmi con link diretti alle fonti ufficiali,
   disclaimer "non garantiamo l'ottenimento di alcun finanziamento". Verificato: HTML valido,
   screenshot desktop/mobile puliti.
