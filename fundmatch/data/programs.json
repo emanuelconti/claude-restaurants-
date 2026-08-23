@@ -1,0 +1,122 @@
+[
+  {
+    "id": "eic-accelerator",
+    "name": "EIC Accelerator",
+    "scope": "EU-wide",
+    "countries": ["FR", "IT", "ES", "EU"],
+    "target": "Startup/SME, deep-tech, alto rischio/alta innovazione",
+    "funding_type": "Grant + equity (blended finance)",
+    "amount": "Grant fino a €2.5M (fino al 70% dei costi) + equity €1-15M",
+    "official_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+    "notes": "Parte del programma Horizon Europe. Selezione competitiva, richiede un progetto ad alto contenuto tecnologico.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "eic-pathfinder",
+    "name": "EIC Pathfinder",
+    "scope": "EU-wide",
+    "countries": ["FR", "IT", "ES", "EU"],
+    "target": "Startup/PMI/ricerca, tecnologie emergenti/deep-tech early-stage",
+    "funding_type": "Grant",
+    "amount": "Fino a €2.5M",
+    "official_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
+    "notes": "Horizon Europe 2026-2027 Work Programme, ~€14 miliardi distribuiti su 12 cluster tematici.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "eurostars-call11",
+    "name": "Eurostars Call 11",
+    "scope": "EU-wide (collaborazioni internazionali)",
+    "countries": ["FR", "IT", "ES", "EU"],
+    "target": "PMI innovative con progetti R&D collaborativi internazionali",
+    "funding_type": "Grant",
+    "amount": "Fino a €3M",
+    "official_url": "https://www.eurostars-eureka.eu/",
+    "notes": "Candidature aperte 9 luglio - 10 settembre 2026 (verificare finestra aggiornata sul sito ufficiale).",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-aide-developpement",
+    "name": "Bpifrance — Aide au développement (innovation de rupture)",
+    "scope": "Francia",
+    "countries": ["FR"],
+    "target": "PMI/startup con innovazione tecnologica ad alto contenuto scientifico",
+    "funding_type": "Grant",
+    "amount": "Fino a €2M, copertura fino al 45% delle spese eligibili",
+    "official_url": "https://www.bpifrance.fr/",
+    "notes": "Gestito direttamente da Bpifrance, sportello permanente.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-bourse-french-tech",
+    "name": "Bourse French Tech",
+    "scope": "Francia",
+    "countries": ["FR"],
+    "target": "Startup in fase iniziale, prime spese di un progetto innovativo",
+    "funding_type": "Grant",
+    "amount": "Fino a €50.000",
+    "official_url": "https://www.bpifrance.fr/",
+    "notes": "Pensato per finanziare le primissime spese di validazione di un progetto.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-appels-collaboratifs",
+    "name": "Bpifrance — Appels à projets collaboratifs R&D",
+    "scope": "Francia",
+    "countries": ["FR"],
+    "target": "Consorzi PMI/grandi imprese/ricerca su progetti R&D industriali",
+    "funding_type": "Grant",
+    "amount": "Variabile per bando",
+    "official_url": "https://www.bpifrance.fr/",
+    "notes": "Bando aperto fino al 9 settembre 2026 (verificare la finestra corrente sul sito ufficiale).",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "enisa-startups-pymes",
+    "name": "ENISA — Préstamos Participativos Startups y Pymes",
+    "scope": "Spagna",
+    "countries": ["ES"],
+    "target": "Startup/PMI innovative, qualsiasi settore con progetto differenziale",
+    "funding_type": "Prestito partecipativo (no garanzie personali)",
+    "amount": "Da €25.000 a €1.500.000",
+    "official_url": "https://www.enisa.es/",
+    "notes": "Ente pubblico spagnolo, Ministero dell'Industria. Finestra di candidatura aperta tutto l'anno.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "kit-digital",
+    "name": "Kit Digital",
+    "scope": "Spagna",
+    "countries": ["ES"],
+    "target": "PMI e autonomi che vogliono digitalizzarsi",
+    "funding_type": "Grant (bono digitale)",
+    "amount": "Fino a €29.000",
+    "official_url": "https://www.acelerapyme.gob.es/kit-digital",
+    "notes": "Programma del governo spagnolo per la digitalizzazione delle PMI.",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "smart-start-italia",
+    "name": "Smart&Start Italia",
+    "scope": "Italia",
+    "countries": ["IT"],
+    "target": "Startup innovative (costituite o da costituire), progetti €100k-€1.5M",
+    "funding_type": "Finanziamento a tasso zero + quota a fondo perduto",
+    "amount": "Fino a €1.5M, copertura fino al 90% delle spese eligibili",
+    "official_url": "https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia",
+    "notes": "Gestito da Invitalia, sportello a graduatoria continua (non a bando con scadenza fissa).",
+    "last_verified": "2026-08-22"
+  },
+  {
+    "id": "interreg-it-fr-maritime",
+    "name": "Interreg Italia-Francia Marittimo",
+    "scope": "Italia-Francia (regioni transfrontaliere marittime)",
+    "countries": ["IT", "FR"],
+    "target": "Aspiranti imprenditori e PMI in transizione digitale/ecologica",
+    "funding_type": "Voucher/grant",
+    "amount": "Fino a €6.900 per consulenza/formazione/innovazione digitale",
+    "official_url": "https://interreg-maritime.eu/",
+    "notes": "Programma 2021-2027, due linee: costituzione d'impresa e sostegno PMI esistenti.",
+    "last_verified": "2026-08-22"
+  }
+]

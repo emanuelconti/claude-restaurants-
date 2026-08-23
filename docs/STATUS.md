@@ -1,8 +1,28 @@
-# STATUS — RaiseReady (pivot da SocialPerks Pilot)
+# STATUS — GrantPath (pivot da RaiseReady, pivot da SocialPerks Pilot)
 
-Ultimo aggiornamento: Ciclo 4 (pipeline di delivery automatica + go-live checklist)
+Ultimo aggiornamento: Ciclo 5 (secondo pivot — vedi `fundmatch/README.md`)
 
-## Ciclo 4 — novità
+## Ciclo 5 — secondo pivot: GrantPath
+Motivo: RaiseReady vendeva "un PDF scritto dall'AI" — obiezione corretta del fondatore,
+nessuno paga per un output ottenibile gratis da un chatbot. **GrantPath** vende accesso a
+bandi/finanziamenti pubblici REALI (Horizon Europe, Bpifrance, ENISA, Invitalia, Eurostars,
+Interreg, Kit Digital — verificati via ricerca web, non inventati) + revisione della
+candidatura da parte di un analista — mercato consolidato, non commodity AI.
+
+Costruito e testato in questo ciclo:
+- `fundmatch/data/programs.json` — 10 programmi reali, ognuno con link ufficiale e data di
+  verifica (2026-08-22)
+- `fundmatch/delivery/match_grants.py` — matching profilo→programmi, **testato con la tua
+  chiave Groq reale**: la personalizzazione AI resta ancorata ai dati veri (dove non sa una
+  scadenza esatta scrive "verificare sul sito ufficiale", non la inventa)
+- `fundmatch/landing/index.html` — sito con segnali di autorevolezza reali: credenziali del
+  fondatore (vere, dal CV), tabella programmi con link diretti alle fonti ufficiali,
+  disclaimer "non garantiamo l'ottenimento di alcun finanziamento". Verificato: HTML valido,
+  screenshot desktop/mobile puliti.
+
+RaiseReady (Ciclo 3-4) resta nel repo, non cancellato, non più il business primario.
+
+## Ciclo 4 — novità (storico RaiseReady, non più il business primario)
 - Posizionamento allargato: non più solo "founder in fundraising" ma qualunque deck ad alto
   rischio (investitori, vendite, candidature acceleratori/bandi) — mercato più ampio, come
   richiesto. Aggiornati landing/FAQ/disclaimer/report template di conseguenza.
