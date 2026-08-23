@@ -177,7 +177,16 @@ def main():
         template = REPORT_TEMPLATE_PATH.read_text(encoding="utf-8")
         prompt = build_user_prompt(deck_text, model_text, template)
         log.info("Chiamata al modello (%s)...", os.getenv("LLM_MODEL", DEFAULT_MODEL))
-        report = call_llm(prompt)
+        draft = call_llm(prompt)
+        # Ogni bozza reale resta esplicitamente marcata "da rivedere" — per design, non un
+        # dettaglio opzionale: il valore venduto è il giudizio di un analista reale, non
+        # l'output grezzo del modello. Questo banner va rimosso a mano SOLO dopo revisione
+        # umana, prima di mandare il report al cliente.
+        banner = (
+            "> ⚠️ BOZZA — DA RIVEDERE PRIMA DI INVIARE AL CLIENTE. Rimuovi questa riga solo "
+            "dopo aver controllato il contenuto a mano.\n\n"
+        )
+        report = banner + draft
 
     out_path = Path(args.out)
     out_path.write_text(report, encoding="utf-8")
