@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inizia — Sincronia</title>
+<meta name="description" content="Raccontaci la tua azienda per iniziare il matching su bandi e finanziamenti.">
+<style>
+  :root{
+    --bg:#faf7f2; --surface:#ffffff; --ink:#241f1a; --ink-soft:#6b6259;
+    --accent:#b5622e; --accent-ink:#ffffff; --line:#e8e0d5;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:640px;margin:0 auto;padding:48px 20px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:1.9rem;margin:0 0 8px}
+  .lede{color:var(--ink-soft);margin:0 0 28px}
+  .brand{font-weight:800;font-size:1.05rem;margin-bottom:24px;display:block}
+  .brand span{color:var(--accent)}
+  form{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:16px}
+  label{font-size:.85rem;font-weight:700;color:var(--ink-soft);display:block;margin-bottom:6px}
+  input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;
+    font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .row{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:600px){.row.two{grid-template-columns:1fr 1fr}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:13px 22px;
+    font-weight:700;font-size:.95rem;border:none;cursor:pointer;background:var(--accent);color:var(--accent-ink);width:100%}
+  .fineprint{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
+  .status-msg{font-size:.9rem;padding:10px 14px;border-radius:9px;display:none;margin-top:12px}
+  .status-msg.ok{display:block;background:#e9f3ec;color:#2f6b4f}
+  .status-msg.err{display:block;background:#fbe6e2;color:#a3311a}
+  .honeypot{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="brand">Sin<span>cronia</span></a>
+  <h1>Raccontaci la tua azienda</h1>
+  <p class="lede">2 minuti. Usiamo queste informazioni per il matching e, se hai scelto il pacchetto con revisione, per la candidatura. Se hai già pagato, indicalo sotto — partiamo entro 48h.</p>
+
+  <form id="intake-form" novalidate>
+    <input type="text" name="company_website" class="honeypot" tabindex="-1" autocomplete="off">
+    <div class="row two">
+      <div>
+        <label for="name">Nome e cognome</label>
+        <input id="name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div>
+        <label for="business">Nome azienda</label>
+        <input id="business" name="business" type="text" required autocomplete="organization">
+      </div>
+    </div>
+    <div class="row two">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="country">Paese</label>
+        <select id="country" name="country" required>
+          <option value="">Seleziona...</option>
+          <option value="IT">Italia</option>
+          <option value="ES">Spagna</option>
+          <option value="PT">Portogallo</option>
+          <option value="FR">Francia</option>
+          <option value="DE">Germania</option>
+          <option value="ALTRO">Altro</option>
+        </select>
+      </div>
+    </div>
+    <div class="row two">
+      <div>
+        <label for="stage">Fase dell'azienda</label>
+        <select id="stage" name="stage">
+          <option value="">Seleziona...</option>
+          <option value="startup">Startup / pre-seed</option>
+          <option value="PMI">PMI consolidata</option>
+          <option value="scaleup">Scale-up</option>
+        </select>
+      </div>
+      <div>
+        <label for="package">Pacchetto scelto</label>
+        <select id="package" name="package">
+          <option value="">Seleziona...</option>
+          <option value="match">Funding Match Report (149E)</option>
+          <option value="match_review">Match + Revisione candidatura (349E)</option>
+          <option value="accompagnamento">Accompagnamento fino all'invio</option>
+          <option value="non_pagato">Non ho ancora pagato</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label for="keywords">Settore / parole chiave (separate da virgola)</label>
+      <input id="keywords" name="keywords" type="text" placeholder="es: digitalizzazione, R&amp;D, AI">
+    </div>
+    <div>
+      <label for="description">Descrivi in breve la tua azienda e cosa cerchi</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn">Invia</button>
+    <p class="fineprint">Ti risponderemo entro 48h all'email indicata.</p>
+    <div class="status-msg" id="form-status"></div>
+  </form>
+</div>
+
+<script>
+  // Nessun backend collegato ancora (Supabase/SMTP2GO da attivare in futuro).
+  // Fallback: mailto pre-compilato verso l'indirizzo di lavoro del fondatore,
+  // MAI mostrato come testo visibile in pagina (solo nel link generato qui).
+  const FOUNDER_EMAIL = "emanuelconti879@gmail.com";
+  const form = document.getElementById('intake-form');
+  const statusEl = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.company_website.value.trim() !== '') {
+      statusEl.className = 'status-msg ok';
+      statusEl.textContent = 'Grazie, richiesta inviata.';
+      return;
+    }
+    const data = Object.fromEntries(new FormData(form).entries());
+    const required = ['name', 'business', 'email', 'country', 'description'];
+    const missing = required.filter((k) => !data[k] || !data[k].trim());
+    if (missing.length) {
+      statusEl.className = 'status-msg err';
+      statusEl.textContent = 'Completa tutti i campi obbligatori.';
+      return;
+    }
+    const subject = encodeURIComponent(`Sincronia - nuova richiesta - ${data.business}`);
+    const body = encodeURIComponent(
+      `Nome: ${data.name}\nAzienda: ${data.business}\nEmail: ${data.email}\nPaese: ${data.country}\n` +
+      `Fase: ${data.stage || '-'}\nPacchetto: ${data.package || '-'}\nParole chiave: ${data.keywords || '-'}\n\n` +
+      `Descrizione:\n${data.description}`
+    );
+    window.location.href = `mailto:${FOUNDER_EMAIL}?subject=${subject}&body=${body}`;
+    statusEl.className = 'status-msg ok';
+    statusEl.textContent = 'Si apre il tuo client email per confermare l\'invio.';
+  });
+</script>
+</body>
+</html>

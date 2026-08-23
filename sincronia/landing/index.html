@@ -295,12 +295,9 @@
       <div class="card" style="text-align:center">
         <h2 data-i18n="contact_title">Pronto?</h2>
         <p class="section-lede" style="margin:0 auto 20px" data-i18n="contact_lede">
-          Il checkout non e' ancora collegato in questa anteprima. Il link di pagamento
-          arriva appena Stripe e' configurato.
+          Scegli il pacchetto sopra per pagare, poi raccontaci la tua azienda per iniziare.
         </p>
-        <a href="mailto:hello@sincronia.example?subject=Sincronia" class="btn btn-primary">
-          hello@sincronia.example
-        </a>
+        <a href="start.html" class="btn btn-primary" data-i18n="contact_cta">Racconta la tua azienda</a>
       </div>
     </div>
   </section>
@@ -311,7 +308,7 @@
     <div class="brand">Sin<span>cronia</span></div>
     <p data-i18n="footer_tagline">Matching su bandi e finanziamenti reali, piu' revisione candidature. Non e' consulenza legale o fiscale.</p>
     <div class="foot-links">
-      <a href="mailto:hello@sincronia.example">hello@sincronia.example</a>
+      <a href="start.html" data-i18n="footer_contact">Contattaci</a>
       <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
       <a href="terms.html" data-i18n="footer_terms">Termini di servizio</a>
     </div>
@@ -372,7 +369,8 @@ const translations = {
     faq1_q: "Garantite che ottero' il finanziamento?", faq1_a: "No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.",
     faq2_q: "Da dove vengono i dati sui bandi?", faq2_a: "Da un database che manteniamo e verifichiamo a mano contro le fonti ufficiali di ogni ente: Commissione UE, Bpifrance, ENISA, Invitalia e altri. Ogni riga riporta il link diretto e la data dell'ultima verifica.",
     faq3_q: "E se non trovate nessun programma per me?", faq3_a: "Te lo diciamo onestamente invece di forzare match deboli. Il database e' verificato ma non esaustivo, e te lo segnaliamo chiaramente nel report.",
-    contact_title: "Pronto?", contact_lede: "Il checkout non e' ancora collegato in questa anteprima. Il link di pagamento arriva appena Stripe e' configurato.",
+    contact_title: "Pronto?", contact_lede: "Scegli il pacchetto sopra per pagare, poi raccontaci la tua azienda per iniziare.",
+    contact_cta: "Racconta la tua azienda", footer_contact: "Contattaci",
     footer_tagline: "Matching su bandi e finanziamenti reali, piu' revisione candidature. Non e' consulenza legale o fiscale.",
     footer_privacy: "Privacy", footer_terms: "Termini di servizio", footer_vat: "P.IVA: da attivare"
   },
@@ -427,7 +425,8 @@ const translations = {
     faq1_q: "¿Garantizan que consiga la financiacion?", faq1_a: "No, y desconfia de quien lo prometa: el resultado depende del organismo que otorga la ayuda. Te ayudamos a presentarte a los programas correctos, con una solicitud mas solida.",
     faq2_q: "¿De donde salen los datos sobre las ayudas?", faq2_a: "De una base de datos que mantenemos y verificamos a mano contra las fuentes oficiales de cada organismo: Comision Europea, Bpifrance, ENISA, Invitalia y otros. Cada fila incluye el enlace directo y la fecha de la ultima verificacion.",
     faq3_q: "¿Y si no encuentran ningun programa para mi?", faq3_a: "Te lo decimos con honestidad en vez de forzar coincidencias debiles. La base de datos esta verificada pero no es exhaustiva, y te lo indicamos claramente en el informe.",
-    contact_title: "¿Listo?", contact_lede: "El pago aun no esta conectado en esta vista previa. El enlace de pago llegara en cuanto Stripe este configurado.",
+    contact_title: "¿Listo?", contact_lede: "Elige un paquete arriba para pagar, luego cuentanos tu empresa para empezar.",
+    contact_cta: "Cuentanos tu empresa", footer_contact: "Contacto",
     footer_tagline: "Coincidencia con ayudas y financiaciones reales, mas revision de solicitudes. No es asesoria legal ni fiscal.",
     footer_privacy: "Privacidad", footer_terms: "Terminos de servicio", footer_vat: "NIF: pendiente de activar"
   },
@@ -482,7 +481,8 @@ const translations = {
     faq1_q: "Garantem que vou obter o financiamento?", faq1_a: "Nao, e desconfie de quem prometer isso: o resultado depende da entidade que atribui o apoio. Ajudamos voce a candidatar-se aos programas certos, com uma candidatura mais solida.",
     faq2_q: "De onde vem os dados sobre os apoios?", faq2_a: "De uma base de dados que mantemos e verificamos manualmente com as fontes oficiais de cada entidade: Comissao Europeia, Bpifrance, ENISA, Invitalia e outras. Cada linha traz o link direto e a data da ultima verificacao.",
     faq3_q: "E se nao encontrarem nenhum programa para mim?", faq3_a: "Dizemos isso com honestidade em vez de forcar correspondencias fracas. A base de dados e verificada mas nao e exaustiva, e isso fica claro no relatorio.",
-    contact_title: "Pronto?", contact_lede: "O checkout ainda nao esta ligado nesta pre-visualizacao. O link de pagamento chega assim que o Stripe estiver configurado.",
+    contact_title: "Pronto?", contact_lede: "Escolha um pacote acima para pagar, depois conte-nos sobre a sua empresa para comecar.",
+    contact_cta: "Conte-nos sobre a sua empresa", footer_contact: "Contacto",
     footer_tagline: "Correspondencia com apoios e financiamentos reais, mais revisao de candidaturas. Nao e aconselhamento juridico ou fiscal.",
     footer_privacy: "Privacidade", footer_terms: "Termos de servico", footer_vat: "NIF: por ativar"
   },
@@ -537,7 +537,8 @@ const translations = {
     faq1_q: "Garantissez-vous l'obtention du financement?", faq1_a: "Non, et mefiez-vous de quiconque le promet: le resultat depend de l'organisme qui accorde l'aide. Nous vous aidons a postuler aux bons programmes, avec un dossier plus solide.",
     faq2_q: "D'ou viennent les donnees sur les aides?", faq2_a: "D'une base de donnees que nous tenons et verifions a la main aupres des sources officielles de chaque organisme: Commission europeenne, Bpifrance, ENISA, Invitalia et autres. Chaque ligne indique le lien direct et la date de derniere verification.",
     faq3_q: "Et si vous ne trouvez aucun programme pour moi?", faq3_a: "Nous vous le disons honnetement plutot que de forcer des correspondances faibles. La base de donnees est verifiee mais pas exhaustive, et nous vous le signalons clairement dans le rapport.",
-    contact_title: "Pret?", contact_lede: "Le paiement n'est pas encore connecte dans cet apercu. Le lien de paiement arrivera des que Stripe sera configure.",
+    contact_title: "Pret?", contact_lede: "Choisissez une formule ci-dessus pour payer, puis parlez-nous de votre entreprise pour commencer.",
+    contact_cta: "Parlez-nous de votre entreprise", footer_contact: "Contact",
     footer_tagline: "Correspondance avec des aides et financements reels, plus revision de dossiers. Ce n'est pas un conseil juridique ou fiscal.",
     footer_privacy: "Confidentialite", footer_terms: "Conditions de service", footer_vat: "SIRET/TVA : a activer"
   },
@@ -592,7 +593,8 @@ const translations = {
     faq1_q: "Garantieren Sie, dass ich die Foerderung bekomme?", faq1_a: "Nein, und misstrauen Sie jedem, der das verspricht: das Ergebnis haengt von der foerdernden Stelle ab. Wir helfen Ihnen, sich bei den richtigen Programmen zu bewerben, mit einem stabileren Antrag.",
     faq2_q: "Woher stammen die Daten zu den Foerderungen?", faq2_a: "Aus einer Datenbank, die wir pflegen und von Hand mit den offiziellen Quellen jeder Stelle abgleichen: EU-Kommission, Bpifrance, ENISA, Invitalia und andere. Jede Zeile enthaelt den direkten Link und das Datum der letzten Pruefung.",
     faq3_q: "Und wenn Sie kein passendes Programm finden?", faq3_a: "Das sagen wir ehrlich, statt schwache Treffer zu erzwingen. Die Datenbank ist gepueft, aber nicht vollstaendig, und das steht klar im Bericht.",
-    contact_title: "Bereit?", contact_lede: "Der Checkout ist in dieser Vorschau noch nicht angebunden. Der Zahlungslink kommt, sobald Stripe eingerichtet ist.",
+    contact_title: "Bereit?", contact_lede: "Waehlen Sie oben ein Paket zum Bezahlen, dann erzaehlen Sie uns von Ihrem Unternehmen.",
+    contact_cta: "Erzaehlen Sie uns von Ihrem Unternehmen", footer_contact: "Kontakt",
     footer_tagline: "Abgleich mit echten Foerderungen und Finanzierungen, plus Antragspruefung. Keine Rechts- oder Steuerberatung.",
     footer_privacy: "Datenschutz", footer_terms: "Nutzungsbedingungen", footer_vat: "USt-IdNr.: noch nicht aktiv"
   }
