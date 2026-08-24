@@ -102,6 +102,7 @@
     </nav>
     <div class="nav-right">
       <div class="lang-switch" id="lang-switch">
+        <button data-lang="en">EN</button>
         <button data-lang="it">IT</button>
         <button data-lang="es">ES</button>
         <button data-lang="pt">PT</button>
@@ -349,6 +350,65 @@
 
 <script>
 const translations = {
+  en: {
+    nav_how: "How it works", nav_programs: "Tracked programs", nav_pricing: "Pricing", nav_faq: "FAQ",
+    nav_cta: "Find your grants",
+    hero_kicker: "Italy · France · Spain · Portugal · Germany · EU programs",
+    hero_h1: "Find the grants and funding your company is eligible for.",
+    hero_lede: "We compare your profile against a verified database of real programs: Horizon Europe, Bpifrance, ENISA, Invitalia and more. We tell you which ones are worth it, with official links. On request, we also review your application.",
+    hero_cta_primary: "Find your grants, from €149",
+    hero_cta_secondary: "See tracked programs",
+    hero_fineprint: "Every program in the report has a link to the official source. You verify it yourself, we don't ask you to just trust us.",
+    photo1_caption: "Public programs across Europe, not just your country.",
+    photo2_caption: "Every application, checked line by line.",
+    photo3_caption: "We stay with you, not just a report that arrives and that's it.",
+    author_kicker: "Behind Sincronia", author_title: "Who is behind Sincronia?", author_name: "Emanuel Conti",
+    author_p1: "Finance and FP&A background: internship in M&A and financial reporting at Nexans HQ in Paris. International Management education across CEMS (global alliance of 30+ business schools, #4 worldwide in QS MiM 2026), ESADE Business School in Barcelona and LUISS in Rome.",
+    author_p2: "Worked as a strategy consultant for ING Wholesale Banking on use cases and quantified impact of new technologies, and was Community Director in a student consulting program. Native Italian, fluent English and Spanish, intermediate French: the basis for a genuinely multi-country service, not just a translated one.",
+    author_p3: "Every Sincronia report is checked by hand before it reaches you. It's not a raw, unreviewed AI output.",
+    compare_title: "Search alone, or with Sincronia.", compare_lede: "The difference isn't finding a grant: it's knowing in time which ones actually matter.",
+    compare_col_old: "On your own", compare_col_new: "With Sincronia",
+    compare1_old_h: "Separate government portals", compare1_old_p: "Each country has its own portal, in a different language than yours, with criteria that are hard to compare.",
+    compare1_new_h: "One profile, every source", compare1_new_p: "We compare your profile against official sources from multiple countries at once, in your language.",
+    compare2_old_h: "Requirements in bureaucratic language", compare2_old_p: "Calls written for specialists, hard to understand without wasting hours.",
+    compare2_new_h: "Explained clearly", compare2_new_p: "An analyst translates each program into: what it covers, how much it's worth, whether it fits you.",
+    compare3_old_h: "Application written with no review", compare3_old_p: "Nobody checks whether the budget or narrative makes sense before submission.",
+    compare3_new_h: "Reviewed before submission", compare3_new_p: "We check the numbers and structure of your application before it goes out.",
+    compare4_old_h: "One document, then you're on your own again", compare4_old_p: "You get the information but nobody follows up with you on next steps.",
+    compare4_new_h: "Support on request", compare4_new_p: "If you want, we stay with you through submission, not just the report.",
+    how_title: "How it works", how_lede: "Two steps, no promise of a result we can't keep.",
+    how1_title: "Profile", how1_body: "Tell us your country, sector, company stage and what you need: R&D, digitalization, expansion. Three minutes is enough.",
+    how2_title: "Verification", how2_body: "We compare your profile against the verified database. An analyst checks the results and writes why they matter to you, with an official link for each one.",
+    how3_title: "Report", how3_body: "You get the list with amounts, requirements, known deadlines and official links. On request, we also review your application before submission.",
+    programs_title: "Some of the programs we track",
+    programs_lede: "Partial list, updated by hand. Every row is verified against an official source.",
+    table_program: "Program", table_scope: "Scope", table_amount: "Amount", table_source: "Source",
+    scope_eu_deeptech: "EU (deep-tech)", scope_it: "Italy", scope_fr: "France", scope_es: "Spain",
+    programs_footnote: "The full report also includes Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italy-France and more.",
+    pricing_title: "Pricing", pricing_lede: "One-time payment for the first two packages. No hidden subscription.",
+    price1_title: "Funding Match Report",
+    price1_item1: "List of programs matching your profile", price1_item2: "Official links and amounts for each one",
+    price1_item3: "Priority note: which to review first", price1_item4: "Delivery in 48 hours",
+    price1_cta: "Request the report",
+    price2_title: "Match + application review",
+    price2_item1: "Everything in the Funding Match Report", price2_item2: "Review of the application for the chosen program",
+    price2_item3: "Feedback on the budget and figures in the application", price2_item4: "One round of corrections included",
+    price2_cta: "Request this package",
+    price3_title: "Support through submission", price3_price: "Flat fee + success fee",
+    price3_item1: "Everything in Match + application review", price3_item2: "We follow you step by step through submission, not just a document",
+    price3_item3: "We answer your questions along the way", price3_item4: "Success fee only on what you actually receive",
+    price3_cta: "Let's talk",
+    pricing_footnote: "Ongoing support is agreed case by case after the first report, based on the complexity of the chosen program.",
+    disclaimer_text: "⚠️ Sincronia provides information on public funding programs and editorial feedback on applications. We do not guarantee that you will obtain any funding, we do not give tax or legal advice, and every figure (amounts, deadlines, requirements) should always be re-verified against the official source before acting: public programs change conditions over time.",
+    faq_title: "Frequently asked questions",
+    faq1_q: "Do you guarantee I'll get the funding?", faq1_a: "No, and be wary of anyone who promises that: the outcome depends on the awarding body. We help you apply to the right programs, with a stronger application.",
+    faq2_q: "Where does the data on grants come from?", faq2_a: "From a database we maintain and verify by hand against the official sources of each body: European Commission, Bpifrance, ENISA, Invitalia and others. Every row includes the direct link and the date of the last check.",
+    faq3_q: "What if you don't find any program for me?", faq3_a: "We'll tell you honestly instead of forcing weak matches. The database is verified but not exhaustive, and we flag that clearly in the report.",
+    contact_title: "Ready?", contact_lede: "Choose a package above to pay, then tell us about your company to get started.",
+    contact_cta: "Tell us about your company", footer_contact: "Contact",
+    footer_tagline: "Matching against real grants and funding, plus application review. Not legal or tax advice.",
+    footer_privacy: "Privacy", footer_terms: "Terms of service", footer_vat: "VAT number: pending activation"
+  },
   it: {
     nav_how: "Come funziona", nav_programs: "Bandi tracciati", nav_pricing: "Prezzi", nav_faq: "FAQ",
     nav_cta: "Trova i bandi",
