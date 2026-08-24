@@ -82,6 +82,11 @@
   summary{font-weight:700;cursor:pointer}
   footer{border-top:1px solid var(--line);padding:32px 0;color:var(--ink-soft);font-size:.85rem}
   footer .foot-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+  .photo-band{position:relative;border-radius:18px;overflow:hidden;height:340px;margin:0 0 8px}
+  .photo-band img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-band .caption{position:absolute;left:0;right:0;bottom:0;padding:22px 26px;
+    background:linear-gradient(0deg,rgba(36,31,26,.72),rgba(36,31,26,0));color:#fff;font-family:Georgia,serif;font-size:1.25rem}
+  @media(max-width:640px){.photo-band{height:220px}.photo-band .caption{font-size:1.05rem;padding:16px 18px}}
 </style>
 </head>
 <body>
@@ -126,6 +131,14 @@
     </div>
   </section>
 
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="photo-band">
+        <img src="assets/skyline.jpg" alt="Grattacieli di un distretto finanziario europeo" loading="lazy">
+        <div class="caption" data-i18n="photo1_caption">Programmi pubblici in tutta Europa, non solo nel tuo paese.</div>
+      </div>
+    </div>
+  </section>
 
   <section id="compare">
     <div class="wrap">
@@ -179,6 +192,15 @@
           <p data-i18n="how3_body">Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su
           richiesta revisioniamo anche la tua candidatura prima dell'invio.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="photo-band">
+        <img src="assets/docs-forms.jpg" alt="Documenti e moduli di una candidatura a un bando" loading="lazy">
+        <div class="caption" data-i18n="photo2_caption">Ogni candidatura, controllata numero per numero.</div>
       </div>
     </div>
   </section>
@@ -256,6 +278,15 @@
     </div>
   </section>
 
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="photo-band">
+        <img src="assets/handshake.jpg" alt="Stretta di mano tra due persone in un ufficio" loading="lazy">
+        <div class="caption" data-i18n="photo3_caption">Ti accompagniamo, non solo un report che arriva e basta.</div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <div class="disclaimer" data-i18n="disclaimer_text">
@@ -327,6 +358,9 @@ const translations = {
     hero_cta_primary: "Trova i tuoi bandi, da €149",
     hero_cta_secondary: "Vedi i programmi tracciati",
     hero_fineprint: "Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.",
+    photo1_caption: "Programmi pubblici in tutta Europa, non solo nel tuo paese.",
+    photo2_caption: "Ogni candidatura, controllata numero per numero.",
+    photo3_caption: "Ti accompagniamo, non solo un report che arriva e basta.",
     author_kicker: "Chi c'e' dietro", author_title: "Chi c'e' dietro Sincronia?", author_name: "Emanuel Conti",
     author_p1: "Background di finanza e FP&A: stage in M&A e reporting finanziario alla sede centrale di Nexans a Parigi. Formazione in International Management tra CEMS (alleanza globale di 30+ business school, #4 al mondo nel QS MiM 2026), ESADE Business School a Barcellona e LUISS a Roma.",
     author_p2: "Ha lavorato come consulente strategico per ING Wholesale Banking su casi d'uso e impatto quantificato di nuove tecnologie, ed e' stato Community Director in un programma di consulenza studentesca. Italiano madrelingua, inglese e spagnolo fluenti, francese intermedio: la base per un servizio davvero multi-paese, non solo tradotto.",
@@ -383,6 +417,9 @@ const translations = {
     hero_cta_primary: "Encuentra tus ayudas, desde 149 €",
     hero_cta_secondary: "Ver los programas que seguimos",
     hero_fineprint: "Cada programa del informe tiene un enlace a la fuente oficial. Lo compruebas tu mismo, no te pedimos que confies sin mas.",
+    photo1_caption: "Programas publicos en toda Europa, no solo en tu pais.",
+    photo2_caption: "Cada solicitud, revisada numero por numero.",
+    photo3_caption: "Te acompañamos, no es solo un informe que llega y ya esta.",
     author_kicker: "Quien esta detras", author_title: "¿Quien esta detras de Sincronia?", author_name: "Emanuel Conti",
     author_p1: "Experiencia en finanzas y FP&A: practicas en M&A y reporting financiero en la sede central de Nexans en Paris. Formacion en International Management entre CEMS (alianza global de mas de 30 escuelas de negocio, #4 del mundo en el QS MiM 2026), ESADE Business School en Barcelona y LUISS en Roma.",
     author_p2: "Ha trabajado como consultor estrategico para ING Wholesale Banking en casos de uso e impacto cuantificado de nuevas tecnologias, y fue Community Director en un programa de consultoria estudiantil. Italiano nativo, ingles y español con dominio fluido, frances intermedio: la base para un servicio realmente multipais, no solo traducido.",
@@ -439,6 +476,9 @@ const translations = {
     hero_cta_primary: "Encontrar os seus apoios, a partir de 149 €",
     hero_cta_secondary: "Ver os programas que seguimos",
     hero_fineprint: "Cada programa no relatorio tem um link para a fonte oficial. Verifica voce mesmo, nao pedimos que confie sem mais.",
+    photo1_caption: "Programas publicos em toda a Europa, nao so no seu pais.",
+    photo2_caption: "Cada candidatura, verificada numero a numero.",
+    photo3_caption: "Acompanhamos-lhe, nao e so um relatorio que chega e pronto.",
     author_kicker: "Quem esta por tras", author_title: "Quem esta por tras da Sincronia?", author_name: "Emanuel Conti",
     author_p1: "Experiencia em financas e FP&A: estagio em M&A e reporting financeiro na sede da Nexans em Paris. Formacao em International Management entre CEMS (alianca global de mais de 30 escolas de negocio, #4 do mundo no QS MiM 2026), ESADE Business School em Barcelona e LUISS em Roma.",
     author_p2: "Trabalhou como consultor estrategico para o ING Wholesale Banking em casos de uso e impacto quantificado de novas tecnologias, e foi Community Director num programa de consultoria estudantil. Italiano nativo, ingles e espanhol fluentes, frances intermedio: a base para um servico verdadeiramente multi-pais, nao apenas traduzido.",
@@ -495,6 +535,9 @@ const translations = {
     hero_cta_primary: "Trouver mes aides, des 149 €",
     hero_cta_secondary: "Voir les programmes suivis",
     hero_fineprint: "Chaque programme du rapport a un lien vers la source officielle. Vous verifiez vous-meme, on ne vous demande pas de nous croire sur parole.",
+    photo1_caption: "Des programmes publics dans toute l'Europe, pas seulement dans votre pays.",
+    photo2_caption: "Chaque dossier, verifie chiffre par chiffre.",
+    photo3_caption: "Nous vous accompagnons, ce n'est pas juste un rapport qui arrive et c'est tout.",
     author_kicker: "Qui est derriere", author_title: "Qui est derriere Sincronia ?", author_name: "Emanuel Conti",
     author_p1: "Experience en finance et FP&A: stage en M&A et reporting financier au siege de Nexans a Paris. Formation en International Management entre CEMS (alliance mondiale de plus de 30 business schools, #4 au monde au classement QS MiM 2026), ESADE Business School a Barcelone et LUISS a Rome.",
     author_p2: "A travaille comme consultant strategique pour ING Wholesale Banking sur des cas d'usage et l'impact chiffre de nouvelles technologies, et a ete Community Director dans un programme de conseil etudiant. Italien langue maternelle, anglais et espagnol courants, francais intermediaire: la base d'un service vraiment multi-pays, pas seulement traduit.",
@@ -551,6 +594,9 @@ const translations = {
     hero_cta_primary: "Foerderungen finden, ab 149 €",
     hero_cta_secondary: "Erfasste Programme ansehen",
     hero_fineprint: "Jedes Programm im Bericht hat einen Link zur offiziellen Quelle. Sie pruefen selbst nach, wir bitten Sie nicht, uns einfach zu glauben.",
+    photo1_caption: "Oeffentliche Programme in ganz Europa, nicht nur in Ihrem Land.",
+    photo2_caption: "Jeder Antrag, Zahl fuer Zahl geprueft.",
+    photo3_caption: "Wir begleiten Sie, nicht nur ein Bericht, der ankommt und das war's.",
     author_kicker: "Wer dahinter steht", author_title: "Wer steht hinter Sincronia?", author_name: "Emanuel Conti",
     author_p1: "Hintergrund in Finance und FP&A: Praktikum in M&A und Finanzreporting am Nexans-Hauptsitz in Paris. Ausbildung in International Management zwischen CEMS (globale Allianz von mehr als 30 Business Schools, #4 weltweit im QS MiM 2026), der ESADE Business School in Barcelona und LUISS in Rom.",
     author_p2: "Arbeitete als strategischer Berater fuer ING Wholesale Banking zu Anwendungsfaellen und beziffertem Nutzen neuer Technologien und war Community Director in einem studentischen Beratungsprogramm. Italienisch als Muttersprache, fliessend Englisch und Spanisch, Franzoesisch auf Mittelstufe: die Basis fuer einen wirklich laenderuebergreifenden Service, nicht nur uebersetzt.",

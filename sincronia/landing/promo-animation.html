@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sincronia — Promo</title>
+<style>
+  :root{--bg:#faf7f2;--ink:#241f1a;--accent:#b5622e;--ink-soft:#6b6259}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+  .stage{position:relative;width:100vw;height:100vh;max-width:1280px;max-height:720px;margin:0 auto}
+  .scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;padding:40px;opacity:0;animation:cycle 16s infinite}
+  .scene h1{font-family:Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,3.1rem);letter-spacing:-.01em;margin:0 0 16px;max-width:900px}
+  .scene p{font-size:clamp(1rem,2.2vw,1.3rem);color:var(--ink-soft);max-width:640px;margin:0}
+  .accent{color:var(--accent)}
+  .s1{animation-delay:0s} .s2{animation-delay:4s} .s3{animation-delay:8s} .s4{animation-delay:12s}
+  @keyframes cycle{
+    0%{opacity:0;transform:translateY(14px)} 3%{opacity:1;transform:translateY(0)}
+    22%{opacity:1;transform:translateY(0)} 25%{opacity:0;transform:translateY(-14px)} 100%{opacity:0}
+  }
+  .badge{display:inline-block;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--accent);background:rgba(181,98,46,.12);padding:8px 16px;border-radius:999px;margin-bottom:22px}
+  .price{font-size:2.4rem;font-weight:800;color:var(--accent)}
+</style>
+</head>
+<body>
+  <!-- Promo animato, 16s, loop. Nessuna dipendenza esterna: registrabile con qualsiasi
+       screen recorder per ottenere un file video reale (nessun ffmpeg/TTS disponibile in
+       questo ambiente per generarlo direttamente). -->
+  <div class="stage">
+    <div class="scene s1">
+      <span class="badge">Sincronia</span>
+      <h1>Cerchi bandi e finanziamenti <span class="accent">in tutta Europa</span>?</h1>
+    </div>
+    <div class="scene s2">
+      <h1>Trova quelli <span class="accent">giusti per te</span>, con link ufficiali.</h1>
+      <p>Non un elenco generico: un match sul tuo profilo, verificato a mano.</p>
+    </div>
+    <div class="scene s3">
+      <h1>Candidatura rivista prima dell'invio.</h1>
+      <p>Numeri e struttura controllati da un analista, non solo un'AI grezza.</p>
+    </div>
+    <div class="scene s4">
+      <div class="price">Da €149</div>
+      <h1>Sincronia</h1>
+      <p>Trova i tuoi bandi in 48 ore.</p>
+    </div>
+  </div>
+</body>
+</html>
