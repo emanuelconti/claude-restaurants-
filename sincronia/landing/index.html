@@ -32,6 +32,7 @@
   .btn-primary{background:var(--accent);color:var(--accent-ink)}
   .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   section{padding:60px 0}
+  section[id]{scroll-margin-top:78px}
   .hero{padding:56px 0 36px;text-align:center}
   .kicker{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
     color:var(--accent);background:rgba(181,98,46,.12);padding:6px 12px;border-radius:999px;margin-bottom:20px}
@@ -87,6 +88,47 @@
   .photo-band .caption{position:absolute;left:0;right:0;bottom:0;padding:22px 26px;
     background:linear-gradient(0deg,rgba(36,31,26,.72),rgba(36,31,26,0));color:#fff;font-family:Georgia,serif;font-size:1.25rem}
   @media(max-width:640px){.photo-band{height:220px}.photo-band .caption{font-size:1.05rem;padding:16px 18px}}
+
+  /* --- interactive matcher --- */
+  .matcher-shell{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 1px 3px rgba(36,31,26,.05)}
+  .matcher-bar{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);
+    background:rgba(36,31,26,.025)}
+  .matcher-dot{width:11px;height:11px;border-radius:50%;background:var(--line)}
+  .matcher-bar-label{margin-left:8px;font-size:.78rem;font-weight:700;color:var(--ink-soft);letter-spacing:.02em}
+  .matcher-body{display:grid;grid-template-columns:1fr;gap:0}
+  @media(min-width:860px){.matcher-body{grid-template-columns:330px 1fr}}
+  .matcher-controls{padding:24px;border-bottom:1px solid var(--line)}
+  @media(min-width:860px){.matcher-controls{border-bottom:none;border-right:1px solid var(--line)}}
+  .ctl-label{display:block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--ink-soft);margin:0 0 9px}
+  .ctl-group{margin-bottom:22px}
+  .ctl-group:last-child{margin-bottom:0}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{border:1px solid var(--line);background:transparent;color:var(--ink-soft);font-size:.85rem;font-weight:600;
+    padding:8px 13px;border-radius:999px;cursor:pointer;transition:border-color .12s,color .12s,background .12s;
+    font-family:inherit}
+  .chip:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .matcher-results{padding:24px;min-height:340px;display:flex;flex-direction:column}
+  .m-count{font-family:Georgia,serif;font-size:1.15rem;margin:0 0 4px}
+  .m-count b{color:var(--accent)}
+  .m-sub{font-size:.82rem;color:var(--ink-soft);margin:0 0 18px}
+  .m-list{display:flex;flex-direction:column;gap:10px;flex:1}
+  .m-item{border:1px solid var(--line);border-radius:12px;padding:14px 16px;animation:mfade .22s ease both}
+  @keyframes mfade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){.m-item{animation:none}}
+  .m-item h4{margin:0 0 5px;font-size:.98rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .m-badge{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);
+    background:rgba(181,98,46,.1);padding:3px 8px;border-radius:999px}
+  .m-amount{margin:0 0 6px;font-size:.88rem;color:var(--ink)}
+  .m-meta{margin:0;font-size:.78rem;color:var(--ink-soft)}
+  .m-meta a{color:var(--accent)}
+  .m-empty{border:1px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--ink-soft);
+    font-size:.9rem}
+  .m-foot{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:.84rem;color:var(--ink-soft)}
+  .m-foot a{color:var(--accent);font-weight:700}
 </style>
 </head>
 <body>
@@ -95,6 +137,7 @@
   <div class="wrap nav">
     <a href="#" class="brand">Sin<span>cronia</span></a>
     <nav class="links">
+      <a href="#matcher" data-i18n="nav_matcher">Provalo</a>
       <a href="#how" data-i18n="nav_how">Come funziona</a>
       <a href="#programs" data-i18n="nav_programs">Bandi tracciati</a>
       <a href="#pricing" data-i18n="nav_pricing">Prezzi</a>
@@ -126,9 +169,64 @@
       </p>
       <div class="cta-row">
         <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta_primary">Trova i tuoi bandi, da €149</a>
-        <a href="#programs" class="btn btn-ghost" data-i18n="hero_cta_secondary">Vedi i programmi tracciati</a>
+        <a href="#matcher" class="btn btn-ghost" data-i18n="hero_cta_secondary">Provalo gratis</a>
       </div>
       <p class="fineprint" data-i18n="hero_fineprint">Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.</p>
+    </div>
+  </section>
+
+  <section id="matcher" style="padding-top:8px">
+    <div class="wrap">
+      <span class="kicker" data-i18n="m_kicker">Live — free, no signup</span>
+      <h2 data-i18n="m_h2">See it work on your own profile</h2>
+      <p class="section-lede" data-i18n="m_lede">This is the same matching step we run for the paid report, on the same verified database. Pick your profile and the results update instantly.</p>
+
+      <div class="matcher-shell">
+        <div class="matcher-bar">
+          <span class="matcher-dot"></span><span class="matcher-dot"></span><span class="matcher-dot"></span>
+          <span class="matcher-bar-label" data-i18n="m_barlabel">Sincronia — funding match</span>
+        </div>
+        <div class="matcher-body">
+          <div class="matcher-controls">
+            <div class="ctl-group">
+              <span class="ctl-label" data-i18n="m_lbl_country">Where you're based</span>
+              <div class="chips" data-group="country">
+                <button type="button" class="chip on" data-val="IT" data-i18n="m_c_it">Italy</button>
+                <button type="button" class="chip" data-val="FR" data-i18n="m_c_fr">France</button>
+                <button type="button" class="chip" data-val="ES" data-i18n="m_c_es">Spain</button>
+                <button type="button" class="chip" data-val="EU" data-i18n="m_c_eu">Other EU</button>
+              </div>
+            </div>
+            <div class="ctl-group">
+              <span class="ctl-label" data-i18n="m_lbl_stage">Company stage</span>
+              <div class="chips" data-group="stage">
+                <button type="button" class="chip" data-val="idea" data-i18n="m_s_idea">Idea / pre-launch</button>
+                <button type="button" class="chip on" data-val="startup" data-i18n="m_s_startup">Startup</button>
+                <button type="button" class="chip" data-val="sme" data-i18n="m_s_sme">Established SME</button>
+              </div>
+            </div>
+            <div class="ctl-group">
+              <span class="ctl-label" data-i18n="m_lbl_need">What you need funding for</span>
+              <div class="chips" data-group="need">
+                <button type="button" class="chip on" data-val="rd" data-i18n="m_n_rd">R&amp;D / innovation</button>
+                <button type="button" class="chip" data-val="digital" data-i18n="m_n_digital">Digitalization</button>
+                <button type="button" class="chip" data-val="intl" data-i18n="m_n_intl">International project</button>
+                <button type="button" class="chip" data-val="growth" data-i18n="m_n_growth">Growth / expansion</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="matcher-results">
+            <p class="m-count" id="m-count"></p>
+            <p class="m-sub" id="m-sub" data-i18n="m_sub">From the verified database, last checked 2026-08-22.</p>
+            <div class="m-list" id="m-list"></div>
+            <p class="m-foot">
+              <span data-i18n="m_foot">This is the shortlist. The paid report adds the analyst note on which to go for first, the requirements, deadlines, and an application review.</span>
+              <a href="#pricing" data-i18n="m_foot_cta">See packages →</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -351,13 +449,39 @@
 <script>
 const translations = {
   en: {
+    nav_matcher: "Try it",
+    m_count_one: "<b>{n}</b> program matches this profile",
+    m_kicker: "Live — free, no signup",
+    m_h2: "See it work on your own profile",
+    m_lede: "This is the same matching step we run for the paid report, on the same verified database. Pick your profile and the results update instantly.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Where you're based",
+    m_lbl_stage: "Company stage",
+    m_lbl_need: "What you need funding for",
+    m_c_it: "Italy",
+    m_c_fr: "France",
+    m_c_es: "Spain",
+    m_c_eu: "Other EU",
+    m_s_idea: "Idea / pre-launch",
+    m_s_startup: "Startup",
+    m_s_sme: "Established SME",
+    m_n_rd: "R&D / innovation",
+    m_n_digital: "Digitalization",
+    m_n_intl: "International project",
+    m_n_growth: "Growth / expansion",
+    m_count: "<b>{n}</b> programs match this profile",
+    m_sub: "From the verified database, last checked 2026-08-22.",
+    m_none: "No program in the tracked database matches this exact combination. The full report searches a wider set of sources than this demo.",
+    m_verified: "Verified",
+    m_foot: "This is the shortlist. The paid report adds the analyst note on which to go for first, the requirements, deadlines, and an application review.",
+    m_foot_cta: "See packages →",
     nav_how: "How it works", nav_programs: "Tracked programs", nav_pricing: "Pricing", nav_faq: "FAQ",
     nav_cta: "Find your grants",
     hero_kicker: "Italy · France · Spain · Portugal · Germany · EU programs",
     hero_h1: "Find the grants and funding your company is eligible for.",
     hero_lede: "We compare your profile against a verified database of real programs: Horizon Europe, Bpifrance, ENISA, Invitalia and more. We tell you which ones are worth it, with official links. On request, we also review your application.",
     hero_cta_primary: "Find your grants, from €149",
-    hero_cta_secondary: "See tracked programs",
+    hero_cta_secondary: "Try it free",
     hero_fineprint: "Every program in the report has a link to the official source. You verify it yourself, we don't ask you to just trust us.",
     photo1_caption: "Public programs across Europe, not just your country.",
     photo2_caption: "Every application, checked line by line.",
@@ -410,13 +534,39 @@ const translations = {
     footer_privacy: "Privacy", footer_terms: "Terms of service", footer_vat: "VAT number: pending activation"
   },
   it: {
+    nav_matcher: "Provalo",
+    m_count_one: "<b>{n}</b> programma corrisponde a questo profilo",
+    m_kicker: "Live — gratis, senza registrazione",
+    m_h2: "Guardalo funzionare sul tuo profilo",
+    m_lede: "È lo stesso passaggio di matching che facciamo per il report a pagamento, sullo stesso database verificato. Scegli il tuo profilo e i risultati si aggiornano subito.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Dove hai sede",
+    m_lbl_stage: "Stadio dell'impresa",
+    m_lbl_need: "Per cosa ti serve il finanziamento",
+    m_c_it: "Italia",
+    m_c_fr: "Francia",
+    m_c_es: "Spagna",
+    m_c_eu: "Altro UE",
+    m_s_idea: "Idea / pre-lancio",
+    m_s_startup: "Startup",
+    m_s_sme: "PMI avviata",
+    m_n_rd: "R&S / innovazione",
+    m_n_digital: "Digitalizzazione",
+    m_n_intl: "Progetto internazionale",
+    m_n_growth: "Crescita / espansione",
+    m_count: "<b>{n}</b> programmi corrispondono a questo profilo",
+    m_sub: "Dal database verificato, ultimo controllo 2026-08-22.",
+    m_none: "Nessun programma nel database tracciato corrisponde a questa combinazione esatta. Il report completo cerca su più fonti di questa demo.",
+    m_verified: "Verificato",
+    m_foot: "Questa è la lista corta. Il report a pagamento aggiunge la nota dell'analista su quale provare per primo, i requisiti, le scadenze e la revisione della candidatura.",
+    m_foot_cta: "Vedi i pacchetti →",
     nav_how: "Come funziona", nav_programs: "Bandi tracciati", nav_pricing: "Prezzi", nav_faq: "FAQ",
     nav_cta: "Trova i bandi",
     hero_kicker: "Italia · Francia · Spagna · Portogallo · Germania · programmi UE",
     hero_h1: "Trova i bandi e i finanziamenti per cui la tua impresa e' idonea.",
     hero_lede: "Confrontiamo il tuo profilo con un database verificato di programmi reali: Horizon Europe, Bpifrance, ENISA, Invitalia e altri. Ti diciamo quali valgono la pena, con link ufficiali. Su richiesta revisioniamo anche la candidatura.",
     hero_cta_primary: "Trova i tuoi bandi, da €149",
-    hero_cta_secondary: "Vedi i programmi tracciati",
+    hero_cta_secondary: "Provalo gratis",
     hero_fineprint: "Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.",
     photo1_caption: "Programmi pubblici in tutta Europa, non solo nel tuo paese.",
     photo2_caption: "Ogni candidatura, controllata numero per numero.",
@@ -469,13 +619,39 @@ const translations = {
     footer_privacy: "Privacy", footer_terms: "Termini di servizio", footer_vat: "P.IVA: da attivare"
   },
   es: {
+    nav_matcher: "Pruébalo",
+    m_count_one: "<b>{n}</b> programa coincide con este perfil",
+    m_kicker: "En vivo — gratis, sin registro",
+    m_h2: "Míralo funcionar con tu propio perfil",
+    m_lede: "Es el mismo paso de matching que hacemos para el informe de pago, sobre la misma base de datos verificada. Elige tu perfil y los resultados se actualizan al instante.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Dónde tienes la sede",
+    m_lbl_stage: "Etapa de la empresa",
+    m_lbl_need: "Para qué necesitas la financiación",
+    m_c_it: "Italia",
+    m_c_fr: "Francia",
+    m_c_es: "España",
+    m_c_eu: "Otro UE",
+    m_s_idea: "Idea / prelanzamiento",
+    m_s_startup: "Startup",
+    m_s_sme: "Pyme consolidada",
+    m_n_rd: "I+D / innovación",
+    m_n_digital: "Digitalización",
+    m_n_intl: "Proyecto internacional",
+    m_n_growth: "Crecimiento / expansión",
+    m_count: "<b>{n}</b> programas coinciden con este perfil",
+    m_sub: "De la base de datos verificada, última comprobación 2026-08-22.",
+    m_none: "Ningún programa de la base de datos coincide con esta combinación exacta. El informe completo busca en más fuentes que esta demo.",
+    m_verified: "Verificado",
+    m_foot: "Esta es la lista corta. El informe de pago añade la nota del analista sobre cuál probar primero, los requisitos, los plazos y la revisión de la solicitud.",
+    m_foot_cta: "Ver los paquetes →",
     nav_how: "Como funciona", nav_programs: "Ayudas que seguimos", nav_pricing: "Precios", nav_faq: "Preguntas",
     nav_cta: "Encuentra tus ayudas",
     hero_kicker: "Italia · Francia · España · Portugal · Alemania · programas de la UE",
     hero_h1: "Encuentra las ayudas y financiaciones para las que tu empresa es elegible.",
     hero_lede: "Comparamos tu perfil con una base de datos verificada de programas reales: Horizon Europe, Bpifrance, ENISA, Invitalia y otros. Te decimos cuales merecen la pena, con enlaces oficiales. Si quieres, tambien revisamos tu solicitud.",
     hero_cta_primary: "Encuentra tus ayudas, desde 149 €",
-    hero_cta_secondary: "Ver los programas que seguimos",
+    hero_cta_secondary: "Pruébalo gratis",
     hero_fineprint: "Cada programa del informe tiene un enlace a la fuente oficial. Lo compruebas tu mismo, no te pedimos que confies sin mas.",
     photo1_caption: "Programas publicos en toda Europa, no solo en tu pais.",
     photo2_caption: "Cada solicitud, revisada numero por numero.",
@@ -528,13 +704,39 @@ const translations = {
     footer_privacy: "Privacidad", footer_terms: "Terminos de servicio", footer_vat: "NIF: pendiente de activar"
   },
   pt: {
+    nav_matcher: "Experimente",
+    m_count_one: "<b>{n}</b> programa corresponde a este perfil",
+    m_kicker: "Ao vivo — grátis, sem registo",
+    m_h2: "Veja funcionar com o seu próprio perfil",
+    m_lede: "É o mesmo passo de matching que fazemos para o relatório pago, sobre a mesma base de dados verificada. Escolha o seu perfil e os resultados atualizam-se de imediato.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Onde está sediado",
+    m_lbl_stage: "Fase da empresa",
+    m_lbl_need: "Para que precisa do financiamento",
+    m_c_it: "Itália",
+    m_c_fr: "França",
+    m_c_es: "Espanha",
+    m_c_eu: "Outro UE",
+    m_s_idea: "Ideia / pré-lançamento",
+    m_s_startup: "Startup",
+    m_s_sme: "PME estabelecida",
+    m_n_rd: "I&D / inovação",
+    m_n_digital: "Digitalização",
+    m_n_intl: "Projeto internacional",
+    m_n_growth: "Crescimento / expansão",
+    m_count: "<b>{n}</b> programas correspondem a este perfil",
+    m_sub: "Da base de dados verificada, última verificação 2026-08-22.",
+    m_none: "Nenhum programa na base de dados corresponde a esta combinação exata. O relatório completo pesquisa mais fontes do que esta demo.",
+    m_verified: "Verificado",
+    m_foot: "Esta é a lista curta. O relatório pago acrescenta a nota do analista sobre qual tentar primeiro, os requisitos, os prazos e a revisão da candidatura.",
+    m_foot_cta: "Ver os pacotes →",
     nav_how: "Como funciona", nav_programs: "Programas que seguimos", nav_pricing: "Precos", nav_faq: "Perguntas",
     nav_cta: "Encontrar os apoios",
     hero_kicker: "Italia · Franca · Espanha · Portugal · Alemanha · programas da UE",
     hero_h1: "Encontre os apoios e financiamentos para os quais a sua empresa e elegivel.",
     hero_lede: "Comparamos o seu perfil com uma base de dados verificada de programas reais: Horizon Europe, Bpifrance, ENISA, Invitalia e outros. Dizemos quais valem a pena, com links oficiais. Se quiser, tambem revemos a candidatura.",
     hero_cta_primary: "Encontrar os seus apoios, a partir de 149 €",
-    hero_cta_secondary: "Ver os programas que seguimos",
+    hero_cta_secondary: "Experimente grátis",
     hero_fineprint: "Cada programa no relatorio tem um link para a fonte oficial. Verifica voce mesmo, nao pedimos que confie sem mais.",
     photo1_caption: "Programas publicos em toda a Europa, nao so no seu pais.",
     photo2_caption: "Cada candidatura, verificada numero a numero.",
@@ -587,13 +789,39 @@ const translations = {
     footer_privacy: "Privacidade", footer_terms: "Termos de servico", footer_vat: "NIF: por ativar"
   },
   fr: {
+    nav_matcher: "Essayer",
+    m_count_one: "<b>{n}</b> programme correspond à ce profil",
+    m_kicker: "En direct — gratuit, sans inscription",
+    m_h2: "Voyez-le fonctionner sur votre propre profil",
+    m_lede: "C'est la même étape de matching que nous faisons pour le rapport payant, sur la même base de données vérifiée. Choisissez votre profil et les résultats se mettent à jour immédiatement.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Où vous êtes établi",
+    m_lbl_stage: "Stade de l'entreprise",
+    m_lbl_need: "Pour quoi vous avez besoin du financement",
+    m_c_it: "Italie",
+    m_c_fr: "France",
+    m_c_es: "Espagne",
+    m_c_eu: "Autre UE",
+    m_s_idea: "Idée / pré-lancement",
+    m_s_startup: "Startup",
+    m_s_sme: "PME établie",
+    m_n_rd: "R&D / innovation",
+    m_n_digital: "Numérisation",
+    m_n_intl: "Projet international",
+    m_n_growth: "Croissance / expansion",
+    m_count: "<b>{n}</b> programmes correspondent à ce profil",
+    m_sub: "Depuis la base de données vérifiée, dernière vérification 2026-08-22.",
+    m_none: "Aucun programme de la base de données ne correspond à cette combinaison exacte. Le rapport complet cherche sur plus de sources que cette démo.",
+    m_verified: "Vérifié",
+    m_foot: "Voici la liste courte. Le rapport payant ajoute la note de l'analyste sur lequel viser en premier, les exigences, les échéances et la relecture du dossier.",
+    m_foot_cta: "Voir les offres →",
     nav_how: "Comment ca marche", nav_programs: "Aides suivies", nav_pricing: "Tarifs", nav_faq: "FAQ",
     nav_cta: "Trouver mes aides",
     hero_kicker: "Italie · France · Espagne · Portugal · Allemagne · programmes UE",
     hero_h1: "Trouvez les aides et financements pour lesquels votre entreprise est eligible.",
     hero_lede: "Nous comparons votre profil a une base de donnees verifiee de programmes reels: Horizon Europe, Bpifrance, ENISA, Invitalia et autres. Nous vous disons lesquels valent le coup, avec des liens officiels. Sur demande, nous revoyons aussi votre dossier.",
     hero_cta_primary: "Trouver mes aides, des 149 €",
-    hero_cta_secondary: "Voir les programmes suivis",
+    hero_cta_secondary: "Essayez gratuitement",
     hero_fineprint: "Chaque programme du rapport a un lien vers la source officielle. Vous verifiez vous-meme, on ne vous demande pas de nous croire sur parole.",
     photo1_caption: "Des programmes publics dans toute l'Europe, pas seulement dans votre pays.",
     photo2_caption: "Chaque dossier, verifie chiffre par chiffre.",
@@ -646,13 +874,39 @@ const translations = {
     footer_privacy: "Confidentialite", footer_terms: "Conditions de service", footer_vat: "SIRET/TVA : a activer"
   },
   de: {
+    nav_matcher: "Testen",
+    m_count_one: "<b>{n}</b> Programm passt zu diesem Profil",
+    m_kicker: "Live — kostenlos, ohne Anmeldung",
+    m_h2: "Sehen Sie es mit Ihrem eigenen Profil arbeiten",
+    m_lede: "Das ist derselbe Matching-Schritt, den wir für den bezahlten Report ausführen, auf derselben geprüften Datenbank. Profil wählen, die Ergebnisse aktualisieren sich sofort.",
+    m_barlabel: "Sincronia — funding match",
+    m_lbl_country: "Wo Sie ansässig sind",
+    m_lbl_stage: "Unternehmensphase",
+    m_lbl_need: "Wofür Sie die Förderung brauchen",
+    m_c_it: "Italien",
+    m_c_fr: "Frankreich",
+    m_c_es: "Spanien",
+    m_c_eu: "Andere EU",
+    m_s_idea: "Idee / vor dem Start",
+    m_s_startup: "Startup",
+    m_s_sme: "Etabliertes KMU",
+    m_n_rd: "F&E / Innovation",
+    m_n_digital: "Digitalisierung",
+    m_n_intl: "Internationales Projekt",
+    m_n_growth: "Wachstum / Expansion",
+    m_count: "<b>{n}</b> Programme passen zu diesem Profil",
+    m_sub: "Aus der geprüften Datenbank, zuletzt geprüft 2026-08-22.",
+    m_none: "Kein Programm in der Datenbank passt zu genau dieser Kombination. Der vollständige Report durchsucht mehr Quellen als diese Demo.",
+    m_verified: "Geprüft",
+    m_foot: "Das ist die Shortlist. Der bezahlte Report ergänzt die Analysten-Notiz, welches zuerst infrage kommt, die Anforderungen, Fristen und eine Prüfung des Antrags.",
+    m_foot_cta: "Pakete ansehen →",
     nav_how: "So funktioniert es", nav_programs: "Erfasste Foerderungen", nav_pricing: "Preise", nav_faq: "FAQ",
     nav_cta: "Foerderungen finden",
     hero_kicker: "Italien · Frankreich · Spanien · Portugal · Deutschland · EU-Programme",
     hero_h1: "Finden Sie die Foerderungen, fuer die Ihr Unternehmen infrage kommt.",
     hero_lede: "Wir vergleichen Ihr Profil mit einer gepruften Datenbank echter Programme: Horizon Europe, Bpifrance, ENISA, Invitalia und andere. Wir sagen Ihnen, welche sich lohnen, mit offiziellen Links. Auf Wunsch pruefen wir auch Ihren Antrag.",
     hero_cta_primary: "Foerderungen finden, ab 149 €",
-    hero_cta_secondary: "Erfasste Programme ansehen",
+    hero_cta_secondary: "Kostenlos testen",
     hero_fineprint: "Jedes Programm im Bericht hat einen Link zur offiziellen Quelle. Sie pruefen selbst nach, wir bitten Sie nicht, uns einfach zu glauben.",
     photo1_caption: "Oeffentliche Programme in ganz Europa, nicht nur in Ihrem Land.",
     photo2_caption: "Jeder Antrag, Zahl fuer Zahl geprueft.",
@@ -706,8 +960,260 @@ const translations = {
   }
 };
 
+let currentLang = 'it';
+
+// ---- interactive matcher ----
+const MATCH_PROGRAMS = [
+  {
+    "id": "eic-accelerator",
+    "name": "EIC Accelerator",
+    "scope": "EU",
+    "countries": [
+      "FR",
+      "IT",
+      "ES",
+      "EU"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "Up to €2.5M grant + €1–15M equity",
+    "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "eic-pathfinder",
+    "name": "EIC Pathfinder",
+    "scope": "EU",
+    "countries": [
+      "FR",
+      "IT",
+      "ES",
+      "EU"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "Up to €2.5M grant",
+    "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "eurostars-call11",
+    "name": "Eurostars Call 11",
+    "scope": "EU",
+    "countries": [
+      "FR",
+      "IT",
+      "ES",
+      "EU"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "intl"
+    ],
+    "amount": "Up to €3M grant",
+    "url": "https://www.eurostars-eureka.eu/",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-aide-developpement",
+    "name": "Bpifrance — Aide au développement (innovation de rupture)",
+    "scope": "FR",
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "Up to €2M, covers up to 45% of costs",
+    "url": "https://www.bpifrance.fr/",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-bourse-french-tech",
+    "name": "Bourse French Tech",
+    "scope": "FR",
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "Up to €50,000 grant",
+    "url": "https://www.bpifrance.fr/",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "bpifrance-appels-collaboratifs",
+    "name": "Bpifrance — Appels à projets collaboratifs R&D",
+    "scope": "FR",
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "intl"
+    ],
+    "amount": "Varies by call, consortium projects",
+    "url": "https://www.bpifrance.fr/",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "enisa-startups-pymes",
+    "name": "ENISA — Préstamos Participativos Startups y Pymes",
+    "scope": "ES",
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "growth"
+    ],
+    "amount": "€25,000 – €1.5M participative loan",
+    "url": "https://www.enisa.es/",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "kit-digital",
+    "name": "Kit Digital",
+    "scope": "ES",
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital"
+    ],
+    "amount": "Up to €29,000 digital voucher",
+    "url": "https://www.acelerapyme.gob.es/kit-digital",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "smart-start-italia",
+    "name": "Smart&Start Italia",
+    "scope": "IT",
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd",
+      "digital"
+    ],
+    "amount": "Up to €1.5M, 0% loan + grant portion",
+    "url": "https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia",
+    "verified": "2026-08-22"
+  },
+  {
+    "id": "interreg-it-fr-maritime",
+    "name": "Interreg Italia-Francia Marittimo",
+    "scope": "IT · FR",
+    "countries": [
+      "IT",
+      "FR"
+    ],
+    "stages": [
+      "idea",
+      "sme"
+    ],
+    "needs": [
+      "digital"
+    ],
+    "amount": "Up to €6,900 voucher",
+    "url": "https://interreg-maritime.eu/",
+    "verified": "2026-08-22"
+  }
+];
+
+const mState = { country: "IT", stage: "startup", need: "rd" };
+
+function mText(key, fallback){
+  const lang = (typeof currentLang !== "undefined" && currentLang) ? currentLang : "en";
+  const dict = translations[lang] || translations.en || {};
+  return dict[key] || (translations.en && translations.en[key]) || fallback;
+}
+
+function renderMatches(){
+  const list = document.getElementById("m-list");
+  const countEl = document.getElementById("m-count");
+  if(!list || !countEl) return;
+
+  const hits = MATCH_PROGRAMS.filter(p =>
+    p.countries.includes(mState.country) &&
+    p.stages.includes(mState.stage) &&
+    p.needs.includes(mState.need)
+  );
+
+  const countKey = hits.length === 1 ? "m_count_one" : "m_count";
+  countEl.innerHTML = mText(countKey, "<b>{n}</b> programs match this profile")
+    .replace("{n}", "<b>" + hits.length + "</b>");
+
+  if(!hits.length){
+    list.innerHTML = '<div class="m-empty">' +
+      mText("m_none", "No program in the tracked database matches this exact combination. The full report searches a wider set of sources than this demo.") +
+      '</div>';
+    return;
+  }
+
+  list.innerHTML = hits.map(p => `
+    <div class="m-item">
+      <h4>${p.name} <span class="m-badge">${p.scope}</span></h4>
+      <p class="m-amount">${p.amount}</p>
+      <p class="m-meta"><a href="${p.url}" target="_blank" rel="noopener">${new URL(p.url).hostname.replace(/^www\./,"")}</a>
+        · ${mText("m_verified", "Verified")}: ${p.verified}</p>
+    </div>`).join("");
+}
+
+document.querySelectorAll(".chips").forEach(group => {
+  const key = group.dataset.group;
+  group.addEventListener("click", e => {
+    const btn = e.target.closest(".chip");
+    if(!btn) return;
+    group.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+    btn.classList.add("on");
+    mState[key] = btn.dataset.val;
+    renderMatches();
+  });
+});
+
+renderMatches();
+
 function applyLang(lang) {
   const dict = translations[lang] || translations.it;
+  currentLang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key]) el.textContent = dict[key];
@@ -717,6 +1223,8 @@ function applyLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   try { localStorage.setItem('gp_lang', lang); } catch (e) {}
+  // the matcher builds its own strings, so re-render it in the new language
+  if (typeof renderMatches === 'function') renderMatches();
 }
 
 document.querySelectorAll('#lang-switch button').forEach(btn => {
@@ -735,6 +1243,7 @@ document.querySelectorAll('#lang-switch button').forEach(btn => {
   } catch (e) {}
   applyLang(lang);
 })();
+
 </script>
 
 </body>
