@@ -1,0 +1,9 @@
+{
+  "name": "socialperks-payments",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stripe test-mode scaffold for SocialPerks Pilot (Vercel serverless functions).",
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}

@@ -29,7 +29,7 @@ import openpyxl
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 GMAIL_USER         = os.getenv("GMAIL_USER", "emanuelconti.mim@gmail.com")
-GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD", os.getenv("GMAIL_APP_PASSWORD", "ublm ewaw eoiy biet"))
+GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD", "")
 SENDER_NAME        = "Emanuel Conti"
 BRAND              = "SocialPerks"
 LANDING_URL        = "https://socialperk.netlify.app/france/"
