@@ -7,218 +7,182 @@
 <meta name="description" content="Bandi e finanziamenti pubblici reali per la tua impresa, con link ufficiali, piu' revisione della candidatura.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
 <style>
-  /* Design system taken from the founder's own site, socialperkses.com,
-     so the two brands read as coming from the same studio. */
+  /* Palette from the founder's own site, socialperkses.com.
+     One type family (Inter / Inter Tight), big type, lots of air. */
   :root{
     --paper:#fbfaf9; --sub:#f2efe9; --surface:#ffffff;
-    --ink:#14181a; --ink-warm:#1b1512; --muted:#6e6862;
-    --brass:#b07a45; --brass-ink:#8a5c2b; --slate:#46596e;
-    --line:rgba(20,24,26,.12); --line-strong:rgba(20,24,26,.22);
-    --accent:var(--brass-ink); --accent-ink:#ffffff;
-
-    --font-sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-    --font-heading:"Inter Tight","Inter",system-ui,sans-serif;
-    --font-display:"Playfair Display",Georgia,"Times New Roman",serif;
-    --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-
-    --r-sm:.25rem; --r-lg:.5rem; --r-xl:.75rem; --r-2xl:1rem; --r-3xl:1.5rem;
-    --maxw:1120px; --radius:var(--r-2xl);
+    --ink:#14181a; --muted:#6e6862;
+    --brass:#b07a45; --brass-ink:#8a5c2b;
+    --line:rgba(20,24,26,.11); --line-strong:rgba(20,24,26,.2);
+    --accent:var(--brass-ink); --accent-ink:#fff;
+    --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --font-h:"Inter Tight","Inter",system-ui,sans-serif;
+    --r-lg:.625rem; --r-xl:.875rem; --r-2xl:1.25rem; --r-3xl:1.75rem;
+    --maxw:1140px; --radius:var(--r-2xl);
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:var(--font-sans);font-size:1.0625rem;line-height:1.625;
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);
+    font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   img{max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
-  /* header */
-  header.site{position:sticky;top:0;background:rgba(251,250,249,.86);
+  header.site{position:sticky;top:0;background:rgba(251,250,249,.85);
     backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);z-index:20}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:14px;flex-wrap:wrap}
-  .brand{font-family:var(--font-heading);font-weight:800;font-size:1.2rem;
-    letter-spacing:-.025em;text-decoration:none}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0;gap:14px}
+  .brand{font-family:var(--font-h);font-weight:800;font-size:1.2rem;letter-spacing:-.03em;text-decoration:none}
   .brand span{color:var(--brass-ink)}
-  nav.links{display:none;gap:28px;font-size:.9375rem;font-weight:500;color:var(--muted)}
+  nav.links{display:none;gap:30px;font-size:.9375rem;font-weight:500;color:var(--muted)}
   nav.links a{text-decoration:none}
   nav.links a:hover{color:var(--ink)}
-  @media(min-width:960px){nav.links{display:flex}}
+  @media(min-width:980px){nav.links{display:flex}}
   .nav-right{display:flex;align-items:center;gap:12px}
   .lang-switch{display:flex;gap:2px;background:var(--surface);border:1px solid var(--line);
     border-radius:999px;padding:3px}
-  .lang-switch button{border:none;background:transparent;color:var(--muted);
-    font-family:var(--font-sans);font-size:.75rem;font-weight:600;letter-spacing:.02em;
-    padding:6px 10px;border-radius:999px;cursor:pointer}
+  .lang-switch button{border:none;background:transparent;color:var(--muted);font-family:var(--font);
+    font-size:.75rem;font-weight:600;padding:6px 10px;border-radius:999px;cursor:pointer}
   .lang-switch button:hover{color:var(--ink)}
   .lang-switch button.active{background:var(--ink);color:#fff}
+  @media(max-width:620px){.nav{padding:11px 0}.nav-right .btn{display:none}
+    .lang-switch button{padding:5px 8px;font-size:.7rem}}
 
-  /* the hero already carries a CTA, so the header one is redundant on small screens */
-  @media(max-width:620px){
-    .nav{padding:12px 0;flex-wrap:nowrap}
-    .nav-right .btn{display:none}
-    .lang-switch button{padding:5px 8px;font-size:.7rem}
-  }
-
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    font-family:var(--font-heading);font-weight:600;font-size:.9375rem;letter-spacing:-.01em;
-    border-radius:var(--r-lg);padding:13px 24px;text-decoration:none;border:1px solid transparent;
-    cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-h);
+    font-weight:600;font-size:1rem;letter-spacing:-.01em;border-radius:var(--r-lg);padding:15px 30px;
+    text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s}
   .btn-primary{background:var(--ink);color:#fff}
   .btn-primary:hover{background:#000}
-  .btn-ghost{background:transparent;border-color:var(--line-strong);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--ink);background:var(--surface)}
+  .btn-ghost{background:var(--surface);border-color:var(--line-strong);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-sm{padding:11px 20px;font-size:.9375rem}
 
-  /* rhythm */
-  section{padding:88px 0}
-  section[id]{scroll-margin-top:84px}
-  .hero{padding:96px 0 64px;text-align:center}
-  @media(max-width:720px){section{padding:56px 0}.hero{padding:56px 0 40px}}
+  section{padding:110px 0}
+  section[id]{scroll-margin-top:80px}
+  @media(max-width:820px){section{padding:64px 0}}
 
-  .kicker{display:inline-block;font-family:var(--font-mono);font-size:.75rem;font-weight:500;
-    text-transform:uppercase;letter-spacing:.1em;color:var(--brass-ink);
-    margin-bottom:24px}
-  h1{font-family:var(--font-heading);font-weight:800;
-    font-size:clamp(2.4rem,5.6vw,4rem);line-height:1.04;letter-spacing:-.035em;
-    margin:0 auto 24px;max-width:16ch;text-wrap:balance}
-  .hero h1{max-width:18ch}
-  h2{font-family:var(--font-heading);font-weight:700;
-    font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1.12;letter-spacing:-.03em;
-    margin:0 0 12px;text-wrap:balance}
-  h3{font-family:var(--font-heading);font-weight:600;letter-spacing:-.02em}
-  .lede{font-size:clamp(1.0625rem,1.7vw,1.25rem);line-height:1.6;color:var(--muted);
-    max-width:56ch;margin:0 auto 34px}
-  .section-lede{font-size:1.0625rem;color:var(--muted);max-width:58ch;margin:0 0 44px}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:22px}
+  h1{font-family:var(--font-h);font-weight:800;font-size:clamp(2.6rem,6.4vw,4.75rem);
+    line-height:1.02;letter-spacing:-.04em;margin:0 auto 26px;max-width:15ch;text-wrap:balance}
+  h2{font-family:var(--font-h);font-weight:700;font-size:clamp(2rem,4.4vw,3.1rem);
+    line-height:1.06;letter-spacing:-.035em;margin:0 0 18px;text-wrap:balance}
+  h3{font-family:var(--font-h);font-weight:600;letter-spacing:-.02em;margin:0}
+  .eyebrow{display:inline-block;font-family:var(--font-h);font-size:.8125rem;font-weight:600;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--brass-ink);margin-bottom:22px}
+
+  .hero{padding:110px 0 90px;text-align:center}
+  @media(max-width:820px){.hero{padding:56px 0 48px}}
+  .lede{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.5;color:var(--muted);
+    max-width:44ch;margin:0 auto 36px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:20px}
   .fineprint{font-size:.875rem;color:var(--muted)}
 
-  /* surfaces */
+  /* alternating feature rows */
+  .feature{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  @media(min-width:900px){
+    .feature{grid-template-columns:1fr 1fr;gap:80px}
+    .feature.flip .feature-text{order:2}
+    .feature.flip .feature-visual{order:1}
+  }
+  .feature-text h2{margin-bottom:16px}
+  .feature-text p{font-size:1.125rem;line-height:1.55;color:var(--muted);max-width:34ch;margin:0}
+  .feature-visual{min-width:0}
+
   .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl);padding:28px}
-  .grid3{display:grid;gap:20px;grid-template-columns:1fr}
-  @media(min-width:820px){.grid3{grid-template-columns:repeat(3,1fr)}}
-  .grid2{display:grid;gap:22px;grid-template-columns:1fr}
-  @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr}}
-  .step-num{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-mono);font-size:.8125rem;font-weight:500;margin-bottom:16px}
+  .grid3{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:860px){.grid3{grid-template-columns:repeat(3,1fr)}}
 
-  /* comparison */
-  .compare{border:1px solid var(--line);border-radius:var(--r-2xl);overflow:hidden;background:var(--surface)}
-  .compare-head{display:grid;grid-template-columns:1fr 1fr}
-  .compare-head div{padding:16px 22px;font-family:var(--font-heading);font-weight:600;
-    font-size:.9375rem;letter-spacing:-.01em}
-  .compare-head .col-old{color:var(--muted);border-bottom:1px solid var(--line)}
-  .compare-head .col-new{color:var(--brass-ink);border-bottom:2px solid var(--brass);background:rgba(176,122,69,.05)}
-  .compare-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
-  .compare-row > div{padding:22px}
-  .compare-row .col-old{color:var(--muted)}
-  .compare-row .col-old strong{display:block;color:var(--ink);font-family:var(--font-heading);
-    font-weight:600;letter-spacing:-.015em;margin-bottom:6px}
-  .compare-row .col-new{background:rgba(176,122,69,.05)}
-  .compare-row .col-new strong{display:block;color:var(--brass-ink);font-family:var(--font-heading);
-    font-weight:600;letter-spacing:-.015em;margin-bottom:6px}
-  .compare-row p{margin:0;font-size:.9375rem;line-height:1.55}
-  @media(max-width:680px){.compare-head div{font-size:.82rem;padding:12px 14px}
-    .compare-row{grid-template-columns:1fr}.compare-row .col-old{border-bottom:1px solid var(--line)}
-    .compare-row > div{padding:16px}}
-
-  /* pricing */
-  .price-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl);padding:30px;
-    display:flex;flex-direction:column}
-  .price-card.featured{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
-  .price-card h3{font-size:1.0625rem;margin:0 0 4px}
-  .price{font-family:var(--font-heading);font-size:2.75rem;font-weight:800;letter-spacing:-.04em;
-    line-height:1;margin:14px 0 4px}
-  .price small{font-family:var(--font-sans);font-size:.9375rem;font-weight:500;color:var(--muted);letter-spacing:0}
-  ul.checklist{list-style:none;padding:0;margin:20px 0;flex:1}
-  ul.checklist li{padding-left:26px;position:relative;margin-bottom:11px;color:var(--muted);font-size:.9375rem}
-  ul.checklist li::before{content:"";position:absolute;left:0;top:.55em;width:14px;height:2px;
-    background:var(--brass);border-radius:2px}
-
-  /* data */
+  /* programs table */
   .table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl)}
   .source-table{width:100%;border-collapse:collapse;font-size:.9375rem}
-  .source-table th,.source-table td{text-align:left;padding:15px 20px;border-bottom:1px solid var(--line)}
+  .source-table th,.source-table td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line)}
   .source-table tr:last-child td{border-bottom:none}
-  .source-table th{font-family:var(--font-mono);color:var(--muted);font-weight:500;font-size:.6875rem;
-    text-transform:uppercase;letter-spacing:.1em}
-  .source-table td:first-child{font-family:var(--font-heading);font-weight:600;letter-spacing:-.015em}
+  .source-table th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+  .source-table td:first-child{font-family:var(--font-h);font-weight:600;letter-spacing:-.015em}
   .source-table a{color:var(--brass-ink)}
 
-  .disclaimer{background:var(--sub);border:1px solid var(--line);border-radius:var(--r-2xl);
-    padding:20px 24px;font-size:.9rem;color:var(--muted)}
+  /* sample-report visual */
+  .report-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl);
+    padding:26px;box-shadow:0 18px 40px -28px rgba(20,24,26,.4)}
+  .report-flag{display:inline-block;background:rgba(176,122,69,.12);color:var(--brass-ink);
+    font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:5px 10px;border-radius:var(--r-lg);margin-bottom:18px}
+  .report-row{border-top:1px solid var(--line);padding:15px 0}
+  .report-row:first-of-type{border-top:none;padding-top:0}
+  .report-row h4{font-family:var(--font-h);font-weight:600;letter-spacing:-.02em;font-size:1rem;margin:0 0 4px}
+  .report-row p{margin:0;font-size:.875rem;color:var(--muted)}
+
+  .photo{border-radius:var(--r-3xl);overflow:hidden;aspect-ratio:4/3}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* pricing */
+  .price-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl);
+    padding:32px;display:flex;flex-direction:column}
+  .price-card.featured{background:var(--ink);border-color:var(--ink);color:#fff}
+  .price-card.featured .muted,.price-card.featured ul.checklist li{color:rgba(255,255,255,.72)}
+  .price-card.featured .btn{background:#fff;color:var(--ink);border-color:#fff}
+  .price-card h3{font-size:1rem;font-weight:600;color:var(--muted)}
+  .price-card.featured h3{color:rgba(255,255,255,.72)}
+  .price{font-family:var(--font-h);font-size:3.25rem;font-weight:800;letter-spacing:-.045em;
+    line-height:1;margin:16px 0 6px}
+  .price-note{font-size:.9375rem;color:var(--muted);margin:0 0 4px}
+  ul.checklist{list-style:none;padding:0;margin:24px 0 28px;flex:1}
+  ul.checklist li{padding-left:24px;position:relative;margin-bottom:12px;color:var(--muted);font-size:.9375rem}
+  ul.checklist li::before{content:"";position:absolute;left:0;top:.6em;width:12px;height:2px;
+    background:var(--brass);border-radius:2px}
+  .price-card.featured ul.checklist li::before{background:rgba(255,255,255,.55)}
+
   details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);
-    padding:18px 22px;margin-bottom:10px}
-  summary{font-family:var(--font-heading);font-weight:600;letter-spacing:-.015em;cursor:pointer}
-  summary::marker{color:var(--brass)}
-  details p{color:var(--muted);font-size:.9375rem;margin:12px 0 0}
+    padding:20px 24px;margin-bottom:10px}
+  summary{font-family:var(--font-h);font-weight:600;letter-spacing:-.015em;cursor:pointer;font-size:1.0625rem}
+  details p{color:var(--muted);font-size:.9375rem;margin:12px 0 0;max-width:60ch}
 
-  .founder{display:flex;gap:20px;align-items:flex-start}
-  .avatar{width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-heading);font-weight:700;font-size:1.25rem;flex-shrink:0}
+  .disclaimer{background:var(--sub);border:1px solid var(--line);border-radius:var(--r-2xl);
+    padding:22px 26px;font-size:.875rem;color:var(--muted);max-width:70ch}
 
-  footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-size:.875rem}
-  footer .foot-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:12px}
-
-  /* photography — one image, used large */
-  .photo-band{position:relative;border-radius:var(--r-3xl);overflow:hidden;height:420px;margin:0}
-  .photo-band img{width:100%;height:100%;object-fit:cover;display:block}
-  .photo-band .caption{position:absolute;left:0;right:0;bottom:0;padding:34px 38px;
-    background:linear-gradient(0deg,rgba(20,24,26,.82),rgba(20,24,26,.15) 60%,transparent);
-    color:#fff;font-family:var(--font-display);font-style:italic;font-weight:500;
-    font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.25;letter-spacing:-.01em}
-  @media(max-width:680px){.photo-band{height:260px}.photo-band .caption{padding:22px 22px}}
+  footer{border-top:1px solid var(--line);padding:48px 0;color:var(--muted);font-size:.875rem}
+  footer .foot-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:14px}
 
   /* --- interactive matcher --- */
   .matcher-shell{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2xl);
-    overflow:hidden}
+    overflow:hidden;box-shadow:0 30px 60px -40px rgba(20,24,26,.45)}
   .matcher-bar{display:flex;align-items:center;gap:7px;padding:14px 20px;border-bottom:1px solid var(--line);
     background:var(--sub)}
   .matcher-dot{width:10px;height:10px;border-radius:50%;background:var(--line-strong)}
-  .matcher-bar-label{margin-left:10px;font-family:var(--font-mono);font-size:.75rem;
-    color:var(--muted);letter-spacing:.02em}
+  .matcher-bar-label{margin-left:10px;font-size:.8125rem;font-weight:500;color:var(--muted)}
   .matcher-body{display:grid;grid-template-columns:1fr}
   @media(min-width:880px){.matcher-body{grid-template-columns:340px 1fr}}
   .matcher-controls{padding:28px;border-bottom:1px solid var(--line)}
   @media(min-width:880px){.matcher-controls{border-bottom:none;border-right:1px solid var(--line)}}
-  .ctl-label{display:block;font-family:var(--font-mono);font-size:.6875rem;font-weight:500;
-    text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 11px}
+  .ctl-label{display:block;font-size:.75rem;font-weight:600;text-transform:uppercase;
+    letter-spacing:.09em;color:var(--muted);margin:0 0 11px}
   .ctl-group{margin-bottom:26px}
   .ctl-group:last-child{margin-bottom:0}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{border:1px solid var(--line);background:transparent;color:var(--muted);
-    font-family:var(--font-sans);font-size:.875rem;font-weight:500;
-    padding:9px 15px;border-radius:999px;cursor:pointer;
+  .chip{border:1px solid var(--line);background:transparent;color:var(--muted);font-family:var(--font);
+    font-size:.875rem;font-weight:500;padding:9px 15px;border-radius:999px;cursor:pointer;
     transition:border-color .14s,color .14s,background .14s}
   .chip:hover{border-color:var(--line-strong);color:var(--ink)}
   .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
   .chip:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
-  .matcher-results{padding:28px;min-height:380px;display:flex;flex-direction:column}
-  .m-count{font-family:var(--font-heading);font-weight:700;font-size:1.25rem;
-    letter-spacing:-.025em;margin:0 0 6px}
+  .matcher-results{padding:28px;min-height:390px;display:flex;flex-direction:column}
+  .m-count{font-family:var(--font-h);font-weight:700;font-size:1.375rem;letter-spacing:-.03em;margin:0 0 6px}
   .m-count b{color:var(--brass-ink)}
   .m-sub{font-size:.8125rem;color:var(--muted);margin:0 0 22px}
   .m-list{display:flex;flex-direction:column;gap:12px;flex:1}
-  .m-item{border:1px solid var(--line);border-radius:var(--r-xl);padding:18px 20px;
-    animation:mfade .22s ease both}
+  .m-item{border:1px solid var(--line);border-radius:var(--r-xl);padding:18px 20px;animation:mfade .22s ease both}
   @keyframes mfade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){.m-item{animation:none}}
-  .m-item h4{font-family:var(--font-heading);font-weight:600;letter-spacing:-.02em;
-    margin:0 0 7px;font-size:1.0625rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .m-badge{font-family:var(--font-mono);font-size:.625rem;font-weight:500;text-transform:uppercase;
-    letter-spacing:.1em;color:var(--brass-ink);background:rgba(176,122,69,.11);
-    padding:4px 9px;border-radius:var(--r-sm)}
+  .m-item h4{font-family:var(--font-h);font-weight:600;letter-spacing:-.02em;margin:0 0 7px;
+    font-size:1.0625rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .m-badge{font-size:.6875rem;font-weight:700;letter-spacing:.06em;color:var(--brass-ink);
+    background:rgba(176,122,69,.12);padding:4px 9px;border-radius:var(--r-lg)}
   .m-amount{margin:0 0 8px;font-size:.9375rem;color:var(--ink)}
-  .m-meta{margin:0;font-family:var(--font-mono);font-size:.75rem;color:var(--muted)}
+  .m-meta{margin:0;font-size:.8125rem;color:var(--muted)}
   .m-meta a{color:var(--brass-ink)}
   .m-empty{border:1px dashed var(--line-strong);border-radius:var(--r-xl);padding:26px;
     text-align:center;color:var(--muted);font-size:.9375rem}
-  .m-foot{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);
-    font-size:.875rem;color:var(--muted)}
+  .m-foot{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}
   .m-foot a{color:var(--brass-ink);font-weight:600;white-space:nowrap}
 </style>
 </head>
@@ -229,7 +193,6 @@
     <a href="#" class="brand">Sin<span>cronia</span></a>
     <nav class="links">
       <a href="#matcher" data-i18n="nav_matcher">Provalo</a>
-      <a href="#how" data-i18n="nav_how">Come funziona</a>
       <a href="#programs" data-i18n="nav_programs">Bandi tracciati</a>
       <a href="#pricing" data-i18n="nav_pricing">Prezzi</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
@@ -251,27 +214,19 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="kicker" data-i18n="hero_kicker">Italia · Francia · Spagna · Portogallo · Germania · programmi UE</span>
-      <h1 data-i18n="hero_h1">Trova i bandi e i finanziamenti per cui la tua impresa e' idonea.</h1>
-      <p class="lede" data-i18n="hero_lede">
-        Confrontiamo il tuo profilo con un database verificato di programmi reali:
-        Horizon Europe, Bpifrance, ENISA, Invitalia e altri. Ti diciamo quali valgono
-        la pena, con link ufficiali. Su richiesta revisioniamo anche la candidatura.
-      </p>
+      <span class="eyebrow" data-i18n="hero_kicker">Italy · France · Spain · Germany · EU</span>
+      <h1 data-i18n="hero_h1">Find the funding your company qualifies for.</h1>
+      <p class="lede" data-i18n="hero_lede">Real public programs, matched to your profile. Every one with an official link you can check.</p>
       <div class="cta-row">
-        <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta_primary">Trova i tuoi bandi, da €149</a>
-        <a href="#matcher" class="btn btn-ghost" data-i18n="hero_cta_secondary">Provalo gratis</a>
+        <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta_primary">Get your report — €149</a>
+        <a href="#matcher" class="btn btn-ghost" data-i18n="hero_cta_secondary">Try it free</a>
       </div>
-      <p class="fineprint" data-i18n="hero_fineprint">Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.</p>
+      <p class="fineprint" data-i18n="hero_fineprint">No signup for the free match.</p>
     </div>
   </section>
 
-  <section id="matcher" style="padding-top:8px">
+  <section id="matcher" style="padding-top:0">
     <div class="wrap">
-      <span class="kicker" data-i18n="m_kicker">Live — free, no signup</span>
-      <h2 data-i18n="m_h2">See it work on your own profile</h2>
-      <p class="section-lede" data-i18n="m_lede">This is the same matching step we run for the paid report, on the same verified database. Pick your profile and the results update instantly.</p>
-
       <div class="matcher-shell">
         <div class="matcher-bar">
           <span class="matcher-dot"></span><span class="matcher-dot"></span><span class="matcher-dot"></span>
@@ -291,29 +246,28 @@
             <div class="ctl-group">
               <span class="ctl-label" data-i18n="m_lbl_stage">Company stage</span>
               <div class="chips" data-group="stage">
-                <button type="button" class="chip" data-val="idea" data-i18n="m_s_idea">Idea / pre-launch</button>
+                <button type="button" class="chip" data-val="idea" data-i18n="m_s_idea">Idea</button>
                 <button type="button" class="chip on" data-val="startup" data-i18n="m_s_startup">Startup</button>
                 <button type="button" class="chip" data-val="sme" data-i18n="m_s_sme">Established SME</button>
               </div>
             </div>
             <div class="ctl-group">
-              <span class="ctl-label" data-i18n="m_lbl_need">What you need funding for</span>
+              <span class="ctl-label" data-i18n="m_lbl_need">What it's for</span>
               <div class="chips" data-group="need">
-                <button type="button" class="chip on" data-val="rd" data-i18n="m_n_rd">R&amp;D / innovation</button>
+                <button type="button" class="chip on" data-val="rd" data-i18n="m_n_rd">R&amp;D</button>
                 <button type="button" class="chip" data-val="digital" data-i18n="m_n_digital">Digitalization</button>
-                <button type="button" class="chip" data-val="intl" data-i18n="m_n_intl">International project</button>
-                <button type="button" class="chip" data-val="growth" data-i18n="m_n_growth">Growth / expansion</button>
+                <button type="button" class="chip" data-val="intl" data-i18n="m_n_intl">International</button>
+                <button type="button" class="chip" data-val="growth" data-i18n="m_n_growth">Growth</button>
               </div>
             </div>
           </div>
-
           <div class="matcher-results">
             <p class="m-count" id="m-count"></p>
-            <p class="m-sub" id="m-sub" data-i18n="m_sub">From the verified database, last checked 2026-08-22.</p>
+            <p class="m-sub" id="m-sub" data-i18n="m_sub">Verified database, last checked 2026-08-22.</p>
             <div class="m-list" id="m-list"></div>
             <p class="m-foot">
-              <span data-i18n="m_foot">This is the shortlist. The paid report adds the analyst note on which to go for first, the requirements, deadlines, and an application review.</span>
-              <a href="#pricing" data-i18n="m_foot_cta">See packages →</a>
+              <span data-i18n="m_foot">The paid report adds requirements, deadlines and which to try first.</span>
+              <a href="#pricing" data-i18n="m_foot_cta">See pricing →</a>
             </p>
           </div>
         </div>
@@ -321,57 +275,48 @@
     </div>
   </section>
 
-  <section id="compare" style="background:var(--sub)">
+  <section id="programs">
     <div class="wrap">
-      <h2 data-i18n="compare_title">Cercare da soli, o con Sincronia.</h2>
-      <p class="section-lede" data-i18n="compare_lede">La differenza non e' trovare un bando: e' capire in tempo quali contano davvero.</p>
-      <div class="compare">
-        <div class="compare-head">
-          <div class="col-old">✕ <span data-i18n="compare_col_old">Da soli</span></div>
-          <div class="col-new">✓ <span data-i18n="compare_col_new">Con Sincronia</span></div>
+      <div class="feature">
+        <div class="feature-text">
+          <h2 data-i18n="f1_h">Real programs. Official links.</h2>
+          <p data-i18n="f1_p">Verified by hand against each authority's own site, and dated so you know how fresh it is.</p>
         </div>
-        <div class="compare-row">
-          <div class="col-old"><strong data-i18n="compare1_old_h">Siti istituzionali separati</strong><p data-i18n="compare1_old_p">Ogni paese ha il proprio portale, in una lingua diversa dalla tua, con criteri difficili da confrontare tra loro.</p></div>
-          <div class="col-new"><strong data-i18n="compare1_new_h">Un profilo, tutte le fonti</strong><p data-i18n="compare1_new_p">Confrontiamo il tuo profilo con le fonti ufficiali di piu' paesi insieme, nella tua lingua.</p></div>
-        </div>
-        <div class="compare-row">
-          <div class="col-old"><strong data-i18n="compare2_old_h">Requisiti in linguaggio burocratico</strong><p data-i18n="compare2_old_p">Bandi scritti per addetti ai lavori, difficili da capire senza perdere ore.</p></div>
-          <div class="col-new"><strong data-i18n="compare2_new_h">Spiegati in chiaro</strong><p data-i18n="compare2_new_p">Un analista traduce ogni programma in: cosa copre, quanto vale, se fa per te.</p></div>
-        </div>
-        <div class="compare-row">
-          <div class="col-old"><strong data-i18n="compare3_old_h">Candidatura scritta senza riscontro</strong><p data-i18n="compare3_old_p">Nessuno controlla se il budget o la narrativa hanno senso prima dell'invio.</p></div>
-          <div class="col-new"><strong data-i18n="compare3_new_h">Revisione prima dell'invio</strong><p data-i18n="compare3_new_p">Controlliamo numeri e struttura della candidatura prima che parta.</p></div>
-        </div>
-        <div class="compare-row">
-          <div class="col-old"><strong data-i18n="compare4_old_h">Un documento, poi sei di nuovo solo</strong><p data-i18n="compare4_old_p">Ricevi l'informazione ma nessuno ti segue nei passaggi successivi.</p></div>
-          <div class="col-new"><strong data-i18n="compare4_new_h">Accompagnamento su richiesta</strong><p data-i18n="compare4_new_p">Se vuoi, ti seguiamo fino all'invio, non solo fino al report.</p></div>
+        <div class="feature-visual">
+          <div class="table-wrap">
+            <table class="source-table">
+              <thead>
+                <tr>
+                  <th data-i18n="table_program">Program</th>
+                  <th data-i18n="table_amount">Amount</th>
+                  <th data-i18n="table_source">Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>EIC Accelerator</td><td>€2.5M + equity</td><td><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">eic.ec.europa.eu</a></td></tr>
+                <tr><td>Smart&amp;Start Italia</td><td>€1.5M</td><td><a href="https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia" target="_blank" rel="noopener">invitalia.it</a></td></tr>
+                <tr><td>Bpifrance</td><td>€2M</td><td><a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">bpifrance.fr</a></td></tr>
+                <tr><td>ENISA</td><td>€25k–€1.5M</td><td><a href="https://www.enisa.es/" target="_blank" rel="noopener">enisa.es</a></td></tr>
+                <tr><td>Kit Digital</td><td>€29k</td><td><a href="https://www.acelerapyme.gob.es/kit-digital" target="_blank" rel="noopener">acelerapyme.gob.es</a></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="how">
+  <section style="background:var(--sub)">
     <div class="wrap">
-      <h2 data-i18n="how_title">Come funziona</h2>
-      <p class="section-lede" data-i18n="how_lede">Due passaggi, nessuna promessa di risultato che non possiamo mantenere.</p>
-      <div class="grid3">
-        <div class="card">
-          <div class="step-num">1</div>
-          <h3 data-i18n="how1_title">Profilo</h3>
-          <p data-i18n="how1_body">Ci dici paese, settore, fase dell'azienda e di cosa hai bisogno: R&amp;D,
-          digitalizzazione, espansione. Bastano tre minuti.</p>
+      <div class="feature flip">
+        <div class="feature-text">
+          <h2 data-i18n="f2_h">Checked line by line.</h2>
+          <p data-i18n="f2_p">An analyst reads your application before you send it: the budget, the claims, what's missing.</p>
         </div>
-        <div class="card">
-          <div class="step-num">2</div>
-          <h3 data-i18n="how2_title">Verifica</h3>
-          <p data-i18n="how2_body">Confrontiamo il profilo col database verificato. Un analista controlla i
-          risultati e scrive perche' contano per te, con link ufficiali per ognuno.</p>
-        </div>
-        <div class="card">
-          <div class="step-num">3</div>
-          <h3 data-i18n="how3_title">Report</h3>
-          <p data-i18n="how3_body">Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su
-          richiesta revisioniamo anche la tua candidatura prima dell'invio.</p>
+        <div class="feature-visual">
+          <div class="photo">
+            <img src="assets/application-review.jpg" width="2000" height="1335" alt="A person reviewing and signing an application document" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
     </div>
@@ -379,129 +324,97 @@
 
   <section>
     <div class="wrap">
-      <div class="photo-band">
-        <img src="assets/application-review.jpg" width="2000" height="1335" alt="Una persona che rivede e firma un documento di candidatura" loading="lazy" decoding="async">
-        <div class="caption" data-i18n="photo2_caption">Ogni candidatura, controllata numero per numero.</div>
+      <div class="feature">
+        <div class="feature-text">
+          <h2 data-i18n="f3_h">A report, not a list.</h2>
+          <p data-i18n="f3_p">Amounts, requirements, deadlines, links — plus which one is worth your time first.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="report-card">
+            <span class="report-flag" data-i18n="report_flag">Sample — fictional company</span>
+            <div class="report-row">
+              <h4>EIC Accelerator</h4>
+              <p>€2.5M grant + €1–15M equity · eic.ec.europa.eu</p>
+            </div>
+            <div class="report-row">
+              <h4>Smart&amp;Start Italia</h4>
+              <p>0% loan + grant, up to €1.5M · invitalia.it</p>
+            </div>
+            <div class="report-row">
+              <h4>Eurostars Call 11</h4>
+              <p>Up to €3M, international R&amp;D · eurostars-eureka.eu</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="programs">
-    <div class="wrap">
-      <h2 data-i18n="programs_title">Alcuni dei programmi che tracciamo</h2>
-      <p class="section-lede" data-i18n="programs_lede">Elenco parziale, aggiornato a mano. Ogni riga e' verificata con fonte ufficiale.</p>
-      <div class="table-wrap">
-        <table class="source-table">
-          <thead>
-            <tr>
-              <th data-i18n="table_program">Programma</th>
-              <th data-i18n="table_scope">Ambito</th>
-              <th data-i18n="table_amount">Importo</th>
-              <th data-i18n="table_source">Fonte</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>EIC Accelerator</td><td data-i18n="scope_eu_deeptech">UE (deep-tech)</td><td>Fino a €2.5M + equity</td><td><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">eic.ec.europa.eu</a></td></tr>
-            <tr><td>Smart&amp;Start Italia</td><td data-i18n="scope_it">Italia</td><td>Fino a €1.5M</td><td><a href="https://www.invitalia.it/cosa-facciamo/creiamo-nuove-aziende/smart-start-italia" target="_blank" rel="noopener">invitalia.it</a></td></tr>
-            <tr><td>Bpifrance, Aide au développement</td><td data-i18n="scope_fr">Francia</td><td>Fino a €2M</td><td><a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">bpifrance.fr</a></td></tr>
-            <tr><td>ENISA Startups y Pymes</td><td data-i18n="scope_es">Spagna</td><td>€25k–€1.5M</td><td><a href="https://www.enisa.es/" target="_blank" rel="noopener">enisa.es</a></td></tr>
-            <tr><td>Kit Digital</td><td data-i18n="scope_es">Spagna</td><td>Fino a €29k</td><td><a href="https://www.acelerapyme.gob.es/kit-digital" target="_blank" rel="noopener">acelerapyme.gob.es</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="fineprint" style="margin-top:14px" data-i18n="programs_footnote">Nel report completo trovi anche Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri.</p>
     </div>
   </section>
 
   <section id="pricing" style="background:var(--sub)">
-    <div class="wrap">
-      <h2 data-i18n="pricing_title">Prezzi</h2>
-      <p class="section-lede" data-i18n="pricing_lede">Pagamento una tantum sui primi due pacchetti. Nessun abbonamento nascosto.</p>
+    <div class="wrap" style="text-align:center">
+      <h2 data-i18n="pricing_title">Simple pricing.</h2>
+      <p class="lede" data-i18n="pricing_lede">One-time. No subscription.</p>
+    </div>
+    <div class="wrap" style="margin-top:52px">
       <div class="grid3">
         <div class="price-card">
           <h3 data-i18n="price1_title">Funding Match Report</h3>
           <div class="price">€149</div>
+          <p class="price-note" data-i18n="price1_note">Delivered in 48 hours.</p>
           <ul class="checklist">
-            <li data-i18n="price1_item1">Elenco dei programmi compatibili col tuo profilo</li>
-            <li data-i18n="price1_item2">Link ufficiali e importi per ognuno</li>
-            <li data-i18n="price1_item3">Nota di priorita': quali valutare per primi</li>
-            <li data-i18n="price1_item4">Consegna in 48 ore</li>
+            <li data-i18n="price1_item1">Programs matching your profile</li>
+            <li data-i18n="price1_item2">Official links and amounts</li>
+            <li data-i18n="price1_item3">Which to try first</li>
           </ul>
-          <a href="https://buy.stripe.com/fZudRa4Jr3MO2HAaJD9Zm01" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%" data-i18n="price1_cta">Richiedi il report</a>
-        </div>
-        <div class="price-card">
-          <h3 data-i18n="price2_title">Match + revisione candidatura</h3>
-          <div class="price">€349</div>
-          <ul class="checklist">
-            <li data-i18n="price2_item1">Tutto il Funding Match Report</li>
-            <li data-i18n="price2_item2">Revisione della candidatura per il bando scelto</li>
-            <li data-i18n="price2_item3">Feedback su budget e numeri della candidatura</li>
-            <li data-i18n="price2_item4">Un giro di correzioni incluso</li>
-          </ul>
-          <a href="https://buy.stripe.com/cNi14o4Jr2IK95YcRL9Zm00" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%" data-i18n="price2_cta">Richiedi questo pacchetto</a>
+          <a href="https://buy.stripe.com/fZudRa4Jr3MO2HAaJD9Zm01" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="price1_cta">Get the report</a>
         </div>
         <div class="price-card featured">
-          <h3 data-i18n="price3_title">Accompagnamento fino all'invio</h3>
-          <div class="price" style="font-size:1.3rem" data-i18n="price3_price">Quota fissa + success fee</div>
+          <h3 data-i18n="price2_title">Match + review</h3>
+          <div class="price">€349</div>
+          <p class="price-note muted" data-i18n="price2_note">Most chosen.</p>
           <ul class="checklist">
-            <li data-i18n="price3_item1">Tutto il Match + revisione candidatura</li>
-            <li data-i18n="price3_item2">Ti seguiamo passo passo fino all'invio, non solo un documento</li>
-            <li data-i18n="price3_item3">Rispondiamo alle tue domande lungo il percorso</li>
-            <li data-i18n="price3_item4">Success fee solo su quanto ottenuto davvero</li>
+            <li data-i18n="price2_item1">Everything in the report</li>
+            <li data-i18n="price2_item2">Your application reviewed</li>
+            <li data-i18n="price2_item3">One round of corrections</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="width:100%" data-i18n="price3_cta">Parliamone</a>
+          <a href="https://buy.stripe.com/cNi14o4Jr2IK95YcRL9Zm00" target="_blank" rel="noopener" class="btn" data-i18n="price2_cta">Get this package</a>
         </div>
-      </div>
-      <p class="fineprint" style="margin-top:16px" data-i18n="pricing_footnote">
-        L'accompagnamento si concorda caso per caso dopo il primo report, in base alla
-        complessita' del bando scelto.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="disclaimer" data-i18n="disclaimer_text">
-        ⚠️ Sincronia fornisce informazioni su programmi pubblici di finanziamento e un
-        feedback editoriale sulle candidature. Non garantiamo l'ottenimento di alcun
-        finanziamento, non diamo consulenza fiscale o legale, e ogni dato (importi,
-        scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire:
-        i programmi pubblici cambiano condizioni nel tempo.
+        <div class="price-card">
+          <h3 data-i18n="price3_title">Through submission</h3>
+          <div class="price" style="font-size:1.75rem" data-i18n="price3_price">Flat + success fee</div>
+          <p class="price-note" data-i18n="price3_note">Agreed case by case.</p>
+          <ul class="checklist">
+            <li data-i18n="price3_item1">Everything above</li>
+            <li data-i18n="price3_item2">Step by step to submission</li>
+            <li data-i18n="price3_item3">Success fee only on what you get</li>
+          </ul>
+          <a href="start.html" class="btn btn-ghost" data-i18n="price3_cta">Let's talk</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="faq">
     <div class="wrap">
-      <h2 data-i18n="faq_title">Domande frequenti</h2>
+      <h2 style="margin-bottom:34px" data-i18n="faq_title">Questions</h2>
       <details>
-        <summary data-i18n="faq1_q">Garantite che ottero' il finanziamento?</summary>
-        <p data-i18n="faq1_a">No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti
-        aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.</p>
+        <summary data-i18n="faq1_q">Do you guarantee I'll get the funding?</summary>
+        <p data-i18n="faq1_a">No — and be wary of anyone who does. The awarding body decides. We help you apply to the right programs, with a stronger application.</p>
       </details>
       <details>
-        <summary data-i18n="faq2_q">Da dove vengono i dati sui bandi?</summary>
-        <p data-i18n="faq2_a">Da un database che manteniamo e verifichiamo a mano contro le fonti
-        ufficiali di ogni ente: Commissione UE, Bpifrance, ENISA, Invitalia e altri. Ogni
-        riga riporta il link diretto e la data dell'ultima verifica.</p>
+        <summary data-i18n="faq2_q">Where does the data come from?</summary>
+        <p data-i18n="faq2_a">A database we maintain by hand against each authority's official source. Every row carries its link and the date we last checked it.</p>
       </details>
       <details>
-        <summary data-i18n="faq3_q">E se non trovate nessun programma per me?</summary>
-        <p data-i18n="faq3_a">Te lo diciamo onestamente invece di forzare match deboli. Il database e'
-        verificato ma non esaustivo, e te lo segnaliamo chiaramente nel report.</p>
+        <summary data-i18n="faq3_q">What if nothing fits me?</summary>
+        <p data-i18n="faq3_a">We tell you honestly instead of forcing weak matches. The database is verified but not exhaustive, and we say so in the report.</p>
       </details>
     </div>
   </section>
 
-  <section id="contact">
+  <section style="padding-top:0">
     <div class="wrap">
-      <div class="card" style="text-align:center">
-        <h2 data-i18n="contact_title">Pronto?</h2>
-        <p class="section-lede" style="margin:0 auto 20px" data-i18n="contact_lede">
-          Scegli il pacchetto sopra per pagare, poi raccontaci la tua azienda per iniziare.
-        </p>
-        <a href="start.html" class="btn btn-primary" data-i18n="contact_cta">Racconta la tua azienda</a>
-      </div>
+      <div class="disclaimer" data-i18n="disclaimer_text">Sincronia provides information on public funding programs and editorial feedback on applications. We do not guarantee any funding, we do not give tax or legal advice, and every figure should be re-checked against the official source before you act on it.</div>
     </div>
   </section>
 </main>
@@ -522,6 +435,26 @@
 <script>
 const translations = {
   en: {
+    faq3_a: "We tell you honestly instead of forcing weak matches. The database is verified but not exhaustive, and we say so in the report.",
+    faq2_a: "A database we maintain by hand against each authority's official source. Every row carries its link and the date we last checked it.",
+    faq1_a: "No — and be wary of anyone who does. The awarding body decides. We help you apply to the right programs, with a stronger application.",
+    price3_item2: "Step by step to submission",
+    price3_note: "Agreed case by case.",
+    price3_price: "Flat + success fee",
+    price2_item2: "Your application reviewed",
+    price2_note: "Most chosen.",
+    price1_item2: "Official links and amounts",
+    price1_note: "Delivered in 48 hours.",
+    pricing_lede: "One-time. No subscription.",
+    table_source: "Source",
+    table_amount: "Amount",
+    report_flag: "Sample — fictional company",
+    f3_p: "Amounts, requirements, deadlines, links — plus which one is worth your time first.",
+    f3_h: "A report, not a list.",
+    f2_p: "An analyst reads your application before you send it: the budget, the claims, what's missing.",
+    f2_h: "Checked line by line.",
+    f1_p: "Verified by hand against each authority's own site, and dated so you know how fresh it is.",
+    f1_h: "Real programs. Official links.",
     nav_matcher: "Try it",
     m_count_one: "<b>{n}</b> program matches this profile",
     m_kicker: "Live — free, no signup",
@@ -530,32 +463,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Where you're based",
     m_lbl_stage: "Company stage",
-    m_lbl_need: "What you need funding for",
+    m_lbl_need: "What it's for",
     m_c_it: "Italy",
     m_c_fr: "France",
     m_c_es: "Spain",
     m_c_eu: "Other EU",
-    m_s_idea: "Idea / pre-launch",
+    m_s_idea: "Idea",
     m_s_startup: "Startup",
     m_s_sme: "Established SME",
-    m_n_rd: "R&D / innovation",
+    m_n_rd: "R&D",
     m_n_digital: "Digitalization",
-    m_n_intl: "International project",
-    m_n_growth: "Growth / expansion",
+    m_n_intl: "International",
+    m_n_growth: "Growth",
     m_count: "<b>{n}</b> programs match this profile",
-    m_sub: "From the verified database, last checked 2026-08-22.",
+    m_sub: "Verified database, last checked 2026-08-22.",
     m_none: "No program in the tracked database matches this exact combination. The full report searches a wider set of sources than this demo.",
     m_verified: "Verified",
-    m_foot: "This is the shortlist. The paid report adds the analyst note on which to go for first, the requirements, deadlines, and an application review.",
+    m_foot: "The paid report adds requirements, deadlines and which to try first.",
     m_foot_cta: "See packages →",
     nav_how: "How it works", nav_programs: "Tracked programs", nav_pricing: "Pricing", nav_faq: "FAQ",
     nav_cta: "Find your grants",
-    hero_kicker: "Italy · France · Spain · Portugal · Germany · EU programs",
-    hero_h1: "Find the grants and funding your company is eligible for.",
-    hero_lede: "We compare your profile against a verified database of real programs: Horizon Europe, Bpifrance, ENISA, Invitalia and more. We tell you which ones are worth it, with official links. On request, we also review your application.",
-    hero_cta_primary: "Find your grants, from €149",
+    hero_kicker: "Italy · France · Spain · Germany · EU",
+    hero_h1: "Find the funding your company qualifies for.",
+    hero_lede: "Real public programs, matched to your profile. Every one with an official link you can check.",
+    hero_cta_primary: "Get your report — €149",
     hero_cta_secondary: "Try it free",
-    hero_fineprint: "Every program in the report has a link to the official source. You verify it yourself, we don't ask you to just trust us.",
+    hero_fineprint: "No signup for the free match.",
     photo1_caption: "Public programs across Europe, not just your country.",
     photo2_caption: "Every application, checked line by line.",
     photo3_caption: "We stay with you, not just a report that arrives and that's it.",
@@ -579,34 +512,54 @@ const translations = {
     how3_title: "Report", how3_body: "You get the list with amounts, requirements, known deadlines and official links. On request, we also review your application before submission.",
     programs_title: "Some of the programs we track",
     programs_lede: "Partial list, updated by hand. Every row is verified against an official source.",
-    table_program: "Program", table_scope: "Scope", table_amount: "Amount", table_source: "Source",
+    table_program: "Program",
     scope_eu_deeptech: "EU (deep-tech)", scope_it: "Italy", scope_fr: "France", scope_es: "Spain",
     programs_footnote: "The full report also includes Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italy-France and more.",
-    pricing_title: "Pricing", pricing_lede: "One-time payment for the first two packages. No hidden subscription.",
+    pricing_title: "Simple pricing.",
     price1_title: "Funding Match Report",
-    price1_item1: "List of programs matching your profile", price1_item2: "Official links and amounts for each one",
-    price1_item3: "Priority note: which to review first", price1_item4: "Delivery in 48 hours",
-    price1_cta: "Request the report",
-    price2_title: "Match + application review",
-    price2_item1: "Everything in the Funding Match Report", price2_item2: "Review of the application for the chosen program",
-    price2_item3: "Feedback on the budget and figures in the application", price2_item4: "One round of corrections included",
-    price2_cta: "Request this package",
-    price3_title: "Support through submission", price3_price: "Flat fee + success fee",
-    price3_item1: "Everything in Match + application review", price3_item2: "We follow you step by step through submission, not just a document",
-    price3_item3: "We answer your questions along the way", price3_item4: "Success fee only on what you actually receive",
+    price1_item1: "Programs matching your profile",
+    price1_item3: "Which to try first",
+    price1_cta: "Get the report",
+    price2_title: "Match + review",
+    price2_item1: "Everything in the report",
+    price2_item3: "One round of corrections",
+    price2_cta: "Get this package",
+    price3_title: "Through submission",
+    price3_item1: "Everything above",
+    price3_item3: "Success fee only on what you get",
     price3_cta: "Let's talk",
     pricing_footnote: "Ongoing support is agreed case by case after the first report, based on the complexity of the chosen program.",
-    disclaimer_text: "⚠️ Sincronia provides information on public funding programs and editorial feedback on applications. We do not guarantee that you will obtain any funding, we do not give tax or legal advice, and every figure (amounts, deadlines, requirements) should always be re-verified against the official source before acting: public programs change conditions over time.",
-    faq_title: "Frequently asked questions",
-    faq1_q: "Do you guarantee I'll get the funding?", faq1_a: "No, and be wary of anyone who promises that: the outcome depends on the awarding body. We help you apply to the right programs, with a stronger application.",
-    faq2_q: "Where does the data on grants come from?", faq2_a: "From a database we maintain and verify by hand against the official sources of each body: European Commission, Bpifrance, ENISA, Invitalia and others. Every row includes the direct link and the date of the last check.",
-    faq3_q: "What if you don't find any program for me?", faq3_a: "We'll tell you honestly instead of forcing weak matches. The database is verified but not exhaustive, and we flag that clearly in the report.",
+    disclaimer_text: "Sincronia provides information on public funding programs and editorial feedback on applications. We do not guarantee any funding, we do not give tax or legal advice, and every figure should be re-checked against the official source before you act on it.",
+    faq_title: "Questions",
+    faq1_q: "Do you guarantee I'll get the funding?",
+    faq2_q: "Where does the data come from?",
+    faq3_q: "What if nothing fits me?",
     contact_title: "Ready?", contact_lede: "Choose a package above to pay, then tell us about your company to get started.",
     contact_cta: "Tell us about your company", footer_contact: "Contact",
-    footer_tagline: "Matching against real grants and funding, plus application review. Not legal or tax advice.",
+    footer_tagline: "Matching against real public funding, plus application review. Not legal or tax advice.",
     footer_privacy: "Privacy", footer_terms: "Terms of service", footer_vat: "VAT number: pending activation"
   },
   it: {
+    faq3_a: "Te lo diciamo onestamente invece di forzare match deboli. Il database è verificato ma non esaustivo, e lo scriviamo nel report.",
+    faq2_a: "Da un database che manteniamo a mano sulle fonti ufficiali di ogni ente. Ogni riga ha il link e la data dell'ultima verifica.",
+    faq1_a: "No — e diffida di chi lo promette. Decide l'ente erogatore. Ti aiutiamo a candidarti ai programmi giusti, con una candidatura più solida.",
+    price3_item2: "Passo passo fino all'invio",
+    price3_note: "Concordato caso per caso.",
+    price3_price: "Fisso + success fee",
+    price2_item2: "La tua candidatura revisionata",
+    price2_note: "Il più scelto.",
+    price1_item2: "Link ufficiali e importi",
+    price1_note: "Consegna in 48 ore.",
+    pricing_lede: "Una tantum. Nessun abbonamento.",
+    table_source: "Fonte",
+    table_amount: "Importo",
+    report_flag: "Esempio — azienda inventata",
+    f3_p: "Importi, requisiti, scadenze, link — e quale vale la pena provare per primo.",
+    f3_h: "Un report, non un elenco.",
+    f2_p: "Un analista legge la tua candidatura prima che la invii: budget, affermazioni, cosa manca.",
+    f2_h: "Controllata riga per riga.",
+    f1_p: "Verificati a mano sul sito di ogni ente, con la data dell'ultimo controllo.",
+    f1_h: "Bandi reali. Link ufficiali.",
     nav_matcher: "Provalo",
     m_count_one: "<b>{n}</b> programma corrisponde a questo profilo",
     m_kicker: "Live — gratis, senza registrazione",
@@ -615,32 +568,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Dove hai sede",
     m_lbl_stage: "Stadio dell'impresa",
-    m_lbl_need: "Per cosa ti serve il finanziamento",
+    m_lbl_need: "Per cosa",
     m_c_it: "Italia",
     m_c_fr: "Francia",
     m_c_es: "Spagna",
     m_c_eu: "Altro UE",
-    m_s_idea: "Idea / pre-lancio",
+    m_s_idea: "Idea",
     m_s_startup: "Startup",
     m_s_sme: "PMI avviata",
-    m_n_rd: "R&S / innovazione",
+    m_n_rd: "R&S",
     m_n_digital: "Digitalizzazione",
-    m_n_intl: "Progetto internazionale",
-    m_n_growth: "Crescita / espansione",
+    m_n_intl: "Internazionale",
+    m_n_growth: "Crescita",
     m_count: "<b>{n}</b> programmi corrispondono a questo profilo",
-    m_sub: "Dal database verificato, ultimo controllo 2026-08-22.",
+    m_sub: "Database verificato, ultimo controllo 2026-08-22.",
     m_none: "Nessun programma nel database tracciato corrisponde a questa combinazione esatta. Il report completo cerca su più fonti di questa demo.",
     m_verified: "Verificato",
-    m_foot: "Questa è la lista corta. Il report a pagamento aggiunge la nota dell'analista su quale provare per primo, i requisiti, le scadenze e la revisione della candidatura.",
+    m_foot: "Il report a pagamento aggiunge requisiti, scadenze e quale provare per primo.",
     m_foot_cta: "Vedi i pacchetti →",
     nav_how: "Come funziona", nav_programs: "Bandi tracciati", nav_pricing: "Prezzi", nav_faq: "FAQ",
     nav_cta: "Trova i bandi",
-    hero_kicker: "Italia · Francia · Spagna · Portogallo · Germania · programmi UE",
-    hero_h1: "Trova i bandi e i finanziamenti per cui la tua impresa e' idonea.",
-    hero_lede: "Confrontiamo il tuo profilo con un database verificato di programmi reali: Horizon Europe, Bpifrance, ENISA, Invitalia e altri. Ti diciamo quali valgono la pena, con link ufficiali. Su richiesta revisioniamo anche la candidatura.",
-    hero_cta_primary: "Trova i tuoi bandi, da €149",
+    hero_kicker: "Italia · Francia · Spagna · Germania · UE",
+    hero_h1: "Trova i finanziamenti per cui la tua impresa è idonea.",
+    hero_lede: "Programmi pubblici reali, sul tuo profilo. Ognuno con il link ufficiale che puoi verificare.",
+    hero_cta_primary: "Ricevi il report — €149",
     hero_cta_secondary: "Provalo gratis",
-    hero_fineprint: "Ogni programma nel report ha un link alla fonte ufficiale. Verifichi tu stesso, non ti chiediamo di fidarti e basta.",
+    hero_fineprint: "Nessuna registrazione per il match gratuito.",
     photo1_caption: "Programmi pubblici in tutta Europa, non solo nel tuo paese.",
     photo2_caption: "Ogni candidatura, controllata numero per numero.",
     photo3_caption: "Ti accompagniamo, non solo un report che arriva e basta.",
@@ -664,34 +617,54 @@ const translations = {
     how3_title: "Report", how3_body: "Ricevi l'elenco con importi, requisiti, scadenze note e link ufficiali. Su richiesta revisioniamo anche la tua candidatura prima dell'invio.",
     programs_title: "Alcuni dei programmi che tracciamo",
     programs_lede: "Elenco parziale, aggiornato a mano. Ogni riga e' verificata con fonte ufficiale.",
-    table_program: "Programma", table_scope: "Ambito", table_amount: "Importo", table_source: "Fonte",
+    table_program: "Programma",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "Spagna",
     programs_footnote: "Nel report completo trovi anche Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia e altri.",
-    pricing_title: "Prezzi", pricing_lede: "Pagamento una tantum sui primi due pacchetti. Nessun abbonamento nascosto.",
+    pricing_title: "Prezzi semplici.",
     price1_title: "Funding Match Report",
-    price1_item1: "Elenco dei programmi compatibili col tuo profilo", price1_item2: "Link ufficiali e importi per ognuno",
-    price1_item3: "Nota di priorita': quali valutare per primi", price1_item4: "Consegna in 48 ore",
+    price1_item1: "Programmi compatibili col tuo profilo",
+    price1_item3: "Quale provare per primo",
     price1_cta: "Richiedi il report",
-    price2_title: "Match + revisione candidatura",
-    price2_item1: "Tutto il Funding Match Report", price2_item2: "Revisione della candidatura per il bando scelto",
-    price2_item3: "Feedback su budget e numeri della candidatura", price2_item4: "Un giro di correzioni incluso",
+    price2_title: "Match + revisione",
+    price2_item1: "Tutto il report",
+    price2_item3: "Un giro di correzioni",
     price2_cta: "Richiedi questo pacchetto",
-    price3_title: "Accompagnamento fino all'invio", price3_price: "Quota fissa + success fee",
-    price3_item1: "Tutto il Match + revisione candidatura", price3_item2: "Ti seguiamo passo passo fino all'invio, non solo un documento",
-    price3_item3: "Rispondiamo alle tue domande lungo il percorso", price3_item4: "Success fee solo su quanto ottenuto davvero",
+    price3_title: "Fino all'invio",
+    price3_item1: "Tutto quanto sopra",
+    price3_item3: "Success fee solo su quanto ottieni",
     price3_cta: "Parliamone",
     pricing_footnote: "L'accompagnamento si concorda caso per caso dopo il primo report, in base alla complessita' del bando scelto.",
-    disclaimer_text: "⚠️ Sincronia fornisce informazioni su programmi pubblici di finanziamento e un feedback editoriale sulle candidature. Non garantiamo l'ottenimento di alcun finanziamento, non diamo consulenza fiscale o legale, e ogni dato (importi, scadenze, requisiti) va sempre riverificato sulla fonte ufficiale prima di agire: i programmi pubblici cambiano condizioni nel tempo.",
-    faq_title: "Domande frequenti",
-    faq1_q: "Garantite che ottero' il finanziamento?", faq1_a: "No, e diffida di chiunque lo prometta: l'esito dipende dall'ente erogatore. Ti aiutiamo a candidarti ai programmi giusti, con una candidatura piu' solida.",
-    faq2_q: "Da dove vengono i dati sui bandi?", faq2_a: "Da un database che manteniamo e verifichiamo a mano contro le fonti ufficiali di ogni ente: Commissione UE, Bpifrance, ENISA, Invitalia e altri. Ogni riga riporta il link diretto e la data dell'ultima verifica.",
-    faq3_q: "E se non trovate nessun programma per me?", faq3_a: "Te lo diciamo onestamente invece di forzare match deboli. Il database e' verificato ma non esaustivo, e te lo segnaliamo chiaramente nel report.",
+    disclaimer_text: "Sincronia fornisce informazioni su programmi pubblici di finanziamento e un feedback editoriale sulle candidature. Non garantiamo alcun finanziamento, non diamo consulenza fiscale o legale, e ogni dato va riverificato sulla fonte ufficiale prima di agire.",
+    faq_title: "Domande",
+    faq1_q: "Garantite che otterrò il finanziamento?",
+    faq2_q: "Da dove vengono i dati?",
+    faq3_q: "E se non trovate niente per me?",
     contact_title: "Pronto?", contact_lede: "Scegli il pacchetto sopra per pagare, poi raccontaci la tua azienda per iniziare.",
     contact_cta: "Racconta la tua azienda", footer_contact: "Contattaci",
-    footer_tagline: "Matching su bandi e finanziamenti reali, piu' revisione candidature. Non e' consulenza legale o fiscale.",
+    footer_tagline: "Matching su finanziamenti pubblici reali, più revisione candidature. Non è consulenza legale o fiscale.",
     footer_privacy: "Privacy", footer_terms: "Termini di servizio", footer_vat: "P.IVA: da attivare"
   },
   es: {
+    faq3_a: "Te lo decimos honestamente en vez de forzar coincidencias débiles. La base está verificada pero no es exhaustiva, y lo indicamos en el informe.",
+    faq2_a: "De una base que mantenemos a mano contra la fuente oficial de cada organismo. Cada fila lleva su enlace y la fecha de la última comprobación.",
+    faq1_a: "No — y desconfía de quien lo prometa. Decide el organismo. Te ayudamos a solicitar los programas correctos, con una solicitud más sólida.",
+    price3_item2: "Paso a paso hasta presentar",
+    price3_note: "Acordado caso por caso.",
+    price3_price: "Fijo + success fee",
+    price2_item2: "Tu solicitud revisada",
+    price2_note: "El más elegido.",
+    price1_item2: "Enlaces oficiales e importes",
+    price1_note: "Entrega en 48 horas.",
+    pricing_lede: "Pago único. Sin suscripción.",
+    table_source: "Fuente",
+    table_amount: "Importe",
+    report_flag: "Ejemplo — empresa ficticia",
+    f3_p: "Importes, requisitos, plazos, enlaces — y cuál merece tu tiempo primero.",
+    f3_h: "Un informe, no una lista.",
+    f2_p: "Un analista lee tu solicitud antes de enviarla: el presupuesto, las afirmaciones, lo que falta.",
+    f2_h: "Revisada línea por línea.",
+    f1_p: "Verificados a mano en la web de cada organismo, con la fecha de la última comprobación.",
+    f1_h: "Programas reales. Enlaces oficiales.",
     nav_matcher: "Pruébalo",
     m_count_one: "<b>{n}</b> programa coincide con este perfil",
     m_kicker: "En vivo — gratis, sin registro",
@@ -700,32 +673,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Dónde tienes la sede",
     m_lbl_stage: "Etapa de la empresa",
-    m_lbl_need: "Para qué necesitas la financiación",
+    m_lbl_need: "Para qué",
     m_c_it: "Italia",
     m_c_fr: "Francia",
     m_c_es: "España",
     m_c_eu: "Otro UE",
-    m_s_idea: "Idea / prelanzamiento",
+    m_s_idea: "Idea",
     m_s_startup: "Startup",
     m_s_sme: "Pyme consolidada",
-    m_n_rd: "I+D / innovación",
+    m_n_rd: "I+D",
     m_n_digital: "Digitalización",
-    m_n_intl: "Proyecto internacional",
-    m_n_growth: "Crecimiento / expansión",
+    m_n_intl: "Internacional",
+    m_n_growth: "Crecimiento",
     m_count: "<b>{n}</b> programas coinciden con este perfil",
-    m_sub: "De la base de datos verificada, última comprobación 2026-08-22.",
+    m_sub: "Base verificada, última comprobación 2026-08-22.",
     m_none: "Ningún programa de la base de datos coincide con esta combinación exacta. El informe completo busca en más fuentes que esta demo.",
     m_verified: "Verificado",
-    m_foot: "Esta es la lista corta. El informe de pago añade la nota del analista sobre cuál probar primero, los requisitos, los plazos y la revisión de la solicitud.",
+    m_foot: "El informe de pago añade requisitos, plazos y cuál probar primero.",
     m_foot_cta: "Ver los paquetes →",
     nav_how: "Como funciona", nav_programs: "Ayudas que seguimos", nav_pricing: "Precios", nav_faq: "Preguntas",
     nav_cta: "Encuentra tus ayudas",
-    hero_kicker: "Italia · Francia · España · Portugal · Alemania · programas de la UE",
-    hero_h1: "Encuentra las ayudas y financiaciones para las que tu empresa es elegible.",
-    hero_lede: "Comparamos tu perfil con una base de datos verificada de programas reales: Horizon Europe, Bpifrance, ENISA, Invitalia y otros. Te decimos cuales merecen la pena, con enlaces oficiales. Si quieres, tambien revisamos tu solicitud.",
-    hero_cta_primary: "Encuentra tus ayudas, desde 149 €",
+    hero_kicker: "Italia · Francia · España · Alemania · UE",
+    hero_h1: "Encuentra la financiación para la que tu empresa es elegible.",
+    hero_lede: "Programas públicos reales, según tu perfil. Cada uno con el enlace oficial que puedes comprobar.",
+    hero_cta_primary: "Recibe el informe — €149",
     hero_cta_secondary: "Pruébalo gratis",
-    hero_fineprint: "Cada programa del informe tiene un enlace a la fuente oficial. Lo compruebas tu mismo, no te pedimos que confies sin mas.",
+    hero_fineprint: "Sin registro para el match gratuito.",
     photo1_caption: "Programas publicos en toda Europa, no solo en tu pais.",
     photo2_caption: "Cada solicitud, revisada numero por numero.",
     photo3_caption: "Te acompañamos, no es solo un informe que llega y ya esta.",
@@ -749,34 +722,54 @@ const translations = {
     how3_title: "Informe", how3_body: "Recibes el listado con importes, requisitos, plazos conocidos y enlaces oficiales. Si lo pides, tambien revisamos tu solicitud antes de enviarla.",
     programs_title: "Algunos de los programas que seguimos",
     programs_lede: "Lista parcial, actualizada a mano. Cada fila esta verificada con su fuente oficial.",
-    table_program: "Programa", table_scope: "Ambito", table_amount: "Importe", table_source: "Fuente",
+    table_program: "Programa",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Francia", scope_es: "España",
     programs_footnote: "En el informe completo tambien encontraras Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Francia y otros.",
-    pricing_title: "Precios", pricing_lede: "Pago unico en los dos primeros paquetes. Sin suscripciones ocultas.",
-    price1_title: "Informe de ayudas compatibles",
-    price1_item1: "Listado de programas compatibles con tu perfil", price1_item2: "Enlaces oficiales e importes de cada uno",
-    price1_item3: "Nota de prioridad: cuales revisar primero", price1_item4: "Entrega en 48 horas",
+    pricing_title: "Precios simples.",
+    price1_title: "Funding Match Report",
+    price1_item1: "Programas que encajan con tu perfil",
+    price1_item3: "Cuál probar primero",
     price1_cta: "Pedir el informe",
-    price2_title: "Informe + revision de la solicitud",
-    price2_item1: "Todo el informe de ayudas compatibles", price2_item2: "Revision de la solicitud para la ayuda elegida",
-    price2_item3: "Comentarios sobre el presupuesto y las cifras", price2_item4: "Una ronda de correcciones incluida",
+    price2_title: "Match + revisión",
+    price2_item1: "Todo el informe",
+    price2_item3: "Una ronda de correcciones",
     price2_cta: "Pedir este paquete",
-    price3_title: "Acompañamiento hasta el envio", price3_price: "Cuota fija + success fee",
-    price3_item1: "Todo el Match + revision de la solicitud", price3_item2: "Te acompañamos paso a paso hasta el envio, no es solo un documento",
-    price3_item3: "Respondemos tus dudas durante todo el proceso", price3_item4: "Success fee solo sobre lo realmente conseguido",
+    price3_title: "Hasta la presentación",
+    price3_item1: "Todo lo anterior",
+    price3_item3: "Success fee solo sobre lo que recibes",
     price3_cta: "Hablemos",
     pricing_footnote: "El acompañamiento se acuerda caso por caso tras el primer informe, segun la complejidad de la ayuda elegida.",
-    disclaimer_text: "⚠️ Sincronia ofrece informacion sobre programas publicos de financiacion y comentarios editoriales sobre solicitudes. No garantizamos la obtencion de ninguna financiacion, no damos asesoria fiscal ni legal, y cada dato (importes, plazos, requisitos) debe verificarse siempre en la fuente oficial antes de actuar: los programas publicos cambian de condiciones con el tiempo.",
-    faq_title: "Preguntas frecuentes",
-    faq1_q: "¿Garantizan que consiga la financiacion?", faq1_a: "No, y desconfia de quien lo prometa: el resultado depende del organismo que otorga la ayuda. Te ayudamos a presentarte a los programas correctos, con una solicitud mas solida.",
-    faq2_q: "¿De donde salen los datos sobre las ayudas?", faq2_a: "De una base de datos que mantenemos y verificamos a mano contra las fuentes oficiales de cada organismo: Comision Europea, Bpifrance, ENISA, Invitalia y otros. Cada fila incluye el enlace directo y la fecha de la ultima verificacion.",
-    faq3_q: "¿Y si no encuentran ningun programa para mi?", faq3_a: "Te lo decimos con honestidad en vez de forzar coincidencias debiles. La base de datos esta verificada pero no es exhaustiva, y te lo indicamos claramente en el informe.",
+    disclaimer_text: "Sincronia ofrece información sobre programas públicos de financiación y feedback editorial sobre solicitudes. No garantizamos ninguna financiación, no damos asesoramiento fiscal ni legal, y todo dato debe reverificarse en la fuente oficial antes de actuar.",
+    faq_title: "Preguntas",
+    faq1_q: "¿Garantizáis que conseguiré la financiación?",
+    faq2_q: "¿De dónde vienen los datos?",
+    faq3_q: "¿Y si no encaja nada?",
     contact_title: "¿Listo?", contact_lede: "Elige un paquete arriba para pagar, luego cuentanos tu empresa para empezar.",
     contact_cta: "Cuentanos tu empresa", footer_contact: "Contacto",
-    footer_tagline: "Coincidencia con ayudas y financiaciones reales, mas revision de solicitudes. No es asesoria legal ni fiscal.",
+    footer_tagline: "Matching sobre financiación pública real, más revisión de solicitudes. No es asesoramiento legal ni fiscal.",
     footer_privacy: "Privacidad", footer_terms: "Terminos de servicio", footer_vat: "NIF: pendiente de activar"
   },
   pt: {
+    faq3_a: "Dizemos-lhe honestamente em vez de forçar correspondências fracas. A base é verificada mas não exaustiva, e indicamo-lo no relatório.",
+    faq2_a: "De uma base que mantemos à mão contra a fonte oficial de cada entidade. Cada linha tem o link e a data da última verificação.",
+    faq1_a: "Não — e desconfie de quem o prometa. Decide a entidade. Ajudamos a candidatar-se aos programas certos, com uma candidatura mais sólida.",
+    price3_item2: "Passo a passo até submeter",
+    price3_note: "Acordado caso a caso.",
+    price3_price: "Fixo + success fee",
+    price2_item2: "A sua candidatura revista",
+    price2_note: "O mais escolhido.",
+    price1_item2: "Links oficiais e montantes",
+    price1_note: "Entrega em 48 horas.",
+    pricing_lede: "Pagamento único. Sem subscrição.",
+    table_source: "Fonte",
+    table_amount: "Montante",
+    report_flag: "Exemplo — empresa fictícia",
+    f3_p: "Montantes, requisitos, prazos, links — e qual vale o seu tempo primeiro.",
+    f3_h: "Um relatório, não uma lista.",
+    f2_p: "Um analista lê a sua candidatura antes de a enviar: o orçamento, as afirmações, o que falta.",
+    f2_h: "Verificada linha a linha.",
+    f1_p: "Verificados à mão no site de cada entidade, com a data da última verificação.",
+    f1_h: "Programas reais. Links oficiais.",
     nav_matcher: "Experimente",
     m_count_one: "<b>{n}</b> programa corresponde a este perfil",
     m_kicker: "Ao vivo — grátis, sem registo",
@@ -785,32 +778,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Onde está sediado",
     m_lbl_stage: "Fase da empresa",
-    m_lbl_need: "Para que precisa do financiamento",
+    m_lbl_need: "Para quê",
     m_c_it: "Itália",
     m_c_fr: "França",
     m_c_es: "Espanha",
     m_c_eu: "Outro UE",
-    m_s_idea: "Ideia / pré-lançamento",
+    m_s_idea: "Ideia",
     m_s_startup: "Startup",
     m_s_sme: "PME estabelecida",
-    m_n_rd: "I&D / inovação",
+    m_n_rd: "I&D",
     m_n_digital: "Digitalização",
-    m_n_intl: "Projeto internacional",
-    m_n_growth: "Crescimento / expansão",
+    m_n_intl: "Internacional",
+    m_n_growth: "Crescimento",
     m_count: "<b>{n}</b> programas correspondem a este perfil",
-    m_sub: "Da base de dados verificada, última verificação 2026-08-22.",
+    m_sub: "Base verificada, última verificação 2026-08-22.",
     m_none: "Nenhum programa na base de dados corresponde a esta combinação exata. O relatório completo pesquisa mais fontes do que esta demo.",
     m_verified: "Verificado",
-    m_foot: "Esta é a lista curta. O relatório pago acrescenta a nota do analista sobre qual tentar primeiro, os requisitos, os prazos e a revisão da candidatura.",
+    m_foot: "O relatório pago acrescenta requisitos, prazos e qual tentar primeiro.",
     m_foot_cta: "Ver os pacotes →",
     nav_how: "Como funciona", nav_programs: "Programas que seguimos", nav_pricing: "Precos", nav_faq: "Perguntas",
     nav_cta: "Encontrar os apoios",
-    hero_kicker: "Italia · Franca · Espanha · Portugal · Alemanha · programas da UE",
-    hero_h1: "Encontre os apoios e financiamentos para os quais a sua empresa e elegivel.",
-    hero_lede: "Comparamos o seu perfil com uma base de dados verificada de programas reais: Horizon Europe, Bpifrance, ENISA, Invitalia e outros. Dizemos quais valem a pena, com links oficiais. Se quiser, tambem revemos a candidatura.",
-    hero_cta_primary: "Encontrar os seus apoios, a partir de 149 €",
+    hero_kicker: "Itália · França · Espanha · Alemanha · UE",
+    hero_h1: "Encontre o financiamento a que a sua empresa tem direito.",
+    hero_lede: "Programas públicos reais, para o seu perfil. Cada um com o link oficial que pode verificar.",
+    hero_cta_primary: "Receba o relatório — €149",
     hero_cta_secondary: "Experimente grátis",
-    hero_fineprint: "Cada programa no relatorio tem um link para a fonte oficial. Verifica voce mesmo, nao pedimos que confie sem mais.",
+    hero_fineprint: "Sem registo para o match gratuito.",
     photo1_caption: "Programas publicos em toda a Europa, nao so no seu pais.",
     photo2_caption: "Cada candidatura, verificada numero a numero.",
     photo3_caption: "Acompanhamos-lhe, nao e so um relatorio que chega e pronto.",
@@ -834,34 +827,54 @@ const translations = {
     how3_title: "Relatorio", how3_body: "Recebe a lista com valores, requisitos, prazos conhecidos e links oficiais. Se pedir, tambem revemos a sua candidatura antes do envio.",
     programs_title: "Alguns dos programas que seguimos",
     programs_lede: "Lista parcial, atualizada manualmente. Cada linha esta verificada com fonte oficial.",
-    table_program: "Programa", table_scope: "Ambito", table_amount: "Valor", table_source: "Fonte",
+    table_program: "Programa",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italia", scope_fr: "Franca", scope_es: "Espanha",
     programs_footnote: "No relatorio completo encontra tambem Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italia-Franca e outros.",
-    pricing_title: "Precos", pricing_lede: "Pagamento unico nos dois primeiros pacotes. Sem subscricoes escondidas.",
-    price1_title: "Relatorio de apoios compativeis",
-    price1_item1: "Lista dos programas compativeis com o seu perfil", price1_item2: "Links oficiais e valores de cada um",
-    price1_item3: "Nota de prioridade: quais avaliar primeiro", price1_item4: "Entrega em 48 horas",
-    price1_cta: "Pedir o relatorio",
-    price2_title: "Relatorio + revisao da candidatura",
-    price2_item1: "Tudo o que esta no relatorio de apoios", price2_item2: "Revisao da candidatura para o programa escolhido",
-    price2_item3: "Comentarios sobre orcamento e numeros", price2_item4: "Uma ronda de correcoes incluida",
+    pricing_title: "Preços simples.",
+    price1_title: "Funding Match Report",
+    price1_item1: "Programas compatíveis com o seu perfil",
+    price1_item3: "Qual tentar primeiro",
+    price1_cta: "Pedir o relatório",
+    price2_title: "Match + revisão",
+    price2_item1: "Tudo o que está no relatório",
+    price2_item3: "Uma ronda de correções",
     price2_cta: "Pedir este pacote",
-    price3_title: "Acompanhamento ate ao envio", price3_price: "Taxa fixa + success fee",
-    price3_item1: "Tudo o que esta no Match + revisao da candidatura", price3_item2: "Acompanhamos-lhe passo a passo ate ao envio, nao e so um documento",
-    price3_item3: "Respondemos as suas duvidas ao longo do processo", price3_item4: "Success fee apenas sobre o que for realmente obtido",
+    price3_title: "Até à submissão",
+    price3_item1: "Tudo o que está acima",
+    price3_item3: "Success fee só sobre o que receber",
     price3_cta: "Vamos falar",
     pricing_footnote: "O acompanhamento e combinado caso a caso depois do primeiro relatorio, consoante a complexidade do programa escolhido.",
-    disclaimer_text: "⚠️ O Sincronia fornece informacao sobre programas publicos de financiamento e comentarios editoriais sobre candidaturas. Nao garantimos a obtencao de qualquer financiamento, nao damos aconselhamento fiscal ou juridico, e cada dado (valores, prazos, requisitos) deve ser sempre confirmado na fonte oficial antes de agir: os programas publicos mudam de condicoes ao longo do tempo.",
-    faq_title: "Perguntas frequentes",
-    faq1_q: "Garantem que vou obter o financiamento?", faq1_a: "Nao, e desconfie de quem prometer isso: o resultado depende da entidade que atribui o apoio. Ajudamos voce a candidatar-se aos programas certos, com uma candidatura mais solida.",
-    faq2_q: "De onde vem os dados sobre os apoios?", faq2_a: "De uma base de dados que mantemos e verificamos manualmente com as fontes oficiais de cada entidade: Comissao Europeia, Bpifrance, ENISA, Invitalia e outras. Cada linha traz o link direto e a data da ultima verificacao.",
-    faq3_q: "E se nao encontrarem nenhum programa para mim?", faq3_a: "Dizemos isso com honestidade em vez de forcar correspondencias fracas. A base de dados e verificada mas nao e exaustiva, e isso fica claro no relatorio.",
+    disclaimer_text: "A Sincronia fornece informação sobre programas públicos de financiamento e feedback editorial sobre candidaturas. Não garantimos qualquer financiamento, não damos aconselhamento fiscal ou jurídico, e cada dado deve ser reverificado na fonte oficial antes de agir.",
+    faq_title: "Perguntas",
+    faq1_q: "Garantem que vou obter o financiamento?",
+    faq2_q: "De onde vêm os dados?",
+    faq3_q: "E se nada servir?",
     contact_title: "Pronto?", contact_lede: "Escolha um pacote acima para pagar, depois conte-nos sobre a sua empresa para comecar.",
     contact_cta: "Conte-nos sobre a sua empresa", footer_contact: "Contacto",
-    footer_tagline: "Correspondencia com apoios e financiamentos reais, mais revisao de candidaturas. Nao e aconselhamento juridico ou fiscal.",
+    footer_tagline: "Matching sobre financiamento público real, mais revisão de candidaturas. Não é aconselhamento jurídico ou fiscal.",
     footer_privacy: "Privacidade", footer_terms: "Termos de servico", footer_vat: "NIF: por ativar"
   },
   fr: {
+    faq3_a: "Nous vous le disons honnêtement au lieu de forcer des correspondances faibles. La base est vérifiée mais pas exhaustive, et nous l'indiquons dans le rapport.",
+    faq2_a: "D'une base que nous tenons à la main d'après la source officielle de chaque organisme. Chaque ligne porte son lien et la date du dernier contrôle.",
+    faq1_a: "Non — et méfiez-vous de qui le promet. C'est l'organisme qui décide. Nous vous aidons à viser les bons programmes, avec un dossier plus solide.",
+    price3_item2: "Pas à pas jusqu'au dépôt",
+    price3_note: "Convenu au cas par cas.",
+    price3_price: "Forfait + success fee",
+    price2_item2: "Votre dossier relu",
+    price2_note: "Le plus choisi.",
+    price1_item2: "Liens officiels et montants",
+    price1_note: "Livré en 48 heures.",
+    pricing_lede: "Paiement unique. Sans abonnement.",
+    table_source: "Source",
+    table_amount: "Montant",
+    report_flag: "Exemple — entreprise fictive",
+    f3_p: "Montants, critères, échéances, liens — et lequel mérite votre temps en premier.",
+    f3_h: "Un rapport, pas une liste.",
+    f2_p: "Un analyste lit votre dossier avant l'envoi : le budget, les affirmations, ce qui manque.",
+    f2_h: "Relue ligne par ligne.",
+    f1_p: "Vérifiés à la main sur le site de chaque organisme, avec la date du dernier contrôle.",
+    f1_h: "Des programmes réels. Des liens officiels.",
     nav_matcher: "Essayer",
     m_count_one: "<b>{n}</b> programme correspond à ce profil",
     m_kicker: "En direct — gratuit, sans inscription",
@@ -870,32 +883,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Où vous êtes établi",
     m_lbl_stage: "Stade de l'entreprise",
-    m_lbl_need: "Pour quoi vous avez besoin du financement",
+    m_lbl_need: "Pour quoi",
     m_c_it: "Italie",
     m_c_fr: "France",
     m_c_es: "Espagne",
     m_c_eu: "Autre UE",
-    m_s_idea: "Idée / pré-lancement",
+    m_s_idea: "Idée",
     m_s_startup: "Startup",
     m_s_sme: "PME établie",
-    m_n_rd: "R&D / innovation",
+    m_n_rd: "R&D",
     m_n_digital: "Numérisation",
-    m_n_intl: "Projet international",
-    m_n_growth: "Croissance / expansion",
+    m_n_intl: "International",
+    m_n_growth: "Croissance",
     m_count: "<b>{n}</b> programmes correspondent à ce profil",
-    m_sub: "Depuis la base de données vérifiée, dernière vérification 2026-08-22.",
+    m_sub: "Base vérifiée, dernier contrôle 2026-08-22.",
     m_none: "Aucun programme de la base de données ne correspond à cette combinaison exacte. Le rapport complet cherche sur plus de sources que cette démo.",
     m_verified: "Vérifié",
-    m_foot: "Voici la liste courte. Le rapport payant ajoute la note de l'analyste sur lequel viser en premier, les exigences, les échéances et la relecture du dossier.",
+    m_foot: "Le rapport payant ajoute les critères, les échéances et lequel viser en premier.",
     m_foot_cta: "Voir les offres →",
     nav_how: "Comment ca marche", nav_programs: "Aides suivies", nav_pricing: "Tarifs", nav_faq: "FAQ",
     nav_cta: "Trouver mes aides",
-    hero_kicker: "Italie · France · Espagne · Portugal · Allemagne · programmes UE",
-    hero_h1: "Trouvez les aides et financements pour lesquels votre entreprise est eligible.",
-    hero_lede: "Nous comparons votre profil a une base de donnees verifiee de programmes reels: Horizon Europe, Bpifrance, ENISA, Invitalia et autres. Nous vous disons lesquels valent le coup, avec des liens officiels. Sur demande, nous revoyons aussi votre dossier.",
-    hero_cta_primary: "Trouver mes aides, des 149 €",
+    hero_kicker: "Italie · France · Espagne · Allemagne · UE",
+    hero_h1: "Trouvez les financements auxquels votre entreprise est éligible.",
+    hero_lede: "Des programmes publics réels, selon votre profil. Chacun avec le lien officiel que vous pouvez vérifier.",
+    hero_cta_primary: "Recevez le rapport — 149 €",
     hero_cta_secondary: "Essayez gratuitement",
-    hero_fineprint: "Chaque programme du rapport a un lien vers la source officielle. Vous verifiez vous-meme, on ne vous demande pas de nous croire sur parole.",
+    hero_fineprint: "Aucune inscription pour le matching gratuit.",
     photo1_caption: "Des programmes publics dans toute l'Europe, pas seulement dans votre pays.",
     photo2_caption: "Chaque dossier, verifie chiffre par chiffre.",
     photo3_caption: "Nous vous accompagnons, ce n'est pas juste un rapport qui arrive et c'est tout.",
@@ -919,34 +932,54 @@ const translations = {
     how3_title: "Rapport", how3_body: "Vous recevez la liste avec montants, criteres, echeances connues et liens officiels. Sur demande, nous revoyons aussi votre dossier avant l'envoi.",
     programs_title: "Quelques programmes que nous suivons",
     programs_lede: "Liste partielle, mise a jour a la main. Chaque ligne est verifiee avec sa source officielle.",
-    table_program: "Programme", table_scope: "Zone", table_amount: "Montant", table_source: "Source",
+    table_program: "Programme",
     scope_eu_deeptech: "UE (deep-tech)", scope_it: "Italie", scope_fr: "France", scope_es: "Espagne",
     programs_footnote: "Le rapport complet inclut aussi Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italie-France et d'autres.",
-    pricing_title: "Tarifs", pricing_lede: "Paiement unique sur les deux premieres formules. Aucun abonnement cache.",
-    price1_title: "Rapport de correspondance",
-    price1_item1: "Liste des programmes compatibles avec votre profil", price1_item2: "Liens officiels et montants pour chacun",
-    price1_item3: "Note de priorite: lesquels regarder en premier", price1_item4: "Livraison en 48 heures",
-    price1_cta: "Demander le rapport",
-    price2_title: "Rapport + revision du dossier",
-    price2_item1: "Tout le rapport de correspondance", price2_item2: "Revision du dossier pour l'aide choisie",
-    price2_item3: "Retour sur le budget et les chiffres du dossier", price2_item4: "Un tour de corrections inclus",
-    price2_cta: "Demander cette formule",
-    price3_title: "Accompagnement jusqu'a l'envoi", price3_price: "Forfait + success fee",
-    price3_item1: "Tout le Match + revision du dossier", price3_item2: "Nous vous accompagnons pas a pas jusqu'a l'envoi, pas seulement un document",
-    price3_item3: "Nous repondons a vos questions tout au long du parcours", price3_item4: "Success fee uniquement sur ce qui est reellement obtenu",
-    price3_cta: "On en parle",
+    pricing_title: "Des tarifs simples.",
+    price1_title: "Funding Match Report",
+    price1_item1: "Programmes correspondant à votre profil",
+    price1_item3: "Lequel viser en premier",
+    price1_cta: "Recevoir le rapport",
+    price2_title: "Matching + relecture",
+    price2_item1: "Tout le rapport",
+    price2_item3: "Un tour de corrections",
+    price2_cta: "Prendre cette offre",
+    price3_title: "Jusqu'au dépôt",
+    price3_item1: "Tout ce qui précède",
+    price3_item3: "Success fee uniquement sur ce que vous obtenez",
+    price3_cta: "Parlons-en",
     pricing_footnote: "L'accompagnement se definit au cas par cas apres le premier rapport, selon la complexite du dossier choisi.",
-    disclaimer_text: "⚠️ Sincronia fournit des informations sur des programmes publics de financement et un avis editorial sur les dossiers. Nous ne garantissons l'obtention d'aucun financement, nous ne donnons pas de conseil fiscal ou juridique, et chaque donnee (montants, echeances, criteres) doit toujours etre reverifiee sur la source officielle avant d'agir: les programmes publics changent de conditions dans le temps.",
-    faq_title: "Questions frequentes",
-    faq1_q: "Garantissez-vous l'obtention du financement?", faq1_a: "Non, et mefiez-vous de quiconque le promet: le resultat depend de l'organisme qui accorde l'aide. Nous vous aidons a postuler aux bons programmes, avec un dossier plus solide.",
-    faq2_q: "D'ou viennent les donnees sur les aides?", faq2_a: "D'une base de donnees que nous tenons et verifions a la main aupres des sources officielles de chaque organisme: Commission europeenne, Bpifrance, ENISA, Invitalia et autres. Chaque ligne indique le lien direct et la date de derniere verification.",
-    faq3_q: "Et si vous ne trouvez aucun programme pour moi?", faq3_a: "Nous vous le disons honnetement plutot que de forcer des correspondances faibles. La base de donnees est verifiee mais pas exhaustive, et nous vous le signalons clairement dans le rapport.",
+    disclaimer_text: "Sincronia fournit des informations sur des programmes publics de financement et un retour éditorial sur les dossiers. Nous ne garantissons aucun financement, nous ne donnons pas de conseil fiscal ou juridique, et chaque donnée doit être revérifiée à la source officielle avant d'agir.",
+    faq_title: "Questions",
+    faq1_q: "Garantissez-vous que j'obtiendrai le financement ?",
+    faq2_q: "D'où viennent les données ?",
+    faq3_q: "Et si rien ne me correspond ?",
     contact_title: "Pret?", contact_lede: "Choisissez une formule ci-dessus pour payer, puis parlez-nous de votre entreprise pour commencer.",
     contact_cta: "Parlez-nous de votre entreprise", footer_contact: "Contact",
-    footer_tagline: "Correspondance avec des aides et financements reels, plus revision de dossiers. Ce n'est pas un conseil juridique ou fiscal.",
+    footer_tagline: "Matching sur des financements publics réels, plus relecture de dossiers. Ce n'est pas un conseil juridique ou fiscal.",
     footer_privacy: "Confidentialite", footer_terms: "Conditions de service", footer_vat: "SIRET/TVA : a activer"
   },
   de: {
+    faq3_a: "Dann sagen wir es ehrlich, statt schwache Treffer zu erzwingen. Die Datenbank ist geprüft, aber nicht vollständig, und wir schreiben das in den Report.",
+    faq2_a: "Aus einer Datenbank, die wir von Hand gegen die offizielle Quelle jeder Stelle pflegen. Jede Zeile trägt ihren Link und das Datum der letzten Prüfung.",
+    faq1_a: "Nein — und misstrauen Sie jedem, der das verspricht. Die vergebende Stelle entscheidet. Wir helfen Ihnen, sich auf die richtigen Programme zu bewerben, mit einem stärkeren Antrag.",
+    price3_item2: "Schritt für Schritt bis zur Einreichung",
+    price3_note: "Fall für Fall vereinbart.",
+    price3_price: "Fixum + Success Fee",
+    price2_item2: "Ihr Antrag geprüft",
+    price2_note: "Am häufigsten gewählt.",
+    price1_item2: "Offizielle Links und Beträge",
+    price1_note: "Lieferung in 48 Stunden.",
+    pricing_lede: "Einmalig. Kein Abo.",
+    table_source: "Quelle",
+    table_amount: "Betrag",
+    report_flag: "Beispiel — fiktives Unternehmen",
+    f3_p: "Beträge, Anforderungen, Fristen, Links — und welches Ihre Zeit zuerst wert ist.",
+    f3_h: "Ein Report, keine Liste.",
+    f2_p: "Ein Analyst liest Ihren Antrag, bevor Sie ihn abschicken: Budget, Aussagen, was fehlt.",
+    f2_h: "Zeile für Zeile geprüft.",
+    f1_p: "Von Hand auf der Seite jeder Stelle geprüft, mit dem Datum der letzten Prüfung.",
+    f1_h: "Echte Programme. Offizielle Links.",
     nav_matcher: "Testen",
     m_count_one: "<b>{n}</b> Programm passt zu diesem Profil",
     m_kicker: "Live — kostenlos, ohne Anmeldung",
@@ -955,32 +988,32 @@ const translations = {
     m_barlabel: "Sincronia — funding match",
     m_lbl_country: "Wo Sie ansässig sind",
     m_lbl_stage: "Unternehmensphase",
-    m_lbl_need: "Wofür Sie die Förderung brauchen",
+    m_lbl_need: "Wofür",
     m_c_it: "Italien",
     m_c_fr: "Frankreich",
     m_c_es: "Spanien",
     m_c_eu: "Andere EU",
-    m_s_idea: "Idee / vor dem Start",
+    m_s_idea: "Idee",
     m_s_startup: "Startup",
     m_s_sme: "Etabliertes KMU",
-    m_n_rd: "F&E / Innovation",
+    m_n_rd: "F&E",
     m_n_digital: "Digitalisierung",
-    m_n_intl: "Internationales Projekt",
-    m_n_growth: "Wachstum / Expansion",
+    m_n_intl: "International",
+    m_n_growth: "Wachstum",
     m_count: "<b>{n}</b> Programme passen zu diesem Profil",
-    m_sub: "Aus der geprüften Datenbank, zuletzt geprüft 2026-08-22.",
+    m_sub: "Geprüfte Datenbank, zuletzt geprüft 2026-08-22.",
     m_none: "Kein Programm in der Datenbank passt zu genau dieser Kombination. Der vollständige Report durchsucht mehr Quellen als diese Demo.",
     m_verified: "Geprüft",
-    m_foot: "Das ist die Shortlist. Der bezahlte Report ergänzt die Analysten-Notiz, welches zuerst infrage kommt, die Anforderungen, Fristen und eine Prüfung des Antrags.",
+    m_foot: "Der bezahlte Report ergänzt Anforderungen, Fristen und welches zuerst infrage kommt.",
     m_foot_cta: "Pakete ansehen →",
     nav_how: "So funktioniert es", nav_programs: "Erfasste Foerderungen", nav_pricing: "Preise", nav_faq: "FAQ",
     nav_cta: "Foerderungen finden",
-    hero_kicker: "Italien · Frankreich · Spanien · Portugal · Deutschland · EU-Programme",
-    hero_h1: "Finden Sie die Foerderungen, fuer die Ihr Unternehmen infrage kommt.",
-    hero_lede: "Wir vergleichen Ihr Profil mit einer gepruften Datenbank echter Programme: Horizon Europe, Bpifrance, ENISA, Invitalia und andere. Wir sagen Ihnen, welche sich lohnen, mit offiziellen Links. Auf Wunsch pruefen wir auch Ihren Antrag.",
-    hero_cta_primary: "Foerderungen finden, ab 149 €",
+    hero_kicker: "Italien · Frankreich · Spanien · Deutschland · EU",
+    hero_h1: "Finden Sie die Förderung, für die Ihr Unternehmen infrage kommt.",
+    hero_lede: "Echte öffentliche Programme, passend zu Ihrem Profil. Jedes mit offiziellem Link zum Nachprüfen.",
+    hero_cta_primary: "Report erhalten — 149 €",
     hero_cta_secondary: "Kostenlos testen",
-    hero_fineprint: "Jedes Programm im Bericht hat einen Link zur offiziellen Quelle. Sie pruefen selbst nach, wir bitten Sie nicht, uns einfach zu glauben.",
+    hero_fineprint: "Keine Anmeldung für das kostenlose Matching.",
     photo1_caption: "Oeffentliche Programme in ganz Europa, nicht nur in Ihrem Land.",
     photo2_caption: "Jeder Antrag, Zahl fuer Zahl geprueft.",
     photo3_caption: "Wir begleiten Sie, nicht nur ein Bericht, der ankommt und das war's.",
@@ -1004,31 +1037,31 @@ const translations = {
     how3_title: "Bericht", how3_body: "Sie erhalten die Liste mit Betraegen, Voraussetzungen, bekannten Fristen und offiziellen Links. Auf Wunsch pruefen wir auch Ihren Antrag vor dem Versand.",
     programs_title: "Einige Programme, die wir erfassen",
     programs_lede: "Teilweise Liste, von Hand aktualisiert. Jede Zeile ist mit offizieller Quelle geprueft.",
-    table_program: "Programm", table_scope: "Bereich", table_amount: "Betrag", table_source: "Quelle",
+    table_program: "Programm",
     scope_eu_deeptech: "EU (Deep-Tech)", scope_it: "Italien", scope_fr: "Frankreich", scope_es: "Spanien",
     programs_footnote: "Im vollstaendigen Bericht finden Sie auch Eurostars, EIC Pathfinder, Bourse French Tech, Interreg Italien-Frankreich und weitere.",
-    pricing_title: "Preise", pricing_lede: "Einmalige Zahlung bei den ersten beiden Paketen. Kein verstecktes Abonnement.",
+    pricing_title: "Einfache Preise.",
     price1_title: "Funding Match Report",
-    price1_item1: "Liste der zu Ihrem Profil passenden Programme", price1_item2: "Offizielle Links und Betraege zu jedem",
-    price1_item3: "Prioritaetshinweis: was zuerst pruefen", price1_item4: "Lieferung in 48 Stunden",
-    price1_cta: "Bericht anfordern",
-    price2_title: "Match + Antragspruefung",
-    price2_item1: "Der komplette Funding Match Report", price2_item2: "Pruefung des Antrags fuer das gewaehlte Programm",
-    price2_item3: "Feedback zu Budget und Zahlen im Antrag", price2_item4: "Eine Korrekturrunde inklusive",
-    price2_cta: "Dieses Paket anfordern",
-    price3_title: "Begleitung bis zum Versand", price3_price: "Festpreis + Erfolgshonorar",
-    price3_item1: "Alles aus Match + Antragspruefung", price3_item2: "Wir begleiten Sie Schritt fuer Schritt bis zum Versand, nicht nur ein Dokument",
-    price3_item3: "Wir beantworten Ihre Fragen waehrend des gesamten Prozesses", price3_item4: "Erfolgshonorar nur auf tatsaechlich erhaltene Mittel",
-    price3_cta: "Lassen Sie uns reden",
+    price1_item1: "Programme passend zu Ihrem Profil",
+    price1_item3: "Welches zuerst",
+    price1_cta: "Report anfordern",
+    price2_title: "Match + Prüfung",
+    price2_item1: "Alles aus dem Report",
+    price2_item3: "Eine Korrekturrunde",
+    price2_cta: "Dieses Paket wählen",
+    price3_title: "Bis zur Einreichung",
+    price3_item1: "Alles oben Genannte",
+    price3_item3: "Success Fee nur auf das, was Sie erhalten",
+    price3_cta: "Sprechen wir",
     pricing_footnote: "Die Begleitung wird nach dem ersten Bericht individuell vereinbart, je nach Komplexitaet des gewaehlten Programms.",
-    disclaimer_text: "⚠️ Sincronia liefert Informationen zu oeffentlichen Foerderprogrammen und redaktionelles Feedback zu Antraegen. Wir garantieren keine Foerderzusage, geben keine Steuer- oder Rechtsberatung, und jede Angabe (Betraege, Fristen, Voraussetzungen) sollte vor dem Handeln immer bei der offiziellen Quelle geprueft werden: oeffentliche Programme aendern ihre Bedingungen im Lauf der Zeit.",
-    faq_title: "Haeufige Fragen",
-    faq1_q: "Garantieren Sie, dass ich die Foerderung bekomme?", faq1_a: "Nein, und misstrauen Sie jedem, der das verspricht: das Ergebnis haengt von der foerdernden Stelle ab. Wir helfen Ihnen, sich bei den richtigen Programmen zu bewerben, mit einem stabileren Antrag.",
-    faq2_q: "Woher stammen die Daten zu den Foerderungen?", faq2_a: "Aus einer Datenbank, die wir pflegen und von Hand mit den offiziellen Quellen jeder Stelle abgleichen: EU-Kommission, Bpifrance, ENISA, Invitalia und andere. Jede Zeile enthaelt den direkten Link und das Datum der letzten Pruefung.",
-    faq3_q: "Und wenn Sie kein passendes Programm finden?", faq3_a: "Das sagen wir ehrlich, statt schwache Treffer zu erzwingen. Die Datenbank ist gepueft, aber nicht vollstaendig, und das steht klar im Bericht.",
+    disclaimer_text: "Sincronia bietet Informationen zu öffentlichen Förderprogrammen und redaktionelles Feedback zu Anträgen. Wir garantieren keine Förderung, geben keine Steuer- oder Rechtsberatung, und jede Angabe sollte vor dem Handeln an der offiziellen Quelle erneut geprüft werden.",
+    faq_title: "Fragen",
+    faq1_q: "Garantieren Sie, dass ich die Förderung bekomme?",
+    faq2_q: "Woher kommen die Daten?",
+    faq3_q: "Und wenn nichts passt?",
     contact_title: "Bereit?", contact_lede: "Waehlen Sie oben ein Paket zum Bezahlen, dann erzaehlen Sie uns von Ihrem Unternehmen.",
     contact_cta: "Erzaehlen Sie uns von Ihrem Unternehmen", footer_contact: "Kontakt",
-    footer_tagline: "Abgleich mit echten Foerderungen und Finanzierungen, plus Antragspruefung. Keine Rechts- oder Steuerberatung.",
+    footer_tagline: "Matching auf echte öffentliche Förderung, plus Antragsprüfung. Keine Rechts- oder Steuerberatung.",
     footer_privacy: "Datenschutz", footer_terms: "Nutzungsbedingungen", footer_vat: "USt-IdNr.: noch nicht aktiv"
   }
 };
