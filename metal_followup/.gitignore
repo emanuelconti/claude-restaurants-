@@ -1,0 +1,14 @@
+# Generated artifacts -- never commit real workbook data or drafts.
+output/*
+!output/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# Extra safety net: this project's whole point is to handle real,
+# confidential company spreadsheets. None should ever be committed here.
+*.xlsx
+*.xls
+*.eml
+
+__pycache__/
+*.pyc
