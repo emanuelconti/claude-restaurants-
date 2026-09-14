@@ -1,0 +1,68 @@
+name: Rebuild Sincronia pages
+
+# The site's whole claim is that it knows what is open today. Deadlines pass,
+# countdowns move and the "checked N days ago" line grows whether or not anyone
+# touches the repo, so the generated pages are rebuilt on a schedule.
+#
+# This deliberately does NOT touch last_verified. That date only moves when a
+# human actually re-checks the official source. Re-stamping it automatically
+# would manufacture the exact false freshness this product sells against.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild programme pages, sitemap and robots
+        working-directory: sincronia
+        run: python3 build.py
+
+      - name: Flag entries that have gone stale
+        working-directory: sincronia
+        run: |
+          python3 - <<'EOF'
+          import json
+          from datetime import date, datetime
+          progs = json.load(open("data/programs.json", encoding="utf-8"))
+          today = date.today()
+          stale = []
+          for p in progs:
+              age = (today - datetime.strptime(p["last_verified"], "%Y-%m-%d").date()).days
+              if age > 60:
+                  stale.append((age, p["name"]))
+          if stale:
+              print("::warning::%d entries not re-checked in over 60 days" % len(stale))
+              for age, name in sorted(stale, reverse=True):
+                  print("  %4d days  %s" % (age, name))
+          else:
+              print("All entries checked within the last 60 days.")
+          EOF
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain sincronia/landing)" ]; then
+            git add sincronia/landing
+            git commit -m "Rebuild Sincronia pages (scheduled)
+
+          Recomputes deadline countdowns, auto-closes windows whose deadline has
+          passed, and refreshes the 'checked N days ago' line. Verification dates
+          are untouched."
+            git push
+          else
+            echo "Nothing changed."
+          fi
