@@ -229,7 +229,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="hero_kicker">Italy · France · Spain · Germany · EU</span>
       <h1 data-i18n="hero_h1">Half the grant lists online are out of date.</h1>
-      <p class="lede" data-i18n="hero_lede">We track 18 European funding programmes and tell you which are actually open today — with the official source for every one.</p>
+      <p class="lede" data-i18n="hero_lede">We track 22 European funding programmes and tell you which are actually open today — with the official source for every one.</p>
       <div class="cta-row">
         <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta_primary">Get your report — €149</a>
         <a href="#matcher" class="btn btn-ghost" data-i18n="hero_cta_secondary">Try it free</a>
@@ -449,7 +449,7 @@
 <script>
 const translations = {
   en: {
-    nav_hub: "See all 18 programmes",
+    nav_hub: "See all 22 programmes",
     m_days: "days left",
     faq3_a: "We tell you honestly instead of forcing weak matches. The database is verified but not exhaustive, and we say so in the report.",
     faq2_a: "A database we maintain by hand against each authority's official source. Every row carries its link and the date we last checked it.",
@@ -501,7 +501,7 @@ const translations = {
     nav_cta: "Find your grants",
     hero_kicker: "Italy · France · Spain · Germany · EU",
     hero_h1: "Half the grant lists online are out of date.",
-    hero_lede: "We track 18 European funding programmes and tell you which are actually open today — with the official source for every one.",
+    hero_lede: "We track 22 European funding programmes and tell you which are actually open today — with the official source for every one.",
     hero_cta_primary: "Get your report — €149",
     hero_cta_secondary: "Try it free",
     hero_fineprint: "No signup for the free match.",
@@ -556,7 +556,7 @@ const translations = {
     footer_privacy: "Privacy", footer_terms: "Terms of service", footer_vat: "VAT number: pending activation"
   },
   it: {
-    nav_hub: "Vedi tutti i 18 bandi",
+    nav_hub: "Vedi tutti i 22 bandi",
     m_days: "giorni rimasti",
     faq3_a: "Te lo diciamo onestamente invece di forzare match deboli. Il database è verificato ma non esaustivo, e lo scriviamo nel report.",
     faq2_a: "Da un database che manteniamo a mano sulle fonti ufficiali di ogni ente. Ogni riga ha il link e la data dell'ultima verifica.",
@@ -663,7 +663,7 @@ const translations = {
     footer_privacy: "Privacy", footer_terms: "Termini di servizio", footer_vat: "P.IVA: da attivare"
   },
   es: {
-    nav_hub: "Ver los 18 programas",
+    nav_hub: "Ver los 22 programas",
     m_days: "días restantes",
     faq3_a: "Te lo decimos honestamente en vez de forzar coincidencias débiles. La base está verificada pero no es exhaustiva, y lo indicamos en el informe.",
     faq2_a: "De una base que mantenemos a mano contra la fuente oficial de cada organismo. Cada fila lleva su enlace y la fecha de la última comprobación.",
@@ -770,7 +770,7 @@ const translations = {
     footer_privacy: "Privacidad", footer_terms: "Terminos de servicio", footer_vat: "NIF: pendiente de activar"
   },
   pt: {
-    nav_hub: "Ver os 18 programas",
+    nav_hub: "Ver os 22 programas",
     m_days: "dias restantes",
     faq3_a: "Dizemos-lhe honestamente em vez de forçar correspondências fracas. A base é verificada mas não exaustiva, e indicamo-lo no relatório.",
     faq2_a: "De uma base que mantemos à mão contra a fonte oficial de cada entidade. Cada linha tem o link e a data da última verificação.",
@@ -877,7 +877,7 @@ const translations = {
     footer_privacy: "Privacidade", footer_terms: "Termos de servico", footer_vat: "NIF: por ativar"
   },
   fr: {
-    nav_hub: "Voir les 18 dispositifs",
+    nav_hub: "Voir les 22 dispositifs",
     m_days: "jours restants",
     faq3_a: "Nous vous le disons honnêtement au lieu de forcer des correspondances faibles. La base est vérifiée mais pas exhaustive, et nous l'indiquons dans le rapport.",
     faq2_a: "D'une base que nous tenons à la main d'après la source officielle de chaque organisme. Chaque ligne porte son lien et la date du dernier contrôle.",
@@ -984,7 +984,7 @@ const translations = {
     footer_privacy: "Confidentialite", footer_terms: "Conditions de service", footer_vat: "SIRET/TVA : a activer"
   },
   de: {
-    nav_hub: "Alle 18 Programme ansehen",
+    nav_hub: "Alle 22 Programme ansehen",
     m_days: "Tage übrig",
     faq3_a: "Dann sagen wir es ehrlich, statt schwache Treffer zu erzwingen. Die Datenbank ist geprüft, aber nicht vollständig, und wir schreiben das in den Report.",
     faq2_a: "Aus einer Datenbank, die wir von Hand gegen die offizielle Quelle jeder Stelle pflegen. Jede Zeile trägt ihren Link und das Datum der letzten Prüfung.",
@@ -1105,6 +1105,14 @@ const STATUS_LABEL = {
 };
 const STATUS_COLOR = {open:"#1a7f4b",rolling:"#1a7f4b",closing:"#b3541e",
   paused:"#8a5c2b",closed:"#8c8c8c",check:"#8a5c2b"};
+function effectiveStatus(p){
+  // A passed deadline is closed, whatever the data says. Without this the page
+  // ages into exactly the staleness this site sells against.
+  const d = daysLeft(p.deadline);
+  if(d !== null && d < 0) return "closed";
+  if(d !== null && d <= 30 && ["open","rolling","check"].includes(p.status)) return "closing";
+  return p.status;
+}
 function daysLeft(iso){
   if(!iso) return null;
   return Math.round((new Date(iso) - new Date()) / 86400000);
@@ -1500,6 +1508,91 @@ const MATCH_PROGRAMS = [
     "deadline": null,
     "url": "/programs/interreg-it-fr-maritime.html",
     "verified": "2026-09-13"
+  },
+  {
+    "id": "cir-france",
+    "name": "Crédit d'Impôt Recherche (CIR)",
+    "scope": "France",
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "30% of R&D spend up to €100M, 5% above",
+    "status": "rolling",
+    "deadline": null,
+    "url": "/programs/cir-france.html",
+    "verified": "2026-09-14"
+  },
+  {
+    "id": "transizione-5-0",
+    "name": "Transizione 5.0 / Nuovo Piano (iperammortamento)",
+    "scope": "Italy",
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital",
+      "growth"
+    ],
+    "amount": "Iperammortamento: +180% up to €2.5M of investment",
+    "status": "check",
+    "deadline": null,
+    "url": "/programs/transizione-5-0.html",
+    "verified": "2026-09-14"
+  },
+  {
+    "id": "cdti-pid",
+    "name": "CDTI — Proyectos de I+D (PID)",
+    "scope": "Spain",
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "amount": "Up to 85% of budget, minimum €175,000 per company",
+    "status": "rolling",
+    "deadline": null,
+    "url": "/programs/cdti-pid.html",
+    "verified": "2026-09-14"
+  },
+  {
+    "id": "digital-europe",
+    "name": "Digital Europe Programme (DIGITAL)",
+    "scope": "EU",
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital",
+      "intl"
+    ],
+    "amount": "50%–75% funding rate depending on topic",
+    "status": "open",
+    "deadline": "2026-10-01",
+    "url": "/programs/digital-europe.html",
+    "verified": "2026-09-14"
   }
 ];
 
@@ -1519,12 +1612,14 @@ function renderMatches(){
   const countEl = document.getElementById("m-count");
   if(!list || !countEl) return;
 
+  const RANK = {closing:0, open:1, rolling:2, check:3, paused:4, closed:5};
   const hits = MATCH_PROGRAMS.filter(p =>
     p.countries.includes(mState.country) &&
     p.stages.includes(mState.stage) &&
     p.needs.includes(mState.need)
-  );
+  ).sort((a,b) => (RANK[effectiveStatus(a)] ?? 9) - (RANK[effectiveStatus(b)] ?? 9));
 
+  const live = hits.filter(p => !["closed","paused"].includes(effectiveStatus(p))).length;
   const countKey = hits.length === 1 ? "m_count_one" : "m_count";
   countEl.innerHTML = mText(countKey, "<b>{n}</b> programs match this profile")
     .replace("{n}", "<b>" + hits.length + "</b>");
@@ -1538,8 +1633,9 @@ function renderMatches(){
 
   list.innerHTML = hits.map(p => {
     const lang = (translations[currentLang] ? currentLang : "en");
-    const label = (STATUS_LABEL[p.status] || {})[lang] || p.status;
-    const color = STATUS_COLOR[p.status] || "var(--muted)";
+    const st = effectiveStatus(p);
+    const label = (STATUS_LABEL[st] || {})[lang] || st;
+    const color = STATUS_COLOR[st] || "var(--muted)";
     const d = daysLeft(p.deadline);
     const dl = (d !== null && d >= 0)
       ? ` · <strong style="color:#b3541e">${d} ${mText("m_days","days left")}</strong>` : "";

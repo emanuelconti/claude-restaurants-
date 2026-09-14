@@ -4,9 +4,21 @@
     "name": "EIC Accelerator",
     "authority": "European Innovation Council — European Commission",
     "scope": "EU",
-    "countries": ["IT", "FR", "ES", "DE", "PT", "EU"],
-    "stages": ["startup", "sme"],
-    "needs": ["rd"],
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "open",
     "status_note": "Rolling cut-off dates through 2026. Check the current cut-off on the official page before preparing.",
     "deadline": null,
@@ -23,9 +35,21 @@
     "name": "EIC Transition",
     "authority": "European Innovation Council — European Commission",
     "scope": "EU",
-    "countries": ["IT", "FR", "ES", "DE", "PT", "EU"],
-    "stages": ["startup", "sme"],
-    "needs": ["rd"],
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "closing",
     "status_note": "Deadline 16 September 2026. Only open to applicants who already received EIC Pathfinder, ERC Proof of Concept or eligible Horizon Europe funding.",
     "deadline": "2026-09-16",
@@ -42,9 +66,21 @@
     "name": "EIC Pathfinder",
     "authority": "European Innovation Council — European Commission",
     "scope": "EU",
-    "countries": ["IT", "FR", "ES", "DE", "PT", "EU"],
-    "stages": ["idea", "startup"],
-    "needs": ["rd"],
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "open",
     "status_note": "Part of the EIC 2026 Work Programme. Calls open in defined windows — check the current one.",
     "deadline": null,
@@ -61,9 +97,20 @@
     "name": "EIC STEP Scale Up",
     "authority": "European Innovation Council — European Commission",
     "scope": "EU",
-    "countries": ["IT", "FR", "ES", "DE", "PT", "EU"],
-    "stages": ["sme"],
-    "needs": ["growth"],
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "growth"
+    ],
     "status": "open",
     "status_note": "Part of the EIC 2026 Work Programme.",
     "deadline": null,
@@ -80,9 +127,22 @@
     "name": "Eurostars",
     "authority": "EUREKA / Horizon Europe",
     "scope": "International",
-    "countries": ["IT", "FR", "ES", "DE", "PT", "EU"],
-    "stages": ["startup", "sme"],
-    "needs": ["rd", "intl"],
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "intl"
+    ],
     "status": "open",
     "status_note": "Runs in recurring calls. Check the live window on the official site.",
     "deadline": null,
@@ -99,9 +159,17 @@
     "name": "Smart&Start Italia",
     "authority": "Invitalia",
     "scope": "Italy",
-    "countries": ["IT"],
-    "stages": ["idea", "startup"],
-    "needs": ["rd", "digital"],
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd",
+      "digital"
+    ],
     "status": "rolling",
     "status_note": "Open-window scheme with no fixed deadline — applications assessed as they arrive, while funds last.",
     "deadline": null,
@@ -118,9 +186,17 @@
     "name": "ON — Oltre Nuove Imprese a Tasso Zero",
     "authority": "Invitalia",
     "scope": "Italy",
-    "countries": ["IT"],
-    "stages": ["idea", "startup"],
-    "needs": ["growth", "digital"],
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "growth",
+      "digital"
+    ],
     "status": "rolling",
     "status_note": "Open window. From 1 July 2026 support is granted as zero-rate financing only, repayable over 10 years.",
     "deadline": null,
@@ -137,9 +213,16 @@
     "name": "Beni Strumentali — Nuova Sabatini",
     "authority": "MIMIT — Ministero delle Imprese e del Made in Italy",
     "scope": "Italy",
-    "countries": ["IT"],
-    "stages": ["sme"],
-    "needs": ["growth", "digital"],
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "growth",
+      "digital"
+    ],
     "status": "rolling",
     "status_note": "Open window until funds run out. The 2026 Budget Law allocated €650M for 2026–2027.",
     "deadline": null,
@@ -156,9 +239,15 @@
     "name": "NEOTEC",
     "authority": "CDTI Innovación",
     "scope": "Spain",
-    "countries": ["ES"],
-    "stages": ["startup"],
-    "needs": ["rd"],
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "startup"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "closed",
     "status_note": "The 2026 call closed on 14 May 2026. A further call is expected but has not been published — do not plan around it until it is.",
     "deadline": "2026-05-14",
@@ -175,9 +264,17 @@
     "name": "ENISA — Préstamos Participativos",
     "authority": "ENISA — Ministerio de Industria y Turismo",
     "scope": "Spain",
-    "countries": ["ES"],
-    "stages": ["startup", "sme"],
-    "needs": ["rd", "growth"],
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "growth"
+    ],
     "status": "rolling",
     "status_note": "Applications accepted throughout the year.",
     "deadline": null,
@@ -194,9 +291,15 @@
     "name": "Kit Digital",
     "authority": "Red.es / Acelera pyme — Gobierno de España",
     "scope": "Spain",
-    "countries": ["ES"],
-    "stages": ["sme"],
-    "needs": ["digital"],
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital"
+    ],
     "status": "check",
     "status_note": "Segments and windows have changed repeatedly since launch. Confirm which segment is open for your company size before starting.",
     "deadline": null,
@@ -213,9 +316,16 @@
     "name": "Bourse French Tech",
     "authority": "Bpifrance",
     "scope": "France",
-    "countries": ["FR"],
-    "stages": ["idea", "startup"],
-    "needs": ["rd"],
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "idea",
+      "startup"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "rolling",
     "status_note": "Applications handled continuously by Bpifrance regional offices.",
     "deadline": null,
@@ -232,9 +342,16 @@
     "name": "Bpifrance — Aide au développement de l'innovation",
     "authority": "Bpifrance",
     "scope": "France",
-    "countries": ["FR"],
-    "stages": ["startup", "sme"],
-    "needs": ["rd"],
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "rolling",
     "status_note": "Permanent scheme, assessed case by case by Bpifrance.",
     "deadline": null,
@@ -251,9 +368,15 @@
     "name": "EXIST-Gründungsstipendium",
     "authority": "BMWE — Bundesministerium für Wirtschaft und Energie",
     "scope": "Germany",
-    "countries": ["DE"],
-    "stages": ["idea"],
-    "needs": ["rd"],
+    "countries": [
+      "DE"
+    ],
+    "stages": [
+      "idea"
+    ],
+    "needs": [
+      "rd"
+    ],
     "status": "rolling",
     "status_note": "Applications are submitted through a partner university's startup network, not directly.",
     "deadline": null,
@@ -270,9 +393,16 @@
     "name": "ZIM — Zentrales Innovationsprogramm Mittelstand",
     "authority": "BMWE — Bundesministerium für Wirtschaft und Energie",
     "scope": "Germany",
-    "countries": ["DE"],
-    "stages": ["sme"],
-    "needs": ["rd", "intl"],
+    "countries": [
+      "DE"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "intl"
+    ],
     "status": "paused",
     "status_note": "Applications temporarily suspended from 7 July 2026, 12:00. The stop applies to all project types and to project outlines. Do not start an application until it reopens.",
     "deadline": null,
@@ -289,9 +419,16 @@
     "name": "StartUP Voucher",
     "authority": "IAPMEI — COMPETE 2030",
     "scope": "Portugal",
-    "countries": ["PT"],
-    "stages": ["idea"],
-    "needs": ["rd", "digital"],
+    "countries": [
+      "PT"
+    ],
+    "stages": [
+      "idea"
+    ],
+    "needs": [
+      "rd",
+      "digital"
+    ],
     "status": "closed",
     "status_note": "The 4th edition closed to applications on 30 January 2026. A further edition has not been announced.",
     "deadline": "2026-01-30",
@@ -308,9 +445,18 @@
     "name": "Portugal 2030 — Sistemas de Incentivos (COMPETE 2030)",
     "authority": "IAPMEI / COMPETE 2030",
     "scope": "Portugal",
-    "countries": ["PT"],
-    "stages": ["sme"],
-    "needs": ["rd", "digital", "growth", "intl"],
+    "countries": [
+      "PT"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "rd",
+      "digital",
+      "growth",
+      "intl"
+    ],
     "status": "check",
     "status_note": "An umbrella of schemes (productive innovation, qualification, internationalisation) that open as separate calls. Check which call is currently open.",
     "deadline": null,
@@ -327,9 +473,18 @@
     "name": "Interreg Italia-Francia Marittimo",
     "authority": "Interreg Marittimo IT-FR programme",
     "scope": "IT · FR",
-    "countries": ["IT", "FR"],
-    "stages": ["idea", "sme"],
-    "needs": ["digital", "intl"],
+    "countries": [
+      "IT",
+      "FR"
+    ],
+    "stages": [
+      "idea",
+      "sme"
+    ],
+    "needs": [
+      "digital",
+      "intl"
+    ],
     "status": "check",
     "status_note": "Programme runs 2021–2027 with calls opening periodically. Check which call is live.",
     "deadline": null,
@@ -340,5 +495,114 @@
     "catch": "Geographically restricted to specific coastal regions. Being in Italy or France is not enough on its own.",
     "official_url": "https://interreg-maritime.eu/",
     "last_verified": "2026-09-13"
+  },
+  {
+    "id": "cir-france",
+    "name": "Crédit d'Impôt Recherche (CIR)",
+    "authority": "Direction générale des Finances publiques — France",
+    "scope": "France",
+    "countries": [
+      "FR"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "status": "rolling",
+    "status_note": "A standing tax credit claimed with your annual tax return, not a call with a deadline. Several expense categories were removed in the 2025-2026 reforms.",
+    "deadline": null,
+    "funding_type": "Tax credit",
+    "amount_short": "30% of R&D spend up to €100M, 5% above",
+    "amount_detail": "30% of qualifying research spend up to €100M, and 5% on the portion above. 50% in the overseas départements below the €100M threshold. SMEs in the EU sense are refunded their CIR claim immediately; other companies offset it against tax and are refunded any unused part after three years.",
+    "who": "Industrial, commercial or agricultural companies taxed on actual profits, or exempt, that incur research spending.",
+    "catch": "The base shrank recently: patent and plant-variety costs, technology-watch spending and the 'jeune docteur' regime no longer qualify, and the operating-cost rate dropped from 43% to 40%. Guides written before that overstate what you can claim.",
+    "official_url": "https://www.economie.gouv.fr/entreprises/trouver-des-aides-et-des-financements/les-aides-et-financements-pour-developper-son-entreprise/votre-entreprise-peut-elle-beneficier-du",
+    "last_verified": "2026-09-14"
+  },
+  {
+    "id": "transizione-5-0",
+    "name": "Transizione 5.0 / Nuovo Piano (iperammortamento)",
+    "authority": "MIMIT — Ministero delle Imprese e del Made in Italy",
+    "scope": "Italy",
+    "countries": [
+      "IT"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital",
+      "growth"
+    ],
+    "status": "check",
+    "status_note": "The original Transizione 5.0 tax credit (DL 19/2024) is closed to new investments and survives only for companies with communications already in progress. Investments from 1 January 2026 fall under the Nuovo Piano Transizione 5.0 (L. 199/2025) and its iperammortamento instead.",
+    "deadline": null,
+    "funding_type": "Tax credit / accelerated depreciation",
+    "amount_short": "Iperammortamento: +180% up to €2.5M of investment",
+    "amount_detail": "Under the new plan, the depreciation uplift depends on the investment band: 180% up to €2.5M, and 100% from €2.5M to €10M. The earlier credit ran at rates up to 45% and required certified energy savings evidenced by ex-ante and ex-post audits.",
+    "who": "Companies resident in Italy investing in the twin digital and energy transition. Firms in liquidation or composition with creditors are excluded.",
+    "catch": "Two different schemes share a name. Almost every '2026 guide' still describes the old credit as if you could still apply for new investments — you cannot.",
+    "official_url": "https://www.mimit.gov.it/it/incentivi/transizione-5-0",
+    "last_verified": "2026-09-14"
+  },
+  {
+    "id": "cdti-pid",
+    "name": "CDTI — Proyectos de I+D (PID)",
+    "authority": "CDTI Innovación",
+    "scope": "Spain",
+    "countries": [
+      "ES"
+    ],
+    "stages": [
+      "startup",
+      "sme"
+    ],
+    "needs": [
+      "rd"
+    ],
+    "status": "rolling",
+    "status_note": "Open window: projects can be submitted at any time. CDTI planned up to €545M for partially repayable aid in 2026.",
+    "deadline": null,
+    "funding_type": "Partially repayable loan (with a non-repayable portion)",
+    "amount_short": "Up to 85% of budget, minimum €175,000 per company",
+    "amount_detail": "A long-term loan at a fixed rate referenced to 12-month Euribor, of which a non-repayable tranche of between 10% and 33% does not have to be returned. Covers up to 85% of the approved budget, repaid over 10 or 15 years with a 2-3 year grace period. Advances of up to 50% of the aid, capped at €300,000, are available without additional guarantees.",
+    "who": "Companies running industrial research or experimental development projects, with a minimum budget of €175,000 per participating company.",
+    "catch": "You must fund at least 15% from your own resources, and most of the money is a loan you repay — the grant element is only part of it.",
+    "official_url": "https://www.cdti.es/",
+    "last_verified": "2026-09-14"
+  },
+  {
+    "id": "digital-europe",
+    "name": "Digital Europe Programme (DIGITAL)",
+    "authority": "European Commission — HaDEA",
+    "scope": "EU",
+    "countries": [
+      "IT",
+      "FR",
+      "ES",
+      "DE",
+      "PT",
+      "EU"
+    ],
+    "stages": [
+      "sme"
+    ],
+    "needs": [
+      "digital",
+      "intl"
+    ],
+    "status": "open",
+    "status_note": "The DIGITAL-2026-SKILLS-10 (Advanced Digital Skills) and DIGITAL-2026-BESTUSE-10 (Accelerating Best Use of Technologies) calls opened on 21 April 2026 and close on 1 October 2026 at 17:00 Brussels time.",
+    "deadline": "2026-10-01",
+    "funding_type": "Grant",
+    "amount_short": "50%–75% funding rate depending on topic",
+    "amount_detail": "Funding rates reach 75% on topics aimed at SMEs; other grants run at a 50% rate, with project sizes in the €2M–€5M range on the calls closing 1 October 2026.",
+    "who": "SMEs, public authorities and organisations deploying digital technology in practice rather than researching it.",
+    "catch": "This funds deployment, not research. If your project is still pre-commercial R&D, Horizon Europe or the EIC is the right door.",
+    "official_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/digital",
+    "last_verified": "2026-09-14"
   }
 ]

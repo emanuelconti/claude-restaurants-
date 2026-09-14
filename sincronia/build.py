@@ -28,6 +28,24 @@ programs = json.loads(DATA.read_text(encoding="utf-8"))
 # --------------------------------------------------------------- native copy
 # Country schemes get a page in the language they are searched in.
 NATIVE = {
+"cir-france": {"lang":"fr",
+ "title":"Crédit d'Impôt Recherche (CIR) 2026 : taux, dépenses éligibles et ce qui a changé",
+ "who":"Entreprises industrielles, commerciales ou agricoles imposées d'après leur bénéfice réel, ou exonérées, qui engagent des dépenses de recherche.",
+ "amount":"30 % des dépenses de recherche jusqu'à 100 M€, 5 % au-delà. 50 % dans les départements d'outre-mer sous le seuil des 100 M€. Les PME au sens européen obtiennent le remboursement immédiat de leur créance ; les autres l'imputent sur l'impôt et se font rembourser le solde au bout de trois ans.",
+ "status":"Dispositif permanent, déclaré avec la liasse fiscale annuelle : ce n'est pas un appel à projets avec une date limite.",
+ "catch":"L'assiette s'est resserrée : frais de brevets et de certificats d'obtention végétale, veille technologique et régime jeune docteur ne sont plus éligibles, et le taux des dépenses de fonctionnement est passé de 43 % à 40 %. Les guides antérieurs surestiment ce que vous pouvez déclarer."},
+"transizione-5-0": {"lang":"it",
+ "title":"Transizione 5.0 nel 2026: cosa è chiuso e cosa lo sostituisce",
+ "who":"Imprese residenti in Italia che investono nella doppia transizione digitale ed energetica. Sono escluse quelle in liquidazione o concordato preventivo.",
+ "amount":"Con il nuovo piano la maggiorazione dipende dallo scaglione di investimento: 180% fino a 2,5 milioni di euro e 100% da 2,5 a 10 milioni. Il credito precedente arrivava ad aliquote fino al 45% e richiedeva un risparmio energetico certificato con diagnosi ex ante ed ex post.",
+ "status":"Il credito d'imposta Transizione 5.0 (DL 19/2024) è chiuso ai nuovi investimenti e resta valido solo per chi ha comunicazioni già in corso. Gli investimenti dal 1° gennaio 2026 rientrano nel Nuovo Piano Transizione 5.0 (L. 199/2025) con iperammortamento.",
+ "catch":"Due misure diverse con lo stesso nome. Quasi tutte le guide 2026 descrivono ancora il vecchio credito come se fosse possibile presentare nuovi investimenti: non lo è."},
+"cdti-pid": {"lang":"es",
+ "title":"Ayudas PID del CDTI: cuantía, porcentaje no reembolsable y plazos",
+ "who":"Empresas que ejecutan proyectos de investigación industrial o desarrollo experimental, con un presupuesto mínimo de 175.000 € por empresa participante.",
+ "amount":"Préstamo a largo plazo a tipo fijo referenciado al euríbor a un año, con un tramo no reembolsable de entre el 10% y el 33% de la ayuda. Cubre hasta el 85% del presupuesto aprobado, con devolución a 10 o 15 años y una carencia de 2 a 3 años. Anticipos de hasta el 50% de la ayuda, con límite de 300.000 €, sin garantías adicionales.",
+ "status":"Ventanilla abierta: se pueden presentar proyectos en cualquier momento. El CDTI previó hasta 545 millones de euros para ayudas parcialmente reembolsables en 2026.",
+ "catch":"Debes aportar al menos el 15% con recursos propios, y la mayor parte es un préstamo que se devuelve: la parte no reembolsable es solo un tramo."},
 "smart-start-italia": {"lang":"it",
  "title":"Smart&Start Italia: requisiti, importi e come funziona",
  "who":"Startup innovative già costituite o in via di costituzione, con progetti tra 100.000 € e 1,5 milioni di euro.",
@@ -202,6 +220,28 @@ def esc(s):
              .replace('"', "&quot;"))
 
 
+def effective_status(p):
+    """A programme whose deadline has passed is closed, whatever the file says.
+    Without this the site ages into exactly the staleness it sells against."""
+    d = days_left(p.get("deadline"))
+    if d is not None and d < 0:
+        return "closed"
+    if d is not None and 0 <= d <= 30 and p["status"] in ("open", "rolling", "check"):
+        return "closing"
+    return p["status"]
+
+
+def age_phrase(iso, lang):
+    n = (TODAY - datetime.strptime(iso, "%Y-%m-%d").date()).days
+    t = {"en": ("checked today", "checked yesterday", "checked %d days ago"),
+         "it": ("verificato oggi", "verificato ieri", "verificato %d giorni fa"),
+         "es": ("comprobado hoy", "comprobado ayer", "comprobado hace %d días"),
+         "de": ("heute geprüft", "gestern geprüft", "vor %d Tagen geprüft"),
+         "fr": ("vérifié aujourd'hui", "vérifié hier", "vérifié il y a %d jours"),
+         "pt": ("verificado hoje", "verificado ontem", "verificado há %d dias")}[lang]
+    return t[0] if n == 0 else t[1] if n == 1 else t[2] % n
+
+
 def days_left(iso):
     if not iso:
         return None
@@ -261,7 +301,8 @@ def program_page(p, lang):
         who, amount = p["who"], p["amount_detail"]
         status_note, catch = p["status_note"], p["catch"]
 
-    label, color, _ = STATUS_META[p["status"]]
+    eff = effective_status(p)
+    label, color, _ = STATUS_META[eff]
     dl = days_left(p.get("deadline"))
     desc = ("%s — %s. %s" % (p["name"], p["amount_short"], status_note))[:300]
     canonical = "%s/programs/%s.html" % (SITE, slug)
@@ -298,6 +339,16 @@ def program_page(p, lang):
         '<li><a href="%s/programs/%s.html">%s — %s</a></li>'
         % (SITE, q["id"], esc(q["name"]), esc(q["amount_short"])) for q in others)
 
+    closed_banner = ""
+    if eff == "closed":
+        msg = {"en":"This window has closed. The details below are kept for reference and for the next edition.",
+               "it":"Questa finestra è chiusa. I dettagli restano come riferimento e per la prossima edizione.",
+               "es":"Esta convocatoria está cerrada. Los detalles se conservan como referencia y para la próxima edición.",
+               "de":"Dieses Fenster ist geschlossen. Die Angaben bleiben als Referenz und für die nächste Runde.",
+               "fr":"Cette fenêtre est close. Les détails restent à titre de référence et pour la prochaine édition.",
+               "pt":"Esta janela está fechada. Os detalhes ficam como referência e para a próxima edição."}[lang]
+        closed_banner = ('<div class="callout" style="border-left-color:#8c8c8c">%s</div>' % esc(msg))
+
     return head(title, desc, canonical, lang, alternates, jsonld) + f"""
 <main><div class="wrap">
   <a class="back" href="{SITE}/programs/">← {esc(ui['back'])}</a>
@@ -311,9 +362,10 @@ def program_page(p, lang):
   </div>
 
   <div class="callout">
-    <strong>{esc(ui['status'])} — {TODAY.isoformat()}</strong><br>{esc(status_note)}
+    <strong>{esc(ui['status'])}</strong> <span style="color:var(--muted);font-weight:400">· {esc(age_phrase(p['last_verified'], lang))}</span><br>{esc(status_note)}
   </div>
 
+  {closed_banner}
   <div class="block"><h2>{esc(ui['amount'])}</h2><p>{esc(amount)}</p></div>
   <div class="block"><h2>{esc(ui['who'])}</h2><p>{esc(who)}</p></div>
   <div class="block"><h2>{esc(ui['catch'])}</h2><p>{esc(catch)}</p></div>
@@ -345,7 +397,7 @@ def index_page():
     for scope in sorted(by_scope, key=lambda s: (s != "EU", s)):
         cards = ""
         for p in sorted(by_scope[scope], key=lambda x: x["name"]):
-            label, color, _ = STATUS_META[p["status"]]
+            label, color, _ = STATUS_META[effective_status(p)]
             cards += f"""<a class="pcard" href="{SITE}/programs/{p['id']}.html">
   <span class="badge" style="color:{color};font-size:.6875rem;padding:4px 10px"><span class="badge-dot"></span>{esc(label)}</span>
   <h3 style="margin-top:10px">{esc(p['name'])}</h3>
@@ -354,7 +406,7 @@ def index_page():
 </a>"""
         groups += '<div class="group"><h2>%s</h2><div class="grid">%s</div></div>' % (esc(scope), cards)
 
-    open_n = sum(1 for p in programs if p["status"] in ("open", "rolling", "closing"))
+    open_n = sum(1 for p in programs if effective_status(p) in ("open", "rolling", "closing"))
     title = "European funding programmes: what is actually open today"
     desc = ("%d public funding programmes across Italy, France, Spain, Germany, Portugal and the EU, "
             "each with its current status and official source. Checked %s."
@@ -384,6 +436,34 @@ def index_page():
   funding and does not give tax or legal advice.</div>
 </div></main>
 """ + FOOT % (TODAY.isoformat(), SITE, "sincronia.live")
+
+
+def sync_matcher():
+    """The landing page carries its own copy of the dataset for the live matcher.
+    Regenerate it here so the two can never drift apart — they already did once."""
+    import re as _re
+    idx = OUT / "index.html"
+    html = idx.read_text(encoding="utf-8")
+    payload = [{
+        "id": p["id"], "name": p["name"], "scope": p["scope"], "countries": p["countries"],
+        "stages": p["stages"], "needs": p["needs"], "amount": p["amount_short"],
+        "status": p["status"], "deadline": p.get("deadline"),
+        "url": "/programs/%s.html" % p["id"], "verified": p["last_verified"],
+    } for p in programs]
+    new, n = _re.subn(r"const MATCH_PROGRAMS = \[.*?\n\];",
+                      "const MATCH_PROGRAMS = %s;" % json.dumps(payload, ensure_ascii=False, indent=2),
+                      html, count=1, flags=_re.S)
+    if n != 1:
+        raise SystemExit("MATCH_PROGRAMS block not found in index.html")
+
+    # the nav/hero counts are part of the promise, so they are derived too
+    new = _re.sub(r'(nav_hub: ")[^"]*(")',
+                  lambda m: m.group(1) + _re.sub(r"\d+", str(len(programs)), m.group(0)[len(m.group(1)):-1]) + m.group(2),
+                  new)
+    new = _re.sub(r"(See all )\d+( programmes)", r"\g<1>%d\g<2>" % len(programs), new)
+    new = _re.sub(r"(track )\d+( European funding programmes)", r"\g<1>%d\g<2>" % len(programs), new)
+    idx.write_text(new, encoding="utf-8")
+    return len(payload)
 
 
 def main():
@@ -418,10 +498,12 @@ def main():
     (OUT / "robots.txt").write_text(
         "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")
 
+    synced = sync_matcher()
+    print("matcher entries : %d" % synced)
     print("programme pages : %d" % n)
     print("sitemap urls    : %d" % len(urls))
     print("open/rolling    : %d of %d" % (
-        sum(1 for p in programs if p["status"] in ("open", "rolling", "closing")), len(programs)))
+        sum(1 for p in programs if effective_status(p) in ("open", "rolling", "closing")), len(programs)))
 
 
 if __name__ == "__main__":
