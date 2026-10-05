@@ -21,6 +21,24 @@ DATA = ROOT / "data" / "programs.json"
 OUT = ROOT / "landing"
 PROGRAMS_DIR = OUT / "programs"
 SITE = "https://sincronia.live"
+
+# Payments are off while the Stripe account is disconnected. Flip to True to put
+# the checkout buttons back; the links are kept here so nothing has to be
+# rediscovered. While False the pricing CTAs route to the intake form instead,
+# so enquiries still arrive and no one is sent to a checkout that cannot charge.
+PAYMENTS_ENABLED = False
+STRIPE_LINKS = {
+    "price1": "https://buy.stripe.com/fZudRa4Jr3MO2HAaJD9Zm01",
+    "price2": "https://buy.stripe.com/cNi14o4Jr2IK95YcRL9Zm00",
+}
+PAY_OFF_NOTE = {
+ "en": "Payment is arranged directly at the moment — tell us about your company and we'll send the details.",
+ "it": "Al momento il pagamento si concorda direttamente: raccontaci la tua azienda e ti mandiamo i dettagli.",
+ "es": "Ahora mismo el pago se acuerda directamente: cuéntanos sobre tu empresa y te enviamos los detalles.",
+ "pt": "De momento o pagamento é combinado diretamente: fale-nos da sua empresa e enviamos os detalhes.",
+ "fr": "Le paiement se règle directement pour l'instant : parlez-nous de votre entreprise et nous vous envoyons les détails.",
+ "de": "Die Zahlung wird derzeit direkt vereinbart — erzählen Sie uns von Ihrem Unternehmen, wir schicken die Details.",
+}
 TODAY = date.today()
 
 programs = json.loads(DATA.read_text(encoding="utf-8"))
@@ -462,6 +480,37 @@ def sync_matcher():
                   new)
     new = _re.sub(r"(See all )\d+( programmes)", r"\g<1>%d\g<2>" % len(programs), new)
     new = _re.sub(r"(track )\d+( European funding programmes)", r"\g<1>%d\g<2>" % len(programs), new)
+    # pricing CTAs follow the payments flag
+    for key, url in STRIPE_LINKS.items():
+        target = url if PAYMENTS_ENABLED else "start.html"
+        attrs = ' target="_blank" rel="noopener"' if PAYMENTS_ENABLED else ""
+        new = _re.sub(
+            r'<a href="[^"]*"[^>]*?(class="btn[^"]*" data-i18n="%s_cta")' % key,
+            lambda m: '<a href="%s"%s %s' % (target, attrs, m.group(1)),
+            new, count=1)
+
+    # and the honest note under the grid
+    note_html = ""
+    if not PAYMENTS_ENABLED:
+        note_html = ('<p class="fineprint" style="text-align:center;margin:26px auto 0;max-width:52ch" '
+                     'data-i18n="pay_off_note">%s</p>' % PAY_OFF_NOTE["en"])
+    new = _re.sub(r'\s*<p class="fineprint" style="text-align:center[^>]*data-i18n="pay_off_note">.*?</p>',
+                  "", new, flags=_re.S)
+    if note_html:
+        new = new.replace('      </div>\n    </div>\n  </section>\n\n  <section id="faq">',
+                          '      </div>\n      %s\n    </div>\n  </section>\n\n  <section id="faq">' % note_html, 1)
+
+    for lang, txt in PAY_OFF_NOTE.items():
+        m = _re.search(r'(\n  %s: \{)(.*?)(\n  \},)' % lang, new, _re.S)
+        if not m:
+            continue
+        body = m.group(2)
+        jv = json.dumps(txt, ensure_ascii=False)
+        pat = _re.compile(r'^(\s{4}pay_off_note: )".*?"(,?)$', _re.M)
+        body = pat.sub(lambda mm: mm.group(1)+jv+(mm.group(2) or ","), body, count=1) \
+               if pat.search(body) else ("\n    pay_off_note: %s," % jv) + body
+        new = new[:m.start(2)] + body + new[m.end(2):]
+
     idx.write_text(new, encoding="utf-8")
     return len(payload)
 
