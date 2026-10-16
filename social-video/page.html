@@ -95,9 +95,9 @@ details > .reel { margin-top: 16px; }
   <section aria-labelledby="how-title" style="display:grid;gap:14px">
     <h2 id="how-title">Come pubblicarlo</h2>
     <ol class="steps">
-      <li><span><strong>Salva il video.</strong> Sul telefono si apre la condivisione: scegli Instagram, TikTok o «Salva video».</span></li>
-      <li><span><strong>Copia il testo</strong> e incollalo come didascalia.</span></li>
-      <li><span><strong>Pubblicalo come Reel</strong> su Instagram e come video su TikTok. La versione inglese è qui sotto, se ti serve.</span></li>
+      <li><span><strong>Tocca «Condividi su Instagram o TikTok».</strong> Si apre la condivisione del telefono: scegli Instagram (Reel) o TikTok. Il testo si copia da solo.</span></li>
+      <li><span><strong>Incolla il testo</strong> come didascalia.</span></li>
+      <li><span><strong>Pubblica</strong> come Reel su Instagram e, con lo stesso pulsante, anche su TikTok. La versione inglese è qui sotto, se ti serve.</span></li>
     </ol>
   </section>
   <details id="english">
@@ -108,7 +108,7 @@ details > .reel { margin-top: 16px; }
     <h2 id="week-title">Questa settimana</h2>
     <ul class="week" id="week"></ul>
   </section>
-  <p class="note" id="save-note" hidden>Il salvataggio funziona nell'app Claude e su claude.ai: apri questa pagina lì per scaricare il video.</p>
+  <p class="note" id="save-note" hidden>La condivisione funziona nell'app Claude e su claude.ai: apri questa pagina lì per mandare il video a Instagram o TikTok.</p>
 </main>
 
 <script type="application/json" id="sp-days">__DAYS__</script>
@@ -127,29 +127,61 @@ details > .reel { margin-top: 16px; }
     return node;
   };
 
+  // Sharing, not saving: the button hands the video straight to the phone's
+  // share sheet, where Instagram and TikTok are, and copies the caption on the
+  // way so it is ready to paste. The page's own share (Web Share with a file)
+  // is tried first; inside the Claude app the share sheet comes from
+  // `downloads`, which on iPhone opens the same sheet.
   let downloads = null;
-  const saveButtons = [];
-  async function save(id, filename, button) {
-    if (!downloads) return;
+  const shareButtons = [];
+  const files = new Map();
+  async function videoFile(id, filename) {
+    if (!files.has(id)) files.set(id, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); }));
+    try {
+      return new File([await files.get(id)], filename, { type: "video/mp4" });
+    } catch (error) {
+      files.delete(id);
+      throw error;
+    }
+  }
+  async function share(id, filename, caption, button) {
     const label = button.textContent;
+    const reset = (text, ms) => { button.textContent = text; setTimeout(() => { button.textContent = label; }, ms); };
+    // Copied first, while the tap still counts as the viewer's.
+    let copied = false;
+    if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
     button.disabled = true;
     button.textContent = "Preparo il video…";
     try {
-      const file = await (await fetch(blob(id))).blob();
-      await downloads.save({ filename, data: file });
-      button.textContent = "Salvato";
+      const file = await videoFile(id, filename);
+      let shared = false;
+      if (navigator.canShare && navigator.share) {
+        try {
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({ files: [file] });
+            shared = true;
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") { button.textContent = label; return; }
+        }
+      }
+      if (!shared) {
+        if (!downloads) throw new Error("unavailable");
+        await downloads.save({ filename, data: file });
+      }
+      reset(copied ? "Fatto. Il testo è già copiato" : "Fatto", 3500);
     } catch (error) {
-      button.textContent = error && error.code === "declined" ? label : "Non salvato, riprova";
+      if (error && error.code === "declined") button.textContent = label;
+      else reset("Non è partito, riprova", 3000);
     } finally {
       button.disabled = false;
-      if (button.textContent === "Salvato") setTimeout(() => { button.textContent = label; }, 2500);
     }
   }
-  function saveButton(id, filename, label, primary) {
+  function shareButton(id, filename, caption, label, primary) {
     const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
     button.hidden = true;
-    button.addEventListener("click", () => save(id, filename, button));
-    saveButtons.push(button);
+    button.addEventListener("click", () => share(id, filename, caption, button));
+    shareButtons.push(button);
     return button;
   }
   function copyButton(text, area) {
@@ -169,7 +201,7 @@ details > .reel { margin-top: 16px; }
     const area = el("p", { class: "caption", text });
     target.append(
       el("div", { class: "frame" }, video),
-      el("div", { class: "actions" }, saveButton(day[lang], name, "Salva video", true), copyButton(text, area)),
+      el("div", { class: "actions" }, shareButton(day[lang], name, text, "Condividi su Instagram o TikTok", true), copyButton(text, area)),
       area,
     );
   }
@@ -198,17 +230,22 @@ details > .reel { margin-top: 16px; }
         el("div", { class: "what" },
           el("div", { class: "when", text: dateLabel(day.date, { weekday: "short", day: "numeric", month: "short" }) }),
           el("div", { class: "kind", text: `${day.place} · ${day.format}` })),
-        saveButton(day.es, `socialperks-${day.date}-es.mp4`, "Salva", false)));
+        shareButton(day.es, `socialperks-${day.date}-es.mp4`, (day.caption && day.caption.es) || "", "Condividi", false)));
     }
   }
 
+  const canShareFiles = (() => {
+    try { return !!(navigator.canShare && navigator.canShare({ files: [new File(["x"], "x.mp4", { type: "video/mp4" })] })); } catch { return false; }
+  })();
+  const ready = () => { shareButtons.forEach((b) => { b.hidden = false; }); };
+  if (canShareFiles) ready();
   if (window.claude && window.claude.use) {
     window.claude.use("downloads").then((ns) => {
       downloads = ns;
-      if (ns) saveButtons.forEach((b) => { b.hidden = false; });
-      else document.getElementById("save-note").hidden = false;
-    }, () => { document.getElementById("save-note").hidden = false; });
-  } else {
+      if (ns) ready();
+      else if (!canShareFiles) document.getElementById("save-note").hidden = false;
+    }, () => { if (!canShareFiles) document.getElementById("save-note").hidden = false; });
+  } else if (!canShareFiles) {
     document.getElementById("save-note").hidden = false;
   }
 })();

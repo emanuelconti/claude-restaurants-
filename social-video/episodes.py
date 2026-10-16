@@ -19,7 +19,7 @@ import datetime as _dt
 # (socialperks: src/assets/stories/CREDITS.json and src/lib/category-images.ts);
 # fetched from Unsplash's CDN at render time, so they are not copied here.
 STORY_PHOTO = {
-    "barber": "1568339434343-2a640a1a9946",
+    "barber": "1698871351987-d35e13a00c7e",  # his own selfie with the fresh cut
     "salon": "1554519934-e32b1629d9ee",
     "nails": "1772322586702-73125782bd99",
     "gym": "1789629438956-e0d1463811f3",

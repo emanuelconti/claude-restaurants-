@@ -5,8 +5,8 @@ The scheduled run renders the day's video (daily.py), uploads the MP4s and
 the cover to the page's asset store, then runs this to rebuild the page with
 the new day on top and publishes it to the same address. A run in the cloud
 cannot hand the owner a file, so the page is the delivery: the owner opens it
-on the phone, saves the video (the phone's share sheet opens: Instagram, TikTok
-or the camera roll) and copies the caption.
+on the phone and taps "Condividi su Instagram o TikTok", which copies the
+caption and opens the phone's share sheet with the video.
 
     python3 social-video/page.py --date 2026-10-17 \\
         --ids '{"es": "<asset id>", "en": "<asset id>", "cover": "<asset id>"}' \\

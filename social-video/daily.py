@@ -6,8 +6,13 @@
     python3 daily.py --lang es --out /tmp/videos
 
 Writes, under --out/<date>/: socialperks-<date>-<lang>.mp4 (1080x1920, 30 fps,
-H.264 and AAC, 10 to 14 seconds), a cover JPEG per language and caption.txt
+H.264 and AAC, 30 to 34 seconds), a cover JPEG per language and caption.txt
 with the text to paste under the post in both languages.
+
+Every video explains the whole idea, whatever the day's format: the hour that
+does not fill, the small gift put on it, the customer who shares a Story or
+sends a message, the friend who comes in and shows a code at the counter, and
+what that brought. The format decides the opening and the order around it.
 
 What it says comes from episodes.py. Everything is drawn here with Pillow,
 frame by frame from the time alone, and encoded with ffmpeg; the music bed is
@@ -389,6 +394,65 @@ def link_glyph(d: ImageDraw.ImageDraw, x, y, s, color, width):
     d.rounded_rectangle((x + s * 0.38, y + s * 0.38, x + s, y + s * 0.75), s * 0.18, outline=color, width=width)
 
 
+def step_chip(n: int, label: str) -> Image.Image:
+    """The step a scene shows, numbered: 1 the quiet hour, 2 the share, 3 the visit."""
+    size = 40
+    f = font(size, 700, BODY)
+    d_ = int(size * 1.5)
+    pad = int(size * 0.45)
+    w = int(pad + d_ + size * 0.55 + f.getlength(label) + size * 0.9)
+    h = d_ + 2 * pad
+    im = rounded((w, h), h // 2, (255, 255, 255, 236))
+    d = ImageDraw.Draw(im)
+    d.ellipse((pad, pad, pad + d_, pad + d_), fill=SIGNAL)
+    fn = font(int(size * 0.95), 800, DISPLAY)
+    num = str(n)
+    d.text((pad + d_ / 2 - fn.getlength(num) / 2, pad + d_ * 0.12), num, font=fn, fill=WHITE)
+    d.text((pad + d_ + size * 0.55, (h - size * 1.22) / 2), label, font=f, fill=INK)
+    return shadowed(im, blur=14, offset=6, opacity=60)
+
+
+def wrap_lines(text: str, f, max_w: float) -> list:
+    lines, line = [], ""
+    for w in text.split(" "):
+        trial = (line + " " + w).strip()
+        if line and f.getlength(trial) > max_w:
+            lines.append(line)
+            line = w
+        else:
+            line = trial
+    return lines + [line]
+
+
+def ring_gradient(size: int) -> Image.Image:
+    """The Story ring's colours, corner to corner, in a circle."""
+    y, x = np.mgrid[0:size, 0:size] / max(1, size - 1)
+    g = (x + (1 - y)) / 2
+    stops = [(0.0, (253, 196, 104)), (0.4, (223, 73, 150)), (0.7, (138, 58, 185)), (1.0, SIGNAL)]
+    arr = np.zeros((size, size, 3))
+    for (a, ca), (b, cb) in zip(stops, stops[1:]):
+        m = (g >= a) & (g <= b)
+        k = ((g - a) / (b - a))[..., None]
+        arr = np.where(m[..., None], np.array(ca) * (1 - k) + np.array(cb) * k, arr)
+    im = Image.fromarray(arr.astype(np.uint8), "RGB").convert("RGBA")
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
+    im.putalpha(mask)
+    return im
+
+
+def camera_glyph(d: ImageDraw.ImageDraw, cx, cy, s, color, width):
+    d.rounded_rectangle((cx - s / 2, cy - s * 0.38, cx + s / 2, cy + s * 0.38), s * 0.16, outline=color, width=width)
+    r = s * 0.17
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=color, width=width)
+    d.ellipse((cx + s * 0.27, cy - s * 0.27, cx + s * 0.33, cy - s * 0.21), fill=color)
+
+
+def chat_glyph(d: ImageDraw.ImageDraw, cx, cy, s, color, width):
+    d.ellipse((cx - s / 2, cy - s * 0.42, cx + s / 2, cy + s * 0.38), outline=color, width=width)
+    d.line((cx - s * 0.3, cy + s * 0.28, cx - s * 0.42, cy + s * 0.48, cx - s * 0.1, cy + s * 0.37), fill=color, width=width, joint="curve")
+
+
 # ----------------------------------------------------------------- scenes
 
 class Ctx:
@@ -471,7 +535,7 @@ def scene_story(ctx: Ctx, dur: float):
     cd.text((184, 172), ctx.place["handle"], font=font(42, 700, BODY), fill=WHITE)
     cd.text((184 + font(42, 700, BODY).getlength(ctx.place["handle"]) + 22, 172), ctx.t("2 h", "2h"), font=font(42, 500, BODY), fill=(255, 255, 255, 200))
     cd.rounded_rectangle((60, H - 250, W - 260, H - 150), 50, outline=(255, 255, 255, 200), width=4)
-    caption_text = ctx.t(f"{ctx.name} comparte su enlace", f"{ctx.name} shares {'her' if ctx.she else 'his'} link")
+    caption_text = ctx.t(f"2 · {ctx.name} comparte su enlace", f"2 · {ctx.name} shares {'her' if ctx.she else 'his'} link")
     cap = pill(caption_text, 46, WHITE, (12, 12, 20, 200), weight=700)
     cap_y = 330 if sticker_y > H * 0.5 else 1440
 
@@ -522,9 +586,12 @@ def scene_friend(ctx: Ctx, dur: float):
     words = Words(text, 112, 70, TEXT_W, 460, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
     card = code_card(ctx)
     gift = pill(ctx.t(f"Regalo: {ctx.c['gift']}", f"Gift: {ctx.c['gift']}"), 44, on(pal["acc"]), pal["acc"] + (255,), weight=800)
+    chip = step_chip(3, ctx.t(f"{'Su amiga' if ctx.she else 'Su amigo'} viene", f"{'Her' if ctx.she else 'His'} friend comes in"))
 
     def draw(t):
         fr = back.frame(t + 3)
+        pchip = ease_out(prog(t, 0.0, 0.35))
+        paste(fr, chip, LEFT - 28, 250 + (1 - pchip) * 20, pchip)
         words.draw(fr, LEFT, 420, t, start=0.05, stagger=0.06)
         pc = prog(t, 0.75, 0.45)
         if pc > 0:
@@ -601,9 +668,13 @@ def scene_chat(ctx: Ctx, dur: float):
     hd.text((LEFT + 128, 76), friend, font=font(46, 800, DISPLAY), fill=WHITE)
     hd.text((LEFT + 128, 132), ctx.t("en línea", "online"), font=font(32, 500, BODY), fill=(210, 210, 222))
 
+    chip = step_chip(2, ctx.t(f"{ctx.name} manda su enlace", f"{ctx.name} sends {'her' if ctx.she else 'his'} link"))
+
     def draw(t):
         fr = kb.frame(t / dur)
         fr.alpha_composite(head, (0, 150))
+        pchip = ease_out(prog(t, 0.0, 0.35))
+        paste(fr, chip, LEFT - 28, 390 + (1 - pchip) * 20, pchip)
         # Bubbles stack upwards from the bottom of the safe area.
         shown = [(at, mine, sp) for at, mine, sp in sprites if t >= at]
         y = 1500
@@ -750,6 +821,151 @@ def scene_pov_phone(ctx: Ctx, dur: float):
     return dur, draw
 
 
+WEEKDAYS = dict(
+    es=["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"],
+    en=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+)
+LETTERS = dict(es="LMXJVSD", en="MTWTFSS")
+
+
+def scene_offer(ctx: Ctx, dur: float):
+    """Step 1: the week, the one hour that does not fill, and the small gift put on it."""
+    pal = ctx.pal
+    back = Backdrop(pal)
+    chip = step_chip(1, ctx.t("Tu hora floja", "Your quiet hour"))
+    words = Words(ctx.t("Eliges la hora que no se llena. *Le pones un regalo pequeño.*",
+                        "Pick the hour that never fills. *Put a small gift on it.*"),
+                  104, 64, TEXT_W, 400, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
+    low = WEEKDAYS[ctx.lang].index(ctx.c["wd"]) if ctx.c["wd"] in WEEKDAYS[ctx.lang] else 1
+    rng = np.random.default_rng(500 + ctx.ep["seed"])
+    week = [int(v) for v in np.clip(np.array([64, 72, 60, 76, 90, 96, 66]) + rng.integers(-8, 9, 7), 40, 99)]
+    week[low] = int(18 + rng.integers(0, 10))
+    cw = W - 2 * LEFT
+    offer_text = ctx.t(f"Activa: {ctx.c['gift']}", f"Live: {ctx.c['gift']}")
+    when = f"{ctx.c['wd'][:1].upper() + ctx.c['wd'][1:]} {ctx.c['hour']}"
+    fo = font(42, 800, BODY)
+    ow = cw - 112
+    lines = wrap_lines(offer_text, fo, ow - 150)
+    oh = 60 + len(lines) * 54 + 44
+    ch = 540 + oh + 44
+    base = rounded((cw, ch), 56, WHITE + (255,))
+    bd = ImageDraw.Draw(base)
+    bd.text((56, 46), ctx.place["venue"], font=font(46, 800, DISPLAY), fill=INK)
+    sub = ctx.t("Esta semana", "This week")
+    fs = font(34, 600, BODY)
+    bd.text((cw - 56 - fs.getlength(sub), 54), sub, font=fs, fill=(120, 120, 132))
+    fl = font(34, 700, BODY)
+    gap, top, area = 22, 150, 300
+    bw = (cw - 112 - gap * 6) / 7
+    for i, letter in enumerate(LETTERS[ctx.lang]):
+        x = 56 + i * (bw + gap)
+        bd.text((x + bw / 2 - fl.getlength(letter) / 2, top + area + 18), letter, font=fl,
+                fill=PINK if i == low else (130, 130, 142))
+    offer = Image.new("RGBA", (ow, oh), (0, 0, 0, 0))
+    grad = np.linspace(0, 1, ow)[None, :, None]
+    arr = (np.array(SIGNAL)[None, None, :] * (1 - grad) + np.array(PINK)[None, None, :] * grad).repeat(oh, axis=0)
+    fill_im = Image.fromarray(arr.astype(np.uint8), "RGB").convert("RGBA")
+    mask = rounded((ow, oh), 40, (255, 255, 255, 255)).getchannel("A")
+    offer.paste(fill_im, (0, 0), mask)
+    od = ImageDraw.Draw(offer)
+    r = 34
+    od.ellipse((34, 34, 34 + 2 * r, 34 + 2 * r), fill=(255, 255, 255, 70))
+    od.line((34 + r * 0.55, 34 + r, 34 + r * 0.9, 34 + r * 1.4, 34 + r * 1.5, 34 + r * 0.6), fill=WHITE, width=7)
+    y = 30
+    for line in lines:
+        od.text((130, y), line, font=fo, fill=WHITE)
+        y += 54
+    od.text((130, y + 4), when, font=font(34, 600, BODY), fill=(236, 232, 255))
+    offer = shadowed(offer, blur=18, offset=10, opacity=90)
+    card_shadow = shadowed(base, blur=30, offset=20, opacity=90)
+    pad = (card_shadow.width - cw) // 2
+    card_y = 1230 - ch / 2
+
+    def draw(t):
+        fr = back.frame(t + 2)
+        pchip = ease_out(prog(t, 0.0, 0.35))
+        paste(fr, chip, LEFT - 28, 250 + (1 - pchip) * 20, pchip)
+        words.draw(fr, LEFT, 380, t, start=0.1, stagger=0.06)
+        pc = ease_out(prog(t, 0.55, 0.5))
+        if pc <= 0:
+            return fr
+        card = card_shadow.copy()
+        d = ImageDraw.Draw(card)
+        for i, value in enumerate(week):
+            g = ease_out(prog(t, 0.8 + i * 0.07, 0.5))
+            h = area * value / 100 * g
+            x = pad + 56 + i * (bw + gap)
+            if h < 2:
+                continue
+            if i == low:
+                pulse = 0.5 + 0.5 * math.sin(max(0.0, t - 1.6) * 5) if t > 1.6 else 0
+                glow = int(70 + 80 * pulse)
+                d.rounded_rectangle((x - 6, pad + top + area - h - 6, x + bw + 6, pad + top + area + 6), 18, fill=(255, 214, 230, glow))
+                d.rounded_rectangle((x, pad + top + area - h, x + bw, pad + top + area), 14, fill=PINK + (255,))
+            else:
+                d.rounded_rectangle((x, pad + top + area - h, x + bw, pad + top + area), 14, fill=(214, 212, 236, 255))
+        paste(fr, card, LEFT - pad, card_y - pad + (1 - pc) * 80, pc)
+        po = ease_back(prog(t, 2.0, 0.45))
+        if po > 0:
+            paste_scaled(fr, offer, W / 2, card_y + ch - 44 - oh / 2 + 5, 0.7 + 0.3 * po, clamp(po * 2))
+        return fr
+    draw.branded = True  # the watermark goes on the drawn scenes only
+    return dur, draw
+
+
+def way_card(ctx: Ctx, story: bool) -> Image.Image:
+    cw, ch = W - 2 * LEFT, 290
+    card = rounded((cw, ch), 48, WHITE + (255,))
+    d = ImageDraw.Draw(card)
+    size = 150
+    if story:
+        badge = ring_gradient(size)
+    else:
+        badge = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+        ImageDraw.Draw(badge).ellipse((0, 0, size - 1, size - 1), fill=(37, 211, 102, 255))
+    bdraw = ImageDraw.Draw(badge)
+    (camera_glyph if story else chat_glyph)(bdraw, size / 2, size / 2, size * 0.5, WHITE, 8)
+    card.alpha_composite(badge, (44, (ch - size) // 2))
+    title = "Story" if story else "WhatsApp"
+    body = (ctx.t("La ven todos sus seguidores, durante 24 horas.", "All their followers see it, for 24 hours.") if story
+            else ctx.t("Solo los amigos que elige, en su chat.", "Only the friends they choose, in a chat."))
+    ft = font(58, 800, DISPLAY)
+    fb = font(38, 500, BODY)
+    lines = wrap_lines(body, fb, cw - 260)
+    block = 70 + len(lines) * 50
+    y = (ch - block) / 2
+    d.text((236, y - 4), title, font=ft, fill=INK)
+    y += 76
+    for line in lines:
+        d.text((236, y), line, font=fb, fill=(88, 88, 100))
+        y += 50
+    return shadowed(card, blur=26, offset=16, opacity=85)
+
+
+def scene_two_ways(ctx: Ctx, dur: float):
+    """A Story and a message are different things, with the same link: who sees each, and what the friend does."""
+    pal = ctx.alt
+    back = Backdrop(pal)
+    title = Words(ctx.t("Story o mensaje: *el mismo enlace.*", "Story or message: *the same link.*"),
+                  110, 72, TEXT_W, 360, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
+    story, message = way_card(ctx, True), way_card(ctx, False)
+    foot = Words(ctx.t("Quien lo abre reserva *tu hora floja* en un toque.", "Whoever opens it books *your quiet hour* in one tap."),
+                 62, 44, TEXT_W, 260, weight=700, path=BODY, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
+
+    def draw(t):
+        fr = back.frame(t + 7)
+        title.draw(fr, LEFT, 330, t, start=0.05, stagger=0.06)
+        for k, (card, at, side) in enumerate(((story, 0.7, -1), (message, 1.25, 1))):
+            p = ease_out(prog(t, at, 0.5))
+            if p > 0:
+                x = (W - card.width) / 2 + side * (1 - p) * 220
+                paste(fr, card, x, 760 + k * 340 - 40, p)
+        foot.draw(fr, LEFT, 1500, t, start=2.1, stagger=0.05, style="rise")
+        return fr
+    draw.branded = False  # the foot line sits where the watermark would
+    return dur, draw
+
+
 def scene_punch(ctx: Ctx, text: str, dur: float, pal=None):
     pal = pal or ctx.alt
     back = Backdrop(pal)
@@ -791,21 +1007,31 @@ def scene_cta(ctx: Ctx, dur: float):
 
 
 def timeline(ctx: Ctx):
+    """30 to 34 seconds. The day's format opens it; the middle always explains the
+    whole idea in order (the quiet hour, the gift on it, the share, the visit,
+    Story or message), so a viewer who knows nothing about SocialPerks gets it."""
     ep = ctx.ep
     hook = ep["hook"][ctx.lang]
     punch = ep["punch"][ctx.lang]
     eyebrow = ctx.t(f"Si tienes {ctx.c['place']}:", f"If you run a {ctx.c['place']}:")
     f = ep["format"]
+    problem = scene_pov_setup(ctx, 3.2)
+    offer = scene_offer(ctx, 4.6)
+    share = scene_chat(ctx, 5.8) if f == "chat" else scene_story(ctx, 3.6)
+    visit = scene_friend(ctx, 3.6)
+    ways = scene_two_ways(ctx, 4.6)
+    spine = [offer, share, visit, ways]
+    cta = scene_cta(ctx, 3.4)
     if f == "story":
-        return [scene_hook(ctx, hook, eyebrow, 2.7), scene_story(ctx, 3.3), scene_friend(ctx, 2.9), scene_punch(ctx, punch, 2.2), scene_cta(ctx, 2.5)]
+        return [scene_hook(ctx, hook, eyebrow, 3.0), problem, *spine, scene_numbers(ctx, 4.0), scene_punch(ctx, punch, 2.8), cta]
     if f == "chat":
-        return [scene_hook(ctx, hook, eyebrow, 2.7), scene_chat(ctx, 5.3), scene_punch(ctx, punch, 2.2), scene_cta(ctx, 2.5)]
+        return [scene_hook(ctx, hook, eyebrow, 3.0), problem, *spine, scene_punch(ctx, punch, 2.8), cta]
     if f == "numbers":
-        return [scene_hook(ctx, hook, eyebrow, 2.7), scene_story(ctx, 2.2), scene_numbers(ctx, 3.6), scene_punch(ctx, punch, 2.2), scene_cta(ctx, 2.5)]
+        return [scene_hook(ctx, hook, eyebrow, 3.0), scene_numbers(ctx, 4.0), problem, *spine, scene_punch(ctx, punch, 2.8), cta]
     if f == "myth":
-        return [scene_hook(ctx, hook, eyebrow, 2.7), scene_myth(ctx, 4.6), scene_story(ctx, 2.2), scene_cta(ctx, 2.6)]
+        return [scene_hook(ctx, hook, eyebrow, 3.0), scene_myth(ctx, 5.0), problem, *spine, cta]
     # pov: the day's hook closes it, before the address.
-    return [scene_pov_setup(ctx, 2.8), scene_pov_phone(ctx, 4.0), scene_punch(ctx, hook, 2.6, pal=ctx.pal), scene_cta(ctx, 2.5)]
+    return [problem, scene_pov_phone(ctx, 4.6), *spine, scene_punch(ctx, hook, 3.0, pal=ctx.pal), cta]
 
 
 def watermark(ctx: Ctx) -> Image.Image:

@@ -2,6 +2,8 @@
 
 Every morning a new short video for SocialPerks' own social profile (Instagram Reels, TikTok, Shorts). Each day is different: a different kind of place, a different format, a different opening line and colours. The lines provoke and sound like a person. The photos are what customers really post from each kind of place, the same as on socialperkses.com.
 
+Every video also explains the whole idea in about 30 seconds, so someone who has never heard of SocialPerks gets it: the hour that does not fill, the small gift put on it (1), the customer who shares a Story or sends a message (2), the friend who comes in and shows a code at the counter (3), and why a Story and a message are different with the same link.
+
 ```bash
 python3 social-video/daily.py                    # today (Madrid time), Spanish and English
 python3 social-video/daily.py --date 2026-10-20  # any day; the same day always gives the same video
@@ -10,7 +12,7 @@ python3 social-video/daily.py --lang es          # one language
 
 Under `social-video/out/<date>/` it writes:
 
-- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 11 to 14 seconds, with an original synthesised music bed.
+- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 30 to 34 seconds, with an original synthesised music bed.
 - a cover JPEG per language;
 - `caption.txt`: the text to paste under the post, in both languages, with hashtags.
 
@@ -20,7 +22,7 @@ Under `social-video/out/<date>/` it writes:
 
 `episodes.py` holds everything the video says:
 
-- **Formats.** There are five, and the date picks one:
+- **Formats.** There are five, and the date picks one. The format decides how the video opens; the middle is always the same three numbered steps, then "Story or message: the same link".
   - *story*: a customer's Story with the link, then the friend who came in;
   - *chat*: a friend asks "where?", the customer sends the link;
   - *numbers*: 1 Story, 3 new friends, €0 in ads;
@@ -49,6 +51,6 @@ The page is the delivery because a session in the cloud cannot hand the owner a 
 4. Publish the page to the same address.
 5. Delete the assets of days that fell off the week.
 
-A push notification says the run finished. On the phone, "Save video" opens the share sheet (Instagram, TikTok, the camera roll) and "Copy text" copies the caption.
+A push notification says the run finished. On the phone, "Condividi su Instagram o TikTok" copies the caption and opens the share sheet with the video, where Instagram and TikTok are; "Copia testo" copies the caption on its own.
 
 The session does not commit or post anything. Posting on the profile stays a tap, because Instagram and TikTok only publish through their apps or a business API connected to the account.
