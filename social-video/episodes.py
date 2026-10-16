@@ -39,12 +39,12 @@ STORY_PHOTO = {
 }
 PLACE_PHOTO = {
     "barber": "1503951914875-452162b0f3f1",
-    "salon": "1562322140-8baeececf3df",
+    "salon": "1633681926022-84c23e8cb2d6",  # the chairs and mirrors, no face (as the product)
     "nails": "1772322586702-73125782bd99",  # the nails themselves: the salon photo is a hairdresser
     "gym": "1534438327276-14e5300c3a48",
     "wellness": "1544161515-4ab6ce6db874",
     "tattoo_studio": "1598371839696-5c5bb00bdc28",
-    "physio": "1706353399656-210cca727a33",
+    "physio": "1772122028843-9139d23af4fb",
     "hotel": "1551882547-ff40c63fe5fa",
     "restaurant": "1517248135467-4c7edcad34c4",
     "bar": "1514933651103-005eec06c04b",
