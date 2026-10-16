@@ -108,7 +108,7 @@ details > .reel { margin-top: 16px; }
     <h2 id="week-title">Questa settimana</h2>
     <ul class="week" id="week"></ul>
   </section>
-  <p class="note" id="save-note" hidden>La condivisione funziona nell'app Claude e su claude.ai: apri questa pagina lì per mandare il video a Instagram o TikTok.</p>
+  <p class="note" id="save-note" hidden>La condivisione diretta non è disponibile in questo browser: apri la pagina nell'app Claude o da Safari o Chrome sul telefono.</p>
 </main>
 
 <script type="application/json" id="sp-days">__DAYS__</script>
@@ -131,22 +131,21 @@ details > .reel { margin-top: 16px; }
   // share sheet, where Instagram and TikTok are, and copies the caption on the
   // way so it is ready to paste. The page's own share (Web Share with a file)
   // is tried first; inside the Claude app the share sheet comes from
-  // `downloads`, which on iPhone opens the same sheet.
+  // `downloads`, which on iPhone opens the same sheet. The file is fetched
+  // ahead of the tap (today's Spanish one on load), because a share has to
+  // start from the tap itself.
   let downloads = null;
-  const shareButtons = [];
   const files = new Map();
-  async function videoFile(id, filename) {
-    if (!files.has(id)) files.set(id, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); }));
-    try {
-      return new File([await files.get(id)], filename, { type: "video/mp4" });
-    } catch (error) {
-      files.delete(id);
-      throw error;
+  function videoFile(id, filename) {
+    if (!files.has(id)) {
+      files.set(id, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); })
+        .then((b) => new File([b], filename, { type: "video/mp4" })));
+      files.get(id).catch(() => files.delete(id));
     }
+    return files.get(id);
   }
   async function share(id, filename, caption, button) {
-    const label = button.textContent;
-    const reset = (text, ms) => { button.textContent = text; setTimeout(() => { button.textContent = label; }, ms); };
+    const label = button.dataset.label;
     // Copied first, while the tap still counts as the viewer's.
     let copied = false;
     if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
@@ -169,19 +168,22 @@ details > .reel { margin-top: 16px; }
         if (!downloads) throw new Error("unavailable");
         await downloads.save({ filename, data: file });
       }
-      reset(copied ? "Fatto. Il testo è già copiato" : "Fatto", 3500);
+      button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
     } catch (error) {
       if (error && error.code === "declined") button.textContent = label;
-      else reset("Non è partito, riprova", 3000);
+      else {
+        button.textContent = "Non è partito, riprova";
+        document.getElementById("save-note").hidden = false;
+      }
     } finally {
       button.disabled = false;
+      if (button.textContent !== label) setTimeout(() => { button.textContent = label; }, 3500);
     }
   }
   function shareButton(id, filename, caption, label, primary) {
     const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
-    button.hidden = true;
+    button.dataset.label = label;
     button.addEventListener("click", () => share(id, filename, caption, button));
-    shareButtons.push(button);
     return button;
   }
   function copyButton(text, area) {
@@ -234,19 +236,14 @@ details > .reel { margin-top: 16px; }
     }
   }
 
-  const canShareFiles = (() => {
-    try { return !!(navigator.canShare && navigator.canShare({ files: [new File(["x"], "x.mp4", { type: "video/mp4" })] })); } catch { return false; }
-  })();
-  const ready = () => { shareButtons.forEach((b) => { b.hidden = false; }); };
-  if (canShareFiles) ready();
+  // Warm today's Spanish video so the first tap opens the share sheet at once;
+  // the English one when its section opens.
+  if (days[0]) videoFile(days[0].es, `socialperks-${days[0].date}-es.mp4`).catch(() => {});
+  const english = document.getElementById("english");
+  english.addEventListener("toggle", () => { if (english.open && days[0]) videoFile(days[0].en, `socialperks-${days[0].date}-en.mp4`).catch(() => {}); });
+
   if (window.claude && window.claude.use) {
-    window.claude.use("downloads").then((ns) => {
-      downloads = ns;
-      if (ns) ready();
-      else if (!canShareFiles) document.getElementById("save-note").hidden = false;
-    }, () => { if (!canShareFiles) document.getElementById("save-note").hidden = false; });
-  } else if (!canShareFiles) {
-    document.getElementById("save-note").hidden = false;
+    window.claude.use("downloads").then((ns) => { downloads = ns; }, () => {});
   }
 })();
 </script>
