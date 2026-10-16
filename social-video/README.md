@@ -1,0 +1,42 @@
+# The daily SocialPerks video
+
+Every morning a new short video for SocialPerks' own social profile (Instagram Reels, TikTok, Shorts). Each day is different: a different kind of place, a different format, a different opening line and colours. The lines provoke and sound like a person. The photos are what customers really post from each kind of place, the same as on socialperkses.com.
+
+```bash
+python3 social-video/daily.py                    # today (Madrid time), Spanish and English
+python3 social-video/daily.py --date 2026-10-20  # any day; the same day always gives the same video
+python3 social-video/daily.py --lang es          # one language
+```
+
+Under `social-video/out/<date>/` it writes:
+
+- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 11 to 14 seconds, with an original synthesised music bed.
+- a cover JPEG per language;
+- `caption.txt`: the text to paste under the post, in both languages, with hashtags.
+
+**Post the Spanish one.** The venues we sell to are in Barcelona. The English one is there for a second account or for ads.
+
+## What it says
+
+`episodes.py` holds everything the video says:
+
+- **Formats.** There are five, and the date picks one:
+  - *story*: a customer's Story with the link, then the friend who came in;
+  - *chat*: a friend asks "where?", the customer sends the link;
+  - *numbers*: 1 Story, 3 new friends, €0 in ads;
+  - *myth*: what they sell you, struck out, then what works;
+  - *POV*: you run a salon at 11:00, and the phone starts buzzing.
+- **Kinds of place.** There are fifteen, appointments first. Each has the customer and venue from the product's examples, the gift, the quiet hour and the hashtags.
+- **Lines.** There are 24 opening lines and 5 closing lines. A line comes back only after all the others, and always with a different place and format.
+
+To add a line, append it to `HOOKS` in Spanish and English, with `*...*` around the words to highlight. To add a format, add a scene in `daily.py` and its name to `FORMATS`.
+
+## Requirements
+
+You need Python 3 with Pillow and numpy, ffmpeg with libx264, and internet access to `images.unsplash.com` for the photos. If a photo cannot be fetched, the video uses the day's colours instead, so a video always comes out. Downloaded photos are cached in `social-video/.cache`.
+
+The fonts in `fonts/` are Inter and Inter Tight (SIL Open Font License), converted to TTF from the site's own files. `assets/mark.png` is the SocialPerks mark.
+
+## Every morning, automatically
+
+A scheduled task starts a fresh session at 07:51 Madrid time. The session renders the day's video and sends the two MP4s, the cover and the caption to the owner's phone. It does not commit or post anything. Posting on the profile stays a tap, because Instagram and TikTok only publish through their apps or a business API connected to the account.
