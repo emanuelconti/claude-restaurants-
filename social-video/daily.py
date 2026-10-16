@@ -65,9 +65,14 @@ PALETTES = [
 
 # Where the link sticker sits on each customer photo, clear of the subject
 # (the product's story-examples.ts, badgeTop).
-STICKER_Y = dict(barber=0.74, salon=0.78, nails=0.70, gym=0.74, wellness=0.74, tattoo_studio=0.30, physio=0.22,
+STICKER_Y = dict(barber=0.82, salon=0.22, nails=0.70, gym=0.82, wellness=0.84, tattoo_studio=0.30, physio=0.20,
                  hotel=0.30, restaurant=0.64, bar=0.74, cocktail_bar=0.24, pizzeria=0.72, cafe=0.76, brunch=0.66,
                  ice_cream=0.28)
+
+# The 9:16 window the product's own crop of a photo shows (src/assets/stories),
+# where it differs from the middle: how far across it is centred, and how much
+# of the top it leaves out (the cocktail without the face above it).
+STORY_FRAME = dict(barber=(0.30, 0.0), cocktail_bar=(0.543, 0.143))
 
 # ----------------------------------------------------------------- basics
 
@@ -180,6 +185,18 @@ def cover(img: Image.Image, w: int, h: int, focus=(0.5, 0.45)) -> Image.Image:
     x = int(clamp(focus[0] * im.width - w / 2, 0, im.width - w))
     y = int(clamp(focus[1] * im.height - h / 2, 0, im.height - h))
     return im.crop((x, y, x + w, y + h))
+
+
+def story_frame(img: Image.Image, cat: str) -> Image.Image:
+    if cat not in STORY_FRAME:
+        return img
+    fx, top = STORY_FRAME[cat]
+    img = img.crop((0, int(img.height * top), img.width, img.height))
+    w = min(img.width, round(img.height * 9 / 16))
+    h = min(img.height, round(w * 16 / 9))
+    x = int(clamp(fx * img.width - w / 2, 0, img.width - w))
+    y = (img.height - h) // 2
+    return img.crop((x, y, x + w, y + h))
 
 
 def fallback_photo(pal) -> Image.Image:
@@ -465,7 +482,7 @@ class Ctx:
         self.alt = PALETTES[(ep["palette"] + 2) % len(PALETTES)]
         story = photo(E.STORY_PHOTO[self.cat], cache)
         venue = photo(E.PLACE_PHOTO[self.cat], cache)
-        self.story_img = story or fallback_photo(self.pal)
+        self.story_img = story_frame(story, self.cat) if story else fallback_photo(self.pal)
         self.venue_img = venue or self.story_img
         self.name = self.place["name"]
         self.she = self.place["g"] == "f"

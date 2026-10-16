@@ -19,13 +19,15 @@ import datetime as _dt
 # (socialperks: src/assets/stories/CREDITS.json and src/lib/category-images.ts);
 # fetched from Unsplash's CDN at render time, so they are not copied here.
 STORY_PHOTO = {
-    "barber": "1698871351987-d35e13a00c7e",  # his own selfie with the fresh cut
-    "salon": "1554519934-e32b1629d9ee",
+    # No faces to camera (the owner, 16 October): the cut from behind, the
+    # chair, the massage, the plates, the tape; the same photos as the product.
+    "barber": "1648221122323-572c13a31663",
+    "salon": "1788985375145-81da8cc731a2",
     "nails": "1772322586702-73125782bd99",
-    "gym": "1789629438956-e0d1463811f3",
-    "wellness": "1623120594168-a6d35474043b",
+    "gym": "1620188467120-5042ed1eb5da",
+    "wellness": "1741522509438-a120c0bb5e88",
     "tattoo_studio": "1564426622559-5af68da63b96",
-    "physio": "1758684051090-bc83bb0af184",
+    "physio": "1706795034887-be9a24d1ac19",
     "hotel": "1641924675896-b6a5aaf64861",
     "restaurant": "1659690402718-ea07d943fd42",
     "bar": "1666282020483-6ebeb210b1c3",
