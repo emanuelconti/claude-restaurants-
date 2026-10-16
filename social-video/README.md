@@ -39,4 +39,16 @@ The fonts in `fonts/` are Inter and Inter Tight (SIL Open Font License), convert
 
 ## Every morning, automatically
 
-A scheduled task starts a fresh session at 07:51 Madrid time. The session renders the day's video and sends the two MP4s, the cover and the caption to the owner's phone. It does not commit or post anything. Posting on the profile stays a tap, because Instagram and TikTok only publish through their apps or a business API connected to the account.
+A scheduled task starts a fresh session at 07:51 Madrid time. The session renders the day's video and updates the owner's page, **SocialPerks video del giorno** (https://claude.ai/artifact/YNUEr5KqP3zZYDwBmXD6sM, private to the owner).
+
+The page is the delivery because a session in the cloud cannot hand the owner a file. Its steps:
+
+1. Read the page as it is published.
+2. Upload the two MP4s and the Spanish cover to the page's asset store.
+3. Run `page.py` with the new asset ids. It rebuilds the page from `page.html`, with today on top, the English version under it and the last seven days.
+4. Publish the page to the same address.
+5. Delete the assets of days that fell off the week.
+
+A push notification says the run finished. On the phone, "Save video" opens the share sheet (Instagram, TikTok, the camera roll) and "Copy text" copies the caption.
+
+The session does not commit or post anything. Posting on the profile stays a tap, because Instagram and TikTok only publish through their apps or a business API connected to the account.
