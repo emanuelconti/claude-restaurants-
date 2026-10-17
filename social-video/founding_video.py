@@ -8,9 +8,10 @@ For the Barcelona venues that signed a letter of intent before SocialPerks
 joined EWorks (the owner, 17 October): explained so that anybody follows it,
 with music and nothing rough. Six parts: the empty hour, the idea, how it
 works in four steps, what the owner sees, what a Founding Partner gets
-(0 € for good, where every other venue pays 49 € a month), and how to start,
-ending on the QR of the Founding Partner sign-up, which asks for no card
-(socialperks src/lib/billing.ts, foundingPromotion).
+(0 € for good, where every other venue pays 49 € a month), and how to start:
+with the QR on the venue's own sheet. Each venue has its own single-use
+sign-up link (socialperks docs/sales/founding-partner), so the video shows
+none: this repository is public.
 
 Drawn with daily.py's and lead_kit.py's tools over the product's own screens,
 captured in each language (assets/founding/<lang>).
@@ -58,8 +59,8 @@ COPY = {
             ("compare", ("Els altres locals", "49 €", "al mes"), ("Tu", "0 €", "Per sempre.")),
             ("facts", "A més a més:", ["Sense targeta", "Sense contracte", "Ho deixes quan vulguis"]),
             ("say", "Ets un dels primers locals de SocialPerks a Barcelona. I el teu local sortirà al nostre *web*.", NIGHT),
-            ("start", "Comences en *5 minuts*.", ["Escaneja el QR", "Omple les teves dades", "Posa el teu QR al local"]),
-            ("end", "Registra't *gratis*.", "Sense targeta. Per sempre.", "socialperkses.com/start"),
+            ("start", "Comences en *5 minuts*.", ["Escaneja el QR del teu document", "Omple les teves dades", "Posa el teu QR al local"]),
+            ("end", "Registra't *gratis*.", "Amb el QR del teu document.", "Només per al teu local · Sense targeta"),
         ],
     },
     "es": {
@@ -88,8 +89,8 @@ COPY = {
             ("compare", ("Los demás locales", "49 €", "al mes"), ("Tú", "0 €", "Para siempre.")),
             ("facts", "Y además:", ["Sin tarjeta", "Sin contrato", "Lo dejas cuando quieras"]),
             ("say", "Eres uno de los primeros locales de SocialPerks en Barcelona. Y tu local saldrá en nuestra *web*.", NIGHT),
-            ("start", "Empiezas en *5 minutos*.", ["Escanea el QR", "Rellena tus datos", "Pon tu QR en el local"]),
-            ("end", "Regístrate *gratis*.", "Sin tarjeta. Para siempre.", "socialperkses.com/start"),
+            ("start", "Empiezas en *5 minutos*.", ["Escanea el QR de tu documento", "Rellena tus datos", "Pon tu QR en el local"]),
+            ("end", "Regístrate *gratis*.", "Con el QR de tu documento.", "Solo para tu local · Sin tarjeta"),
         ],
     },
 }
@@ -314,31 +315,27 @@ def scene_start(title, steps, dur=8.6):
     return dur, draw
 
 
-def scene_end(lang, line1, line2, url, dur=11.0):
+def scene_end(line1, line2, note, dur=9.0):
+    """The close: sign up free, with the QR on the venue's own sheet."""
     back = D.Backdrop(NIGHT)
-    m = D.shadowed(D.mark(170), blur=26, offset=14, opacity=110)
-    first = D.Words(line1, 120, 80, TEXT_W, 260, color=WHITE, hl=NIGHT["hl"], hl_text=WHITE, align="center")
-    sub = D.text_sprite(line2, 54, 700, D.BODY, NIGHT["sub"])
-    q = load(lang, "qr-partner.png").resize((540, 540), Image.NEAREST)
-    qcard = D.rounded((600, 600), 44, (255, 255, 255, 255))
-    qcard.alpha_composite(q, (30, 30))
-    qcard = D.shadowed(qcard, blur=26, offset=14, opacity=110)
-    site = D.pill(url, 48, WHITE, SIGNAL + (255,), weight=800)
+    m = D.shadowed(D.mark(220), blur=26, offset=14, opacity=110)
+    first = D.Words(line1, 140, 90, TEXT_W, 340, color=WHITE, hl=NIGHT["hl"], hl_text=WHITE, align="center")
+    sub = D.Words(line2, 80, 56, TEXT_W, 260, weight=800, color=WHITE, align="center")
+    tag = D.pill(note, 46, INK, (255, 255, 255, 240), weight=800)
+    site = D.text_sprite("socialperkses.com", 50, 700, D.BODY, NIGHT["sub"])
 
     def draw(t):
         fr = back.frame(t + 13)
         pm = D.prog(t, 0.0, 0.5)
-        D.paste_scaled(fr, m, W / 2, 250, 0.5 + 0.5 * D.ease_back(pm), D.clamp(pm * 2))
-        first.draw(fr, LEFT, 400, t, start=0.25, stagger=0.06)
-        ps = D.ease_out(D.prog(t, 0.7, 0.4))
-        D.paste(fr, sub, (W - sub.width) / 2, 400 + first.height + 30 + (1 - ps) * 30, ps)
-        pq = D.ease_back(D.prog(t, 1.0, 0.5))
-        qy = 400 + first.height + 160 + 300
-        if pq > 0:
-            D.paste_scaled(fr, qcard, W / 2, qy, 0.7 + 0.3 * pq, D.clamp(pq * 2))
-        pu = D.ease_back(D.prog(t, 1.4, 0.45))
-        if pu > 0:
-            D.paste_scaled(fr, site, W / 2, qy + 380, 0.7 + 0.3 * pu, D.clamp(pu * 2))
+        D.paste_scaled(fr, m, W / 2, 470, 0.5 + 0.5 * D.ease_back(pm), D.clamp(pm * 2))
+        first.draw(fr, LEFT, 680, t, start=0.25, stagger=0.06)
+        sub.draw(fr, LEFT, 720 + first.height, t, start=0.9, stagger=0.05, style="rise")
+        pt = D.ease_back(D.prog(t, 1.6, 0.45))
+        y = 720 + first.height + sub.height + 120
+        if pt > 0:
+            D.paste_scaled(fr, tag, W / 2, y, 0.7 + 0.3 * pt, D.clamp(pt * 2))
+        ps = D.ease_out(D.prog(t, 2.0, 0.4))
+        D.paste(fr, site, (W - site.width) / 2, H - 300 + (1 - ps) * 20, ps)
         return fr
     return dur, draw
 
@@ -381,7 +378,7 @@ def timeline(lang):
         elif kind == "start":
             out.append(scene_start(item[1], item[2]))
         elif kind == "end":
-            out.append(scene_end(lang, item[1], item[2], item[3]))
+            out.append(scene_end(item[1], item[2], item[3]))
     return out
 
 
