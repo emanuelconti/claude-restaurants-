@@ -465,7 +465,11 @@ def timeline(lang, which):
 
 
 def render(lang, which, out_path, cover_path, seed):
-    scenes = timeline(lang, which)
+    return render_scenes(timeline(lang, which), out_path, cover_path, seed)
+
+
+def render_scenes(scenes, out_path, cover_path, seed):
+    """Scenes to an MP4 with the day's kind of music, cutting with a short push and flash; also used by founding_video.py."""
     total = sum(d for d, _ in scenes)
     frames = int(round(total * FPS))
     wav = out_path[:-4] + ".wav"
