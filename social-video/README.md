@@ -12,7 +12,7 @@ python3 social-video/daily.py --lang es          # one language
 
 Under `social-video/out/<date>/` it writes:
 
-- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 30 to 34 seconds, with an original synthesised music bed.
+- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 30 to 34 seconds, with an original synthesised beat, reggaeton or Latin trap on alternate days, and every cut on the beat. A famous song goes on top from the app's own music library (the page says how), never inside the file.
 - a cover JPEG per language;
 - `caption.txt`: the text to paste under the post, in both languages, with hashtags.
 

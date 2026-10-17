@@ -15,8 +15,9 @@ sends a message, the friend who comes in and shows a code at the counter, and
 what that brought. The format decides the opening and the order around it.
 
 What it says comes from episodes.py. Everything is drawn here with Pillow,
-frame by frame from the time alone, and encoded with ffmpeg; the music bed is
-synthesised from the date. Nothing to install beyond Python 3 with Pillow and
+frame by frame from the time alone, and encoded with ffmpeg; the music is
+an original reggaeton or Latin trap beat synthesised from the date, and every
+cut lands on its beat. Nothing to install beyond Python 3 with Pillow and
 numpy, and ffmpeg: the daily run starts in a fresh machine.
 """
 
@@ -1062,11 +1063,12 @@ def watermark(ctx: Ctx) -> Image.Image:
 
 def render(ep, lang, out_path, cover_path, cache):
     ctx = Ctx(ep, lang, cache)
-    scenes = timeline(ctx)
+    scenes = on_beat(timeline(ctx), ep["seed"])
     total = sum(d for d, _ in scenes)
     frames = int(round(total * FPS))
     wav = out_path[:-4] + ".wav"
-    music(ep["seed"], total, wav)
+    cuts = np.cumsum([d for d, _ in scenes])[:-1]
+    music(ep["seed"], total, wav, cuts=cuts)
     mk = watermark(ctx)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-i", wav, "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-profile:v", "high",
@@ -1107,80 +1109,234 @@ def render(ep, lang, out_path, cover_path, cache):
 
 # ----------------------------------------------------------------- music
 
-def music(seed: int, dur: float, path: str, sr: int = 44100):
-    """A short, bright bed: four chords, kick, offbeat hats, a plucked arpeggio. Different every day."""
-    rng = np.random.default_rng(1000 + seed)
-    bpm = [104, 110, 116, 122, 98][seed % 5]
-    root = 110.0 * 2 ** ([0, 2, 3, 5, 7, 8, 10][seed % 7] / 12)
-    progs = [[0, 8, 3, 10], [0, 5, 8, 7], [0, 10, 8, 7], [0, 3, 10, 5]]
-    prog_ = progs[seed % len(progs)]
-    minor = [0, 3, 7]
-    major = [0, 4, 7]
-    n = int((dur + 0.4) * sr)
-    t = np.arange(n) / sr
+def groove(seed: int) -> tuple[str, float]:
+    """The day's beat and its tempo: reggaeton on the dembow one day, Latin trap the next."""
+    if seed % 2 == 0:
+        return "reggaeton", (90.0, 92.0, 94.0, 96.0, 98.0)[(seed // 2) % 5]
+    return "trap", (130.0, 134.0, 138.0, 142.0, 144.0)[(seed // 2) % 5]
+
+
+def on_beat(scenes, seed):
+    """Each scene to the nearest whole beat, never under two, so every cut lands on the beat as edits to music do."""
+    beat = 60 / groove(seed)[1]
+    return [(max(2 * beat, round(d / beat) * beat), draw) for d, draw in scenes]
+
+
+def music(seed: int, dur: float, path: str, sr: int = 44100, cuts=()):
+    """An original beat in the sound people scroll to now (the owner, 17 October:
+    "musiche moderne tipo Bad Bunny"). Reggaeton on the dembow, or Latin trap
+    with sliding 808s and hi-hat rolls; a minor key, four chords and a hook
+    that repeats, different every day. Written here, never sampled: a real hit
+    inside the file gets a Reel muted, so a famous song goes on top from the
+    app's own library (page.html says how).
+
+    Phone speakers play almost nothing under 100 Hz, so the 808 is driven into
+    harmonics a phone can play. A soft whoosh leads into each cut, a short
+    break sits in the middle, and the drop comes back with an impact.
+    """
+    style, bpm = groove(seed)
+    rng = np.random.default_rng(7000 + seed)
     beat = 60 / bpm
+    step = beat / 4
+    bar = 4 * beat
+    n = int((dur + 0.5) * sr)
     out = np.zeros((n, 2))
+    pads = np.zeros((n, 2))
+    send = np.zeros(n)
+    side = np.zeros(n)
 
-    def note(freq, start, length, amp, kind="saw", pan=0.0, decay=6.0):
-        i0 = int(start * sr)
-        i1 = min(n, i0 + int(length * sr))
-        if i0 >= n:
+    def span(length):
+        return np.arange(max(1, int(length * sr))) / sr
+
+    def put(sig, at, gain=1.0, pan=0.0, bus=None, room=0.0):
+        i0 = int(round(at * sr))
+        if i0 < 0 or i0 >= n:
             return
-        tt = np.arange(i1 - i0) / sr
-        if kind == "sine":
-            w = np.sin(2 * np.pi * freq * tt)
-        elif kind == "tri":
-            w = 2 / np.pi * np.arcsin(np.sin(2 * np.pi * freq * tt))
-        else:
-            w = sum(np.sin(2 * np.pi * freq * k * tt) / k for k in range(1, 7))
-        env = np.exp(-decay * tt) * np.minimum(1, tt / 0.005)
-        sig = w * env * amp
-        out[i0:i1, 0] += sig * (1 - pan) / 2 * 2
-        out[i0:i1, 1] += sig * (1 + pan) / 2 * 2
+        sig = sig[: n - i0] * gain
+        target = out if bus is None else bus
+        target[i0:i0 + len(sig), 0] += sig * (1 - pan)
+        target[i0:i0 + len(sig), 1] += sig * (1 + pan)
+        if room:
+            send[i0:i0 + len(sig)] += sig * room
 
-    bars = int(dur / (4 * beat)) + 2
+    def noise(length, edges=1):
+        x = rng.standard_normal(len(span(length)))
+        for _ in range(edges):
+            x = np.diff(x, prepend=0.0)
+        return x / (np.max(np.abs(x)) or 1)
+
+    def soften(x, k):
+        return np.convolve(x, np.ones(k) / k, mode="same")
+
+    def kick(at, gain=1.0):
+        t = span(0.34)
+        f = 46 + 125 * np.exp(-t * 36)
+        body = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 7.5)
+        click = noise(0.34) * np.exp(-t * 500) * 0.35
+        put(np.tanh(1.8 * (body + click)), at, 0.95 * gain)
+        i0 = int(at * sr)
+        if i0 < n:
+            e = np.exp(-t * 6)[: n - i0]
+            side[i0:i0 + len(e)] = np.maximum(side[i0:i0 + len(e)], e)
+
+    def snare(at, gain=1.0):
+        t = span(0.2)
+        body = np.sin(2 * np.pi * 190 * t) * np.exp(-t * 32) * 0.8
+        rattle = soften(noise(0.2), 3) * np.exp(-t * 20)
+        put(np.tanh(1.4 * (body + rattle)), at, 0.5 * gain, room=0.15)
+
+    def clap(at, gain=1.0):
+        t = span(0.34)
+        e = np.zeros(len(t))
+        for d in (0.0, 0.011, 0.023):
+            i = int(d * sr)
+            e[i:] += np.exp(-t[: len(t) - i] * 150)
+        e += 0.55 * np.exp(-t * 15) * (t > 0.03)
+        put(soften(noise(0.34), 2) * e, at, 0.42 * gain, room=0.35)
+
+    def hat(at, gain=1.0, open_=False, pan=0.15):
+        length = 0.24 if open_ else 0.045
+        t = span(length)
+        put(noise(length, 2) * np.exp(-t * (13 if open_ else 95)), at, 0.16 * gain, pan)
+
+    def bass(at, f, length, slide_from=None, gain=1.0):
+        t = span(length)
+        freq = np.full(len(t), f)
+        if slide_from:
+            g = np.clip(t / 0.09, 0, 1)
+            freq = slide_from * (f / slide_from) ** g
+        ph = 2 * np.pi * np.cumsum(freq) / sr
+        amp = np.minimum(1, t / 0.004) * np.exp(-t * 1.4) * np.clip((length - t) / 0.012, 0, 1)
+        x = np.sin(ph) + 0.2 * np.sin(2 * ph)
+        put(np.tanh(2.8 * x) / np.tanh(2.8) * amp, at, 0.62 * gain)
+
+    lead_kind = seed % 3
+
+    def lead(at, f, length, gain=1.0, pan=0.0):
+        t = span(length)
+        ratio, index, decay = ((3.5, 2.0, 3.2), (4.0, 1.4, 6.5), (1.0, 2.6, 4.5))[lead_kind]
+        mod = index * np.exp(-t * 6) * np.sin(2 * np.pi * f * ratio * t)
+        sig = np.sin(2 * np.pi * f * t + mod) * np.exp(-t * decay) * np.minimum(1, t / 0.002)
+        put(sig, at, 0.26 * gain, pan, room=0.4)
+
+    def pad(at, freqs, length):
+        t = span(length)
+        x = np.zeros(len(t))
+        for f in freqs:
+            for det in (-0.004, 0.004):
+                x += sum(np.sin(2 * np.pi * f * (1 + det) * k * t + k) / k for k in range(1, 6))
+        env = np.minimum(1, t / 0.12) * np.clip((length - t) / 0.2, 0, 1)
+        put(x * env / (2 * len(freqs)), at, 0.2, bus=pads, room=0.25)
+
+    def whoosh(at, length=0.28, gain=1.0):
+        t = span(length)
+        x = soften(noise(length), 4) * (t / length) ** 2.2
+        put(x, at - length, 0.18 * gain, room=0.3)
+
+    def impact(at):
+        t = span(1.2)
+        boom = np.sin(2 * np.pi * np.cumsum(38 + 70 * np.exp(-t * 9)) / sr) * np.exp(-t * 3)
+        put(np.tanh(1.6 * boom), at, 0.55)
+        put(soften(noise(1.2, 2), 2) * np.exp(-t * 3.2), at, 0.12, room=0.6)
+
+    # A minor key, four chords, one bar each; the hook is two bars and repeats.
+    root = 2 ** (([57, 58, 59, 60, 61, 62, 64][seed % 7] - 69) / 12) * 440
+    prog_ = ([0, 8, 3, 10], [0, 5, 8, 7], [0, 10, 8, 10], [0, 8, 10, 7], [0, 3, 8, 10])[seed % 5]
+    scale = [0, 3, 5, 7, 10, 12, 15]
+    if style == "reggaeton":
+        slots = [0, 3, 6, 8, 10, 12, 14]
+        keep = 0.62
+    else:
+        slots = [0, 2, 4, 6, 8, 10, 12, 14, 3, 11]
+        keep = 0.5
+    hook = []
+    for b in range(2):
+        for s16 in sorted(set(slots)):
+            if rng.random() < keep:
+                hook.append((b, s16, int(rng.integers(0, len(scale)))))
+    bars = int(dur / bar) + 2
+    rest = max(2, bars // 2)
+    previous = None
     for b in range(bars):
-        start = b * 4 * beat
+        at0 = b * bar
         deg = prog_[b % 4]
-        quality = minor if deg in (0, 5) else major
+        minor = deg in (0, 5) or (deg == 7 and seed % 2)
+        chord = [0, 3, 7, 12] if minor else [0, 4, 7, 12]
         base = root * 2 ** (deg / 12)
-        for k in quality:  # pad
-            note(base * 2 * 2 ** (k / 12), start, 4 * beat, 0.035, "sine", 0, 0.4)
-        for e in range(8):  # bass, eighths
-            note(base / 2, start + e * beat / 2, beat / 2, 0.11, "saw", 0, 9)
-        arp = [quality[i % 3] + 12 * (i // 3) for i in range(6)]
-        rng.shuffle(arp)
-        for s16 in range(16):  # pluck
-            if rng.random() < 0.7:
-                k = arp[s16 % len(arp)]
-                note(base * 4 * 2 ** (k / 12), start + s16 * beat / 4, beat / 2, 0.045, "tri", 0.35 if s16 % 2 else -0.35, 14)
-    kick_env = np.zeros(n)
-    for k in range(int(dur / beat) + 2):
-        i0 = int(k * beat * sr)
-        if i0 >= n:
-            break
-        length = int(0.3 * sr)
-        tt = np.arange(min(length, n - i0)) / sr
-        freq = 45 + 85 * np.exp(-tt * 30)
-        phase = 2 * np.pi * np.cumsum(freq) / sr
-        kick = np.sin(phase) * np.exp(-tt * 9) * 0.55
-        out[i0:i0 + len(tt)] += kick[:, None]
-        kick_env[i0:i0 + len(tt)] = np.maximum(kick_env[i0:i0 + len(tt)], np.exp(-tt * 7))
-        # offbeat hat
-        h0 = i0 + int(beat / 2 * sr)
-        if h0 < n:
-            hl = min(int(0.05 * sr), n - h0)
-            noise = rng.standard_normal(hl)
-            noise = np.diff(noise, prepend=0)
-            out[h0:h0 + hl] += (noise * np.exp(-np.arange(hl) / sr * 70) * 0.05)[:, None]
-    duck = 1 - 0.45 * kick_env
-    out *= duck[:, None]
-    fade_in = np.minimum(1, t / 0.25)
-    fade_out = np.clip((dur - t) / 1.2, 0, 1)
-    out *= (fade_in * fade_out)[:, None]
-    peak = np.max(np.abs(out)) or 1
-    out = out / peak * 0.8
-    data = (out * 32767).astype(np.int16)
+        pad(at0, [base * 2 ** (k / 12) for k in chord], bar)
+        dropped = b == rest
+        if b == rest + 1:
+            impact(at0)
+        if b == rest:
+            whoosh(at0 + bar, bar * 0.9, 1.6)
+        for b2, s16, k in hook:
+            if b2 == b % 2:
+                lead(at0 + s16 * step, root * 2 * 2 ** (scale[k] / 12), step * (3 if style == "trap" else 2.5),
+                     0.85 if dropped else 1.0, (-0.25, 0.25)[s16 % 2])
+        sub = base / 4 if base / 4 > 38 else base / 2
+        if style == "reggaeton":
+            for s16 in (0, 4, 8, 12):
+                if not dropped:
+                    kick(at0 + s16 * step)
+            for s16 in (3, 6, 11, 14):
+                snare(at0 + s16 * step, 0.8 if dropped else 1.0)
+            if b % 2 == 1:
+                clap(at0 + 14 * step, 0.7)
+            for s16 in range(0, 16, 2):
+                hat(at0 + s16 * step + (0.012 if s16 % 4 else 0), 1.0 if s16 % 4 else 0.6)
+            if b % 4 == 3:
+                hat(at0 + 15 * step, 0.8, open_=True, pan=-0.2)
+            if not dropped:
+                hits = (0, 3, 6, 8, 11, 14)
+                for i, s16 in enumerate(hits):
+                    length = ((hits[i + 1] if i + 1 < len(hits) else 16) - s16) * step
+                    up = s16 == 14 and b % 2 == 1
+                    bass(at0 + s16 * step, sub * (2 if up else 1), length, gain=0.9)
+        else:
+            kicks = ((0, 7, 10), (0, 3, 10), (0, 6, 10, 13))[(b + seed) % 3]
+            if not dropped:
+                for s16 in kicks:
+                    kick(at0 + s16 * step, 0.95)
+                for i, s16 in enumerate(kicks):
+                    length = ((kicks[i + 1] if i + 1 < len(kicks) else 16) - s16) * step
+                    f = sub * (2 if (s16 == 10 and b % 2) else 1)
+                    bass(at0 + s16 * step, f, length, slide_from=previous if previous and previous != f else None)
+                    previous = f
+            clap(at0 + 8 * step)
+            snare(at0 + 8 * step, 0.6)
+            roll = b % 2 == 1
+            for s16 in range(0, 16, 2):
+                if roll and s16 >= 12:
+                    continue
+                hat(at0 + s16 * step, 1.0 if s16 % 4 == 0 else 0.7)
+            if roll:
+                # The roll: thirty-seconds, then triplets, into the next bar.
+                for i in range(4):
+                    hat(at0 + 12 * step + i * step / 2, 0.55 + 0.1 * i)
+                for i in range(6):
+                    hat(at0 + 14 * step + i * (2 * step) / 6, 0.6 + 0.06 * i, pan=-0.15)
+    for c in cuts:
+        if 0.3 < c < dur - 0.3:
+            whoosh(c)
+
+    # The room: claps, bells and pads sent through a short decaying tail.
+    m = len(span(1.1))
+    t = span(1.1)
+    wet = np.zeros((n, 2))
+    size = 1 << int(np.ceil(np.log2(n + m)))
+    dry = np.fft.rfft(send, size)
+    for ch in (0, 1):
+        ir = soften(rng.standard_normal(m), 6) * np.exp(-t * 4.2)
+        ir /= np.sqrt(np.sum(ir ** 2)) or 1
+        wet[:, ch] = np.fft.irfft(dry * np.fft.rfft(ir, size), size)[:n] * 0.35
+    # The pads breathe with the kick.
+    mix = out + pads * (1 - 0.55 * side)[:, None] + wet
+    mix -= mix.mean(axis=0)
+    tt = np.arange(n) / sr
+    mix *= (np.minimum(1, tt / 0.05) * np.clip((dur - tt) / 1.2, 0, 1))[:, None]
+    mix = np.tanh(1.25 * mix / (np.max(np.abs(mix)) or 1))
+    mix = mix / (np.max(np.abs(mix)) or 1) * 0.89
+    data = (mix * 32767).astype(np.int16)
     with wave.open(path, "wb") as w:
         w.setnchannels(2)
         w.setsampwidth(2)
