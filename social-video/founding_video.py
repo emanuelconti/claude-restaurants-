@@ -7,9 +7,13 @@
 For the Barcelona venues that signed a letter of intent before SocialPerks
 joined EWorks (the owner, 17 October): explained so that anybody follows it,
 with music and nothing rough. Six parts: the empty hour, the idea, how it
-works in four steps, what the owner sees, what a Founding Partner gets
-(0 € for good, where every other venue pays 49 € a month), and how to start:
-with the QR on the venue's own sheet. Each venue has its own single-use
+works in four steps, what the owner sees, what a Founding Partner gets, and
+how to start: with the QR on the venue's own sheet. The Founding Partner part
+speaks to the owner as a person, not as a customer (the owner, 17 October):
+a gift for trusting us from the start, 0 € for good where everyone else pays
+49 € a month, theirs whether they use it or not; and we make them known
+among Esade's students and the young people of Barcelona. Questions go to
+the owner's WhatsApp, never to an email. Each venue has its own single-use
 sign-up link (socialperks docs/sales/founding-partner), so the video shows
 none: this repository is public.
 
@@ -54,12 +58,16 @@ COPY = {
             ("card", "Qui ha vingut i *de part de qui*.", "results"),
             ("card", "Et preparem les *Stories* i les publicacions.", "content"),
             ("say", "Ho calculem tot perquè et surti *a compte*. El detall costa poc. Aquella hora, si no, estaria buida.", DARK),
-            ("grid", "Per a *qualsevol* local.", ["Restaurants", "Bars", "Cafeteries", "Pizzeries", "Perruqueries", "Gimnasos"]),
+            ("grid", "Per a *qualsevol* local.", ["Restaurants", "Bars", "Cafeteries", "Pizzeries", "Perruqueries", "Tatuatges"]),
             ("chapter", "Founding Partner", "Vas creure en nosaltres *abans que ningú*.", BLUE),
+            ("say", "Per això et volem fer un *regal*.", NIGHT),
             ("compare", ("Els altres locals", "49 €", "al mes"), ("Tu", "0 €", "Per sempre.")),
-            ("facts", "A més a més:", ["Sense targeta", "Sense contracte", "Ho deixes quan vulguis"]),
-            ("say", "Ets un dels primers locals de SocialPerks a Barcelona. I el teu local sortirà al nostre *web*.", NIGHT),
-            ("start", "Comences en *5 minuts*.", ["Escaneja el QR del teu document", "Omple les teves dades", "Posa el teu QR al local"]),
+            ("say", "L'utilitzis o no, és *teu*. Per sempre.", BLUE),
+            ("facts", "Sense lletra petita:", ["Sense targeta", "Sense contracte", "El teu enllaç no caduca"]),
+            ("say", "Volem començar amb gent *com tu*.", NIGHT),
+            ("say", "Et donarem a conèixer entre els *estudiants d'Esade* i la gent jove de Barcelona. I sortiràs al nostre web.", DARK),
+            ("start", "L'actives en *5 minuts*.", ["Escaneja el QR del teu document", "Omple les dades del local", "Posa el teu QR al local"]),
+            ("say", "Dubtes? Escriu-me per *WhatsApp*. Ja tens el meu número.", BLUE),
             ("end", "Registra't *gratis*.", "Amb el QR del teu document.", "Només per al teu local · Sense targeta"),
         ],
     },
@@ -84,12 +92,16 @@ COPY = {
             ("card", "Quién ha venido y *de parte de quién*.", "results"),
             ("card", "Te preparamos las *Stories* y los posts.", "content"),
             ("say", "Lo calculamos todo para que te salga *a cuenta*. El detalle cuesta poco. Esa hora, si no, estaría vacía.", DARK),
-            ("grid", "Para *cualquier* local.", ["Restaurantes", "Bares", "Cafeterías", "Pizzerías", "Peluquerías", "Gimnasios"]),
+            ("grid", "Para *cualquier* local.", ["Restaurantes", "Bares", "Cafeterías", "Pizzerías", "Peluquerías", "Tatuajes"]),
             ("chapter", "Founding Partner", "Creíste en nosotros *antes que nadie*.", BLUE),
+            ("say", "Por eso te queremos hacer un *regalo*.", NIGHT),
             ("compare", ("Los demás locales", "49 €", "al mes"), ("Tú", "0 €", "Para siempre.")),
-            ("facts", "Y además:", ["Sin tarjeta", "Sin contrato", "Lo dejas cuando quieras"]),
-            ("say", "Eres uno de los primeros locales de SocialPerks en Barcelona. Y tu local saldrá en nuestra *web*.", NIGHT),
-            ("start", "Empiezas en *5 minutos*.", ["Escanea el QR de tu documento", "Rellena tus datos", "Pon tu QR en el local"]),
+            ("say", "Lo uses o no, es *tuyo*. Para siempre.", BLUE),
+            ("facts", "Sin letra pequeña:", ["Sin tarjeta", "Sin contrato", "Tu enlace no caduca"]),
+            ("say", "Queremos empezar con gente *como tú*.", NIGHT),
+            ("say", "Te daremos a conocer entre los estudiantes de *Esade* y la gente joven de Barcelona. Y saldrás en nuestra web.", DARK),
+            ("start", "Lo activas en *5 minutos*.", ["Escanea el QR de tu documento", "Rellena los datos del local", "Pon tu QR en el local"]),
+            ("say", "¿Dudas? Escríbeme por *WhatsApp*. Ya tienes mi número.", BLUE),
             ("end", "Regístrate *gratis*.", "Con el QR de tu documento.", "Solo para tu local · Sin tarjeta"),
         ],
     },
@@ -221,7 +233,7 @@ def scene_card(text, sprite, pal, dur=7.4):
 def scene_grid(text, labels, dur=6.6):
     back = D.Backdrop(PAPER)
     words, top = K.headline(text, PAPER, size=110, max_h=300, align="center")
-    names = ["place-restaurant.jpg", "place-bar.jpg", "place-cafe.jpg", "place-pizzeria.jpg", "place-salon.jpg", "place-gym.jpg"]
+    names = ["place-restaurant.jpg", "place-bar.jpg", "place-cafe.jpg", "place-pizzeria.jpg", "place-salon.jpg", "place-tattoo.jpg"]
     tw, th, gap = 400, 380, 34
     tiles = [tile(n, tw, th, lab) for n, lab in zip(names, labels)]
     y0 = top + words.height + 70
