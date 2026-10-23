@@ -135,7 +135,7 @@ HOOKS = [
     ("Lo más publicado de Instagram sale de *tu silla*.", "The most posted thing on Instagram comes out of *your chair*.", CHAIRS),
     ("Tu cliente ya hizo la foto. Solo faltaba *el enlace*.", "Your client already took the photo. It just needed *a link*.", None),
     ("Los influencers cobran. Tus clientes, *{gift}*.", "Influencers charge fees. Your clients take *{gift}*.", None),
-    ("Si no llegan clientes nuevos, *te devolvemos el mes*.", "No new clients? *We refund the month.*", None),
+    ("¿No llega ningún cliente nuevo? *A nosotros no nos pagas nada.*", "No new clients? *You pay us nothing.*", None),
     ("Esto no es una tarjeta de puntos. *Nadie quiere más puntos.*", "This isn't a points card. *Nobody wants more points.*", None),
     ("Tu agenda tiene huecos. Los amigos de tus clientes, *tiempo libre*.", "Your diary has gaps. Your clients' friends have *free time*.", APPOINTMENTS),
     ("El algoritmo no te quiere. *La amiga de tu clienta, sí.*", "The algorithm doesn't love you. *Your client's best friend does.*", None),
@@ -153,9 +153,15 @@ PUNCHES = [
     ("Sin anuncios. Sin descuentos. *Con amigos.*", "No ads. No discounts. *Just friends.*"),
 ]
 
+# The price as SocialPerks charges it since 20 October (results-2026-10-19):
+# nothing fixed, a capped fee only on a new client's first eligible paid visit.
+# Never "5% per customer" without its conditions; the old free week and refund
+# guarantee are gone and must not come back in a video.
 CTA = {
-    "es": dict(site="socialperkses.com", free="Primera semana gratis", guarantee="Menos de 3 clientes nuevos al mes: te devolvemos el mes."),
-    "en": dict(site="socialperkses.com", free="First week free", guarantee="Fewer than 3 new clients a month: we refund the month."),
+    "es": dict(site="socialperkses.com", free="Sin cuota mensual",
+               terms="Solo pagas por clientes nuevos que pagan: hasta un 5 % de su primera visita, como máximo 3 €."),
+    "en": dict(site="socialperkses.com", free="No monthly fee",
+               terms="You only pay for new clients who pay: up to 5% of their first visit, at most €3."),
 }
 
 PLURAL_ES = {"lunes": "lunes", "martes": "martes", "miércoles": "miércoles", "jueves": "jueves", "viernes": "viernes", "sábado": "sábados", "domingo": "domingos"}
@@ -183,7 +189,7 @@ def episode(date: _dt.date) -> dict:
             break
     punch = PUNCHES[(n * 3) % len(PUNCHES)]
     return dict(n=n, date=date.isoformat(), category=category, format=fmt, hook=dict(es=es, en=en),
-                punch=dict(es=punch[0], en=punch[1]), palette=(n * 2) % 5, guarantee=n % 2 == 0,
+                punch=dict(es=punch[0], en=punch[1]), palette=(n * 2) % 5,
                 seed=n)
 
 

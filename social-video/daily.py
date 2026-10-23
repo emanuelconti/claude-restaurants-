@@ -1005,9 +1005,8 @@ def scene_cta(ctx: Ctx, dur: float):
     cta = E.CTA[ctx.lang]
     site = text_sprite(cta["site"], 92, 800, DISPLAY, pal["fg"])
     free = pill(cta["free"], 48, pal["hl_text"], pal["hl"] + (255,), weight=800)
-    g = None
-    if ctx.ep["guarantee"]:
-        g = Words(cta["guarantee"], 48, 38, TEXT_W - 80, 220, weight=600, path=BODY, color=pal["sub"], align="center")
+    # The terms every day: a price said without its conditions would oversell it.
+    g = Words(cta["terms"], 46, 36, TEXT_W - 80, 240, weight=600, path=BODY, color=pal["sub"], align="center")
 
     def draw(t):
         fr = back.frame(t + 13)
@@ -1018,8 +1017,7 @@ def scene_cta(ctx: Ctx, dur: float):
         pf = ease_back(prog(t, 0.6, 0.4))
         if pf > 0:
             paste_scaled(fr, free, W / 2, 1060, 0.6 + 0.4 * pf, clamp(pf * 2))
-        if g is not None:
-            g.draw(fr, LEFT + 40, 1170, t, start=0.95, stagger=0.03, style="rise")
+        g.draw(fr, LEFT + 40, 1170, t, start=0.95, stagger=0.03, style="rise")
         return fr
     return dur, draw
 
@@ -1354,11 +1352,9 @@ def caption(ep) -> str:
         hook = E.fill(ep["hook"][lang], cat, lang).replace("*", "")
         punch = E.fill(ep["punch"][lang], cat, lang).replace("*", "")
         cta = E.CTA[lang]
-        line = ("Prueba gratis una semana: socialperkses.com" if lang == "es" else "Try it free for a week: socialperkses.com")
+        line = f"{cta['free']}. {cta['terms']} {cta['site']}"
         tags = c["tags"] + (" #bocaaboca #marketinglocal #emprendedores" if lang == "es" else " #wordofmouth #localmarketing #entrepreneur")
         parts = [hook, punch, line]
-        if ep["guarantee"]:
-            parts.insert(2, cta["guarantee"])
         out.append(("ESPAÑOL" if lang == "es" else "ENGLISH") + "\n\n" + "\n\n".join(parts) + "\n\n" + tags)
     return "\n\n-----\n\n".join(out) + "\n"
 
