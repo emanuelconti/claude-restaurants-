@@ -106,8 +106,10 @@ PLACES = {
 }
 
 # Appointment businesses come up more often: they are who we sell to first.
+# Nails once in the cycle and hotels twice (the owner, 23 October: hotels up
+# front, fewer nails).
 CATEGORY_ROTATION = [
-    "barber", "salon", "gym", "cafe", "nails", "tattoo_studio", "wellness", "barber",
+    "barber", "salon", "gym", "cafe", "hotel", "tattoo_studio", "wellness", "barber",
     "restaurant", "salon", "physio", "bar", "nails", "gym", "cocktail_bar", "tattoo_studio",
     "pizzeria", "salon", "hotel", "brunch", "barber", "ice_cream",
 ]
@@ -143,6 +145,12 @@ HOOKS = [
     ("¿Cuánto vale una recomendación? *Menos que un café.*", "What's a recommendation worth? *Less than a coffee.*", None),
     ("Ya tienes clientes que te adoran. *Úsalo.*", "You already have clients who love you. *Use it.*", None),
     ("Un flyer acaba en la basura. *Una Story, en 600 móviles.*", "A flyer ends up in the bin. *A Story lands on 600 phones.*", None),
+    # The rule since 0124 (the owner, 24 October): nothing for a post, the
+    # gifts follow a friend checked at the counter, and levels for whoever
+    # brings friends (socialperks levels.ts).
+    ("Una Story borrada *no cambia nada*. Contamos personas, no posts.", "A deleted Story *changes nothing*. We count people, not posts.", None),
+    ("Por publicar no se gana nada. *Por traer a un amigo, sí.*", "Posting earns nothing. *Bringing a friend does.*", None),
+    ("Cinco amigos que vienen de verdad: *tu cliente es Ambassador*.", "Five friends who really come: *your client is an Ambassador*.", None),
 ]
 
 PUNCHES = [
@@ -151,6 +159,7 @@ PUNCHES = [
     ("Un regalo pequeño. *Amigos de verdad.*", "A small gift. *Real friends.*"),
     ("Llena tus horas flojas con *los amigos de tus clientes*.", "Fill your quiet hours with *your clients' friends*."),
     ("Sin anuncios. Sin descuentos. *Con amigos.*", "No ads. No discounts. *Just friends.*"),
+    ("Cada amigo que viene, *un regalo para quien lo trajo*.", "Every friend who comes earns *a thank-you for whoever brought them*."),
 ]
 
 # The price as SocialPerks charges it since 20 October (results-2026-10-19):
