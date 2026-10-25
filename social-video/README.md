@@ -2,7 +2,7 @@
 
 Every morning a new short video for SocialPerks' own social profile (Instagram Reels, TikTok, Shorts). Each day is different: a different kind of place, a different format, a different opening line and colours. The lines provoke and sound like a person. The photos are what customers really post from each kind of place, the same as on socialperkses.com.
 
-Every video also explains the whole idea in about 30 seconds, so someone who has never heard of SocialPerks gets it: the hour that does not fill, the small gift put on it (1), the customer who shares a Story or sends a message (2), the friend who comes in and shows a code at the counter (3), and why a Story and a message are different with the same link.
+Every video also explains the whole idea in about 15 seconds, so someone who has never heard of SocialPerks gets it: the hour that does not fill, the small gift put on it (1), the customer who shares a Story or sends a message (2), the friend who comes in and shows a code at the counter (3), and why a Story and a message are different with the same link.
 
 ```bash
 python3 social-video/daily.py                    # today (Madrid time), Spanish and English
@@ -12,7 +12,7 @@ python3 social-video/daily.py --lang es          # one language
 
 Under `social-video/out/<date>/` it writes:
 
-- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 30 to 34 seconds, with an original synthesised beat, reggaeton or Latin trap on alternate days, and every cut on the beat. A famous song goes on top from the app's own music library (the page says how), never inside the file.
+- `socialperks-<date>-es.mp4` and `-en.mp4`: 1080x1920, 30 fps, H.264 + AAC, 14 to 17 seconds, cut fast: every scene at about twice its written speed, cuts on a 120 BPM grid alternating a whip pan and a punch-in, a slow push on every frame. No music in the file, only a whoosh into each cut: the trending sound goes on top from the app's own library (the page says how). `--music` puts the original reggaeton or Latin trap beat back in.
 - a cover JPEG per language;
 - `caption.txt`: the text to paste under the post, in both languages, with hashtags.
 

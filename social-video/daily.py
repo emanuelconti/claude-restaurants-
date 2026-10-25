@@ -6,7 +6,7 @@
     python3 daily.py --lang es --out /tmp/videos
 
 Writes, under --out/<date>/: socialperks-<date>-<lang>.mp4 (1080x1920, 30 fps,
-H.264 and AAC, 30 to 34 seconds), a cover JPEG per language and caption.txt
+H.264 and AAC, 14 to 17 seconds), a cover JPEG per language and caption.txt
 with the text to paste under the post in both languages.
 
 Every video explains the whole idea, whatever the day's format: the hour that
@@ -15,10 +15,14 @@ sends a message, the friend who comes in and shows a code at the counter, and
 what that brought. The format decides the opening and the order around it.
 
 What it says comes from episodes.py. Everything is drawn here with Pillow,
-frame by frame from the time alone, and encoded with ffmpeg; the music is
-an original reggaeton or Latin trap beat synthesised from the date, and every
-cut lands on its beat. Nothing to install beyond Python 3 with Pillow and
-numpy, and ffmpeg: the daily run starts in a fresh machine.
+frame by frame from the time alone, and encoded with ffmpeg. The pace is the
+apps' own (the owner, 25 October: faster, more dynamic, "la gente vuole
+dinamismo"): every scene plays at about twice its old speed, cuts fall on a
+120 BPM grid, the frame never stands still, and each cut whips or punches in.
+There is no music in the file, only a whoosh into each cut: the owner adds
+the trending sound in Instagram or TikTok. `--music` puts the original beat
+back. Nothing to install beyond Python 3 with Pillow and numpy, and ffmpeg:
+the daily run starts in a fresh machine.
 """
 
 from __future__ import annotations
@@ -507,9 +511,12 @@ def scene_hook(ctx: Ctx, text: str, eyebrow: str | None, dur: float, pal=None):
         if brow:
             p = ease_out(prog(t, 0.0, 0.4))
             paste(fr, brow, LEFT, oy - 110 + (1 - p) * 30, p)
-        words.draw(fr, LEFT, oy, t, start=0.15, stagger=min(0.09, 1.1 / max(1, len(words.items))))
+        # The first word is on screen from the first frame: a feed gives a
+        # video half a second.
+        words.draw(fr, LEFT, oy, t, start=0.0, stagger=min(0.09, 1.1 / max(1, len(words.items))))
         return fr
     draw.branded = True  # the watermark goes on the drawn scenes only
+    draw.kind = "hook"
     return dur, draw
 
 
@@ -995,6 +1002,7 @@ def scene_punch(ctx: Ctx, text: str, dur: float, pal=None):
         words.draw(fr, LEFT, oy, t, start=0.05, stagger=0.06, style="rise")
         return fr
     draw.branded = True  # the watermark goes on the drawn scenes only
+    draw.kind = "punch"
     return dur, draw
 
 
@@ -1019,18 +1027,44 @@ def scene_cta(ctx: Ctx, dur: float):
             paste_scaled(fr, free, W / 2, 1060, 0.6 + 0.4 * pf, clamp(pf * 2))
         g.draw(fr, LEFT + 40, 1170, t, start=0.95, stagger=0.03, style="rise")
         return fr
+    draw.kind = "cta"
     return dur, draw
 
 
+# How much faster than written each kind of scene plays. The hook and the
+# address are read, so they go a little slower than the rest.
+PACE = dict(hook=1.55, punch=1.7, cta=1.45)
+QUICK = 2.0
+# Cuts land on a 120 BPM grid, the tempo most trending sounds sit near, so
+# the owner's sound lines up with them without editing.
+GRID = 0.25
+
+
+def quick(scene):
+    d, draw = scene
+    k = PACE.get(getattr(draw, "kind", ""), QUICK)
+
+    def fast(t):
+        return draw(t * k)
+    fast.branded = getattr(draw, "branded", False)
+    fast.kind = getattr(draw, "kind", "")
+    return max(1.0, round(d / k / GRID) * GRID), fast
+
+
 def timeline(ctx: Ctx):
-    """30 to 34 seconds. The day's format opens it; the middle always explains the
+    """14 to 17 seconds. The day's format opens it; the middle always explains the
     whole idea in order (the quiet hour, the gift on it, the share, the visit,
-    Story or message), so a viewer who knows nothing about SocialPerks gets it."""
+    Story or message), so a viewer who knows nothing about SocialPerks gets it.
+    Each scene is written at its old, calm length and played fast (quick())."""
     ep = ctx.ep
     hook = ep["hook"][ctx.lang]
     punch = ep["punch"][ctx.lang]
     eyebrow = ctx.t(f"Si tienes {ctx.c['place']}:", f"If you run a {ctx.c['place']}:")
     f = ep["format"]
+    return [quick(scene) for scene in _story(ctx, ep, hook, punch, eyebrow, f)]
+
+
+def _story(ctx, ep, hook, punch, eyebrow, f):
     problem = scene_pov_setup(ctx, 3.2)
     offer = scene_offer(ctx, 4.6)
     share = scene_chat(ctx, 5.8) if f == "chat" else scene_story(ctx, 3.6)
@@ -1059,14 +1093,56 @@ def watermark(ctx: Ctx) -> Image.Image:
     return im
 
 
-def render(ep, lang, out_path, cover_path, cache):
+def push(fr: Image.Image, z: float) -> Image.Image:
+    """The frame, z times closer, from its middle."""
+    if z <= 1.0005:
+        return fr
+    cw, ch = W / z, H / z
+    return fr.crop((int((W - cw) / 2), int((H - ch) / 2), int((W + cw) / 2), int((H + ch) / 2))).resize((W, H), Image.BILINEAR)
+
+
+def smear(fr: Image.Image, amount: float) -> Image.Image:
+    """Motion blur across, the cheap way: squeezed thin and stretched back."""
+    if amount <= 0.02:
+        return fr
+    thin = fr.resize((max(8, int(W / (1 + 30 * amount))), H), Image.BILINEAR).resize((W, H), Image.BILINEAR)
+    return Image.blend(fr, thin, min(1.0, amount * 1.6))
+
+
+WHIP = 0.2   # a whip pan between two scenes, in seconds
+PUNCH = 0.18  # a punch-in on a cut
+
+
+def transition(k: int, local: float, fr: Image.Image, last: Image.Image | None) -> Image.Image:
+    """Cuts alternate as an editor's do: a whip pan out of the last scene, then a punch-in."""
+    if k == 0 or last is None:
+        return fr
+    if k % 2 == 1 and local < WHIP:
+        p = ease_in_out(local / WHIP)
+        canvas = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+        canvas.alpha_composite(last, (int(-W * p), 0))
+        canvas.alpha_composite(fr, (int(W * (1 - p)), 0))
+        return smear(canvas, math.sin(math.pi * p))
+    if k % 2 == 0 and local < PUNCH:
+        q = local / PUNCH
+        fr = push(fr, 1 + 0.14 * (1 - ease_out(q)))
+        flash = int(110 * (1 - q))
+        if flash > 0:
+            fr.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, flash)))
+    return fr
+
+
+def render(ep, lang, out_path, cover_path, cache, with_music=False):
     ctx = Ctx(ep, lang, cache)
-    scenes = on_beat(timeline(ctx), ep["seed"])
+    scenes = timeline(ctx)
     total = sum(d for d, _ in scenes)
     frames = int(round(total * FPS))
     wav = out_path[:-4] + ".wav"
     cuts = np.cumsum([d for d, _ in scenes])[:-1]
-    music(ep["seed"], total, wav, cuts=cuts)
+    if with_music:
+        music(ep["seed"], total, wav, cuts=cuts)
+    else:
+        whooshes(ep["seed"], total, wav, cuts=cuts)
     mk = watermark(ctx)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-i", wav, "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-profile:v", "high",
@@ -1078,23 +1154,24 @@ def render(ep, lang, out_path, cover_path, cache):
         starts.append(acc)
         acc += d
     best = None
+    last = None  # the previous scene's last frame, for the whip
+    prev_k = 0
+    held = None
     for i in range(frames):
         t = i / FPS
         k = max(j for j, s in enumerate(starts) if s <= t + 1e-9)
+        if k != prev_k:
+            last, prev_k = held, k
         local = t - starts[k]
-        fr = scenes[k][1](local)
-        # A cut lands with a small punch-in, the way edits on these apps do.
-        if k > 0 and local < 0.2:
-            z = 1 + 0.05 * (1 - ease_out(local / 0.2))
-            cw, ch = W / z, H / z
-            fr = fr.crop((int((W - cw) / 2), int((H - ch) / 2), int((W + cw) / 2), int((H + ch) / 2))).resize((W, H), Image.BILINEAR)
-            flash = int(90 * (1 - local / 0.2))
-            if flash > 0:
-                fr.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, flash)))
+        d = scenes[k][0]
+        # The frame never stands still: every scene drifts in a little.
+        fr = push(scenes[k][1](local), 1 + 0.04 * ease_in_out(local / d))
+        held = fr.copy()  # the watermark goes on after, so the whip carries none
+        fr = transition(k, local, fr, last)
         if getattr(scenes[k][1], "branded", False):
             paste(fr, mk, LEFT, H - 250, 0.9)
         rgb = fr.convert("RGB")
-        if best is None and k == 0 and local >= min(2.2, scenes[0][0] - 0.3):
+        if best is None and k == 0 and local >= min(1.2, d - 0.2):
             best = rgb.copy()
         proc.stdin.write(rgb.tobytes())
     proc.stdin.close()
@@ -1105,6 +1182,58 @@ def render(ep, lang, out_path, cover_path, cache):
     return total
 
 
+def whooshes(seed: int, dur: float, path: str, sr: int = 44100, cuts=()):
+    """No music: the owner puts the trending sound on in the app. Under it, a
+    whoosh into each cut and a low hit on the first frame and on the address,
+    the sounds an editor lays under a fast edit. Quiet enough to sit under a
+    song, there if the song is left off."""
+    rng = np.random.default_rng(9000 + seed)
+    n = int((dur + 0.3) * sr)
+    out = np.zeros((n, 2))
+
+    def put(sig, at, pan=0.0):
+        i0 = int(round(at * sr))
+        if i0 >= n:
+            return
+        i0 = max(0, i0)
+        sig = sig[: n - i0]
+        out[i0:i0 + len(sig), 0] += sig * (1 - pan)
+        out[i0:i0 + len(sig), 1] += sig * (1 + pan)
+
+    def whoosh(length):
+        m = int(length * sr)
+        x = rng.standard_normal(m)
+        t = np.arange(m) / m
+        # A one-pole low-pass that opens and closes: air rushing past.
+        cut = 0.02 + 0.33 * np.sin(np.pi * t) ** 2
+        y = np.zeros(m)
+        acc = 0.0
+        for j in range(m):
+            acc += cut[j] * (x[j] - acc)
+            y[j] = acc
+        env = np.sin(np.pi * t) ** 1.6
+        return y * env / (np.max(np.abs(y * env)) or 1)
+
+    def hit(length=0.6):
+        t = np.arange(int(length * sr)) / sr
+        f = 42 + 90 * np.exp(-t * 18)
+        body = np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-t * 6)
+        return np.tanh(2.2 * body)
+
+    put(hit(), 0.0)
+    for j, c in enumerate(cuts):
+        put(whoosh(0.32) * 0.55, c - 0.2, pan=0.35 if j % 2 else -0.35)
+    if len(cuts):
+        put(hit() * 0.8, cuts[-1])
+    out *= 0.6 / (np.max(np.abs(out)) or 1)
+    data = (out * 32767).astype(np.int16)
+    with wave.open(path, "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes(data.tobytes())
+
+
 # ----------------------------------------------------------------- music
 
 def groove(seed: int) -> tuple[str, float]:
@@ -1112,12 +1241,6 @@ def groove(seed: int) -> tuple[str, float]:
     if seed % 2 == 0:
         return "reggaeton", (90.0, 92.0, 94.0, 96.0, 98.0)[(seed // 2) % 5]
     return "trap", (130.0, 134.0, 138.0, 142.0, 144.0)[(seed // 2) % 5]
-
-
-def on_beat(scenes, seed):
-    """Each scene to the nearest whole beat, never under two, so every cut lands on the beat as edits to music do."""
-    beat = 60 / groove(seed)[1]
-    return [(max(2 * beat, round(d / beat) * beat), draw) for d, draw in scenes]
 
 
 def music(seed: int, dur: float, path: str, sr: int = 44100, cuts=()):
@@ -1365,6 +1488,7 @@ def main():
     ap.add_argument("--lang", default="es,en")
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--cache", default=os.path.join(HERE, ".cache"))
+    ap.add_argument("--music", action="store_true", help="put the original beat in the file (by default the owner adds a trending sound in the app)")
     args = ap.parse_args()
     if args.date:
         day = dt.date.fromisoformat(args.date)
@@ -1381,7 +1505,7 @@ def main():
     for lang in [x.strip() for x in args.lang.split(",") if x.strip()]:
         video = os.path.join(folder, f"socialperks-{ep['date']}-{lang}.mp4")
         cover_path = os.path.join(folder, f"socialperks-{ep['date']}-{lang}-cover.jpg")
-        total = render(ep, lang, video, cover_path, args.cache)
+        total = render(ep, lang, video, cover_path, args.cache, with_music=args.music)
         print(f"  {lang}: {video} ({total:.1f} s, {os.path.getsize(video) / 1e6:.1f} MB)")
     with open(os.path.join(folder, "caption.txt"), "w") as f:
         f.write(caption(ep))
