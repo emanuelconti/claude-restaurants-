@@ -159,7 +159,7 @@ PUNCHES = [
     ("Un regalo pequeño. *Amigos de verdad.*", "A small gift. *Real friends.*"),
     ("Llena tus horas flojas con *los amigos de tus clientes*.", "Fill your quiet hours with *your clients' friends*."),
     ("Sin anuncios. Sin descuentos. *Con amigos.*", "No ads. No discounts. *Just friends.*"),
-    ("Cada amigo que viene, *un regalo para quien lo trajo*.", "Every friend who comes earns *a thank-you for whoever brought them*."),
+    ("Cada amigo que viene, *un premio para quien lo trajo*.", "Every friend who comes earns *a reward for whoever brought them*."),
 ]
 
 # The price as SocialPerks charges it since 20 October (results-2026-10-19):
