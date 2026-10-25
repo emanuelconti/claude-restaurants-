@@ -151,6 +151,12 @@ HOOKS = [
     ("Una Story borrada *no cambia nada*. Contamos personas, no posts.", "A deleted Story *changes nothing*. We count people, not posts.", None),
     ("Por publicar no se gana nada. *Por traer a un amigo, sí.*", "Posting earns nothing. *Bringing a friend does.*", None),
     ("Cinco amigos que vienen de verdad: *tu cliente es Ambassador*.", "Five friends who really come: *your client is an Ambassador*.", None),
+    # 25 October: the reward for whoever brings a friend is the venue's own
+    # (0130), and the niches that lead (docs: niche by niche).
+    ("Quien trae a un amigo se lleva *un extra de la casa*. Tú eliges cuál.", "Whoever brings a friend gets *a little extra of the house*. You pick it.", None),
+    ("Una plataforma se queda el 35% de tu cliente nuevo. *Aquí, 1,50 €.*", "A marketplace keeps 35% of your new client. *Here, €1.50.*", {"salon", "nails", "wellness"}),
+    ("Trae a alguien: *tú, la toalla caliente*; quien viene, la barba.", "Bring someone: *you get the hot towel*, they get the beard trim.", {"barber"}),
+    ("Booking se queda hasta 40 € de una estancia. *Aquí, 3 €.*", "Booking keeps up to €40 of a stay. *Here, €3.*", {"hotel"}),
 ]
 
 PUNCHES = [
