@@ -6,7 +6,7 @@
     python3 daily.py --lang es --out /tmp/videos
 
 Writes, under --out/<date>/: socialperks-<date>-<lang>.mp4 (1080x1920, 30 fps,
-H.264 and AAC, 14 to 17 seconds), a cover JPEG per language and caption.txt
+H.264 and AAC, 19 to 23 seconds), a cover JPEG per language and caption.txt
 with the text to paste under the post in both languages.
 
 Every video explains the whole idea, whatever the day's format: the hour that
@@ -17,8 +17,9 @@ what that brought. The format decides the opening and the order around it.
 What it says comes from episodes.py. Everything is drawn here with Pillow,
 frame by frame from the time alone, and encoded with ffmpeg. The pace is the
 apps' own (the owner, 25 October: faster, more dynamic, "la gente vuole
-dinamismo"): every scene plays at about twice its old speed, cuts fall on a
-120 BPM grid, the frame never stands still, and each cut whips or punches in.
+dinamismo"): words and cards land at twice their old speed, each scene
+then holds just long enough to be read, cuts fall on a 120 BPM grid, the
+frame never stands still, and each cut whips or punches in.
 There is no music in the file, only a whoosh into each cut: the owner adds
 the trending sound in Instagram or TikTok. `--music` puts the original beat
 back. Nothing to install beyond Python 3 with Pillow and numpy, and ffmpeg:
@@ -1031,10 +1032,15 @@ def scene_cta(ctx: Ctx, dur: float):
     return dur, draw
 
 
-# How much faster than written each kind of scene plays. The hook and the
-# address are read, so they go a little slower than the rest.
-PACE = dict(hook=1.55, punch=1.7, cta=1.45)
+# How much faster than written each scene's words and cards land: snappy,
+# the apps' pace. And how much shorter than written each scene stays, which
+# is less: once it has landed the frame holds, still moving, long enough to
+# be read (the owner, 25 October, on 15 seconds: "va capito"). About 21
+# seconds in all.
+PACE = dict(hook=1.6, punch=1.8, cta=1.6)
 QUICK = 2.0
+LENGTH = dict(hook=1.25, punch=1.35, cta=1.3)
+SHORTER = 1.5
 # Cuts land on a 120 BPM grid, the tempo most trending sounds sit near, so
 # the owner's sound lines up with them without editing.
 GRID = 0.25
@@ -1042,17 +1048,18 @@ GRID = 0.25
 
 def quick(scene):
     d, draw = scene
-    k = PACE.get(getattr(draw, "kind", ""), QUICK)
+    kind = getattr(draw, "kind", "")
+    k = PACE.get(kind, QUICK)
 
     def fast(t):
         return draw(t * k)
     fast.branded = getattr(draw, "branded", False)
-    fast.kind = getattr(draw, "kind", "")
-    return max(1.0, round(d / k / GRID) * GRID), fast
+    fast.kind = kind
+    return max(1.5, round(d / LENGTH.get(kind, SHORTER) / GRID) * GRID), fast
 
 
 def timeline(ctx: Ctx):
-    """14 to 17 seconds. The day's format opens it; the middle always explains the
+    """19 to 23 seconds. The day's format opens it; the middle always explains the
     whole idea in order (the quiet hour, the gift on it, the share, the visit,
     Story or message), so a viewer who knows nothing about SocialPerks gets it.
     Each scene is written at its old, calm length and played fast (quick())."""
