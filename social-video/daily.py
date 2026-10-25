@@ -6,7 +6,7 @@
     python3 daily.py --lang es --out /tmp/videos
 
 Writes, under --out/<date>/: socialperks-<date>-<lang>.mp4 (1080x1920, 30 fps,
-H.264 and AAC, 19 to 23 seconds), a cover JPEG per language and caption.txt
+H.264 and AAC, 25 to 29 seconds), a cover JPEG per language and caption.txt
 with the text to paste under the post in both languages.
 
 Every video explains the whole idea, whatever the day's format: the hour that
@@ -17,8 +17,9 @@ what that brought. The format decides the opening and the order around it.
 What it says comes from episodes.py. Everything is drawn here with Pillow,
 frame by frame from the time alone, and encoded with ffmpeg. The pace is the
 apps' own (the owner, 25 October: faster, more dynamic, "la gente vuole
-dinamismo"): words and cards land at twice their old speed, each scene
-then holds just long enough to be read, cuts fall on a 120 BPM grid, the
+dinamismo"; then, on 15 and 21 seconds, "va capito"): words and cards
+land half again as fast as they used to, each scene then holds long enough
+to be read, cuts fall on a 120 BPM grid, the
 frame never stands still, and each cut whips or punches in.
 There is no music in the file, only a whoosh into each cut: the owner adds
 the trending sound in Instagram or TikTok. `--music` puts the original beat
@@ -587,11 +588,17 @@ def code_card(ctx: Ctx) -> Image.Image:
     card = rounded((cw, ch), 56, WHITE + (255,))
     d = ImageDraw.Draw(card)
     d.text((56, 44), ctx.t("Código en el mostrador", "Code at the counter"), font=font(36, 600, BODY), fill=(96, 96, 108))
-    f = font(116, 800, DISPLAY)
-    code = "482 917"
+    # The code as the product shows it: six letters and digits (presence.ts).
+    code = "K7M Q4X"
+    size = 116
+    while True:
+        f = font(size, 800, DISPLAY)
+        if 56 + sum(f.getlength(c) + (10 if c != " " else 18) for c in code) <= cw - 56 - 2 * 46 - 24 or size <= 80:
+            break
+        size -= 4
     x = 56
     for ch_ in code:
-        d.text((x, 104), ch_, font=f, fill=INK)
+        d.text((x, 104 + (116 - size) // 2), ch_, font=f, fill=INK)
         x += f.getlength(ch_) + (10 if ch_ != " " else 18)
     r = 46
     cx, cy = cw - 56 - r, 170
@@ -793,11 +800,11 @@ def notification(ctx: Ctx, body: str) -> Image.Image:
     card = rounded((nw, nh), 44, (250, 250, 252, 236))
     card.alpha_composite(mark(84), (32, 32))
     d = ImageDraw.Draw(card)
-    d.text((140, 30), "SocialPerks", font=font(34, 800, BODY), fill=INK)
+    d.text((140, 28), "SocialPerks", font=font(36, 800, BODY), fill=INK)
     now = ctx.t("ahora", "now")
     fn = font(30, 500, BODY)
     d.text((nw - 36 - fn.getlength(now), 32), now, font=fn, fill=(120, 120, 130))
-    d.text((140, 80), body, font=font(40, 600, BODY), fill=INK)
+    d.text((140, 78), body, font=font(44, 600, BODY), fill=INK)
     return shadowed(card, blur=20, offset=10, opacity=80)
 
 
@@ -972,8 +979,10 @@ def scene_two_ways(ctx: Ctx, dur: float):
     """A Story and a message are different things, with the same link: who sees each, and what the friend does."""
     pal = ctx.alt
     back = Backdrop(pal)
+    # Two lines at most, so the cards under it never move into the bottom third.
     title = Words(ctx.t("Story o mensaje: *el mismo enlace.*", "Story or message: *the same link.*"),
-                  110, 72, TEXT_W, 360, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
+                  110, 72, TEXT_W, 250, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"], max_lines=2)
+    top = 330 + title.height + 50
     story, message = way_card(ctx, True), way_card(ctx, False)
     foot = Words(ctx.t("Quien lo abre reserva *tu hora floja* en un toque.", "Whoever opens it books *your quiet hour* in one tap."),
                  62, 44, TEXT_W, 260, weight=700, path=BODY, color=pal["fg"], hl=pal["hl"], hl_text=pal["hl_text"])
@@ -985,10 +994,11 @@ def scene_two_ways(ctx: Ctx, dur: float):
             p = ease_out(prog(t, at, 0.5))
             if p > 0:
                 x = (W - card.width) / 2 + side * (1 - p) * 220
-                paste(fr, card, x, 760 + k * 340 - 40, p)
-        foot.draw(fr, LEFT, 1500, t, start=2.1, stagger=0.05, style="rise")
+                paste(fr, card, x, top - 40 + k * 320, p)
+        # Above the bottom third, where a Reel's caption and buttons sit.
+        foot.draw(fr, LEFT, top + 690, t, start=2.1, stagger=0.05, style="rise")
         return fr
-    draw.branded = False  # the foot line sits where the watermark would
+    draw.branded = True  # the watermark goes on the drawn scenes only
     return dur, draw
 
 
@@ -1032,15 +1042,16 @@ def scene_cta(ctx: Ctx, dur: float):
     return dur, draw
 
 
-# How much faster than written each scene's words and cards land: snappy,
-# the apps' pace. And how much shorter than written each scene stays, which
-# is less: once it has landed the frame holds, still moving, long enough to
-# be read (the owner, 25 October, on 15 seconds: "va capito"). About 21
-# seconds in all.
-PACE = dict(hook=1.6, punch=1.8, cta=1.6)
-QUICK = 2.0
-LENGTH = dict(hook=1.25, punch=1.35, cta=1.3)
-SHORTER = 1.5
+# How much faster than written each scene's words and cards land, and how
+# much shorter than written each scene stays. The owner, 25 October: 32
+# seconds was slow, 15 too quick to be understood, 21 still "troppo
+# veloce". So the words land half again as fast as written, and each scene
+# holds a little less than written: about 27 seconds in all, every cut
+# still a whip or a punch.
+PACE = dict(hook=1.3, punch=1.4, cta=1.3)
+QUICK = 1.5
+LENGTH = dict(hook=1.0, punch=1.1, cta=1.05)
+SHORTER = 1.15
 # Cuts land on a 120 BPM grid, the tempo most trending sounds sit near, so
 # the owner's sound lines up with them without editing.
 GRID = 0.25
@@ -1059,7 +1070,7 @@ def quick(scene):
 
 
 def timeline(ctx: Ctx):
-    """19 to 23 seconds. The day's format opens it; the middle always explains the
+    """25 to 29 seconds. The day's format opens it; the middle always explains the
     whole idea in order (the quiet hour, the gift on it, the share, the visit,
     Story or message), so a viewer who knows nothing about SocialPerks gets it.
     Each scene is written at its old, calm length and played fast (quick())."""
@@ -1175,8 +1186,11 @@ def render(ep, lang, out_path, cover_path, cache, with_music=False):
         fr = push(scenes[k][1](local), 1 + 0.04 * ease_in_out(local / d))
         held = fr.copy()  # the watermark goes on after, so the whip carries none
         fr = transition(k, local, fr, last)
+        # The mark sits top right, just under the Reel's own header: never
+        # in the bottom third that the caption and buttons cover, never on
+        # the step chips at the top left.
         if getattr(scenes[k][1], "branded", False):
-            paste(fr, mk, LEFT, H - 250, 0.9)
+            paste(fr, mk, W - LEFT - mk.width, 190, 0.9)
         rgb = fr.convert("RGB")
         if best is None and k == 0 and local >= min(1.2, d - 0.2):
             best = rgb.copy()
