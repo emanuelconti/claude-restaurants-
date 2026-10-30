@@ -4,16 +4,20 @@ A carousel is the other post of the day, next to the video: a list that
 owners of small local businesses want to read, save and send to a friend
 who also runs one, in the style the owner pointed at on 30 October (a cover
 photo with a big title, then one numbered point per slide, a photo under
-the text, no faces). The topics are what an owner already worries about:
-quiet hours, platforms, discounts, why nobody recommends them. SocialPerks
-appears only on the last slide.
+the text, no faces). Two kinds of topic take turns, one a day: the business
+ones (quiet hours, platforms, discounts, why nobody recommends them) and the
+life ones the owner asked for the same day (routine, motivation, what it
+feels like to run a place, what is in the news), which are the ones people
+save and send. SocialPerks appears only on the last slide.
 
 Spanish only: the profile posts in Spanish, for the venues in Barcelona.
 Every claim is either common sense or the one figure with its source
 (Nielsen, 2015). No em dashes, gender-neutral where it can be.
 
 Each topic has a title for the cover, a line for the caption, and points:
-a heading, the lines under it, and the closing line set in bold.
+a heading, the lines under it, and the closing line set in bold. `photos`
+names the set its slides draw from (PHOTO_SETS); `countdown` numbers the
+points from the highest down, for a ranking.
 """
 
 from __future__ import annotations
@@ -21,11 +25,12 @@ from __future__ import annotations
 import datetime as _dt
 import random as _random
 
-# The first day of the cycle: topic 0 that day, then one topic a day in this
-# order. After the last one the cycle starts again with other photos.
+# The first day: the first business topic that day, the first life topic the
+# next, and so on, alternating. Each list starts again, with other photos,
+# once its topics are used.
 EPOCH = _dt.date(2026, 10, 30)
 
-TOPICS = [
+BUSINESS = [
     dict(
         title="Las 7 diferencias entre un negocio que se llena y uno que no",
         hook="Las diferencias son pequeñas. El resultado, no.",
@@ -199,6 +204,147 @@ TOPICS = [
     ),
 ]
 
+# Unsplash photos without faces to camera, by what they show; each id was
+# fetched and looked at (30 October). "venue" is the video's own photos.
+PHOTO_SETS = {
+    "life": [
+        "1470252649378-9c29740c9fa8",  # sunrise over a valley
+        "1501139083538-0139583c060f",  # hourglass
+        "1495364141860-b0d03eccd065",  # a hand holding an alarm clock
+        "1484480974693-6ca0a78fb36b",  # an open notebook
+        "1506784983877-45594efa4cbe",  # a planner and a coffee
+        "1434030216411-0b793f4b4173",  # a hand writing
+        "1488190211105-8b0e65b80b4e",  # a desk, a coffee, a journal
+        "1506126613408-eca07ce68773",  # a silhouette at sunrise
+        "1447752875215-b2761acb3c5d",  # a bridge into the woods
+        "1511920170033-f8396924c348",  # latte art, beans, from above
+        "1509042239860-f550ce710b93",  # three cappuccinos
+        "1442975631115-c4f7b05b8a2c",  # a café inside, morning light
+    ],
+    "money": [
+        "1554224155-6726b3ff858f",  # hands with receipts
+        "1563013544-824ae1b704d3",  # a card in a hand
+        "1520607162513-77705c0f0d4a",  # a card terminal, from above
+        "1519389950473-47ba0277781c",  # a desk full of laptops, from above
+        "1486312338219-ce68d2c6f44d",  # hands typing
+        "1516321318423-f06f85e504b3",  # a hand at a laptop
+        "1484480974693-6ca0a78fb36b",  # an open notebook
+        "1434030216411-0b793f4b4173",  # a hand writing
+        "1488190211105-8b0e65b80b4e",  # a desk, a coffee, a journal
+    ],
+    "city": [
+        "1583422409516-2895a77efded",  # Barcelona from above
+        "1511527661048-7fe73d85e9a4",  # Tibidabo at dusk
+        "1517248135467-4c7edcad34c4",  # a restaurant inside
+        "1554118811-1e0d58224f24",  # a café, empty chairs
+        "1521017432531-fbd92d768814",  # a café counter
+        "1493857671505-72967e2e2760",  # a café with a menu board and a bike
+        "1524758631624-e2822e304c36",  # a lounge with armchairs
+        "1497935586351-b67a49e012bf",  # coffee beans on a board
+        "1510812431401-41d2bd2722f3",  # wine glasses raised
+        "1528712306091-ed0763094c98",  # hands at the stove
+    ],
+}
+
+LIFE = [
+    dict(
+        title="Ranking de los 8 peores momentos de tener un negocio",
+        hook="Si tienes un negocio, los has vivido todos.",
+        photos="life", countdown=True,
+        points=[
+            ("Mirar la agenda del martes", ["Huecos a las 16:00, a las 17:00, a las 18:00.", "Y el alquiler no tiene huecos."], "La hora vacía también se paga."),
+            ("El proveedor sube precios otra vez", ["Tú no puedes subir los tuyos cada mes.", "La diferencia sale de tu bolsillo."], "El margen se gana en los detalles."),
+            ("La reseña injusta", ["Una estrella de alguien que vino un día malo.", "Y la leen todos los que vienen detrás."], "Por eso importa tanto lo que cuentan los que sí te quieren."),
+            ("El empleado que no viene", ["Sábado, local lleno, un hueco en la barra.", "Y tú haciendo de tres."], "Nadie te enseña esto antes de abrir."),
+            ("Pagar la comisión de la app", ["Ves el pedido y ves lo que se queda la plataforma.", "Por un cliente que quizá ya te conocía."], "Trabajar para otro sin saberlo."),
+            ("El domingo por la noche", ["El cuerpo descansa, la cabeza no.", "Ya estás pensando en el lunes."], "Tener un negocio no tiene horario de cierre."),
+            ("Cerrar la caja y no salen las cuentas", ["Un buen día que no lo fue tanto.", "Haces números otra vez, por si acaso."], "Saber de dónde viene cada euro cambia el sueño."),
+            ("El cliente fiel que deja de venir", ["Venía cada semana. Un día, nada.", "Y no sabes por qué."], "Cuida a los que ya te eligieron."),
+        ],
+    ),
+    dict(
+        title="La rutina de los dueños que aguantan 20 años abiertos",
+        hook="No es suerte. Es rutina.",
+        photos="life",
+        points=[
+            ("Empiezan antes de abrir", ["Media hora sin clientes y sin móvil.", "Para pensar el día, no para sobrevivirlo."], "El día que empieza con plan termina mejor."),
+            ("Miran los números cada semana", ["No cada noche con angustia.", "Una vez por semana, con calma, siempre el mismo día."], "Lo que se mira con calma se arregla."),
+            ("Conocen a sus clientes por el nombre", ["Y saben qué piden.", "Eso no lo copia ninguna cadena."], "La cercanía es tu ventaja."),
+            ("Cambian poco, pero siempre", ["Un plato nuevo, un horario mejor, una idea al mes.", "Sin revolucionar nada."], "Mejorar un poco, siempre."),
+            ("Descansan de verdad", ["Un día a la semana sin pensar en el local.", "El que no para, se quema."], "Tu negocio necesita que estés bien."),
+            ("Dejan que sus clientes hablen por ellos", ["No gritan en redes.", "Hacen que sus clientes quieran contarlo."], "El que dura es el que recomiendan."),
+        ],
+    ),
+    dict(
+        title="Las 7 sensaciones que solo entiende quien tiene un negocio",
+        hook="Las buenas compensan todas las demás.",
+        photos="city",
+        points=[
+            ("El primer cliente del día", ["Abres la puerta y ya hay alguien esperando.", "El día empieza bien."], "Pequeñas victorias, cada mañana."),
+            ("Ver tu local lleno", ["Todas las mesas, todas las sillas.", "Y piensas: esto lo he hecho yo."], "Merece la pena por momentos así."),
+            ("El cliente que vuelve con un amigo", ["No hay mejor reseña.", "Te ha elegido dos veces: una para él y otra para alguien que quiere."], "La recomendación es el mayor cumplido."),
+            ("Un «gracias» de verdad", ["De alguien que se va contento.", "Te dura toda la tarde."], "Por eso abriste."),
+            ("«¿Esto es tuyo?»", ["Lo dice alguien con admiración.", "Y te acuerdas de todo lo que costó."], "Lo construiste tú."),
+            ("Cerrar con las cuentas bien", ["Bajar la persiana tranquilo.", "Saber que el mes está cubierto."], "La tranquilidad también es un logro."),
+            ("Que te reconozcan por la calle", ["«Tú eres el del café de la esquina.»", "Ya eres parte del barrio."], "Un negocio local es un lugar en la vida de la gente."),
+        ],
+    ),
+    dict(
+        title="Lo que nadie te cuenta antes de abrir tu propio negocio",
+        hook="Ojalá alguien me lo hubiera dicho antes.",
+        photos="money",
+        points=[
+            ("Vender es la mitad del trabajo", ["Hacer bien lo tuyo no basta.", "Que la gente lo sepa es otro trabajo."], "El mejor producto escondido no vende."),
+            ("Los primeros meses son los más lentos", ["La gente tarda en descubrirte.", "No es que no funcione: es que aún no te conocen."], "Paciencia y constancia."),
+            ("Tus primeros clientes valen oro", ["Ellos traen a los siguientes.", "Trátalos como socios, no como tickets."], "Tus primeros fieles construyen tu fama."),
+            ("Los números mandan", ["El local puede estar lleno y perder dinero.", "Mira margen, no solo caja."], "Lleno no siempre es rentable."),
+            ("Vas a hacer de todo", ["Contable, limpieza, marketing, recursos humanos.", "Aprende a pedir ayuda pronto."], "Hacerlo todo no es lo mismo que hacerlo bien."),
+            ("Merece la pena", ["Es duro, pero es tuyo.", "Y cada cliente que vuelve te lo recuerda."], "Nadie se arrepiente de haberlo intentado."),
+        ],
+    ),
+    dict(
+        title="El alquiler sube y los clientes no: 6 formas de aguantar",
+        hook="El tema del que habla todo el barrio.",
+        photos="city",
+        points=[
+            ("Llena las horas que ya pagas", ["El alquiler cuesta lo mismo a las 16:00 que a las 21:00.", "Cada hora vacía es dinero perdido."], "Empieza por tus horas flojas."),
+            ("Haz que cada cliente traiga a otro", ["Conseguir un cliente nuevo por un amigo cuesta menos que con anuncios.", "Y suele quedarse más."], "Tus clientes son tu mejor canal."),
+            ("Revisa lo que pagas cada mes", ["Comisiones, suscripciones, herramientas que no usas.", "Una tarde de revisión puede ahorrarte mucho."], "Lo pequeño, sumado, es grande."),
+            ("Sube el ticket, no el precio", ["Un postre sugerido, un tratamiento extra.", "Sin tocar la carta."], "Vender mejor, no más caro."),
+            ("Únete a tus vecinos", ["Los negocios del barrio tienen los mismos clientes.", "Recomendarse entre vosotros os ayuda a todos."], "El barrio es un equipo."),
+            ("No compitas con las cadenas en precio", ["Compite en lo que no pueden copiar.", "El trato, el nombre, la cercanía."], "Lo local se elige, no se compara."),
+        ],
+    ),
+    dict(
+        title="8 señales de que estás construyendo algo que vale la pena",
+        hook="Para los días en que dudas.",
+        photos="life",
+        points=[
+            ("Tienes clientes que repiten", ["No vuelven por obligación.", "Vuelven porque quieren."], "Repetir es votar por ti."),
+            ("Te recomiendan sin que lo pidas", ["Alguien llega diciendo «me ha dicho una amiga».", "Esa es la mejor señal que existe."], "El boca a boca no miente."),
+            ("Sabes el nombre de tus clientes", ["Y ellos saben el tuyo.", "Eso no se consigue con publicidad."], "Has creado comunidad."),
+            ("Aprendes algo cada semana", ["Un error que no repites, una idea que funciona.", "Eso es crecer."], "El progreso no siempre se ve en caja."),
+            ("Te cuesta desconectar", ["Porque te importa.", "Ahora aprende a descansar también."], "Te importa. Cuídate para seguir."),
+            ("Tu equipo se queda", ["La gente no se queda en sitios donde no está bien.", "Si se quedan, algo haces bien."], "Un buen equipo es un buen negocio."),
+            ("Los malos días ya no te hunden", ["Sabes que pasan.", "Y que mañana vuelves a abrir."], "La constancia es tu superpoder."),
+            ("Todavía te ilusiona abrir", ["Después de todo, sigues queriendo.", "No todo el mundo puede decirlo."], "Sigue. Va bien."),
+        ],
+    ),
+    dict(
+        title="Lo que la IA no puede hacer por tu negocio (y tus clientes sí)",
+        hook="Todo el mundo habla de la IA. Hablemos de lo que no cambia.",
+        photos="money",
+        points=[
+            ("Recomendarte a un amigo", ["La IA puede escribir un anuncio.", "No puede decirle a su mejor amiga «tienes que ir»."], "La confianza no se genera. Se gana."),
+            ("Acordarse de cómo te gusta el café", ["El detalle de quien te conoce.", "Eso no se automatiza."], "Lo humano es tu ventaja."),
+            ("Hacer que alguien se sienta en casa", ["Un saludo por tu nombre al entrar.", "Ninguna app lo sustituye."], "La gente vuelve por cómo la tratas."),
+            ("Vivir el barrio", ["Saber qué pasa en la calle, quién es quién.", "Eso solo lo sabe quien está."], "Lo local no se descarga."),
+            ("Donde sí te ayuda", ["A escribir más rápido, a ordenar números, a ahorrar tiempo.", "Úsala para tener más tiempo para tus clientes."], "Máquinas para las tareas. Personas para las personas."),
+        ],
+    ),
+]
+
+
 CAPTION_TAIL = (
     "Guárdalo para cuando lo necesites y mándaselo a alguien que tenga un negocio.\n\n"
     "SocialPerks convierte a tus clientes en embajadores. Sin cuota mensual: solo pagas por clientes nuevos que pagan. socialperkses.com"
@@ -213,14 +359,17 @@ CTA = dict(
 )
 
 
-def carousel(date: _dt.date, photos: list) -> dict:
+def carousel(date: _dt.date, venue_photos: list) -> dict:
     """The day's topic, with one photo per slide (cover first), the same every time for a date."""
+    # One business topic, then one about life, day after day, each list in its own cycle.
     n = (date - EPOCH).days
-    topic = TOPICS[n % len(TOPICS)]
+    topic = BUSINESS[(n // 2) % len(BUSINESS)] if n % 2 == 0 else LIFE[(n // 2) % len(LIFE)]
     rng = _random.Random(date.toordinal())
-    pool = list(photos)
+    pool = list(PHOTO_SETS.get(topic.get("photos"), venue_photos))
     rng.shuffle(pool)
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
     caption = f"{topic['hook']}\n\n{CAPTION_TAIL}\n\n{HASHTAGS}"
-    return dict(date=date.isoformat(), index=n % len(TOPICS), title=topic["title"], points=topic["points"], photos=picks, caption=caption)
+    count = len(topic["points"])
+    numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
+    return dict(date=date.isoformat(), title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption)

@@ -44,7 +44,7 @@ python3 social-video/carousel.py --date 2026-10-31  # any day; the same day alwa
 
 Under `social-video/out/<date>/carousel/` it writes `slide-01.jpg` and on (1080x1350, the 4:5 feed size, 7 to 10 slides) and `carousel.json` with the title, the slides and the caption. Spanish only, like the post.
 
-`carousels.py` holds what it says: 14 topics, one a day from 30 October, then the cycle starts again with other photos. To add one, append it to `TOPICS`: a title for the cover, a line for the caption, and points (a heading, the lines under it, the closing line in bold). The photos are the video's, without the one that shows a face.
+`carousels.py` holds what it says: 14 business topics and 7 about life (routine, motivation, what it feels like to run a place, the rent, AI), taking turns, a business one on even days from 30 October and a life one on odd days; each list starts again, with other photos, when it runs out. To add one, append it to `BUSINESS` or `LIFE`: a title for the cover, a line for the caption, and points (a heading, the lines under it, the closing line in bold). Business topics use the video's photos (without the one that shows a face); life topics name a set in `PHOTO_SETS` (sunrise, notebooks, coffee, Barcelona, receipts), each photo fetched and checked to have no face.
 
 ### Straight to Instagram
 

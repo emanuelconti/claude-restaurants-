@@ -43,7 +43,8 @@ WHITE = (255, 255, 255)
 SIGNAL = D.SIGNAL
 YELLOW = D.YELLOW
 
-# Photos without faces to camera: the video's, plus the product's reward
+# The "venue" set, for the business topics (carousels.PHOTO_SETS has the others):
+# photos without faces to camera, the video's, plus the product's reward
 # photos of the same places (socialperks: src/assets/rewards/CREDITS.json).
 EXTRA_PHOTOS = [
     "1544982560-63ad67a35c23",  # pizza slice and a drink
@@ -200,7 +201,7 @@ def render(date: dt.date, out: str, cache: str) -> dict:
     os.makedirs(folder, exist_ok=True)
     slides = [slide_cover(car["title"], car["photos"][0], cache)]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
-        slides.append(slide_point(i, heading, lines, punch, car["photos"][i], cache))
+        slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
     slides.append(slide_cta())
     names = []
     for i, im in enumerate(slides, 1):
