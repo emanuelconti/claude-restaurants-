@@ -8,11 +8,14 @@ The owner asked for it on 30 October: from the Claude app a page can hand the
 phone one file at a time, so a carousel arrived as nine separate shares.
 Instagram's own API takes the slides together and publishes one post.
 
-It uses the Instagram API with Instagram Login (graph.instagram.com) and reads,
-from the environment:
-- INSTAGRAM_ACCESS_TOKEN: a token for the SocialPerks professional account with
-  instagram_business_basic and instagram_business_content_publish (the Meta
-  app's dashboard generates it; it lasts 60 days);
+It reads, from the environment:
+- INSTAGRAM_ACCESS_TOKEN: a token for the SocialPerks professional account, as
+  the Meta app's dashboard generates it (it lasts 60 days). Either kind works:
+  an Instagram Login token (it starts with IG, permissions
+  instagram_business_basic and instagram_business_content_publish) goes to
+  graph.instagram.com; a Facebook Login token (it starts with EAA, permissions
+  instagram_basic, instagram_content_publish, pages_show_list) goes to
+  graph.facebook.com, and the account is the one linked to the token's Page;
 - INSTAGRAM_USER_ID (optional): the account's id; asked from the API if absent.
 
 Instagram fetches every image from a public URL, so --base-url must be where
@@ -37,7 +40,7 @@ import urllib.parse
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-API = "https://graph.instagram.com/v21.0"
+API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
 
 
@@ -81,6 +84,21 @@ def wait_ready(container: str, token: str, timeout: float = 120) -> None:
         time.sleep(3)
 
 
+def account(token: str) -> tuple:
+    """The Instagram account's id and username, for either kind of token."""
+    given = os.environ.get("INSTAGRAM_USER_ID", "").strip()
+    if API.startswith("https://graph.instagram.com"):
+        me = call("GET", "me", token, {"fields": "user_id,username"})
+        return given or str(me.get("user_id") or me.get("id")), me.get("username", "?")
+    pages = call("GET", "me/accounts", token, {"fields": "instagram_business_account{id,username}"}).get("data", [])
+    linked = [p["instagram_business_account"] for p in pages if p.get("instagram_business_account")]
+    if given:
+        return given, next((a.get("username", "?") for a in linked if a["id"] == given), "?")
+    if not linked:
+        raise ApiError("the token's Facebook Pages have no Instagram professional account linked")
+    return linked[0]["id"], linked[0].get("username", "?")
+
+
 def check_public(url: str) -> None:
     req = urllib.request.Request(url, method="HEAD")
     try:
@@ -103,6 +121,9 @@ def main():
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     if not token:
         sys.exit("INSTAGRAM_ACCESS_TOKEN is not set: nothing published")
+    global API
+    if token.startswith("EAA"):
+        API = "https://graph.facebook.com/v21.0"
     folder = os.path.join(args.out, args.date, "carousel")
     meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
     slides = meta["slides"][:MAX_SLIDES]
@@ -110,9 +131,8 @@ def main():
     urls = [base + name for name in slides]
 
     try:
-        me = call("GET", "me", token, {"fields": "user_id,username"})
-        user = os.environ.get("INSTAGRAM_USER_ID", "").strip() or str(me.get("user_id") or me.get("id"))
-        print(f"account: @{me.get('username', '?')}")
+        user, username = account(token)
+        print(f"account: @{username}")
         for url in urls:
             check_public(url)
         print(f"{len(urls)} slides are public")
