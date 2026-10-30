@@ -6,17 +6,17 @@ Same build as SocialPerks' (`social-video/` on `claude/socialperks-continuous-bu
 
 ## What a post looks like
 
-A cover photo with a big white title on a dark fade, then one numbered point per slide: heading, one or two lines, and a closing line in Sowld's pink. The mark sits on every slide. 7 to 8 slides, 1080x1350 (the 4:5 feed size), no faces in any photo. The last slide is Sowld, and only when the topic earns it: about one in four.
+A cover photo with a big white title on a dark fade, then one numbered point per slide: heading, one or two lines, and a closing line in Sowld's pink. The mark sits on every slide. 7 to 8 slides, 1080x1350 (the 4:5 feed size), no faces in any photo. No Sowld slide at the moment: `CTA_ENABLED = False` in `carousels.py`, because the site is off the profile's link in bio. One line to turn back on.
 
 English: @sowld.ai posts in English, unlike SocialPerks which is Spanish.
 
 ## What it says
 
-`STYLE.md` is the brief each run follows. The short version: everyday life people recognise themselves in, about the stuff we own, buy, keep and finally let go of, **and it has to lift**. Recognition alone gets a smile and a scroll; someone follows because of how a post makes them feel about themselves. So every carousel names the stuck thing honestly, turns around point 4 or 5, and ends on something small and doable.
+`STYLE.md` is the brief each run follows. The short version: life people recognise themselves in, starting things and stopping them, habits, time, rest, self-trust, and among those the stuff we own and let go of, **and it has to lift**. Recognition alone gets a smile and a scroll; someone follows because of how a post makes them feel about themselves. So every carousel names the stuck thing honestly, turns around point 4 or 5, and ends on something small and doable.
 
 Never a seller's post. No invented figures, no promised earnings, no empty motivational voice.
 
-`carousels.py` holds the bank of 21 written topics. That bank is only the safety net: each run writes a new one and falls back to it only if writing fails, so a slot always goes out.
+`carousels.py` holds the bank of 29 written topics. That bank is only the safety net: each run writes a new one and falls back to it only if writing fails, so a slot always goes out.
 
 ## Running it by hand
 

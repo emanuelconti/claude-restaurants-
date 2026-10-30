@@ -31,20 +31,21 @@ They like a post when they think "this is exactly me". They **save** it when it 
 ## What works
 
 - **The cover title is the hook.** Specific, a little provocative, a promise the slides keep. Patterns: stages ("The 7 stages of finally clearing out your wardrobe"), a ranking ("The 8 worst feelings of a Monday morning"), "things you only learn when…", "things you say every time…", "signs that…", "what nobody tells you about…".
-- **Our ground, where we are actually interesting:** the stuff we own and never use, the wardrobe, the drawer of cables, moving house, markets and second-hand finds, what you regret selling, what things are really worth, buying on impulse, clearing out, giving away, the garage, the box in the cellar.
-- **And ordinary life around it**, because not every post can be about objects: Mondays, coffee, Sunday evenings, money and small lies about it, the group chat, flats and rent, the city, seasons.
+- **The subject is life, not second hand.** Starting things, stopping things, habits, time, work, money, rest, self-trust, the gap between who you are and who you meant to be. These are what people follow an account for.
+- **The stuff topics are one strand among several**, not the theme: the things we own and never use, a wardrobe, moving house, a market find, what you regret selling. Use them when they are the best way into a feeling, not because the brand sells something adjacent.
+- **Mix the strands across a week.** If the last three posts were about objects, write about time, or starting, or a bad day. The account should read as a person with a life, not a shop with a blog.
 - **One moment per slide:** a heading of a few words, one or two short lines that paint a real scene, and a closing line that lands, funny or true.
 - **Mix the moods across the five:** some funny, some warm, one or two useful. Every one of them lifts at the end, whatever its mood.
 - **Concrete beats clever.** "You bought it in 2017" beats "purchases age".
 - **The closing line of each slide does the work.** It is the line in pink, the one that gets screenshotted. Write the slide, then spend most of the effort on that line.
 
-## The link to Sowld, only when it fits
+## The Sowld slide is off right now
 
-Sowld compares a second-hand listing against similar items on sale right now and estimates what it is really worth. So a topic about what something is worth, buying used, what is sitting in the cellar, or spotting a bad deal may end with the Sowld slide: set `"cta": true`.
+`CTA_ENABLED = False` in `carousels.py`. The site is not in the profile's link in bio while it is not ready, so a last slide pointing at a URL nobody can tap wastes the slide and makes the post read as an ad for nothing.
 
-Everything else: leave `cta` out, and the post is pure everyday life. Never mention Sowld, subscriptions or anything to buy on the slides themselves.
+Write topics as if Sowld did not exist. Never mention it, never mention a product, never write a closing line that is secretly a pitch. The job right now is one thing only: **make the post good enough that someone follows the account.**
 
-Roughly one in four or five gets the CTA. More than that and the profile reads as an ad, which is the one thing it must not read as.
+You can still set `"cta": true` on a topic that genuinely walks into what Sowld does. It will simply be ignored until the flag goes back on, and then those posts already have their last slide written.
 
 ## Never
 
@@ -76,9 +77,9 @@ A JSON object, the same shape as the topics in `carousels.py`:
 
 - `title` at most 90 characters; `hook` (the caption's second line) at most 120.
 - 5 to 8 `points`; each heading at most 52 characters, 1 or 2 lines of at most 95, a closing line of at most 75.
-- `photos`: `stuff` (wardrobes, shelves, boxes, a desk of cables), `market` (shops, stalls, vintage furniture), `life` (mornings, coffee, notebooks) or `money` (receipts, cards, a laptop). Every photo is face-free.
+- `photos`: `human` (a desk by a window, a path, a room, someone walking away: for topics about a life), `life` (mornings, coffee, notebooks), `stuff` (wardrobes, shelves, boxes), `market` (shops, stalls, vintage furniture) or `money` (receipts, cards, a laptop). Every photo is face-free. Most topics want `human` or `life`.
 - `countdown: true` numbers the points from the highest down, for a ranking.
-- `cta: true` only when the topic links naturally to what something is worth.
+- `cta: true` is currently ignored (see above). Leave it out.
 - `hashtags`: optional, 5 to 8 that fit the topic, one string.
 
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix. Look at the cover and two slides once rendered: if a line wraps badly or a photo fights the text, shorten and render again.

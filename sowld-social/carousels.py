@@ -62,6 +62,18 @@ PHOTO_SETS = {
         "1442975631115-c4f7b05b8a2c",  # a café inside, morning light
         "1434030216411-0b793f4b4173",  # a hand writing
     ],
+    # People-shaped scenes without faces: hands, desks, walks, windows. For the
+    # topics that are about a life rather than about objects.
+    "human": [
+        "1499750310107-5fef28a66643",  # a laptop and a notebook by a window
+        "1499209974431-9dddcece7f88",  # someone walking, from behind
+        "1517842645767-c639042777db",  # hands and a notebook
+        "1506485338023-6ce5f36692df",  # a window, plants, light
+        "1517836357463-d25dfeac3438",  # a gym floor
+        "1524178232363-1fb2b075b655",  # a lecture hall from behind
+        "1476304884326-cd2c88572c5f",  # a path through trees
+        "1518457607834-6e8d80c183c5",  # a quiet room with a chair
+    ],
     # Receipts, cards, laptops: money topics without a single figure invented.
     "money": [
         "1554224155-6726b3ff858f",  # hands with receipts
@@ -361,6 +373,118 @@ EVERYDAY = [
             ("It gets easy", ["The first ten decisions are hard.", "From the twentieth, they take two seconds."], "You do not need to be decisive to start. You become decisive by starting."),
         ],
     ),
+    dict(
+        title="7 things nobody tells you about starting something new",
+        hook="Number 3 is why most people stop in week two.",
+        photos="human",
+        points=[
+            ("The first week is a lie", ["Everything is easy because everything is novel.", "You mistake excitement for ability."], "What you build in week one tells you nothing about week six."),
+            ("Week two is the real start", ["The novelty is gone and nothing has improved yet.", "This is where almost everyone quits."], "The boring middle is not a sign you chose wrong."),
+            ("You will be bad at it", ["Visibly, embarrassingly bad.", "For longer than feels reasonable."], "Being bad at something is the entry fee, not a verdict."),
+            ("Nobody is watching as closely as you think", ["The audience you are afraid of is busy with their own week.", "Nobody remembers your first attempt."], "The fear of looking stupid costs more than looking stupid ever does."),
+            ("Progress is invisible from inside", ["You only see the gap between you and good.", "You never see the distance from where you began."], "Keep something from day one. It is the only honest mirror you will have."),
+            ("Small and daily beats big and rare", ["Twenty minutes most days wins.", "Four hours once a month does not."], "Consistency is not discipline. It is just a lower bar, kept."),
+            ("The only real requirement", ["Not talent, not a plan, not the right moment.", "Showing up again after the week it got boring."], "Everyone who is good at something was once two weeks in and unimpressive."),
+        ],
+    ),
+    dict(
+        title="The 8 lies we tell ourselves about time",
+        hook="You have told yourself number 6 this week.",
+        photos="life",
+        countdown=True,
+        points=[
+            ("\"I do not have time\"", ["Usually it means it is not the priority.", "Which is allowed. It is just a different sentence."], "Saying what you actually chose is more honest than blaming the clock."),
+            ("\"I will do it when things calm down\"", ["Things do not calm down.", "A quieter month has never once arrived on its own."], "If it only happens in the calm, it does not happen."),
+            ("\"I work better under pressure\"", ["You work *faster* under pressure.", "Those are not the same."], "Deadlines do not improve work. They just end it."),
+            ("\"It will only take a minute\"", ["It takes eleven.", "Every single time."], "Everything takes longer than the version of it in your head."),
+            ("\"I am just checking one thing\"", ["Forty minutes later.", "You cannot name what you read."], "The phone does not steal hours. It borrows minutes and never returns them."),
+            ("\"I am too tired to start\"", ["Often you are too undecided to start.", "Starting is what makes the tiredness lift."], "Energy comes after the first five minutes, not before."),
+            ("\"Next week will be different\"", ["Next week already has a shape.", "And it looks like this one."], "Next week is this week with a different name."),
+            ("\"There is still time\"", ["There is. That is the point.", "Not infinite, but more than you think today."], "Start badly today rather than perfectly in a year that never comes."),
+        ],
+    ),
+    dict(
+        title="Signs you are quietly doing better than you were",
+        hook="Nobody claps for these. They count anyway.",
+        photos="human",
+        points=[
+            ("You recover faster", ["A bad day used to cost a week.", "Now it costs a day."], "Resilience is not feeling less. It is coming back sooner."),
+            ("You apologise less for existing", ["Fewer sorries in messages.", "Fewer explanations nobody asked for."], "You stopped treating your own needs as an inconvenience."),
+            ("You can sit with a no", ["Yours or someone else's.", "Without rewriting it six times."], "A no you can say calmly is a kind of freedom."),
+            ("Fewer people, more real ones", ["It looks like a smaller life.", "It is a heavier one."], "A shrinking circle is often a sign of better aim."),
+            ("You ask instead of assuming", ["One awkward question.", "Instead of a week of imagining."], "Most of what we worry about dies the moment we ask."),
+            ("You rest without earning it", ["Not as a reward for a productive day.", "Just because you are tired."], "You stopped needing a receipt to be allowed to stop."),
+        ],
+    ),
+    dict(
+        title="6 things that change when you stop waiting to feel ready",
+        hook="Ready is not a feeling you get. It is one you build.",
+        photos="human",
+        points=[
+            ("Ready arrives after, not before", ["You do not feel ready and then act.", "You act, badly, and ready catches up."], "Confidence is a receipt, not a ticket."),
+            ("The research becomes hiding", ["Another video, another list, another plan.", "It feels like progress and costs nothing."], "At some point reading about it is how you avoid doing it."),
+            ("You find out in a week", ["What you could have spent three months deciding.", "The real thing answers questions the plan cannot."], "One attempt teaches more than a month of thinking about attempting."),
+            ("The first version is supposed to be bad", ["Everyone's was.", "You only ever saw their tenth."], "You are comparing your draft to someone else's final."),
+            ("You stop needing permission", ["From a qualification, a person, a better moment.", "Nobody was ever going to give it."], "The permission you are waiting for is yours to sign."),
+            ("One small, scary, today thing", ["Send the message. Post the thing. Book it.", "Ten minutes, not ten weeks."], "Do the smallest version of it before you talk yourself out of it."),
+        ],
+    ),
+    dict(
+        title="The 7 stages of a habit that actually sticks",
+        hook="Most people quit at 3 and think they failed.",
+        photos="life",
+        points=[
+            ("Day one is easy", ["Pure motivation, zero evidence.", "Enjoy it, it is not coming back."], "Motivation starts things. It has never finished one."),
+            ("The first miss", ["You skip a day. Nothing collapses.", "But something in your head calls it over."], "Missing once is a day off. Missing twice is a decision."),
+            ("The boredom", ["No visible progress, no novelty left.", "This is the stage people call failure."], "Boredom is not a sign it is wrong. It is a sign it is working."),
+            ("Making it smaller", ["Twenty minutes becomes five.", "Five you will actually do."], "A habit you keep badly beats a habit you quit perfectly."),
+            ("It stops needing a decision", ["You notice you did not argue with yourself about it.", "First time in weeks."], "A habit is just a decision you stopped having to make."),
+            ("Someone notices", ["Not the result. The change in you.", "That lands harder than any number."], "Other people see the difference before the mirror does."),
+            ("You would miss it now", ["Skipping feels worse than doing.", "That is the whole finish line."], "It stuck the moment it stopped feeling like effort."),
+        ],
+    ),
+    dict(
+        title="Things that are not laziness (even though they feel like it)",
+        hook="Number 4 gets mistaken for it constantly.",
+        photos="human",
+        points=[
+            ("Not starting because it is unclear", ["Your brain will not move without a first step.", "It is waiting for instructions, not for willpower."], "Write the next physical action, not the goal."),
+            ("Too many open loops", ["Nine half-finished things, none done.", "Everything feels heavy because everything is still on."], "Close one small thing and the rest get lighter immediately."),
+            ("Being tired in a way sleep does not fix", ["Decisions, noise, people, screens.", "Different tiredness needs different rest."], "Doing nothing and resting are not the same thing."),
+            ("Avoiding something that scares you", ["It looks identical to laziness from outside.", "It is fear wearing a disguise."], "Name the thing you are avoiding. It shrinks about half."),
+            ("Burnout mistaken for a character flaw", ["You did too much for too long.", "Then blamed yourself for stopping."], "You cannot discipline your way out of being depleted."),
+            ("Needing the task to be smaller", ["Not more motivation.", "A smaller first step."], "If you cannot start, the task is too big, not you too weak."),
+        ],
+    ),
+    dict(
+        title="8 small things that fix a bad day faster than anything else",
+        hook="Number 7 takes four minutes and nobody does it.",
+        photos="life",
+        countdown=True,
+        points=[
+            ("Going outside for ten minutes", ["No destination, no podcast.", "Just outside."], "Almost nothing survives a walk unchanged."),
+            ("Water, then food", ["Half of a bad afternoon is a skipped lunch.", "Check that before anything else."], "Fix the body before you interrogate the mood."),
+            ("Finishing one tiny thing", ["The email. The dish. The reply.", "Anything that moves to done."], "One closed loop changes the whole day's weather."),
+            ("Putting the phone in another room", ["Not face down. Another room.", "The difference is enormous."], "Distance beats willpower, every time."),
+            ("Making the bed, even at 6pm", ["It is absurd and it works.", "One surface in order."], "Order in one square metre spreads further than it should."),
+            ("Telling one person the truth", ["\"Today was rough.\" That is the whole message.", "No analysis required."], "Said out loud, most things get about thirty per cent smaller."),
+            ("Writing down what is actually wrong", ["Four minutes, by hand.", "Usually it is one thing, not eleven."], "Worry feels huge until it has to fit in a sentence."),
+            ("Letting the day be bad", ["Not every day gets rescued.", "Some just end."], "A day you survive is not a day you failed."),
+        ],
+    ),
+    dict(
+        title="Things worth doing even when nobody sees them",
+        hook="Especially when nobody sees them.",
+        photos="human",
+        points=[
+            ("The work before the work", ["The reps, the drafts, the practice.", "None of it photographs."], "Everything that looks effortless had a boring part nobody posted."),
+            ("Keeping a promise to yourself", ["The smallest one counts.", "You are the only witness and the only one affected."], "Self-trust is built from promises nobody else would notice you breaking."),
+            ("Being kind with no audience", ["To a stranger, to a tired waiter, to yourself.", "No one is counting."], "Who you are when it earns you nothing is who you are."),
+            ("Finishing what bores you", ["The last twenty per cent, the unglamorous part.", "This is where most things die."], "Finished and imperfect beats perfect and abandoned."),
+            ("Doing it properly when nobody would know", ["The shortcut was available.", "You did not take it."], "Standards you keep in private are the only real ones."),
+            ("Starting again, quietly", ["No announcement, no fresh start on a Monday.", "Just again, today."], "Beginning again is not failure. It is the actual skill."),
+        ],
+    ),
 ]
 
 CAPTION_SAVE = "Save it, and send it to whoever needs to read it."
@@ -374,6 +498,12 @@ CTA = dict(
     small="Free, 15 checks a month. Estimates are indicative.",
     url="getsowld.com",
 )
+
+# The site is off the profile's link in bio while it is not ready, so the
+# Sowld slide is off too: sending someone to a URL they cannot tap from the
+# bio wastes the last slide and makes the post read as an ad for nothing.
+# One line to turn back on the day the link returns.
+CTA_ENABLED = False
 
 SLOTS = 5  # carousels a day
 
@@ -431,7 +561,7 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
     # The title opens the caption, so the next runs can see what was already posted.
-    cta = bool(topic.get("cta"))
+    cta = bool(topic.get("cta")) and CTA_ENABLED
     tail = CAPTION_SHARE if cta else CAPTION_SAVE
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
