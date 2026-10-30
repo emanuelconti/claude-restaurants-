@@ -16,7 +16,8 @@ It reads, from the environment:
   graph.instagram.com; a Facebook Login token (it starts with EAA, permissions
   instagram_basic, instagram_content_publish, pages_show_list) goes to
   graph.facebook.com, and the account is the one linked to the token's Page;
-- INSTAGRAM_USER_ID (optional): the account's id; asked from the API if absent.
+- INSTAGRAM_USER_ID (optional): the account's id; @socialperks.es by default with a
+  Facebook Login or system-user token, asked from the API with an Instagram one.
 
 Instagram fetches every image from a public URL, so --base-url must be where
 the slides are public, as slide-01.jpg, slide-02.jpg, ... The token never goes
@@ -42,6 +43,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
+SOCIALPERKS_IG_ID = "17841450639747283"  # @socialperks.es, as the Meta app's dashboard shows it
 
 
 class ApiError(RuntimeError):
@@ -90,12 +92,17 @@ def account(token: str) -> tuple:
     if API.startswith("https://graph.instagram.com"):
         me = call("GET", "me", token, {"fields": "user_id,username"})
         return given or str(me.get("user_id") or me.get("id")), me.get("username", "?")
+    # A system-user token (the dashboard's "never expires" kind) has no Pages of
+    # its own: it reaches the account directly, so ask the account itself.
+    user = given or SOCIALPERKS_IG_ID
+    try:
+        return user, call("GET", user, token, {"fields": "username"}).get("username", "?")
+    except ApiError:
+        pass
     pages = call("GET", "me/accounts", token, {"fields": "instagram_business_account{id,username}"}).get("data", [])
     linked = [p["instagram_business_account"] for p in pages if p.get("instagram_business_account")]
-    if given:
-        return given, next((a.get("username", "?") for a in linked if a["id"] == given), "?")
     if not linked:
-        raise ApiError("the token's Facebook Pages have no Instagram professional account linked")
+        raise ApiError(f"the token cannot reach Instagram account {user}, and its Facebook Pages have none linked")
     return linked[0]["id"], linked[0].get("username", "?")
 
 
