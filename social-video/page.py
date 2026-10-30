@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""The owner's daily video page: today's video, its caption, the last week.
+"""The owner's daily page: today's video and carousel, their captions, the last week.
 
-The scheduled run renders the day's video (daily.py), uploads the MP4s and
-the cover to the page's asset store, then runs this to rebuild the page with
-the new day on top and publishes it to the same address. A run in the cloud
-cannot hand the owner a file, so the page is the delivery: the owner opens it
-on the phone and taps "Condividi su Instagram o TikTok", which copies the
-caption and opens the phone's share sheet with the video.
+The scheduled run renders the day's video (daily.py) and carousel
+(carousel.py), uploads the MP4s, the cover and the slides to the page's
+asset store, then runs this to rebuild the page with the new day on top and
+publishes it to the same address. A run in the cloud cannot hand the owner a
+file, so the page is the delivery: the owner opens it on the phone and taps
+"Condividi", which copies the caption and opens the phone's share sheet with
+the video, or with all the slides at once.
 
     python3 social-video/page.py --date 2026-10-17 \\
         --ids '{"es": "<asset id>", "en": "<asset id>", "cover": "<asset id>"}' \\
+        --carousel-ids '["<slide 1 id>", "<slide 2 id>", ...]' \\
         --previous <the published page, as Artifact read saved it>
 
 It writes out/<date>/page.html and prints {"page": ..., "prune": [...]}: the
@@ -63,29 +65,41 @@ def previous_days(path: str | None) -> list:
 
 
 def ids_of(day: dict) -> set:
-    return {day.get(key) for key in ("es", "en", "cover") if day.get(key)}
+    ids = {day.get(key) for key in ("es", "en", "cover") if day.get(key)}
+    return ids | set((day.get("carousel") or {}).get("slides") or [])
+
+
+def carousel_of(folder: str, slide_ids: list) -> dict:
+    """The day's carousel as the page shows it: the slides' asset ids, in order, its title and caption."""
+    meta = json.load(open(os.path.join(folder, "carousel", "carousel.json"), encoding="utf-8"))
+    if len(slide_ids) != len(meta["slides"]):
+        sys.exit(f"--carousel-ids has {len(slide_ids)} ids for {len(meta['slides'])} slides")
+    return {"title": meta["title"], "caption": meta["caption"], "slides": slide_ids}
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--date", required=True)
-    ap.add_argument("--ids", required=True, help='{"es": id, "en": id, "cover": id}')
+    ap.add_argument("--ids", default=None, help='{"es": id, "en": id, "cover": id}; leave out to keep the day\'s video already on the page')
+    ap.add_argument("--carousel-ids", default=None, help="the slides' asset ids, in slide order (JSON list)")
     ap.add_argument("--previous", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     args = ap.parse_args()
 
     date = dt.date.fromisoformat(args.date)
-    ids = json.loads(args.ids)
     ep = E.episode(date)
     folder = os.path.join(args.out, ep["date"])
-    today = {
-        "date": ep["date"],
-        "place": PLACE_IT.get(ep["category"], ep["category"]),
-        "format": FORMAT_IT.get(ep["format"], ep["format"]),
-        "es": ids["es"], "en": ids["en"], "cover": ids.get("cover"),
-        "caption": captions(folder),
-    }
     before = previous_days(args.previous)
+    # A re-run for the same day updates what it was given and keeps the rest.
+    today = next((dict(d) for d in before if d.get("date") == ep["date"]), {"date": ep["date"]})
+    today.update(place=PLACE_IT.get(ep["category"], ep["category"]), format=FORMAT_IT.get(ep["format"], ep["format"]))
+    if args.ids:
+        ids = json.loads(args.ids)
+        today.update(es=ids["es"], en=ids["en"], cover=ids.get("cover"), caption=captions(folder))
+    elif not today.get("es"):
+        sys.exit("--ids is needed: the page has no video for this day yet")
+    if args.carousel_ids:
+        today["carousel"] = carousel_of(folder, json.loads(args.carousel_ids))
     days = [today] + [d for d in before if d.get("date") != today["date"]]
     days.sort(key=lambda d: d["date"], reverse=True)
     kept = days[:KEEP_DAYS]

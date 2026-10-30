@@ -1,4 +1,4 @@
-# The daily SocialPerks video
+# The daily SocialPerks video and carousel
 
 Every morning a new short video for SocialPerks' own social profile (Instagram Reels, TikTok, Shorts). Each day is different: a different kind of place, a different format, a different opening line and colours. The lines provoke and sound like a person. The photos are what customers really post from each kind of place, the same as on socialperkses.com.
 
@@ -33,6 +33,19 @@ Under `social-video/out/<date>/` it writes:
 
 To add a line, append it to `HOOKS` in Spanish and English, with `*...*` around the words to highlight. To add a format, add a scene in `daily.py` and its name to `FORMATS`.
 
+## The carousel
+
+Next to the video, a second post every day: a swipeable carousel for the feed, in the style the owner pointed at on 30 October. The cover is a photo with a big white title on a dark fade; then one numbered point per slide, the text on white at the top and a photo fading in under it, the mark on every slide, no faces; the last slide is SocialPerks. The topics are what owners of small local businesses already worry about (quiet hours, platforms, discounts, why nobody recommends them), so they read it, save it and send it to someone who also runs a business.
+
+```bash
+python3 social-video/carousel.py                    # today (Madrid time)
+python3 social-video/carousel.py --date 2026-10-31  # any day; the same day always gives the same carousel
+```
+
+Under `social-video/out/<date>/carousel/` it writes `slide-01.jpg` and on (1080x1350, the 4:5 feed size, 7 to 10 slides) and `carousel.json` with the title, the slides and the caption. Spanish only, like the post.
+
+`carousels.py` holds what it says: 14 topics, one a day from 30 October, then the cycle starts again with other photos. To add one, append it to `TOPICS`: a title for the cover, a line for the caption, and points (a heading, the lines under it, the closing line in bold). The photos are the video's, without the one that shows a face.
+
 ## Requirements
 
 You need Python 3 with Pillow and numpy, ffmpeg with libx264, and internet access to `images.unsplash.com` for the photos. If a photo cannot be fetched, the video uses the day's colours instead, so a video always comes out. Downloaded photos are cached in `social-video/.cache`.
@@ -41,16 +54,16 @@ The fonts in `fonts/` are Inter and Inter Tight (SIL Open Font License), convert
 
 ## Every morning, automatically
 
-A scheduled task starts a fresh session at 07:51 Madrid time. The session renders the day's video and updates the owner's page, **SocialPerks video del giorno** (https://claude.ai/artifact/YNUEr5KqP3zZYDwBmXD6sM, private to the owner).
+A scheduled task starts a fresh session at 07:51 Madrid time. The session renders the day's video and carousel and updates the owner's page, **SocialPerks post del giorno** (https://claude.ai/artifact/YNUEr5KqP3zZYDwBmXD6sM, private to the owner).
 
 The page is the delivery because a session in the cloud cannot hand the owner a file. Its steps:
 
 1. Read the page as it is published.
-2. Upload the two MP4s and the Spanish cover to the page's asset store.
-3. Run `page.py` with the new asset ids. It rebuilds the page from `page.html`, with today on top, the English version under it and the last seven days.
+2. Upload the two MP4s, the Spanish cover and the carousel's slides to the page's asset store.
+3. Run `page.py` with the new asset ids (`--ids` for the video, `--carousel-ids` for the slides in order). It rebuilds the page from `page.html`, with today's video and carousel on top, the English video under it and the last seven days.
 4. Publish the page to the same address.
 5. Delete the assets of days that fell off the week.
 
-A push notification says the run finished. On the phone, "Condividi su Instagram o TikTok" copies the caption and opens the share sheet with the video, where Instagram and TikTok are; "Copia testo" copies the caption on its own.
+A push notification says the run finished. On the phone, "Condividi su Instagram o TikTok" copies the caption and opens the share sheet with the video, where Instagram and TikTok are; "Copia testo" copies the caption on its own. For the carousel, "Salva o condividi le immagini" copies its caption and hands all the slides to the share sheet at once, in order: "Salva immagini" puts them in Photos, or Instagram opens with them.
 
 The session does not commit or post anything. Posting on the profile stays a tap, because Instagram and TikTok only publish through their apps or a business API connected to the account.

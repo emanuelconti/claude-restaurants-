@@ -1,4 +1,4 @@
-<title>SocialPerks video del giorno</title>
+<title>SocialPerks post del giorno</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,25 +80,51 @@ details > .reel { margin-top: 16px; }
 .day .what { min-width: 0; }
 .day .when { font-weight: 700; }
 .day .kind { color: var(--muted); font-size: 14px; }
+.day-actions { display: grid; gap: 6px; }
 .day button { min-height: 44px; padding: 10px 14px; font-size: 14px; }
+.carousel { display: grid; gap: 16px; }
+.swipe-wrap { position: relative; }
+.swipe {
+  display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  scrollbar-width: none; border-radius: 22px; -webkit-overflow-scrolling: touch;
+}
+.swipe::-webkit-scrollbar { display: none; }
+.swipe img { flex: 0 0 100%; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 22px; background: var(--line); scroll-snap-align: center; scroll-snap-stop: always; }
+.count { position: absolute; top: 12px; right: 12px; padding: 6px 11px; border-radius: 999px; background: rgba(15, 13, 26, 0.72); color: #fff; font: 700 13px/1 var(--body); pointer-events: none; }
+.dots { display: flex; justify-content: center; gap: 6px; }
+.dots span { width: 7px; height: 7px; border-radius: 999px; background: var(--line); transition: background .2s, width .2s; }
+.dots span.on { width: 18px; background: var(--accent); }
+.carousel-title { font: 700 1.05rem/1.3 var(--display); margin: 0; }
 .empty { padding: 24px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
 @media (prefers-reduced-motion: no-preference) { button { transition: transform .12s ease; } button:active:not(:disabled) { transform: scale(0.98); } }
 </style>
 
 <main class="page" id="app">
   <header>
-    <p class="eyebrow">Video del giorno</p>
-    <h1 id="when">Il video di oggi</h1>
+    <p class="eyebrow">Post del giorno</p>
+    <h1 id="when">I post di oggi</h1>
     <div class="chips" id="chips"></div>
   </header>
   <section class="reel" id="today" aria-labelledby="today-title"></section>
   <section aria-labelledby="how-title" style="display:grid;gap:14px">
-    <h2 id="how-title">Come pubblicarlo</h2>
+    <h2 id="how-title">Come pubblicare il video</h2>
     <ol class="steps">
       <li><span><strong>Tocca «Condividi su Instagram o TikTok».</strong> Si apre la condivisione del telefono: scegli Instagram (Reel) o TikTok. Il testo si copia da solo.</span></li>
       <li><span><strong>Incolla il testo</strong> come didascalia.</span></li>
       <li><span><strong>Pubblica</strong> come Reel su Instagram e, con lo stesso pulsante, anche su TikTok. La versione inglese è qui sotto, se ti serve.</span></li>
       <li><span><strong>La musica la scegli tu.</strong> Il video non ha musica, solo l'effetto dei tagli: in Instagram o TikTok tocca l'icona della musica e scegli un brano di tendenza (solo lì è legale). I tagli cadono a 120 battiti al minuto, il ritmo di molti brani di tendenza. Da account business molti brani non compaiono, da account creator sì.</span></li>
+    </ol>
+  </section>
+  <section class="carousel" aria-labelledby="carousel-title" id="carousel-section" hidden>
+    <div>
+      <p class="eyebrow" id="carousel-title">Carosello del giorno</p>
+      <p class="carousel-title" id="carousel-name"></p>
+    </div>
+    <div id="carousel"></div>
+    <ol class="steps">
+      <li><span><strong>Tocca «Salva o condividi le immagini».</strong> Si apre la condivisione del telefono: scegli «Salva immagini» (finiscono in Foto, già in ordine) oppure direttamente Instagram. Il testo si copia da solo.</span></li>
+      <li><span><strong>Su Instagram</strong> tocca +, poi Post, seleziona più foto e scegli le slide nell'ordine, dalla 1 all'ultima.</span></li>
+      <li><span><strong>Incolla il testo</strong> e pubblica. Se vuoi, aggiungi un brano dalla libreria di Instagram.</span></li>
     </ol>
   </section>
   <details id="english">
@@ -144,6 +170,82 @@ details > .reel { margin-top: 16px; }
       files.get(id).catch(() => files.delete(id));
     }
     return files.get(id);
+  }
+  function imageFile(id, filename) {
+    const key = "img:" + id;
+    if (!files.has(key)) {
+      files.set(key, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); })
+        .then((b) => new File([b], filename, { type: "image/jpeg" })));
+      files.get(key).catch(() => files.delete(key));
+    }
+    return files.get(key);
+  }
+  function slideFiles(day) {
+    return Promise.all(day.carousel.slides.map((id, i) => imageFile(id, `socialperks-${day.date}-${String(i + 1).padStart(2, "0")}.jpg`)));
+  }
+  // The slides go to the share sheet together, in order, so «Salva immagini»
+  // puts them in Photos as one set; where only `downloads` is there, one by one.
+  async function shareSlides(day, button) {
+    const label = button.dataset.label;
+    let copied = false;
+    const caption = day.carousel.caption || "";
+    if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
+    button.disabled = true;
+    button.textContent = "Preparo le immagini…";
+    try {
+      const list = await slideFiles(day);
+      let shared = false;
+      if (navigator.canShare && navigator.share) {
+        try {
+          if (navigator.canShare({ files: list })) {
+            await navigator.share({ files: list });
+            shared = true;
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") { button.textContent = label; return; }
+        }
+      }
+      if (!shared) {
+        if (!downloads) throw new Error("unavailable");
+        for (const file of list) await downloads.save({ filename: file.name, data: file });
+      }
+      button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
+    } catch (error) {
+      if (error && error.code === "declined") button.textContent = label;
+      else {
+        button.textContent = "Non è partito, riprova";
+        document.getElementById("save-note").hidden = false;
+      }
+    } finally {
+      button.disabled = false;
+      if (button.textContent !== label) setTimeout(() => { button.textContent = label; }, 3500);
+    }
+  }
+  function slidesButton(day, label, primary) {
+    const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
+    button.dataset.label = label;
+    button.addEventListener("click", () => shareSlides(day, button));
+    return button;
+  }
+  function carousel(target, day) {
+    const slides = day.carousel.slides;
+    const track = el("div", { class: "swipe", tabindex: "0", "aria-label": `Carosello, ${slides.length} immagini: scorri` });
+    slides.forEach((id, i) => track.append(el("img", { src: blob(id), alt: i === 0 ? day.carousel.title : `Slide ${i + 1} di ${slides.length}`, loading: i < 2 ? "eager" : "lazy", decoding: "async" })));
+    const count = el("span", { class: "count", text: `1/${slides.length}` });
+    const dots = el("div", { class: "dots", "aria-hidden": "true" });
+    slides.forEach((_, i) => dots.append(el("span", { class: i === 0 ? "on" : "" })));
+    track.addEventListener("scroll", () => {
+      const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth + 10));
+      count.textContent = `${Math.min(i + 1, slides.length)}/${slides.length}`;
+      [...dots.children].forEach((d, j) => d.classList.toggle("on", j === i));
+    }, { passive: true });
+    const text = day.carousel.caption || "";
+    const area = el("p", { class: "caption", text });
+    target.append(
+      el("div", { class: "swipe-wrap" }, track, count), dots,
+      el("div", { class: "actions" }, slidesButton(day, `Salva o condividi le ${slides.length} immagini`, true), copyButton(text, area)),
+      area,
+    );
   }
   async function share(id, filename, caption, button) {
     const label = button.dataset.label;
@@ -221,9 +323,14 @@ details > .reel { margin-top: 16px; }
     const chips = document.getElementById("chips");
     for (const label of [today.place, today.format, "Spagnolo"]) chips.append(el("span", { class: "chip", text: label }));
     const section = document.getElementById("today");
-    section.append(el("h2", { id: "today-title", class: "eyebrow", text: "Da pubblicare oggi" }));
+    section.append(el("h2", { id: "today-title", class: "eyebrow", text: "Video del giorno" }));
     reel(section, today, "es");
     reel(document.getElementById("today-en"), today, "en");
+    if (today.carousel && today.carousel.slides && today.carousel.slides.length) {
+      document.getElementById("carousel-section").hidden = false;
+      document.getElementById("carousel-name").textContent = today.carousel.title;
+      carousel(document.getElementById("carousel"), today);
+    }
     const week = document.getElementById("week");
     const earlier = days.slice(1);
     if (!earlier.length) document.getElementById("week-section").hidden = true;
@@ -233,7 +340,9 @@ details > .reel { margin-top: 16px; }
         el("div", { class: "what" },
           el("div", { class: "when", text: dateLabel(day.date, { weekday: "short", day: "numeric", month: "short" }) }),
           el("div", { class: "kind", text: `${day.place} · ${day.format}` })),
-        shareButton(day.es, `socialperks-${day.date}-es.mp4`, (day.caption && day.caption.es) || "", "Condividi", false)));
+        el("div", { class: "day-actions" },
+          shareButton(day.es, `socialperks-${day.date}-es.mp4`, (day.caption && day.caption.es) || "", "Video", false),
+          day.carousel && day.carousel.slides && day.carousel.slides.length ? slidesButton(day, "Carosello", false) : null)));
     }
   }
 
