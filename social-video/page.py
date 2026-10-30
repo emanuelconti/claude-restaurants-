@@ -66,15 +66,22 @@ def previous_days(path: str | None) -> list:
 
 def ids_of(day: dict) -> set:
     ids = {day.get(key) for key in ("es", "en", "cover") if day.get(key)}
-    return ids | set((day.get("carousel") or {}).get("slides") or [])
+    return ids | {i for c in carousels_of(day) for i in c.get("slides") or []}
 
 
-def carousel_of(folder: str, slide_ids: list) -> dict:
+def carousels_of(day: dict) -> list:
+    """A day's carousels, in slot order; days written before there were several kept one as "carousel"."""
+    if "carousels" in day:
+        return [c for c in day["carousels"] if c]
+    return [day["carousel"]] if day.get("carousel") else []
+
+
+def carousel_of(folder: str, slide_ids: list, slot: int) -> dict:
     """The day's carousel as the page shows it: the slides' asset ids, in order, its title and caption."""
-    meta = json.load(open(os.path.join(folder, "carousel", "carousel.json"), encoding="utf-8"))
+    meta = json.load(open(os.path.join(folder, f"carousel-{slot}", "carousel.json"), encoding="utf-8"))
     if len(slide_ids) != len(meta["slides"]):
         sys.exit(f"--carousel-ids has {len(slide_ids)} ids for {len(meta['slides'])} slides")
-    return {"title": meta["title"], "caption": meta["caption"], "slides": slide_ids}
+    return {"slot": slot, "title": meta["title"], "caption": meta["caption"], "slides": slide_ids}
 
 
 def main():
@@ -83,6 +90,7 @@ def main():
     ap.add_argument("--ids", default=None, help='{"es": id, "en": id, "cover": id}; leave out to keep the day\'s video already on the page')
     ap.add_argument("--carousel-ids", default=None, help="the slides' asset ids, in slide order (JSON list)")
     ap.add_argument("--carousel-link", default=None, help="the Instagram post, when ig_publish.py already published it")
+    ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels --carousel-ids and --carousel-link are")
     ap.add_argument("--previous", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     args = ap.parse_args()
@@ -97,13 +105,17 @@ def main():
     if args.ids:
         ids = json.loads(args.ids)
         today.update(es=ids["es"], en=ids["en"], cover=ids.get("cover"), caption=captions(folder))
+    # Up to three carousels a day, each in its slot; a re-run of a slot replaces it.
+    slots = {c.get("slot", 1): c for c in carousels_of(today)}
     if args.carousel_ids:
-        today["carousel"] = carousel_of(folder, json.loads(args.carousel_ids))
-    # A day can be a carousel alone (the owner, 30 October: carousels only for now).
-    if not today.get("es") and not today.get("carousel"):
+        slots[args.slot] = carousel_of(folder, json.loads(args.carousel_ids), args.slot)
+    if args.carousel_link and args.slot in slots:
+        slots[args.slot]["permalink"] = args.carousel_link
+    today.pop("carousel", None)
+    today["carousels"] = [slots[k] for k in sorted(slots)]
+    # A day can be carousels alone (the owner, 30 October: carousels only for now).
+    if not today.get("es") and not today["carousels"]:
         sys.exit("--ids or --carousel-ids is needed: the page has nothing for this day yet")
-    if args.carousel_link and today.get("carousel"):
-        today["carousel"]["permalink"] = args.carousel_link
     days = [today] + [d for d in before if d.get("date") != today["date"]]
     days.sort(key=lambda d: d["date"], reverse=True)
     kept = days[:KEEP_DAYS]

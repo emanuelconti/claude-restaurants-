@@ -125,8 +125,10 @@ def main():
     ap.add_argument("--base-url", default=None, help="public folder URL that holds slide-01.jpg ...")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--check-token", action="store_true", help="say which account the token reaches, and stop")
+    ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels (out/<date>/carousel-<slot>)")
+    ap.add_argument("--recent", type=int, default=0, metavar="N", help="print the first line of the last N posts' captions, and stop")
     args = ap.parse_args()
-    if not args.check_token and not (args.date and args.base_url):
+    if not (args.check_token or args.recent) and not (args.date and args.base_url):
         ap.error("--date and --base-url are needed to publish")
 
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
@@ -135,6 +137,15 @@ def main():
     global API
     if token.startswith("EAA"):
         API = "https://graph.facebook.com/v21.0"
+    if args.recent:
+        try:
+            user, _ = account(token)
+            posts = call("GET", f"{user}/media", token, {"fields": "caption,timestamp", "limit": min(args.recent, 100)}).get("data", [])
+        except ApiError as error:
+            sys.exit(f"Instagram: {error}")
+        for post in posts:
+            print(f"{post.get('timestamp', '')[:10]}  {(post.get('caption') or '').split(chr(10), 1)[0].strip()}")
+        return
     if args.check_token:
         try:
             user, username = account(token)
@@ -143,7 +154,7 @@ def main():
             sys.exit(f"Instagram: {error}")
         print(f"token ok: @{username} ({user}), {len(can.get('data', []))} recent post read, publishing not tried")
         return
-    folder = os.path.join(args.out, args.date, "carousel")
+    folder = os.path.join(args.out, args.date, f"carousel-{args.slot}")
     meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
     slides = meta["slides"][:MAX_SLIDES]
     base = args.base_url if args.base_url.endswith("/") else args.base_url + "/"

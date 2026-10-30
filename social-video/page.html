@@ -95,6 +95,10 @@ details > .reel { margin-top: 16px; }
 .dots span { width: 7px; height: 7px; border-radius: 999px; background: var(--line); transition: background .2s, width .2s; }
 .dots span.on { width: 18px; background: var(--accent); }
 .carousel-title { font: 700 1.05rem/1.3 var(--display); margin: 0; }
+.carousels { display: grid; gap: 32px; }
+.carousels > article { display: grid; gap: 14px; }
+.posted { margin: 0; font-size: 14px; color: var(--ok); font-weight: 600; }
+.posted a { color: inherit; }
 [hidden] { display: none !important; }
 .empty { padding: 24px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
 @media (prefers-reduced-motion: no-preference) { button { transition: transform .12s ease; } button:active:not(:disabled) { transform: scale(0.98); } }
@@ -107,19 +111,10 @@ details > .reel { margin-top: 16px; }
     <div class="chips" id="chips"></div>
   </header>
   <section class="carousel" aria-labelledby="carousel-title" id="carousel-section" hidden>
-    <div>
-      <p class="eyebrow" id="carousel-title">Carosello del giorno</p>
-      <p class="carousel-title" id="carousel-name"></p>
-    </div>
-    <div id="carousel"></div>
+    <p class="eyebrow" id="carousel-title">Caroselli di oggi</p>
+    <div id="carousels" class="carousels"></div>
     <p class="note" id="zip-note" hidden>Dall'app Claude arriva un unico file ZIP con tutte le slide: aprilo in File (si apre una cartella), tocca Seleziona, poi Seleziona tutto, Condividi e «Salva immagini». Oppure apri questa pagina in Safari: lì le slide vanno direttamente in Foto.</p>
-    <p class="note" id="ig-done" hidden></p>
-    <ol class="steps">
-      <li><span><strong>Tocca «Salva o condividi le immagini».</strong> Si apre la condivisione del telefono: scegli «Salva immagini» (finiscono in Foto, già in ordine) oppure direttamente Instagram. Il testo si copia da solo.</span></li>
-      <li><span><strong>Su Instagram</strong> tocca +, poi Post, seleziona più foto e scegli le slide nell'ordine, dalla 1 all'ultima.</span></li>
-      <li><span><strong>Aggiungi la musica:</strong> tocca la nota musicale e scegli un suono di tendenza dalla libreria di Instagram (solo lì è legale, e i caroselli con musica finiscono anche tra i Reel).</span></li>
-      <li><span><strong>Incolla il testo</strong> e pubblica. Se alle 19:30 non c'è ancora, lo pubblico io senza musica; se l'hai già pubblicato con questo testo, me ne accorgo e non lo ripeto.</span></li>
-    </ol>
+    <p class="note">Si pubblicano da soli su Instagram, uno la mattina, uno a pranzo e uno la sera: qui arrivano man mano, con il link al post. Il pulsante serve se li vuoi anche su TikTok: salva le slide, poi su TikTok tocca +, Foto, scegli le slide in ordine e incolla il testo.</p>
   </section>
   <section class="reel" id="today" aria-labelledby="today-title"></section>
   <section aria-labelledby="how-title" style="display:grid;gap:14px" id="how-section">
@@ -184,8 +179,11 @@ details > .reel { margin-top: 16px; }
     }
     return files.get(key);
   }
-  function slideFiles(day) {
-    return Promise.all(day.carousel.slides.map((id, i) => imageFile(id, `socialperks-${day.date}-${String(i + 1).padStart(2, "0")}.jpg`)));
+  // A day's carousels; days written before there were several kept one as `carousel`.
+  const carouselsOf = (day) => (day.carousels || (day.carousel ? [day.carousel] : [])).filter((c) => c && c.slides && c.slides.length);
+  function slideFiles(day, car) {
+    const slot = car.slot || 1;
+    return Promise.all(car.slides.map((id, i) => imageFile(id, `socialperks-${day.date}-${slot}-${String(i + 1).padStart(2, "0")}.jpg`)));
   }
   // A ZIP with no compression (JPEGs do not shrink): local headers, the
   // central directory and its end record, as the format describes.
@@ -228,15 +226,15 @@ details > .reel { margin-top: 16px; }
   // puts them in Photos as one set. Inside the Claude app a page can hand over
   // only one file, so there they travel as one ZIP: Files opens it into a
   // folder, and from there all the slides share at once.
-  async function shareSlides(day, button) {
+  async function shareSlides(day, car, button) {
     const label = button.dataset.label;
     let copied = false;
-    const caption = day.carousel.caption || "";
+    const caption = car.caption || "";
     if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
     button.disabled = true;
     button.textContent = "Preparo le immagini…";
     try {
-      const list = await slideFiles(day);
+      const list = await slideFiles(day, car);
       let shared = false;
       if (navigator.canShare && navigator.share) {
         try {
@@ -250,7 +248,7 @@ details > .reel { margin-top: 16px; }
       }
       if (!shared) {
         if (!downloads) throw new Error("unavailable");
-        await downloads.save({ filename: `socialperks-${day.date}-carosello.zip`, data: await zipOf(list) });
+        await downloads.save({ filename: `socialperks-${day.date}-carosello-${car.slot || 1}.zip`, data: await zipOf(list) });
         document.getElementById("zip-note").hidden = false;
       }
       button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
@@ -265,16 +263,16 @@ details > .reel { margin-top: 16px; }
       if (button.textContent !== label) setTimeout(() => { button.textContent = label; }, 3500);
     }
   }
-  function slidesButton(day, label, primary) {
+  function slidesButton(day, car, label, primary) {
     const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
     button.dataset.label = label;
-    button.addEventListener("click", () => shareSlides(day, button));
+    button.addEventListener("click", () => shareSlides(day, car, button));
     return button;
   }
-  function carousel(target, day) {
-    const slides = day.carousel.slides;
+  function carousel(target, day, car) {
+    const slides = car.slides;
     const track = el("div", { class: "swipe", tabindex: "0", "aria-label": `Carosello, ${slides.length} immagini: scorri` });
-    slides.forEach((id, i) => track.append(el("img", { src: blob(id), alt: i === 0 ? day.carousel.title : `Slide ${i + 1} di ${slides.length}`, loading: i < 2 ? "eager" : "lazy", decoding: "async" })));
+    slides.forEach((id, i) => track.append(el("img", { src: blob(id), alt: i === 0 ? car.title : `Slide ${i + 1} di ${slides.length}`, loading: i < 2 ? "eager" : "lazy", decoding: "async" })));
     const count = el("span", { class: "count", text: `1/${slides.length}` });
     const dots = el("div", { class: "dots", "aria-hidden": "true" });
     slides.forEach((_, i) => dots.append(el("span", { class: i === 0 ? "on" : "" })));
@@ -283,13 +281,17 @@ details > .reel { margin-top: 16px; }
       count.textContent = `${Math.min(i + 1, slides.length)}/${slides.length}`;
       [...dots.children].forEach((d, j) => d.classList.toggle("on", j === i));
     }, { passive: true });
-    const text = day.carousel.caption || "";
+    const text = car.caption || "";
     const area = el("p", { class: "caption", text });
-    target.append(
+    const posted = car.permalink
+      ? el("p", { class: "posted" }, "Pubblicato su Instagram: ", el("a", { href: car.permalink, target: "_blank", rel: "noopener", text: "apri il post" }))
+      : null;
+    target.append(el("article", {},
+      el("p", { class: "carousel-title", text: car.title }), posted,
       el("div", { class: "swipe-wrap" }, track, count), dots,
-      el("div", { class: "actions" }, slidesButton(day, `Salva o condividi le ${slides.length} immagini`, true), copyButton(text, area)),
+      el("div", { class: "actions" }, slidesButton(day, car, `Salva o condividi le ${slides.length} immagini`, !car.permalink), copyButton(text, area)),
       area,
-    );
+    ));
   }
   async function share(id, filename, caption, button) {
     const label = button.dataset.label;
@@ -375,30 +377,26 @@ details > .reel { margin-top: 16px; }
     } else {
       for (const id of ["today", "how-section", "english"]) document.getElementById(id).hidden = true;
     }
-    if (today.carousel && today.carousel.slides && today.carousel.slides.length) {
+    const todays = carouselsOf(today);
+    if (todays.length) {
       document.getElementById("carousel-section").hidden = false;
-      document.getElementById("carousel-name").textContent = today.carousel.title;
-      carousel(document.getElementById("carousel"), today);
-      if (today.carousel.permalink) {
-        const done = document.getElementById("ig-done");
-        done.hidden = false;
-        done.append("Già pubblicato su Instagram: ", el("a", { href: today.carousel.permalink, target: "_blank", rel: "noopener", text: "apri il post" }), ".");
-      }
+      if (todays.length === 1) document.getElementById("carousel-title").textContent = "Carosello di oggi";
+      for (const car of todays) carousel(document.getElementById("carousels"), today, car);
     }
     const week = document.getElementById("week");
     const earlier = days.slice(1);
     if (!earlier.length) document.getElementById("week-section").hidden = true;
     for (const day of earlier) {
-      const slides = day.carousel && day.carousel.slides && day.carousel.slides.length ? day.carousel.slides : null;
-      const first = day.cover || (slides && slides[0]);
+      const cars = carouselsOf(day);
+      const first = day.cover || (cars[0] && cars[0].slides[0]);
       const thumb = first ? el("img", { src: blob(first), alt: "" }) : el("img", { alt: "" });
       week.append(el("li", { class: "day" }, thumb,
         el("div", { class: "what" },
           el("div", { class: "when", text: dateLabel(day.date, { weekday: "short", day: "numeric", month: "short" }) }),
-          el("div", { class: "kind", text: day.es ? `${day.place} · ${day.format}` : day.carousel.title })),
+          el("div", { class: "kind", text: day.es ? `${day.place} · ${day.format}` : cars.map((c) => c.title).join(" · ") })),
         el("div", { class: "day-actions" },
           day.es ? shareButton(day.es, `socialperks-${day.date}-es.mp4`, (day.caption && day.caption.es) || "", "Video", false) : null,
-          slides ? slidesButton(day, "Carosello", false) : null)));
+          ...cars.map((c, i) => slidesButton(day, c, cars.length > 1 ? `Carosello ${i + 1}` : "Carosello", false)))));
     }
   }
 

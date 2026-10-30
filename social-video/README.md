@@ -57,6 +57,10 @@ INSTAGRAM_ACCESS_TOKEN=... python3 social-video/ig_publish.py --date 2026-10-31 
 
 Instagram fetches each image from a public URL, so the daily run first force-pushes the day's slides to the `daily-posts` branch (one commit, only that day, so the branch never grows). The token comes from the Meta app's dashboard (Instagram API with Instagram Login, permissions `instagram_business_basic` and `instagram_business_content_publish`), lasts 60 days, and lives in the cloud environment's settings as `INSTAGRAM_ACCESS_TOKEN`, never in the repository. Without it the run skips this step and the page works as before. It never posts the same caption twice, and the page shows the link to the post once it is up.
 
+### Three a day, written fresh
+
+Since 30 October the profile posts carousels only, three a day, all published by the scheduled runs themselves: at 08:47, 13:13 and 20:41, Madrid time. Each run writes a new topic following `STYLE.md` (the hook, the angles that make people see themselves, what never to say), checks the last posts so it never repeats one (`ig_publish.py --recent 60`), renders it with `carousel.py --slot <n> --topic <file>`, publishes it and adds it to the day on the page, with the link to the post. If writing fails, the slot falls back to the written bank in `carousels.py`. The daily video is paused until the owner asks for it back.
+
 ## Requirements
 
 You need Python 3 with Pillow and numpy, ffmpeg with libx264, and internet access to `images.unsplash.com` for the photos. If a photo cannot be fetched, the video uses the day's colours instead, so a video always comes out. Downloaded photos are cached in `social-video/.cache`.

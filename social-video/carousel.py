@@ -195,9 +195,9 @@ def slide_cta() -> Image.Image:
     return img.convert("RGB")
 
 
-def render(date: dt.date, out: str, cache: str) -> dict:
-    car = C.carousel(date, PHOTOS)
-    folder = os.path.join(out, car["date"], "carousel")
+def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | None = None) -> dict:
+    car = C.carousel(date, PHOTOS, slot, topic)
+    folder = os.path.join(out, car["date"], f"carousel-{slot}")
     os.makedirs(folder, exist_ok=True)
     slides = [slide_cover(car["title"], car["photos"][0], cache)]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
@@ -208,7 +208,7 @@ def render(date: dt.date, out: str, cache: str) -> dict:
         name = f"slide-{i:02d}.jpg"
         im.save(os.path.join(folder, name), "JPEG", quality=90, optimize=True, progressive=True)
         names.append(name)
-    meta = dict(date=car["date"], title=car["title"], slides=names, caption=car["caption"])
+    meta = dict(date=car["date"], slot=slot, title=car["title"], slides=names, caption=car["caption"])
     with open(os.path.join(folder, "carousel.json"), "w", encoding="utf-8") as fh:
         json.dump(meta, fh, ensure_ascii=False, indent=1)
     return dict(meta, folder=folder)
@@ -219,9 +219,17 @@ def main():
     ap.add_argument("--date", default=None, help="YYYY-MM-DD; default today in Madrid")
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--cache", default=os.path.join(HERE, ".cache"))
+    ap.add_argument("--slot", type=int, default=1, choices=range(1, C.SLOTS + 1), help="which of the day's carousels")
+    ap.add_argument("--topic", default=None, help="a topic written for this run (JSON, as in carousels.py); else the written bank")
     args = ap.parse_args()
     date = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(ZoneInfo("Europe/Madrid")).date()
-    meta = render(date, args.out, args.cache)
+    topic = None
+    if args.topic:
+        topic = json.load(open(args.topic, encoding="utf-8"))
+        errors = C.check_topic(topic)
+        if errors:
+            sys.exit("the topic needs fixing:\n- " + "\n- ".join(errors))
+    meta = render(date, args.out, args.cache, args.slot, topic)
     print(f"{meta['date']}: {meta['title']}")
     for name in meta["slides"]:
         print(f"  {os.path.join(meta['folder'], name)}")

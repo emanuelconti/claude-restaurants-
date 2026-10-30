@@ -359,17 +359,59 @@ CTA = dict(
 )
 
 
-def carousel(date: _dt.date, venue_photos: list) -> dict:
-    """The day's topic, with one photo per slide (cover first), the same every time for a date."""
-    # One business topic, then one about life, day after day, each list in its own cycle.
-    n = (date - EPOCH).days
-    topic = BUSINESS[(n // 2) % len(BUSINESS)] if n % 2 == 0 else LIFE[(n // 2) % len(LIFE)]
-    rng = _random.Random(date.toordinal())
+SLOTS = 3  # carousels a day (the owner, 30 October: "almeno 2 o 3 al giorno")
+
+
+def check_topic(topic: dict) -> list:
+    """What is wrong with a topic written for a run, in words a writer can fix; empty if nothing."""
+    errors = []
+    def text(value, name, most):
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{name} is missing")
+        elif len(value) > most:
+            errors.append(f"{name} has {len(value)} characters, at most {most}: {value!r}")
+        elif "\u2014" in value or "\u2013" in value:
+            errors.append(f"{name} has a dash; use a colon, a full stop or a comma: {value!r}")
+        elif "perk" in value.lower() and "socialperks" not in value.lower():
+            errors.append(f"{name} says 'perk', never used in Spanish copy: {value!r}")
+    text(topic.get("title"), "title", 90)
+    text(topic.get("hook"), "hook", 120)
+    points = topic.get("points")
+    if not isinstance(points, list) or not 5 <= len(points) <= 8:
+        errors.append("points must be a list of 5 to 8 points")
+        points = []
+    for i, point in enumerate(points, 1):
+        if not (isinstance(point, (list, tuple)) and len(point) == 3 and isinstance(point[1], list)):
+            errors.append(f"point {i} must be [heading, [line, line], closing line]")
+            continue
+        heading, lines, punch = point
+        text(heading, f"point {i} heading", 52)
+        if not 1 <= len(lines) <= 2:
+            errors.append(f"point {i} needs 1 or 2 lines")
+        for j, line in enumerate(lines, 1):
+            text(line, f"point {i} line {j}", 95)
+        text(punch, f"point {i} closing line", 75)
+    if topic.get("photos", "venue") not in list(PHOTO_SETS) + ["venue"]:
+        errors.append(f"photos must be one of {sorted(PHOTO_SETS) + ['venue']}")
+    return errors
+
+
+def bank_topic(date: _dt.date, slot: int = 1) -> dict:
+    """A written topic for a date and slot, when a run has none of its own: business and life take turns."""
+    n = (date - EPOCH).days * SLOTS + (slot - 1)
+    return BUSINESS[(n // 2) % len(BUSINESS)] if n % 2 == 0 else LIFE[(n // 2) % len(LIFE)]
+
+
+def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | None = None) -> dict:
+    """The slides' content for a date and slot, with one photo per slide (cover first), the same every time."""
+    topic = topic or bank_topic(date, slot)
+    rng = _random.Random(date.toordinal() * 10 + slot)
     pool = list(PHOTO_SETS.get(topic.get("photos"), venue_photos))
     rng.shuffle(pool)
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
-    caption = f"{topic['hook']}\n\n{CAPTION_TAIL}\n\n{HASHTAGS}"
+    # The title opens the caption, so the next runs can see what was already posted.
+    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{CAPTION_TAIL}\n\n{HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
-    return dict(date=date.isoformat(), title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption)
+    return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption)
