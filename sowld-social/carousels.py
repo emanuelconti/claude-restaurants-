@@ -139,7 +139,7 @@ EVERYDAY = [
             ("The photos say more than the description", ["The description is written to sell.", "The photos are not."], "One blurry shot of exactly the part that matters is never an accident."),
             ("The lowest price is rarely the deal", ["It is usually the listing with something wrong.", "Or something left unsaid."], "The real find sits in the middle of the list, not at the bottom."),
             ("You learn to ask", ["\"Does everything work? Any faults the photos miss?\"", "How they answer matters as much as what."], "Silence is an answer too."),
-            ("Retail price means nothing", ["\"It was 900 new\" tells you nothing about today.", "Only similar listings on sale right now do."], "What a used thing is worth is set by its market, not by its receipt."),
+            ("Retail price means nothing", ["\"It was £900 new\" tells you nothing about today.", "Only similar listings on sale right now do."], "What a used thing is worth is set by its market, not by its receipt."),
             ("Your first bad buy", ["It happens to everyone.", "It costs little and teaches a lot."], "Nobody gets good at this without getting burned once."),
             ("The feeling is different", ["It is not only about spending less.", "It is about having found it."], "Buying is easy. Finding is something else."),
         ],
