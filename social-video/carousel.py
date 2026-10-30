@@ -195,6 +195,26 @@ def slide_cta() -> Image.Image:
     return img.convert("RGB")
 
 
+def slide_follow() -> Image.Image:
+    """The last slide of every carousel: what the page gives, and to follow it."""
+    img = Image.new("RGBA", (W, H), INK + (255,))
+    d = ImageDraw.Draw(img)
+    tile = D.rounded((150, 150), 38, WHITE + (255,))
+    tile.alpha_composite(D.mark(110), (20, 20))
+    img.alpha_composite(tile, ((W - 150) // 2, 250))
+    f, lines, size = fit(C.FOLLOW["title"], 92, 64, TEXT_W, 3, 800, D.DISPLAY)
+    y = centred(d, lines, f, 450, WHITE, 1.06) + 36
+    bf = D.font(40, 500, D.BODY)
+    body = [w for line in C.FOLLOW["lines"] for w in wrap(line, bf, TEXT_W)]
+    y = centred(d, body, bf, y, (200, 200, 214), 1.4) + 60
+    pill = D.pill(C.FOLLOW["pill"], 46, INK, YELLOW + (255,), weight=800)
+    img.alpha_composite(pill, ((W - pill.width) // 2, int(y)))
+    sf = D.font(30, 500, D.BODY)
+    small = D.wrap_lines(C.FOLLOW["small"], sf, TEXT_W)
+    centred(d, small, sf, H - 110 - sf.size * 1.4 * (len(small) - 1), (160, 160, 176), 1.4)
+    return img.convert("RGB")
+
+
 def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | None = None) -> dict:
     car = C.carousel(date, PHOTOS, slot, topic)
     folder = os.path.join(out, car["date"], f"carousel-{slot}")
@@ -204,6 +224,7 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
         slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
     if car["cta"]:
         slides.append(slide_cta())
+    slides.append(slide_follow())
     names = []
     for i, im in enumerate(slides, 1):
         name = f"slide-{i:02d}.jpg"

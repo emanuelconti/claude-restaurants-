@@ -435,9 +435,21 @@ EVERYDAY = [
     ),
 ]
 
-CAPTION_SAVE = "Guárdalo y mándaselo a quien lo necesite."
+# What the page promises, so people follow it (the owner, 30 October: they
+# must come away pushed, focused, motivated, and understand that following
+# the page does that for them every day).
+HANDLE = "@socialperks.es"
+CAPTION_FOLLOW = f"Síguenos ({HANDLE}): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite."
 CAPTION_SHARE = "¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com"
-HASHTAGS = "#barcelona #vidareal #humor #planes #amigos #findesemana #españa"
+HASHTAGS = "#motivacion #mentalidad #habitos #vidareal #barcelona #productividad #bienestar"
+
+# The last slide of every carousel: why to follow.
+FOLLOW = dict(
+    title="Un empujón para tu día, cada día.",
+    lines=["Ideas cortas para tu cabeza, tu rutina y tus ganas."],
+    pill=f"Síguenos · {HANDLE}",
+    small="Guárdalo para el día que lo necesites.",
+)
 
 # The last slide, only for topics with "cta": the friend side of SocialPerks.
 CTA = dict(
@@ -505,7 +517,7 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     picks = (pool * (need // len(pool) + 1))[:need]
     # The title opens the caption, so the next runs can see what was already posted.
     cta = bool(topic.get("cta"))
-    tail = CAPTION_SHARE if cta else CAPTION_SAVE
+    tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_SHARE}" if cta else CAPTION_FOLLOW
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
