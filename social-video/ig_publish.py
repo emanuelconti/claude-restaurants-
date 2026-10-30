@@ -193,13 +193,19 @@ def main():
     ap.add_argument("--check-token", action="store_true", help="say which account the token reaches, and stop")
     ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels (out/<date>/carousel-<slot>)")
     ap.add_argument("--recent", type=int, default=0, metavar="N", help="print the first line of the last N posts' captions, and stop")
+    ap.add_argument("--token-env", default="INSTAGRAM_ACCESS_TOKEN", help="the environment variable holding the token (one per account, e.g. INSTAGRAM_TOKEN_SOWLD)")
+    ap.add_argument("--ig-id", default=None, help="the Instagram account id, as the Meta app's dashboard shows it; needed for any account but @socialperks.es")
     args = ap.parse_args()
     if not (args.check_token or args.recent) and not (args.date and (args.base_url or args.upload)):
         ap.error("--date and --upload (or --base-url) are needed to publish")
 
-    token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
+    token = os.environ.get(args.token_env, "").strip()
     if not token:
-        sys.exit("INSTAGRAM_ACCESS_TOKEN is not set: nothing published")
+        sys.exit(f"{args.token_env} is not set: nothing published")
+    if args.ig_id:
+        os.environ["INSTAGRAM_USER_ID"] = args.ig_id
+    elif args.token_env != "INSTAGRAM_ACCESS_TOKEN":
+        sys.exit("--ig-id is needed for an account other than @socialperks.es")
     global API
     if token.startswith("EAA"):
         API = "https://graph.facebook.com/v21.0"
