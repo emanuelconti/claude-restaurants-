@@ -59,7 +59,7 @@ Instagram fetches each image from a public URL, so the daily run first force-pus
 
 ### Three a day, written fresh
 
-Since 30 October the profile posts carousels only, three a day, all published by the scheduled runs themselves: at 08:47, 13:13 and 20:41, Madrid time. Each run writes a new topic following `STYLE.md` (the hook, the angles that make people see themselves, what never to say), checks the last posts so it never repeats one (`ig_publish.py --recent 60`), renders it with `carousel.py --slot <n> --topic <file>`, publishes it and adds it to the day on the page, with the link to the post. If writing fails, the slot falls back to the written bank in `carousels.py`. The daily video is paused until the owner asks for it back.
+Since 30 October the profile posts carousels only, three a day, about everyday life that anybody likes (the owner: never a seller's scene; SocialPerks only on a last slide, and only when the topic is about friends and favourite places). The scheduled runs publish them themselves at 08:47, 13:13 and 20:41, Madrid time. Each run writes a new topic following `STYLE.md`, checks the last posts so it never repeats one (`ig_publish.py --recent 60`), renders it with `carousel.py --slot <n> --topic <file>`, puts the slides on a temporary public host for an hour so Instagram can fetch them (`ig_publish.py --upload`), publishes it and adds it to the day on the page with the link to the post. If writing fails, the slot falls back to the `EVERYDAY` bank in `carousels.py`. The daily video is paused until the owner asks for it back.
 
 ## Requirements
 

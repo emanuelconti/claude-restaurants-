@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Publish the day's carousel on SocialPerks' Instagram, as one post with all its slides.
 
-    python3 ig_publish.py --date 2026-10-31 --base-url https://raw.githubusercontent.com/<owner>/<repo>/daily-posts/2026-10-31/
+    python3 ig_publish.py --date 2026-10-31 --slot 1 --upload       # slides to a temporary public host, then one post
     python3 ig_publish.py --date 2026-10-31 --base-url ... --dry-run   # checks the token and the images, posts nothing
     python3 ig_publish.py --check-token                                # only checks the token reaches the account
 
@@ -107,13 +107,48 @@ def account(token: str) -> tuple:
     return linked[0]["id"], linked[0].get("username", "?")
 
 
+def upload_temporary(path: str) -> str:
+    """Put one slide at a public URL for an hour (litterbox.catbox.moe), long enough for Instagram to fetch it.
+
+    Instagram takes images only from a public URL. A git push from a scheduled
+    run was refused (30 October), so the slides go to a temporary host instead:
+    they are about to be public on Instagram anyway, and vanish after an hour.
+    """
+    boundary = "----socialperks" + os.urandom(8).hex()
+    fields = [("reqtype", "fileupload"), ("time", "1h")]
+    body = b""
+    for name, value in fields:
+        body += f"--{boundary}\r\nContent-Disposition: form-data; name=\"{name}\"\r\n\r\n{value}\r\n".encode()
+    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"fileToUpload\"; filename=\"{os.path.basename(path)}\"\r\n"
+             "Content-Type: image/jpeg\r\n\r\n").encode() + open(path, "rb").read() + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request("https://litterbox.catbox.moe/resources/internals/api.php", data=body, method="POST",
+                                 headers={"Content-Type": f"multipart/form-data; boundary={boundary}", "User-Agent": "socialperks-daily/1.0"})
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=90) as r:
+                url = r.read().decode().strip()
+            if url.startswith("https://"):
+                return url
+        except Exception as error:
+            url = str(error)
+        time.sleep(5)
+    raise ApiError(f"could not upload {os.path.basename(path)} to a temporary host: {url}")
+
+
 def check_public(url: str) -> None:
-    req = urllib.request.Request(url, method="HEAD")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            kind = r.headers.get("Content-Type", "")
-    except Exception as error:
-        raise ApiError(f"{url} is not reachable: {error}") from None
+    """A quick look that the slide is served as a JPEG; a flaky network here only warns, Instagram fetches it itself."""
+    kind, error = "", None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, method="HEAD"), timeout=30) as r:
+                kind = r.headers.get("Content-Type", "")
+            break
+        except Exception as e:
+            error = e
+            time.sleep(3)
+    else:
+        print(f"warning: could not check {url} ({error}); Instagram will fetch it itself", file=sys.stderr)
+        return
     if "image/jpeg" not in kind:
         raise ApiError(f"{url} is served as {kind or 'unknown'}, Instagram needs image/jpeg")
 
@@ -123,13 +158,14 @@ def main():
     ap.add_argument("--date", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--base-url", default=None, help="public folder URL that holds slide-01.jpg ...")
+    ap.add_argument("--upload", action="store_true", help="put the slides on a temporary public host for an hour instead of --base-url")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--check-token", action="store_true", help="say which account the token reaches, and stop")
     ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels (out/<date>/carousel-<slot>)")
     ap.add_argument("--recent", type=int, default=0, metavar="N", help="print the first line of the last N posts' captions, and stop")
     args = ap.parse_args()
-    if not (args.check_token or args.recent) and not (args.date and args.base_url):
-        ap.error("--date and --base-url are needed to publish")
+    if not (args.check_token or args.recent) and not (args.date and (args.base_url or args.upload)):
+        ap.error("--date and --upload (or --base-url) are needed to publish")
 
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     if not token:
@@ -157,15 +193,13 @@ def main():
     folder = os.path.join(args.out, args.date, f"carousel-{args.slot}")
     meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
     slides = meta["slides"][:MAX_SLIDES]
-    base = args.base_url if args.base_url.endswith("/") else args.base_url + "/"
-    urls = [base + name for name in slides]
+    if args.base_url:
+        base = args.base_url if args.base_url.endswith("/") else args.base_url + "/"
+        urls = [base + name for name in slides]
 
     try:
         user, username = account(token)
         print(f"account: @{username}")
-        for url in urls:
-            check_public(url)
-        print(f"{len(urls)} slides are public")
 
         # Never twice: today's caption already on one of the last posts means it is done.
         first_line = meta["caption"].split("\n", 1)[0].strip()
@@ -174,6 +208,12 @@ def main():
         if done:
             print(f"already published: {done.get('permalink')}")
             return
+
+        if args.upload:
+            urls = [upload_temporary(os.path.join(folder, name)) for name in slides]
+        for url in urls:
+            check_public(url)
+        print(f"{len(urls)} slides are public")
         if args.dry_run:
             print("dry run: token and images are fine, nothing published")
             return

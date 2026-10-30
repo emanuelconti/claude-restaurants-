@@ -345,16 +345,105 @@ LIFE = [
 ]
 
 
-CAPTION_TAIL = (
-    "Guárdalo para cuando lo necesites y mándaselo a alguien que tenga un negocio.\n\n"
-    "SocialPerks convierte a tus clientes en embajadores. Sin cuota mensual: solo pagas por clientes nuevos que pagan. socialperkses.com"
-)
-HASHTAGS = "#negociolocal #emprendedores #marketinglocal #bocaaboca #pymes #barcelona #hosteleria #peluqueria"
+# Everyday life, for everyone (the owner, 30 October, after the first posts:
+# "vita quotidiana", things anybody likes, never a seller's scene; SocialPerks
+# only at the end, and only when it fits). These are the fallback when a run
+# cannot write its own; BUSINESS and LIFE above stay as a reference.
+EVERYDAY = [
+    dict(
+        title="Las 7 fases de un domingo por la tarde",
+        hook="La 5 es la que más duele.",
+        photos="life",
+        points=[
+            ("Euforia", ["Comida larga, sobremesa, nadie mira el reloj.", "Esto es vivir."], "Todo va bien. De momento."),
+            ("La siesta que no era siesta", ["«Diez minutitos.»", "Te despiertas a las siete sin saber qué año es."], "El tiempo, en domingo, es otro."),
+            ("La lista mental", ["Lavadora, compra, correos, el gimnasio que no fuiste.", "Todo a la vez, todo ahora."], "El lunes llega antes por la cabeza."),
+            ("Negociar contigo", ["«Mañana empiezo.» «Esta semana sí.»", "Lo dices cada domingo."], "Y cada domingo te crees."),
+            ("Mirar el móvil y ver que son las 23:40", ["Ibas a acostarte pronto.", "Llevas una hora viendo vídeos de perros."], "Nadie sale vivo del scroll."),
+            ("La última serie", ["«Un capítulo más y apago.»", "Spoiler: no apagas."], "El domingo nunca termina cuando debe."),
+            ("La calma rara", ["Silencio en casa, la semana delante.", "Y, sin saber por qué, un poco de ganas."], "Cada lunes es un empezar de nuevo."),
+        ],
+    ),
+    dict(
+        title="Ranking de las 8 peores sensaciones de un lunes por la mañana",
+        hook="La número 1 la has vivido esta semana.",
+        photos="life", countdown=True,
+        points=[
+            ("Ver que llueve", ["Paraguas, zapatos mojados, metro lleno.", "Todo en contra desde las 8:00."], "El lunes con lluvia cuenta doble."),
+            ("Hacer cola para el café", ["Cinco personas delante y tú sin despertar.", "Cada minuto pesa."], "El primer café es sagrado."),
+            ("El metro parado entre estaciones", ["«Retención por incidencia.»", "Y tú ya llegas tarde."], "Respira. A todos nos pasa."),
+            ("Los 47 correos sin leer", ["Abres el portátil y ahí están.", "Todos urgentes. Ninguno lo es."], "Uno a uno. Se sale."),
+            ("Que te pregunten qué tal el finde", ["Y no te acuerdas de nada.", "«Bien, tranquilo.»"], "Mentira piadosa número uno de la semana."),
+            ("La alarma que no oíste", ["Abres los ojos y ya es tarde.", "Ducha en dos minutos."], "Récord personal, eso sí."),
+            ("Mirar el calendario", ["Viernes. Está lejísimos.", "Cuatro días enteros."], "Pero llega. Siempre llega."),
+            ("Despertarte del sueño perfecto", ["Estabas en la playa, sin prisa.", "Y suena el despertador."], "La vuelta a la realidad más dura del mundo."),
+        ],
+    ),
+    dict(
+        title="Cosas que solo entiende quien siempre pide lo mismo",
+        hook="Tú también tienes tu plato de siempre.",
+        photos="venue", cta=True,
+        points=[
+            ("Mirar la carta por educación", ["La abres, la lees, haces como que dudas.", "Y pides lo de siempre."], "La carta es puro teatro."),
+            ("El camarero ya lo sabe", ["Entras y te dice «¿lo de siempre?».", "Sientes que perteneces a algún sitio."], "Pocas cosas dan tanta paz."),
+            ("Probar algo nuevo y arrepentirte", ["Un día te atreves.", "Y miras el plato de tu amigo con envidia."], "Lo de siempre, siempre."),
+            ("Recomendarlo a todo el mundo", ["«Tienes que ir, pide esto.»", "Ya eres embajador sin saberlo."], "Los mejores sitios se descubren por amigos."),
+            ("Que cambien la receta", ["Un drama nacional.", "Lo notas al primer bocado."], "No toques lo que funciona."),
+            ("Llevar a alguien por primera vez", ["Lo miras mientras prueba.", "Como si el sitio fuera tuyo."], "Compartir tu sitio es compartir algo tuyo."),
+        ],
+    ),
+    dict(
+        title="Las 6 frases que dices cada vez que quedas con amigos",
+        hook="La 4 es mentira siempre.",
+        photos="city", cta=True,
+        points=[
+            ("«A ver si quedamos»", ["Lo decimos durante meses.", "Hasta que alguien pone fecha."], "Ese alguien es oro. Sé ese alguien."),
+            ("«¿Dónde vamos?»", ["Diez minutos de propuestas.", "Y acabáis en el sitio de siempre."], "Elegir sitio es el deporte nacional."),
+            ("«Yo conozco uno que está genial»", ["Todos tenemos ese amigo.", "Y nunca falla."], "Las mejores recomendaciones vienen de un amigo."),
+            ("«Solo una y me voy»", ["Primera ronda, segunda, tercera.", "Son las dos de la mañana."], "Nadie se cree esa frase. Ni tú."),
+            ("«Esto hay que repetirlo»", ["Y lo dices en serio.", "Por eso vuelves a quedar."], "Los buenos planes se repiten."),
+            ("«Mándame la ubicación»", ["Para la próxima vez.", "El sitio ya es tuyo también."], "Así se hace un sitio favorito."),
+        ],
+    ),
+    dict(
+        title="8 pequeños placeres que no cuestan casi nada",
+        hook="Guárdalo para un día gris.",
+        photos="life",
+        points=[
+            ("El primer café de la mañana", ["Caliente, sin prisa, en silencio.", "El mundo todavía no ha empezado."], "Cinco minutos que salvan el día."),
+            ("Sábanas recién lavadas", ["Te metes en la cama y huele a limpio.", "Hotel de cinco estrellas en casa."], "Lo simple también es lujo."),
+            ("Encontrar dinero en un abrigo", ["Diez euros del invierno pasado.", "Un regalo de tu yo del pasado."], "Gracias, yo de antes."),
+            ("Que te guarden la mesa", ["Llegas y ya saben dónde te sientas.", "Te sientes en casa fuera de casa."], "Pertenecer a un sitio no tiene precio."),
+            ("El sol de las cinco", ["Esa luz naranja que lo vuelve todo bonito.", "Hasta la calle de siempre."], "Mira arriba de vez en cuando."),
+            ("Un mensaje inesperado", ["«Me he acordado de ti.»", "Y el día cambia."], "Manda tú uno hoy."),
+            ("Salir de la peluquería", ["Te ves en cada escaparate.", "Nueva versión de ti, disponible."], "Un corte cambia el humor de una semana."),
+            ("Llegar a casa y quitarte los zapatos", ["El final oficial del día.", "Nada más importa."], "Te lo has ganado."),
+        ],
+    ),
+    dict(
+        title="Lo que de verdad significa vivir en Barcelona",
+        hook="Si vives aquí, ya lo sabes.",
+        photos="city",
+        points=[
+            ("El mar como plan B", ["¿No sabes qué hacer? Playa.", "En noviembre también."], "Tener el mar cerca lo arregla casi todo."),
+            ("Caminar sin rumbo", ["Gràcia, Born, Poble-sec.", "Cada barrio es otra ciudad."], "Perderse aquí es un plan."),
+            ("La terraza es sagrada", ["Da igual el mes.", "Si hay sol, hay terraza."], "La vida pasa fuera."),
+            ("El vermut del domingo", ["Aceitunas, patatas, conversación.", "Y nadie tiene prisa."], "Algunas tradiciones no se tocan."),
+            ("Turistas en tu calle", ["Maletas a las ocho de la mañana.", "Respiras hondo y sigues."], "Es tu barrio. Sigue siéndolo."),
+            ("Tu sitio de confianza", ["El bar, la peluquería, el café de la esquina.", "Donde te conocen por tu nombre."], "La ciudad es grande. Tu barrio, no."),
+        ],
+    ),
+]
 
+CAPTION_SAVE = "Guárdalo y mándaselo a quien lo necesite."
+CAPTION_SHARE = "¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com"
+HASHTAGS = "#barcelona #vidareal #humor #planes #amigos #findesemana #españa"
+
+# The last slide, only for topics with "cta": the friend side of SocialPerks.
 CTA = dict(
-    title="Convierte a tus clientes en embajadores.",
-    lines=["Comparten su enlace. Sus amigos vienen.", "Tú sabes quién trajo a quién."],
-    small="Sin cuota mensual. Solo pagas por clientes nuevos que pagan.",
+    title="¿Tienes un sitio favorito? Llévate a un amigo.",
+    lines=["En los sitios con SocialPerks, quien llega por tu enlace tiene un detalle de bienvenida."],
+    small="Los mejores sitios se descubren por amigos.",
     url="socialperkses.com",
 )
 
@@ -391,15 +480,19 @@ def check_topic(topic: dict) -> list:
         for j, line in enumerate(lines, 1):
             text(line, f"point {i} line {j}", 95)
         text(punch, f"point {i} closing line", 75)
+    if "hashtags" in topic and not (isinstance(topic["hashtags"], str) and topic["hashtags"].startswith("#") and len(topic["hashtags"]) <= 200):
+        errors.append("hashtags must be one string of up to 200 characters, starting with #")
+    if "cta" in topic and not isinstance(topic["cta"], bool):
+        errors.append("cta must be true or false")
     if topic.get("photos", "venue") not in list(PHOTO_SETS) + ["venue"]:
         errors.append(f"photos must be one of {sorted(PHOTO_SETS) + ['venue']}")
     return errors
 
 
 def bank_topic(date: _dt.date, slot: int = 1) -> dict:
-    """A written topic for a date and slot, when a run has none of its own: business and life take turns."""
+    """A written everyday topic for a date and slot, when a run has none of its own."""
     n = (date - EPOCH).days * SLOTS + (slot - 1)
-    return BUSINESS[(n // 2) % len(BUSINESS)] if n % 2 == 0 else LIFE[(n // 2) % len(LIFE)]
+    return EVERYDAY[n % len(EVERYDAY)]
 
 
 def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | None = None) -> dict:
@@ -411,7 +504,9 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
     # The title opens the caption, so the next runs can see what was already posted.
-    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{CAPTION_TAIL}\n\n{HASHTAGS}"
+    cta = bool(topic.get("cta"))
+    tail = CAPTION_SHARE if cta else CAPTION_SAVE
+    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
-    return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption)
+    return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption, cta=cta)

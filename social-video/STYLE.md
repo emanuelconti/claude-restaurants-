@@ -1,26 +1,33 @@
 # Writing the day's carousel
 
-Each scheduled run writes one new carousel for SocialPerks' Instagram, in Spanish, and publishes it. These are the rules for that topic. The owner's brief (30 October): ultra interesting and likeable, a strong hook, things people see themselves in, never boring, never a sales pitch. Three a day: morning, lunch, evening.
+Each scheduled run writes one new carousel for SocialPerks' Instagram, in Spanish, and publishes it. These are the rules for that topic.
+
+The owner's brief (30 October): everyday life that anybody likes and sees themselves in. A strong hook, ultra interesting, likeable, never boring. Not about businesses, not a seller's scene, not about our brand: if a topic links naturally to SocialPerks, the last slide may say so; if it does not, there is no SocialPerks slide at all. Three a day.
 
 ## Who reads it
 
-People who run a small local business in Spain: a bar, a café, a restaurant, a barbershop, a hair or nail salon, a gym, a physio, a tattoo studio. Tired, proud, busy, a bit fed up with apps and rent. They read on the phone between two customers. They save a post when it is useful and send it to a friend when it is true.
+Everyone, mostly 20 to 40, in Barcelona and the rest of Spain, scrolling on the phone on the metro, in a queue, in bed. They like a post when they think "this is so me", they save it when it is useful, and they send it to a friend when it is about them both.
 
 ## What works
 
-- **The cover title is the hook.** Specific, a little provocative, a promise the slides keep. Patterns that work: a ranking ("Ranking de los 8 peores momentos de…"), a contrast ("El negocio que se llena y el que no: 7 diferencias"), a confession ("Lo que nadie te cuenta antes de…"), a mirror ("Las 7 sensaciones que solo entiende quien…"), a number with a stake ("6 errores que te cuestan clientes cada martes"), a myth ("Por qué el 30 % de descuento te sale caro").
-- **One point per slide**: a heading of a few words, one or two short lines that show a real moment (a Tuesday at 4pm, the supplier's new prices, Sunday night thinking about Monday), and a closing line that lands. People should think "this is me".
-- **Mix the moods** across the day: one practical (customers, quiet hours, platforms, prices, reviews, staff, word of mouth), one about the life of running a place (routine, tiredness, pride, small wins, the first customer of the day), one topical or emotional (rent, inflation, AI, tourism, the neighbourhood, motivation for a bad week).
-- **Concrete beats clever.** "Pide el de pistacho y siéntate fuera" beats "la experiencia importa".
+- **The cover title is the hook.** Specific, a little provocative, a promise the slides keep. Patterns that work: a ranking ("Ranking de las 8 peores sensaciones de un lunes por la mañana"), stages ("Las 7 fases de un domingo por la tarde"), "cosas que solo entiende quien…", "frases que dices cada vez que…", small pleasures, the truth about a city, a myth everybody believes, "señales de que…".
+- **The everyday:** mornings, Mondays, coffee, alarms, the metro, work and emails, the weekend, Sunday evening, friends and plans that never happen, going out, "solo una y me voy", your usual order, your favourite bar, the hairdresser, the gym in January, rent and flatmates, the city, the beach, the seasons, holidays, the group chat, birthdays, food.
+- **One moment per slide**: a heading of a few words, one or two short lines that paint a real scene, and a closing line that lands, funny or warm.
+- **Mix the moods across the day**: one funny, one warm or nostalgic, one useful or about the city.
+- **Concrete beats clever.** "Llevas una hora viendo vídeos de perros" beats "el tiempo libre se nos escapa".
+
+## The link to SocialPerks, only when it fits
+
+SocialPerks lets people bring a friend to their favourite places, and the friend gets a small welcome gift. So a topic about friends, plans, going out, favourite places, recommending a spot or "lo de siempre" may end with the SocialPerks slide: set `"cta": true`. Everything else: leave `cta` out, and the post is pure everyday life. Never mention SocialPerks, venues signing up or marketing on the slides themselves.
 
 ## Never
 
-- Never invent figures, studies or quotes. The only number with a source in the bank is Nielsen 2015 (83 % trust friends' recommendations); platform fees of 15 to 35 % are the product's own figure. Otherwise no statistics.
-- Never name real people, businesses, competitors or brands, and never imply SocialPerks has partners or results it does not have.
-- Never sell on the slides: SocialPerks only appears on the last slide, which the renderer adds.
-- No em dashes or en dashes (use a colon or a full stop), never the word "perk", no hashtags or emojis on the slides, no "tú/usted" mix (always "tú").
-- Gender-neutral where it can be ("quien tiene un negocio", "tu equipo", "tus clientes").
-- Never repeat a title or angle already posted: `ig_publish.py --recent 60` prints the first line of the last posts' captions, which is their title.
+- Never invent figures, studies or quotes. No statistics at all.
+- Never name real people, businesses or brands. Places in a city are fine (Gràcia, el Born, la Barceloneta).
+- Nothing mean, political, religious or about bodies; tease situations, never people.
+- No em dashes or en dashes (use a colon or a full stop), never the word "perk", no hashtags or emojis on the slides, always "tú".
+- Gender-neutral where it can be.
+- Never repeat a title or angle already posted: `ig_publish.py --recent 60` prints the first line of the last posts' captions, which is their title. The `EVERYDAY` topics in `carousels.py` are taken too.
 
 ## The file
 
@@ -28,19 +35,21 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 
 ```json
 {
-  "title": "Ranking de los 8 peores momentos de tener un negocio",
-  "hook": "Si tienes un negocio, los has vivido todos.",
+  "title": "Las 7 fases de un domingo por la tarde",
+  "hook": "La 5 es la que más duele.",
   "photos": "life",
-  "countdown": true,
   "points": [
-    ["Mirar la agenda del martes", ["Huecos a las 16:00, a las 17:00, a las 18:00.", "Y el alquiler no tiene huecos."], "La hora vacía también se paga."]
-  ]
+    ["La siesta que no era siesta", ["«Diez minutitos.»", "Te despiertas a las siete sin saber qué año es."], "El tiempo, en domingo, es otro."]
+  ],
+  "hashtags": "#domingo #vidareal #humor #barcelona #findesemana"
 }
 ```
 
 - `title` at most 90 characters; `hook` (the caption's second line) at most 120.
 - 5 to 8 `points`; each heading at most 52 characters, 1 or 2 lines of at most 95, a closing line of at most 75.
-- `photos`: `life` (mornings, notebooks, coffee, sunrise), `money` (receipts, cards, laptops), `city` (Barcelona, cafés, terraces, toasts) or `venue` (the places' own photos: haircuts, nails, plates, cocktails). Pick the set that fits the mood. Every photo has no face.
+- `photos`: `life` (mornings, notebooks, coffee, sunrise, an alarm clock, an hourglass), `money` (receipts, cards, laptops), `city` (Barcelona, cafés, terraces, toasts, cooking) or `venue` (haircuts, nails, plates, cocktails, a gym). Pick what fits. Every photo has no face.
 - `countdown: true` numbers the points from the highest down, for a ranking.
+- `cta: true` only when the topic links naturally to bringing a friend to a favourite place.
+- `hashtags`: optional, 5 to 8 that fit the topic, one string.
 
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix. Look at the cover and two slides once rendered: if a line wraps badly or a photo fights the text, shorten and render again.

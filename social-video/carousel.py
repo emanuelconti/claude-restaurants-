@@ -202,7 +202,8 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
     slides = [slide_cover(car["title"], car["photos"][0], cache)]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
         slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
-    slides.append(slide_cta())
+    if car["cta"]:
+        slides.append(slide_cta())
     names = []
     for i, im in enumerate(slides, 1):
         name = f"slide-{i:02d}.jpg"
