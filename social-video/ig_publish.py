@@ -107,32 +107,49 @@ def account(token: str) -> tuple:
     return linked[0]["id"], linked[0].get("username", "?")
 
 
-def upload_temporary(path: str) -> str:
-    """Put one slide at a public URL for an hour (litterbox.catbox.moe), long enough for Instagram to fetch it.
-
-    Instagram takes images only from a public URL. A git push from a scheduled
-    run was refused (30 October), so the slides go to a temporary host instead:
-    they are about to be public on Instagram anyway, and vanish after an hour.
-    """
+def _post_file(url: str, field: str, path: str, extra: dict) -> str:
     boundary = "----socialperks" + os.urandom(8).hex()
-    fields = [("reqtype", "fileupload"), ("time", "1h")]
     body = b""
-    for name, value in fields:
+    for name, value in extra.items():
         body += f"--{boundary}\r\nContent-Disposition: form-data; name=\"{name}\"\r\n\r\n{value}\r\n".encode()
-    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"fileToUpload\"; filename=\"{os.path.basename(path)}\"\r\n"
+    body += (f"--{boundary}\r\nContent-Disposition: form-data; name=\"{field}\"; filename=\"{os.path.basename(path)}\"\r\n"
              "Content-Type: image/jpeg\r\n\r\n").encode() + open(path, "rb").read() + f"\r\n--{boundary}--\r\n".encode()
-    req = urllib.request.Request("https://litterbox.catbox.moe/resources/internals/api.php", data=body, method="POST",
+    req = urllib.request.Request(url, data=body, method="POST",
                                  headers={"Content-Type": f"multipart/form-data; boundary={boundary}", "User-Agent": "socialperks-daily/1.0"})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        return r.read().decode().strip()
+
+
+def _litterbox(path: str) -> str:
+    """litterbox.catbox.moe keeps a file for an hour."""
+    return _post_file("https://litterbox.catbox.moe/resources/internals/api.php", "fileToUpload", path, {"reqtype": "fileupload", "time": "1h"})
+
+
+def _uguu(path: str) -> str:
+    """uguu.se keeps a file for a few hours."""
+    return json.loads(_post_file("https://uguu.se/upload", "files[]", path, {}))["files"][0]["url"]
+
+
+# Instagram takes images only from a public URL. A git push from a scheduled
+# run was refused (30 October), so the slides go to a temporary host instead:
+# they are about to be public on Instagram anyway, and vanish within hours.
+# Two hosts, so one being down never stops a post (the owner: it must always go out).
+HOSTS = [("litterbox", _litterbox), ("uguu", _uguu)]
+
+
+def upload_temporary(path: str, host=_litterbox) -> str:
+    """Put one slide at a public URL on a temporary host, trying three times."""
+    last = ""
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=90) as r:
-                url = r.read().decode().strip()
+            url = host(path)
             if url.startswith("https://"):
                 return url
+            last = url[:200]
         except Exception as error:
-            url = str(error)
+            last = str(error)
         time.sleep(5)
-    raise ApiError(f"could not upload {os.path.basename(path)} to a temporary host: {url}")
+    raise ApiError(f"could not upload {os.path.basename(path)}: {last}")
 
 
 def check_public(url: str) -> None:
@@ -151,6 +168,19 @@ def check_public(url: str) -> None:
         return
     if "image/jpeg" not in kind:
         raise ApiError(f"{url} is served as {kind or 'unknown'}, Instagram needs image/jpeg")
+
+
+def publish(user: str, token: str, urls: list, caption: str) -> dict:
+    """One carousel post from public image URLs, in order."""
+    children = []
+    for url in urls:
+        item = call("POST", f"{user}/media", token, {"image_url": url, "is_carousel_item": "true"})
+        children.append(item["id"])
+    for child in children:
+        wait_ready(child, token)
+    post = call("POST", f"{user}/media", token, {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption})
+    wait_ready(post["id"], token)
+    return call("POST", f"{user}/media_publish", token, {"creation_id": post["id"]})
 
 
 def main():
@@ -180,7 +210,7 @@ def main():
         except ApiError as error:
             sys.exit(f"Instagram: {error}")
         for post in posts:
-            print(f"{post.get('timestamp', '')[:10]}  {(post.get('caption') or '').split(chr(10), 1)[0].strip()}")
+            print(f"{post.get('timestamp', '')}  {(post.get('caption') or '').split(chr(10), 1)[0].strip()}")
         return
     if args.check_token:
         try:
@@ -209,24 +239,26 @@ def main():
             print(f"already published: {done.get('permalink')}")
             return
 
-        if args.upload:
-            urls = [upload_temporary(os.path.join(folder, name)) for name in slides]
-        for url in urls:
-            check_public(url)
-        print(f"{len(urls)} slides are public")
-        if args.dry_run:
-            print("dry run: token and images are fine, nothing published")
-            return
-
-        children = []
-        for url in urls:
-            item = call("POST", f"{user}/media", token, {"image_url": url, "is_carousel_item": "true"})
-            children.append(item["id"])
-        for child in children:
-            wait_ready(child, token)
-        post = call("POST", f"{user}/media", token, {"media_type": "CAROUSEL", "children": ",".join(children), "caption": meta["caption"]})
-        wait_ready(post["id"], token)
-        media = call("POST", f"{user}/media_publish", token, {"creation_id": post["id"]})
+        # Each way of making the slides public in turn, until one gets the post out.
+        ways = [("base-url", None)] if args.base_url else HOSTS
+        media, problems = None, []
+        for name, host in ways:
+            try:
+                if host:
+                    urls = [upload_temporary(os.path.join(folder, slide), host) for slide in slides]
+                for url in urls:
+                    check_public(url)
+                print(f"{len(urls)} slides are public ({name})")
+                if args.dry_run:
+                    print("dry run: token and images are fine, nothing published")
+                    return
+                media = publish(user, token, urls, meta["caption"])
+                break
+            except ApiError as error:
+                problems.append(f"{name}: {error}")
+                print(f"{name} did not work ({error}); trying the next way", file=sys.stderr)
+        if media is None:
+            raise ApiError("; ".join(problems))
         link = call("GET", media["id"], token, {"fields": "permalink"}).get("permalink")
     except ApiError as error:
         sys.exit(f"Instagram: {error}")
