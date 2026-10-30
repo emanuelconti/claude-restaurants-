@@ -97,10 +97,11 @@ def main():
     if args.ids:
         ids = json.loads(args.ids)
         today.update(es=ids["es"], en=ids["en"], cover=ids.get("cover"), caption=captions(folder))
-    elif not today.get("es"):
-        sys.exit("--ids is needed: the page has no video for this day yet")
     if args.carousel_ids:
         today["carousel"] = carousel_of(folder, json.loads(args.carousel_ids))
+    # A day can be a carousel alone (the owner, 30 October: carousels only for now).
+    if not today.get("es") and not today.get("carousel"):
+        sys.exit("--ids or --carousel-ids is needed: the page has nothing for this day yet")
     if args.carousel_link and today.get("carousel"):
         today["carousel"]["permalink"] = args.carousel_link
     days = [today] + [d for d in before if d.get("date") != today["date"]]
