@@ -8,7 +8,7 @@ Same build as SocialPerks' (`social-video/` on `claude/socialperks-continuous-bu
 
 A cover photo with a big white title on a dark fade, then one numbered point per slide: heading, one or two lines, and a closing line in Sowld's pink. The mark sits on every slide. 7 to 8 slides, 1080x1350 (the 4:5 feed size), no faces in any photo. The last slide is Sowld, and only when the topic earns it: about one in four.
 
-Italian, because getsowld.com is Italian first.
+English: @sowld.ai posts in English, unlike SocialPerks which is Spanish.
 
 ## What it says
 
