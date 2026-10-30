@@ -3,6 +3,7 @@
 
     python3 ig_publish.py --date 2026-10-31 --base-url https://raw.githubusercontent.com/<owner>/<repo>/daily-posts/2026-10-31/
     python3 ig_publish.py --date 2026-10-31 --base-url ... --dry-run   # checks the token and the images, posts nothing
+    python3 ig_publish.py --check-token                                # only checks the token reaches the account
 
 The owner asked for it on 30 October: from the Claude app a page can hand the
 phone one file at a time, so a carousel arrived as nine separate shares.
@@ -119,11 +120,14 @@ def check_public(url: str) -> None:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--date", required=True)
+    ap.add_argument("--date", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
-    ap.add_argument("--base-url", required=True, help="public folder URL that holds slide-01.jpg ...")
+    ap.add_argument("--base-url", default=None, help="public folder URL that holds slide-01.jpg ...")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--check-token", action="store_true", help="say which account the token reaches, and stop")
     args = ap.parse_args()
+    if not args.check_token and not (args.date and args.base_url):
+        ap.error("--date and --base-url are needed to publish")
 
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     if not token:
@@ -131,6 +135,14 @@ def main():
     global API
     if token.startswith("EAA"):
         API = "https://graph.facebook.com/v21.0"
+    if args.check_token:
+        try:
+            user, username = account(token)
+            can = call("GET", f"{user}/media", token, {"fields": "id", "limit": 1})
+        except ApiError as error:
+            sys.exit(f"Instagram: {error}")
+        print(f"token ok: @{username} ({user}), {len(can.get('data', []))} recent post read, publishing not tried")
+        return
     folder = os.path.join(args.out, args.date, "carousel")
     meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
     slides = meta["slides"][:MAX_SLIDES]
