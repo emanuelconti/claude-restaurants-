@@ -121,6 +121,8 @@ details > .reel { margin-top: 16px; }
       <p class="carousel-title" id="carousel-name"></p>
     </div>
     <div id="carousel"></div>
+    <p class="note" id="zip-note" hidden>Dall'app Claude arriva un unico file ZIP con tutte le slide: aprilo in File (si apre una cartella), tocca Seleziona, poi Seleziona tutto, Condividi e «Salva immagini». Oppure apri questa pagina in Safari: lì le slide vanno direttamente in Foto.</p>
+    <p class="note" id="ig-done" hidden></p>
     <ol class="steps">
       <li><span><strong>Tocca «Salva o condividi le immagini».</strong> Si apre la condivisione del telefono: scegli «Salva immagini» (finiscono in Foto, già in ordine) oppure direttamente Instagram. Il testo si copia da solo.</span></li>
       <li><span><strong>Su Instagram</strong> tocca +, poi Post, seleziona più foto e scegli le slide nell'ordine, dalla 1 all'ultima.</span></li>
@@ -183,8 +185,47 @@ details > .reel { margin-top: 16px; }
   function slideFiles(day) {
     return Promise.all(day.carousel.slides.map((id, i) => imageFile(id, `socialperks-${day.date}-${String(i + 1).padStart(2, "0")}.jpg`)));
   }
+  // A ZIP with no compression (JPEGs do not shrink): local headers, the
+  // central directory and its end record, as the format describes.
+  const crcTable = (() => {
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; }
+    return t;
+  })();
+  function crc32(bytes) {
+    let c = 0xffffffff;
+    for (let i = 0; i < bytes.length; i++) c = crcTable[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
+    return (c ^ 0xffffffff) >>> 0;
+  }
+  async function zipOf(list) {
+    const enc = new TextEncoder();
+    const parts = [], central = [];
+    let offset = 0;
+    for (const file of list) {
+      const data = new Uint8Array(await file.arrayBuffer());
+      const name = enc.encode(file.name), crc = crc32(data);
+      const local = new DataView(new ArrayBuffer(30));
+      local.setUint32(0, 0x04034b50, true); local.setUint16(4, 20, true); local.setUint16(8, 0, true);
+      local.setUint32(14, crc, true); local.setUint32(18, data.length, true); local.setUint32(22, data.length, true);
+      local.setUint16(26, name.length, true);
+      parts.push(local, name, data);
+      const entry = new DataView(new ArrayBuffer(46));
+      entry.setUint32(0, 0x02014b50, true); entry.setUint16(4, 20, true); entry.setUint16(6, 20, true);
+      entry.setUint32(16, crc, true); entry.setUint32(20, data.length, true); entry.setUint32(24, data.length, true);
+      entry.setUint16(28, name.length, true); entry.setUint32(42, offset, true);
+      central.push(entry, name);
+      offset += 30 + name.length + data.length;
+    }
+    const size = central.reduce((n, part) => n + part.byteLength, 0);
+    const end = new DataView(new ArrayBuffer(22));
+    end.setUint32(0, 0x06054b50, true); end.setUint16(8, list.length, true); end.setUint16(10, list.length, true);
+    end.setUint32(12, size, true); end.setUint32(16, offset, true);
+    return new Blob([...parts, ...central, end], { type: "application/zip" });
+  }
   // The slides go to the share sheet together, in order, so «Salva immagini»
-  // puts them in Photos as one set; where only `downloads` is there, one by one.
+  // puts them in Photos as one set. Inside the Claude app a page can hand over
+  // only one file, so there they travel as one ZIP: Files opens it into a
+  // folder, and from there all the slides share at once.
   async function shareSlides(day, button) {
     const label = button.dataset.label;
     let copied = false;
@@ -207,7 +248,8 @@ details > .reel { margin-top: 16px; }
       }
       if (!shared) {
         if (!downloads) throw new Error("unavailable");
-        for (const file of list) await downloads.save({ filename: file.name, data: file });
+        await downloads.save({ filename: `socialperks-${day.date}-carosello.zip`, data: await zipOf(list) });
+        document.getElementById("zip-note").hidden = false;
       }
       button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
     } catch (error) {
@@ -330,6 +372,11 @@ details > .reel { margin-top: 16px; }
       document.getElementById("carousel-section").hidden = false;
       document.getElementById("carousel-name").textContent = today.carousel.title;
       carousel(document.getElementById("carousel"), today);
+      if (today.carousel.permalink) {
+        const done = document.getElementById("ig-done");
+        done.hidden = false;
+        done.append("Già pubblicato su Instagram da solo, stamattina: ", el("a", { href: today.carousel.permalink, target: "_blank", rel: "noopener", text: "apri il post" }), ".");
+      }
     }
     const week = document.getElementById("week");
     const earlier = days.slice(1);

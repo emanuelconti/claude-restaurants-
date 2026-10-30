@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--date", required=True)
     ap.add_argument("--ids", default=None, help='{"es": id, "en": id, "cover": id}; leave out to keep the day\'s video already on the page')
     ap.add_argument("--carousel-ids", default=None, help="the slides' asset ids, in slide order (JSON list)")
+    ap.add_argument("--carousel-link", default=None, help="the Instagram post, when ig_publish.py already published it")
     ap.add_argument("--previous", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     args = ap.parse_args()
@@ -100,6 +101,8 @@ def main():
         sys.exit("--ids is needed: the page has no video for this day yet")
     if args.carousel_ids:
         today["carousel"] = carousel_of(folder, json.loads(args.carousel_ids))
+    if args.carousel_link and today.get("carousel"):
+        today["carousel"]["permalink"] = args.carousel_link
     days = [today] + [d for d in before if d.get("date") != today["date"]]
     days.sort(key=lambda d: d["date"], reverse=True)
     kept = days[:KEEP_DAYS]

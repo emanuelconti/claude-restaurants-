@@ -46,6 +46,17 @@ Under `social-video/out/<date>/carousel/` it writes `slide-01.jpg` and on (1080x
 
 `carousels.py` holds what it says: 14 topics, one a day from 30 October, then the cycle starts again with other photos. To add one, append it to `TOPICS`: a title for the cover, a line for the caption, and points (a heading, the lines under it, the closing line in bold). The photos are the video's, without the one that shows a face.
 
+### Straight to Instagram
+
+From the Claude app a page can hand the phone only one file at a time, so the page sends the slides as one ZIP there (Files opens it into a folder; select all, share, «Salva immagini»); in Safari they go to the share sheet together. To skip all that, `ig_publish.py` posts the carousel itself, as one post with every slide in order, through the Instagram API:
+
+```bash
+INSTAGRAM_ACCESS_TOKEN=... python3 social-video/ig_publish.py --date 2026-10-31 \
+    --base-url https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/daily-posts/2026-10-31/
+```
+
+Instagram fetches each image from a public URL, so the daily run first force-pushes the day's slides to the `daily-posts` branch (one commit, only that day, so the branch never grows). The token comes from the Meta app's dashboard (Instagram API with Instagram Login, permissions `instagram_business_basic` and `instagram_business_content_publish`), lasts 60 days, and lives in the cloud environment's settings as `INSTAGRAM_ACCESS_TOKEN`, never in the repository. Without it the run skips this step and the page works as before. It never posts the same caption twice, and the page shows the link to the post once it is up.
+
 ## Requirements
 
 You need Python 3 with Pillow and numpy, ffmpeg with libx264, and internet access to `images.unsplash.com` for the photos. If a photo cannot be fetched, the video uses the day's colours instead, so a video always comes out. Downloaded photos are cached in `social-video/.cache`.
