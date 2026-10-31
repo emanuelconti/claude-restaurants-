@@ -51,12 +51,29 @@ def fade(w: int, h: int, colour, start: float, end: float, top_alpha: int, botto
     return out
 
 
-def get_photo(pid: str, cache: str, w: int, h: int, focus=(0.5, 0.5)) -> Image.Image:
-    img = B.photo(pid, cache)
-    if img is None:
-        # The owner (31 October): never a carousel without its photos. Stop, so nothing is published in plain colours.
-        sys.exit(f"photo {pid} could not be fetched (is images.unsplash.com allowed in the environment's network access?): nothing rendered, nothing published")
-    return B.cover(img, w, h, focus)
+def get_photo(pid: str, cache: str, w: int, h: int, focus=(0.5, 0.5), spares=()) -> Image.Image:
+    """The photo, or the next one that works.
+
+    Two rules pull against each other here. The owner (31 October): never a
+    carousel without its photos, so a flat gradient slide must never be
+    published. And: a slot must never silently fail to go out. One dead photo
+    id satisfies neither if it takes the whole post down with it, and ids do
+    die: one in this repo's own list started returning 404.
+
+    So a photo that cannot be fetched is replaced by another from the same
+    set, which looks right because the set was chosen for the topic. Only
+    when every single one fails, meaning the network is gone rather than one
+    URL, does the run stop without publishing.
+    """
+    for candidate in (pid, *spares):
+        img = B.photo(candidate, cache)
+        if img is not None:
+            if candidate != pid:
+                print(f"photo {pid} unavailable, used {candidate} instead", file=sys.stderr)
+            return B.cover(img, w, h, focus)
+    sys.exit(f"no photo could be fetched, not {pid} nor any of its {len(spares)} alternatives "
+             "(is images.unsplash.com allowed in the environment's network access?): "
+             "nothing rendered, nothing published")
 
 
 def wrap(text: str, f, max_w: float) -> list:
@@ -115,8 +132,8 @@ def brand_row(img: Image.Image, y: int, colour, label: bool, size: int = 64) -> 
     d.line((right, y + size / 2, right + rule, y + size / 2), fill=colour, width=4)
 
 
-def slide_cover(title: str, pid: str, cache: str) -> Image.Image:
-    img = get_photo(pid, cache, W, H, (0.5, 0.42)).convert("RGBA")
+def slide_cover(title: str, pid: str, cache: str, spares=()) -> Image.Image:
+    img = get_photo(pid, cache, W, H, (0.5, 0.42), spares).convert("RGBA")
     img.alpha_composite(fade(W, H, (0, 0, 0), 0.38, 0.78, 0, 238))
     f, lines, size = fit(title, 88, 58, TEXT_W, 4, 800, B.DISPLAY)
     leading = 1.08
@@ -126,7 +143,7 @@ def slide_cover(title: str, pid: str, cache: str) -> Image.Image:
     return img.convert("RGB")
 
 
-def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: str) -> Image.Image:
+def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: str, spares=()) -> Image.Image:
     img = Image.new("RGBA", (W, H), B.WHITE + (255,))
     d = ImageDraw.Draw(img)
     brand_row(img, 70, B.INK, False, 72)
@@ -147,7 +164,7 @@ def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: 
     y = centred(d, plines, pf, y, B.SIGNAL, 1.32)
 
     top = int(y + 40)
-    ph = get_photo(pid, cache, W, H - top, (0.5, 0.5)).convert("RGBA")
+    ph = get_photo(pid, cache, W, H - top, (0.5, 0.5), spares).convert("RGBA")
     img.alpha_composite(ph, (0, top))
     band = min(240, (H - top) // 2)
     img.alpha_composite(fade(W, band, B.WHITE, 0.0, 1.0, 255, 0), (0, top))
@@ -197,9 +214,14 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
     car = C.carousel(date, slot, topic)
     folder = os.path.join(out, car["date"], f"carousel-{slot}")
     os.makedirs(folder, exist_ok=True)
-    slides = [slide_cover(car["title"], car["photos"][0], cache)]
+    # Every slide can fall back on any other photo the topic was given, so one
+    # dead id costs a picture rather than the whole post.
+    pool = list(dict.fromkeys(car["photos"]))
+    spares = lambda pid: tuple(p for p in pool if p != pid)
+    slides = [slide_cover(car["title"], car["photos"][0], cache, spares(car["photos"][0]))]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
-        slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
+        pid = car["photos"][i]
+        slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, pid, cache, spares(pid)))
     if car["cta"]:
         slides.append(slide_cta())
     elif car.get("follow"):
