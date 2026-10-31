@@ -459,6 +459,16 @@ CTA = dict(
     url="socialperkses.com",
 )
 
+# The last slide for topics with "cta": "business": the venue side of SocialPerks.
+# The owner (31 October): we are B2B, so some posts must also win over the people who run a place.
+CAPTION_BUSINESS = "¿Tienes un local? Tus clientes ya hablan de ti: que te traigan a sus amigos. socialperkses.com"
+CTA_BUSINESS = dict(
+    title="¿Tienes un local? Tus clientes te traen a sus amigos.",
+    lines=["Pones un detalle de bienvenida en tus horas flojas.", "Tus clientes comparten tu enlace y sus amigos vienen a probar."],
+    small="El boca a boca, por fin en marcha.",
+    url="socialperkses.com",
+)
+
 
 SLOTS = 3  # carousels a day (the owner, 30 October: "almeno 2 o 3 al giorno")
 
@@ -494,8 +504,8 @@ def check_topic(topic: dict) -> list:
         text(punch, f"point {i} closing line", 75)
     if "hashtags" in topic and not (isinstance(topic["hashtags"], str) and topic["hashtags"].startswith("#") and len(topic["hashtags"]) <= 200):
         errors.append("hashtags must be one string of up to 200 characters, starting with #")
-    if "cta" in topic and not isinstance(topic["cta"], bool):
-        errors.append("cta must be true or false")
+    if "cta" in topic and topic["cta"] not in (True, False, "business"):
+        errors.append('cta must be true, false or "business"')
     if topic.get("photos", "venue") not in list(PHOTO_SETS) + ["venue"]:
         errors.append(f"photos must be one of {sorted(PHOTO_SETS) + ['venue']}")
     return errors
@@ -516,8 +526,8 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
     # The title opens the caption, so the next runs can see what was already posted.
-    cta = bool(topic.get("cta"))
-    tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_SHARE}" if cta else CAPTION_FOLLOW
+    cta = "business" if topic.get("cta") == "business" else bool(topic.get("cta"))
+    tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_BUSINESS if cta == 'business' else CAPTION_SHARE}" if cta else CAPTION_FOLLOW
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))

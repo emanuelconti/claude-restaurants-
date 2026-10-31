@@ -2,9 +2,15 @@
 
 Each scheduled run writes one new carousel for SocialPerks' Instagram, in Spanish, and publishes it. These are the rules for that topic.
 
-The owner's brief (30 October): everyday life that anybody likes and sees themselves in. A strong hook, ultra interesting, likeable, never boring. Not about businesses, not a seller's scene, not about our brand: if a topic links naturally to SocialPerks, the last slide may say so; if it does not, there is no SocialPerks slide at all. Three a day.
+The owner's brief (30 October): everyday life that anybody likes and sees themselves in. A strong hook, ultra interesting, likeable, never boring. Never a seller's scene, never an ad on the topic's own slides. Three a day (see below for the one written for people who run a place).
 
 **What the page is (the owner, the same evening):** people must come away pushed, focused and motivated, and understand that following @socialperks.es does that for them every day. The page is a daily push for your head, your routine and your drive, told through everyday life. Every carousel ends with the slide that says so ("Un empujón para tu día, cada día. Síguenos"), which the renderer adds; the caption says it too. So every topic must leave the reader with a little more energy, clarity or will than before: a reframe, a small action for today, a reason to keep going, a laugh that lightens the load.
+
+**SocialPerks is B2B (the owner, 31 October).** We sell to the people who run a café, a bar, a salon, a gym. So the page has to win over two readers at once: everyone, with everyday life and a push for the day, and the owners of small places, who are people too and scroll the same feed. Keep everything above (general, routine, motivation, likeable by anyone), and make sure the concept comes through: your customers bring their friends, the friend gets a small welcome gift, and the quiet hours fill up.
+
+- **Of the day's three, one is for people who run a place** (the midday one by default): the owner's life, still motivational and personal, never a seller's post. The quiet Tuesday, the regular who always orders the same, the first customer of the morning, opening up in the rain, the friend who heard about you from a friend. Anyone should still like it; an owner should feel it was written for them. End it with `"cta": "business"`.
+- **The other two stay everyday life** with the follow slide, and take `"cta": true` whenever the topic touches friends, plans or favourite places, so the friend side of the concept shows up too.
+- The concept is told **only on the last slide**, never pitched on the topic's own slides.
 
 ## Who reads it
 
@@ -21,9 +27,14 @@ Everyone, mostly 20 to 40, in Barcelona and the rest of Spain, scrolling on the 
 - **Mix the moods across the day**: morning, a push to start (focus, habits, energy, small actions); lunch, everyday life you laugh at or feel warm about; evening, mindset and reflection (what went well, letting go, friends, tomorrow).
 - **Concrete beats clever.** "Llevas una hora viendo vídeos de perros" beats "el tiempo libre se nos escapa".
 
-## The link to SocialPerks, only when it fits
+## The link to SocialPerks
 
-SocialPerks lets people bring a friend to their favourite places, and the friend gets a small welcome gift. So a topic about friends, plans, going out, favourite places, recommending a spot or "lo de siempre" may end with the SocialPerks slide: set `"cta": true`. Everything else: leave `cta` out, and the post is pure everyday life. Never mention SocialPerks, venues signing up or marketing on the slides themselves.
+SocialPerks lets people bring a friend to their favourite places, and the friend gets a small welcome gift; the place fills its quiet hours with new people who came on a friend's word. Two last slides tell it:
+
+- `"cta": true`, the friend side ("¿Tienes un sitio favorito? Llévate a un amigo."): for topics about friends, plans, going out, favourite places, recommending a spot or "lo de siempre".
+- `"cta": "business"`, the venue side ("¿Tienes un local? Tus clientes te traen a sus amigos."): for the daily topic about running a place.
+
+Leave `cta` out only when the topic touches neither. Never mention SocialPerks, venues signing up or marketing on the topic's own slides: only the last slide says it.
 
 ## Never
 
@@ -54,7 +65,7 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 - 5 to 8 `points`; each heading at most 52 characters, 1 or 2 lines of at most 95, a closing line of at most 75.
 - `photos`: `life` (mornings, notebooks, coffee, sunrise, an alarm clock, an hourglass), `money` (receipts, cards, laptops), `city` (Barcelona, cafés, terraces, toasts, cooking) or `venue` (haircuts, nails, plates, cocktails, a gym). Pick what fits. Every photo has no face.
 - `countdown: true` numbers the points from the highest down, for a ranking.
-- `cta: true` only when the topic links naturally to bringing a friend to a favourite place.
+- `cta`: `true` for the friend side, `"business"` for the venue side, left out when the topic touches neither (see above).
 - `hashtags`: optional, 5 to 8 that fit the topic, one string.
 
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix. Look at the cover and two slides once rendered: if a line wraps badly or a photo fights the text, shorten and render again.

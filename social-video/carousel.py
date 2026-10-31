@@ -173,22 +173,23 @@ def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: 
     return img.convert("RGB")
 
 
-def slide_cta() -> Image.Image:
+def slide_cta(kind=True) -> Image.Image:
+    cta = C.CTA_BUSINESS if kind == "business" else C.CTA
     img = Image.new("RGBA", (W, H), SIGNAL + (255,))
     d = ImageDraw.Draw(img)
     # The mark on a white tile: its own colours vanish on the brand blue.
     tile = D.rounded((190, 190), 48, WHITE + (255,))
     tile.alpha_composite(D.mark(140), (25, 25))
     img.alpha_composite(tile, ((W - 190) // 2, 230))
-    f, lines, size = fit(C.CTA["title"], 84, 60, TEXT_W, 3, 800, D.DISPLAY)
+    f, lines, size = fit(cta["title"], 84, 60, TEXT_W, 3, 800, D.DISPLAY)
     y = centred(d, lines, f, 470, WHITE, 1.06) + 36
     bf = D.font(40, 500, D.BODY)
-    body = [w for line in C.CTA["lines"] for w in wrap(line, bf, TEXT_W)]
+    body = [w for line in cta["lines"] for w in wrap(line, bf, TEXT_W)]
     y = centred(d, body, bf, y, (226, 223, 255), 1.4) + 56
-    pill = D.pill(C.CTA["url"], 44, INK, YELLOW + (255,), weight=800)
+    pill = D.pill(cta["url"], 44, INK, YELLOW + (255,), weight=800)
     img.alpha_composite(pill, ((W - pill.width) // 2, int(y)))
     sf = D.font(30, 500, D.BODY)
-    small = D.wrap_lines(C.CTA["small"], sf, TEXT_W)
+    small = D.wrap_lines(cta["small"], sf, TEXT_W)
     centred(d, small, sf, H - 110 - sf.size * 1.4 * (len(small) - 1), (206, 202, 250), 1.4)
     return img.convert("RGB")
 
@@ -221,7 +222,7 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
         slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
     if car["cta"]:
-        slides.append(slide_cta())
+        slides.append(slide_cta(car["cta"]))
     slides.append(slide_follow())
     names = []
     for i, im in enumerate(slides, 1):
