@@ -501,10 +501,21 @@ CTA = dict(
 )
 
 # The site is off the profile's link in bio while it is not ready, so the
-# Sowld slide is off too: sending someone to a URL they cannot tap from the
-# bio wastes the last slide and makes the post read as an ad for nothing.
+# Sowld slide is off: sending someone to a URL they cannot tap from the bio
+# wastes the last slide and makes the post read as an ad for nothing.
 # One line to turn back on the day the link returns.
 CTA_ENABLED = False
+
+# What goes on the last slide instead. The account is trying to grow, and a
+# carousel someone just swiped to the end of is the one moment they are most
+# likely to follow: asking there costs nothing and is the only thing the post
+# is actually selling. No URL, no product.
+FOLLOW_ENABLED = True
+FOLLOW = dict(
+    title="More of these, every day.",
+    lines=["Follow for the things nobody says out loud about starting, stopping, and getting on with it."],
+    handle="@sowld.ai",
+)
 
 SLOTS = 5  # carousels a day
 
@@ -576,4 +587,5 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"],
-                numbers=numbers, photos=picks, caption=caption, cta=cta)
+                numbers=numbers, photos=picks, caption=caption, cta=cta,
+                follow=FOLLOW_ENABLED and not cta)

@@ -44,7 +44,18 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
-SOCIALPERKS_IG_ID = "17841450639747283"  # @socialperks.es, as the Meta app's dashboard shows it
+# The accounts this script publishes to, as the Meta app's dashboard shows
+# them. An Instagram account id is not a secret (it is what the public
+# business-discovery lookup returns); the token is, and that stays in the
+# environment. Keeping the ids here means a scheduled run needs no setup
+# beyond the token, and a system-user token, which cannot list its own
+# Pages and so cannot name its account, still resolves.
+KNOWN_IG_IDS = {
+    "INSTAGRAM_ACCESS_TOKEN": "17841450639747283",  # @socialperks.es
+    "INSTAGRAM_TOKEN_SOWLD": "17841470732004019",   # @sowld.ai
+    "INSTAGRAM_TOKEN_SINCRONIA": "17841404632479565",  # @sincronia.live
+}
+SOCIALPERKS_IG_ID = KNOWN_IG_IDS["INSTAGRAM_ACCESS_TOKEN"]
 
 
 class ApiError(RuntimeError):
@@ -256,7 +267,8 @@ def main():
     id_env = "INSTAGRAM_USER_ID"
     if args.token_env.startswith("INSTAGRAM_TOKEN_"):
         id_env = "INSTAGRAM_USER_ID_" + args.token_env[len("INSTAGRAM_TOKEN_"):]
-    resolved_id = args.ig_id or os.environ.get(id_env, "").strip()
+    resolved_id = (args.ig_id or os.environ.get(id_env, "").strip()
+                   or KNOWN_IG_IDS.get(args.token_env, ""))
     if resolved_id:
         os.environ["INSTAGRAM_USER_ID"] = resolved_id
     if args.token_env != "INSTAGRAM_ACCESS_TOKEN":

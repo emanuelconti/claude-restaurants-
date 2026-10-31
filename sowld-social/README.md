@@ -6,7 +6,7 @@ Same build as SocialPerks' (`social-video/` on `claude/socialperks-continuous-bu
 
 ## What a post looks like
 
-A cover photo with a big white title on a dark fade, then one numbered point per slide: heading, one or two lines, and a closing line in Sowld's pink. The mark sits on every slide. 7 to 8 slides, 1080x1350 (the 4:5 feed size), no faces in any photo. No Sowld slide at the moment: `CTA_ENABLED = False` in `carousels.py`, because the site is off the profile's link in bio. One line to turn back on.
+A cover photo with a big white title on a dark fade, then one numbered point per slide: heading, one or two lines, and a closing line in Sowld's pink. The mark sits on every slide. 7 to 8 slides, 1080x1350 (the 4:5 feed size), no faces in any photo. The last slide asks for a follow: the mark, one line, the handle, no URL. The site CTA is off (`CTA_ENABLED = False` in `carousels.py`) because the site is off the profile's link in bio; one line to turn back on.
 
 English: @sowld.ai posts in English, unlike SocialPerks which is Spanish.
 

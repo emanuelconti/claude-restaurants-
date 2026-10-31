@@ -173,6 +173,26 @@ def slide_cta() -> Image.Image:
     return img.convert("RGB")
 
 
+def slide_follow() -> Image.Image:
+    """The last slide: the one moment someone is most likely to follow.
+
+    Dark like the cover, so the carousel closes where it opened. No URL and
+    no product: the only thing this post is selling is the next one."""
+    img = Image.new("RGBA", (W, H), B.INK + (255,))
+    d = ImageDraw.Draw(img)
+    tile = B.rounded((190, 190), 48, B.WHITE + (255,))
+    tile.alpha_composite(B.mark(140), (25, 25))
+    img.alpha_composite(tile, ((W - 190) // 2, 250))
+    f, lines, size = fit(C.FOLLOW["title"], 84, 60, TEXT_W, 3, 800, B.DISPLAY)
+    y = centred(d, lines, f, 500, B.WHITE, 1.06) + 34
+    bf = B.font(38, 500, B.BODY)
+    body = [w for line in C.FOLLOW["lines"] for w in wrap(line, bf, TEXT_W)]
+    y = centred(d, body, bf, y, (214, 208, 204), 1.44) + 58
+    p = B.pill(C.FOLLOW["handle"], 44, B.WHITE, B.SIGNAL + (255,), weight=800)
+    img.alpha_composite(p, ((W - p.width) // 2, int(y)))
+    return img.convert("RGB")
+
+
 def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | None = None) -> dict:
     car = C.carousel(date, slot, topic)
     folder = os.path.join(out, car["date"], f"carousel-{slot}")
@@ -182,6 +202,8 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
         slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, car["photos"][i], cache))
     if car["cta"]:
         slides.append(slide_cta())
+    elif car.get("follow"):
+        slides.append(slide_follow())
     names = []
     for i, im in enumerate(slides, 1):
         name = f"slide-{i:02d}.jpg"

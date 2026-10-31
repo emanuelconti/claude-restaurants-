@@ -39,13 +39,15 @@ They like a post when they think "this is exactly me". They **save** it when it 
 - **Concrete beats clever.** "You bought it in 2017" beats "purchases age".
 - **The closing line of each slide does the work.** It is the line in pink, the one that gets screenshotted. Write the slide, then spend most of the effort on that line.
 
-## The Sowld slide is off right now
+## The last slide asks for a follow, not a click
 
-`CTA_ENABLED = False` in `carousels.py`. The site is not in the profile's link in bio while it is not ready, so a last slide pointing at a URL nobody can tap wastes the slide and makes the post read as an ad for nothing.
+`FOLLOW_ENABLED = True`, `CTA_ENABLED = False` in `carousels.py`.
 
-Write topics as if Sowld did not exist. Never mention it, never mention a product, never write a closing line that is secretly a pitch. The job right now is one thing only: **make the post good enough that someone follows the account.**
+Every carousel ends on a dark slide with the mark, one line, and the handle. No URL, no product: the site is off the profile's link in bio while it is not ready, and sending someone to a link they cannot tap wastes the slide. Someone who has just swiped to the end of a carousel is the most likely they will ever be to follow, so that is what the slide asks for.
 
-You can still set `"cta": true` on a topic that genuinely walks into what Sowld does. It will simply be ignored until the flag goes back on, and then those posts already have their last slide written.
+Write topics as if Sowld the product did not exist. Never mention it, never mention anything to buy, never write a closing line that is secretly a pitch. The job is one thing: **be good enough that someone follows.**
+
+You can still set `"cta": true` on a topic that genuinely walks into what Sowld does. It replaces the follow slide, and is ignored entirely while `CTA_ENABLED` is off, so those posts are ready for the day the link comes back.
 
 ## Photos: new ones every time
 
