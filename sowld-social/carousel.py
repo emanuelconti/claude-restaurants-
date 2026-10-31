@@ -53,7 +53,10 @@ def fade(w: int, h: int, colour, start: float, end: float, top_alpha: int, botto
 
 def get_photo(pid: str, cache: str, w: int, h: int, focus=(0.5, 0.5)) -> Image.Image:
     img = B.photo(pid, cache)
-    return B.gradient(w, h) if img is None else B.cover(img, w, h, focus)
+    if img is None:
+        # The owner (31 October): never a carousel without its photos. Stop, so nothing is published in plain colours.
+        sys.exit(f"photo {pid} could not be fetched (is images.unsplash.com allowed in the environment's network access?): nothing rendered, nothing published")
+    return B.cover(img, w, h, focus)
 
 
 def wrap(text: str, f, max_w: float) -> list:

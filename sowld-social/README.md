@@ -50,6 +50,6 @@ Nothing here commits to the repository, and nothing waits for a human.
 
 ## Requirements
 
-Python 3 with Pillow and numpy, and reachable `images.unsplash.com`. A photo that cannot be fetched falls back to a gradient in Sowld's colours, so a slide always renders. Photos are cached in `.cache`.
+Python 3 with Pillow and numpy, and reachable `images.unsplash.com`. A photo that cannot be fetched stops the render, so nothing is ever published in plain colours (the owner, 31 October). Photos are cached in `.cache`.
 
 The fonts are Inter and Inter Tight (SIL Open Font License). `assets/mark.png` is Sowld's mark, the same shape as the site's favicon.
