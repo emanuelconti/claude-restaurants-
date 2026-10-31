@@ -33,6 +33,7 @@ published.json next to the slides.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import os
 import sys
@@ -44,6 +45,10 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
+DAILY_CAP = 3  # posts a day on the account, whoever published them
+MIN_GAP = 60  # minutes since the account's last post
+# Meta's answers that mean "slow down": retrying them is what gets the app blocked.
+STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 SOCIALPERKS_IG_ID = "17841450639747283"  # @socialperks.es, as the Meta app's dashboard shows it
 
 
@@ -194,6 +199,8 @@ def main():
     ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels (out/<date>/carousel-<slot>)")
     ap.add_argument("--recent", type=int, default=0, metavar="N", help="print the first line of the last N posts' captions, and stop")
     ap.add_argument("--token-env", default="INSTAGRAM_ACCESS_TOKEN", help="the environment variable holding the token (one per account, e.g. INSTAGRAM_TOKEN_SOWLD)")
+    ap.add_argument("--daily-cap", type=int, default=DAILY_CAP, help="most posts a day on the account")
+    ap.add_argument("--min-gap", type=int, default=MIN_GAP, help="minutes since the account's last post")
     ap.add_argument("--ig-id", default=None, help="the Instagram account id, as the Meta app's dashboard shows it; needed for any account but @socialperks.es")
     args = ap.parse_args()
     if not (args.check_token or args.recent) and not (args.date and (args.base_url or args.upload)):
@@ -245,6 +252,20 @@ def main():
             print(f"already published: {done.get('permalink')}")
             return
 
+        # Never more than DAILY_CAP a day, and never two posts close together, counted
+        # on the account itself: on 31 October a burst of posts got the Meta app blocked.
+        from zoneinfo import ZoneInfo
+        madrid = ZoneInfo("Europe/Madrid")
+        now = dt.datetime.now(dt.timezone.utc)
+        stamps = [dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for m in recent if m.get("timestamp")]
+        today = sum(1 for t in stamps if t.astimezone(madrid).date() == now.astimezone(madrid).date())
+        if today >= args.daily_cap:
+            print(f"daily cap: the account already has {today} posts today, nothing published")
+            return
+        if stamps and (now - max(stamps)).total_seconds() < args.min_gap * 60:
+            minutes = int((now - max(stamps)).total_seconds() // 60)
+            sys.exit(f"too soon: the last post went out {minutes} min ago (minimum {args.min_gap}), nothing published")
+
         # Each way of making the slides public in turn, until one gets the post out.
         ways = [("base-url", None)] if args.base_url else HOSTS
         media, problems = None, []
@@ -261,6 +282,8 @@ def main():
                 media = publish(user, token, urls, meta["caption"])
                 break
             except ApiError as error:
+                if any(word in str(error).lower() for word in STOP_WORDS):
+                    raise  # Meta is pushing back: stop now instead of trying again
                 problems.append(f"{name}: {error}")
                 print(f"{name} did not work ({error}); trying the next way", file=sys.stderr)
         if media is None:
