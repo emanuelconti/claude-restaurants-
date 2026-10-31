@@ -22,6 +22,7 @@ has this carousel's caption, so running it twice never posts twice.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import os
 import sys
@@ -32,7 +33,11 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.facebook.com/v21.0"
-MAX_SLIDES = 10
+MAX_SLIDES = 10  # Instagram's limit for one carousel
+DAILY_CAP = 3  # posts a day on the account, whoever published them
+MIN_GAP = 60  # minutes since the account's last post
+# Meta's answers that mean "slow down": retrying them is what gets the app blocked.
+STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 ID_FILE = os.path.join(HERE, "ig_id.txt")
 
 
@@ -198,6 +203,8 @@ def main():
                     help="print the first line of the last N posts' captions, and stop")
     ap.add_argument("--token-env", default="INSTAGRAM_TOKEN_SINCRONIA")
     ap.add_argument("--ig-id", default=None)
+    ap.add_argument("--daily-cap", type=int, default=DAILY_CAP, help="most posts a day on the account")
+    ap.add_argument("--min-gap", type=int, default=MIN_GAP, help="minutes since the account's last post")
     args = ap.parse_args()
     if not (args.check_token or args.recent) and not (args.date and (args.base_url or args.upload)):
         ap.error("--date and --upload (or --base-url) are needed to publish")
@@ -250,6 +257,20 @@ def main():
             print(f"already published: {done.get('permalink')}")
             return
 
+        # Never more than DAILY_CAP a day, and never two posts close together, counted
+        # on the account itself: on 31 October a burst of posts got the Meta app blocked.
+        from zoneinfo import ZoneInfo
+        local = ZoneInfo("Europe/Madrid")
+        now = dt.datetime.now(dt.timezone.utc)
+        stamps = [dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for m in recent if m.get("timestamp")]
+        today = sum(1 for t in stamps if t.astimezone(local).date() == now.astimezone(local).date())
+        if today >= args.daily_cap:
+            print(f"daily cap: the account already has {today} posts today, nothing published")
+            return
+        if stamps and (now - max(stamps)).total_seconds() < args.min_gap * 60:
+            minutes = int((now - max(stamps)).total_seconds() // 60)
+            sys.exit(f"too soon: the last post went out {minutes} min ago (minimum {args.min_gap}), nothing published")
+
         ways = [("base-url", None)] if args.base_url else HOSTS
         media, problems = None, []
         for name, host in ways:
@@ -265,6 +286,8 @@ def main():
                 media = publish(user, token, urls, meta["caption"])
                 break
             except ApiError as error:
+                if any(word in str(error).lower() for word in STOP_WORDS):
+                    raise  # Meta is pushing back: stop now instead of trying again
                 problems.append(f"{name}: {error}")
                 print(f"{name} did not work ({error}); trying the next way", file=sys.stderr)
         if media is None:

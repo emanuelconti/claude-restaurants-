@@ -84,6 +84,8 @@ def try_publish(date: str, slot: int, out: str, ig_id: str | None, attempts: int
             return 0
         if code == 2:  # no id: a later run will publish these same slides
             return 2
+        if "too soon" in log or any(w in log.lower() for w in ("blocked", "limit", "spam", "restricted")):
+            return 1  # Meta pushing back, or the gap between posts: retrying makes it worse
         if attempt < attempts:
             wait = 60 * attempt
             print(f"attempt {attempt} failed; retrying in {wait}s", file=sys.stderr)
