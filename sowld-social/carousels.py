@@ -532,8 +532,8 @@ def check_topic(topic: dict) -> list:
             continue
         heading, lines, punch = point
         text(heading, f"point {i} heading", 52)
-        if not 1 <= len(lines) <= 2:
-            errors.append(f"point {i} needs 1 or 2 lines")
+        if not 1 <= len(lines) <= 6:
+            errors.append(f"point {i} needs 1 to 6 lines")
         for j, line in enumerate(lines, 1):
             text(line, f"point {i} line {j}", 95)
         text(punch, f"point {i} closing line", 75)

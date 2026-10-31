@@ -129,14 +129,14 @@ def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: 
     brand_row(img, 70, B.INK, False, 72)
 
     # The text block, at a size that leaves at least 470px of photo.
-    for scale in (1.0, 0.94, 0.88, 0.82, 0.76):
+    for scale in (1.0, 0.94, 0.88, 0.82, 0.76, 0.70, 0.64, 0.58):
         hf, hlines, hs = fit(f"{n}. {heading.upper()}", int(72 * scale), int(50 * scale), TEXT_W, 2, 800, B.DISPLAY)
         bf = B.font(int(42 * scale), 400, B.BODY)
         pf = B.font(int(42 * scale), 700, B.BODY)
         body = [w for line in lines for w in wrap(line, bf, TEXT_W)]
         plines = wrap(punch, pf, TEXT_W)
         end = 200 + hs * 1.08 * len(hlines) + 30 + bf.size * 1.38 * len(body) + 22 + pf.size * 1.32 * len(plines)
-        if end <= H - 470:
+        if end <= H - 430:
             break
     y = 200
     y = centred(d, hlines, hf, y, B.INK, 1.08) + 30

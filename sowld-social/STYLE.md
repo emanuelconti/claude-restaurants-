@@ -76,7 +76,7 @@ A JSON object, the same shape as the topics in `carousels.py`:
 ```
 
 - `title` at most 90 characters; `hook` (the caption's second line) at most 120.
-- 5 to 8 `points`; each heading at most 52 characters, 1 or 2 lines of at most 95, a closing line of at most 75.
+- 5 to 8 `points`; each heading at most 52 characters, 1 to 6 lines of at most 95, a closing line of at most 75. Four to six short lines read better than two long ones: one thought per line, like a list inside the point.
 - `photos`: `human` (a desk by a window, a path, a room, someone walking away: for topics about a life), `life` (mornings, coffee, notebooks), `stuff` (wardrobes, shelves, boxes), `market` (shops, stalls, vintage furniture) or `money` (receipts, cards, a laptop). Every photo is face-free. Most topics want `human` or `life`.
 - `countdown: true` numbers the points from the highest down, for a ranking.
 - `cta: true` is currently ignored (see above). Leave it out.
