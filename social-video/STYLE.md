@@ -36,6 +36,17 @@ SocialPerks lets people bring a friend to their favourite places, and the friend
 
 Leave `cta` out only when the topic touches neither. Never mention SocialPerks, venues signing up or marketing on the topic's own slides: only the last slide says it.
 
+## Photos: new ones every time
+
+The owner (31 October): the carousels kept showing the same photos, because each set holds only 8 to 12 and a carousel uses almost all of them. **Every carousel picks its own photos**, chosen for that topic and for each slide, and different from the ones in the last days' posts.
+
+1. Search Unsplash for each slide's scene (`https://unsplash.com/napi/search/photos?query=<words>&per_page=30`, with a browser User-Agent). Take free photos only: the id is the part after `images.unsplash.com/photo-` in `urls.raw`; skip anything on `plus.unsplash.com`.
+2. No faces, no logos or brands, nothing that fights the text. Prefer hands, objects, places and light.
+3. Put them in the topic as `"photo_ids"`, cover first, then one per point, in order. Never two the same in one carousel, and avoid any you used in the day's other carousels.
+4. Render, then **look at the cover and every slide**. If a photo shows a face, repeats an earlier post or does not fit, swap it and render again.
+
+If the search host is refused, leave `photo_ids` out: the slot still goes out with the set's photos, and say so in the run's report. The renderer stops when a photo cannot be fetched, so a carousel never goes out in plain colours.
+
 ## Never
 
 - Never invent figures, studies or quotes. No statistics at all.
@@ -64,6 +75,7 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 - `title` at most 90 characters; `hook` (the caption's second line) at most 120.
 - 5 to 8 `points`; each heading at most 52 characters, 1 or 2 lines of at most 95, a closing line of at most 75.
 - `photos`: `life` (mornings, notebooks, coffee, sunrise, an alarm clock, an hourglass), `money` (receipts, cards, laptops), `city` (Barcelona, cafés, terraces, toasts, cooking) or `venue` (haircuts, nails, plates, cocktails, a gym). Pick what fits. Every photo has no face.
+- `photo_ids`: the Unsplash ids picked for this topic, cover first, then one per point (see "Photos: new ones every time"). Expected on every topic.
 - `countdown: true` numbers the points from the highest down, for a ranking.
 - `cta`: `true` for the friend side, `"business"` for the venue side, left out when the topic touches neither (see above).
 - `hashtags`: optional, 5 to 8 that fit the topic, one string.

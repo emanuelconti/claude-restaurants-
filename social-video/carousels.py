@@ -22,6 +22,7 @@ points from the highest down, for a ranking.
 
 from __future__ import annotations
 
+import re
 import datetime as _dt
 import random as _random
 
@@ -508,6 +509,9 @@ def check_topic(topic: dict) -> list:
         errors.append('cta must be true, false or "business"')
     if topic.get("photos", "venue") not in list(PHOTO_SETS) + ["venue"]:
         errors.append(f"photos must be one of {sorted(PHOTO_SETS) + ['venue']}")
+    ids = topic.get("photo_ids")
+    if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
+        errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
     return errors
 
 
@@ -525,6 +529,11 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     rng.shuffle(pool)
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
+    # The owner (31 October): the photos must change from post to post. A topic can name its own,
+    # one per slide (cover first), chosen fresh for it; the set fills in any that are missing.
+    if topic.get("photo_ids"):
+        own = list(dict.fromkeys(topic["photo_ids"]))
+        picks = (own + [p for p in pool if p not in own])[:need]
     # The title opens the caption, so the next runs can see what was already posted.
     cta = "business" if topic.get("cta") == "business" else bool(topic.get("cta"))
     tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_BUSINESS if cta == 'business' else CAPTION_SHARE}" if cta else CAPTION_FOLLOW
