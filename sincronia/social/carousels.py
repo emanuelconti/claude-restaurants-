@@ -9,6 +9,7 @@ with a link. STYLE.md is the brief a run writes from.
 
 from __future__ import annotations
 
+import re
 import datetime as _dt
 import random as _random
 
@@ -103,6 +104,9 @@ def check_topic(topic: dict) -> list:
         errors.append("hashtags must be one string of up to 200 characters, starting with #")
     if topic.get("photos", "life") not in PHOTO_SETS:
         errors.append(f"photos must be one of {sorted(PHOTO_SETS)}")
+    ids = topic.get("photo_ids")
+    if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
+        errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
     return errors
 
 
@@ -120,6 +124,11 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     rng.shuffle(pool)
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
+    # The owner (31 October): the photos must change from post to post. A topic can name its own,
+    # one per slide (cover first), chosen fresh for it; the set fills in any that are missing.
+    if topic.get("photo_ids"):
+        own = list(dict.fromkeys(topic["photo_ids"]))
+        picks = (own + [p for p in pool if p not in own])[:need]
     # The title opens the caption, so later runs can see what was already posted.
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{CAPTION_FOLLOW}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])

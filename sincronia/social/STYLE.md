@@ -55,6 +55,17 @@ tracks, or paperwork that eats a week, the slides may stand on their own merit
 as that topic: still no brand name, no link, no pitch. The follow slide is the
 only place the brand appears.
 
+## Photos: new ones every time
+
+The owner (31 October): the carousels kept showing the same photos, because each set holds only 8 to 12 and a carousel uses almost all of them. **Every carousel picks its own photos**, chosen for that topic and for each slide, and different from the ones in the last days' posts.
+
+1. Search Unsplash for each slide's scene (`https://unsplash.com/napi/search/photos?query=<words>&per_page=30`, with a browser User-Agent). Take free photos only: the id is the part after `images.unsplash.com/photo-` in `urls.raw`; skip anything on `plus.unsplash.com`.
+2. No faces, no logos or brands, nothing that fights the text. Prefer hands, objects, places and light.
+3. Put them in the topic as `"photo_ids"`, cover first, then one per point, in order. Never two the same in one carousel, and avoid any you used in the day's other carousels.
+4. Render, then **look at the cover and every slide**. If a photo shows a face, repeats an earlier post or does not fit, swap it and render again.
+
+If the search host is refused, leave `photo_ids` out: the slot still goes out with the set's photos, and say so in the run's report. The renderer stops when a photo cannot be fetched, so a carousel never goes out in plain colours.
+
 ## Never
 
 - Never invent figures, studies or quotes. No statistics at all.
@@ -91,6 +102,7 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 - `photos`: `life` (mornings, notebooks, coffee, sunrise, an hourglass), `work`
   (desks, laptops, hands writing, receipts) or `city` (cafés, streets, tables).
   Every photo has no face.
+- `photo_ids`: the Unsplash ids picked for this topic, cover first, then one per point (see "Photos: new ones every time"). Expected on every topic.
 - `countdown: true` numbers the points from the highest down, for a ranking.
 - `hashtags`: optional, 5 to 8 that fit the topic, one string.
 
