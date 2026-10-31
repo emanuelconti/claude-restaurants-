@@ -88,25 +88,51 @@ def wait_ready(container: str, token: str, timeout: float = 120) -> None:
 
 
 def account(token: str) -> tuple:
-    """The Instagram account's id and username, for either kind of token."""
+    """The Instagram account's id and username, for either kind of token.
+
+    Never guesses. The SocialPerks id is only ever a default for SocialPerks'
+    own token: any other token has to name its account or have exactly one
+    reachable, or this raises rather than posting somewhere unintended.
+    """
     given = os.environ.get("INSTAGRAM_USER_ID", "").strip()
     if API.startswith("https://graph.instagram.com"):
         me = call("GET", "me", token, {"fields": "user_id,username"})
         return given or str(me.get("user_id") or me.get("id")), me.get("username", "?")
-    # A system-user token (the dashboard's "never expires" kind) has no Pages of
-    # its own: it reaches the account directly, so ask the account itself.
-    user = given or SOCIALPERKS_IG_ID
-    if not given and os.environ.get("IG_STRICT_ACCOUNT"):
-        raise ApiError("no account id given and the SocialPerks default must not be used here")
+
+    if given:
+        return given, call("GET", given, token, {"fields": "username"}).get("username", "?")
+
+    tried = []
+    # A regular Facebook Login token reaches Instagram through the Pages it
+    # manages. This is the normal case and has to be tried before giving up.
     try:
-        return user, call("GET", user, token, {"fields": "username"}).get("username", "?")
-    except ApiError:
-        pass
-    pages = call("GET", "me/accounts", token, {"fields": "instagram_business_account{id,username}"}).get("data", [])
-    linked = [p["instagram_business_account"] for p in pages if p.get("instagram_business_account")]
-    if not linked:
-        raise ApiError(f"the token cannot reach Instagram account {user}, and its Facebook Pages have none linked")
-    return linked[0]["id"], linked[0].get("username", "?")
+        pages = call("GET", "me/accounts", token,
+                     {"fields": "name,instagram_business_account{id,username}", "limit": "100"}).get("data", [])
+        linked = [p["instagram_business_account"] for p in pages if p.get("instagram_business_account")]
+        if len(linked) == 1:
+            return linked[0]["id"], linked[0].get("username", "?")
+        if len(linked) > 1:
+            names = ", ".join(f"@{a.get('username', '?')} ({a['id']})" for a in linked)
+            raise ApiError(f"the token reaches several Instagram accounts, so --ig-id is needed: {names}")
+        tried.append(f"me/accounts: {len(pages)} Pages, none with an Instagram account linked")
+    except ApiError as error:
+        if "several Instagram accounts" in str(error):
+            raise
+        tried.append(f"me/accounts: {error}")
+
+    # A system-user token has no Pages of its own and reaches the account
+    # directly. Only SocialPerks' own token may assume that account.
+    if not os.environ.get("IG_STRICT_ACCOUNT"):
+        try:
+            return SOCIALPERKS_IG_ID, call("GET", SOCIALPERKS_IG_ID, token, {"fields": "username"}).get("username", "?")
+        except ApiError as error:
+            tried.append(f"direct lookup: {error}")
+
+    raise ApiError(
+        "could not work out which Instagram account this token reaches. "
+        "Set the account id in the environment next to the token (for "
+        "INSTAGRAM_TOKEN_SOWLD that is INSTAGRAM_USER_ID_SOWLD), pass --ig-id, "
+        "or give the token the pages_show_list permission. Tried: " + "; ".join(tried))
 
 
 def _post_file(url: str, field: str, path: str, extra: dict) -> str:
@@ -185,6 +211,22 @@ def publish(user: str, token: str, urls: list, caption: str) -> dict:
     return call("POST", f"{user}/media_publish", token, {"creation_id": post["id"]})
 
 
+def resolve(token: str, expect: str | None) -> tuple:
+    """The account this token reaches, refusing anything but the expected one.
+
+    Two products publish from this same script. A token that quietly resolved
+    to the wrong profile would put one brand's carousel on the other's feed,
+    publicly, with no undo. So when a run names the account it means to post
+    to, a mismatch stops everything rather than being reported afterwards.
+    """
+    user, username = account(token)
+    if expect and username.lower().lstrip("@") != expect.lower().lstrip("@"):
+        raise ApiError(
+            f"this token reaches @{username} ({user}), not @{expect.lstrip('@')}. "
+            "Nothing was published. Check which account the token was generated for.")
+    return user, username
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--date", default=None)
@@ -196,7 +238,8 @@ def main():
     ap.add_argument("--slot", type=int, default=1, help="which of the day's carousels (out/<date>/carousel-<slot>)")
     ap.add_argument("--recent", type=int, default=0, metavar="N", help="print the first line of the last N posts' captions, and stop")
     ap.add_argument("--token-env", default="INSTAGRAM_ACCESS_TOKEN", help="the environment variable holding the token (one per account, e.g. INSTAGRAM_TOKEN_SOWLD)")
-    ap.add_argument("--ig-id", default=None, help="the Instagram account id, as the Meta app's dashboard shows it; needed for any account but @socialperks.es")
+    ap.add_argument("--ig-id", default=None, help="the Instagram account id, as the Meta app's dashboard shows it; needed only when the token reaches several accounts")
+    ap.add_argument("--expect-username", default=None, metavar="NAME", help="refuse to do anything unless the token resolves to this account (no @)")
     args = ap.parse_args()
     if not (args.check_token or args.recent) and not (args.date and (args.base_url or args.upload)):
         ap.error("--date and --upload (or --base-url) are needed to publish")
@@ -204,19 +247,27 @@ def main():
     token = os.environ.get(args.token_env, "").strip()
     if not token:
         sys.exit(f"{args.token_env} is not set: nothing published")
-    if args.ig_id:
-        os.environ["INSTAGRAM_USER_ID"] = args.ig_id
-    elif args.token_env != "INSTAGRAM_ACCESS_TOKEN" and token.startswith("EAA"):
-        # A Facebook Login token reaches whatever its Pages link to, so without
-        # an id there is no telling which account would be posted to. An
-        # Instagram Login token names its own account, so it needs no id.
-        sys.exit(f"--ig-id is needed with a Facebook Login token in {args.token_env}")
+    # The account id, in order: the flag, then the env var that belongs to this
+    # token. A system-user token can publish without being able to say which
+    # account it reaches (it has no Pages to list), so the id has to come from
+    # somewhere; keeping it in an env var next to the token means a run needs
+    # no arguments and starts working the moment the id is set.
+    #   INSTAGRAM_TOKEN_SOWLD -> INSTAGRAM_USER_ID_SOWLD
+    id_env = "INSTAGRAM_USER_ID"
+    if args.token_env.startswith("INSTAGRAM_TOKEN_"):
+        id_env = "INSTAGRAM_USER_ID_" + args.token_env[len("INSTAGRAM_TOKEN_"):]
+    resolved_id = args.ig_id or os.environ.get(id_env, "").strip()
+    if resolved_id:
+        os.environ["INSTAGRAM_USER_ID"] = resolved_id
+    if args.token_env != "INSTAGRAM_ACCESS_TOKEN":
+        # Another account's token must never silently resolve to SocialPerks.
+        os.environ["IG_STRICT_ACCOUNT"] = "1"
     global API
     if token.startswith("EAA"):
         API = "https://graph.facebook.com/v21.0"
     if args.recent:
         try:
-            user, _ = account(token)
+            user, _ = resolve(token, args.expect_username)
             posts = call("GET", f"{user}/media", token, {"fields": "caption,timestamp", "limit": min(args.recent, 100)}).get("data", [])
         except ApiError as error:
             sys.exit(f"Instagram: {error}")
@@ -225,7 +276,7 @@ def main():
         return
     if args.check_token:
         try:
-            user, username = account(token)
+            user, username = resolve(token, args.expect_username)
             can = call("GET", f"{user}/media", token, {"fields": "id", "limit": 1})
         except ApiError as error:
             sys.exit(f"Instagram: {error}")
@@ -239,7 +290,7 @@ def main():
         urls = [base + name for name in slides]
 
     try:
-        user, username = account(token)
+        user, username = resolve(token, args.expect_username)
         print(f"account: @{username}")
 
         # Never twice: today's caption already on one of the last posts means it is done.
