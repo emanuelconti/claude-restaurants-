@@ -72,10 +72,8 @@ def fade(w: int, h: int, colour, start: float, end: float, top_alpha: int, botto
 def get_photo(pid: str, cache: str, w: int, h: int, focus=(0.5, 0.5)) -> Image.Image:
     img = D.photo(pid, cache)
     if img is None:
-        a, b = SIGNAL, D.PINK
-        g = np.linspace(0, 1, h)[:, None, None]
-        arr = (np.array(a)[None, None, :] * (1 - g) + np.array(b)[None, None, :] * g).repeat(w, axis=1)
-        return Image.fromarray(arr.astype(np.uint8), "RGB")
+        # The owner (31 October): never a carousel without its photos. Stop, so nothing is published in plain colours.
+        sys.exit(f"photo {pid} could not be fetched (is images.unsplash.com allowed in the environment's network access?): nothing rendered, nothing published")
     return D.cover(img, w, h, focus)
 
 
