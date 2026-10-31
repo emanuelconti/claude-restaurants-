@@ -48,10 +48,9 @@ def fade(w: int, h: int, colour, start: float, end: float, top_alpha: int, botto
 
 def get_photo(pid: str, cache: str, w: int, h: int, focus=(0.5, 0.5)) -> Image.Image:
     img = B.photo(pid, cache)
-    if img is None:  # a missing photo falls back to the brand's own gradient
-        g = np.linspace(0, 1, h)[:, None, None]
-        arr = (np.array(B.INK)[None, None, :] * (1 - g) + np.array(B.BRASS)[None, None, :] * g).repeat(w, axis=1)
-        return Image.fromarray(arr.astype(np.uint8), "RGB")
+    if img is None:
+        # The owner (31 October): never a carousel without its photos. Stop, so nothing is published in plain colours.
+        sys.exit(f"photo {pid} could not be fetched (is images.unsplash.com allowed in the environment's network access?): nothing rendered, nothing published")
     return B.cover(img, w, h, focus)
 
 
