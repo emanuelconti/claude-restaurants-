@@ -40,12 +40,12 @@ Leave `cta` out only when the topic touches neither. Never mention SocialPerks, 
 
 The owner (31 October): the carousels kept showing the same photos, because each set holds only 8 to 12 and a carousel uses almost all of them. **Every carousel picks its own photos**, chosen for that topic and for each slide, and different from the ones in the last days' posts.
 
-1. Search Unsplash for each slide's scene (`https://unsplash.com/napi/search/photos?query=<words>&per_page=30`, with a browser User-Agent). Take free photos only: the id is the part after `images.unsplash.com/photo-` in `urls.raw`; skip anything on `plus.unsplash.com`.
+1. Search Unsplash's API for each slide's scene: `GET https://api.unsplash.com/search/photos?query=<words>&per_page=30&content_filter=high`, with the header `Authorization: Client-ID <key>`, the key read from the environment variable `UNSPLASH_ACCESS_KEY` (never print it). The website and its `napi` search refuse scripts (401), so only the API works. The id is the part after `images.unsplash.com/photo-` in `urls.raw`; skip anything on `plus.unsplash.com`.
 2. No faces, no logos or brands, nothing that fights the text. Prefer hands, objects, places and light.
 3. Put them in the topic as `"photo_ids"`, cover first, then one per point, in order. Never two the same in one carousel, and avoid any you used in the day's other carousels.
 4. Render, then **look at the cover and every slide**. If a photo shows a face, repeats an earlier post or does not fit, swap it and render again.
 
-If the search host is refused, leave `photo_ids` out: the slot still goes out with the set's photos, and say so in the run's report. The renderer stops when a photo cannot be fetched, so a carousel never goes out in plain colours.
+If `UNSPLASH_ACCESS_KEY` is not set or the search is refused, leave `photo_ids` out: the slot still goes out with the set's photos, and say so in the run's report. The renderer stops when a photo cannot be fetched, so a carousel never goes out in plain colours.
 
 ## Never
 
