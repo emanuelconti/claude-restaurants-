@@ -32,6 +32,22 @@ import carousels as C  # noqa: E402
 
 TZ = ZoneInfo("Europe/Madrid")
 TOKEN_ENV = "INSTAGRAM_TOKEN_SINCRONIA"
+DAILY_CAP = C.SLOTS  # posts a day, counted on the account itself
+
+
+def posted_today(date: str, ig_id: str | None) -> int:
+    """How many posts the account already has for this date, whoever made them.
+
+    The dedupe inside ig_publish.py only catches the same carousel twice. This
+    counts the day on the account, so a second scheduler running elsewhere
+    cannot quietly double the feed: on 31 October two of them put out six."""
+    cmd = [sys.executable, "ig_publish.py", "--recent", "25", "--token-env", TOKEN_ENV]
+    if ig_id:
+        cmd += ["--ig-id", ig_id]
+    code, log = run(cmd, timeout=180)
+    if code != 0:
+        return 0  # cannot tell: let the normal dedupe decide
+    return sum(1 for line in log.splitlines() if line.strip().startswith(date))
 
 
 def run(cmd: list, timeout: int = 900) -> tuple:
@@ -82,13 +98,22 @@ def main():
     ap.add_argument("--catch-up", action="store_true", help="every slot of the day that is not out yet")
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--ig-id", default=os.environ.get("SINCRONIA_IG_ID", "").strip() or None)
+    ap.add_argument("--cap", type=int, default=DAILY_CAP,
+                    help="most posts the account should have in a day, counted on the account")
     args = ap.parse_args()
 
     date = args.date or dt.datetime.now(TZ).date().isoformat()
     slots = list(range(1, C.SLOTS + 1)) if args.catch_up else [args.slot or 1]
 
+    already = posted_today(date, args.ig_id)
+    room = max(0, args.cap - already)
+    print(f"{date}: {already} already on the account today, room for {room} more")
+
     pending, failed, posted = [], [], []
     for slot in slots:
+        if len(posted) >= room:
+            print(f"slot {slot}: the day is full ({args.cap} posts); leaving it")
+            continue
         if is_published(date, slot, args.out):
             print(f"slot {slot}: already published")
             continue
