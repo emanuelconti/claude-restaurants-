@@ -33,7 +33,7 @@ sys.path.insert(0, HERE)
 import ig_publish as IG  # noqa: E402  (temporary image hosts, shared with Instagram)
 
 API = "https://graph.facebook.com/v21.0"
-MAX_PER_DAY = 3
+MAX_PER_DAY = 6  # the owner, 1 November 2026: 6 a day for Good Message Studio
 MIN_GAP = 60  # minutes
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 MADRID = ZoneInfo("Europe/Madrid")
