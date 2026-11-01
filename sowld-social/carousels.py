@@ -494,7 +494,7 @@ BRAND_NAME = "GOOD MESSAGE STUDIO"
 STORE_URL = "goodmessagestudio.com"
 CAPTION_SAVE = "Save it, and send it to someone who needs this message today."
 CAPTION_SHARE = "Wear the message: goodmessagestudio.com (link in bio)."
-HASHTAGS = "#goodmessagestudio #singapore #sgfashion #bekind #positivevibes #kindness #sgstyle"
+HASHTAGS = "#goodmessagestudio #singapore #sgfashion #sgootd #sggifts #giftideasforher #bekind #selflove #oversizedhoodie"
 
 # The last slide, only for topics with "cta": what Sowld actually does.
 CTA = dict(
@@ -565,6 +565,8 @@ def check_topic(topic: dict) -> list:
     urls = topic.get("photo_urls")
     if urls is not None and not (isinstance(urls, list) and urls and all(isinstance(u, str) and re.match(r"https://(goodmessagestudio\.com/cdn/|cdn\.shopify\.com/)", u) for u in urls)):
         errors.append("photo_urls must be a list of the store's product image URLs (https://goodmessagestudio.com/cdn/... or https://cdn.shopify.com/...)")
+    if "caption" in topic and not (isinstance(topic["caption"], str) and 40 <= len(topic["caption"]) <= 700):
+        errors.append("caption (the searchable paragraph under the hook) must be 40 to 700 characters")
     return errors
 
 
@@ -590,7 +592,7 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     # The title opens the caption, so the next runs can see what was already posted.
     cta = bool(topic.get("cta")) and CTA_ENABLED
     tail = CAPTION_SHARE if cta else CAPTION_SAVE
-    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
+    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"],
