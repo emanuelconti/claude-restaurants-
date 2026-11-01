@@ -1,0 +1,777 @@
+<div id="shopify-section-template--31146510057807__gm_css" class="shopify-section"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --ink:#131417;         /* near-black, very slightly warm */
+  --ink-2:#1C1D21;        /* raised dark surface */
+  --paper:#ffffff;
+  --bone:#F5F3EF;         /* warm neutral, biased away from the lilac */
+  --bone-2:#EFECE6;
+  --line:#E6E2DA;
+  --line-dark:#2A2B30;
+  --muted:#403D38;      /* body copy: dark, the way airback sets it */
+  --meta:#7C776F;       /* struck prices and true metadata only */
+  --muted-dark:#D4D0C9;
+  --meta-dark:#928D85;
+  --lilac:#7A63C0;        /* deepened: an ink, not a pastel */
+  --lilac-lift:#A995E0;   /* for dark grounds only */
+  --lilac-tint:#F0ECFA;
+  --disp:'Figtree',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font-body--family:'Figtree',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font-heading--family:'Figtree',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --body:'Figtree',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+.gm *, .gm *::before, .gm *::after{box-sizing:border-box}
+.gm{margin:0;font-family:var(--body);font-size:16px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.gm img{max-width:100%;height:auto;display:block;object-fit:cover;width:100%}
+.gm a{color:inherit}
+.gm :focus-visible{outline:2px solid var(--lilac);outline-offset:3px;border-radius:4px}
+.gm .wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.gm .sec{padding:96px 0}
+.gm .dark{background:var(--ink);color:#fff}
+.gm .dark .lead{color:var(--muted-dark)}
+.gm h1, .gm h2, .gm h3, .gm h4, .gm .disp{font-family:var(--disp);font-weight:700;letter-spacing:-.018em;text-wrap:balance}
+.gm h2.h{font-size:clamp(30px,3.6vw,44px);line-height:1.08;font-weight:700;margin:0 0 14px}
+.gm h3.h3{font-size:clamp(19px,1.7vw,22px);line-height:1.24;font-weight:700;margin:0 0 10px;letter-spacing:-.014em}
+.gm .lead{font-size:16px;line-height:1.62;color:var(--muted);margin:0 0 8px;max-width:64ch}
+.gm .center{text-align:center}
+.gm .center .lead{margin-left:auto;margin-right:auto}
+.gm .eyebrow{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lilac)}
+.gm .dark .eyebrow{color:var(--lilac-lift)}
+.gm .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:19px 36px;border-radius:3px;background:var(--ink);color:#fff;text-decoration:none;transition:background .18s,color .18s}
+.gm .btn:hover{background:#000}
+.gm .btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.gm .btn.out:hover{background:var(--ink);color:#fff}
+.gm .dark .btn{background:#fff;color:var(--ink)}
+.gm .dark .btn:hover{background:var(--bone)}
+.gm .dark .btn.out{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.gm .dark .btn.out:hover{background:#fff;color:var(--ink)}
+
+/* ---------- announcement + header ---------- */
+.gm .ann{background:var(--lilac);color:#fff;text-align:center;font-family:var(--disp);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 16px}
+.gm .ann i{font-style:normal}
+@media(max-width:560px){.ann{font-size:10px;letter-spacing:.1em;padding:9px 12px}.ann i{display:none}}
+.gm .hd{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff;border-bottom:0}
+.gm .hd-in{max-width:1220px;margin:0 auto;padding:0 18px;height:66px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.gm .hd-l, .gm .hd-r{display:flex;align-items:center;gap:6px}
+.gm .hd-r{justify-content:flex-end}
+.gm .ico{width:42px;height:42px;border:0;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;padding:0}
+.gm .ico svg{width:21px;height:21px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.gm .ico .cnt{position:absolute;top:5px;right:4px;background:#fff;color:var(--ink);font-family:var(--disp);font-size:9px;font-weight:700;min-width:15px;height:15px;border-radius:999px;display:flex;align-items:center;justify-content:center}
+.gm .logo{font-family:var(--disp);font-weight:800;letter-spacing:.2em;font-size:15px;text-transform:uppercase;text-decoration:none;white-space:nowrap;line-height:1}
+.gm .logo small{display:block;font-size:8.5px;letter-spacing:.34em;font-weight:600;color:var(--muted-dark);margin-top:3px}
+.gm .navdesk{display:none;gap:30px;align-items:center}
+.gm .navdesk a{font-family:var(--disp);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;opacity:.78}
+.gm .navdesk a:hover, .gm .navdesk a.on{opacity:1;color:var(--lilac)}
+@media(min-width:1000px){.navdesk{display:flex}.hd-l .ico.burger{display:none}}
+
+/* off-canvas drawer */
+.gm .scrim{position:fixed;inset:0;background:rgba(19,20,23,.5);opacity:0;pointer-events:none;transition:opacity .3s;z-index:80}
+.gm .scrim.on{opacity:1;pointer-events:auto}
+.gm .drawer{position:fixed;top:0;left:0;bottom:0;width:min(85vw,360px);background:#fff;z-index:90;transform:translateX(-100%);transition:transform .32s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow-y:auto}
+.gm .drawer.on{transform:none}
+.gm .drawer-top{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}
+.gm .drawer-top span{font-family:var(--disp);font-weight:700;font-size:12px;letter-spacing:.19em;text-transform:uppercase}
+.gm .drawer a.row{display:block;padding:19px 22px;font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:-.01em;text-decoration:none;border-bottom:1px solid var(--line)}
+.gm .drawer a.row:hover{background:var(--bone)}
+.gm .drawer .help{padding:22px;border-bottom:1px solid var(--line)}
+.gm .drawer .help p{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.gm .drawer .help a{font-size:14px;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+.gm .drawer .cur{padding:19px 22px;display:flex;align-items:center;gap:11px;font-size:14px;font-weight:600;color:var(--muted)}
+
+/* ---------- marquee ---------- */
+.gm .bar{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0;font-family:var(--disp);font-weight:600;letter-spacing:.15em;font-size:11px;text-transform:uppercase}
+.gm .bar span{display:inline-block;padding-right:52px}
+.gm .bar .track{display:inline-block;animation:scroll 30s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.bar .track{animation:none}}
+
+/* ---------- hero ---------- */
+.gm .hero{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.gm .hero h1{font-size:clamp(34px,4.2vw,54px);line-height:1.04;letter-spacing:-.022em;font-weight:700;margin:0 0 18px}
+.gm .hero h1 em{font-style:normal;color:var(--lilac-lift)}
+.gm .hero p{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 30px;max-width:46ch}
+.gm .dark .hero p{color:var(--muted-dark)}
+.gm .stats{display:flex;border-top:1px solid var(--line);padding-top:26px;margin-top:36px}
+.gm .dark .stats{border-top-color:var(--line-dark)}
+.gm .stat{flex:1;padding-right:18px}
+.gm .stat+.stat{border-left:1px solid var(--line);padding-left:24px}
+.gm .dark .stat+.stat{border-left-color:var(--line-dark)}
+.gm .stat b{display:block;font-family:var(--disp);font-size:21px;font-weight:700;letter-spacing:-.02em}
+.gm .stat small{color:var(--meta);font-size:13px}
+.gm .dark .stat small{color:var(--meta-dark)}
+
+/* ---------- rotating image block ---------- */
+.gm .anim{position:relative;overflow:hidden;background:var(--bone);aspect-ratio:4/3}
+.gm .dark .anim{background:var(--ink-2)}
+.gm .anim img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0}
+.gm .anim img.a{opacity:1}
+.gm .anim img.b{animation:fade 13s infinite;animation-delay:4.3s}
+.gm .anim img.c{animation:fade 13s infinite;animation-delay:8.6s}
+@keyframes fade{0%{opacity:0}3%{opacity:1}30%{opacity:1}33%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.anim img{animation:none!important;opacity:0}.anim img.a{opacity:1}}
+.gm .anim .cap{position:absolute;left:20px;bottom:20px;background:var(--ink);color:#fff;font-family:var(--disp);font-weight:700;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:9px 15px;z-index:2}
+
+/* ---------- hotspots ---------- */
+.gm .spotwrap{position:relative;background:var(--bone)}
+.gm .spot{position:absolute;width:34px;height:34px;border-radius:50%;border:0;padding:0;cursor:pointer;background:var(--lilac);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:19px;font-weight:500;line-height:1;transform:translate(-50%,-50%);box-shadow:0 2px 14px rgba(19,20,23,.28)}
+.gm .spot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1.5px solid var(--lilac);opacity:.45;animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:.55}70%{transform:scale(1.35);opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.spot::after{animation:none}}
+.gm .spot[aria-expanded="true"]{background:var(--ink)}
+.gm .spot[aria-expanded="true"]::after{display:none}
+.gm .spotnote{position:absolute;background:#fff;padding:16px 18px;max-width:250px;box-shadow:0 8px 34px rgba(19,20,23,.19);z-index:5;transform:translate(-50%,14px)}
+.gm .spotnote[hidden]{display:none}
+.gm .spotnote b{display:block;font-family:var(--disp);font-size:14px;margin-bottom:5px}
+.gm .spotnote span{font-size:13px;line-height:1.5;color:var(--muted)}
+
+/* ---------- badges ---------- */
+.gm .badges{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.gm .badge{display:flex;gap:13px;align-items:center;font-family:var(--disp);font-weight:600;font-size:14px;letter-spacing:.01em;line-height:1.3;padding:26px 22px}
+.gm .badge+.badge{border-left:1px solid var(--line)}
+.gm .badge svg{flex:0 0 22px;width:22px;height:22px;stroke:var(--lilac);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- included ---------- */
+.gm .inc{border:1px solid var(--ink)}
+.gm .inc-head{background:var(--ink);color:#fff;padding:17px 24px;font-family:var(--disp);font-weight:700;font-size:12px;letter-spacing:.15em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.gm .inc-head .acc{color:var(--lilac-lift);letter-spacing:.1em}
+.gm .inc-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.gm .inc-item{padding:0 0 32px;text-align:center;background:#fff}
+.gm .inc-item+.inc-item{border-left:1px solid var(--line)}
+.gm .inc-item .ph{position:relative;line-height:0}
+.gm .inc-item .ph img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--bone)}
+.gm .inc-item .ph::after{content:"";position:absolute;left:0;bottom:0;width:48%;height:38px;background:#fff}
+.gm .inc-item b{display:block;font-family:var(--disp);font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-top:14px;padding:0 22px;line-height:1.25}
+.gm .inc-item small{color:var(--muted);font-size:14px;line-height:1.55;display:block;margin-top:9px;padding:0 26px}
+
+/* ---------- meters ---------- */
+.gm .meter{display:grid;grid-template-columns:190px 1fr;gap:26px;align-items:center;padding:22px 0}
+.gm .meter+.meter{border-top:1px solid var(--line)}
+.gm .meter-name{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.015em}
+.gm .pips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gm .pip{height:5px;background:var(--line)}
+.gm .pip.on{background:var(--lilac)}
+.gm .meter-ends{display:flex;justify-content:space-between;font-size:13.5px;color:var(--meta);margin-top:11px;gap:16px}
+
+/* ---------- features ---------- */
+.gm .feat{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:44px 0}
+.gm .feat.rev .feat-media{order:2}
+.gm .feat-media img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--bone)}
+.gm .dark .feat-media img{background:var(--ink-2)}
+.gm .num{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--lilac);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.gm .dark .num{color:var(--lilac-lift)}
+.gm .num::after{content:"";height:1px;width:44px;background:currentColor;opacity:.42}
+
+/* ---------- tabs ---------- */
+.gm .tabs{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-bottom:52px;border-bottom:1px solid var(--line)}
+.gm .dark .tabs{border-bottom-color:var(--line-dark)}
+.gm .tab{border:0;cursor:pointer;font-family:var(--disp);background:none;color:var(--muted-dark);font-weight:600;font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:16px 26px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.gm .tab[aria-selected="true"]{color:#fff;border-bottom-color:var(--lilac-lift)}
+.gm .panel[hidden]{display:none}
+.gm .panel{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.gm .panel dl{margin:0}
+.gm .panel dt{font-family:var(--disp);font-weight:700;font-size:11px;letter-spacing:.17em;text-transform:uppercase;margin-top:22px;color:var(--lilac)}
+.gm .dark .panel dt{color:var(--lilac-lift)}
+.gm .panel dd{margin:4px 0 0;font-size:16px}
+.gm .panel img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--ink-2)}
+.gm table.sz{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.gm table.sz th, .gm table.sz td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line)}
+.gm .dark table.sz th, .gm .dark table.sz td{border-bottom-color:var(--line-dark)}
+.gm .dark table.sz th{color:var(--lilac-lift)}
+.gm table.sz th{font-family:var(--disp);color:var(--lilac);font-size:10.5px;text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+.gm table.sz td:first-child{font-family:var(--disp);font-weight:700}
+
+/* ---------- illustrated how-to ---------- */
+.gm .howgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.gm .how{margin:0;background:#fff;padding:0 0 26px}
+.gm .how-art{position:relative;color:var(--ink);padding:6px 10px 0}
+.gm .how-art svg{width:100%;height:auto;display:block}
+.gm .how-n{position:absolute;top:16px;left:18px;font-family:var(--disp);font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--lilac)}
+.gm .how figcaption{padding:0 26px}
+.gm .how figcaption b{display:block;font-family:var(--disp);font-size:18px;font-weight:700;line-height:1.15;margin-bottom:9px;letter-spacing:-.02em}
+.gm .how figcaption span{font-size:14.5px;line-height:1.55;color:var(--muted)}
+
+/* ---------- full-bleed photo band with caption ---------- */
+.gm .band{position:relative}
+.gm .band img{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--bone)}
+.gm .band .plate{position:absolute;left:0;bottom:0;background:#fff;padding:26px 34px 22px;max-width:min(560px,86%)}
+.gm .band .plate h3{font-size:clamp(19px,2vw,26px);line-height:1.16;margin:0 0 9px;font-weight:700}
+.gm .band .plate p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.gm .band .cap2{background:var(--ink);color:#fff;padding:44px 0}
+.gm .band .cap2 h2{font-size:clamp(24px,2.6vw,34px);line-height:1.14;margin:0 0 12px;font-weight:700}
+.gm .band .cap2 p{color:var(--muted-dark);margin:0;font-size:16px;max-width:64ch}
+
+/* ---------- tech drawing ---------- */
+.gm .tech{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.gm .tech svg{width:100%;height:auto;max-width:420px;margin:0 auto;display:block}
+
+/* ---------- why ---------- */
+.gm .why{display:grid;grid-template-columns:1fr 1fr;gap:0 72px}
+.gm .why ul{margin:0;padding:0}
+.gm .why li{list-style:none;display:flex;gap:16px;align-items:flex-start;font-size:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.gm .tick{flex:0 0 18px;width:18px;height:18px;display:flex;align-items:center;justify-content:center;margin-top:4px}
+.gm .tick svg{width:16px;height:16px;stroke:var(--lilac);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gm .why b{display:block;font-family:var(--disp);font-size:16px;letter-spacing:-.015em}
+.gm .why small{color:var(--muted);font-size:15px;line-height:1.55;display:block;margin-top:3px}
+
+/* ---------- cards ---------- */
+.gm .ret{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.gm .ret>.card{margin:0}
+.gm .card{background:#fff;padding:34px 30px}
+.gm .card .step{font-family:var(--disp);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--lilac);text-transform:uppercase;margin-bottom:14px}
+.gm .two{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark)}
+.gm .dark .card{background:var(--ink-2);color:#fff}
+.gm .dark .card .lead{color:var(--muted-dark)}
+.gm .note{border:1px solid var(--line);padding:28px 30px;margin-top:24px}
+
+/* ---------- faq ---------- */
+.gm .faq details{border-bottom:1px solid var(--line);padding:24px 0}
+.gm .faq details:first-of-type{border-top:1px solid var(--line)}
+.gm .faq summary{cursor:pointer;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.012em;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.gm .faq summary::-webkit-details-marker{display:none}
+.gm .faq summary::after{content:"+";font-family:var(--body);font-size:22px;font-weight:300;line-height:1;color:var(--muted)}
+.gm .faq details[open] summary::after{content:"\2212"}
+.gm .faq p{color:var(--muted);margin:14px 0 0;max-width:76ch;font-size:15.5px}
+
+/* ---------- product buy box ---------- */
+.gm .pdp{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:start;padding:48px 0 76px}
+.gm .gal-main{overflow:hidden;background:var(--bone);aspect-ratio:1/1;position:relative}
+.gm .gal-main img{width:100%;height:100%;object-fit:cover}
+.gm .dots{display:none;gap:8px;justify-content:center;margin-top:16px}
+.gm .dots i{width:7px;height:7px;border-radius:50%;background:var(--line);display:block}
+.gm .dots i.on{background:var(--ink)}
+.gm .thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}
+.gm .thumbs button{padding:0;border:0;background:none;cursor:pointer;aspect-ratio:1/1;position:relative;overflow:hidden}
+.gm .thumbs button::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line)}
+.gm .thumbs button[aria-current="true"]::after{box-shadow:inset 0 0 0 2px var(--ink)}
+.gm .thumbs img{width:100%;height:100%;object-fit:cover}
+.gm .pdp h1{font-size:clamp(26px,2.6vw,36px);line-height:1.14;letter-spacing:-.018em;font-weight:700;margin:8px 0 12px}
+.gm .price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:20px 0 6px;font-variant-numeric:tabular-nums}
+.gm .price b{font-family:var(--disp);font-size:27px;font-weight:700;letter-spacing:-.02em;color:var(--lilac)}
+.gm .price s{color:var(--meta);font-size:19px;font-weight:500}
+.gm .save{font-family:var(--disp);background:var(--lilac);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 11px;border-radius:3px}
+.gm .taxline{font-size:14px;color:var(--meta);margin:0 0 24px}
+.gm .optlab{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:28px 0 12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.gm .optlab a{font-size:11px;letter-spacing:.08em;color:var(--lilac);text-decoration:none;border-bottom:1px solid currentColor}
+.gm .swatches{display:flex;gap:8px;flex-wrap:wrap}
+.gm .sw{box-shadow:inset 0 0 0 1px var(--line);background:#fff;padding:13px 6px;font-family:var(--disp);font-weight:600;font-size:13px;cursor:pointer;min-width:58px;border:0;letter-spacing:.03em}
+.gm .sw[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:none}
+.gm .colorsw{display:flex;gap:10px;align-items:center}
+.gm .colorsw button{width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:#FBFAF6;box-shadow:inset 0 0 0 1px var(--line)}
+.gm .colorsw button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--line),0 0 0 2px var(--ink)}
+.gm .qtyrow{display:flex;gap:10px;margin-top:30px}
+.gm .qty{display:flex;align-items:center;box-shadow:inset 0 0 0 1px var(--line)}
+.gm .qty button{width:46px;height:56px;border:0;background:none;cursor:pointer;font-size:19px;font-family:var(--body);color:var(--ink)}
+.gm .qty span{min-width:34px;text-align:center;font-family:var(--disp);font-weight:600;font-variant-numeric:tabular-nums}
+.gm .qtyrow .btn{flex:1;padding:19px 20px}
+.gm .buy2{margin-top:10px}
+.gm .buy2 .btn{width:100%}
+.gm .klist{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.gm .klist li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.gm .klist li::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:var(--lilac);margin-top:8px}
+.gm .dellabel{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:30px 0 6px}
+.gm .delline{font-size:15.5px;font-weight:600;margin:0}
+.gm .trust{margin-top:28px;display:grid;gap:11px;font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:24px}
+.gm .trust div{display:flex;gap:11px;align-items:flex-start}
+.gm .trust svg{width:16px;height:16px;stroke:var(--lilac);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 16px;margin-top:4px}
+.gm .sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px;display:none;align-items:center;gap:10px;backdrop-filter:blur(12px)}
+.gm .sticky .qty button{height:50px;width:40px}
+.gm .sticky .btn{flex:1;padding:17px 12px;font-size:12.5px}
+
+/* ---------- policy pages ---------- */
+.gm .doc{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+.gm .doc h1{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.02em;font-weight:700;margin:0 0 10px;line-height:1.02}
+.gm .doc .upd{color:var(--meta);font-size:13px;margin:0 0 40px;font-family:var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.gm .doc h2{font-family:var(--disp);font-size:19px;font-weight:700;margin:40px 0 10px;letter-spacing:-.012em}
+.gm .doc p, .gm .doc li{color:var(--muted);font-size:16px;line-height:1.68}
+.gm .doc ul, .gm .doc ol{padding-left:20px}
+.gm .doc li{margin-bottom:8px}
+.gm .doc .box{background:var(--bone);padding:26px 28px;margin:26px 0}
+.gm .doc .box p{margin:0;font-size:15px}
+
+/* ---------- closing CTA ---------- */
+.gm .cta{background:var(--ink);color:#fff;padding:96px 0}
+.gm .cta h2{font-size:clamp(32px,4.4vw,52px);line-height:1.06;letter-spacing:-.022em;font-weight:700;margin:0 0 26px;max-width:18ch}
+.gm .cta p{color:var(--muted-dark);font-size:16px;max-width:54ch;margin:0 0 32px}
+.gm .cta .btn{background:#fff;color:var(--ink)}
+.gm .cta .btn:hover{background:var(--bone)}
+.gm .cta .btn.out{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.gm .cta .btn.out:hover{background:#fff;color:var(--ink)}
+.gm .cta .eyebrow{color:var(--lilac-lift)}
+
+/* ---------- footer ---------- */
+.gm .ft{background:var(--ink);color:#fff;padding:76px 0 30px}
+.gm .ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px}
+.gm .ft h4{font-family:var(--disp);font-size:10.5px;letter-spacing:.19em;text-transform:uppercase;color:var(--lilac-lift);margin:0 0 18px;font-weight:700}
+.gm .ft a{display:block;color:var(--muted-dark);text-decoration:none;font-size:15px;margin-bottom:11px}
+.gm .ft a:hover{color:#fff}
+.gm .ft .blurb{color:var(--muted-dark);font-size:15px;max-width:34ch;line-height:1.6}
+.gm .ft-col h4{cursor:default}
+.gm .ft-pay{display:flex;flex-wrap:wrap;gap:7px;margin-top:48px;padding-top:34px;border-top:1px solid var(--line-dark)}
+.gm .ft-pay span{font-family:var(--disp);font-size:9.5px;font-weight:700;letter-spacing:.11em;color:var(--muted-dark);border:1px solid var(--line-dark);padding:7px 10px;line-height:1}
+.gm .ft-loc{margin-top:22px;color:var(--muted-dark);font-size:13px;display:flex;align-items:center;gap:9px}
+.gm .ft-loc svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.gm .ft-bot{border-top:1px solid var(--line-dark);margin-top:30px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#7C776F;font-size:12.5px}
+@media(max-width:640px){
+  .gm .ft-grid{grid-template-columns:1fr;gap:0}
+  .gm .ft-col{border-top:1px solid var(--line-dark)}
+  .gm .ft-col h4{margin:0;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:11px}
+  .gm .ft-col h4::after{content:"+";font-family:var(--body);font-size:19px;font-weight:300;color:var(--muted-dark)}
+  .gm .ft-col.open h4::after{content:"\2212"}
+  .gm .ft-col .links{display:none;padding-bottom:14px}
+  .gm .ft-col.open .links{display:block}
+  .gm .ft-brand{padding-bottom:30px}
+}
+
+.gm .page{display:none}
+.gm .page.on{display:block}
+.gm .bleed{max-width:1220px;margin:0 auto;padding:0 24px}
+
+@media (max-width:1000px){
+  .gm .pdp{grid-template-columns:1fr;gap:34px;padding-top:0}
+  .gm .ft-grid{grid-template-columns:1fr 1fr}
+  .gm .badges{grid-template-columns:1fr 1fr}
+  .gm .badge:nth-child(3){border-left:0}
+  .gm .badge:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:860px){
+  .gm .sec{padding:64px 0}
+  .gm .wrap{padding:0 20px}
+  .gm .hero, .gm .feat, .gm .panel, .gm .why, .gm .two, .gm .tech{grid-template-columns:1fr;gap:32px}
+  .gm .two, .gm .ret{background:none;gap:1px}
+  .gm .feat{padding:26px 0}
+  .gm .feat.rev .feat-media{order:0}
+  .gm .inc-grid{grid-template-columns:1fr}
+  .gm .inc-item+.inc-item{border-left:0;border-top:1px solid var(--line)}
+  .gm .meter{grid-template-columns:1fr;gap:10px;padding:18px 0}
+  .gm .ret{grid-template-columns:1fr;background:var(--line)}
+  .gm .howgrid{grid-template-columns:1fr 1fr}
+  .gm .band img{aspect-ratio:4/3}
+  .gm .why{gap:0}
+  .gm .hero{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+  .gm .hero .anim{order:-1;width:100%;aspect-ratio:4/3;min-height:280px}
+  .gm .hero .anim img.b, .gm .hero .anim img.c{display:none}
+  /* full-bleed media bands on phones */
+  .gm .bleed{padding:0}
+  .gm .feat-media, .gm .gal-main, .gm .spotwrap{margin-left:-20px;margin-right:-20px}
+  .gm .feat-media img{aspect-ratio:4/3}
+  .gm .tabs{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+  .gm .tab{padding:15px 18px;white-space:nowrap}
+  .gm .dots{display:flex}
+}
+@media (max-width:560px){
+  .gm .badges{grid-template-columns:1fr}
+  .gm .badge+.badge{border-left:0;border-top:1px solid var(--line)}
+  .gm .howgrid{grid-template-columns:1fr}
+  .gm .ft-grid{grid-template-columns:1fr;gap:34px}
+  .gm .thumbs{grid-template-columns:repeat(6,1fr);gap:6px}
+  .gm .stats{flex-wrap:wrap;gap:18px 0}
+  .gm .stat{flex:0 0 50%}
+  .gm .stat+.stat{border-left:0;padding-left:0}
+  .gm .stat:nth-child(2){border-left:1px solid var(--line-dark);padding-left:22px}
+}
+
+</style>
+
+
+<style>
+/* --- Stile identico a Voyat per Good Message --- */
+
+/* Titolo Principale Gigante e Impattante */
+.index-section h1, 
+.slideshow__slide h1,
+.hero__title,
+.banner__heading,
+.banner__content h1,
+.hero-banner__heading,
+.hero__content-inner h1,
+.banner__box h1,
+div[class*="banner"] h1,
+div[class*="hero"] h1 {
+  font-size: clamp(3rem, 5.5vw, 5.5rem) !important;
+  font-weight: 800 !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.03em !important;
+  text-transform: none !important;
+}
+
+/* Tagline superiore */
+.subheading, 
+.hero__subheading,
+.banner__subheading {
+  font-size: 0.85rem !important;
+  letter-spacing: 0.2em !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 15px !important;
+}
+
+/* Paragrafo descrittivo */
+.hero__text-content p,
+.banner__text {
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  max-width: 500px !important;
+}
+
+/* Bottone pieno bianco, squadrato e pulito */
+.btn, 
+.hero__btn,
+.banner__buttons a {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 16px 32px !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+.btn:hover, 
+.hero__btn:hover,
+.banner__buttons a:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+</div><div id="shopify-section-template--31146510057807__gm_contact" class="shopify-section"><div class="gm-pro-page">
+  <div class="gm-pro-container">
+    
+    <!-- HEADER -->
+    <div class="gm-pro-header">
+      <span class="gm-pro-tag">Good Message Studio</span>
+      <h1>Help & Contact</h1>
+      <p class="gm-pro-lead">Everything you need to know about ordering, shipping, and support.</p>
+    </div>
+
+    <!-- INTRO / CONTATTO DIRETTO -->
+    <div class="gm-pro-section">
+      <h2>How to reach us</h2>
+      <p>We answer every email ourselves within <strong>2 business days</strong> (Monday to Friday, excluding public holidays). Email is our sole communication channel because it allows us to give you clear, documented answers without keeping you on hold.</p>
+      <p class="gm-pro-email-box">
+        <strong>Direct Support Email:</strong><br>
+        <a href="mailto:hello@goodmessagestudio.com">hello@goodmessagestudio.com</a>
+      </p>
+    </div>
+
+    <!-- SPEDIZIONE & CONSEGNA -->
+    <div class="gm-pro-section">
+      <h2>Shipping & Delivery to Singapore</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Cost:</strong> Standard tracked shipping is 100% free with no minimum spend (S$0 at checkout).</li>
+        <li><strong>Timeline:</strong> Orders process in 1–3 business days, and transit takes 4–8 days. Most parcels arrive within 5–13 days from purchase.</li>
+        <li><strong>Taxes & Duties:</strong> We are not registered for Singapore GST, so no GST is collected at checkout. Consignments under S$400 generally qualify for import GST relief.</li>
+      </ul>
+    </div>
+
+    <!-- RESI & RIMBORSI -->
+    <div class="gm-pro-section">
+      <h2>Returns, Defects & Lemon Law</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Change of mind:</strong> We do not offer returns, refunds, or exchanges for a change of mind, personal preference, or incorrectly chosen size. Please check our garment measurements carefully before buying.</li>
+        <li><strong>Damaged or Defective Items:</strong> Protected under Singapore’s Lemon Law framework. Report transit damage or incorrect items within 7 days of delivery with photos.</li>
+        <li><strong>Returns process:</strong> Never ship anything back without authorization. Correct return addresses are issued exclusively by email once a claim is approved.</li>
+      </ul>
+    </div>
+
+    <!-- FAQ / COSA INCLUDERE NELL'EMAIL -->
+    <div class="gm-pro-section">
+      <h2>What to include in your message</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Order enquiries:</strong> Always include your order number and the email address used at checkout.</li>
+        <li><strong>Sizing help:</strong> Send us the flat measurements of a hoodie you already own and like for a precise recommendation.</li>
+        <li><strong>Cancellations:</strong> You can cancel an order only before it has been dispatched to the carrier.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .gm-pro-page {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 6rem 2rem 8rem 2rem;
+    box-sizing: border-box;
+    font-family: var(--font-body--family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  }
+  .gm-pro-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .gm-pro-header {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 2.5rem;
+  }
+  .gm-pro-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    color: #666;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .gm-pro-page h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem 0;
+    color: #000000;
+  }
+  .gm-pro-lead {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #555555;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .gm-pro-section {
+    margin-bottom: 3.5rem;
+  }
+  .gm-pro-section h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: #111111;
+    border-left: 3px solid #000;
+    padding-left: 1rem;
+  }
+  .gm-pro-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+  }
+  .gm-pro-email-box {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin-top: 1.5rem;
+  }
+  .gm-pro-email-box a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .gm-pro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gm-pro-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333333;
+    font-weight: 300;
+  }
+  .gm-pro-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: 600;
+  }
+  .gm-pro-list li strong {
+    font-weight: 600;
+    color: #000000;
+  }
+  @media screen and (max-width: 768px) {
+    .gm-pro-page {
+      padding: 3rem 1.25rem 5rem 1.25rem;
+    }
+    .gm-pro-header {
+      margin-bottom: 2.5rem;
+    }
+  }
+</style></div><div id="shopify-section-template--31146510057807__custom_liquid_ca4tyj" class="shopify-section">
+
+
+
+<div
+  class="section-background"
+></div>
+<div
+  class="section section--page-width spacing-style"
+  style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px;
+"
+>
+  <div class="gm-pro-page">
+  <div class="gm-pro-container">
+    
+    <!-- HEADER -->
+    <div class="gm-pro-header">
+      <span class="gm-pro-tag">Good Message Studio</span>
+      <h1>Help & Contact</h1>
+      <p class="gm-pro-lead">Everything you need to know about ordering, shipping, and support.</p>
+    </div>
+
+    <!-- INTRO / CONTATTO DIRETTO -->
+    <div class="gm-pro-section">
+      <h2>How to reach us</h2>
+      <p>We answer every email ourselves within <strong>2 business days</strong> (Monday to Friday, excluding public holidays). Email is our sole communication channel because it allows us to give you clear, documented answers without keeping you on hold.</p>
+      <p class="gm-pro-email-box">
+        <strong>Direct Support Email:</strong><br>
+        <a href="mailto:hello@goodmessagestudio.com">hello@goodmessagestudio.com</a>
+      </p>
+    </div>
+
+    <!-- SPEDIZIONE & CONSEGNA -->
+    <div class="gm-pro-section">
+      <h2>Shipping & Delivery to Singapore</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Cost:</strong> Standard tracked shipping is 100% free with no minimum spend (S$0 at checkout).</li>
+        <li><strong>Timeline:</strong> Orders process in 1–3 business days, and transit takes 4–8 days. Most parcels arrive within 5–13 days from purchase.</li>
+        <li><strong>Taxes & Duties:</strong> We are not registered for Singapore GST, so no GST is collected at checkout. Consignments under S$400 generally qualify for import GST relief.</li>
+      </ul>
+    </div>
+
+    <!-- RESI & RIMBORSI -->
+    <div class="gm-pro-section">
+      <h2>Returns, Defects & Lemon Law</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Change of mind:</strong> We do not offer returns, refunds, or exchanges for a change of mind, personal preference, or incorrectly chosen size. Please check our garment measurements carefully before buying.</li>
+        <li><strong>Damaged or Defective Items:</strong> Protected under Singapore’s Lemon Law framework. Report transit damage or incorrect items within 7 days of delivery with photos.</li>
+        <li><strong>Returns process:</strong> Never ship anything back without authorization. Correct return addresses are issued exclusively by email once a claim is approved.</li>
+      </ul>
+    </div>
+
+    <!-- FAQ / COSA INCLUDERE NELL'EMAIL -->
+    <div class="gm-pro-section">
+      <h2>What to include in your message</h2>
+      <ul class="gm-pro-list">
+        <li><strong>Order enquiries:</strong> Always include your order number and the email address used at checkout.</li>
+        <li><strong>Sizing help:</strong> Send us the flat measurements of a hoodie you already own and like for a precise recommendation.</li>
+        <li><strong>Cancellations:</strong> You can cancel an order only before it has been dispatched to the carrier.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .gm-pro-page {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 6rem 2rem 8rem 2rem;
+    box-sizing: border-box;
+    font-family: var(--font-body--family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  }
+  .gm-pro-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .gm-pro-header {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 2.5rem;
+  }
+  .gm-pro-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    color: #666;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .gm-pro-page h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem 0;
+    color: #000000;
+  }
+  .gm-pro-lead {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #555555;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .gm-pro-section {
+    margin-bottom: 3.5rem;
+  }
+  .gm-pro-section h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: #111111;
+    border-left: 3px solid #000;
+    padding-left: 1rem;
+  }
+  .gm-pro-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+  }
+  .gm-pro-email-box {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin-top: 1.5rem;
+  }
+  .gm-pro-email-box a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .gm-pro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gm-pro-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333333;
+    font-weight: 300;
+  }
+  .gm-pro-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: 600;
+  }
+  .gm-pro-list li strong {
+    font-weight: 600;
+    color: #000000;
+  }
+  @media screen and (max-width: 768px) {
+    .gm-pro-page {
+      padding: 3rem 1.25rem 5rem 1.25rem;
+    }
+    .gm-pro-header {
+      margin-bottom: 2.5rem;
+    }
+  }
+</style>
+</div>
+
+
+</div>
