@@ -69,6 +69,20 @@ def call(method: str, path: str, token: str, params: dict | None = None) -> dict
         raise RuntimeError(f"{method} {path}: {message}") from None
 
 
+SHOP = "https://goodmessagestudio.com"
+
+
+def to_square(src: str, dst: str) -> None:
+    """A 4:5 slide on a 1:1 card, whole and centred on its own background colour, so nothing is cropped."""
+    from PIL import Image
+    im = Image.open(src).convert("RGB")
+    bg = im.getpixel((4, 4))
+    side = max(im.width, im.height)
+    canvas = Image.new("RGB", (side, side), bg)
+    canvas.paste(im, ((side - im.width) // 2, (side - im.height) // 2))
+    canvas.resize((1080, 1080), Image.LANCZOS).save(dst, "JPEG", quality=90)
+
+
 def page_token(page: str, token: str) -> str:
     """Return a Page token: FB_PAGE_TOKEN_GMS may hold the owner's user token
     instead (1 November 2026), and a user token with pages_show_list can ask for
@@ -119,24 +133,36 @@ def main():
             return
         if stamps and (now - max(stamps)).total_seconds() < MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
-        media = []
-        for name in meta["slides"][:10]:
-            url = None
+        # The owner (1 November 2026): on Facebook the post must be one image you swipe, like a Meta ads
+        # carousel, not a grid of small photos. So it is a link carousel: each slide is a card (square, as
+        # Facebook shows them) that opens the shop when tapped.
+        def public(path):
             for _, host in IG.HOSTS:
                 try:
-                    url = IG.upload_temporary(os.path.join(folder, name), host)
-                    break
+                    return IG.upload_temporary(path, host)
                 except Exception as error:
                     print(f"upload did not work ({error}); trying the next host", file=sys.stderr)
-            if not url:
-                sys.exit(f"could not make {name} public: nothing published")
-            photo = call("POST", f"{page}/photos", token, {"url": url, "published": "false"})
-            media.append(photo["id"])
-        # On Facebook the link in the text is clickable: "Shop now" goes straight to the shop.
-        params = {"message": meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)}
-        for i, fbid in enumerate(media):
-            params[f"attached_media[{i}]"] = json.dumps({"media_fbid": fbid})
-        post = call("POST", f"{page}/feed", token, params)
+            sys.exit(f"could not make {os.path.basename(path)} public: nothing published")
+
+        cards = []
+        for i, name in enumerate(meta["slides"][:10]):
+            square = os.path.join(folder, name.replace(".jpg", "-square.jpg"))
+            to_square(os.path.join(folder, name), square)
+            cards.append({"link": SHOP, "picture": public(square),
+                          "name": meta["title"] if i == 0 else "Shop now at goodmessagestudio.com",
+                          "description": "Good Message Studio"})
+        message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
+        params = {"message": message, "link": SHOP, "multi_share_end_card": "false",
+                  "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}
+        try:
+            post = call("POST", f"{page}/feed", token, params)
+        except RuntimeError as error:
+            # Some Pages take at most 5 cards: keep the cover, the first points and the shop slide.
+            if "child" not in str(error).lower() and "attachment" not in str(error).lower():
+                raise
+            keep = cards[:4] + [cards[-2] if len(cards) > 5 else cards[-1]]
+            params["child_attachments"] = json.dumps(keep[:5])
+            post = call("POST", f"{page}/feed", token, params)
         link = call("GET", post["id"], token, {"fields": "permalink_url"}).get("permalink_url")
     except Stop as stop:
         sys.exit(str(stop))
