@@ -36,6 +36,9 @@ small action for today, a reason to keep going, or a laugh that lightens the
 load. Every carousel ends with the follow slide, which the renderer adds.
 
 
+
+**Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. The `work`, `life` and `city` sets now hold 15 to 28 checked photos each.
+
 ## Professional and unattackable (the owner, 1 November 2026)
 
 Every post must look and read like the work of a serious brand, and nobody must be able to fault it: not a customer, not a competitor, not Meta's review, not an advertising regulator. Before publishing, check each point. If one fails, fix it; if it cannot be fixed, do not publish.

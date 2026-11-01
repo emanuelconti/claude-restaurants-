@@ -18,6 +18,7 @@ EPOCH = _dt.date(2026, 10, 31)
 # Photos without faces, the same sets the brand's other feeds use.
 PHOTO_SETS = {
     "life": [
+        "1434030216411-0b793f4b4173", "1447752875215-b2761acb3c5d", "1470252649378-9c29740c9fa8", "1484480974693-6ca0a78fb36b", "1486312338219-ce68d2c6f44d", "1488190211105-8b0e65b80b4e", "1495364141860-b0d03eccd065", "1496181133206-80ce9b88a853", "1499209974431-9dddcece7f88", "1499750310107-5fef28a66643", "1501139083538-0139583c060f", "1506784983877-45594efa4cbe", "1517842645767-c639042777db", "1610701596007-11502861dcfa", "1641924675896-b6a5aaf64861", "1509042239860-f550ce710b93",  # added 1 November 2026: more variety
         "1470252649378-9c29740c9fa8",  # sunrise over a valley
         "1501139083538-0139583c060f",  # hourglass
         "1495364141860-b0d03eccd065",  # a hand holding an alarm clock
@@ -32,6 +33,7 @@ PHOTO_SETS = {
         "1442975631115-c4f7b05b8a2c",  # a cafe inside, morning light
     ],
     "work": [
+        "1486312338219-ce68d2c6f44d", "1488190211105-8b0e65b80b4e", "1496181133206-80ce9b88a853", "1499750310107-5fef28a66643", "1519389950473-47ba0277781c", "1541807084-5c52b6b3adef", "1517842645767-c639042777db", "1484480974693-6ca0a78fb36b", "1434030216411-0b793f4b4173", "1563013544-824ae1b704d3", "1524758631624-e2822e304c36", "1506784983877-45594efa4cbe", "1516321318423-f06f85e504b3",  # added 1 November 2026: more variety
         "1519389950473-47ba0277781c",  # a desk full of laptops, from above
         "1486312338219-ce68d2c6f44d",  # hands typing
         "1516321318423-f06f85e504b3",  # a hand at a laptop
@@ -42,6 +44,7 @@ PHOTO_SETS = {
         "1520607162513-77705c0f0d4a",  # a card terminal, from above
     ],
     "city": [
+        "1511527661048-7fe73d85e9a4", "1583422409516-2895a77efded", "1529422643029-d4585747aaf2", "1485965120184-e220f721d03e", "1559339352-11d035aa65de", "1554118811-1e0d58224f24",  # added 1 November 2026: more variety
         "1583422409516-2895a77efded",  # a city from above
         "1511527661048-7fe73d85e9a4",  # a hill at dusk
         "1517248135467-4c7edcad34c4",  # a restaurant inside
@@ -118,6 +121,22 @@ def bank_topic(date: _dt.date, slot: int = 1) -> dict:
     return EVERYDAY[n % len(EVERYDAY)]
 
 
+# The owner (1 November 2026): no two carousels in a row may open with the same
+# photo, across at least 12 posts. The cover follows a fixed rotation by post
+# number (day x posts a day + slot), so consecutive posts always differ.
+def _rotate_cover(date, slot, picks, pool, covers, per_day):
+    idx = (date - EPOCH).days * per_day + (slot - 1)
+    cover = covers[idx % len(covers)]
+    rest = [p for p in picks[1:] if p != cover]
+    spare = [p for p in pool if p != cover and p not in rest]
+    while len(rest) < len(picks) - 1 and spare:
+        rest.append(spare.pop(0))
+    return [cover] + rest[:len(picks) - 1]
+
+
+COVERS_PER_DAY = 1
+
+
 def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, with one photo per slide, the same every time."""
     topic = topic or bank_topic(date, slot)
@@ -131,6 +150,8 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     if topic.get("photo_ids"):
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
+    _covers = list(dict.fromkeys(PHOTO_SETS.get(topic.get("photos", "life"), PHOTO_SETS["life"])))
+    picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY)
     # The title opens the caption, so later runs can see what was already posted.
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{CAPTION_FOLLOW}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
