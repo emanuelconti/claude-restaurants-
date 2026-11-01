@@ -25,7 +25,7 @@ import os
 import sys
 from zoneinfo import ZoneInfo
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -171,6 +171,61 @@ def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: 
     return img.convert("RGB")
 
 
+CREAM = (247, 243, 236)
+PASTELS = [(244, 220, 222), (219, 231, 244), (222, 234, 222), (248, 238, 206), (236, 226, 244)]
+
+
+def _point_text(d, n, heading, lines, punch, y, max_bottom, colour_body, scale_start=1.0):
+    """The heading, the lines and the closing line, centred from y, shrunk until they end above max_bottom."""
+    for scale in (1.0, 0.94, 0.88, 0.82, 0.76, 0.70, 0.64, 0.58):
+        scale *= scale_start
+        hf, hlines, hs = fit(f"{n}. {heading.upper()}" if n else heading, int(72 * scale), int(50 * scale), TEXT_W, 3, 800, B.DISPLAY)
+        bf = B.font(int(42 * scale), 400, B.BODY)
+        pf = B.font(int(42 * scale), 700, B.BODY)
+        body = [w for line in lines for w in wrap(line, bf, TEXT_W)]
+        plines = wrap(punch, pf, TEXT_W)
+        end = y + hs * 1.08 * len(hlines) + 26 + bf.size * 1.38 * len(body) + 20 + pf.size * 1.32 * len(plines)
+        if end <= max_bottom:
+            break
+    return hf, hlines, bf, body, pf, plines, end
+
+
+def slide_point_product(n: int, heading: str, lines: list, punch: str, pid: str, cache: str, spares=()) -> Image.Image:
+    """The product framed like a shop card on cream, the message under it."""
+    img = Image.new("RGBA", (W, H), CREAM + (255,))
+    d = ImageDraw.Draw(img)
+    brand_row(img, 52, B.INK, False, 56)
+    cw, ch, top = W - 180, 700, 150
+    ph = get_photo(pid, cache, cw, ch, (0.5, 0.45), spares).convert("RGBA")
+    mask = Image.new("L", (cw, ch), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, cw - 1, ch - 1), 40, fill=255)
+    ph.putalpha(mask)
+    sh = Image.new("RGBA", (cw + 80, ch + 80), (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle((40, 50, cw + 40, ch + 50), 40, fill=(0, 0, 0, 55))
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(20)), ((W - cw) // 2 - 40, top - 40))
+    img.alpha_composite(ph, ((W - cw) // 2, top))
+    y = top + ch + 44
+    hf, hlines, bf, body, pf, plines, _ = _point_text(d, n, heading, lines, punch, y, H - 50, B.MUTED, 0.9)
+    y = centred(d, hlines, hf, y, B.INK, 1.08) + 26
+    y = centred(d, body, bf, y, B.MUTED, 1.38) + 20
+    centred(d, plines, pf, y, B.SIGNAL, 1.32)
+    return img.convert("RGB")
+
+
+def slide_point_text(n: int, heading: str, lines: list, punch: str, colour_index: int) -> Image.Image:
+    """Only words, big, on a soft pastel from the hoodies' own colours."""
+    img = Image.new("RGBA", (W, H), PASTELS[colour_index % len(PASTELS)] + (255,))
+    d = ImageDraw.Draw(img)
+    brand_row(img, 70, B.INK, False, 64)
+    hf, hlines, bf, body, pf, plines, end = _point_text(d, n, heading, lines, punch, 0, H - 300, B.INK, 1.35)
+    block = end
+    y = max(220, (H - block) / 2)
+    y = centred(d, hlines, hf, y, B.INK, 1.08) + 26
+    y = centred(d, body, bf, y, (60, 62, 70), 1.38) + 20
+    centred(d, plines, pf, y, B.SIGNAL, 1.32)
+    return img.convert("RGB")
+
+
 def slide_cta() -> Image.Image:
     img = Image.new("RGBA", (W, H), B.INK + (255,))
     d = ImageDraw.Draw(img)
@@ -221,7 +276,16 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
     slides = [slide_cover(car["title"], car["photos"][0], cache, spares(car["photos"][0]))]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
         pid = car["photos"][i]
-        slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, pid, cache, spares(pid)))
+        # The owner (1 November 2026): like a page that really grows, the slides vary: the product as a shop
+        # card with the message under it, words alone on a pastel, or text with the photo. By default they take turns.
+        layouts = car.get("layouts") or []
+        kind = layouts[i - 1] if i - 1 < len(layouts) else ("product", "classic", "text")[(i - 1) % 3]
+        if kind == "product":
+            slides.append(slide_point_product(car["numbers"][i - 1], heading, lines, punch, pid, cache, spares(pid)))
+        elif kind == "text":
+            slides.append(slide_point_text(car["numbers"][i - 1], heading, lines, punch, i))
+        else:
+            slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, pid, cache, spares(pid)))
     if car["cta"]:
         slides.append(slide_cta())
     if car.get("follow"):  # Good Message Studio: the shop slide, then the follow slide (1 November 2026)

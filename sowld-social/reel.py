@@ -16,6 +16,9 @@ The topic file:
   "hook": "Send this to the friend who needs it today",    # on screen in the first scene, at most 60 characters
   "lines": ["Be kind, even on the MRT at 8am.", "..."],      # 3 to 5 messages, one per scene, at most 60 characters each
   "photo_urls": ["https://cdn.shopify.com/...", "..."],    # the shop's product photos: one for the hook, one per line
+  "scenes": ["product", "text", "photo", "product"],       # optional, one per line: product card on cream with the
+                                                           # message under it, words only on a pastel, or full photo
+                                                           # with clean text; by default they take turns
   "caption": "...", "hashtags": "#goodmessagestudio #singapore ..."
 }
 """
@@ -72,28 +75,16 @@ def fit_text(text: str, size_max: int, size_min: int, max_w: int, max_lines: int
         size -= 4
 
 
-def text_block(text: str, size_max: int, size_min: int, max_lines: int = 4) -> Image.Image:
-    """White bold text on a soft dark plate, centred, ready to paste."""
-    f, lines = fit_text(text, size_max, size_min, W - 180, max_lines)
-    lh = int(f.size * 1.12)
-    w = int(max(f.getlength(l) for l in lines)) + 90
-    h = lh * len(lines) + 70
-    plate = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    d = ImageDraw.Draw(plate)
-    d.rounded_rectangle((0, 0, w - 1, h - 1), 36, fill=(15, 18, 20, 150))
-    y = 35
-    for l in lines:
-        d.text((w / 2, y), l, font=f, fill=(255, 255, 255), anchor="ma")
-        y += lh
-    return plate
-
-
-def big_photo(url: str, cache: str) -> Image.Image:
+def raw_photo(url: str, cache: str) -> Image.Image:
     img = B.photo(url, cache)
     if img is None:
         sys.exit(f"photo {url} could not be fetched: nothing rendered (never a reel without its photos)")
+    return img
+
+
+def big_photo(url: str, cache: str) -> Image.Image:
     # 12% larger than the frame, so the slow push has room.
-    return B.cover(img, int(W * 1.12), int(H * 1.12), (0.5, 0.45))
+    return B.cover(raw_photo(url, cache), int(W * 1.12), int(H * 1.12), (0.5, 0.45))
 
 
 def frame_from(photo: Image.Image, t: float) -> Image.Image:
@@ -106,8 +97,9 @@ def frame_from(photo: Image.Image, t: float) -> Image.Image:
 
 
 def shade(img: Image.Image) -> Image.Image:
+    """A soft dark fade at the top (for the text) and at the bottom (for Instagram's own buttons)."""
     g = np.linspace(0, 1, H)[:, None]
-    a = (np.clip((g - 0.55) / 0.45, 0, 1) ** 1.5 * 150 + np.clip((0.18 - g) / 0.18, 0, 1) * 90).astype(np.uint8)
+    a = (np.clip((g - 0.6) / 0.4, 0, 1) ** 1.5 * 130 + np.clip((0.42 - g) / 0.42, 0, 1) ** 1.3 * 120).astype(np.uint8)
     overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     overlay.putalpha(Image.fromarray(np.repeat(a, W, axis=1), "L"))
     out = img.convert("RGBA")
@@ -115,20 +107,102 @@ def shade(img: Image.Image) -> Image.Image:
     return out
 
 
-def scene_frames(photo: Image.Image, text: str, seconds: float, hook: bool) -> list:
+CREAM = (247, 243, 236)
+INKT = (24, 26, 30)
+PASTELS = [(244, 220, 222), (219, 231, 244), (222, 234, 222), (248, 238, 206), (236, 226, 244)]
+
+
+def clean_text(text: str, size_max: int, size_min: int, max_lines: int, colour, shadow: bool, width: int = W - 160) -> Image.Image:
+    """Bold centred text with no plate. On photos it gets a soft shadow so it reads on any background."""
+    f, lines = fit_text(text, size_max, size_min, width, max_lines)
+    lh = int(f.size * 1.1)
+    w = int(max(f.getlength(l) for l in lines)) + 80
+    h = lh * len(lines) + 60
+    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    if shadow:
+        sh = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        ds = ImageDraw.Draw(sh)
+        y = 30
+        for l in lines:
+            ds.text((w / 2, y + 3), l, font=f, fill=(0, 0, 0, 170), anchor="ma")
+            y += lh
+        layer.alpha_composite(sh.filter(ImageFilter.GaussianBlur(10)))
+    d = ImageDraw.Draw(layer)
+    y = 30
+    for l in lines:
+        d.text((w / 2, y), l, font=f, fill=colour, anchor="ma")
+        y += lh
+    return layer
+
+
+def _fade_in(layer: Image.Image, i: int, frames: int = 8) -> tuple:
+    appear = min(1.0, i / frames)
+    if appear < 1:
+        layer = layer.copy()
+        layer.putalpha(layer.getchannel("A").point(lambda v: int(v * appear)))
+    return layer, int((1 - (1 - appear) ** 3) * 36)
+
+
+def scene_photo(photo: Image.Image, text: str, seconds: float, big: bool) -> list:
+    """Full-bleed product photo, clean white text in the top third (the printed message stays visible)."""
     n = int(seconds * FPS)
-    block = text_block(text, 92 if hook else 80, 56, 5 if hook else 4)
+    block = clean_text(text, 100 if big else 84, 56, 4, (255, 255, 255), True)
+    frames = []
+    for i in range(n):
+        fr = shade(frame_from(photo, i / max(n - 1, 1)))
+        layer, rise = _fade_in(block, i)
+        fr.alpha_composite(layer, ((W - block.width) // 2, SAFE_TOP + 70 + 36 - rise))
+        frames.append(fr.convert("RGB"))
+    return frames
+
+
+def scene_product(photo: Image.Image, text: str, seconds: float) -> list:
+    """The product framed like a shop card on cream, the message underneath in ink."""
+    n = int(seconds * FPS)
+    cw, ch = W - 150, 1040
+    top = SAFE_TOP + 10
+    block = clean_text(text, 78, 52, 3, INKT, False, W - 200)
+    mask = Image.new("L", (cw, ch), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, cw - 1, ch - 1), 48, fill=255)
+    big = B.cover(photo, int(cw * 1.1), int(ch * 1.1), (0.5, 0.45))
+    shadow = Image.new("RGBA", (cw + 80, ch + 80), (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle((40, 52, cw + 40, ch + 52), 48, fill=(0, 0, 0, 60))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(22))
     frames = []
     for i in range(n):
         t = i / max(n - 1, 1)
-        fr = shade(frame_from(photo, t))
-        appear = min(1.0, i / 7)  # the text lands fast: inside a quarter of a second
-        rise = int((1 - (1 - appear) ** 3) * 40)
-        y = SAFE_TOP + 90 - rise + 40  # top third: the printed message on the product stays visible
-        layer = block.copy()
-        if appear < 1:
-            layer.putalpha(layer.getchannel("A").point(lambda v: int(v * appear)))
-        fr.alpha_composite(layer, ((W - block.width) // 2, min(y, H - SAFE_BOTTOM - block.height)))
+        k = 1 - (1 - t) ** 2
+        s = 1.0 + 0.08 * k
+        vw, vh = int(big.width / s), int(big.height / s)
+        x, y = (big.width - vw) // 2, (big.height - vh) // 2
+        card = big.crop((x, y, x + vw, y + vh)).resize((cw, ch), Image.BILINEAR).convert("RGBA")
+        card.putalpha(mask)
+        fr = Image.new("RGBA", (W, H), CREAM + (255,))
+        fr.alpha_composite(shadow, ((W - cw) // 2 - 40, top - 40))
+        fr.alpha_composite(card, ((W - cw) // 2, top))
+        layer, rise = _fade_in(block, i)
+        fr.alpha_composite(layer, ((W - block.width) // 2, top + ch + 46 + 36 - rise))
+        frames.append(fr.convert("RGB"))
+    return frames
+
+
+def scene_text(text: str, seconds: float, colour_index: int) -> list:
+    """Only words: a big statement on a soft pastel from the hoodies' own colours, the mark small on top."""
+    n = int(seconds * FPS)
+    bg = PASTELS[colour_index % len(PASTELS)]
+    block = clean_text(text, 128, 70, 5, INKT, False, W - 180)
+    base = Image.new("RGBA", (W, H), bg + (255,))
+    m = B.mark(64)
+    base.alpha_composite(m, ((W - 64) // 2, SAFE_TOP + 20))
+    d = ImageDraw.Draw(base)
+    d.line(((W - 64) // 2 - 150, SAFE_TOP + 52, (W - 64) // 2 - 30, SAFE_TOP + 52), fill=INKT, width=3)
+    d.line(((W + 64) // 2 + 30, SAFE_TOP + 52, (W + 64) // 2 + 150, SAFE_TOP + 52), fill=INKT, width=3)
+    frames = []
+    for i in range(n):
+        fr = base.copy()
+        layer, rise = _fade_in(block, i, 10)
+        y = (H - SAFE_BOTTOM + SAFE_TOP) // 2 - block.height // 2 + 36 - rise
+        fr.alpha_composite(layer, ((W - block.width) // 2, y))
         frames.append(fr.convert("RGB"))
     return frames
 
@@ -206,9 +280,17 @@ def render(date: dt.date, topic: dict, out: str, cache: str) -> dict:
     folder = os.path.join(out, date.isoformat(), "reel")
     os.makedirs(folder, exist_ok=True)
     urls = topic["photo_urls"]
-    frames = scene_frames(big_photo(urls[0], cache), topic["hook"], HOOK_S, True)
-    for url, line in zip(urls[1:], topic["lines"]):
-        frames = crossfade(frames, scene_frames(big_photo(url, cache), line, LINE_S, False))
+    frames = scene_photo(big_photo(urls[0], cache), topic["hook"], HOOK_S, True)
+    kinds = topic.get("scenes") or [("product", "text", "photo")[i % 3] for i in range(len(topic["lines"]))]
+    for i, (url, line) in enumerate(zip(urls[1:], topic["lines"])):
+        kind = kinds[i] if i < len(kinds) else "product"
+        if kind == "text":
+            scene = scene_text(line, LINE_S, i)
+        elif kind == "photo":
+            scene = scene_photo(big_photo(url, cache), line, LINE_S, False)
+        else:
+            scene = scene_product(raw_photo(url, cache), line, LINE_S)
+        frames = crossfade(frames, scene)
     frames = crossfade(frames, end_frames(END_S))
     seconds = len(frames) / FPS
     wav = os.path.join(folder, "beat.wav")

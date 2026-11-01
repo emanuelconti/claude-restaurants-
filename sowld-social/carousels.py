@@ -583,6 +583,9 @@ def check_topic(topic: dict) -> list:
     urls = topic.get("photo_urls")
     if urls is not None and not (isinstance(urls, list) and urls and all(isinstance(u, str) and re.match(r"https://(goodmessagestudio\.com/cdn/|cdn\.shopify\.com/)", u) for u in urls)):
         errors.append("photo_urls must be a list of the store's product image URLs (https://goodmessagestudio.com/cdn/... or https://cdn.shopify.com/...)")
+    lay = topic.get("layouts")
+    if lay is not None and not (isinstance(lay, list) and all(x in ("classic", "product", "text") for x in lay)):
+        errors.append('layouts must be a list of "classic", "product" or "text", one per point')
     if "caption" in topic and not (isinstance(topic["caption"], str) and 40 <= len(topic["caption"]) <= 700):
         errors.append("caption (the searchable paragraph under the hook) must be 40 to 700 characters")
     return errors
@@ -634,4 +637,4 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"],
                 numbers=numbers, photos=picks, caption=caption, cta=cta,
-                follow=FOLLOW_ENABLED)
+                follow=FOLLOW_ENABLED, layouts=topic.get("layouts"))

@@ -39,6 +39,14 @@ Each scheduled run writes one carousel, in **English**, and publishes it.
 **Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 13 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable.
 
 
+## Layouts that change, like a page that grows (the owner, 1 November 2026)
+
+No more text boxes on top of photos. Slides and reel scenes take turns between three looks, and a good carousel uses all three:
+- **product**: the product photo framed like a shop card on cream, the message underneath. Use it when the point names or matches a product.
+- **text**: words alone, big, on a soft pastel from the hoodies' own colours. Use it for the line people will screenshot.
+- **classic** (carousels) / **photo** (reels): the photo with clean text, no plate.
+Carousels: set `"layouts"` (one per point: `product`, `classic` or `text`); by default they take turns product, classic, text. Reels: set `"scenes"` (one per line: `product`, `text` or `photo`); by default product, text, photo. Never two text-only slides in a row, and never a product card whose photo does not match its message.
+
 ## Reels: one a day (the owner, 1 November 2026)
 
 Reels reach people who do not follow us far more than carousels do, so the 12:17 Singapore slot publishes a **reel** instead of a carousel, every day. `reel.py` renders it from the shop's real product photos (1080x1920, 30 fps, a slow push on each photo, quick crossfades, an original soft beat with no third-party music, the shop and the handle on the last card) and `reel_publish.py` publishes it with the same daily cap, minimum gap and stop rules as the carousels. It counts as one of the six posts.
