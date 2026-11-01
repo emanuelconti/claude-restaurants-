@@ -521,7 +521,7 @@ FOLLOW = dict(
     handle="@goodmessage_studio",
 )
 
-SLOTS = 5  # carousels a day
+SLOTS = 6  # carousels a day (Good Message Studio, 1 November 2026)
 
 
 def check_topic(topic: dict) -> list:
