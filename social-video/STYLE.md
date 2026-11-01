@@ -19,7 +19,7 @@ Keep it likeable for anyone (warm, funny, never a seller's voice on the slides),
 - growth (2 or 3): #fidelizacion #bocaaboca #marketinglocal #marketingparanegocios #clientes #captaciondeclientes
 - place (0 or 1): #barcelonabusiness #madrid (only when it fits)
 
-**Photos:** the `venue` set or `photo_ids` that show the sector of the day (a café counter, a gym, a salon chair, a spa room, a hotel lobby), no faces.
+**Photos:** set `photos` to the sector of the day: `cafe`, `restaurant` (also bars and cocktails), `beauty` (salons, barbers, nails), `wellness` (massage, spa, physio, yoga), `gym`, `shop`, `hotel`; or `life`, `city`, `money`, `venue`. Every photo in these sets was checked by eye: no faces, no brands. `photo_ids` from the same sets can pick specific ones for the points.
 
 
 Each scheduled run writes one new carousel for SocialPerks' Instagram, in Spanish, and publishes it. These are the rules for that topic.
@@ -34,6 +34,9 @@ The owner's brief (30 October): everyday life that anybody likes and sees themse
 - **Find the link to SocialPerks at the end when it is natural**: friends, plans, going out, the usual order, your favourite bar or café, recommending a place. Then `"cta": true`. When the topic does not touch it, leave `cta` out: a good post with only the follow slide beats a forced link.
 - The concept is told **only on the last slide**, never pitched on the topic's own slides.
 
+
+
+**Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too.
 
 ## Professional and unattackable (the owner, 1 November 2026)
 

@@ -208,7 +208,15 @@ BUSINESS = [
 # Unsplash photos without faces to camera, by what they show; each id was
 # fetched and looked at (30 October). "venue" is the video's own photos.
 PHOTO_SETS = {
+    "cafe": ["1445116572660-236099ec97a0", "1493857671505-72967e2e2760", "1495474472287-4d71bcdd2085", "1497935586351-b67a49e012bf", "1509042239860-f550ce710b93", "1511920170033-f8396924c348", "1521017432531-fbd92d768814", "1538688525198-9b88f6f53126", "1554118811-1e0d58224f24", "1565252556328-92ee4a9a0983", "1621523133136-cea844f32bdf", "1641924675896-b6a5aaf64861"],
+    "restaurant": ["1466978913421-dad2ebd01d17", "1470337458703-46ad1756a187", "1513104890138-7c749659a591", "1514362545857-3bc16c4c7d1b", "1514933651103-005eec06c04b", "1517248135467-4c7edcad34c4", "1544982560-63ad67a35c23", "1550966871-3ed3cdb5ed0c", "1551024709-8f23befc6f87", "1559339352-11d035aa65de", "1572116469696-31de0f17cc34", "1579751626657-72bc17010498", "1600028068383-ea11a7a101f3", "1659690402718-ea07d943fd42", "1666282020483-6ebeb210b1c3", "1516997121675-4c2d1684aa3e"],
+    "beauty": ["1560066984-138dadb4c035", "1633681926022-84c23e8cb2d6", "1604654894610-df63bc536371", "1772322586702-73125782bd99", "1788985375145-81da8cc731a2", "1732861612244-5704d12e9397", "1767953829433-1e405b6889de", "1758467700651-b0cdd3346cc7", "1515377905703-c4788e51af15"],
+    "wellness": ["1600334089648-b0d9d3028eb2", "1706795034887-be9a24d1ac19", "1741522509438-a120c0bb5e88", "1745327883290-1e9c6447b938", "1540555700478-4be289fbecef", "1506126613408-eca07ce68773", "1772122028843-9139d23af4fb"],
+    "gym": ["1517836357463-d25dfeac3438", "1534438327276-14e5300c3a48", "1620188467120-5042ed1eb5da"],
+    "shop": ["1441986300917-64674bd600d8", "1445205170230-053b83016050", "1472851294608-062f824d29cc", "1558769132-cb1aea458c5e", "1610701596007-11502861dcfa"],
+    "hotel": ["1551882547-ff40c63fe5fa", "1600585154340-be6161a56a0c", "1559339352-11d035aa65de", "1524758631624-e2822e304c36", "1538688525198-9b88f6f53126"],
     "life": [
+        "1434030216411-0b793f4b4173", "1447752875215-b2761acb3c5d", "1470252649378-9c29740c9fa8", "1484480974693-6ca0a78fb36b", "1486312338219-ce68d2c6f44d", "1488190211105-8b0e65b80b4e", "1495364141860-b0d03eccd065", "1496181133206-80ce9b88a853", "1499209974431-9dddcece7f88", "1499750310107-5fef28a66643", "1501139083538-0139583c060f", "1506784983877-45594efa4cbe", "1517842645767-c639042777db", "1610701596007-11502861dcfa", "1641924675896-b6a5aaf64861", "1509042239860-f550ce710b93",  # added 1 November 2026: more variety
         "1470252649378-9c29740c9fa8",  # sunrise over a valley
         "1501139083538-0139583c060f",  # hourglass
         "1495364141860-b0d03eccd065",  # a hand holding an alarm clock
@@ -234,6 +242,7 @@ PHOTO_SETS = {
         "1488190211105-8b0e65b80b4e",  # a desk, a coffee, a journal
     ],
     "city": [
+        "1511527661048-7fe73d85e9a4", "1583422409516-2895a77efded", "1529422643029-d4585747aaf2", "1485965120184-e220f721d03e", "1559339352-11d035aa65de", "1554118811-1e0d58224f24",  # added 1 November 2026: more variety
         "1583422409516-2895a77efded",  # Barcelona from above
         "1511527661048-7fe73d85e9a4",  # Tibidabo at dusk
         "1517248135467-4c7edcad34c4",  # a restaurant inside
@@ -523,6 +532,22 @@ def bank_topic(date: _dt.date, slot: int = 1) -> dict:
     return EVERYDAY[n % len(EVERYDAY)]
 
 
+# The owner (1 November 2026): no two carousels in a row may open with the same
+# photo, across at least 12 posts. The cover follows a fixed rotation by post
+# number (day x posts a day + slot), so consecutive posts always differ.
+def _rotate_cover(date, slot, picks, pool, covers, per_day):
+    idx = (date - EPOCH).days * per_day + (slot - 1)
+    cover = covers[idx % len(covers)]
+    rest = [p for p in picks[1:] if p != cover]
+    spare = [p for p in pool if p != cover and p not in rest]
+    while len(rest) < len(picks) - 1 and spare:
+        rest.append(spare.pop(0))
+    return [cover] + rest[:len(picks) - 1]
+
+
+COVERS_PER_DAY = 3
+
+
 def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, with one photo per slide (cover first), the same every time."""
     topic = topic or bank_topic(date, slot)
@@ -536,6 +561,10 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     if topic.get("photo_ids"):
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
+    _all_biz = [p for group in zip(*[PHOTO_SETS[k] * 4 for k in ("cafe", "restaurant", "beauty", "wellness", "hotel", "shop", "gym")]) for p in group]
+    _fixed = list(dict.fromkeys(PHOTO_SETS.get(topic.get("photos"), venue_photos)))
+    _covers = _fixed if len(_fixed) >= 12 else list(dict.fromkeys(_all_biz))
+    picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY)
     # The title opens the caption, so the next runs can see what was already posted.
     cta = "business" if topic.get("cta") == "business" else bool(topic.get("cta"))
     tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_BUSINESS if cta == 'business' else CAPTION_SHARE}" if cta else CAPTION_FOLLOW
