@@ -2,7 +2,8 @@
 """Publish a rendered Good Message Studio carousel on Threads, as one carousel post.
 
     python3 threads_publish.py --check-token
-    python3 threads_publish.py --date 2026-11-02 --slot 1      # the same slides as the Instagram post
+    python3 threads_publish.py --date 2026-11-02 --slot 1 --dry-run   # every check, nothing published
+    python3 threads_publish.py --date 2026-11-02 --slot 1      # the same slides as the Instagram post (needs GMS_THREADS_ENABLED=1)
 
 It reads THREADS_TOKEN_GMS from the environment: a Threads access token for the
 Good Message Studio profile with threads_basic and threads_content_publish
@@ -37,7 +38,7 @@ import ig_publish as IG  # noqa: E402  (temporary image hosts)
 API = "https://graph.threads.net/v1.0"
 MAX_PER_DAY = 6
 MIN_GAP = 60
-STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
+STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 MADRID = ZoneInfo("Europe/Madrid")
 
 
@@ -93,6 +94,7 @@ def main():
     ap.add_argument("--slot", type=int, default=1)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--check-token", action="store_true")
+    ap.add_argument("--dry-run", action="store_true", help="every check, nothing published")
     args = ap.parse_args()
     token = os.environ.get("THREADS_TOKEN_GMS", "").strip()
     if not token:
@@ -122,6 +124,18 @@ def main():
             return
         if stamps and (now - max(stamps)).total_seconds() < MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
+        if args.dry_run:
+            print(f"dry run: {len(meta['slides'])} slides and {len(text)} characters of text would be posted; nothing published")
+            return
+        # OFF until the owner confirms the account and rights (1 November 2026).
+        if os.environ.get("GMS_THREADS_ENABLED", "").strip() != "1":
+            print("Threads is OFF (GMS_THREADS_ENABLED is not 1): nothing published")
+            return
+        import channel_guard as G
+        try:
+            G.check_cross_channel()
+        except G.Stop as stop:
+            sys.exit(str(stop))
         children = []
         for name in meta["slides"][:20]:
             url = None
