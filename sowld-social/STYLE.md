@@ -36,7 +36,7 @@ Each scheduled run writes one carousel, in **English**, and publishes it.
 
 
 
-**Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 13 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable.
+**Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 14 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable. Never use `gm-city.jpg` or `gm-studio.jpg` either (the model looks AI-generated; the owner, 1 November 2026): prefer real product shots, backs with the printed message, flat lays and hangers.
 
 
 ## Layouts that change, like a page that grows (the owner, 1 November 2026)
@@ -116,7 +116,7 @@ Formats that work: "5 messages worth repeating this week", "Signs you need a rem
   "title": "5 messages worth repeating to yourself this week",
   "hook": "Number 5 is the one most of us forget.",
   "photos": "human",
-  "photo_urls": ["https://cdn.shopify.com/s/files/.../gm-city.jpg", "..."],
+  "photo_urls": ["https://cdn.shopify.com/s/files/.../gm-back.jpg", "..."],
   "points": [
     ["Enjoy the little things", ["The first sip of kopi.", "A message from someone who thought of you."], "Big days are made of small ones."]
   ],

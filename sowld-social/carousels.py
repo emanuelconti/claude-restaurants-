@@ -524,21 +524,22 @@ FOLLOW = dict(
 )
 
 # Product photos that open a carousel, in rotation (chosen 1 November 2026: the message reads at a glance,
-# aimed at women in Singapore). Never use the store's supplier ads, the balaclava photo or the "19" print.
+# aimed at women in Singapore; 1 November: no AI-looking models, so gm-city and gm-studio are out). Never use the store's supplier ads, the balaclava photo or the "19" print.
 GMS_COVERS = [
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/22393233-3cb6-4264-88bf-4dcb2f0d9176.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/99a1cc95-7d1e-470d-b781-8727cd8a0d83.jpg",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-studio.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/8625b429-c611-469c-a63a-3433a5752dfa.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/654aaef7-89e6-4c53-b9af-f5730a42be7a.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/aa8b2a73-4792-4e38-af09-33e6b9c86fc1.jpg",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-city.jpg",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/8ff90256-c16b-43db-89b5-78412e7f2dc9.jpg"
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/8ff90256-c16b-43db-89b5-78412e7f2dc9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/1cc0e127-2791-4807-947e-2c12dae2b771.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/805aac91-a037-4f2c-a1df-e355d67529d5.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/2851368735508.jpg"
 ]
 
 SLOTS = 6  # carousels a day (Good Message Studio, 1 November 2026)
