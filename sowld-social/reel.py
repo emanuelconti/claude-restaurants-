@@ -280,7 +280,10 @@ def render(date: dt.date, topic: dict, out: str, cache: str) -> dict:
     folder = os.path.join(out, date.isoformat(), "reel")
     os.makedirs(folder, exist_ok=True)
     urls = topic["photo_urls"]
-    frames = scene_photo(big_photo(urls[0], cache), topic["hook"], HOOK_S, True)
+    # Reels sit in the same 12-post grid: the opening photo follows the account's cover sequence
+    # (the 12:17 Singapore slot is post 3 of the day), so it never repeats one of its neighbours.
+    opening = C.GMS_COVERS[((date - C.EPOCH).days * C.COVERS_PER_DAY + 2) % len(C.GMS_COVERS)]
+    frames = scene_photo(big_photo(opening, cache), topic["hook"], HOOK_S, True)
     kinds = topic.get("scenes") or [("product", "text", "photo")[i % 3] for i in range(len(topic["lines"]))]
     for i, (url, line) in enumerate(zip(urls[1:], topic["lines"])):
         kind = kinds[i] if i < len(kinds) else "product"
