@@ -35,6 +35,9 @@ Since 1 November 2026 this account (formerly @sowld.ai) is **Good Message Studio
 Each scheduled run writes one carousel, in **English**, and publishes it.
 
 
+
+**Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 13 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable.
+
 ## Professional and unattackable (the owner, 1 November 2026)
 
 Every post must look and read like the work of a serious brand, and nobody must be able to fault it: not a customer, not a competitor, not Meta's review, not an advertising regulator. Before publishing, check each point. If one fails, fix it; if it cannot be fixed, do not publish.

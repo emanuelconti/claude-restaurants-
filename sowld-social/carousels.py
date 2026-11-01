@@ -521,6 +521,24 @@ FOLLOW = dict(
     handle="@goodmessage_studio",
 )
 
+# Product photos that open a carousel, in rotation (chosen 1 November 2026: the message reads at a glance,
+# aimed at women in Singapore). Never use the store's supplier ads, the balaclava photo or the "19" print.
+GMS_COVERS = [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/22393233-3cb6-4264-88bf-4dcb2f0d9176.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/99a1cc95-7d1e-470d-b781-8727cd8a0d83.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-studio.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/8625b429-c611-469c-a63a-3433a5752dfa.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/654aaef7-89e6-4c53-b9af-f5730a42be7a.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/aa8b2a73-4792-4e38-af09-33e6b9c86fc1.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-city.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/8ff90256-c16b-43db-89b5-78412e7f2dc9.jpg"
+]
+
 SLOTS = 6  # carousels a day (Good Message Studio, 1 November 2026)
 
 
@@ -576,6 +594,22 @@ def bank_topic(date: _dt.date, slot: int = 1) -> dict:
     return EVERYDAY[n % len(EVERYDAY)]
 
 
+# The owner (1 November 2026): no two carousels in a row may open with the same
+# photo, across at least 12 posts. The cover follows a fixed rotation by post
+# number (day x posts a day + slot), so consecutive posts always differ.
+def _rotate_cover(date, slot, picks, pool, covers, per_day):
+    idx = (date - EPOCH).days * per_day + (slot - 1)
+    cover = covers[idx % len(covers)]
+    rest = [p for p in picks[1:] if p != cover]
+    spare = [p for p in pool if p != cover and p not in rest]
+    while len(rest) < len(picks) - 1 and spare:
+        rest.append(spare.pop(0))
+    return [cover] + rest[:len(picks) - 1]
+
+
+COVERS_PER_DAY = 6
+
+
 def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, one photo per slide (cover first), the same every time."""
     topic = topic or bank_topic(date, slot)
@@ -588,7 +622,10 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     # one per slide (cover first), chosen fresh for it; the set fills in any that are missing.
     if topic.get("photo_ids") or topic.get("photo_urls"):
         own = list(dict.fromkeys(topic.get("photo_urls") or topic["photo_ids"]))
-        picks = (own + [p for p in pool if p not in own])[:need]
+        if len(own) >= need:
+            own = own[1:]  # the cover comes from GMS_COVERS; the topic's photos go to the points
+        picks = ([None] + own + [p for p in pool if p not in own])[:need]
+    picks = _rotate_cover(date, slot, picks, pool, GMS_COVERS, COVERS_PER_DAY)
     # The title opens the caption, so the next runs can see what was already posted.
     cta = bool(topic.get("cta")) and CTA_ENABLED
     tail = CAPTION_SHARE if cta else CAPTION_SAVE
