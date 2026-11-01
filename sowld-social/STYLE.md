@@ -38,6 +38,20 @@ Each scheduled run writes one carousel, in **English**, and publishes it.
 
 **Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 13 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable.
 
+
+## Reels: one a day (the owner, 1 November 2026)
+
+Reels reach people who do not follow us far more than carousels do, so the 12:17 Singapore slot publishes a **reel** instead of a carousel, every day. `reel.py` renders it from the shop's real product photos (1080x1920, 30 fps, a slow push on each photo, quick crossfades, an original soft beat with no third-party music, the shop and the handle on the last card) and `reel_publish.py` publishes it with the same daily cap, minimum gap and stop rules as the carousels. It counts as one of the six posts.
+
+What makes a reel travel, and what every reel must do:
+- **The first second is the hook.** The opening text must make a woman in Singapore stop and think "this is for me" or "this is for her": "Send this to the friend who needs it today", "POV: your office aircon is set to 16 degrees", "Gifts for her that are not another candle", "5 reminders for the girl who is tired".
+- **12 to 15 seconds, 3 to 5 messages.** One short line per scene (at most 60 characters), each on the photo of the product whose print says the same thing or fits it. The printed message on the hoodie must stay visible: the renderer puts the text in the top third for that reason.
+- **Built to be sent and watched twice:** a payoff on the last message, and a caption that ends with "Send this to…".
+- **Real and honest:** only the shop's own product photos (never AI people, never other brands, never the images listed below as never to use), only real products and prices.
+- **The caption is search,** exactly as for carousels: `caption` with Singapore and gift keywords, then the hashtags.
+
+The reel topic file (see `reel.py`): `title`, `hook`, `lines` (3 to 5), `photo_urls` (one for the hook, then one per line, matching the messages), `caption`, `hashtags`. Render with `python3 reel.py --date <date> --topic <file>`, look at frames from every scene (`ffmpeg -ss <seconds> -i out/<date>/reel/reel.mp4 -frames:v 1 frame.jpg`), then `python3 reel_publish.py --token-env INSTAGRAM_TOKEN_SOWLD --date <date>`.
+
 ## Professional and unattackable (the owner, 1 November 2026)
 
 Every post must look and read like the work of a serious brand, and nobody must be able to fault it: not a customer, not a competitor, not Meta's review, not an advertising regulator. Before publishing, check each point. If one fails, fix it; if it cannot be fixed, do not publish.
