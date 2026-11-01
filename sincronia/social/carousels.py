@@ -136,6 +136,9 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
 
 COVERS_PER_DAY = 1
 
+_ORDER = ("work", "life", "city")
+ACCOUNT_COVERS = list(dict.fromkeys(p for group in __import__("itertools").zip_longest(*[PHOTO_SETS[k] for k in _ORDER if k in PHOTO_SETS]) for p in group if p))
+
 
 def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, with one photo per slide, the same every time."""
@@ -150,7 +153,10 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     if topic.get("photo_ids"):
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
-    _covers = list(dict.fromkeys(PHOTO_SETS.get(topic.get("photos", "life"), PHOTO_SETS["life"])))
+    # The owner (1 November 2026): the profile grid shows 12 posts at once, so no photo may open two of
+    # any 12 posts in a row, whatever their topics. One sequence for the whole account, interleaving the
+    # sets, so consecutive post numbers always get different photos.
+    _covers = ACCOUNT_COVERS
     picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY)
     # The title opens the caption, so later runs can see what was already posted.
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{CAPTION_FOLLOW}\n\n{topic.get('hashtags') or HASHTAGS}"
