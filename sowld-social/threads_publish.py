@@ -83,7 +83,7 @@ def wait_ready(container: str, token: str, timeout: float = 180) -> None:
 
 def short_caption(caption: str) -> str:
     parts = [p.strip() for p in caption.split("\n\n") if p.strip() and not p.strip().startswith("#")]
-    text = "\n\n".join(parts[:2] + [C.CAPTION_SHARE])
+    text = "\n\n".join(parts[:2] + [C.CAPTION_SHARE_LINK])  # a real, clickable link on Threads
     return text if len(text) <= 500 else text[:497].rsplit(" ", 1)[0] + "..."
 
 

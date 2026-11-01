@@ -494,6 +494,8 @@ BRAND_NAME = "GOOD MESSAGE STUDIO"
 STORE_URL = "goodmessagestudio.com"
 CAPTION_SAVE = "Save it, and send it to someone who needs this message today."
 CAPTION_SHARE = "Wear the message: goodmessagestudio.com (link in bio)."
+# Facebook and Threads make links in the text clickable, so there the shop line is a real link.
+CAPTION_SHARE_LINK = "Shop now: https://goodmessagestudio.com"
 HASHTAGS = "#goodmessagestudio #singapore #sgfashion #sgootd #sggifts #giftideasforher #bekind #selflove #oversizedhoodie"
 
 # The last slide, only for topics with "cta": what Sowld actually does.

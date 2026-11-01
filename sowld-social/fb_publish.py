@@ -32,6 +32,7 @@ from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts, shared with Instagram)
 
 API = "https://graph.facebook.com/v21.0"
@@ -131,7 +132,8 @@ def main():
                 sys.exit(f"could not make {name} public: nothing published")
             photo = call("POST", f"{page}/photos", token, {"url": url, "published": "false"})
             media.append(photo["id"])
-        params = {"message": meta["caption"]}
+        # On Facebook the link in the text is clickable: "Shop now" goes straight to the shop.
+        params = {"message": meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)}
         for i, fbid in enumerate(media):
             params[f"attached_media[{i}]"] = json.dumps({"media_fbid": fbid})
         post = call("POST", f"{page}/feed", token, params)
