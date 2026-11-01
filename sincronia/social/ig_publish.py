@@ -39,6 +39,7 @@ MIN_GAP = 60  # minutes since the account's last post
 # Meta's answers that mean "slow down": retrying them is what gets the app blocked.
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 ID_FILE = os.path.join(HERE, "ig_id.txt")
+SINCRONIA_KNOWN_ID = "17841404632479565"  # @sincronia.live, as the API returns it (checked 1 November 2026)
 
 
 class ApiError(RuntimeError):
@@ -69,12 +70,14 @@ def call(method: str, path: str, token: str, params: dict | None = None) -> dict
 
 def resolve_id(token: str, given: str | None) -> str | None:
     """The account id, from the flag, the environment, the cache, or the API if it ever allows it."""
+    # The known id last (1 November 2026: the SINCRONIA_IG_ID in the environment had a wrong value and the
+    # cache file is not in the repository, so a fresh run had no working id). Only @sincronia.live is accepted.
     for candidate in (given, os.environ.get("SINCRONIA_IG_ID", "").strip(),
-                      (open(ID_FILE).read().strip() if os.path.exists(ID_FILE) else "")):
+                      (open(ID_FILE).read().strip() if os.path.exists(ID_FILE) else ""), SINCRONIA_KNOWN_ID):
         if candidate:
             try:
-                call("GET", candidate, token, {"fields": "username"})
-                return candidate
+                if call("GET", candidate, token, {"fields": "username"}).get("username") == "sincronia.live":
+                    return candidate
             except ApiError:
                 continue
     # The scopes here do not usually allow this, but it costs one call and
