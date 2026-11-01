@@ -115,7 +115,7 @@ def brand_row(img: Image.Image, y: int, colour, label: bool, size: int = 64) -> 
     m = B.mark(size)
     if label:
         f = B.font(30, 800, B.DISPLAY)
-        text = "SOWLD"
+        text = C.BRAND_NAME
         tw = f.getlength(text)
         gap = 16
         total = size + gap + tw
@@ -224,7 +224,7 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
         slides.append(slide_point(car["numbers"][i - 1], heading, lines, punch, pid, cache, spares(pid)))
     if car["cta"]:
         slides.append(slide_cta())
-    elif car.get("follow"):
+    if car.get("follow"):  # Good Message Studio: the shop slide, then the follow slide (1 November 2026)
         slides.append(slide_follow())
     names = []
     for i, im in enumerate(slides, 1):

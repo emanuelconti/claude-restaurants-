@@ -488,23 +488,27 @@ EVERYDAY = [
     ),
 ]
 
-CAPTION_SAVE = "Save it, and send it to whoever needs to read it."
-CAPTION_SHARE = "What is the stuff in your house actually worth? getsowld.com"
-HASHTAGS = "#secondhand #declutter #thrifting #reselling #minimalism #homeorganisation"
+# Since 1 November 2026 this account is Good Message Studio (goodmessagestudio.com), the owner's
+# Singapore shop of hoodies and tees that carry one kind line. See STYLE.md.
+BRAND_NAME = "GOOD MESSAGE STUDIO"
+STORE_URL = "goodmessagestudio.com"
+CAPTION_SAVE = "Save it, and send it to someone who needs this message today."
+CAPTION_SHARE = "Wear the message: goodmessagestudio.com (link in bio)."
+HASHTAGS = "#goodmessagestudio #singapore #sgfashion #bekind #positivevibes #kindness #sgstyle"
 
 # The last slide, only for topics with "cta": what Sowld actually does.
 CTA = dict(
-    title="What is that thing actually worth?",
-    lines=["Sowld compares a second hand listing to similar items on sale right now and estimates what it is worth."],
-    small="Free, 15 checks a month. Estimates are indicative.",
-    url="getsowld.com",
+    title="Wear the message.",
+    lines=["Hoodies and tees with one line worth repeating: be kind, peace, enjoy the little things."],
+    small="Good Message Studio",
+    url=STORE_URL,
 )
 
 # The site is off the profile's link in bio while it is not ready, so the
 # Sowld slide is off: sending someone to a URL they cannot tap from the bio
 # wastes the last slide and makes the post read as an ad for nothing.
 # One line to turn back on the day the link returns.
-CTA_ENABLED = False
+CTA_ENABLED = True  # the shop is live: the last slide points to it (1 November 2026)
 
 # What goes on the last slide instead. The account is trying to grow, and a
 # carousel someone just swiped to the end of is the one moment they are most
@@ -512,9 +516,9 @@ CTA_ENABLED = False
 # is actually selling. No URL, no product.
 FOLLOW_ENABLED = True
 FOLLOW = dict(
-    title="More of these, every day.",
-    lines=["Follow for the things nobody says out loud about starting, stopping, and getting on with it."],
-    handle="@sowld.ai",
+    title="A good message, every day.",
+    lines=["Follow for small reminders worth keeping, and worth wearing."],
+    handle="@goodmessagestudio",
 )
 
 SLOTS = 5  # carousels a day
@@ -558,6 +562,9 @@ def check_topic(topic: dict) -> list:
     ids = topic.get("photo_ids")
     if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
         errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
+    urls = topic.get("photo_urls")
+    if urls is not None and not (isinstance(urls, list) and urls and all(isinstance(u, str) and re.match(r"https://(goodmessagestudio\.com/cdn/|cdn\.shopify\.com/)", u) for u in urls)):
+        errors.append("photo_urls must be a list of the store's product image URLs (https://goodmessagestudio.com/cdn/... or https://cdn.shopify.com/...)")
     return errors
 
 
@@ -577,8 +584,8 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     picks = (pool * (need // len(pool) + 1))[:need]
     # The owner (31 October): the photos must change from post to post. A topic can name its own,
     # one per slide (cover first), chosen fresh for it; the set fills in any that are missing.
-    if topic.get("photo_ids"):
-        own = list(dict.fromkeys(topic["photo_ids"]))
+    if topic.get("photo_ids") or topic.get("photo_urls"):
+        own = list(dict.fromkeys(topic.get("photo_urls") or topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
     # The title opens the caption, so the next runs can see what was already posted.
     cta = bool(topic.get("cta")) and CTA_ENABLED
@@ -588,4 +595,4 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"],
                 numbers=numbers, photos=picks, caption=caption, cta=cta,
-                follow=FOLLOW_ENABLED and not cta)
+                follow=FOLLOW_ENABLED)

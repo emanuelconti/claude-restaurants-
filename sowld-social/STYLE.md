@@ -1,99 +1,66 @@
-# Writing a Sowld carousel
+# Writing a Good Message Studio carousel
 
-Each scheduled run writes one new carousel for Sowld's Instagram (@sowld.ai), in English, and publishes it. These are the rules for that topic.
+Since 1 November 2026 this account (formerly @sowld.ai) is **Good Message Studio**, the owner's shop at goodmessagestudio.com: hoodies, tees, caps and totes that carry one kind line ("Be Kind", "Peace Starts With Us", "Do What Makes You Happy", "Enjoy The Little Things"). The shop sells in Singapore dollars to people in **Singapore**. There is no ad budget: these posts are the ads, so they must work like good ads while reading like posts people want to save and send.
 
-The brief: everyday life that anybody recognises themselves in, and that leaves them **moved to do something**. A strong hook, interesting, never boring, **never a seller's post**. We are not advertising a product: we are writing things people like, save, send to someone, and come back for. If a topic walks naturally into what Sowld does, the last slide may say so; if it does not, there is no Sowld slide at all.
+Each scheduled run writes one carousel, in **English**, and publishes it.
 
-Five a day.
+## What every carousel does
 
-## The one rule above the others: it has to lift
+1. **Opens with a hook about life, not about clothes.** A feeling, a moment, a message people need: being kind when tired, small joys, rest, peace with yourself and others, doing what makes you happy, mental health handled gently.
+2. **Shows the products as the pictures.** The photos are the shop's own product photos (the message printed on the hoodie or tee is part of the picture). Each point should match the message in its photo when it can.
+3. **Lands on the shop.** The renderer adds "Wear the message." with goodmessagestudio.com, then the follow slide. Set `"cta": true` on every topic.
 
-Recognition alone is a dead end. "Ha, that is so me" gets a smile and a scroll. Someone follows an account because of how it makes them feel about **themselves**, not about the account.
-
-So every carousel ends somewhere better than it started. The reader should close it thinking *I want to do that* or *I could do that too*, not just *that is funny*.
-
-How that works in practice:
-
-- **Name the thing honestly first.** The stuck feeling, the pile that never shrinks, the thing postponed for two years. Nobody is inspired by someone who skips the hard part.
-- **Then turn.** Somewhere in the second half, the tone shifts from "this is us" to "and it could be different". Usually around point 4 or 5.
-- **The last point is the one they remember.** It is never a joke. It is the small, true, doable thing: start with one drawer, decide once instead of thinking about it for a month, let the thing go before the move forces you to.
-- **Small and concrete, never grand.** "Start with one drawer" works. "Change your life" does not: it is the voice of every account they have already muted.
-- **Earned, not declared.** Never write "be grateful", "believe in yourself", "life is now". Show a scene so true that the reader reaches the thought themselves.
-
-Humour still belongs: it is how the first half earns the second. The best posts are funny for four slides and land somewhere that stays.
+The tone: warm, kind, a little playful, never preachy, never pushy. Sell the message first; the hoodie is how you carry it. No "BUY NOW", no fake urgency, no discounts or prices that are not on the shop.
 
 ## Who reads it
 
-Everyone, mostly 20 to 45, in the UK, Ireland and the rest of the English speaking world, scrolling on the phone on the bus, in a queue, in bed. Some resell things, most do not: they just own too much stuff, buy second-hand sometimes, and keep meaning to clear out a cupboard.
+People in Singapore, mostly 18 to 40, scrolling on the MRT, at lunch, in bed. Use local, everyday scenes when they fit (the MRT, kopi, hawker centres, HDB corridors, the heat, the rain at 4pm, office life in the CBD, weekends at East Coast Park), lightly and never as a caricature. Gifts work well: birthdays, friends, partners, "send this to someone who needs it".
 
-They like a post when they think "this is exactly me". They **save** it when it is useful for something they keep putting off. They **send** it to a friend when it is about the two of them.
+## Mix across the day
 
-## What works
+- Morning: a gentle push for the day (a message to start with).
+- Midday: everyday life people laugh at or feel warm about, with a message in it.
+- Evening: reflection, rest, kindness to yourself; or a gift idea ("5 people who need this message").
 
-- **The cover title is the hook.** Specific, a little provocative, a promise the slides keep. Patterns: stages ("The 7 stages of finally clearing out your wardrobe"), a ranking ("The 8 worst feelings of a Monday morning"), "things you only learn when…", "things you say every time…", "signs that…", "what nobody tells you about…".
-- **The subject is life, not second hand.** Starting things, stopping things, habits, time, work, money, rest, self-trust, the gap between who you are and who you meant to be. These are what people follow an account for.
-- **The stuff topics are one strand among several**, not the theme: the things we own and never use, a wardrobe, moving house, a market find, what you regret selling. Use them when they are the best way into a feeling, not because the brand sells something adjacent.
-- **Mix the strands across a week.** If the last three posts were about objects, write about time, or starting, or a bad day. The account should read as a person with a life, not a shop with a blog.
-- **One moment per slide:** a heading of a few words, one or two short lines that paint a real scene, and a closing line that lands, funny or true.
-- **Mix the moods across the five:** some funny, some warm, one or two useful. Every one of them lifts at the end, whatever its mood.
-- **Concrete beats clever.** "You bought it in 2017" beats "purchases age".
-- **The closing line of each slide does the work.** It is the line in pink, the one that gets screenshotted. Write the slide, then spend most of the effort on that line.
+Formats that work: "5 messages worth repeating this week", "Signs you need a reminder to be kind to yourself", "Things that are small but make the whole day", "Send this to the friend who…", "The 6 stages of a Monday in the CBD (and the message for each)".
 
-## The last slide asks for a follow, not a click
+## Photos
 
-`FOLLOW_ENABLED = True`, `CTA_ENABLED = False` in `carousels.py`.
-
-Every carousel ends on a dark slide with the mark, one line, and the handle. No URL, no product: the site is off the profile's link in bio while it is not ready, and sending someone to a link they cannot tap wastes the slide. Someone who has just swiped to the end of a carousel is the most likely they will ever be to follow, so that is what the slide asks for.
-
-Write topics as if Sowld the product did not exist. Never mention it, never mention anything to buy, never write a closing line that is secretly a pitch. The job is one thing: **be good enough that someone follows.**
-
-You can still set `"cta": true` on a topic that genuinely walks into what Sowld does. It replaces the follow slide, and is ignored entirely while `CTA_ENABLED` is off, so those posts are ready for the day the link comes back.
-
-## Photos: new ones every time
-
-The owner (31 October): the carousels kept showing the same photos, because each set holds only 8 to 12 and a carousel uses almost all of them. **Every carousel picks its own photos**, chosen for that topic and for each slide, and different from the ones in the last days' posts.
-
-1. Search Unsplash's API for each slide's scene: `GET https://api.unsplash.com/search/photos?query=<words>&per_page=30&content_filter=high`, with the header `Authorization: Client-ID <key>`, the key read from the environment variable `UNSPLASH_ACCESS_KEY` (never print it). The website and its `napi` search refuse scripts (401), so only the API works. The id is the part after `images.unsplash.com/photo-` in `urls.raw`; skip anything on `plus.unsplash.com`.
-2. No faces, no logos or brands, nothing that fights the text. Prefer hands, objects, places and light.
-3. Put them in the topic as `"photo_ids"`, cover first, then one per point, in order. Never two the same in one carousel, and avoid any you used in the day's other carousels.
-4. Render, then **look at the cover and every slide**. If a photo shows a face, repeats an earlier post or does not fit, swap it and render again.
-
-If `UNSPLASH_ACCESS_KEY` is not set or the search is refused, leave `photo_ids` out: the slot still goes out with the set's photos, and say so in the run's report. The renderer stops when a photo cannot be fetched, so a carousel never goes out in plain colours.
+- Use the shop's product photos: read `https://goodmessagestudio.com/products.json?limit=250` (public) and pick image URLs (`images[].src`, without the query string) of the message products that fit each slide. Put them in the topic as `"photo_urls"`, cover first, then one per point. Prefer the biggest images (1600 px), and the products with a printed message.
+- Vary them: not the same cover as the previous posts, and not the same photo twice in one carousel.
+- Product photos may show a model wearing the piece: that is fine. Never add other people's photos with faces.
+- Render, then look at the cover and every slide. If a photo is blurry, cropped badly or does not fit, swap it and render again.
 
 ## Never
 
-- **Never invent figures, studies, quotes or prices.** No statistics at all, no "70% of people". If a number is not verifiable, it does not go in.
-- Never promise earnings, never imply reselling makes money easily, never a "make money from…" angle. That is the seller's voice the brief rules out, and it would be a claim we cannot stand behind.
-- **Never the empty motivational voice.** No "inizia oggi la tua nuova vita", no "il successo è una scelta", no quotes attributed to anyone. Inspiration here comes from a true scene and a doable next step, never from an exclamation mark.
-- Never shame the reader. The pile, the clutter, the postponed thing: these are everybody's, and the post is on their side. Tease the situation, never the person in it.
-- Never name real people, businesses or brands negatively. Marketplaces can be named plainly when a topic needs it; mentioning a real product you might own is fine.
-- Nothing mean, political, religious or about bodies; tease situations, never people.
+- Never invent figures, studies, quotes, reviews, prices, shipping times or promotions.
+- Never make medical or mental health claims; be kind, not clinical.
+- Nothing mean, political, religious or about bodies.
 - No em dashes or en dashes (use a colon or a full stop), no hashtags or emojis on the slides, always "you".
-- Gender-neutral throughout.
-- **Never repeat a title or an angle already posted.** `ig_publish.py --token-env INSTAGRAM_TOKEN_SOWLD --recent 60` prints the first line of the last posts' captions, which is their title. The `EVERYDAY` topics in `carousels.py` count as taken too.
+- Never repeat a title or angle already posted: `ig_publish.py --token-env INSTAGRAM_TOKEN_SOWLD --recent 60` prints the first line of the last posts' captions.
+- Never post more than the script allows (3 a day, 60 minutes apart) and never spam hashtags.
 
 ## The file
 
-A JSON object, the same shape as the topics in `carousels.py`:
-
 ```json
 {
-  "title": "The 7 stages of finally clearing out your wardrobe",
-  "hook": "Stage 4 is where everyone gets stuck.",
-  "photos": "stuff",
+  "title": "5 messages worth repeating to yourself this week",
+  "hook": "Number 5 is the one most of us forget.",
+  "photos": "human",
+  "photo_urls": ["https://cdn.shopify.com/s/files/.../gm-city.jpg", "..."],
   "points": [
-    ["The burst of energy", ["You pull everything out onto the bed.", "You feel like a different person."], "That feeling lasts about fifteen minutes."]
+    ["Enjoy the little things", ["The first sip of kopi.", "A message from someone who thought of you."], "Big days are made of small ones."]
   ],
-  "hashtags": "#secondhand #declutter #thrifting #homeorganisation"
+  "cta": true,
+  "hashtags": "#goodmessagestudio #singapore #sgfashion #bekind #positivevibes #sgstyle"
 }
 ```
 
-- `title` at most 90 characters; `hook` (the caption's second line) at most 120.
-- 5 to 8 `points`; each heading at most 52 characters, 1 to 6 lines of at most 95, a closing line of at most 75. Four to six short lines read better than two long ones: one thought per line, like a list inside the point.
-- `photos`: `human` (a desk by a window, a path, a room, someone walking away: for topics about a life), `life` (mornings, coffee, notebooks), `stuff` (wardrobes, shelves, boxes), `market` (shops, stalls, vintage furniture) or `money` (receipts, cards, a laptop). Every photo is face-free. Most topics want `human` or `life`.
-- `photo_ids`: the Unsplash ids picked for this topic, cover first, then one per point (see "Photos: new ones every time"). Expected on every topic.
-- `countdown: true` numbers the points from the highest down, for a ranking.
-- `cta: true` is currently ignored (see above). Leave it out.
-- `hashtags`: optional, 5 to 8 that fit the topic, one string.
+- `title` at most 90 characters; `hook` at most 120.
+- 5 to 8 `points`; each heading at most 52 characters, 1 to 6 lines of at most 95, a closing line of at most 75.
+- `photo_urls`: the shop's product image URLs (https://cdn.shopify.com/... or https://goodmessagestudio.com/cdn/...), cover first.
+- `photos`: a fallback set for any slide without a product photo (`human` or `life`).
+- `cta`: `true` on every topic.
+- `hashtags`: 6 to 10, always `#goodmessagestudio` and `#singapore`, then ones that fit the topic and Singapore (#sgfashion, #sgstyle, #sggifts, #sgootd, #bekind, #kindness, #positivevibes, #selfcare, #mentalhealthawareness, #giftideas).
 
-`carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix. Look at the cover and two slides once rendered: if a line wraps badly or a photo fights the text, shorten and render again.
+`carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix.

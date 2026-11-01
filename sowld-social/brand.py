@@ -23,7 +23,7 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 DISPLAY = os.path.join(HERE, "fonts", "InterTight-latin.ttf")
 BODY = os.path.join(HERE, "fonts", "Inter-latin.ttf")
-MARK = os.path.join(HERE, "assets", "mark.png")
+MARK = os.path.join(HERE, "assets", "gms-mark.png")  # Good Message Studio since 1 November 2026
 
 # getsowld.com's tokens.
 INK = (20, 24, 26)  # --ink   #14181a
@@ -60,9 +60,14 @@ def photo(pid: str, cache: str) -> Image.Image | None:
     """An Unsplash photo by id, cached. A photo that cannot be fetched returns
     None and the caller falls back to a gradient, so a slide always renders."""
     os.makedirs(cache, exist_ok=True)
-    path = os.path.join(cache, f"{pid}.jpg")
-    if not os.path.exists(path) or os.path.getsize(path) < 5000:
+    if pid.startswith("https://"):  # a product photo from the store, by its full URL
+        import hashlib
+        url = pid
+        path = os.path.join(cache, "url-" + hashlib.sha1(pid.encode()).hexdigest()[:16] + ".img")
+    else:
         url = f"https://images.unsplash.com/photo-{pid}?w=1400&q=85&fm=jpg"
+        path = os.path.join(cache, f"{pid}.jpg")
+    if not os.path.exists(path) or os.path.getsize(path) < 5000:
         try:
             with urllib.request.urlopen(url, timeout=60) as r, open(path, "wb") as out:
                 out.write(r.read())

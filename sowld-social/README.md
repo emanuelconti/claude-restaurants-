@@ -1,3 +1,5 @@
+> **Since 1 November 2026 this account is Good Message Studio** (goodmessagestudio.com, the owner's Singapore shop). The carousels use the shop's product photos (`photo_urls`), end with the shop slide ("Wear the message.") and the follow slide, and are written in English for Singapore. `STYLE.md` is the brief; the publishing commands below are unchanged (same token, `INSTAGRAM_TOKEN_SOWLD`, same account id).
+
 # Sowld's Instagram carousels
 
 Five carousels a day on [@sowld.ai](https://instagram.com/sowld.ai), written fresh each time and published automatically. Nobody has to open anything.
