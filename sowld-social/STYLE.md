@@ -12,7 +12,7 @@
 1. 08:17, commute: a message to start the day (5 or 6 affirmations, each tied to a product message). Scenes: the MRT, kopi, the walk to the office.
 2. 10:17, friendship: "Send this to the friend who…", "Signs she is your soul sister", the bestie who always checks in. Built to be sent.
 3. 12:17, lunch: everyday Singapore life with a kind twist: the freezing office aircon (the reason to own a hoodie in a hot country), the 4pm rain, the hawker queue, the group chat. Funny first, warm at the end.
-4. 15:17, style: how to wear it. "3 ways to style an oversized hoodie in Singapore", hoodie for cinema and office aircon, tee with jeans for brunch. Built to be saved.
+4. 15:17, product spotlight: one product, presented like a brand campaign. Cover: the product with its message readable. Then: what the message means and who it is for; the details exactly as the shop lists them (fabric, fit, colours, sizes: copy them from products.json, never add any); two or three ways to wear it in Singapore (office aircon, cinema, brunch, travel); who it makes a good gift for; the last point names the product and its real price in SGD from products.json. Alternate with "how to style it" carousels ("3 ways to style an oversized hoodie in Singapore"). Built to be saved.
 5. 18:17, gifts: gift guides ("Gifts for her under SGD 60", "What to give the friend who has everything", birthday, farewell, Secret Santa). Use only real products and real prices from products.json. Built to be saved and sent.
 6. 21:17, night: self-care and kindness to yourself, rest, letting go of the day, gentle mental-health awareness (never clinical, never a claim).
 
@@ -33,6 +33,20 @@ No banned or spammy tags (#like4like, #follow4follow and the like).
 Since 1 November 2026 this account (formerly @sowld.ai) is **Good Message Studio**, the owner's shop at goodmessagestudio.com: hoodies, tees, caps and totes that carry one kind line ("Be Kind", "Peace Starts With Us", "Do What Makes You Happy", "Enjoy The Little Things"). The shop sells in Singapore dollars to people in **Singapore**. There is no ad budget: these posts are the ads, so they must work like good ads while reading like posts people want to save and send.
 
 Each scheduled run writes one carousel, in **English**, and publishes it.
+
+
+## Professional and unattackable (the owner, 1 November 2026)
+
+Every post must look and read like the work of a serious brand, and nobody must be able to fault it: not a customer, not a competitor, not Meta's review, not an advertising regulator. Before publishing, check each point. If one fails, fix it; if it cannot be fixed, do not publish.
+
+- **True, and provable.** Only facts the account can stand behind. No invented figures, studies, quotes, reviews, testimonials, awards, "best-selling", "No. 1", "limited stock" or deadlines. No "free shipping", discount or promotion unless it is live on the site right now.
+- **Products exactly as sold** (where products appear): the name, price, currency, colours, sizes, fabric and fit copied from the shop's own data; never "organic", "sustainable", "handmade", "premium" or any quality claim the product page does not make.
+- **No health, medical or financial promises.** Kind words about wellbeing are fine; claims that something heals, treats, cures, guarantees money, funding or results are not.
+- **Respect.** Nothing about bodies, weight, age, race, religion, politics or gender roles; no stereotypes of any group or country; inclusive and gender-neutral wherever the audience allows it. Tease situations, never people.
+- **Rights.** Only the shop's own product photos and free-licence stock photos the repository already uses or the API returns. No song lyrics, film quotes, celebrities, other brands' logos or trademarks, or anyone's words presented as theirs.
+- **No manipulation.** No fake urgency, no engagement bait ("tag 3 friends", "comment YES"), no hashtag stuffing, no misleading cover that the slides do not deliver.
+- **Polished.** Perfect spelling and grammar in the post's language; one idea per slide; nothing cut off or wrapped badly; photos sharp, well cropped and on topic; the brand name and handle written exactly; consistent tone from the cover to the last slide.
+- **Calm with the platform.** Respect the publishing limits in the scripts, and stop at the first sign of pushback from Meta.
 
 ## What every carousel does
 
