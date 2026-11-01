@@ -7,7 +7,9 @@
 The owner (1 November 2026): no ad budget, so the shop's carousels go out
 organically on Facebook too. It reads, from the environment:
 - FB_PAGE_TOKEN_GMS: a Page access token for the "Good Message Studio" Page,
-  with pages_manage_posts and pages_read_engagement (a long-lived one);
+  with pages_manage_posts and pages_read_engagement (a long-lived one), or the
+  owner's user token with those permissions plus pages_show_list: the script
+  then asks Facebook for the Page token itself;
 - FB_PAGE_ID_GMS: the Page's id.
 
 Same safety rules as ig_publish.py: at most 3 posts a day (Europe/Madrid),
@@ -66,6 +68,17 @@ def call(method: str, path: str, token: str, params: dict | None = None) -> dict
         raise RuntimeError(f"{method} {path}: {message}") from None
 
 
+def page_token(page: str, token: str) -> str:
+    """Return a Page token: FB_PAGE_TOKEN_GMS may hold the owner's user token
+    instead (1 November 2026), and a user token with pages_show_list can ask for
+    the Page's own token. A Page token asking for itself gets no access_token
+    back, so it is used as it is."""
+    try:
+        return call("GET", page, token, {"fields": "access_token"}).get("access_token") or token
+    except RuntimeError:
+        return token
+
+
 def recent(page: str, token: str) -> list:
     return call("GET", f"{page}/posts", token, {"fields": "message,created_time,permalink_url", "limit": 25}).get("data", [])
 
@@ -82,6 +95,7 @@ def main():
     if not token or not page:
         sys.exit("FB_PAGE_TOKEN_GMS or FB_PAGE_ID_GMS is not set: nothing published")
     try:
+        token = page_token(page, token)
         if args.check_token:
             name = call("GET", page, token, {"fields": "name"}).get("name", "?")
             print(f"token ok: Page {name!r}, {len(recent(page, token))} recent posts read, publishing not tried")
