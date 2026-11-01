@@ -56,8 +56,8 @@ PHOTO_SETS = {
 
 HANDLE = "@sincronia.live"
 CAPTION_FOLLOW = (f"Follow {HANDLE} for a push like this every day. "
-                  "Save it for the day you need it, and send it to someone who does.")
-HASHTAGS = "#mindset #motivation #habits #focus #discipline #smallwins #realtalk"
+                  "Sincronia helps startups find the public funding they qualify for: link in bio.")
+HASHTAGS = "#startupfunding #founders #grants #eufunding #nondilutivefunding #startup #entrepreneur #europeanstartups"
 
 # The last slide of every carousel.
 FOLLOW = dict(
@@ -107,6 +107,8 @@ def check_topic(topic: dict) -> list:
     ids = topic.get("photo_ids")
     if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
         errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
+    if "caption" in topic and not (isinstance(topic["caption"], str) and 40 <= len(topic["caption"]) <= 700):
+        errors.append("caption (the searchable paragraph under the hook) must be 40 to 700 characters")
     return errors
 
 
@@ -130,7 +132,7 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
     # The title opens the caption, so later runs can see what was already posted.
-    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{CAPTION_FOLLOW}\n\n{topic.get('hashtags') or HASHTAGS}"
+    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{CAPTION_FOLLOW}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"],

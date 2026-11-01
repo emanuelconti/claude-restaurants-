@@ -1,5 +1,26 @@
 # Writing a Sincronia carousel
 
+## Strategy: who we target and how (the owner, 1 November 2026)
+
+**This section overrides anything below that says otherwise, including "The link to Sincronia, almost never".** Sincronia helps startups and small companies find the public funding they qualify for, and the page now targets exactly them: founders of startups and young companies in Italy, Spain, France, Germany and Portugal who want funding (grants, public loans, EU programmes, and also equity rounds). One carousel a day, published at 10:41 Madrid, when founders plan their day.
+
+**What to post, rotating day by day:**
+1. Funding readiness: "7 documents to have ready before you apply for any grant", "Signs your startup is ready for public funding", "What a funding body reads first in your application", the deadlines nobody tracks, the paperwork that eats a week. Practical, generic, true for most calls; always "check the official call for the details".
+2. Grants vs equity vs loans: what each asks of a founder, in plain words. Never figures, dates or eligibility rules you cannot verify; programmes can be named (Horizon Europe, the EIC Accelerator, national innovation agencies) only in general terms.
+3. Founder life and mindset (the page's old strand, now aimed at founders): the 2am pitch-deck rewrite, rejection emails, the investor who never replied, small wins, rest. Built to be sent to a co-founder.
+4. Mistakes founders make with money: applying too late, chasing every call, no one owning deadlines, ignoring non-dilutive funding.
+
+Never promise money, results or eligibility; never give legal or tax advice. The slides teach and motivate; the follow slide and the caption carry the brand.
+
+**Caption = search.** Set `"caption"` on every topic: two or three natural sentences with what a founder types: "startup funding Europe", "grants for startups", "non-dilutive funding", "EU funding for SMEs", "how to apply for a startup grant". End with: "Sincronia helps startups find the public funding they qualify for: link in bio."
+
+**Hashtags: 8 to 12, mixed, never the same block twice in a row.** Always `#startupfunding #founders`. Then:
+- funding (3 or 4): #grants #eufunding #nondilutivefunding #fundraising #publicfunding #horizoneurope #innovationfunding
+- startups (2 or 3): #startup #startuplife #entrepreneur #smallbusiness #sme #scaleup
+- place (1 or 2): #startupitalia #startupspain #europeanstartups #techstartups
+- mindset (0 or 1): #foundermindset #buildinpublic
+
+
 Each scheduled run writes one carousel for @sincronia.live, in **English**, and
 publishes it. These are the rules for that topic.
 
