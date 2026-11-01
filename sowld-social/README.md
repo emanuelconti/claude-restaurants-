@@ -1,4 +1,4 @@
-> **Since 1 November 2026 this account is Good Message Studio** (goodmessagestudio.com, the owner's Singapore shop). The carousels use the shop's product photos (`photo_urls`), end with the shop slide ("Wear the message.") and the follow slide, and are written in English for Singapore. `STYLE.md` is the brief; the publishing commands below are unchanged (same token, `INSTAGRAM_TOKEN_SOWLD`, same account id).
+> **Since 1 November 2026 this account is Good Message Studio** (goodmessagestudio.com, the owner's Singapore shop). The carousels use the shop's product photos (`photo_urls`), end with the shop slide ("Wear the message.") and the follow slide, and are written in English for Singapore. `STYLE.md` is the brief; the publishing commands below are unchanged (same token, `INSTAGRAM_TOKEN_SOWLD`, same account id). The same carousel also goes to the Facebook Page "Good Message Studio" with `python3 fb_publish.py --date <date> --slot <n>` (needs `FB_PAGE_TOKEN_GMS` and `FB_PAGE_ID_GMS`; same limits: 3 a day, 60 minutes apart, stop on Meta pushback).
 
 # Sowld's Instagram carousels
 

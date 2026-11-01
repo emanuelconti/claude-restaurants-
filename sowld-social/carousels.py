@@ -518,7 +518,7 @@ FOLLOW_ENABLED = True
 FOLLOW = dict(
     title="A good message, every day.",
     lines=["Follow for small reminders worth keeping, and worth wearing."],
-    handle="@goodmessagestudio",
+    handle="@goodmessage_studio",
 )
 
 SLOTS = 5  # carousels a day
