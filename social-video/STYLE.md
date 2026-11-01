@@ -34,6 +34,20 @@ The owner's brief (30 October): everyday life that anybody likes and sees themse
 - **Find the link to SocialPerks at the end when it is natural**: friends, plans, going out, the usual order, your favourite bar or café, recommending a place. Then `"cta": true`. When the topic does not touch it, leave `cta` out: a good post with only the follow slide beats a forced link.
 - The concept is told **only on the last slide**, never pitched on the topic's own slides.
 
+
+## Professional and unattackable (the owner, 1 November 2026)
+
+Every post must look and read like the work of a serious brand, and nobody must be able to fault it: not a customer, not a competitor, not Meta's review, not an advertising regulator. Before publishing, check each point. If one fails, fix it; if it cannot be fixed, do not publish.
+
+- **True, and provable.** Only facts the account can stand behind. No invented figures, studies, quotes, reviews, testimonials, awards, "best-selling", "No. 1", "limited stock" or deadlines. No "free shipping", discount or promotion unless it is live on the site right now.
+- **Products exactly as sold** (where products appear): the name, price, currency, colours, sizes, fabric and fit copied from the shop's own data; never "organic", "sustainable", "handmade", "premium" or any quality claim the product page does not make.
+- **No health, medical or financial promises.** Kind words about wellbeing are fine; claims that something heals, treats, cures, guarantees money, funding or results are not.
+- **Respect.** Nothing about bodies, weight, age, race, religion, politics or gender roles; no stereotypes of any group or country; inclusive and gender-neutral wherever the audience allows it. Tease situations, never people.
+- **Rights.** Only the shop's own product photos and free-licence stock photos the repository already uses or the API returns. No song lyrics, film quotes, celebrities, other brands' logos or trademarks, or anyone's words presented as theirs.
+- **No manipulation.** No fake urgency, no engagement bait ("tag 3 friends", "comment YES"), no hashtag stuffing, no misleading cover that the slides do not deliver.
+- **Polished.** Perfect spelling and grammar in the post's language; one idea per slide; nothing cut off or wrapped badly; photos sharp, well cropped and on topic; the brand name and handle written exactly; consistent tone from the cover to the last slide.
+- **Calm with the platform.** Respect the publishing limits in the scripts, and stop at the first sign of pushback from Meta.
+
 ## Who reads it
 
 Everyone, mostly 20 to 40, in Barcelona and the rest of Spain, scrolling on the phone on the metro, in a queue, in bed. They like a post when they think "this is so me", they save it when it is useful, and they send it to a friend when it is about them both.
