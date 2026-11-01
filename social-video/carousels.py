@@ -547,6 +547,10 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
 
 COVERS_PER_DAY = 3
 
+# Every checked photo of the account once, the sets interleaved so neighbours differ in look too.
+_ORDER = ("cafe", "restaurant", "beauty", "wellness", "life", "hotel", "shop", "gym", "city", "money")
+ACCOUNT_COVERS = list(dict.fromkeys(p for group in __import__("itertools").zip_longest(*[PHOTO_SETS[k] for k in _ORDER if k in PHOTO_SETS]) for p in group if p))
+
 
 def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, with one photo per slide (cover first), the same every time."""
@@ -561,9 +565,10 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     if topic.get("photo_ids"):
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
-    _all_biz = [p for group in zip(*[PHOTO_SETS[k] * 4 for k in ("cafe", "restaurant", "beauty", "wellness", "hotel", "shop", "gym")]) for p in group]
-    _fixed = list(dict.fromkeys(PHOTO_SETS.get(topic.get("photos"), venue_photos)))
-    _covers = _fixed if len(_fixed) >= 12 else list(dict.fromkeys(_all_biz))
+    # The owner (1 November 2026): the profile grid shows 12 posts at once, so no photo may open two of
+    # any 12 posts in a row, whatever their topics. One sequence for the whole account, interleaving the
+    # sets, so consecutive post numbers always get different photos.
+    _covers = ACCOUNT_COVERS
     picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY)
     # The title opens the caption, so the next runs can see what was already posted.
     cta = "business" if topic.get("cta") == "business" else bool(topic.get("cta"))
