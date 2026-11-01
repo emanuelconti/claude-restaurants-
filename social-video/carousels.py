@@ -442,7 +442,7 @@ EVERYDAY = [
 HANDLE = "@socialperks.es"
 CAPTION_FOLLOW = f"Síguenos ({HANDLE}): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite."
 CAPTION_SHARE = "¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com"
-HASHTAGS = "#motivacion #mentalidad #habitos #vidareal #barcelona #productividad #bienestar"
+HASHTAGS = "#negociolocal #barcelona #emprendedores #pequeñocomercio #hosteleria #fidelizacion #bocaaboca #marketinglocal"
 
 # The last slide of every carousel: why to follow.
 FOLLOW = dict(
@@ -512,6 +512,8 @@ def check_topic(topic: dict) -> list:
     ids = topic.get("photo_ids")
     if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
         errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
+    if "caption" in topic and not (isinstance(topic["caption"], str) and 40 <= len(topic["caption"]) <= 700):
+        errors.append("caption (the searchable paragraph under the hook) must be 40 to 700 characters")
     return errors
 
 
@@ -537,7 +539,7 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     # The title opens the caption, so the next runs can see what was already posted.
     cta = "business" if topic.get("cta") == "business" else bool(topic.get("cta"))
     tail = f"{CAPTION_FOLLOW}\n\n{CAPTION_BUSINESS if cta == 'business' else CAPTION_SHARE}" if cta else CAPTION_FOLLOW
-    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
+    caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))
     return dict(date=date.isoformat(), slot=slot, title=topic["title"], points=topic["points"], numbers=numbers, photos=picks, caption=caption, cta=cta)

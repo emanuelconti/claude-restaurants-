@@ -1,5 +1,27 @@
 # Writing the day's carousel
 
+## Strategy: who we target and how (the owner, 1 November 2026)
+
+**This section overrides anything below that says otherwise.** SocialPerks sells to the people who run a physical place, so the page now speaks to them first: owners and managers of local businesses in Barcelona and the rest of Spain. Cafés, bars, restaurants, hotels and hostels, gyms, yoga and pilates studios, massage centres and spas, beauty and nail salons, hairdressers and barbershops, shops. We have no ad budget, so the posts must reach them as precisely as a paid campaign would: content that is obviously about their day, words they search for, hashtags they follow, and posts they send to another owner.
+
+**Their day, and our three slots** (Madrid time; the routine runs at 10:41, 15:41, 22:41):
+1. 10:41, after opening: the owner's push. Motivation and life of someone who runs a place (the early start, the first customer, the bad Tuesday, why you keep going). Relatable first, then a lift. `"cta": "business"`.
+2. 15:41, the quiet hour (they are on the phone right then, with an empty room): practical, no-budget ways to fill quiet hours and win new customers: word of mouth, regulars who bring friends, a welcome gift instead of a discount, reviews, what to post on Instagram, the counter, the window. Concrete steps they can try tomorrow. Built to be saved. `"cta": "business"`.
+3. 22:41, after closing: one sector per day, rotating (café, restaurant, bar, gym, salon, barbershop, massage and spa, hotel, yoga studio, shop): "Cosas que solo entiende quien tiene un gimnasio", "7 errores que vacían una cafetería un martes", myths about marketing for small places. Built to be sent to a colleague. `"cta": "business"`.
+
+Keep it likeable for anyone (warm, funny, never a seller's voice on the slides), but every topic must be unmistakably about running a place. Never invent figures, studies or results.
+
+**Caption = search.** Set `"caption"` on every topic: two or three natural Spanish sentences with what an owner would type: "cómo atraer clientes a mi cafetería", "llenar las horas flojas", "marketing boca a boca para negocios locales", "fidelizar clientes en un gimnasio", "ideas para un centro de estética en Barcelona". Name the sector and Barcelona or Spain when it fits. End with one line that drives sends: "Mándaselo a quien tenga un local." Never "etiqueta a 3 amigos" or "comenta SÍ".
+
+**Hashtags: 8 to 12, mixed, never the same block twice in a row.** Always `#negociolocal #barcelona`. Then:
+- owners (2 or 3): #emprendedores #autonomos #pymes #pequeñocomercio #comerciolocal #duenosdenegocio
+- the sector of the day (2 or 3): #hosteleria #restauracion #cafeteria #bares #gimnasio #entrenadorpersonal #centrodeestetica #salondebelleza #peluqueria #barberia #masajes #spa #hoteles #yoga #pilates #tiendas
+- growth (2 or 3): #fidelizacion #bocaaboca #marketinglocal #marketingparanegocios #clientes #captaciondeclientes
+- place (0 or 1): #barcelonabusiness #madrid (only when it fits)
+
+**Photos:** the `venue` set or `photo_ids` that show the sector of the day (a café counter, a gym, a salon chair, a spa room, a hotel lobby), no faces.
+
+
 Each scheduled run writes one new carousel for SocialPerks' Instagram, in Spanish, and publishes it. These are the rules for that topic.
 
 The owner's brief (30 October): everyday life that anybody likes and sees themselves in. A strong hook, ultra interesting, likeable, never boring. Never a seller's scene, never an ad on the topic's own slides. Three a day, all everyday life (see below).
