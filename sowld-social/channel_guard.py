@@ -32,7 +32,7 @@ sys.path.insert(0, HERE)
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 DAILY_CAP = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 60  # minutes since the same channel's last post
-CROSS_GAP = 20  # minutes since the last post on any other Good Message Studio channel
+CROSS_GAP = 0  # the owner, 2 November 2026: the channels go out together; 60 min per channel and 10/day stay
 MADRID = ZoneInfo("Europe/Madrid")
 
 
