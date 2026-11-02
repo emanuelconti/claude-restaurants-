@@ -19,7 +19,7 @@ import urllib.parse
 import urllib.request
 
 REDIRECT = "https://goodmessagestudio.com/"
-SCOPES = "user.info.basic,video.list,video.publish"
+SCOPES = os.environ.get("TIKTOK_SCOPES_GMS", "").strip() or "user.info.basic,video.publish"  # add video.list once the Display API product is on the app
 
 
 def env(name: str) -> str:
