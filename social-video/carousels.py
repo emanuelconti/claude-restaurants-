@@ -480,7 +480,7 @@ CTA_BUSINESS = dict(
 )
 
 
-SLOTS = 3  # carousels a day (the owner, 30 October: "almeno 2 o 3 al giorno")
+SLOTS = 10  # carousels a day (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 
 
 def check_topic(topic: dict) -> list:
@@ -545,7 +545,7 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
     return [cover] + rest[:len(picks) - 1]
 
 
-COVERS_PER_DAY = 3
+COVERS_PER_DAY = 10  # one cover index per possible post of the day, so covers never repeat within 12
 
 # Every checked photo of the account once, the sets interleaved so neighbours differ in look too.
 _ORDER = ("cafe", "restaurant", "beauty", "wellness", "life", "hotel", "shop", "gym", "city", "money")
