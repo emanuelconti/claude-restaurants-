@@ -5,7 +5,8 @@
     python3 pinterest_publish.py --date 2026-11-02 --slot 1 --publish    # only when GMS_PINTEREST_ENABLED=1
 
 Needs, in the environment (names only; values never printed):
-- PINTEREST_TOKEN_GMS: a Pinterest API v5 access token for the Good Message Studio
+- PINTEREST_APP_SECRET_GMS + PINTEREST_REFRESH_TOKEN_GMS (from pinterest_oauth.py; best: the access
+  token is renewed on every run), or PINTEREST_TOKEN_GMS, a ready access token for the Good Message Studio
   business account with boards:read, pins:read and pins:write. Trial access is not
   enough for public Pins: Standard access must be approved first.
 - PINTEREST_BOARD_GMS: the board's id (or its exact name; the id is looked up).
@@ -37,7 +38,17 @@ def open_text(path: str) -> str:
 
 API = "https://api.pinterest.com/v5"
 SHOP = "https://goodmessagestudio.com"
-NEEDED = ("PINTEREST_TOKEN_GMS", "PINTEREST_BOARD_GMS")
+NEEDED = ("PINTEREST_BOARD_GMS",)
+# Either a ready access token (PINTEREST_TOKEN_GMS) or, better, the app's id and secret plus the long-lived
+# refresh token from pinterest_oauth.py: then a fresh access token is made on every run and never expires.
+REFRESH = ("PINTEREST_APP_SECRET_GMS", "PINTEREST_REFRESH_TOKEN_GMS")
+
+
+def get_token() -> str | None:
+    if os.environ.get("PINTEREST_REFRESH_TOKEN_GMS", "").strip() and os.environ.get("PINTEREST_APP_SECRET_GMS", "").strip():
+        import pinterest_oauth
+        return pinterest_oauth.refresh(os.environ["PINTEREST_REFRESH_TOKEN_GMS"].strip())
+    return os.environ.get("PINTEREST_TOKEN_GMS", "").strip() or None
 
 
 def pick_slides(slides: list) -> list:
@@ -92,11 +103,13 @@ def main():
     print(f"plan: 1 carousel Pin, {len(slides)} images, title {title!r}, link {SHOP}")
 
     gaps = G.missing(*NEEDED)
+    if not os.environ.get("PINTEREST_TOKEN_GMS", "").strip():
+        gaps += G.missing(*REFRESH)
     if gaps:
         print("Pinterest not connected: missing " + ", ".join(gaps) + ". Dry run only, nothing published.")
         return
-    token = os.environ["PINTEREST_TOKEN_GMS"].strip()
     try:
+        token = get_token()
         user = G.http("GET", f"{API}/user_account", token)
         board = board_id(token, os.environ["PINTEREST_BOARD_GMS"].strip())
         stamps = recent_stamps(token)

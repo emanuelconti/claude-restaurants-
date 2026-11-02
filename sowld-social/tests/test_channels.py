@@ -104,7 +104,7 @@ class Channels(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp = tempfile.mkdtemp()
         fixtures(cls.tmp)
-        cls.pin_env = dict(CLEAN_ENV, PINTEREST_TOKEN_GMS="t", PINTEREST_BOARD_GMS="Good Message Studio")
+        cls.pin_env = dict(CLEAN_ENV, PINTEREST_TOKEN_GMS="t", PINTEREST_BOARD_GMS="Good Message Studio")  # ready-token path
         cls.yt_env = dict(CLEAN_ENV, YOUTUBE_CLIENT_ID_GMS="a", YOUTUBE_CLIENT_SECRET_GMS="b", YOUTUBE_REFRESH_TOKEN_GMS="c")
         cls.tt_env = dict(CLEAN_ENV, TIKTOK_CLIENT_KEY_GMS="a", TIKTOK_CLIENT_SECRET_GMS="b", TIKTOK_REFRESH_TOKEN_GMS="c")
 

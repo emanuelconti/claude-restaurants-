@@ -9,7 +9,7 @@ Last checked on 1 November 2026 (Europe/Madrid), in the Default cloud environmen
 | Instagram @goodmessage_studio | `ig_publish.py`, `reel_publish.py` | **Yes**, verified: posts and a reel published on 1 November | nothing |
 | Facebook Page "Good Message Studio" | `fb_publish.py` | **Yes for the token** (Page token derived from the user token; first post verified on 1 November). The swipeable link-carousel format is new and **not yet verified on the live Page** | first live run of the carousel format |
 | Threads | `threads_publish.py` | **No.** Ready, dry run added, OFF | `THREADS_TOKEN_GMS`, then `GMS_THREADS_ENABLED=1` |
-| Pinterest | `pinterest_publish.py` | **No.** Ready, dry run tested offline, OFF | Pinterest Standard access for app 1632981 (now "Trial access pending"), then `PINTEREST_TOKEN_GMS`, `PINTEREST_BOARD_GMS`, `GMS_PINTEREST_ENABLED=1` |
+| Pinterest | `pinterest_publish.py` | **No.** Ready, dry run tested offline, OFF | Pinterest Standard access for app 1632981 (now "Trial access pending"), then the OAuth below (`PINTEREST_APP_SECRET_GMS`, `PINTEREST_REFRESH_TOKEN_GMS`, `PINTEREST_BOARD_GMS`), `GMS_PINTEREST_ENABLED=1` |
 | YouTube Shorts | `youtube_publish.py` | **No.** Ready, dry run tested offline, OFF | Google Cloud project + OAuth consent, then `YOUTUBE_CLIENT_ID_GMS`, `YOUTUBE_CLIENT_SECRET_GMS`, `YOUTUBE_REFRESH_TOKEN_GMS`, `GMS_YOUTUBE_ENABLED=1`; public uploads only after Google's API audit (`GMS_YOUTUBE_PRIVACY=public`) |
 | TikTok | `tiktok_publish.py` | **No.** Ready, dry run tested offline, OFF | TikTok developer app with Content Posting API, then `TIKTOK_CLIENT_KEY_GMS`, `TIKTOK_CLIENT_SECRET_GMS`, `TIKTOK_REFRESH_TOKEN_GMS`, `GMS_TIKTOK_ENABLED=1`; public posts only after TikTok's app audit (`GMS_TIKTOK_PRIVACY=PUBLIC_TO_EVERYONE`) |
 | Carousell | none | No | the owner decides on 16 November; the account is probably not registered yet |
@@ -37,9 +37,10 @@ Only the owner can create accounts, give OAuth consent, accept platform terms or
 4. Ask Claude to run `python3 threads_publish.py --check-token`; once it answers "token ok", set `GMS_THREADS_ENABLED=1`.
 
 **Pinterest**
-1. Wait for the approval email for app "Good Message Studio Publisher" (ID 1632981) at the account's address; then request **Standard access** (Trial access cannot make public Pins).
-2. Generate a token with `boards:read`, `pins:read`, `pins:write` and save it as `PINTEREST_TOKEN_GMS`; save the board name ("Good Message Studio") or id as `PINTEREST_BOARD_GMS`.
-3. After a dry run that reads the account and the board, set `GMS_PINTEREST_ENABLED=1`.
+1. In the Default environment save `PINTEREST_APP_ID_GMS=1632981` and `PINTEREST_APP_SECRET_GMS` (the app secret; never in chat or in the repo).
+2. In a new session: `python3 pinterest_oauth.py --url`, open the link, "Give access", copy the address bar (goodmessagestudio.com/?code=...).
+3. `python3 pinterest_oauth.py --code '<that address>'` prints the refresh token once: save it as `PINTEREST_REFRESH_TOKEN_GMS`, plus `PINTEREST_BOARD_GMS` ("Good Message Studio"). The publisher renews the access token by itself on every run.
+4. Public Pins need **Standard access** for app 1632981; after a dry run that reads the account and the board, set `GMS_PINTEREST_ENABLED=1`.
 
 **YouTube Shorts**
 1. Create (or pick) the Good Message Studio YouTube channel.
