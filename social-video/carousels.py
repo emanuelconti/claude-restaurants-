@@ -520,6 +520,11 @@ def check_topic(topic: dict) -> list:
     ids = topic.get("photo_ids")
     if ids is not None and not (isinstance(ids, list) and ids and all(isinstance(p, str) and re.fullmatch(r"\d{10,13}-[0-9a-f]{12}", p) for p in ids)):
         errors.append("photo_ids must be a list of Unsplash photo ids like 1544982560-63ad67a35c23 (the part after images.unsplash.com/photo-)")
+    # The owner (2 November 2026): every photo must match ITS slide (a bar slide never shows a barber).
+    # So a written topic must say, for every point, which photo set fits it, or give one photo id per slide.
+    ps = topic.get("point_sets")
+    if ps is not None and not (isinstance(ps, list) and len(ps) == len(points) and all(x in PHOTO_SETS for x in ps)):
+        errors.append(f"point_sets must list one photo set per point, each one of {sorted(PHOTO_SETS)}")
     if "caption" in topic and not (isinstance(topic["caption"], str) and 40 <= len(topic["caption"]) <= 700):
         errors.append("caption (the searchable paragraph under the hook) must be 40 to 700 characters")
     return errors
@@ -564,6 +569,14 @@ def carousel(date: _dt.date, venue_photos: list, slot: int = 1, topic: dict | No
     if topic.get("photo_ids"):
         own = list(dict.fromkeys(topic["photo_ids"]))
         picks = (own + [p for p in pool if p not in own])[:need]
+    if topic.get("point_sets"):
+        used = {picks[0]}
+        for i, name in enumerate(topic["point_sets"], 1):
+            if topic.get("photo_ids") and i < len(topic["photo_ids"]):
+                continue  # an explicit photo for this slide wins
+            options = [p for p in PHOTO_SETS[name] if p not in used] or list(PHOTO_SETS[name])
+            picks[i] = options[rng.randrange(len(options))]
+            used.add(picks[i])
     # The owner (1 November 2026): the profile grid shows 12 posts at once, so no photo may open two of
     # any 12 posts in a row, whatever their topics. One sequence for the whole account, interleaving the
     # sets, so consecutive post numbers always get different photos.

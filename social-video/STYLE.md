@@ -125,3 +125,7 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 ## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
 
 Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.
+
+## Every point names its photo set (owner, 2 November 2026)
+
+A bar/waiter slide once showed a barber's clipper. Now every written topic MUST include "point_sets": one set per point, matching what that point talks about (cafe, restaurant, gym, beauty, wellness, hotel, shop, city, life, money). Example: a slide about the waiter who knows your order -> "cafe" or "restaurant", never "beauty". After rendering, look at every slide: if any photo does not obviously fit its text, change the set or the photo_ids and render again. Never publish a slide whose photo does not fit.
