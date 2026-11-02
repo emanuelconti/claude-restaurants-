@@ -73,3 +73,11 @@ Update (owner, 2 Nov evening): no 60-minute wait on Instagram, Threads (MIN_GAP 
 ## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
 
 Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.
+
+
+## Lessons of 2 November 2026, evening (owner) — read before every run
+
+- YouTube (Good Message Studio only): Shorts are ALWAYS public. Links in a Short description are not clickable: the description says "Shop now: goodmessagestudio.com (tap the link on our channel page)", the title ends with "| goodmessagestudio.com", and every reel/slideshow end card shows goodmessagestudio.com and "link in bio". Quality must be sharp: slideshows are encoded at 1080x1920, lanczos, crf 16 (YouTube shows low resolution for a few minutes while it processes HD; that is normal).
+- Facebook link carousel is now right (verified): 5 cards, each a real message hoodie with photo, name and "Shop now at goodmessagestudio.com · price". Plain hoodies, caps, tees are never used.
+- Always keep the target in mind (GMS: women in Singapore; SocialPerks: owners of venues in Spain; Sincronia: founders seeking funding) and optimise from PERFORMANCE.md (more of what gets likes/saves, less of what is ignored).
+- Only one routine runs ("SOCIAL UNICA", 07:43/13:43/19:43 Madrid). Any Claude or Codex: you do not need to create routines; just read this file.
