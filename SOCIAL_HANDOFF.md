@@ -62,3 +62,7 @@ The owner removed the 20-minute gap between different channels of the same accou
 ## Learning from results (owner, 2 November 2026)
 
 Every account has a PERFORMANCE.md in its folder (sowld-social/, social-video/, sincronia/social/), written once a day by the routine "Ottimizzazione giornaliera". Every publishing routine reads it before choosing topics: more of what got likes, comments, saves and shares; less of the topics people ignored; competitor ideas adapted, never copied. Instagram, Facebook and Threads give these numbers through their APIs; Pinterest and TikTok only once their access is approved.
+
+## Stories (owner, 2 November 2026)
+
+Good Message Studio also posts Stories: after each carousel, `python3 story_publish.py --date <today Madrid> --slot <n> --publish` (sowld-social) posts the cover on a 9:16 canvas with "Shop now · link in bio" as an Instagram Story and a Facebook Page Story. Limits: 10 stories a day per channel, 60 minutes apart; stop without retry on blocked/limit/spam/restricted/temporarily/too soon.
