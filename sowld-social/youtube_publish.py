@@ -75,10 +75,19 @@ def main():
     ap.add_argument("--date", required=True)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--publish", action="store_true", help="really upload (needs GMS_YOUTUBE_ENABLED=1)")
+    ap.add_argument("--carousel-slot", type=int, help="upload this rendered carousel as a Short slideshow instead of the reel")
     args = ap.parse_args()
 
-    folder = os.path.join(args.out, args.date, "reel")
-    meta = json.loads(open_text(os.path.join(folder, "reel.json")))
+    if args.carousel_slot:  # owner, 2 Nov 2026: every Good Message Studio post also on YouTube
+        import tiktok_publish as TT
+        folder = os.path.join(args.out, args.date, f"carousel-{args.carousel_slot}")
+        meta = json.loads(open_text(os.path.join(folder, "carousel.json")))
+        meta["video"] = "tiktok.mp4"
+        if not os.path.exists(os.path.join(folder, meta["video"])):
+            TT.slideshow(folder, meta["slides"], os.path.join(folder, meta["video"]))
+    else:
+        folder = os.path.join(args.out, args.date, "reel")
+        meta = json.loads(open_text(os.path.join(folder, "reel.json")))
     video = os.path.join(folder, meta["video"])
     w, h, seconds = probe(video)
     if h <= w or seconds > 60:
