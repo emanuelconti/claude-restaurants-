@@ -164,7 +164,11 @@ def main():
             sys.exit("could not read enough products from the shop: nothing published")
         start = (args.slot - 1) * 5
         picks = [products[(start + i) % len(products)] for i in range(min(5, len(products)))]
-        cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}"} for x in picks]
+        def price(x):
+            v = (x.get("variants") or [{}])[0].get("price")
+            return f" · S${float(v):.0f}" if v else ""
+        cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}", "name": x["title"],
+                  "description": "Shop now at goodmessagestudio.com" + price(x)} for x in picks]
         # A card stays blank when Facebook has not read the product page yet: ask it to read each page now,
         # and keep only the pages that came back with an image (owner, 2 November 2026: no blank cards, ever).
         ready = []
