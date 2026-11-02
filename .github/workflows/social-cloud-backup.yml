@@ -7,8 +7,8 @@ on:
       mode:
         description: Check credentials only or process approved queue
         type: choice
-        options: [check, publish]
-        default: check
+        options: [validate, check, publish]
+        default: validate
 permissions:
   contents: write
 concurrency:
@@ -35,7 +35,9 @@ jobs:
           SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
           BACKUP_MODE: ${{ inputs.mode }}
         run: |
-          if [ "$BACKUP_MODE" = check ]; then
+          if [ "$BACKUP_MODE" = validate ]; then
+            python social-cloud-backup/controller.py --validate
+          elif [ "$BACKUP_MODE" = check ]; then
             python social-cloud-backup/controller.py --check
           else
             python social-cloud-backup/controller.py

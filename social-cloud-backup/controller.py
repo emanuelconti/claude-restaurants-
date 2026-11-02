@@ -6,6 +6,16 @@ R=Path(__file__).resolve().parent
 now=dt.datetime.now(ZoneInfo('Europe/Paris'))
 if now>=dt.datetime(2026,11,6,2,tzinfo=ZoneInfo('Europe/Paris')):
  print('Temporary backup expired: nothing published.');sys.exit()
+if '--validate' in sys.argv:
+ manifest=json.loads((R/'queue.json').read_text())
+ for item in manifest:
+  folder=R/item['folder']
+  assert folder.resolve().is_relative_to((R/'queue').resolve())
+  for name,digest in item['sha256'].items():
+   assert Path(name).name==name
+   assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==digest
+ print(f'PASS: {len(manifest)} reviewed queue items; all asset hashes match. No credentials loaded or publications attempted.')
+ sys.exit()
 cfg=json.loads(os.environ['SOCIAL_BACKUP_ENV'])
 for v in cfg.values():
  if len(str(v))>15 and os.environ.get('GITHUB_ACTIONS'):print('::add-mask::'+str(v))
