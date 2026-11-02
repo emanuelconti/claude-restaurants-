@@ -70,7 +70,7 @@ FOLLOW = dict(
     small="Save it for the day you need it.",
 )
 
-SLOTS = 3  # carousels a day
+SLOTS = 10  # carousels a day (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 
 
 def check_topic(topic: dict) -> list:
@@ -134,7 +134,7 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
     return [cover] + rest[:len(picks) - 1]
 
 
-COVERS_PER_DAY = 1
+COVERS_PER_DAY = 10  # one cover index per possible post of the day, so covers never repeat within 12
 
 _ORDER = ("work", "life", "city")
 ACCOUNT_COVERS = list(dict.fromkeys(p for group in __import__("itertools").zip_longest(*[PHOTO_SETS[k] for k in _ORDER if k in PHOTO_SETS]) for p in group if p))

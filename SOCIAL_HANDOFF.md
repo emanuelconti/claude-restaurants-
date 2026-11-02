@@ -1,6 +1,6 @@
 # Social accounts: shared handoff (read this before touching any of them)
 
-For every Claude, Codex or person who works on @socialperks.es, Good Message Studio (@goodmessage_studio, formerly @sowld.ai, and its Facebook Page) or @sincronia.live. Last updated 2 November 2026. The owner is Emanuel; everything below is his decision unless marked otherwise. Keep this file current when something changes.
+For every Claude, Codex or person who works on @socialperks.es, Good Message Studio (@goodmessage_studio, formerly @sowld.ai, and its Facebook Page) or @sincronia.live. Last updated 2 November 2026 (10 a day). The owner is Emanuel; everything below is his decision unless marked otherwise. Keep this file current when something changes.
 
 ## Where things live
 
@@ -14,7 +14,7 @@ Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable"
 
 ## Rules that never change
 
-- Never remove, lower or get around the limits in the scripts: Good Message Studio 6 posts a day per channel, SocialPerks and Sincronia 3; at least 60 minutes between two posts of the same account; at least 20 minutes between publishes on different accounts or channels. One post per account per run. (31 October: a burst of posts got the Meta app blocked.)
+- Never remove, lower or get around the limits in the scripts: **10 posts a day per account and per channel** (the owner, 2 November: we start from zero followers and must grow); **at least 60 minutes between two posts of the same account**, so never in a burst; at least 20 minutes between publishes on different accounts or channels. A routine run may publish up to 3 posts per account (2 for Good Message Studio), waiting 60 minutes between them. (31 October: a burst of posts got the Meta app blocked.)
 - Any answer with blocked, limit, spam, restricted, temporarily or "too soon": stop, do not retry, report.
 - Never print, log or commit a token or any part of one.
 - Never publish a carousel in plain colours: the renderers stop when a photo is missing.
@@ -29,15 +29,15 @@ Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable"
 - **Every Good Message Studio post leads to the shop:** Instagram captions say "link in bio" (bio link = goodmessagestudio.com); Facebook and Threads get "Shop now: https://goodmessagestudio.com" as a real link.
 - **Facebook:** one swipeable link carousel (cards that open the shop), never a grid of small photos. Card images must be uploaded to the Page first (`fb_publish.py` does it): images left on the temporary hosts expire and the cards turn white (seen on 2 November).
 - **SocialPerks:** B2B. One of the day's three is about running a place and ends with `"cta": "business"`; the others stay likeable everyday or owner-life topics.
-- **Sincronia:** one post a day, about funding readiness, grants vs equity, founder life. Never promise money or funding.
+- **Sincronia:** up to 10 posts a day, about funding readiness, grants vs equity, founder life. Never promise money or funding.
 - Captions carry a searchable paragraph (`"caption"`) and 8 to 12 mixed hashtags, never the same block twice in a row; no engagement bait ("tag 3 friends").
 
 ## Scheduled routines (claude.ai/code/routines, Default environment)
 
 | Routine | When | What |
 |---|---|---|
-| Good Message Studio | 08:17, 10:17, 12:17 (reel), 15:17, 18:17, 21:17 Singapore | 1 post per run: Instagram, then Facebook 20 min later (Threads when enabled) |
-| Caroselli (principale) | 08:47, 13:47, 20:47 Madrid | SocialPerks up to 3 a day, Sincronia 1 a day |
+| Good Message Studio | 08:17, 10:17, 12:17 (reel), 15:17, 18:17, 21:17 Singapore | up to 2 posts per run, 60 min apart, to reach 10 a day: Instagram, then Facebook 20 min later (Threads when enabled) |
+| Caroselli (principale) | 08:47, 12:47, 16:47, 20:47 Madrid | up to 3 posts per account per run, SocialPerks and Sincronia alternating 20 min apart, each account 60 min apart, to reach 10 a day each |
 | Instagram backup | 23:41 Madrid | fills only what SocialPerks or Sincronia are missing |
 | Recupero automatico ogni ora | hourly at :59 | **disabled** since 1 November 23:54 (not by the session that created it); ask the owner before turning it on |
 | Controllo mattutino | 10:07 Madrid | token health for all accounts + authorization status of the other channels |
