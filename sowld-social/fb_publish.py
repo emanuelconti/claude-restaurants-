@@ -83,6 +83,17 @@ def to_square(src: str, dst: str) -> None:
     canvas.resize((1080, 1080), Image.LANCZOS).save(dst, "JPEG", quality=90)
 
 
+def hosted_by_facebook(page: str, token: str, url: str) -> str:
+    """Cards showed up blank (2 November 2026): Facebook fetched the picture later from the temporary host,
+    which had expired or refused it. So each card image is first uploaded to the Page as an unpublished
+    photo, and the card uses Facebook's own copy of it, which does not disappear."""
+    photo = call("POST", f"{page}/photos", token, {"url": url, "published": "false"})
+    images = call("GET", photo["id"], token, {"fields": "images"}).get("images", [])
+    if not images:
+        raise RuntimeError("Facebook stored the photo but returned no image address")
+    return max(images, key=lambda i: i.get("width", 0))["source"]
+
+
 def page_token(page: str, token: str) -> str:
     """Return a Page token: FB_PAGE_TOKEN_GMS may hold the owner's user token
     instead (1 November 2026), and a user token with pages_show_list can ask for
@@ -148,7 +159,7 @@ def main():
         for i, name in enumerate(meta["slides"][:10]):
             square = os.path.join(folder, name.replace(".jpg", "-square.jpg"))
             to_square(os.path.join(folder, name), square)
-            cards.append({"link": SHOP, "picture": public(square),
+            cards.append({"link": SHOP, "picture": hosted_by_facebook(page, token, public(square)),
                           "name": meta["title"] if i == 0 else "Shop now at goodmessagestudio.com",
                           "description": "Good Message Studio"})
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
