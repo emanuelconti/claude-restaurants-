@@ -67,7 +67,11 @@ def main():
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {IG.MIN_GAP}), nothing published")
         url, problems = os.environ.get("GMS_PUBLIC_VIDEO_URL") or None, []
         if url:
-            IG.check_public(url)
+            import urllib.request
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"Range": "bytes=0-63"}), timeout=60) as response:
+                header = response.read(64)
+            if header[4:8] != b"ftyp":
+                raise IG.ApiError("Approved public video URL did not serve an MP4 file")
         for name, host in ([] if url else IG.HOSTS):
             try:
                 url = IG.upload_temporary(os.path.join(folder, meta["video"]), host)

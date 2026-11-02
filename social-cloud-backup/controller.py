@@ -116,4 +116,13 @@ for b in brands:
   except Exception as e:
    errors.append(tag+': '+str(e));print('ERROR '+errors[-1],flush=True)
 if errors:raise SystemExit('\n'.join(errors))
+if '--check' in sys.argv:
+ import urllib.request
+ sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
+ paths=['queue/'+b+'/2026-11-03/carousel-1/slide-01.jpg' for b in brands]+['queue/gms/2026-11-03/reel/reel.mp4']
+ for path in paths:
+  url=f'https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/{sha}/social-cloud-backup/'+path
+  with urllib.request.urlopen(urllib.request.Request(url,headers={'Range':'bytes=0-63'}),timeout=60) as response:header=response.read(64)
+  assert header[4:8]==b'ftyp' if path.endswith('.mp4') else header[:3]==b'\xff\xd8\xff',path
+ print('PASS: public cloud image and video URLs serve real JPEG/MP4 files.')
 print('Cloud account checks completed.' if '--check' in sys.argv else 'Cloud approved queue processed: at most one new post per channel, real counts respected.')
