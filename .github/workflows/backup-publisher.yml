@@ -1,0 +1,21 @@
+name: Backup publisher
+
+# Last resort when every Claude session is out of credits: once a day, any
+# account silent for 20 hours gets one ready-made carousel from the reserve.
+on:
+  schedule:
+    - cron: "41 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: backup-publisher
+      - run: python3 backup-publisher/publish.py
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_TOKEN_SOWLD: ${{ secrets.INSTAGRAM_TOKEN_SOWLD }}
+          INSTAGRAM_TOKEN_SINCRONIA: ${{ secrets.INSTAGRAM_TOKEN_SINCRONIA }}
