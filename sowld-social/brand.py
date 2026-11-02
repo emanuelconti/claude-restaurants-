@@ -23,6 +23,9 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 DISPLAY = os.path.join(HERE, "fonts", "InterTight-latin.ttf")
 BODY = os.path.join(HERE, "fonts", "Inter-latin.ttf")
+# Premium headlines (the owner, 2 November 2026): DM Serif Display, SIL Open Font License (fonts/DMSerifDisplay-OFL.txt).
+SERIF = os.path.join(HERE, "fonts", "DMSerifDisplay-Regular.ttf")
+SERIF_ITALIC = os.path.join(HERE, "fonts", "DMSerifDisplay-Italic.ttf")
 MARK = os.path.join(HERE, "assets", "gms-mark.png")  # Good Message Studio since 1 November 2026
 
 # getsowld.com's tokens.
@@ -41,7 +44,10 @@ def font(size: int, weight: int = 800, path: str = DISPLAY) -> ImageFont.FreeTyp
     key = (path, size, weight)
     if key not in _fonts:
         f = ImageFont.truetype(path, size)
-        f.set_variation_by_axes([weight])
+        try:
+            f.set_variation_by_axes([weight])
+        except Exception:
+            pass  # static fonts (the serif) have no weight axis
         _fonts[key] = f
     return _fonts[key]
 

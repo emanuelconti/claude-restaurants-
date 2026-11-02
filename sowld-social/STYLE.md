@@ -39,6 +39,14 @@ Each scheduled run writes one carousel, in **English**, and publishes it.
 **Covers rotate (the owner, 1 November 2026): no carousel may open with the same photo as any of the previous 12.** The renderer picks the cover itself from a fixed rotation by post number, so do not try to choose it; choose the photos of the points. Keep the points' photos different from the day's other posts too. For Good Message Studio the cover rotates through 14 chosen product photos (`GMS_COVERS` in carousels.py); `photo_urls` are for the points (if you also list a cover first, it is dropped). **Never use** the store's supplier advertising images (with text such as "NEW", "380G fleece" or "CHINA"), the balaclava photo ("Police or Bandit?"), or the hoodies with a "19" print: they would make the brand attackable. Never use `gm-city.jpg` or `gm-studio.jpg` either (the model looks AI-generated; the owner, 1 November 2026): prefer real product shots, backs with the printed message, flat lays and hangers.
 
 
+## Premium, always (the owner, 2 November 2026)
+
+Every post must look like a premium fashion label, never like a supplier listing.
+- **Openers:** a carousel opens either on a hero shot (the back with the printed message, or a real lifestyle photo) or on a typographic cover (serif title on a soft colour); the renderer alternates them in a fixed sequence (`GMS_COVERS`), so no photo repeats within 12 posts. Never the plain front of a hoodie, a flat lay of a blank garment or a supplier image as an opener.
+- **Reels** always open on the typographic hook (serif, appearing line by line on a colour that changes every day), then the products. Plain blank garments may appear only inside a product card, never as the first frame.
+- **Type:** headlines and messages in DM Serif Display, sentence case (never all caps); the small spaced label "G O O D  M E S S A G E  S T U D I O"; body in Inter. Keep lines short and the hook under 60 characters.
+- Text never sits on top of the printed message of a garment.
+
 ## Layouts that change, like a page that grows (the owner, 1 November 2026)
 
 No more text boxes on top of photos. Slides and reel scenes take turns between three looks, and a good carousel uses all three:

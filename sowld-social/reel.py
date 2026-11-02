@@ -68,7 +68,7 @@ def check(topic: dict) -> list:
 def fit_text(text: str, size_max: int, size_min: int, max_w: int, max_lines: int):
     size = size_max
     while True:
-        f = B.font(size, 800, B.DISPLAY)
+        f = B.font(size, 400, B.SERIF)  # premium serif (2 November 2026)
         lines = B.wrap_lines(text, f, max_w)
         if len(lines) <= max_lines or size <= size_min:
             return f, lines
@@ -99,7 +99,7 @@ def frame_from(photo: Image.Image, t: float) -> Image.Image:
 def shade(img: Image.Image) -> Image.Image:
     """A soft dark fade at the top (for the text) and at the bottom (for Instagram's own buttons)."""
     g = np.linspace(0, 1, H)[:, None]
-    a = (np.clip((g - 0.6) / 0.4, 0, 1) ** 1.5 * 130 + np.clip((0.42 - g) / 0.42, 0, 1) ** 1.3 * 120).astype(np.uint8)
+    a = (np.clip((g - 0.6) / 0.4, 0, 1) ** 1.5 * 130 + np.clip((0.45 - g) / 0.45, 0, 1) ** 1.1 * 175).astype(np.uint8)
     overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     overlay.putalpha(Image.fromarray(np.repeat(a, W, axis=1), "L"))
     out = img.convert("RGBA")
@@ -186,6 +186,39 @@ def scene_product(photo: Image.Image, text: str, seconds: float) -> list:
     return frames
 
 
+HOOK_PALETTES = [((244, 225, 222), (120, 40, 60)), ((222, 231, 240), (30, 52, 86)), ((236, 232, 220), (60, 52, 40)),
+                 ((228, 236, 226), (38, 70, 52)), ((240, 228, 240), (82, 44, 92)), ((248, 240, 220), (110, 70, 20)),
+                 ((24, 26, 30), (244, 240, 232))]
+
+
+def scene_hook_text(text: str, seconds: float, palette: int) -> list:
+    """A premium opener with no photo: the label, a thin rule, the hook in large serif, appearing line by line."""
+    n = int(seconds * FPS)
+    bg, ink = HOOK_PALETTES[palette % len(HOOK_PALETTES)]
+    f, lines = fit_text(text, 132, 80, W - 200, 5)
+    lh = int(f.size * 1.12)
+    top = (H - SAFE_BOTTOM + SAFE_TOP) // 2 - lh * len(lines) // 2
+    base = Image.new("RGBA", (W, H), bg + (255,))
+    d = ImageDraw.Draw(base)
+    ef = B.font(28, 600, B.BODY)
+    d.text((W / 2, top - 150), " ".join("GOOD MESSAGE STUDIO"), font=ef, fill=ink, anchor="ma")
+    d.line((W / 2 - 60, top - 90, W / 2 + 60, top - 90), fill=ink, width=2)
+    frames = []
+    for i in range(n):
+        fr = base.copy()
+        dd = ImageDraw.Draw(fr)
+        for k, line in enumerate(lines):
+            start = 3 + k * 5  # each line lands a sixth of a second after the one before
+            a = max(0.0, min(1.0, (i - start) / 8))
+            if a <= 0:
+                continue
+            rise = int((1 - a) ** 2 * 24)
+            colour = tuple(int(bg[c] + (ink[c] - bg[c]) * a) for c in range(3))
+            dd.text((W / 2, top + k * lh + rise), line, font=f, fill=colour, anchor="ma")
+        frames.append(fr.convert("RGB"))
+    return frames
+
+
 def scene_text(text: str, seconds: float, colour_index: int) -> list:
     """Only words: a big statement on a soft pastel from the hoodies' own colours, the mark small on top."""
     n = int(seconds * FPS)
@@ -214,7 +247,7 @@ def end_frames(seconds: float) -> list:
     tile = B.rounded((210, 210), 54, (255, 255, 255, 255))
     tile.alpha_composite(B.mark(160), (25, 25))
     base.alpha_composite(tile, ((W - 210) // 2, 520))
-    f = B.font(104, 800, B.DISPLAY)
+    f = B.font(112, 400, B.SERIF)
     d.text((W / 2, 820), "Wear the message.", font=f, fill=(255, 255, 255), anchor="ma")
     sf = B.font(46, 500, B.BODY)
     d.text((W / 2, 975), "Hoodies and tees with one kind line.", font=sf, fill=(205, 205, 214), anchor="ma")
@@ -280,10 +313,9 @@ def render(date: dt.date, topic: dict, out: str, cache: str) -> dict:
     folder = os.path.join(out, date.isoformat(), "reel")
     os.makedirs(folder, exist_ok=True)
     urls = topic["photo_urls"]
-    # Reels sit in the same 12-post grid: the opening photo follows the account's cover sequence
-    # (the 12:17 Singapore slot is post 3 of the day), so it never repeats one of its neighbours.
-    opening = C.GMS_COVERS[((date - C.EPOCH).days * C.COVERS_PER_DAY + 2) % len(C.GMS_COVERS)]
-    frames = scene_photo(big_photo(opening, cache), topic["hook"], HOOK_S, True)
+    # The owner (2 November 2026): premium openers only. The hook is always the typographic scene (serif on a
+    # soft colour that changes every day), so it reads at once and the grid thumbnail is clean; the products follow.
+    frames = scene_hook_text(topic["hook"], HOOK_S, (date - C.EPOCH).days)
     kinds = topic.get("scenes") or [("product", "text", "photo")[i % 3] for i in range(len(topic["lines"]))]
     for i, (url, line) in enumerate(zip(urls[1:], topic["lines"])):
         kind = kinds[i] if i < len(kinds) else "product"

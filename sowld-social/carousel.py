@@ -132,14 +132,41 @@ def brand_row(img: Image.Image, y: int, colour, label: bool, size: int = 64) -> 
     d.line((right, y + size / 2, right + rule, y + size / 2), fill=colour, width=4)
 
 
+COVER_PALETTES = [((244, 225, 222), (120, 40, 60)), ((222, 231, 240), (30, 52, 86)), ((236, 232, 220), (60, 52, 40)),
+                  ((228, 236, 226), (38, 70, 52)), ((240, 228, 240), (82, 44, 92)), ((248, 240, 220), (110, 70, 20)),
+                  ((24, 26, 30), (244, 240, 232))]
+
+
+def eyebrow(d: ImageDraw.ImageDraw, y: int, colour) -> None:
+    """GOOD MESSAGE STUDIO, small and widely spaced, like a fashion label."""
+    f = B.font(26, 600, B.BODY)
+    text = " ".join("GOOD MESSAGE STUDIO")
+    d.text((W / 2, y), text, font=f, fill=colour, anchor="ma")
+
+
 def slide_cover(title: str, pid: str, cache: str, spares=()) -> Image.Image:
+    """Premium covers (2 November 2026): a hero photo with a serif title, or a typographic cover on a soft colour."""
+    if pid.startswith("TEXT:"):
+        bg, ink = COVER_PALETTES[int(pid.split(":")[1]) % len(COVER_PALETTES)]
+        img = Image.new("RGBA", (W, H), bg + (255,))
+        d = ImageDraw.Draw(img)
+        eyebrow(d, 150, ink)
+        d.line((W / 2 - 60, 205, W / 2 + 60, 205), fill=ink, width=2)
+        f, lines, size = fit(title, 112, 70, TEXT_W - 40, 5, 400, B.SERIF)
+        block = size * 1.12 * len(lines)
+        centred(d, lines, f, (H - block) / 2 + 10, ink, 1.12)
+        sf = B.font(30, 500, B.BODY)
+        d.text((W / 2, H - 130), "swipe", font=sf, fill=ink, anchor="ma")
+        d.line((W / 2 + 62, H - 112, W / 2 + 110, H - 112), fill=ink, width=2)
+        return img.convert("RGB")
     img = get_photo(pid, cache, W, H, (0.5, 0.42), spares).convert("RGBA")
-    img.alpha_composite(fade(W, H, (0, 0, 0), 0.38, 0.78, 0, 238))
-    f, lines, size = fit(title, 88, 58, TEXT_W, 4, 800, B.DISPLAY)
-    leading = 1.08
-    y_text = H - 92 - size * leading * len(lines)
-    brand_row(img, int(y_text - 40 - 46), B.WHITE, True, 46)
-    centred(ImageDraw.Draw(img), lines, f, y_text, B.WHITE, leading)
+    img.alpha_composite(fade(W, H, (0, 0, 0), 0.42, 0.86, 0, 200))
+    f, lines, size = fit(title, 96, 62, TEXT_W, 4, 400, B.SERIF)
+    leading = 1.1
+    y_text = H - 110 - size * leading * len(lines)
+    d = ImageDraw.Draw(img)
+    eyebrow(d, int(y_text - 70), (255, 255, 255))
+    centred(d, lines, f, y_text, B.WHITE, leading)
     return img.convert("RGB")
 
 
@@ -150,7 +177,7 @@ def slide_point(n: int, heading: str, lines: list, punch: str, pid: str, cache: 
 
     # The text block, at a size that leaves at least 470px of photo.
     for scale in (1.0, 0.94, 0.88, 0.82, 0.76, 0.70, 0.64, 0.58):
-        hf, hlines, hs = fit(f"{n}. {heading.upper()}", int(72 * scale), int(50 * scale), TEXT_W, 2, 800, B.DISPLAY)
+        hf, hlines, hs = fit(f"{n}. {heading}", int(74 * scale), int(52 * scale), TEXT_W, 2, 400, B.SERIF)
         bf = B.font(int(42 * scale), 400, B.BODY)
         pf = B.font(int(42 * scale), 700, B.BODY)
         body = [w for line in lines for w in wrap(line, bf, TEXT_W)]
@@ -179,7 +206,7 @@ def _point_text(d, n, heading, lines, punch, y, max_bottom, colour_body, scale_s
     """The heading, the lines and the closing line, centred from y, shrunk until they end above max_bottom."""
     for scale in (1.0, 0.94, 0.88, 0.82, 0.76, 0.70, 0.64, 0.58):
         scale *= scale_start
-        hf, hlines, hs = fit(f"{n}. {heading.upper()}" if n else heading, int(72 * scale), int(50 * scale), TEXT_W, 3, 800, B.DISPLAY)
+        hf, hlines, hs = fit(f"{n}. {heading}" if n else heading, int(74 * scale), int(52 * scale), TEXT_W, 3, 400, B.SERIF)
         bf = B.font(int(42 * scale), 400, B.BODY)
         pf = B.font(int(42 * scale), 700, B.BODY)
         body = [w for line in lines for w in wrap(line, bf, TEXT_W)]
@@ -271,7 +298,7 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
     os.makedirs(folder, exist_ok=True)
     # Every slide can fall back on any other photo the topic was given, so one
     # dead id costs a picture rather than the whole post.
-    pool = list(dict.fromkeys(car["photos"]))
+    pool = [p for p in dict.fromkeys(car["photos"]) if not p.startswith("TEXT:")]  # typographic covers are not photos
     spares = lambda pid: tuple(p for p in pool if p != pid)
     slides = [slide_cover(car["title"], car["photos"][0], cache, spares(car["photos"][0]))]
     for i, (heading, lines, punch) in enumerate(car["points"], 1):
