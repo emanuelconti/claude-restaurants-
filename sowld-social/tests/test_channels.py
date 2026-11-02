@@ -142,7 +142,7 @@ class Channels(unittest.TestCase):
 
     def test_daily_cap_stops(self):
         fake = FakeHTTP(stamps_minutes_ago=(61, 120, 180, 240, 300, 360))
-        stamps = [NOW - dt.timedelta(minutes=m) for m in (61, 62, 63, 64, 65, 66)]
+        stamps = [NOW - dt.timedelta(minutes=61 + m) for m in range(G.DAILY_CAP)]  # exactly the cap, all older than the gap
         with self.assertRaises(G.Stop) as ctx:
             G.check_limits(stamps, "Test")
         self.assertIn("daily cap", str(ctx.exception))

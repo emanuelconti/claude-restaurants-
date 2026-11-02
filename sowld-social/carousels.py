@@ -549,7 +549,7 @@ GMS_COVERS = [
     "TEXT:6"
 ]
 
-SLOTS = 6  # carousels a day (Good Message Studio, 1 November 2026)
+SLOTS = 10  # carousels a day (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 
 
 def check_topic(topic: dict) -> list:
@@ -620,7 +620,7 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
     return [cover] + rest[:len(picks) - 1]
 
 
-COVERS_PER_DAY = 6
+COVERS_PER_DAY = 10  # one cover index per possible post of the day, so covers never repeat within 12
 
 
 def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:

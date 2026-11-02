@@ -30,7 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
-DAILY_CAP = 6
+DAILY_CAP = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 60  # minutes since the same channel's last post
 CROSS_GAP = 20  # minutes since the last post on any other Good Message Studio channel
 MADRID = ZoneInfo("Europe/Madrid")

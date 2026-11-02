@@ -19,7 +19,7 @@ No channel is called automatic here until a real post has gone out on it.
 ## The rules every script keeps (channel_guard.py)
 
 - One item per run; the scheduled routine decides which run publishes what.
-- At most 6 posts a day per channel, at least 60 minutes since that channel's last post.
+- At most 10 posts a day per channel, at least 60 minutes since that channel's last post.
 - At least 20 minutes since the last Good Message Studio post on Instagram or Facebook (read-only check).
 - Any answer with blocked, limit, spam, restricted, temporarily or "too soon" stops the run; nothing is retried.
 - **OFF by default:** without `--publish` every script is a dry run, and `--publish` still does nothing unless `GMS_<CHANNEL>_ENABLED=1`.

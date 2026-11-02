@@ -115,7 +115,7 @@ Formats that work: "5 messages worth repeating this week", "Signs you need a rem
 - Nothing mean, political, religious or about bodies.
 - No em dashes or en dashes (use a colon or a full stop), no hashtags or emojis on the slides, always "you".
 - Never repeat a title or angle already posted: `ig_publish.py --token-env INSTAGRAM_TOKEN_SOWLD --recent 60` prints the first line of the last posts' captions.
-- Never post more than the script allows (6 a day, 60 minutes apart) and never spam hashtags.
+- Never post more than the script allows (10 a day, 60 minutes apart) and never spam hashtags.
 
 ## The file
 

@@ -36,7 +36,7 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts, shared with Instagram)
 
 API = "https://graph.facebook.com/v21.0"
-MAX_PER_DAY = 6  # the owner, 1 November 2026: 6 a day for Good Message Studio
+MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 60  # minutes
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 MADRID = ZoneInfo("Europe/Madrid")

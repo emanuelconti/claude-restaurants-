@@ -36,7 +36,7 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
-MAX_PER_DAY = 6
+MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 60
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 MADRID = ZoneInfo("Europe/Madrid")
