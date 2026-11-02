@@ -134,6 +134,8 @@ class Channels(unittest.TestCase):
             self.assertEqual(fake.writes(), [], module.__name__)
 
     def test_too_soon_stops_before_any_write(self):
+        if G.MIN_GAP == 0:
+            self.skipTest("owner removed the per-channel wait (2 Nov 2026)")
         for module, env, reel, flag in ((P, self.pin_env, False, "GMS_PINTEREST_ENABLED"), (Y, self.yt_env, True, "GMS_YOUTUBE_ENABLED"), (T, self.tt_env, True, "GMS_TIKTOK_ENABLED")):
             fake = FakeHTTP(stamps_minutes_ago=(30,))
             out, code = run(module, self.args("--publish", reel=reel), dict(env, **{flag: "1"}), fake)

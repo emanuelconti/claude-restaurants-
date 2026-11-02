@@ -31,7 +31,7 @@ sys.path.insert(0, HERE)
 
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 DAILY_CAP = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
-MIN_GAP = 60  # minutes since the same channel's last post
+MIN_GAP = 0  # owner, 2 Nov 2026: no wait on YouTube/Pinterest/TikTok (only Facebook keeps 60)
 CROSS_GAP = 0  # the owner, 2 November 2026: the channels go out together; 60 min per channel and 10/day stay
 MADRID = ZoneInfo("Europe/Madrid")
 
