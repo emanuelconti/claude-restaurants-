@@ -97,7 +97,7 @@ def main():
     title = (meta["title"][:62] + " | goodmessagestudio.com #Shorts")[:100]
     parts = [p.strip() for p in meta["caption"].split("\n\n") if p.strip()]
     description = "\n\n".join([C.CAPTION_SHARE_LINK] + [p for p in parts[1:] if C.CAPTION_SHARE not in p])[:4900]
-    privacy = os.environ.get("GMS_YOUTUBE_PRIVACY", "private").strip() or "private"
+    privacy = os.environ.get("GMS_YOUTUBE_PRIVACY", "public").strip() or "public"  # owner, 2 Nov 2026: always public
     print(f"plan: 1 Short, {w}x{h}, {seconds:.1f} s, title {title!r}, privacy {privacy}")
 
     gaps = G.missing(*NEEDED)
