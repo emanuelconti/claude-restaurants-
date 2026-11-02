@@ -1,7 +1,7 @@
 name: Temporary social cloud backup
 on:
   schedule:
-    - cron: '58 6,7,8,12,13,14,18,19 3-5 11 *'
+    - cron: '58 6-22 3-5 11 *'
   workflow_dispatch:
     inputs:
       mode:
@@ -30,6 +30,8 @@ jobs:
           python -m pip install pillow numpy certifi
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
+      - name: Test queue policy
+        run: python -m unittest discover -s social-cloud-backup -p 'test_*.py'
       - name: Verify or publish reviewed queue
         env:
           SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
