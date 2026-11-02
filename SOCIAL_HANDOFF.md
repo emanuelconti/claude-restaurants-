@@ -81,3 +81,8 @@ Every photo must show exactly what its slide talks about, for that account audie
 - Facebook link carousel is now right (verified): 5 cards, each a real message hoodie with photo, name and "Shop now at goodmessagestudio.com · price". Plain hoodies, caps, tees are never used.
 - Always keep the target in mind (GMS: women in Singapore; SocialPerks: owners of venues in Spain; Sincronia: founders seeking funding) and optimise from PERFORMANCE.md (more of what gets likes/saves, less of what is ignored).
 - Only one routine runs ("SOCIAL UNICA", 07:43/13:43/19:43 Madrid). Any Claude or Codex: you do not need to create routines; just read this file.
+
+
+## TOP PRIORITY (owner, 2 November 2026): publishing must NEVER stop
+
+If one channel fails, the others go on. Every morning (07:43 run) all tokens are checked; anything broken or expiring within 10 days goes in the FIRST line of the report (push notification) with the exact fix. Known expiries: Pinterest refresh token ~1 Jan 2027 (reminder 27 Dec); Threads token ~1 Jan 2027 (reminder 27 Dec); Facebook user token 30 Jan 2027 (reminder 15 Jan); Instagram long-lived tokens ~60 days; TikTok refresh 365 days; YouTube app in Production (refresh token does not expire unless revoked). New tokens can only be saved in the environment by the owner: any Claude or Codex prepares the exact link/steps immediately, never stops the other channels.
