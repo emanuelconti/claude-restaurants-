@@ -155,13 +155,16 @@ def main():
                     print(f"upload did not work ({error}); trying the next host", file=sys.stderr)
             sys.exit(f"could not make {os.path.basename(path)} public: nothing published")
 
-        cards = []
-        for i, name in enumerate(meta["slides"][:10]):
-            square = os.path.join(folder, name.replace(".jpg", "-square.jpg"))
-            to_square(os.path.join(folder, name), square)
-            cards.append({"link": SHOP, "picture": hosted_by_facebook(page, token, public(square)),
-                          "name": meta["title"] if i == 0 else "Shop now at goodmessagestudio.com",
-                          "description": "Good Message Studio"})
+        # 2 November 2026: the cards came out blank. Facebook ignores a custom "picture" (and name) on links
+        # to a domain the Page has not verified in Meta Business, so each card now links a real product page:
+        # Facebook shows that product's own photo and name, the card opens it, and the carousel reads like an ad.
+        products = json.load(urllib.request.urlopen(SHOP.rstrip("/") + "/products.json?limit=250", timeout=60))["products"]
+        products = [x for x in products if x.get("images")]
+        if len(products) < 3:
+            sys.exit("could not read enough products from the shop: nothing published")
+        start = (args.slot - 1) * 5
+        picks = [products[(start + i) % len(products)] for i in range(min(5, len(products)))]
+        cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}"} for x in picks]
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
         params = {"message": message, "link": SHOP, "multi_share_end_card": "false",
                   "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}

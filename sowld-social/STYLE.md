@@ -141,3 +141,7 @@ Formats that work: "5 messages worth repeating this week", "Signs you need a rem
 - `hashtags`: 6 to 10, always `#goodmessagestudio` and `#singapore`, then ones that fit the topic and Singapore (#sgfashion, #sgstyle, #sggifts, #sgootd, #bekind, #kindness, #positivevibes, #selfcare, #mentalhealthawareness, #giftideas).
 
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix.
+
+## Every post is the brand (the owner, 2 November 2026)
+
+Ads, yes, but a real brand first. Every post must carry one clear concept: a positive message, or a small everyday problem solved (what to say to a friend who is struggling, a gift that means something, a calmer evening, a kinder Monday). The product appears as the natural answer, never as a list of hoodies. Some posts do not sell at all: a thought, a ritual, a line worth saving. Before publishing ask: would a woman in Singapore save or send this even if she never buys? If not, rewrite it. More style: serif headlines, generous space, one idea per slide, calm palette.
