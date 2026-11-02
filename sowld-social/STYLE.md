@@ -149,3 +149,8 @@ Ads, yes, but a real brand first. Every post must carry one clear concept: a pos
 ## Promote only the message hoodies (the owner, 2 November 2026)
 
 Never feature neutral products (plain caps, plain tees, blank basics) in posts, cards or reels: they say nothing and waste the ad. Show only the hoodies with a message. For mood, life and city scenes use other real photos (no faces, no AI look), not neutral products.
+
+
+## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
+
+Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.
