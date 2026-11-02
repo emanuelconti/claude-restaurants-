@@ -81,7 +81,8 @@ def recent_stamps(token: str) -> list:
     out = []
     for p in pins:
         if p.get("created_at"):
-            out.append(dt.datetime.fromisoformat(p["created_at"].replace("Z", "+00:00")))
+            stamp = dt.datetime.fromisoformat(p["created_at"].replace("Z", "+00:00"))
+            out.append(stamp if stamp.tzinfo else stamp.replace(tzinfo=dt.timezone.utc))  # Pinterest omits the zone: UTC
     return out
 
 
