@@ -92,9 +92,11 @@ def main():
     w, h, seconds = probe(video)
     if h <= w or seconds > 60:
         sys.exit(f"not a Short: {w}x{h}, {seconds:.1f} s (needs vertical and at most 60 s): nothing uploaded")
-    title = (meta["title"][:90] + " #Shorts")[:100]
+    # The owner (2 November 2026): every Short must point to the shop, so the site is in the
+    # title (the only text shown under a Short) and on the first line of the description.
+    title = (meta["title"][:62] + " | goodmessagestudio.com #Shorts")[:100]
     parts = [p.strip() for p in meta["caption"].split("\n\n") if p.strip()]
-    description = "\n\n".join([p for p in parts[1:] if C.CAPTION_SHARE not in p] + [C.CAPTION_SHARE_LINK])[:4900]
+    description = "\n\n".join([C.CAPTION_SHARE_LINK] + [p for p in parts[1:] if C.CAPTION_SHARE not in p])[:4900]
     privacy = os.environ.get("GMS_YOUTUBE_PRIVACY", "private").strip() or "private"
     print(f"plan: 1 Short, {w}x{h}, {seconds:.1f} s, title {title!r}, privacy {privacy}")
 

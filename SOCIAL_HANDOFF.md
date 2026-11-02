@@ -46,7 +46,7 @@ Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable"
 
 ## Other channels (Good Message Studio)
 
-TikTok is connected since 2 November (see the routine above). Threads, Pinterest and YouTube Shorts scripts exist and are **OFF**: they need the owner's accounts, OAuth/audits and `GMS_<CHANNEL>_ENABLED=1`. Exact steps and variable names in `sowld-social/CHANNELS.md`. No channel counts as automatic until a real post went out on it. Carousell: decision on 16 November (account probably not registered).
+TikTok is connected since 2 November (see the routine above). Threads and Pinterest scripts exist and are **OFF**. YouTube Shorts: connected on 2 November (first Short uploaded private until Google's audit); every Short has `| goodmessagestudio.com` in the title and the shop link on the first description line (the owner: always point to the shop). The other channels: they need the owner's accounts, OAuth/audits and `GMS_<CHANNEL>_ENABLED=1`. Exact steps and variable names in `sowld-social/CHANNELS.md`. No channel counts as automatic until a real post went out on it. Carousell: decision on 16 November (account probably not registered).
 
 ## Known open points (2 November)
 
