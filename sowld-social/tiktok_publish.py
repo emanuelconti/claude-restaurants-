@@ -84,10 +84,10 @@ def slideshow(folder: str, slides: list, dst: str) -> None:
     for s in slides:
         cmd += ["-loop", "1", "-t", str(SLIDE_SECONDS), "-framerate", "30", "-i", os.path.join(folder, s)]
     fade = 0.35
-    parts = [f"[{i}:v]scale=1080:1350,pad=1080:1920:0:285:color=0xF6F1EA,setsar=1,format=yuv420p,"
+    parts = [f"[{i}:v]scale=1080:1350:flags=lanczos,pad=1080:1920:0:285:color=0xF6F1EA,setsar=1,format=yuv420p,"
              f"fade=t=in:st=0:d={fade},fade=t=out:st={SLIDE_SECONDS - fade}:d={fade}[v{i}]" for i in range(len(slides))]
     graph = ";".join(parts) + ";" + "".join(f"[v{i}]" for i in range(len(slides))) + f"concat=n={len(slides)}:v=1:a=0[out]"
-    cmd += ["-filter_complex", graph, "-map", "[out]", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+    cmd += ["-filter_complex", graph, "-map", "[out]", "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-maxrate", "12M", "-bufsize", "24M",
             "-r", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart", dst]
     subprocess.run(cmd, check=True)
 
