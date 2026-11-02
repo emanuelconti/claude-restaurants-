@@ -37,7 +37,7 @@ import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
 MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
-MIN_GAP = 60
+MIN_GAP = 0  # owner, 2 Nov 2026: no wait on Threads (Facebook keeps 60)
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 MADRID = ZoneInfo("Europe/Madrid")
 

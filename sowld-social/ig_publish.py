@@ -46,7 +46,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
 DAILY_CAP = 10  # posts a day on the account, whoever published them (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
-MIN_GAP = 60  # minutes since the account's last post
+MIN_GAP = 0  # owner, 2 Nov 2026: no wait between Instagram posts (Facebook keeps 60); 10/day cap stays
 # Meta's answers that mean "slow down": retrying them is what gets the app blocked.
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
 # The accounts this script publishes to, as the Meta app's dashboard shows

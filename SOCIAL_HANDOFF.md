@@ -73,3 +73,5 @@ Update, same day: Stories OFF (owner: organic Stories reach only followers, not 
 ## 2 November 2026, evening: ONE routine, 3 runs a day (owner: usage limit almost gone)
 
 Only the routine "SOCIAL UNICA" publishes now: 07:43, 13:43, 19:43 Madrid, all three accounts in the same run, about 5 posts a day per account (2 + 2 + 1), every channel of an account right after the other (Instagram, Facebook, Threads, Pinterest, TikTok). The 07:43 run also starts with the Good Message Studio reel and writes a short PERFORMANCE.md per account. All the other publishing, backup, optimisation and check routines are OFF. Any other Claude: do not create new routines or extra runs; keep work short and cheap; script limits stay (10/day, 60 min per channel).
+
+Update (owner, 2 Nov evening): no 60-minute wait on Instagram, Threads (MIN_GAP = 0). Only Facebook keeps 60 minutes between Page posts. Daily caps unchanged.
