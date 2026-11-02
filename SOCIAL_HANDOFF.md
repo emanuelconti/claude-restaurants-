@@ -66,3 +66,5 @@ Every account has a PERFORMANCE.md in its folder (sowld-social/, social-video/, 
 ## Stories (owner, 2 November 2026)
 
 Good Message Studio also posts Stories: after each carousel, `python3 story_publish.py --date <today Madrid> --slot <n> --publish` (sowld-social) posts the cover on a 9:16 canvas with "Shop now · link in bio" as an Instagram Story and a Facebook Page Story. Limits: 10 stories a day per channel, 60 minutes apart; stop without retry on blocked/limit/spam/restricted/temporarily/too soon.
+
+Update, same day: Stories OFF (owner: organic Stories reach only followers, not worth it). story_publish.py stays in the folder, unused.
