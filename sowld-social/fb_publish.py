@@ -159,7 +159,7 @@ def main():
         # to a domain the Page has not verified in Meta Business, so each card now links a real product page:
         # Facebook shows that product's own photo and name, the card opens it, and the carousel reads like an ad.
         products = json.load(urllib.request.urlopen(SHOP.rstrip("/") + "/products.json?limit=250", timeout=60))["products"]
-        products = [x for x in products if x.get("images")]
+        products = [x for x in products if x.get("images") and "hoodie" in x["title"].lower()]  # only message hoodies (owner, 2 Nov)
         if len(products) < 3:
             sys.exit("could not read enough products from the shop: nothing published")
         start = (args.slot - 1) * 5

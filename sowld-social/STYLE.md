@@ -145,3 +145,7 @@ Formats that work: "5 messages worth repeating this week", "Signs you need a rem
 ## Every post is the brand (the owner, 2 November 2026)
 
 Ads, yes, but a real brand first. Every post must carry one clear concept: a positive message, or a small everyday problem solved (what to say to a friend who is struggling, a gift that means something, a calmer evening, a kinder Monday). The product appears as the natural answer, never as a list of hoodies. Some posts do not sell at all: a thought, a ritual, a line worth saving. Before publishing ask: would a woman in Singapore save or send this even if she never buys? If not, rewrite it. More style: serif headlines, generous space, one idea per slide, calm palette.
+
+## Promote only the message hoodies (the owner, 2 November 2026)
+
+Never feature neutral products (plain caps, plain tees, blank basics) in posts, cards or reels: they say nothing and waste the ad. Show only the hoodies with a message. For mood, life and city scenes use other real photos (no faces, no AI look), not neutral products.
