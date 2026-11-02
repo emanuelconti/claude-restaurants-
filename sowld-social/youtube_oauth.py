@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Connect the Good Message Studio YouTube channel once (Google OAuth), for youtube_publish.py.
 
-    python3 tiktok_oauth.py --url                      # the page the owner opens and approves
-    python3 tiktok_oauth.py --code '<address bar URL>' # exchanges the code, shows the refresh token ONCE
+    python3 youtube_oauth.py --url                      # the page the owner opens and approves
+    python3 youtube_oauth.py --code '<address bar URL>' # exchanges the code, shows the refresh token ONCE
 
 Reads YOUTUBE_CLIENT_ID_GMS and YOUTUBE_CLIENT_SECRET_GMS from the environment (a Web OAuth client
 whose authorised redirect URI is https://goodmessagestudio.com/).
