@@ -1,7 +1,7 @@
 """Cloud publisher for exact assets that passed local visual QA."""
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
-from policy import TZ,target,seen,count_today,next_item,gap_ok
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 if now>=dt.datetime(2026,11,6,2,tzinfo=TZ):
@@ -55,11 +55,7 @@ def history(b,channel):
   if rc or '@'+handle not in out:raise RuntimeError('Instagram account check failed')
   rc,out=run(b,'ig_publish.py','--token-env',token,'--recent','50',quiet=True)
   if rc:raise RuntimeError('Instagram history unavailable')
-  rows=[]
-  for line in out.splitlines():
-   if re.match(r'\d{4}-\d\d-\d\dT',line):
-    stamp,title=line.split(None,1);rows.append(dict(stamp=stamp,title=title.strip()))
-  return rows
+  return parse_ig_history(out)
  rc,out=run('gms','cloud_channel_stats.py',channel,quiet=True)
  if rc:raise RuntimeError(channel+' identity/history unavailable')
  return json.loads(out)['posts']

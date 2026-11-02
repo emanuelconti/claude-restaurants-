@@ -1,5 +1,5 @@
 import datetime as dt,unittest
-from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title
+from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history
 class QueuePolicyTests(unittest.TestCase):
  def setUp(self):
   self.day='2026-11-03';self.now=dt.datetime(2026,11,3,20,58,tzinfo=TZ)
@@ -36,4 +36,7 @@ class QueuePolicyTests(unittest.TestCase):
    if item:
     state[item['id']+':facebook']='success';posts.append(dict(title=item['title'],stamp=now.isoformat()))
   self.assertEqual(len(posts),8)
+ def test_empty_caption_still_counts_as_a_real_post(self):
+  rows=parse_ig_history('2026-11-03T08:00:00+0000  \n2026-11-03T09:00:00+0000 A title\n')
+  self.assertEqual(len(rows),2);self.assertEqual(rows[0]['title'],'');self.assertEqual(count_today(rows,self.now),2)
 if __name__=='__main__':unittest.main()

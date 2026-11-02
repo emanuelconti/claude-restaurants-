@@ -14,3 +14,12 @@ def next_item(items,brand,channel,day,state):
 def gap_ok(posts,now,minutes):
  stamps=[dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')) for p in posts if p.get('stamp')]
  return not stamps or (now-max(stamps)).total_seconds()>=minutes*60
+
+def parse_ig_history(text):
+ import re
+ rows=[]
+ for line in text.splitlines():
+  if re.match(r'\d{4}-\d\d-\d\dT',line):
+   parts=line.split(None,1)
+   rows.append(dict(stamp=parts[0],title=parts[1].strip() if len(parts)>1 else ''))
+ return rows
