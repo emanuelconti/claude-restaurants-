@@ -1,0 +1,54 @@
+# Social accounts: shared handoff (read this before touching any of them)
+
+For every Claude, Codex or person who works on @socialperks.es, Good Message Studio (@goodmessage_studio, formerly @sowld.ai, and its Facebook Page) or @sincronia.live. Last updated 2 November 2026. The owner is Emanuel; everything below is his decision unless marked otherwise. Keep this file current when something changes.
+
+## Where things live
+
+| Account | Branch | Folder | Token variable (Default environment) |
+|---|---|---|---|
+| @socialperks.es (Spanish, B2B: owners of cafés, restaurants, bars, gyms, salons, spas, hotels, shops) | `claude/socialperks-continuous-build-lgdgd6` | `social-video/` | `INSTAGRAM_ACCESS_TOKEN` |
+| Good Message Studio, Instagram + Facebook Page (English, women 18 to 38 in Singapore, shop goodmessagestudio.com) | `claude/ricerche-automatiche-performance-x5pstt` | `sowld-social/` | `INSTAGRAM_TOKEN_SOWLD`; Facebook `FB_PAGE_TOKEN_GMS` (may be the owner's user token: `fb_publish.py` derives the Page token itself) and `FB_PAGE_ID_GMS` |
+| @sincronia.live (English, founders and startups looking for funding) | `claude/graduate-deadlines-consulting-k8obxv` | `sincronia/social/` | `INSTAGRAM_TOKEN_SINCRONIA` (`SINCRONIA_IG_ID` holds a wrong value; the script falls back to the right id 17841404632479565 by itself) |
+
+Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable" checklist, photos, layouts) and its `README.md` the commands. Good Message Studio also has `CHANNELS.md` (status of Threads, Pinterest, YouTube, TikTok).
+
+## Rules that never change
+
+- Never remove, lower or get around the limits in the scripts: Good Message Studio 6 posts a day per channel, SocialPerks and Sincronia 3; at least 60 minutes between two posts of the same account; at least 20 minutes between publishes on different accounts or channels. One post per account per run. (31 October: a burst of posts got the Meta app blocked.)
+- Any answer with blocked, limit, spam, restricted, temporarily or "too soon": stop, do not retry, report.
+- Never print, log or commit a token or any part of one.
+- Never publish a carousel in plain colours: the renderers stop when a photo is missing.
+- Never post the same caption twice; scripts check the account first.
+- Before a manual post, count the account's posts today on Instagram (`ig_publish.py --recent 60`).
+
+## Look and content decisions (owner, 31 October to 2 November)
+
+- **Covers:** no photo may open two of any 12 posts in a row (the profile grid shows 12). The renderer picks the cover from one fixed sequence per account; do not choose covers by hand.
+- **Good Message Studio is premium:** openers are hero shots (the back with the printed message, real lifestyle) or typographic covers in DM Serif Display on a soft colour; never the plain front of a blank hoodie, never supplier images, never `gm-city.jpg` / `gm-studio.jpg` (the model looks AI-generated), never the balaclava photo or the "19" print. Serif headings in sentence case, no text boxes on photos, text never over the printed message. Slides alternate product card / words only / photo with text.
+- **Reels (Good Message Studio, one a day at 12:17 Singapore):** always open on the typographic hook; real product photos only; original beat; `reel.py` + `reel_publish.py`.
+- **Every Good Message Studio post leads to the shop:** Instagram captions say "link in bio" (bio link = goodmessagestudio.com); Facebook and Threads get "Shop now: https://goodmessagestudio.com" as a real link.
+- **Facebook:** one swipeable link carousel (cards that open the shop), never a grid of small photos. Card images must be uploaded to the Page first (`fb_publish.py` does it): images left on the temporary hosts expire and the cards turn white (seen on 2 November).
+- **SocialPerks:** B2B. One of the day's three is about running a place and ends with `"cta": "business"`; the others stay likeable everyday or owner-life topics.
+- **Sincronia:** one post a day, about funding readiness, grants vs equity, founder life. Never promise money or funding.
+- Captions carry a searchable paragraph (`"caption"`) and 8 to 12 mixed hashtags, never the same block twice in a row; no engagement bait ("tag 3 friends").
+
+## Scheduled routines (claude.ai/code/routines, Default environment)
+
+| Routine | When | What |
+|---|---|---|
+| Good Message Studio | 08:17, 10:17, 12:17 (reel), 15:17, 18:17, 21:17 Singapore | 1 post per run: Instagram, then Facebook 20 min later (Threads when enabled) |
+| Caroselli (principale) | 08:47, 13:47, 20:47 Madrid | SocialPerks up to 3 a day, Sincronia 1 a day |
+| Instagram backup | 23:41 Madrid | fills only what SocialPerks or Sincronia are missing |
+| Recupero automatico ogni ora | hourly at :59 | **disabled** since 1 November 23:54 (not by the session that created it); ask the owner before turning it on |
+| Controllo mattutino | 10:07 Madrid | token health for all accounts + authorization status of the other channels |
+| Reminders | 16 November (15-day review, decide TikTok/Pinterest/Carousell); 15 January 2027 (renew the Facebook token before it loses data access on 30 January 2027) | |
+
+## Other channels (Good Message Studio)
+
+Threads, Pinterest, YouTube Shorts and TikTok scripts exist and are **OFF**: they need the owner's accounts, OAuth/audits and `GMS_<CHANNEL>_ENABLED=1`. Exact steps and variable names in `sowld-social/CHANNELS.md`. No channel counts as automatic until a real post went out on it. Carousell: decision on 16 November (account probably not registered).
+
+## Known open points (2 November)
+
+- Two Facebook posts of 1 November ("6 signs she is your soul sister", "5 gifts for the friend who always checks on you") show white cards; the owner deletes them by hand. Posts made before the fix of 2 November 09:15 may turn white too.
+- Instagram API cannot delete posts; the owner deletes from the app.
+- Sessions started by another session (not by the owner) may be stopped by the permission check and wait for the owner's "sì"; scheduled routines run on their own.
