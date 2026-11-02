@@ -84,7 +84,7 @@ def main():
         meta = json.loads(open_text(os.path.join(folder, "carousel.json")))
         meta["video"] = "tiktok.mp4"
         if not os.path.exists(os.path.join(folder, meta["video"])):
-            TT.slideshow(folder, meta["slides"], os.path.join(folder, meta["video"]))
+            raise RuntimeError("Approved prebuilt Short is missing: nothing uploaded")
     else:
         folder = os.path.join(args.out, args.date, "reel")
         meta = json.loads(open_text(os.path.join(folder, "reel.json")))
@@ -127,6 +127,9 @@ def main():
             raise RuntimeError("YouTube did not return an upload address")
         with open(video, "rb") as fh:
             done = G.http("PUT", location, token, data=fh.read(), headers={"Content-Type": "video/mp4"}, timeout=600)
+        status = G.http("GET", API + "/videos?part=status&id=" + done["id"], token).get("items", [])
+        if not status or status[0]["status"].get("privacyStatus") != "public":
+            raise RuntimeError("Upload accepted but public visibility was not confirmed. Stop for review; do not upload again.")
         print(f"published ({privacy}): https://www.youtube.com/shorts/{done.get('id')}")
     except G.Stop as stop:
         sys.exit(str(stop))

@@ -65,8 +65,10 @@ def main():
             return
         if stamps and (now - max(stamps)).total_seconds() < IG.MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {IG.MIN_GAP}), nothing published")
-        url, problems = None, []
-        for name, host in IG.HOSTS:
+        url, problems = os.environ.get("GMS_PUBLIC_VIDEO_URL") or None, []
+        if url:
+            IG.check_public(url)
+        for name, host in ([] if url else IG.HOSTS):
             try:
                 url = IG.upload_temporary(os.path.join(folder, meta["video"]), host)
                 print(f"video is public ({name})")

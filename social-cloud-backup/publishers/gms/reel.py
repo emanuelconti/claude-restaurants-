@@ -250,7 +250,7 @@ def end_frames(seconds: float) -> list:
     f = B.font(112, 400, B.SERIF)
     d.text((W / 2, 820), "Wear the message.", font=f, fill=(255, 255, 255), anchor="ma")
     sf = B.font(46, 500, B.BODY)
-    d.text((W / 2, 975), "Hoodies and tees with one kind line.", font=sf, fill=(205, 205, 214), anchor="ma")
+    d.text((W / 2, 975), "Message hoodies with one kind line.", font=sf, fill=(205, 205, 214), anchor="ma")
     pill = B.pill(C.STORE_URL, 54, B.WHITE, B.SIGNAL + (255,), weight=800)
     base.alpha_composite(pill, ((W - pill.width) // 2, 1080))
     hf = B.font(44, 700, B.BODY)

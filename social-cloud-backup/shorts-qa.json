@@ -1,0 +1,128 @@
+[
+  {
+    "date": "2026-11-03",
+    "slot": 2,
+    "frames": 7,
+    "max_mean_pixel_error": 3.328
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 3,
+    "frames": 7,
+    "max_mean_pixel_error": 3.424
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 4,
+    "frames": 7,
+    "max_mean_pixel_error": 3.298
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 5,
+    "frames": 7,
+    "max_mean_pixel_error": 3.505
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 6,
+    "frames": 7,
+    "max_mean_pixel_error": 3.191
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 7,
+    "frames": 7,
+    "max_mean_pixel_error": 3.335
+  },
+  {
+    "date": "2026-11-03",
+    "slot": 8,
+    "frames": 7,
+    "max_mean_pixel_error": 3.206
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 2,
+    "frames": 7,
+    "max_mean_pixel_error": 3.291
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 3,
+    "frames": 7,
+    "max_mean_pixel_error": 3.658
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 4,
+    "frames": 7,
+    "max_mean_pixel_error": 3.105
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 5,
+    "frames": 7,
+    "max_mean_pixel_error": 3.38
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 6,
+    "frames": 7,
+    "max_mean_pixel_error": 3.345
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 7,
+    "frames": 7,
+    "max_mean_pixel_error": 3.362
+  },
+  {
+    "date": "2026-11-04",
+    "slot": 8,
+    "frames": 7,
+    "max_mean_pixel_error": 3.176
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 2,
+    "frames": 7,
+    "max_mean_pixel_error": 3.218
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 3,
+    "frames": 7,
+    "max_mean_pixel_error": 3.539
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 4,
+    "frames": 7,
+    "max_mean_pixel_error": 3.309
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 5,
+    "frames": 7,
+    "max_mean_pixel_error": 3.303
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 6,
+    "frames": 7,
+    "max_mean_pixel_error": 3.151
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 7,
+    "frames": 7,
+    "max_mean_pixel_error": 3.403
+  },
+  {
+    "date": "2026-11-05",
+    "slot": 8,
+    "frames": 7,
+    "max_mean_pixel_error": 3.274
+  }
+]

@@ -4,24 +4,463 @@
     "brand": "sp",
     "date": "2026-11-03",
     "slot": 1,
+    "title": "5 cosas que conviene aclarar antes de reservar una mesa",
     "folder": "queue/sp/2026-11-03/carousel-1",
     "sha256": {
-      "slide-03.jpg": "8e0932f49a00c7dd79131c5c79dd4d17c9f5d3a940fb816c2e609dcbc04e6bc1",
-      "slide-02.jpg": "b77014960de3cef2d6380d4a13dd7372e0517c928f457083e2a53665c769f7c2",
-      "slide-01.jpg": "3fbfb6f6b0095a5c741625178f2818f0399753b5702a6a8476ee7e6500ccb74f",
+      "slide-03.jpg": "d8fc3145bd5d244d625838865c6392991b34fb36d77833108a0c160934480688",
+      "slide-02.jpg": "1976130a11add740f7039c803a88d8c32191e463afb3d12f4687c8f7d017e664",
+      "slide-01.jpg": "14a91305cee21ab899a8e1e0dcad20b8d35d774b0af1f4136d61bb8500ec1c4d",
       "slide-05.jpg": "068ee92cfda6e60909f892062a8cbe6a59e4b7d986498c4d863649d4c764b54c",
-      "slide-04.jpg": "6f0a562e341e3848c1b6c857c36140360f8f78ebdd4532235ef2bd32d28f55a0",
-      "slide-06.jpg": "43effe45c4b4383a0d59196595088e0f56190d03382303a78525b3febdb67331",
+      "slide-04.jpg": "6410befa60c6f73474fdfbb221d31de3d15aef88abcc1946250420cb36aad08f",
+      "slide-06.jpg": "4814de85cfbcbce9db724266fb0e3261274d4902642f65be277934d0a24a17a2",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "a820aeea8a51ec766b54fc0959ed3cd3447181c85d80c2c068cc79ea583ef310"
+      "carousel.json": "c690b143659915e5c82af2cc7b7d734cdada8a5de0c43630694a500aab345ce6"
     },
-    "qa": "All seven slides visually inspected on 2 November 2026"
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-2",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 2,
+    "title": "5 detalles que facilitan la primera visita a tu local",
+    "folder": "queue/sp/2026-11-03/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "2dbd4242cb5bcf989f9c4434e6b0b1e7f87a120b533c4a87d528ca20af3e9bba",
+      "slide-02.jpg": "b37c8c25dd60994830024a0cb03c5ae9fd3bcbace9c3a17bfeb020d7e7eac555",
+      "slide-01.jpg": "55363209a0c50bf8763388566aec816603e825d10cbd975b8797bd108267d1ca",
+      "slide-05.jpg": "eee57a66c4239164d9682ab3c0449d9b068e77e10aabeb3aeb79ed500a83bce2",
+      "slide-04.jpg": "331697224704fb01c1c96715487fb6f28a96aac17965b5ee64c1bcb18570a59a",
+      "slide-06.jpg": "e7b675d2749e0e66b3049599db8ac3fc8697d49cce1bdccfe36767197e9bf37c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "5bf4f0e00258caa7949988b36568f8d56f13dc466a484b679fe4c247e7c05caa"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-3",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 3,
+    "title": "5 preguntas antes de ofrecer un pequeño regalo",
+    "folder": "queue/sp/2026-11-03/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "6103d06241e284a0f79643a897337f061d9a9ecf7ba7ac9cfcbf9440d26473ae",
+      "slide-02.jpg": "5e520bfc636c3189aa0c464b527d05a56425c2c84081af7c4f995cefb36d03f2",
+      "slide-01.jpg": "443944c3ecbb6e11247820b0eb19a283808494d8d35f4db02d2de9b05bfbce91",
+      "slide-05.jpg": "14c145f29fb0813c3e2c587c70af4b0162c213c093b2b351787d808e35dab5dc",
+      "slide-04.jpg": "83e47b897395018e4ad17d76e0183aeea74bf618cf1b7ffef86be22964dcb368",
+      "slide-06.jpg": "1c026e82bd3fa7434e9db4568e2721c15acb85e0bb77195476b38a64f97a1d2f",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "5c9bf7ccd754c41fe42b52a738444254621698d547e9ba9f5378cfe6938bbe24"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-4",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 4,
+    "title": "5 cosas que revisar en la carta de tu cafetería",
+    "folder": "queue/sp/2026-11-03/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "a98bc05bf209117e0a41df547daded92c3c07623d05d38a8878fe35170f3315c",
+      "slide-02.jpg": "b5a9f5a6e881f21c335ffa3bd906a73ef7d7b689d47f883fa6ab136770001a8b",
+      "slide-01.jpg": "e7d08fb8588ebaac378b729e0441ded8dd67f04099ace8138663244498b7cd3e",
+      "slide-05.jpg": "77410e22e047902970315de97ab536d7cc107b272be126c4fb9adcea7f9f8c9a",
+      "slide-04.jpg": "b73b73e437c458c50e55f7b5b92832055f8bfa4d0ef29c86dd9b39fa2e1f29fc",
+      "slide-06.jpg": "f69e3141957200a023d65705f22c01c7f764e87f41feed8879acc7f38e54289c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "0645184ed693f462ad5f9c4e74c830c71af5670df4f3ed3492c31f7a9e022303"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-5",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 5,
+    "title": "5 detalles para preparar una cita de peluquería",
+    "folder": "queue/sp/2026-11-03/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "5fa733f0ce2bcf26f8638b8c7665f71a59df4de5f4bd2c63aae9a890476c2f82",
+      "slide-02.jpg": "69beb99a7fc9ba6a35768c80ff3bcc7c10ebd85d5555ad04477c688b52c67b39",
+      "slide-01.jpg": "6e66ec6692cf08187a80079a535fb387295d36ce03d55bd8e4863edabb2c76df",
+      "slide-05.jpg": "7acaa559a7afae59f5cc5c85cdeada1794c37e6738eba175c42fb87e98e3c18a",
+      "slide-04.jpg": "cb8446a4203081817080a54621782c0190471e4d6a70583cb05227f0a36e8034",
+      "slide-06.jpg": "26f847b829699fd22900fbcee9919ef780503a47b09aa9bbac49dffcd80d40cc",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "46e1f2408366a2a04a4e407423a78bc7b6d018c379826beeb456e06e371638fa"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-6",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 6,
+    "title": "5 detalles que ayudan al llegar a un hotel",
+    "folder": "queue/sp/2026-11-03/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "dfb21f1c9b052ecfaf72cc5a5307e114ccf7c63beb8ef13fb047b2283280ddac",
+      "slide-02.jpg": "035944e73edf5c225d99ffce463a37242aa0b62a68e4151c3160cdcfddb4ea84",
+      "slide-01.jpg": "9b16a0ffd721a4351990d34b03f5a9d60bf7249bd289ff3790ec5f31d89e0b89",
+      "slide-05.jpg": "1663a19c558b22ee215a5b2bf6821e56b1b3ccebd825ecc0799c76d3d0f42bf8",
+      "slide-04.jpg": "24456f5f872e6e3293980a6b7994174a150646dd6c254fb83ad56b1a8c0bc5aa",
+      "slide-06.jpg": "94fbe6719b1379afaded4f88407a07143c8695dd9afd669d38e610f4a7b0457d",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "13f00fe7dbc8408829c8e83c87e9c3e610edd1dc760ee5cbd6563e2d36a762bd"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-7",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 7,
+    "title": "5 formas de orientar a alguien nuevo en tu gimnasio",
+    "folder": "queue/sp/2026-11-03/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "97bbc0fc2aa5ba9f20bb99f8d8030608da84e8b916b7031751682b952c91a385",
+      "slide-02.jpg": "65bc3971549c2ad9828f7a6282d3e8a267b3451b9c1caeda1b1cbde2dac1d16a",
+      "slide-01.jpg": "ab0052039484dd37e73aa140074b8de02b49bb84c4900cd69f652743aeae4da7",
+      "slide-05.jpg": "485e6c1653445dd46f1f83a37f818966516eaf43d7581e65ecda179b76342f56",
+      "slide-04.jpg": "e8b8e9a0eeaf4636a7828ec793cd30d1c172c277240e2c943d527964ebd8d17a",
+      "slide-06.jpg": "c8a391817dd24e0b38860d115b4fb144c2e6a8b3abbf72bab393792e5db7430b",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "005cefec3410fe43f0e1debc25f90437eb35bc67599369d63ebb9407c1080058"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-03-8",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 8,
+    "title": "5 detalles útiles en una tienda de barrio",
+    "folder": "queue/sp/2026-11-03/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "6a2b6783e6e7ce413c41014316b8baaa581958d7a1b12119b3f9606acb100e9f",
+      "slide-02.jpg": "d560af88bbb483d23fa272738914d85a2c442bcea82e5a4cdd63cc66c7b55d55",
+      "slide-01.jpg": "7c8e6e9993148c6d1bec47b15cea8ca7ae0bd597df1b4b77458e5d3be260ff60",
+      "slide-05.jpg": "27a1f6e85a8e6be35e7dc498a2b7ad658302e1e8b90ff49139f8483c2b95c978",
+      "slide-04.jpg": "e75c094a746abdeb9cf6e1bdf64ac5971eb7dab7433e82f872309fc3cc779a8b",
+      "slide-06.jpg": "b538f8ebef9f2c4e3e54bd8daf8daf4b5a16e25cebec56eeabd00561bce5776c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "39236ddbeb087a731f54630013f0f2466cb7d6b7fba84746031eb8329747ce51"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-1",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 1,
+    "title": "5 preguntas para revisar una franja floja",
+    "folder": "queue/sp/2026-11-04/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "520f2250129a16106718a3f7b4fa91da0d8d9b7d6b27b2bed5bc44dd129698db",
+      "slide-02.jpg": "97754e624cea7c9b56c9ddb4922fbeb0e7b3054ba608b7f41ab8fc18eae6f041",
+      "slide-01.jpg": "c8afef7354e3dddd6956dcfedd1f38803ec8bc3accb6e453eecf9bb03b41aa18",
+      "slide-05.jpg": "2525961ce540219e1d7320c5ca21d23f5da546e20e1955a330593a41345b4a7f",
+      "slide-04.jpg": "efe8de86372a5a56732f719b85cae94cc8959cfa5e9370e0501de0d57d823c58",
+      "slide-06.jpg": "38e0af9ca607beeafd44b04186dc2a2b8a8568fd66cc30cc4d594b28890ac82a",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "a00df719ea691e537b5f162c2f5a1f73dd7a550b4fdf7be88103515c4b3f8216"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-2",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 2,
+    "title": "5 cosas para un relevo de turno más claro",
+    "folder": "queue/sp/2026-11-04/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "b3b7cb50abf781509a1c4745fe2d7ff4833caf41e8778bf1237d5d762596c837",
+      "slide-02.jpg": "7ba5027c6bcf1c69a7279410fc53271a943caa755f5b4728cd27d28707d167d4",
+      "slide-01.jpg": "c49e519a2a011dc1ffeab89d45189dbc7c838a14c6fbcf8f1047b674e62fb945",
+      "slide-05.jpg": "94a93c0797a41ffe18e7e4057323aac436a0883f592bfbd3f83d3fecb147b0d1",
+      "slide-04.jpg": "239b1ae6091760197a279d1cb720674096ab1aa96667176d3c67c89a1481af43",
+      "slide-06.jpg": "6f076fd1219642b945b4260312ad1b0605d3e0978d11e3d991569d8454be1913",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "ec3123e2da3fc37e47b7dd8a180bcb4f44e01d8e237925e1cc72e0e7436578a7"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-3",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 3,
+    "title": "5 maneras de explicar una espera sin incomodar",
+    "folder": "queue/sp/2026-11-04/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "2951c52713d9710522e1bfd36d45daf5d9f0c0b72c20af66bc8855306bbc9823",
+      "slide-02.jpg": "a1663a5f2a50d482d24f99956de761ca817c09852caab4f16724538521ea7e02",
+      "slide-01.jpg": "a12335334ab55c7886b16106e4786fd3d672680ea382404da26ff81e43ce87f2",
+      "slide-05.jpg": "67a094c62ec07018d8c06a6573a449e4036f67e1a071a59f5e441a73c63b9433",
+      "slide-04.jpg": "24e834af658b07ca4e72695031dac52639187e9da5ff162bcc204ba2bc468939",
+      "slide-06.jpg": "63b82ac8e76a92aee011f33a2eb38c8aa23144611674595887060f7b111e062d",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "ced06be2b53ef024339ece8153c365e5b12f58a45cb5a42a05a12f7f64856139"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-4",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 4,
+    "title": "5 detalles de una confirmación de reserva útil",
+    "folder": "queue/sp/2026-11-04/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "e5d3a68aba90024dd6b2aec4ef4e8a012ec221c33716b8abf35021238f244715",
+      "slide-02.jpg": "4d7029ed2139760ef58145a37841645209ecff02bed853271cc80297ed2e24c3",
+      "slide-01.jpg": "16f237fcf6130a2d869e2ee220b54fccf035761cd54dfa379f9936bcf2c3d065",
+      "slide-05.jpg": "683020017a7e1ad7169c336ea21b71cebe6b9f66ac30f31cdd1e5d46e30b5414",
+      "slide-04.jpg": "77dd283e59803c2bfcab334062b958ce15e181118fb7327453d1b8c8e123c61a",
+      "slide-06.jpg": "5ec892d70935d000873fa036a3993a6d3e7887cbe802fc76423a5fa06eceefcf",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "ec4abbc8cd22fc075aa29267fbd752dee8aad59644ec165f9c60a936080bff79"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-5",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 5,
+    "title": "5 formas de cuidar la segunda visita",
+    "folder": "queue/sp/2026-11-04/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "109d374b992aaf7f06f824cfd16454e86cc66c147b2647066efcbff2c0698513",
+      "slide-02.jpg": "1a0dbeece4ce5402ea357037abbda17aa17bd7aed3ecd220afa2b2278df0dde0",
+      "slide-01.jpg": "95ee217ec6607f6d74af164d011e3a23b3da95a80826bfb291a1c43ba493609f",
+      "slide-05.jpg": "5d32b12d57241d7ae1a778981c66af34774c872d79078340c16d61817c8a9858",
+      "slide-04.jpg": "e5e0f4acc814f44215f5207d897f354cc7d171e51f1a203f6187e79b81feca6b",
+      "slide-06.jpg": "9627075bc48d57413d6c977a943a366f771955460e741fd78ce25a16d76bd281",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "04a195ebc504a52e652433301c69f68a8eb062695ce42d32540c6a0669f81188"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-6",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 6,
+    "title": "5 cosas que aclarar antes de una sesión de bienestar",
+    "folder": "queue/sp/2026-11-04/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "3cd7f05bb82d5573e2d522f947a8cbc5e3236756d0f161da9be60f7afe1b665b",
+      "slide-02.jpg": "a3a74e5276cf2c8b78c81223429ea70f6de9ed815f416264ac56f17ce9360632",
+      "slide-01.jpg": "6c7d54df3653ebff9734fe83473266e624da94831ba2cae04098470360fbbc17",
+      "slide-05.jpg": "6bb44331d297390de0361d8bc4c3a5ac9fbe59d1ac2027926e9fa5d4277f2050",
+      "slide-04.jpg": "a9c2a53905bf1ee15c7d9c612a5e9e8bcfc8f6852cb730f757534f5e8656d105",
+      "slide-06.jpg": "3b0da7ec8a9c2d6b1adff02bf9e12929818bf6c0586db595e41222d42d7f0319",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "124133d1c83f4964caff2e04c131a7b1787829d6f7a67ac1e25b2f7a824f521d"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-7",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 7,
+    "title": "5 detalles para explicar bien una clase",
+    "folder": "queue/sp/2026-11-04/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "ceba13050c8276a0609df27bcccae225f3a2aba233c248037fc48394ae080858",
+      "slide-02.jpg": "cafe8f35d392e28a82cbdd8ddc945c3e35421c89757cc0ba680ddcab00a17d7a",
+      "slide-01.jpg": "fc7d88df819f05f24fa88aa353582ed8573060f1d713142ce84320ad88f3c893",
+      "slide-05.jpg": "c924219778a9b2c6f5989aabb7bb830a0873a71c69b8072f19f43d9f5836a59d",
+      "slide-04.jpg": "f9b7861595a62a13857b0882533d711bb02281e235e6e33f5b80802e8fce0154",
+      "slide-06.jpg": "1f3914431744ecb84b90bff68b388fa0d8800d790effb89152715453fec83553",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "a20a3abafeb29f5cb7918946057a7f187b02de6a498896f9548d10a113ae66bb"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-04-8",
+    "brand": "sp",
+    "date": "2026-11-04",
+    "slot": 8,
+    "title": "5 señales de que tu mensaje de oferta necesita una revisión",
+    "folder": "queue/sp/2026-11-04/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "3e517247b66fac5c2c56acb50738f4f0c94ac644eea7187e3645c5f36555e1ed",
+      "slide-02.jpg": "9ac3dc8c00c454be88f9c177bdb1fac4eda022c0e7f7517b17fc859719adbb20",
+      "slide-01.jpg": "5bb9526cc8b3130231805d5b626d632357df9b05661117aee5a2bff6e91a7006",
+      "slide-05.jpg": "ee14276496c526e177fb6071273bb15a88c852d02fad3a8de84d5058aa3406ef",
+      "slide-04.jpg": "5cc798a31abaff686b5a8d2b49cb0a922d7152bedee26397507b9402fb85795e",
+      "slide-06.jpg": "2c4235c215e386f5ca788823220de7e32de14e510a167c9eb6d9e0d117a9a704",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "a789fa7755e7e73c04097c04030a4b994c4d8da1f9cd934b0574e71800b6b0b9"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-1",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 1,
+    "title": "5 preguntas al revisar las reservas de la semana",
+    "folder": "queue/sp/2026-11-05/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "d659a52e06db715958b5111949a2ac86a853e52579fd69628f5069297c4dbc6c",
+      "slide-02.jpg": "a75290927c17a210cb9beee646a6146f8222fc7e2408371bf0190aa05683a046",
+      "slide-01.jpg": "80fc373790d1224a046a1facdf8d77d4c23c1ebd8bafa90cfc202dd85de9e691",
+      "slide-05.jpg": "a5a7ee26ac2fa07c1579990606af6ebc5ce096f0fc167a828dade7f88935a1bf",
+      "slide-04.jpg": "1594f1484263a5532bd6a8976e1223e1c2972ef6b0864357c1dfa51adb4266a2",
+      "slide-06.jpg": "24b16ceccab1b272eee3505817c36dfd76da252bdf2f26284d252f6aaf95ed87",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "2e65e4b695166bb928e028aec97034d1600d5327d4ff90fbdf23c75f489d41e7"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-2",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 2,
+    "title": "5 detalles que hacen más claro un escaparate",
+    "folder": "queue/sp/2026-11-05/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "81c4effbb70eb564eb3c09caac838d51de2cf1652fae1e8437f13f18c863627c",
+      "slide-02.jpg": "a8b2c40e4114917861f7682af368c00ade0c04d64abee05bd19c19aafebac1b2",
+      "slide-01.jpg": "aeb792368e9bc2e184eb92acc5308007caa03fca70a3bc00ef0b4e00a2c2e457",
+      "slide-05.jpg": "72404516857e765c2d16ffb01c1191889de49eb511630dd24f9fc6634696fbb5",
+      "slide-04.jpg": "683b03e20b559e6b2c607b0996b9bd4580a4dd0e7166ba42ae72b3e9cf9ac87a",
+      "slide-06.jpg": "28cc3006ec0570ea2aa596b75573aa79f865894f80c9d64ab7bc6dff7b18884d",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "1e84738c4d1f362a2118bd3c7ae8fa9e65a501ec3d1da8e7846288604e2bec31"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-3",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 3,
+    "title": "5 momentos para comprobar la información de tu hotel",
+    "folder": "queue/sp/2026-11-05/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "8df8869f71e0c3ec7600dce6942bd42b1b86cf9bbd7ad9d7e4b10cfe649e58cd",
+      "slide-02.jpg": "31b57a0a8760d27d9e11ef211843869f021b5a5461432aaeb9c2153fdec0ae9f",
+      "slide-01.jpg": "76cb40ed54265f4d6cbe4db73ce665c8ca3204da8c4a2e59aa207b26870f0c59",
+      "slide-05.jpg": "8ac982b9f05c757cf2e1a800074bf6590c983e30bf74bc037be436f58a515531",
+      "slide-04.jpg": "4b442d5c8323497cfd2e6299947358060b8b140d0829fad89638e5da8ab9cea3",
+      "slide-06.jpg": "f35934904a47636051a97e5aabef671cbd083bfd2b587539a3d555896eb21187",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "c6e4cf338859da1fea2f03602a498f81f5303e059a8b219650ceb1034d18bb0f"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-4",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 4,
+    "title": "5 formas de responder una duda repetida",
+    "folder": "queue/sp/2026-11-05/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "29d55aeda48d61c9400c19958d26177112d9df828c61a63e6522376e52936476",
+      "slide-02.jpg": "7e970da6d92eb7ae3275865b4d6fb26ee87baaf2ccb6b42f390a65a8b95b3d6b",
+      "slide-01.jpg": "2149e9e616730186455552ecd3b91dbc7b126a5ed083de02d0d49fc7e83f8ab7",
+      "slide-05.jpg": "12014a99f78644ae96b6402663643a970fbe64a9827ed272830dce99deb0eab6",
+      "slide-04.jpg": "35871907e426863272272fcd666fd85a639591fc1a821c3dc39782892c14de77",
+      "slide-06.jpg": "fb39d18ca0250feecb00e9768612ce27ef2e4e3d52eaf25a1f917d9152b7abb1",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "38bd1f6c705ab4dfa8475b49a8a1b56337ef1d4685f159a356360c1fb438ac16"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-5",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 5,
+    "title": "5 detalles para recibir a un grupo en tu restaurante",
+    "folder": "queue/sp/2026-11-05/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "f79a5d2f43cf7240d213b255757ef21a4045da328d853bcf41f4841e9972d1b2",
+      "slide-02.jpg": "c8de4b1b51fd47c0e4eec8e9fc1444a58f9d9d4c7818dbcdce7e2ffdd02721b4",
+      "slide-01.jpg": "0b5f191e4c8d3c245a806a94ad8b67e20e4f4a86b153b51cbc9aed350de8e101",
+      "slide-05.jpg": "5a789775c0833263bfcbe81527c5c6a249f433b4d5fd90efb4acdb5ab07bdde5",
+      "slide-04.jpg": "405e053f5571e34cc1bad6f3cbce8a63b41bf0b8dd1e1a745ab90e1f6c853e18",
+      "slide-06.jpg": "9f699c03523f3d41b580a42e1e2d7f2f8ef313084fc58d90369ca828aaf2ba90",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "6c947d66eff4fe53a040a78d88787d9005ec5cab7691b4233f1b2f04cd1de6ff"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-6",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 6,
+    "title": "5 cosas antes de publicar una foto de tu negocio",
+    "folder": "queue/sp/2026-11-05/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "79e5d6a6d24d442687827c0c18d85c78ec856c418c3bfa6cb3b5ff15c549304a",
+      "slide-02.jpg": "b90962d60ac12152c5afda46fd732fd2ae99d8850e151142e53aee536197475b",
+      "slide-01.jpg": "2857763eeafcc13ded99300ad37fdd47019d73fd907421cdca3981ac8ec63e55",
+      "slide-05.jpg": "f38f5746c6aa397adae2f827ef7fa8ee4d777b028d38f76b55c0c5920b9f6fad",
+      "slide-04.jpg": "6564654a6058c46b8535d240850e5ae113d51e738b68df615ccd1bd5881d02f6",
+      "slide-06.jpg": "a79587e8a90097a61ea88e4920ba99abd58d81e7b45a7ba5471524a2226b9c75",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "88e1d8bbd35868381cea69767737c9bb8372f507a13b731512e7aa604be66a5b"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-7",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 7,
+    "title": "5 detalles para organizar las consultas de tu salón",
+    "folder": "queue/sp/2026-11-05/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "2080ee1c49fb89be0d4afe12a2a732f87eb490f7ccf47b00406276cd9b03d91f",
+      "slide-02.jpg": "47bc8cb9bc40459c509a5f112f16857d02c1ace129cd6cfa4174a2fa92a1a7e9",
+      "slide-01.jpg": "abd1d69f4ae55939a126c7b6b94dc0b12ed8f4ac9c8002f5cf8b6a9a088018e6",
+      "slide-05.jpg": "42fa9bb20db086058c3c1856c10883811cb6170f89ace38d7e7ecde45acc8d5d",
+      "slide-04.jpg": "6ef7beef4e56b250cdf1b67e344290656980ee237ba7b2f501870eeb4911206d",
+      "slide-06.jpg": "2d2c46b4c5cdf61c5b1a669a091322265d76ecc8a17af8174ea22d6ce4ad7864",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "525e27d91c44a1e0ff34dc46080dfe4cabbb983c373bfa7833a2b2fa3de6c63a"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sp-2026-11-05-8",
+    "brand": "sp",
+    "date": "2026-11-05",
+    "slot": 8,
+    "title": "5 preguntas para cerrar una prueba comercial",
+    "folder": "queue/sp/2026-11-05/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "34637f5cb1a3f53ff3400b8a4b760aeaae2cc4f9e9eeb8193fd677b619253610",
+      "slide-02.jpg": "b93585318814619752f4105561bec07c7f340a78d22345c5dfed17efcc537f63",
+      "slide-01.jpg": "b175b8c88790fc52a866886c673679ea4719010373296bf84d530d90d937be19",
+      "slide-05.jpg": "8144037e82a1f2f45339fa71f0633241a7f1c5be91a6d5d347d9945308c9d710",
+      "slide-04.jpg": "2724cf860d2bcc180766405a7b8ce079378c482d94fd44d94d8bbde17be23fea",
+      "slide-06.jpg": "73af53b0eb2733aff0b579b7afd3e4a10d4dac18dfc760c55dc51640846cd5e3",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "bdf844d1aaba6041be6a93aaecce197ccfe5bae7ee5bf3863841c10646bb1b1f"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
   },
   {
     "id": "sin-2026-11-03-1",
     "brand": "sin",
     "date": "2026-11-03",
     "slot": 1,
+    "title": "5 checks before you send a funding application",
     "folder": "queue/sin/2026-11-03/carousel-1",
     "sha256": {
       "slide-03.jpg": "05c96451476e8310fac135f98d267354f35ef87e8cac8a347c4af63c63fc9acd",
@@ -31,26 +470,961 @@
       "slide-04.jpg": "95165d8bb69b95ab1cd167063a2d3f47320232033bf92279a8a91c727bc1bf43",
       "slide-06.jpg": "144a1fc0d0533b5c03bb28ac32b9f125a2c1859aba9aa03c1fc74f378e4fe352",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
-      "carousel.json": "182d90ff59cd706cedbc725dbb392a3fb01cefae1532853ad524574174ef3773"
+      "carousel.json": "cc77c3928afed66c242161d348ccc912d1d778ab5c1a612caceac8e6dcd14842"
     },
-    "qa": "All seven slides visually inspected on 2 November 2026"
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-2",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 2,
+    "title": "5 questions before you build a funding shortlist",
+    "folder": "queue/sin/2026-11-03/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "e1fedaf82a35cb95103aff5f2d9e2859c08ceee81ad29abf1b5e999b84de3692",
+      "slide-02.jpg": "2e0a4a188053a5aefda70e41b296d32c116a0baa36c631f9fc809901d488f0c3",
+      "slide-01.jpg": "551ac50afefd2ec18c7f74cb48081666037f75115218064279b9b63e9d2a7664",
+      "slide-05.jpg": "86a4205fcf45d6d4eb2591620d4ee06a2089b94ecce959204fe16725744547a7",
+      "slide-04.jpg": "e6b161e1d5c3845bd627768954cb9349aaeae1cdce855a3c102d5e6a8ae836d3",
+      "slide-06.jpg": "dff5f400778c759672ad340bf594ad13f196dc639610127e213c54f106923ea5",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "75783c0d02b5e0cecd6f5b7d2c9822c5b6fc1bb856e62f3b6bb3f1ecb9cf491c"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-3",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 3,
+    "title": "5 things to separate in your startup budget",
+    "folder": "queue/sin/2026-11-03/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "f40261d66f0e1397e162543f125879eac746c41c87ec0225e4bb560c22fd7549",
+      "slide-02.jpg": "b67cbf856969f629514081bf5e904d78072dfca1a235ad69fbdb9b00c8d28a08",
+      "slide-01.jpg": "90c6a5cab1a462c3fb89aeec940ca7bfb261a0fc7868c60f538b92620579a696",
+      "slide-05.jpg": "a7ccbf01c71dbae3d9cfe4b06d67a066cae0caf79d7abe2707fc1fd5254d4877",
+      "slide-04.jpg": "1ee3d5a418a8cab57241455ba9948ecbd3a5133595a273e1154de0d0ae0bf4e5",
+      "slide-06.jpg": "a97115dc41bbb7a90decacf279b94a65edd1960a396019e2492e7c84f1f33668",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "4807ea83f722c030d0711c3bcf9bf8138b8008656dde7e0f9eecec7bd128b277"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-4",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 4,
+    "title": "5 checks for a useful funding deadline calendar",
+    "folder": "queue/sin/2026-11-03/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "b42df6664cc20282b73588c4a8cae68288e71a065a3bb92084603726b7424934",
+      "slide-02.jpg": "16cd2729a41d9d75a44a3b786cd3549013c873c4f63b22466505529ccd369534",
+      "slide-01.jpg": "a15db4984f4a8b562d45ae249d48a43992f92a08bae5f864c3695cec025263c5",
+      "slide-05.jpg": "f1d03749e0a08b5f34a6ba89bdc3ca70f982536e624429604a8225882d970a0e",
+      "slide-04.jpg": "08565a408cf7f2c38c70c32a7db9ac1ea443c2c7e35071d7f12af78c8c6a660d",
+      "slide-06.jpg": "3846ccda53648aa4b147bc235bc4cd8949b28df561d11ea728e9b7ab3c88957e",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "e3adc131ee2a99c59f27142da0e2070f00624eb4f4f902def594e096013f79bc"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-5",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 5,
+    "title": "5 questions before you book an investor meeting",
+    "folder": "queue/sin/2026-11-03/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "14a1b20b2a314d86c0da886ee7b7da1bd54b275304cef6c44bb27f30746848f6",
+      "slide-02.jpg": "5b695f25dd0cca6cd539b23dbf0fbceb9c29feb8846dcda44a521b6761265a4e",
+      "slide-01.jpg": "881ab0c76b7402bee1fd657a343bc3f200b1a0e0b9c0b76ae6303b7c25a84f72",
+      "slide-05.jpg": "17c62055337940b54b3d9bc1e6507ba2d7c8a1e7146bf3bbccc9b33d53c1d334",
+      "slide-04.jpg": "ec38801e2b09b34501cd586b3835ed9d12fbbf32c665b9ef57e4a2532d7dc867",
+      "slide-06.jpg": "61905454e56a03bc0598a23ea4652c75e9372c6328b0840c5d5bb640f4686a85",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "8e9b993fe9be092a6f4603bbb2197afee3e3b14e3938a04f9fdd6adf54f7e0b9"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-6",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 6,
+    "title": "5 documents worth keeping in one funding folder",
+    "folder": "queue/sin/2026-11-03/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "79438cf5b26acecdd3495098543c91dc8349af862089f0de3ed8db378e6a10d5",
+      "slide-02.jpg": "e9b31416e4a1c4573f7fd50e20d783a362a2c93a17123eca64477e69308daa92",
+      "slide-01.jpg": "6a87ed274c82464c4a01e61efec2756a0ead0e0881fc1f707e4426fe115617bd",
+      "slide-05.jpg": "7b73f253bd0ee963d8eecee160f74d49a0411a36f76d20f7745e2cc7aeb48cfd",
+      "slide-04.jpg": "3779176d8d98b745b158fd38ad7da147621768f32d548b3e023c8505041d0626",
+      "slide-06.jpg": "1daf509d44e55b6829449838c8aee496250493e7b45bdf6f8502e9b2be7ee26b",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "b774ee13792caa6958fc71e6b3dd588eb6792643ca79d198091c639f28446d66"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-7",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 7,
+    "title": "5 distinctions that make a forecast easier to read",
+    "folder": "queue/sin/2026-11-03/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "6e89cdd4d2f615a102201f5d1db5278cce7a20b62e83c1e3725e3e5281d157ed",
+      "slide-02.jpg": "279c58354c9d75db3652b264e80e5de98262f02275c5bedd981f46e61c32735f",
+      "slide-01.jpg": "0267de200fced71ef84363a12c0351f03e6051876b1b372a68822356a5446511",
+      "slide-05.jpg": "435d334de1feb38a21226435317e2ad46d425f993dedf105d857635b799cdaa8",
+      "slide-04.jpg": "533ab484b65db1b5b271cf9b2b24d78928b9b2e84acd7e8d0769ad450e9d5ee7",
+      "slide-06.jpg": "793cfcc8cc5d2b893c8d313d615b5b8293050dab3cc23edc56550f461d5f1faa",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "a94d69fbb0bcfc762d67b06f973c4a6bb8a3e3a73b97ef93c4891f6f1d3f91a7"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-03-8",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 8,
+    "title": "5 questions before describing your traction",
+    "folder": "queue/sin/2026-11-03/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "1e169caaafe2fa594744a1bf2e5a857d55f573056e2c0a570573093ec8713734",
+      "slide-02.jpg": "3f965bb60978992ba8277ca7ecffe0a1bccf920a41fd1bf53a2573ffb104773a",
+      "slide-01.jpg": "0db5691aa24820ae071e12652794452f3507dba9e48a684945e09c1a70cdfe4f",
+      "slide-05.jpg": "46af72c6ab970f71480360e9026ba5377f53348a5e8bba3413dcb6ed7236c516",
+      "slide-04.jpg": "bfec64b96388086adacec344415e0dc32824d0aa645dab303b865a4c059f2763",
+      "slide-06.jpg": "2246e7ae2df60da2fdb78e5de58b792761779807f58bec4313b63c4110e1d8a3",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "4686788da56f814b2941d4d3214bad9767a1e415957e417b003fcbfaf3fe7955"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-1",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 1,
+    "title": "5 checks before adding a grant to your plan",
+    "folder": "queue/sin/2026-11-04/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "16511c553122a8637faa4b9ab0efda19d403fd4df729e78ac3ace8da9763f978",
+      "slide-02.jpg": "7db5258ee27eed1c4e680fc49320a8472c3ae9629e33c59593ff3a3090fd8a50",
+      "slide-01.jpg": "2775ee3cfdac8d1fcf8daf7162257486b4772e02b74516b0e3d8c387b7004cb9",
+      "slide-05.jpg": "df2b6e7f36a743841f1a7ec47ebfb84dba59b142b235fa7eba3369ee1edd0d32",
+      "slide-04.jpg": "ad9834516e015214cc1e5ab4fcf4b1283092c25e3c0d8ba0fba59b4e5f9e59a4",
+      "slide-06.jpg": "337ba797350e54a6d679057f743a57f1bd0a9e4dc38a08f77a58aa2b219d6162",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "81233635516f058f8d6b7ce6c3dbe9d06d249cbe057dfe7d9933249c11073c25"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-2",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 2,
+    "title": "5 questions to clarify your next business milestone",
+    "folder": "queue/sin/2026-11-04/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "ac670f64a302b4bad533c873d67e3dd8134e71523040328143c32a5db025b263",
+      "slide-02.jpg": "4f8d99386fb7f4066b1f3aa808d8f59b4e8db4e946053c06f731d5aaa5c8ca98",
+      "slide-01.jpg": "3985a9d58e20c86d0c51992918e5a2a5fb480279cca9bd4ce002de267beb9b14",
+      "slide-05.jpg": "7b6c8696a3a4bb3e4a9661e20ca9ea784747419e9ec4516a45d337488be60586",
+      "slide-04.jpg": "83b9d3c55390c9a091787f694b8de5c63c758304c5607ca3f9394307b6fdec12",
+      "slide-06.jpg": "4b1c8d0f6d03548113c0a09600462b24596a53741f5e80814d5f9ed6f05ddd32",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "016067d44e56c18a5fb0e2cbdc0606ec4135e29fe6252b2ac0d19e2a86d495f8"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-3",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 3,
+    "title": "5 things a founder can clarify before a finance call",
+    "folder": "queue/sin/2026-11-04/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "138833bcbd8e4ddaa09986c3c254df4c701a247d1efb5fe704e4cf3320cd014b",
+      "slide-02.jpg": "591b1654a1ca5f2f0ffc111207cc692e87baad5387634b5c1a7753e3d6e75ae1",
+      "slide-01.jpg": "b9193aebd59399ad6e22053752559a5c5833271312d37df2f0060f7384acdc79",
+      "slide-05.jpg": "c3e6e84c37a5482684bc8dca9059bbce71d9ca95ae5d557d7a326c55331b4c84",
+      "slide-04.jpg": "1b5710c5ec39b08749fca970633d9f4a76c29465dabba2650755aba6059a54c9",
+      "slide-06.jpg": "5576a39fcfe5fb5d6776267e73349a93d2e3321b4604cb14eb226aafeae5c03c",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "089dccf2c97a3044f93c5450283aa0e965943f341ab9ff63d0fcc80d3fbc64fc"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-4",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 4,
+    "title": "5 ways to make your application answers clearer",
+    "folder": "queue/sin/2026-11-04/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "216cc6195ea28ee9641dcb5d353c083c97c358f40c62e9f5c64f26855cbc515b",
+      "slide-02.jpg": "8f619631244b50c2d7bb5af29c4d21ee9412c61e0849116454dca13f4409ea51",
+      "slide-01.jpg": "b575fad254db66ccf27590183b5a5be184528ac88f560b41f020a8b6a861ab24",
+      "slide-05.jpg": "b3b6e2f60a2c941a4b84cb7e38b2c6a5061f4ab75c32b5ddbf6ec580c3f60900",
+      "slide-04.jpg": "bb6eb8973c05bd3b28ff1ae6cf808776e9adf40033392e05a5a874fe9e111bf1",
+      "slide-06.jpg": "14afa00056b724f1e4cd3c43cf2fc659434e36975557a75b7685e1bb6754e3a5",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "c02ecd683d3b7b2c967503e0098d726687cbf531a26a3d2949a389f908fc2b46"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-5",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 5,
+    "title": "5 checks before sharing your financial model",
+    "folder": "queue/sin/2026-11-04/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "ae8709b1c19856fadba2a52a2018d8f4121c831bd95c84ca14e65abd5aa842ff",
+      "slide-02.jpg": "4baeea75bd32ecadd81bada475abd43b621195d9faf3b7c3786decd711ddf278",
+      "slide-01.jpg": "fc61291ce51e95af7f3711e88d80219869a49c23efe5cc816d6e39b6c17c8774",
+      "slide-05.jpg": "8c8b6a2e21a6f9304e4d9f4ebdcd2e75e4a700726c3f1367baf81776c5886221",
+      "slide-04.jpg": "3bada7dff6252dd0e6a2b5bcc132847d46e13b594fef046ca5127bb3550f7fbb",
+      "slide-06.jpg": "136357478490da3642486da4d8cac805a0ebaf0243f28696f9277eb4d5b06e3f",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "949e1d42348db102ca1bc3d945c28113aa7b570a5c55bf8aca786fe612ffdd9c"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-6",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 6,
+    "title": "5 questions before hiring for a funded project",
+    "folder": "queue/sin/2026-11-04/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "69d112c15874eb49f85b3036745fd4665fe528b6141fe4adc1c719d1134311b0",
+      "slide-02.jpg": "14eda0735610f6c9e764001f6d5dbe238f2b9e8b3069196481265373293fcdb2",
+      "slide-01.jpg": "da07df90a6ee06dabcb408ead80897b54c93cb6ef04a091aec43a2b42c499894",
+      "slide-05.jpg": "2b2a0e2a09df6dcdb7afe69a755f9394f6fd85d66de7be83af9edb73b57327b1",
+      "slide-04.jpg": "e9a618c17fdd084197a21d5c525ca1cc535f4aa44c02a2036982d92b760271d5",
+      "slide-06.jpg": "076f72ac54ee02eedba08dd9f27e57de1563f3de2bcbdbc0de0031508860c214",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "0b14e37c9ff77d7f442d9c4472e887ef48baa529bbb4eec8a1b0478072b3aa66"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-7",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 7,
+    "title": "5 things to include in a useful founder update",
+    "folder": "queue/sin/2026-11-04/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "66168c20f85099cad25ddb00fb95ac206edac53bffd666e23215b604cd5c2028",
+      "slide-02.jpg": "8424efb0712911faab3d4b8262a40aa6f9f788758667bd15d278bfd7362bbcba",
+      "slide-01.jpg": "653653f7e74d8731e424bcbb043fc5d6aa497d15884054d19890630a70fb8216",
+      "slide-05.jpg": "28023043d6cf6da55d5a38360609b89b8a2d6c5422b7f2e9139df6c609e234b3",
+      "slide-04.jpg": "cdef2e6a6ccc9511da9ce89afa3c6fb9865a66a12e32b882f575a3ee99acb8d8",
+      "slide-06.jpg": "93ad6e595cf84087d28eabc8fd73e6c811b6f4d8ea3813f38b849ebf28c50095",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "0ee0f2342a4b8022782df01f9d5e692ee16f9bdb1de122db25d479819ba5d283"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-04-8",
+    "brand": "sin",
+    "date": "2026-11-04",
+    "slot": 8,
+    "title": "5 checks for a funding presentation appendix",
+    "folder": "queue/sin/2026-11-04/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "b478c0ca8c6a3246f8a8cb7708c3ed1c61ac8f226e23f9ffe3e7ae3cb015d27c",
+      "slide-02.jpg": "4a0a5ee6d4b0ab57856079865d48dacf96830eab5ce5b4442d413fe8134d9dca",
+      "slide-01.jpg": "a258f9a50f42ab917e360093bcb84769b123e1e72c98c12ced4238bd25a64c9c",
+      "slide-05.jpg": "c6c5cae8aaaabcf6b946020586144290647f7f7f25e7b2ab295afb12fd30b780",
+      "slide-04.jpg": "30507140a7aae3313dd2d88ccdcbe1da51d06fa1cf976970dc2958d0d77cc902",
+      "slide-06.jpg": "fb4e7258d370b73ac693d56d156bc50877b7fcb9f2d8429257a8e207dc50424b",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "c3c21d04a68dc2247135a9489c73794a1da077ddd8efbc6c38dc2519e7f47952"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-1",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 1,
+    "title": "5 questions before joining an accelerator",
+    "folder": "queue/sin/2026-11-05/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "c5c136ba5c9a39a847d6a32182a9b5c485012b8fc95e537b80ed8cf262ed0aad",
+      "slide-02.jpg": "28894ae4b966d35ee56ebe51324d73c5722527e2ba388c4c1390c5c4e2adb7fa",
+      "slide-01.jpg": "03eb210d3eadef3796fb983e6637a20ecfe3fa169ee8151055e276014fc9bd0b",
+      "slide-05.jpg": "fc458ea84e39a3303a368646039e46add102e24f28ba3b56b33d0d09014ed3dc",
+      "slide-04.jpg": "ccf132af566460417fce1b3fa3696958a949b033bce5fe7d0dea473126922f81",
+      "slide-06.jpg": "6551062a595d18da5ae2d48a11850db32055650d612c9475d70e9bb8d84c024a",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "f125ec20217af3e1e375426c120e640a1fb0baa9f2e99cd67e86c5a961158e03"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-2",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 2,
+    "title": "5 things to check when a funding email arrives",
+    "folder": "queue/sin/2026-11-05/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "1c6753590dcfc07f47faca1b1dc209fd136cd2c17b0e9bb3d165ce9d40101ae0",
+      "slide-02.jpg": "cfc7dff71ae82b0035d0d7dbea2071764fbf9fce2a492494d4f8fe9fe054995d",
+      "slide-01.jpg": "d96ef46973a250705f31c6d02078f243d92fb9c0593f124ffac2b4883f1ca749",
+      "slide-05.jpg": "2bb1e2b06614d38880ca58ba6acc4209ce43d1b87cda203f632d340e5fccd330",
+      "slide-04.jpg": "57e95a9788705cb1b478b93e8439b5843a24f576dbcc4af0a3275b16fa2ff488",
+      "slide-06.jpg": "569310268885f4fa6752ea759715645c534e8f5ed9efea7ba695d3f9f1c3d5ac",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "99baeac08f0cb994366c5c88d5f4d97b74a7c91d475e0a0d7f6cef9bdd16c209"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-3",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 3,
+    "title": "5 questions before you promise a launch date",
+    "folder": "queue/sin/2026-11-05/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "551fc60eff8235732218ec0eeb1e34941ce6cf1d327aa9213a0b9e4ad406aa0b",
+      "slide-02.jpg": "a59c7d222ee2c3dab84c45e7f987ee985349994ff5177ccbea1d398c4ecc1aa1",
+      "slide-01.jpg": "022dad332954e07c4d53d5e72d255edb059f62f37c55155ec15ad9315c3b4fe6",
+      "slide-05.jpg": "ab1ff24b33b81c2f0708db9a33a121c8eac2a5399ac602a491ddd60c28fba115",
+      "slide-04.jpg": "e1a130090d09f102a7c9142ff1a2fa4bbe48652acdc97b00354c234851d3474f",
+      "slide-06.jpg": "62b6042b77be1be4d55bf12680b99a547bb19dc3a0728a0d9b275f2e8876ae57",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "6279c21e178d9637879f4bcc171b36e910abc47c942c3b47c4a527c707be487f"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-4",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 4,
+    "title": "5 checks before reporting a project expense",
+    "folder": "queue/sin/2026-11-05/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "e1bc8fc7f6999bc336c34a6182419219e599ba9674d8dfd765aa98472cc1fe97",
+      "slide-02.jpg": "b50f1b25d41d48e3eca538f12f4d1b01039cbf4dc0f97e4aec35f84a26f60b67",
+      "slide-01.jpg": "803f26ad137276b2a8e526a66b9cbe8de6aef5d040d897ca7c062ab76a138999",
+      "slide-05.jpg": "e636fbdbea3f994d249ec5162ed02f80f7a227e56865c60de10634459c3e7bcb",
+      "slide-04.jpg": "1fa0129c45934ce33c30827dfccc4272e1fe0feb009550bf570df3cd82f7921f",
+      "slide-06.jpg": "1d665b434d5bcf5fddbae3708ef17e7989d89a603e41f33ab4fb3c78d0f47591",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "82b875ec2c39dc7d88c16b9a8a5cb1363cdd46fdea375900855f4bc22d321817"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-5",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 5,
+    "title": "5 questions before calling something recurring revenue",
+    "folder": "queue/sin/2026-11-05/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "02e2a0c6e0a3d8c8a41318113722ea469227630ca69063e8d20df9c75154df6c",
+      "slide-02.jpg": "baa0cd6b3e028c8dc4796ad4004e04cacc25dffde6011e0c074823c09f29d679",
+      "slide-01.jpg": "2a06b3949b554286a07f1d74e4101e919d338f700da3d35c1c53abfcc9f9f943",
+      "slide-05.jpg": "6bea78770c81cc0338807bc8db88c3de13006a75c9b8780d62fee6e0cd0e45e7",
+      "slide-04.jpg": "abe1c38e0b486ad80face625445ea1c2b0d28056a230ddfe32f3a65f80d7fb66",
+      "slide-06.jpg": "b2e61ef14d03a44503a62b9ce94b8093acd18812bd1b0308e13ea92c712b661a",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "c4822ec787b0f4a5229c52f2d48ee7b620e9487572d7e484d3387d80e740182c"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-6",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 6,
+    "title": "5 things to agree before sharing a funding task",
+    "folder": "queue/sin/2026-11-05/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "0c1488ef278f3a70a3c1d7492ac7617054f1fac16a367c53fe695b7ea6b251f6",
+      "slide-02.jpg": "98b30fbb2edfe0dff034e8369bafe9964068619f7a4c3a2c8327c21509d26043",
+      "slide-01.jpg": "b2888c64f102eb746fd55f77c93c49bed207d50df88d1919b45441700b7d92e6",
+      "slide-05.jpg": "b53881680216efcf49c462fefb7e297cc5b2c5f686e2b6fcd82e5a9e386c8f48",
+      "slide-04.jpg": "7ae3221110d6f66fe4a98beaca112150e5b9b5d8d467522dba6870d38af3ea28",
+      "slide-06.jpg": "2aa19328d0df826a8b1508c36cde4c72641bb7c71e0f6d746155c92ffe06ad78",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "057b1acdc8958740e1d10c78696ca40356c1dd8aece28a2f5d7a73296f3981f8"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-7",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 7,
+    "title": "5 checks before comparing two funding options",
+    "folder": "queue/sin/2026-11-05/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "6cc4bb649bf1067bf9b8cbeb39785a0b2beac420bd106cbdb1c57c6cf543a994",
+      "slide-02.jpg": "619aafded550e75b00f3a0c71308a4e29e9be1b5677b360bfa9fd8004b7734e9",
+      "slide-01.jpg": "92f85475dcf74903efa22cbaab62ffcd84fb148ba870143fc43404f50ae16a0b",
+      "slide-05.jpg": "e6be3514ae7ff08cfa0eb978ad0fcc0e1db03cb4fd6ef8311f04ff785dc71646",
+      "slide-04.jpg": "a59b56e3d60234c988c33583f1ac9b0f64f96b036ce75cfa52805892c4604f7f",
+      "slide-06.jpg": "58ce3ac03df18bd7a2831e42b384468c2c0c2503ccc7b1732fd1baaaa233c4d6",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "ec96f2ebefc1dde75a6390c9e0c4bfbc0ea2457f3423d53e521dbba3e797e7a4"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+  },
+  {
+    "id": "sin-2026-11-05-8",
+    "brand": "sin",
+    "date": "2026-11-05",
+    "slot": 8,
+    "title": "5 questions for your next planning review",
+    "folder": "queue/sin/2026-11-05/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "644336ce32e52dd10caa60655732da7d3c6a63c750e9f41e1e4069f802dc155d",
+      "slide-02.jpg": "bdd722479720a2d6be3742869465c812d4757a6f208d270cc6ac79044be37149",
+      "slide-01.jpg": "525d2cad9afa04cecac4897053bca55166853d0cf433381bd7a1893e664ceb37",
+      "slide-05.jpg": "6d07dfb19aac86225ee084a53ceb7356d5c3f3fc4eea1382e2b906f5d09d9476",
+      "slide-04.jpg": "0417ad4826f5622272e96f2fad219dce758c8407e0e6c8ace3e730b3cf3498ef",
+      "slide-06.jpg": "afad506c78e8a7c9f668c0c993e9b1b41f6c420a061d2d1df9d9f853f2092800",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "05b4b516d51f966c3e07032f37ac358c168ececc6e1c4d9d5b0aa4ae38dada40"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
   },
   {
     "id": "gms-2026-11-03-1",
     "brand": "gms",
     "date": "2026-11-03",
     "slot": 1,
+    "title": "5 kind messages for your next coffee catch-up",
     "folder": "queue/gms/2026-11-03/carousel-1",
     "sha256": {
-      "slide-03.jpg": "2e225947a0853531a99b2ce58191aedfa82796669f178b7766e3114e3b93d5be",
-      "slide-02.jpg": "e6696c1d3137ec27c8a6094a72fd89619ff8c81d363d4cc0bcecbcbbf324d1fa",
+      "slide-03.jpg": "58928850ca70b8020cdf39d2917b04fc7a166f09e845c09507a793078e20326a",
+      "slide-02.jpg": "b8f37c76f75a536bc7665e3246f849911786d7c1df8fb6b525275716b0f7f847",
       "slide-01.jpg": "6de485b6f89d161b4a76401343bd88ec66437a69c79f9861b36220be02ad197c",
-      "slide-05.jpg": "d7a695b4af0169048b28bc769532ea3c6734f56d533bd47fc75156c88e9ae1a5",
-      "slide-04.jpg": "ce966c29953ae108d8eaeefecd1572a2d46ea23b53a724dab36fa3efa052e3b7",
-      "slide-06.jpg": "a3a016e42e4784c289a4bbb4d51296aee3aedc7436e38a474e303201b72ae375",
+      "slide-05.jpg": "477ed0e38713439dac9f0268605727503ff6795db29e5b5819a245813ea0f733",
+      "slide-04.jpg": "f2a5c3dc486d04cc758f7362391938f8646317b33b320226c7d7b8b14037f592",
+      "slide-06.jpg": "01760cc8c65bd0e7cae2beee6082e86722375179cde9986a2a46975e110ec012",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "302068ab27616d1a4bcae3f889a05f3b5b2e3410e27215f4f85e2df72d7a72d2"
+      "carousel.json": "a13b9170c35d05888d84c8c05639b90afd00cb1e49c1750faa6940fba1552b1c"
     },
-    "qa": "All seven slides visually inspected on 2 November 2026"
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "kind": "reel",
+    "reel_sha256": {
+      "reel.mp4": "fbc2b5852e1cc1c45d2957b2a781f6268bce1c225e1cf81e3f16fc7fb9ddfb75",
+      "reel.json": "904960ac64096bdc85209af33dacde88b2bdf8be2f41700388d4a239452a69b0"
+    },
+    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+  },
+  {
+    "id": "gms-2026-11-03-2",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 2,
+    "title": "5 kind lines for a busy Tuesday",
+    "folder": "queue/gms/2026-11-03/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "3a5e6f40191555ce8893d840f5456dc1c53693e7b209fbed7f5a5a5ae70407d8",
+      "slide-02.jpg": "6319fe5602b9049e0dc31c836a2df4cf04df1ae639b11bebf14f08e457d711de",
+      "slide-01.jpg": "1affd6b565e4419d41df2779b348b161a1fe2af328f3c0120cf6a49c8439a9ab",
+      "slide-05.jpg": "913e9b12e195b73fa27d05f36b6675f82aa76d03ecb040c46af4093f0b144f42",
+      "slide-04.jpg": "5fb77e94cff95e9deed91c08762787ca6b2383531261054a31d99f9a5705aec7",
+      "slide-06.jpg": "09fd85be16f7d1a31f702c2da3b9dfa631a6367e8688a4bd352041e12a3812e9",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "1b46cd16014fe93ddf7863dda682073c629070044b49b7a5c3a22dfce5b58771",
+      "tiktok.mp4": "f883bee7e38f486ce1b3567764430934c6267a14eff8cd93607f7f90daebcda0"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-3",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 3,
+    "title": "5 ways to make a small gift feel personal",
+    "folder": "queue/gms/2026-11-03/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "ef5438f3a477a201eabba6dd61d11a33981e7fe831d7ec59d547f97abf29ed81",
+      "slide-02.jpg": "15b1b106ba6345ff99f18d2df7986a96db3268bbe01ef4346d956cdae79899e5",
+      "slide-01.jpg": "ead4fada6d5cf0181e2565713ef375edc6932374112369c4819c2760c28d16a4",
+      "slide-05.jpg": "04342cf3671d506ddc10a1a9c0f20f88efa0b80f1b839e4eec7dc08577484bef",
+      "slide-04.jpg": "340b3b6ff5675532cdc2b11f2adc2d6625e4543e2c3918ec71ade7b32f131338",
+      "slide-06.jpg": "853899226fa2c20a978ad2760da0fd395b98b46d60172c2af5754fb5f3a13428",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "238edea19a9ae6314bd690b3a9d3fce80e5f078bfbef7e571eb2c5c76e3a8e62",
+      "tiktok.mp4": "6c9e54db5ca8bb39732c94d67e28fbb4275bd2115071cd806a77c63758cd3a3a"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-4",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 4,
+    "title": "5 reminders for your journey home",
+    "folder": "queue/gms/2026-11-03/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "c3ad75cfe48ebb2e9ae327a5a37a7c007090dcaeb2accc1ea610bffef1ed638f",
+      "slide-02.jpg": "16784f1c4de493afe9962bbefbe9ead7189629a2f1093db436da1ccb5cb6e042",
+      "slide-01.jpg": "0565b26266515ccbc5d879d996bc06b96ddb6380d1c6db0af68dda80cab14939",
+      "slide-05.jpg": "169f1823cc9353d9774ff0e392b709f70fab607ba3447416660b629e21d1ddea",
+      "slide-04.jpg": "d9847f86aff4f6593bb98d21359ed865924f766fba199901144216ec19af0c5c",
+      "slide-06.jpg": "758f8d6ac49c14e928b5eb10302e47da0c1f3b7460e934e7fbe8fc1b356857ea",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "36f3045bb25fca9999bbfe221cd40a0cd685c44a342b92de0eb179cdcc7c8fef",
+      "tiktok.mp4": "cfbe2b7d48ea010806edcbdea462f86b16db49f7216580efd8b4d024dcc12026"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-5",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 5,
+    "title": "5 quiet ways to say I appreciate you",
+    "folder": "queue/gms/2026-11-03/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "6d06f7c62c8db315c6c364769d524daf3a53efc5834f28d27dcb109c619b2f4d",
+      "slide-02.jpg": "052a89c283a41fc58bbab74b44e9a05fe4214958e3d873954f2d58ec851c44fb",
+      "slide-01.jpg": "c14385443f358f915c78e04d94f7a5a6673fcb554e507f8b34cd5c5698658424",
+      "slide-05.jpg": "591d1da69e2770749b50ce5f151ce57f9e3889c1b77df6d9b58b1726907781f6",
+      "slide-04.jpg": "62704ec45cea6307e7169320a4de9743022d25866a10fc254769db71cddc8e1f",
+      "slide-06.jpg": "64ffec14762c1d4b7f2966e8ba2fb6110e3c99d3bbed7983b4749b2927bf6381",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "50b9fb5bf50b0b0cd9950da1af3dfcf8edfe64f15c100d39003c124c7b24778d",
+      "tiktok.mp4": "935b9c0c1a4500ce3f22b5f53abcf2d79afa5c8b4bbff3955b2c979ad11e3db0"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-6",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 6,
+    "title": "5 messages for the friend starting something new",
+    "folder": "queue/gms/2026-11-03/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "3cf8d86c2986a45b3e32618997f614c6e6d734b97ac4376840d9cb0e0b41b0f8",
+      "slide-02.jpg": "d489859b11b1dea655ce3fa95999cd28f871c50d0a609c3da7332d1bf99ff5af",
+      "slide-01.jpg": "fc3ebbe833fcf8e39b4e96712169df095e02e9aa9f7dd139ea2eafe202c95afd",
+      "slide-05.jpg": "2a8df4bfe7251ff9f4c6dc8a394f8da9df5f5a3115ef6792189514cb193ff6f2",
+      "slide-04.jpg": "156b2e6c22ff9a35f8f1dbcc25ea3f8c2b41daff9414394d1a784e54229b64ba",
+      "slide-06.jpg": "b77167c0c6724ecf995e9d9ae263f052631ed85ee2c56bf62887c51b7312d175",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "7dd557bd3ea24f9ed5c3b68dc05847dcf9cf382304345ab5ea29ed7625d6c259",
+      "tiktok.mp4": "913e58b1d69d4ff2d2386276758984c727dea3e2ea1aea7b39bf15ea0e2ca5dd"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-7",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 7,
+    "title": "5 things a kind note does not need",
+    "folder": "queue/gms/2026-11-03/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "3776460c19e9c93a1a108db784711eb774a297503cafedbb0efe497f22ab823e",
+      "slide-02.jpg": "562550bbf8131fb2076391502e07e29edc5ae12b9a7af7c3bba513242650e423",
+      "slide-01.jpg": "bd82a630b84f187afec2696e195c871437e09601821a2ce706a0b7f7f613139d",
+      "slide-05.jpg": "769bfa3980cca0458880e3366e69aff350e827e96e7c33c21ed186ed019a4584",
+      "slide-04.jpg": "d6795333477aa91f8b2810f1e073d0ff5b795c66ac2f9f0764eed03c05e6fbdf",
+      "slide-06.jpg": "0d00eab8021c71b37e9702bbdabdb390012a0e4f5c7e2cf87a55d24a23bce920",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "bf30a652ffa79930d5ac63ecd2d5050ee3d6eaf50a3ef133f2d0e3573f00d633",
+      "tiktok.mp4": "bf12b6bce02892b08c0caef2f4c327df32c2dacf7592a097017bdadf1bd09bfa"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-03-8",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 8,
+    "title": "5 lines for a softer evening",
+    "folder": "queue/gms/2026-11-03/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "3629a7becd4f78d680beea4e6b37373f91c4498959ac745a11fb6f77e92ea56a",
+      "slide-02.jpg": "c8fb2ba63026b7df306bdfdb909947905be63ea5da9f8d20d6ab8875bae69f88",
+      "slide-01.jpg": "f0cb4acad767e1eaf118bb478cc5b2a160e7340fbd04512a81a3a9e7c630ba05",
+      "slide-05.jpg": "5a6515632990125c25a7453f954d617410b9995a727f13f7b909381358363843",
+      "slide-04.jpg": "aeba395ce9df56284a737d0645b68e0657009e61d8fc618cb66e300c737a4f1d",
+      "slide-06.jpg": "b6b42f3cb5964b554b0fafa669118ef9d6a19c3df83b8a5c9580d0a9bae4d0c2",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "464d7eb64beb20ae8dd67b22b1f1e2554800934891c7b951b88ff2b4cf08f091",
+      "tiktok.mp4": "90c7c452ed6b8ea8b34e537fd767b1f587928afe0566f7b7532279856d961f7f"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-1",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 1,
+    "title": "5 ways to choose words for a message hoodie",
+    "folder": "queue/gms/2026-11-04/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "9bed0fabebad394a129a05dddc2a9b2251cbbb8556cd252cd3ad1f0d01f79002",
+      "slide-02.jpg": "0ac435f729424845c87c3f2ad0cbe2ca66b69d3bd1ffb02adcdc0b5d334be808",
+      "slide-01.jpg": "78dcf081b7eccc3bf28044e164047891129b1ca19ad8bdb4c799292ad6317bc4",
+      "slide-05.jpg": "4a6ace01237c8cc47527409e2bc0250136d3f84e32637661602e54e600807eef",
+      "slide-04.jpg": "1fafb5785d1b5870cb638c198d58c9baaf2290deab439a91734e94ee61f24e39",
+      "slide-06.jpg": "dc110584641418e06ddc3c45d90a89f3239b4a3b48b758cad5c3a8c66e2564f4",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "c66d22da2a561a8b46ca18623642d0c7873f0a8b7344c28f3362443f766a4d35"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "kind": "reel",
+    "reel_sha256": {
+      "reel.mp4": "93f3cfd51dc8a78bd90d07f30a2dfac559b5d073387208d61a3d111011cf4976",
+      "reel.json": "02d2045ee9e6b61c4a161caf7e6fe66f8b9bcacdad253cbbef6a8180f78b04df"
+    },
+    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+  },
+  {
+    "id": "gms-2026-11-04-2",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 2,
+    "title": "5 kind things to say after a long day",
+    "folder": "queue/gms/2026-11-04/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "625156e715c3359924f230e4b45312a88f1ccc5720320b1b49b6478512388fde",
+      "slide-02.jpg": "4f3e6ceeaa1f87d1b8f5091a14c5a519501f53a2f5ff9c0307304b2d3b652943",
+      "slide-01.jpg": "294a500495fdf7702e892d8fd4643330d6dda2abdd80e42ec71ed0c29a0db660",
+      "slide-05.jpg": "a4bef7a8d543c31d5e5319d1001e8941e44566fbe67235fe84ebf97b0d73bda2",
+      "slide-04.jpg": "3e6a9c59609e2d2591e7b92e3967c3030bc320657dc2ed0a488cba3d3c749f2d",
+      "slide-06.jpg": "7138d721f678a990f565741fbb05c19d745e1a8a9fa6f88d1898202236af416b",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "b7894aa297302543eb512ab2b440b27ddf95319ff18b9a2b41b43e68389c0a04",
+      "tiktok.mp4": "e8500080e4f64f1d5011eb46ccf349ff9e5efe05dfcdf7806385f62e50d56be7"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-3",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 3,
+    "title": "5 small details for a thoughtful gift note",
+    "folder": "queue/gms/2026-11-04/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "04ec3fa1ca605cda2b9cd2218ecfd9f329767669fb27c5a5b50b1f3dac4f5bbb",
+      "slide-02.jpg": "0773639b7e98c55c14932c472ebc67a5ab7ce380a30933b69d07e54b0bcec2a2",
+      "slide-01.jpg": "ea863d2d8d1bbbbb98139650c3873c0fa7d682cb733df9e5d50a3d9cd273ba92",
+      "slide-05.jpg": "dfa6caec4dcd0e83bca5e1d8f34fb58c3ebc2a29f44fbf6e337e598bd049f207",
+      "slide-04.jpg": "c5c46843a11aa32fcbeeac68b198721f978ec2a487313b695cc18815a49e5e1a",
+      "slide-06.jpg": "6d8fbc069286cf8ac499f1209ed217323796b939babeaec4ef433bab647d2111",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "22e6f0d5b86ca051fdd90692e5bd1cfd872de4403628ab4d1020e8c04b2cb210",
+      "tiktok.mp4": "e3a9cd4af0cb0db3e0efa1248fceda594d17d85a662afc47aba0cc08ad2d5ddb"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-4",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 4,
+    "title": "5 everyday moments worth a thank you",
+    "folder": "queue/gms/2026-11-04/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "d036e4a30cd197eb1c983917de80c094f2630511ab39cb3f7255564c20cb30c4",
+      "slide-02.jpg": "7ff089ba99e827165306ed0c97b2113fd7add2a31ea22c9c3a764a17706f7d4b",
+      "slide-01.jpg": "2d9b521595fe10ea7e09c2601d280bfb84c6796a252fa7477244de483f25f525",
+      "slide-05.jpg": "c7b8e9ae589d571d299229325021b37cad3f5b3bc100cb57e43e3a0be1aee43d",
+      "slide-04.jpg": "c7824edfb0e0206fca85635129f38db1dbbb74ec8376a3154346b61e1d6284ae",
+      "slide-06.jpg": "7a5749514b1642089adc0050183ebd2a39f560043fc9f6971d4d2c789ee7a73b",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "1ef0494026dbfe60b29f31268752e68cb120fd89af8fe57a09aa9348c1f10670",
+      "tiktok.mp4": "f2af2a2ab624e4c06cef3adfb5135ec3598a5ebe5c1cba7206f7d69828d9107c"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-5",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 5,
+    "title": "5 lines for the friend who likes simple plans",
+    "folder": "queue/gms/2026-11-04/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "0138627a8a579811bc9bcfd55010c6929209cd053ef6b13cf825bc461423f4e1",
+      "slide-02.jpg": "a2de625b0fbebaafe8c007984f842938fb44a3d192672b20391ab50fc8ca38f6",
+      "slide-01.jpg": "a0c8e49ec7fca91955435e332f838e651377b5dd1e0e16ee58e598bdbfb58d73",
+      "slide-05.jpg": "40e1d2b45092af3b3052fdb966cbc53509e886668b25152f871594db04b91627",
+      "slide-04.jpg": "d95b0f68e6bf5f57a3f8e9ee9a1936e94307bf464a36ae0be01fb3d95c3f8a33",
+      "slide-06.jpg": "7a1161e85ffbba7f2d81c987e845e2cb4418c334d018d1993d5342da3d3434cf",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "2ec80f6ae5ad0484db1420892dff5d77ddc6028635c980ac69de22d0a87be834",
+      "tiktok.mp4": "1d46c984d21242321686d5c2f17c91d8c4a2dd6b24b3a2d447e36a43c1d43ea1"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-6",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 6,
+    "title": "5 reminders before the work chat starts",
+    "folder": "queue/gms/2026-11-04/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "a2878b67036915b1f64da30986f69746edf1e654ead3560f0791e620bb10d974",
+      "slide-02.jpg": "0d230486f5703b12262d2707c6b316691e321ba32b082acac47d965d7de3c6c4",
+      "slide-01.jpg": "bacad0cf85b95e59b3b794629be4d491b51f0984aa5c5bb65533977fb9404ccf",
+      "slide-05.jpg": "8757adff66af5163b83f82510624b8914970e1aa0bfd27d699d803a11c6be476",
+      "slide-04.jpg": "6a57193c478ed4a19b1c8aa92b4fe34ecbf237ee5fbf75a5db910c32192e0b58",
+      "slide-06.jpg": "9795de6f74ef551cdfb1a78381cb9de7f36e790f87d86fa9ba00b9f96da3044e",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "8dfda70a8e3e77a80d12433c196511c9bba3457bc4d006f56a4a9d7751922ddf",
+      "tiktok.mp4": "9801243f31126e75b7faf4280d1f483ed5a549b456111ce3afcd6f4e4a8629c7"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-7",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 7,
+    "title": "5 small ways to make a welcome warmer",
+    "folder": "queue/gms/2026-11-04/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "7f0167f6e819eb05e5f54c3e193f589c30390e9eb643f2881c936e0af9a2e907",
+      "slide-02.jpg": "9709a4fe6d23bee089966a41ad992405f5e12aaac203df806c65fbf7a03d0c45",
+      "slide-01.jpg": "b6ab098fcd1cb0da73da04fe1159d2e8642c630e5aa43558aa188f15b95c3a34",
+      "slide-05.jpg": "f63073ec8b5158af00d2c396728c1500ede5d5b7a63543355b2273ea3505ad92",
+      "slide-04.jpg": "abb6347c7957f93308f454d486ac3885b28cc510bd2a58a77190a074d284a65a",
+      "slide-06.jpg": "59ea72d9809624c41eda26390367441ea789f1dedf81afd06acec9e5a731521a",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "4f0dd8bc4b32948c6453eea44e2f2b68492a69220045d23f17bd883fe83602d5",
+      "tiktok.mp4": "2596aa5215e6cfb94f61643503042f7e5492658787c3a3b8ca04052c06b0e3d9"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-04-8",
+    "brand": "gms",
+    "date": "2026-11-04",
+    "slot": 8,
+    "title": "5 kind lines for a rainy Singapore afternoon",
+    "folder": "queue/gms/2026-11-04/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "0750d2eb20b1151cf70752777f91b938532a44631a68edb11670cc56ea78f263",
+      "slide-02.jpg": "6012f77726ac6cd30a326c932609b067e22fc9b0a9561a5031acc3ebe1649f76",
+      "slide-01.jpg": "b71fa6ea0f2c3ddf194763e3d214ea4e352751152ff0bb191cd4edfd77858d84",
+      "slide-05.jpg": "7dc7b6500dff474dc19799e59bf48a2a366a312ba1a99ef42cf6ee066faa9369",
+      "slide-04.jpg": "93249131fa49232116887ed51719155a5e54cb377ba92e64a4ba70f70280ac51",
+      "slide-06.jpg": "612851033ec78ad539fec1a6ff956b971277ad8f4735e81393e53b8ef269c634",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "4ea7594f88ab07276b693896343b61b23965d223d03e1bac6f1133e5fe38d9b8",
+      "tiktok.mp4": "5aa6adae8807f32b08f04cc926dd5923faf7fddd1e8415c064ccff1db143d252"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-1",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 1,
+    "title": "5 ways to keep a kind message believable",
+    "folder": "queue/gms/2026-11-05/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "cdaf6674964aebf72dd9de4c18087e4f8bb9fc6b4821d8f00c91947442ba56c2",
+      "slide-02.jpg": "5b37947e81b6c4ee8c58ea9782191a0fff53e6b61aac4af437a6b3a5c951a80a",
+      "slide-01.jpg": "c5f0f4bc26547797b4eac44d365b74391263b740201489a984c785b48cd90efd",
+      "slide-05.jpg": "e1f020f388ce7eb67ada7cafce569549e73f39f6429a2c5ce0ca64e2f0d3f7e8",
+      "slide-04.jpg": "6eca7bd16cd727af058de40565c8eb5744d98aad3cddf87d367ea604904ccc5e",
+      "slide-06.jpg": "9081b04c4c158b903900016fbce9e5dd94e31ef139ca56cc13ff6caf1a106415",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "af192949b104d801fc1e6ba4a9d70238e11790d55d18b167f8292d4cbb53b3bb"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "kind": "reel",
+    "reel_sha256": {
+      "reel.mp4": "e82f88227e11fcb5b424cae331cb78490bf4b8db08d42fb4dd574cc754e04e83",
+      "reel.json": "bab09da7465b3a917a6c05bb933593124d58b602e902e3f7879798e48c659d72"
+    },
+    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+  },
+  {
+    "id": "gms-2026-11-05-2",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 2,
+    "title": "5 things worth noticing on an ordinary Thursday",
+    "folder": "queue/gms/2026-11-05/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "9cd85018223d44928682fd8b6c08bda3a4c3e7f23dd2f1fae1b9f76ef5d99eb0",
+      "slide-02.jpg": "c5daa6e1d389ec5f78bb6ac14776872e7018cc98ee52f445c552ed528440788d",
+      "slide-01.jpg": "c1c3f84c6a4541826389c63a627ae8d2b0e7a67e5ea862877fa68bc8dbc6da9e",
+      "slide-05.jpg": "2e4de71c7a1ff5efae1001c8a8dda5c04fbc1476ed5dbdd16d2287d2dd973383",
+      "slide-04.jpg": "bf9ab5453db34aeda1dbf0e19ece1ef0b525b0781fd2b27128ee99173b409df7",
+      "slide-06.jpg": "1cab31db3ee3e8bd9b0fb23f253cede5c1f6438fd1433ebe299ec124227c8492",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "438c614e28024e9065ca93b3623f4f7c0235987d0a8388549a68e749299dcf7f",
+      "tiktok.mp4": "2ff53b6a5ed63a037bed75c34ce832596cc93b551a08934b063ebf135b60456e"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-3",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 3,
+    "title": "5 lines to write on a just-because gift",
+    "folder": "queue/gms/2026-11-05/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "d3f31d0baba2708299fd4be8d6a3c7baa26f11e9bf0095239a5753c871f44949",
+      "slide-02.jpg": "ebc864181fe3625c629f13d0fa0e55fb983f8a9737684e9e1ac26696712bbd3b",
+      "slide-01.jpg": "3724d49c7b539e7125bddb79d2bda6214e2fd8b3bbab35d001d5e0fcdce3391e",
+      "slide-05.jpg": "ea340e24ee13f37ea8bf3e9376f69480bf8c1da1ded14c86e053e574aa577c91",
+      "slide-04.jpg": "a97dbee24e755faaa127f2a69c1e69358d5b346b0d77c5d9a8a353c4412560c6",
+      "slide-06.jpg": "29a0779c3621e35e4acea8cdff89cf2df0db38e839344947841fa9ed6a9f20a4",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "fd562cc85acb0db75c86c819f73fc85974f0d2c7219bd9eec277c8a6840dfe2e",
+      "tiktok.mp4": "7e6aa1dba4db339f7301a8f116baef2b3d3d82d58a2acf90cee8cf930ba3995d"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-4",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 4,
+    "title": "5 practical checks before buying a hoodie online",
+    "folder": "queue/gms/2026-11-05/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "e5bf7b5b28b5a741f6cbc360bf0a94a26844cded7666a1ecc79f0192774b4b67",
+      "slide-02.jpg": "3acc31d8e1114e5d9cc5da9554a22cd35188088b89dcefffac3868ac7e874b0f",
+      "slide-01.jpg": "a14bc4c80bb1f5957209c0a8bcdc8dce79cc25a7dc771ba7203d0ecb73f9a125",
+      "slide-05.jpg": "fffd46ca278b2e44b53cdaf4258b64cd56726886355e3aeda494db3f3d0eed0c",
+      "slide-04.jpg": "fbcf69b6579c095461093471054cca03a48d48ed372354a6630261348b46a228",
+      "slide-06.jpg": "dc108131ac7ae3cfcd6334b8aa689671e9d52671fa6f19e3a7dc18c489f7bb6c",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "4e11bd45a8e61ef9e3714b713d474d9504d136dc2490be51bf229c024495cd14",
+      "tiktok.mp4": "9e5c50217eaf4736097d5af6f83446814e1e33b8b098ac53720bbba1cdc43394"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-5",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 5,
+    "title": "5 messages for the person who remembers the details",
+    "folder": "queue/gms/2026-11-05/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "d22513c05f600a32740ad0d1e2b570ce1b61059337376917b24a5ff9cb372255",
+      "slide-02.jpg": "d0c2261f15b71128e9dba4bcd36afda0688bf30e04eb656dd831a56ba8b192f3",
+      "slide-01.jpg": "66db240e0d9098ecefbad58c1bc0d24530a8ed520a7fd88e7e25608df4ed5423",
+      "slide-05.jpg": "9ca57bff17e49c70e44a58c91dfd781085bb6382515842fceeeb114aaea601e2",
+      "slide-04.jpg": "7b1734a04516454931684ff85672aae3799499fcac58dcc1d71cddb8642ffac1",
+      "slide-06.jpg": "6ca74d90151327485979bbd293605ee7806e0d6a39653aaf5f3dc76db8c5ded3",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "1249d1d663b4592b73038f6f8a1fda9ee111adf431a7da3f9559a711c151a58e",
+      "tiktok.mp4": "525448f154dbc0e983dfbc3f498bf29776fc1caa869b22b69bcc4aa2c23fcf0f"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-6",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 6,
+    "title": "5 kind ways to change a plan",
+    "folder": "queue/gms/2026-11-05/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "c9b0c3c0645826bf96ec49f1eee1025de1f1762977b6ca56adcf034ff83862e3",
+      "slide-02.jpg": "f8796edd00912019d5d2efb1b36dd8d530ca90dae79e7a30cef186c32087f216",
+      "slide-01.jpg": "8b1186d23d78b37c3ea0406b3a2f27f17e53d87fefce084662f41cb44abf72de",
+      "slide-05.jpg": "134a98ec33a710e6def414349db05a5db88f332a2d91a5c46c9ca4ad7eea7030",
+      "slide-04.jpg": "1bec70587922747a15611b271f89f6d99e9b013089affda9004b37c801330604",
+      "slide-06.jpg": "75ad5d65c58936d1aec6496b96b2b127850b09930478d2cc6ddda7d322fc0c08",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "697863c3abc6f1b2019ec917bbb46a6c05f6ef05d34662926c0f33dc12dff244",
+      "tiktok.mp4": "6fe21c091fa6b6fba71f31fc33afa520e4be443c674cf6bcf2fe993f6d421499"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-7",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 7,
+    "title": "5 little things for a comfortable evening",
+    "folder": "queue/gms/2026-11-05/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "fd21466c0ed2dc4f48180bbb4596f4ce6f49113be485df10d87fb91351977715",
+      "slide-02.jpg": "1932682c1672aec45164708cf722afe544a9af3fa55ad0f64495f14e1d803560",
+      "slide-01.jpg": "978d544fc851ce632aecea151bf1e4fece30a7474b50bbd52c2153fa2ce42d2e",
+      "slide-05.jpg": "d3500748eedeb93f5861921ee18abc89b710c046fa04ed26ce2a635c6465dc75",
+      "slide-04.jpg": "34166ed4e31cd3250f1afc58fd9c6324810c86ebb4ed38b09deddd4970c1cff3",
+      "slide-06.jpg": "13d0750f3d27acc7b83d7a16061dbb4519f5bac3a56213b95288b89c9ebd42bf",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "80013abea05e8b5eb30aa7adaba9700c751fc90e62b33bfe60e52d354098216b",
+      "tiktok.mp4": "489f4fe4725eb99789db44925650981d92453a447689779c111ee270d72f5ba9"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+  },
+  {
+    "id": "gms-2026-11-05-8",
+    "brand": "gms",
+    "date": "2026-11-05",
+    "slot": 8,
+    "title": "5 ways to make your next thank you your own",
+    "folder": "queue/gms/2026-11-05/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "2ff8fd073ad743ee7883780464b82c5f257ea3661137e03a3ac3ff045e9cc8ee",
+      "slide-02.jpg": "931981776d64bb4c6925fffabf7a0a985b2b4fc0ac10bb194e87e5d248db7c9a",
+      "slide-01.jpg": "1d5a1ef897862aa9490d819f5facef4ecd2ae4af9425e01799746f1f0ebc4168",
+      "slide-05.jpg": "dab464bf7002640d47c48ee010111e0356c2b172da57814f30b0fdd8a5695926",
+      "slide-04.jpg": "948d617aee3e3db1cd9c40beb96366143dfb23320c7f25bd2c711569261c6bfb",
+      "slide-06.jpg": "93989491309617b234856bcfe0cddacea39508e86f590da2926dac2d560ee30d",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "1cc6895bc9e097d05bd9af271cd3d0d8c437894b215d53fa4bdea18387e5949f",
+      "tiktok.mp4": "adffd51e4ce4bb06c7a8813aab2d3788b39835600095ed149a23b122b65244f3"
+    },
+    "qa": "Every slide and cover visually inspected; approved 2026-11-03",
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
   }
 ]

@@ -36,7 +36,7 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
-MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
+MAX_PER_DAY = 8  # temporary backup: eight actual posts per local day, including Claude posts
 MIN_GAP = 0  # owner, 2 Nov 2026: no wait on Threads (Facebook keeps 60)
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 MADRID = ZoneInfo("Europe/Madrid")
@@ -138,8 +138,10 @@ def main():
             sys.exit(str(stop))
         children = []
         for name in meta["slides"][:20]:
-            url = None
-            for _, host in IG.HOSTS:
+            url = os.environ.get("GMS_PUBLIC_ASSET_BASE", "").rstrip("/") + "/" + name if os.environ.get("GMS_PUBLIC_ASSET_BASE") else None
+            if url:
+                IG.check_public(url)
+            for _, host in ([] if url else IG.HOSTS):
                 try:
                     url = IG.upload_temporary(os.path.join(folder, name), host)
                     break

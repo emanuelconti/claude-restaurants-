@@ -45,7 +45,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.instagram.com/v21.0"  # graph.facebook.com for a Facebook Login token (main)
 MAX_SLIDES = 10  # Instagram's limit for one carousel
-DAILY_CAP = 8  # posts a day on the account, whoever published them (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
+DAILY_CAP = 8  # temporary backup: eight actual posts per local day, including Claude posts
 MIN_GAP = 0  # owner, 2 Nov 2026: no wait between Instagram posts (Facebook keeps 60); 10/day cap stays
 # Meta's answers that mean "slow down": retrying them is what gets the app blocked.
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
@@ -338,6 +338,7 @@ def main():
         ways = [("base-url", None)] if args.base_url else HOSTS
         media, problems = None, []
         for name, host in ways:
+            publishing_started = False
             try:
                 if host:
                     urls = [upload_temporary(os.path.join(folder, slide), host) for slide in slides]
@@ -347,9 +348,12 @@ def main():
                 if args.dry_run:
                     print("dry run: token and images are fine, nothing published")
                     return
+                publishing_started = True
                 media = publish(user, token, urls, meta["caption"])
                 break
             except ApiError as error:
+                if publishing_started:
+                    raise  # request may have succeeded: reconcile remote history before another attempt
                 if any(word in str(error).lower() for word in STOP_WORDS):
                     raise  # Meta is pushing back: stop now instead of trying again
                 problems.append(f"{name}: {error}")

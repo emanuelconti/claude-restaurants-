@@ -157,7 +157,7 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     # any 12 posts in a row, whatever their topics. One sequence for the whole account, interleaving the
     # sets, so consecutive post numbers always get different photos.
     _covers = ACCOUNT_COVERS
-    picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY)
+    picks = _rotate_cover(date, slot, picks, pool, _covers, COVERS_PER_DAY) if not topic.get("cover_photo_id") else list(topic["photo_ids"])
     if topic.get("cover_photo_id"):
         picks[0] = topic["cover_photo_id"]  # backup: reviewed cover must match the topic
     # The title opens the caption, so later runs can see what was already posted.

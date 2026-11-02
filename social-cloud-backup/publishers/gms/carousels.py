@@ -546,7 +546,9 @@ GMS_COVERS = [
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
     "TEXT:4",
     "TEXT:5",
-    "TEXT:6"
+    "TEXT:6",
+    "TEXT:7",
+    "TEXT:8"
 ]
 
 SLOTS = 10  # carousels a day (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
@@ -617,17 +619,19 @@ def _rotate_cover(date, slot, picks, pool, covers, per_day):
     spare = [p for p in pool if p != cover and p not in rest]
     while len(rest) < len(picks) - 1 and spare:
         rest.append(spare.pop(0))
+    while len(rest) < len(picks) - 1:
+        rest.append(pool[len(rest) % len(pool)])
     return [cover] + rest[:len(picks) - 1]
 
 
-COVERS_PER_DAY = 10  # one cover index per possible post of the day, so covers never repeat within 12
+COVERS_PER_DAY = 8  # one cover index per possible post of the day, so covers never repeat within 12
 
 
 def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     """The slides' content for a date and slot, one photo per slide (cover first), the same every time."""
     topic = topic or bank_topic(date, slot)
     rng = _random.Random(date.toordinal() * 10 + slot)
-    pool = list(PHOTO_SETS.get(topic.get("photos", "stuff"), PHOTO_SETS["stuff"]))
+    pool = list(GMS_HEROES)  # GMS uses only the shop's message hoodies, never stock desktops
     rng.shuffle(pool)
     need = 1 + len(topic["points"])
     picks = (pool * (need // len(pool) + 1))[:need]
