@@ -165,6 +165,19 @@ def main():
         start = (args.slot - 1) * 5
         picks = [products[(start + i) % len(products)] for i in range(min(5, len(products)))]
         cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}"} for x in picks]
+        # A card stays blank when Facebook has not read the product page yet: ask it to read each page now,
+        # and keep only the pages that came back with an image (owner, 2 November 2026: no blank cards, ever).
+        ready = []
+        for card in cards:
+            try:
+                seen = call("POST", "", token, {"id": card["link"], "scrape": "true"})
+                if seen.get("image"):
+                    ready.append(card)
+            except RuntimeError as error:
+                print(f"Facebook could not read {card['link']} ({error}); card left out", file=sys.stderr)
+        if len(ready) < 2:
+            sys.exit("Facebook could not read enough product pages with an image: nothing published")
+        cards = ready
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
         params = {"message": message, "link": SHOP, "multi_share_end_card": "false",
                   "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}
