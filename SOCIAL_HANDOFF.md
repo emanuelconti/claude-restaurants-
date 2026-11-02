@@ -57,3 +57,7 @@ Threads, Pinterest, YouTube Shorts and TikTok scripts exist and are **OFF**: the
 ## 2 November 2026, afternoon: channels go out together (owner)
 
 The owner removed the 20-minute gap between different channels of the same account: Instagram, Facebook, Threads, Pinterest and TikTok now go out one right after the other (CROSS_GAP = 0 in sowld-social/channel_guard.py). Still unchanged: 60 minutes between two posts on the same channel, 10 a day per channel, stop without retry on blocked/limit/spam/restricted/temporarily/too soon.
+
+## Learning from results (owner, 2 November 2026)
+
+Every account has a PERFORMANCE.md in its folder (sowld-social/, social-video/, sincronia/social/), written once a day by the routine "Ottimizzazione giornaliera". Every publishing routine reads it before choosing topics: more of what got likes, comments, saves and shares; less of the topics people ignored; competitor ideas adapted, never copied. Instagram, Facebook and Threads give these numbers through their APIs; Pinterest and TikTok only once their access is approved.
