@@ -68,3 +68,8 @@ Every account has a PERFORMANCE.md in its folder (sowld-social/, social-video/, 
 Only the routine "SOCIAL UNICA" publishes now: 07:43, 13:43, 19:43 Madrid, all three accounts in the same run, about 5 posts a day per account (2 + 2 + 1), every channel of an account right after the other (Instagram, Facebook, Threads, Pinterest, TikTok). The 07:43 run also starts with the Good Message Studio reel and writes a short PERFORMANCE.md per account. All the other publishing, backup, optimisation and check routines are OFF. Any other Claude: do not create new routines or extra runs; keep work short and cheap; script limits stay (10/day, 60 min per channel).
 
 Update (owner, 2 Nov evening): no 60-minute wait on Instagram, Threads (MIN_GAP = 0). Only Facebook keeps 60 minutes between Page posts. Daily caps unchanged.
+
+
+## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
+
+Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.

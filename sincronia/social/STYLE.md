@@ -147,3 +147,8 @@ A JSON object, in the same shape as the topics in `carousels.py`:
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says
 what to fix. Look at the cover and two slides once rendered: if a line wraps
 badly or a photo fights the text, shorten and render again.
+
+
+## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
+
+Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.
