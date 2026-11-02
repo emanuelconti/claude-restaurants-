@@ -3,6 +3,9 @@
 
     python3 tiktok_publish.py --date 2026-11-02              # dry run (the default): checks, posts nothing
     python3 tiktok_publish.py --date 2026-11-02 --publish    # only when GMS_TIKTOK_ENABLED=1
+    python3 tiktok_publish.py --date 2026-11-02 --carousel-slot 3 --publish
+        # backup when there is no reel: the rendered carousel out/<date>/carousel-3/ turned into a
+        # vertical slideshow (each 4:5 slide centred on cream, 3.5 s, soft fades), same title and caption
 
 Needs, in the environment (names only; values never printed):
 - TIKTOK_CLIENT_KEY_GMS, TIKTOK_CLIENT_SECRET_GMS: the TikTok developer app's keys
@@ -60,9 +63,33 @@ def check_ok(out: dict, what: str) -> dict:
     return out.get("data") or {}
 
 
+def recent_videos(token: str) -> list:
+    data = check_ok(G.http("POST", f"{API}/video/list/?fields=id,create_time,title", token, body={"max_count": 20}), "video list")
+    return data.get("videos", [])
+
+
 def recent_stamps(token: str) -> list:
-    data = check_ok(G.http("POST", f"{API}/video/list/?fields=id,create_time", token, body={"max_count": 20}), "video list")
-    return [dt.datetime.fromtimestamp(v["create_time"], dt.timezone.utc) for v in data.get("videos", []) if v.get("create_time")]
+    return [dt.datetime.fromtimestamp(v["create_time"], dt.timezone.utc) for v in recent_videos(token) if v.get("create_time")]
+
+
+SLIDE_SECONDS = 3.5
+
+
+def slideshow(folder: str, slides: list, dst: str) -> None:
+    """The carousel's 4:5 slides as one 1080x1920 video: each slide centred on cream, soft fades, no sound."""
+    import subprocess
+    if not slides or any(not os.path.exists(os.path.join(folder, s)) for s in slides):
+        sys.exit("carousel slides missing: nothing posted")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+    for s in slides:
+        cmd += ["-loop", "1", "-t", str(SLIDE_SECONDS), "-framerate", "30", "-i", os.path.join(folder, s)]
+    fade = 0.35
+    parts = [f"[{i}:v]scale=1080:1350,pad=1080:1920:0:285:color=0xF6F1EA,setsar=1,format=yuv420p,"
+             f"fade=t=in:st=0:d={fade},fade=t=out:st={SLIDE_SECONDS - fade}:d={fade}[v{i}]" for i in range(len(slides))]
+    graph = ";".join(parts) + ";" + "".join(f"[v{i}]" for i in range(len(slides))) + f"concat=n={len(slides)}:v=1:a=0[out]"
+    cmd += ["-filter_complex", graph, "-map", "[out]", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+            "-r", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart", dst]
+    subprocess.run(cmd, check=True)
 
 
 def main():
@@ -70,13 +97,20 @@ def main():
     ap.add_argument("--date", required=True)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--publish", action="store_true", help="really post (needs GMS_TIKTOK_ENABLED=1)")
+    ap.add_argument("--carousel-slot", type=int, help="post this rendered carousel as a slideshow instead of the reel")
     args = ap.parse_args()
 
-    folder = os.path.join(args.out, args.date, "reel")
-    meta = json.loads(open_text(os.path.join(folder, "reel.json")))
+    if args.carousel_slot:
+        folder = os.path.join(args.out, args.date, f"carousel-{args.carousel_slot}")
+        meta = json.loads(open_text(os.path.join(folder, "carousel.json")))
+        meta["video"] = "tiktok.mp4"
+        slideshow(folder, meta["slides"], os.path.join(folder, meta["video"]))
+    else:
+        folder = os.path.join(args.out, args.date, "reel")
+        meta = json.loads(open_text(os.path.join(folder, "reel.json")))
     video = os.path.join(folder, meta["video"])
     if not os.path.exists(video):
-        sys.exit("reel.mp4 missing: nothing posted")
+        sys.exit(("slideshow" if args.carousel_slot else "reel.mp4") + " missing: nothing posted")
     tags = [p for p in meta["caption"].split("\n\n") if p.strip().startswith("#")]
     title = (meta["title"] + " " + (tags[0] if tags else "#goodmessagestudio"))[:2200]
     privacy = os.environ.get("GMS_TIKTOK_PRIVACY", "SELF_ONLY").strip() or "SELF_ONLY"
@@ -90,7 +124,10 @@ def main():
         token = access_token()
         creator = check_ok(G.http("POST", f"{API}/post/publish/creator_info/query/", token, body={}), "creator info")
         options = creator.get("privacy_level_options", [])
-        stamps = recent_stamps(token)
+        videos = recent_videos(token)
+        stamps = [dt.datetime.fromtimestamp(v["create_time"], dt.timezone.utc) for v in videos if v.get("create_time")]
+        if any((v.get("title") or "").strip().startswith(meta["title"].strip()) for v in videos):
+            sys.exit(f"already on TikTok: {meta['title']!r}, nothing posted")
         print(f"account ok: {creator.get('creator_username', '?')}, privacy options {options}, {len(stamps)} recent videos read")
         if privacy not in options:
             sys.exit(f"privacy {privacy} is not offered to this account ({options}): nothing posted")

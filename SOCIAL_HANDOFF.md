@@ -38,6 +38,7 @@ Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable"
 |---|---|---|
 | Good Message Studio | 08:17, 10:17, 12:17 (reel), 15:17, 18:17, 21:17 Singapore | up to 2 posts per run, 60 min apart, to reach 10 a day: Instagram, then Facebook 20 min later (Threads when enabled) |
 | Caroselli (principale) | 08:47, 12:47, 16:47, 20:47 Madrid | up to 3 posts per account per run, SocialPerks and Sincronia alternating 20 min apart, each account 60 min apart, to reach 10 a day each |
+| Good Message Studio – TikTok | 07:47, 14:47, 17:47, 20:47, 23:47 Singapore | 1 TikTok per run: the 14:47 run posts a reel, the others a new carousel turned into a slideshow (`tiktok_publish.py --carousel-slot`); the script refuses a repeated title, "too soon" or less than 20 min after Instagram/Facebook. Privacy `GMS_TIKTOK_PRIVACY` (SELF_ONLY until the owner sets PUBLIC_TO_EVERYONE) |
 | Instagram backup | 23:41 Madrid | fills only what SocialPerks or Sincronia are missing |
 | Recupero automatico ogni ora | hourly at :59 | **disabled** since 1 November 23:54 (not by the session that created it); ask the owner before turning it on |
 | Controllo mattutino | 10:07 Madrid | token health for all accounts + authorization status of the other channels |
@@ -45,7 +46,7 @@ Each folder's `STYLE.md` is the brief (strategy, "Professional and unattackable"
 
 ## Other channels (Good Message Studio)
 
-Threads, Pinterest, YouTube Shorts and TikTok scripts exist and are **OFF**: they need the owner's accounts, OAuth/audits and `GMS_<CHANNEL>_ENABLED=1`. Exact steps and variable names in `sowld-social/CHANNELS.md`. No channel counts as automatic until a real post went out on it. Carousell: decision on 16 November (account probably not registered).
+TikTok is connected since 2 November (see the routine above). Threads, Pinterest and YouTube Shorts scripts exist and are **OFF**: they need the owner's accounts, OAuth/audits and `GMS_<CHANNEL>_ENABLED=1`. Exact steps and variable names in `sowld-social/CHANNELS.md`. No channel counts as automatic until a real post went out on it. Carousell: decision on 16 November (account probably not registered).
 
 ## Known open points (2 November)
 
