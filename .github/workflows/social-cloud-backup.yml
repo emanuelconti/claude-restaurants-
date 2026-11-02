@@ -1,0 +1,52 @@
+name: Temporary social cloud backup
+on:
+  schedule:
+    - cron: '58 6,7,8,12,13,14,18,19 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Check credentials only or process approved queue
+        type: choice
+        options: [check, publish]
+        default: check
+permissions:
+  contents: write
+concurrency:
+  group: social-cloud-backup
+  cancel-in-progress: false
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/social-cloud-backup
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install rendering dependencies
+        run: |
+          python -m pip install pillow numpy certifi
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Verify or publish reviewed queue
+        env:
+          SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
+          BACKUP_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$BACKUP_MODE" = check ]; then
+            python social-cloud-backup/controller.py --check
+          else
+            python social-cloud-backup/controller.py
+          fi
+      - name: Persist publication receipts
+        if: always()
+        run: |
+          if [ -f social-cloud-backup/state.json ]; then
+            git config user.name social-backup-bot
+            git config user.email social-backup-bot@users.noreply.github.com
+            git add social-cloud-backup/state.json
+            git diff --cached --quiet || git commit -m "Record cloud publishing receipts"
+            git push origin HEAD:codex/social-cloud-backup
+          fi

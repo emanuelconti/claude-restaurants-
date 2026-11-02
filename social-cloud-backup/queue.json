@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sp-2026-11-03-1",
+    "brand": "sp",
+    "date": "2026-11-03",
+    "slot": 1,
+    "folder": "queue/sp/2026-11-03/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "8e0932f49a00c7dd79131c5c79dd4d17c9f5d3a940fb816c2e609dcbc04e6bc1",
+      "slide-02.jpg": "b77014960de3cef2d6380d4a13dd7372e0517c928f457083e2a53665c769f7c2",
+      "slide-01.jpg": "3fbfb6f6b0095a5c741625178f2818f0399753b5702a6a8476ee7e6500ccb74f",
+      "slide-05.jpg": "068ee92cfda6e60909f892062a8cbe6a59e4b7d986498c4d863649d4c764b54c",
+      "slide-04.jpg": "6f0a562e341e3848c1b6c857c36140360f8f78ebdd4532235ef2bd32d28f55a0",
+      "slide-06.jpg": "43effe45c4b4383a0d59196595088e0f56190d03382303a78525b3febdb67331",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
+      "carousel.json": "a820aeea8a51ec766b54fc0959ed3cd3447181c85d80c2c068cc79ea583ef310"
+    },
+    "qa": "All seven slides visually inspected on 2 November 2026"
+  },
+  {
+    "id": "sin-2026-11-03-1",
+    "brand": "sin",
+    "date": "2026-11-03",
+    "slot": 1,
+    "folder": "queue/sin/2026-11-03/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "05c96451476e8310fac135f98d267354f35ef87e8cac8a347c4af63c63fc9acd",
+      "slide-02.jpg": "21ad7097e0a6b4582de388911e4465d4983c6ffb96563d58768363c46156cb79",
+      "slide-01.jpg": "f51a3e63316b01092993c64d682057bf6fb2280f3126f86c782911567a18c02c",
+      "slide-05.jpg": "972885a7a619a2766129b11174d2d7cac8728b55f92621e63ac85be2e70ef299",
+      "slide-04.jpg": "95165d8bb69b95ab1cd167063a2d3f47320232033bf92279a8a91c727bc1bf43",
+      "slide-06.jpg": "144a1fc0d0533b5c03bb28ac32b9f125a2c1859aba9aa03c1fc74f378e4fe352",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486",
+      "carousel.json": "182d90ff59cd706cedbc725dbb392a3fb01cefae1532853ad524574174ef3773"
+    },
+    "qa": "All seven slides visually inspected on 2 November 2026"
+  },
+  {
+    "id": "gms-2026-11-03-1",
+    "brand": "gms",
+    "date": "2026-11-03",
+    "slot": 1,
+    "folder": "queue/gms/2026-11-03/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "2e225947a0853531a99b2ce58191aedfa82796669f178b7766e3114e3b93d5be",
+      "slide-02.jpg": "e6696c1d3137ec27c8a6094a72fd89619ff8c81d363d4cc0bcecbcbbf324d1fa",
+      "slide-01.jpg": "6de485b6f89d161b4a76401343bd88ec66437a69c79f9861b36220be02ad197c",
+      "slide-05.jpg": "d7a695b4af0169048b28bc769532ea3c6734f56d533bd47fc75156c88e9ae1a5",
+      "slide-04.jpg": "ce966c29953ae108d8eaeefecd1572a2d46ea23b53a724dab36fa3efa052e3b7",
+      "slide-06.jpg": "a3a016e42e4784c289a4bbb4d51296aee3aedc7436e38a474e303201b72ae375",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
+      "carousel.json": "302068ab27616d1a4bcae3f889a05f3b5b2e3410e27215f4f85e2df72d7a72d2"
+    },
+    "qa": "All seven slides visually inspected on 2 November 2026"
+  }
+]
