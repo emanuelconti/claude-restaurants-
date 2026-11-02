@@ -32,7 +32,12 @@ errors=[]
 for b,(token,handle) in brands.items():
  code,out=run(b,'ig_publish.py','--token-env',token,'--check-token')
  if code or '@'+handle not in out:errors.append(b+': account check failed');continue
- if '--check' in sys.argv:continue
+ if '--check' in sys.argv:
+  if b=='gms':
+   for script,args in [('threads_publish.py',['--check-token']),('fb_publish.py',['--check-token']),('backup_youtube_check.py',[])]:
+    rc,_=run(b,script,*args)
+    if rc:errors.append('gms '+script+': remote credential check failed')
+  continue
  code,recent=run(b,'ig_publish.py','--token-env',token,'--recent','30')
  if code:errors.append(b+': history unavailable');continue
  count=sum(1 for line in recent.splitlines() if re.match(r'\d{4}-\d\d-\d\dT',line) and dt.datetime.fromisoformat(line.split()[0]).astimezone(ZoneInfo('Europe/Paris')).date()==now.date())
