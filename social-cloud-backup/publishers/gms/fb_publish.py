@@ -33,7 +33,7 @@ from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import carousels as C  # noqa: E402
-import ig_publish as IG  # noqa: E402  (temporary image hosts, shared with Instagram)
+import ig_publish as IG  # noqa: E402  (public asset validation only)
 
 API = "https://graph.facebook.com/v21.0"
 MAX_PER_DAY = 8  # Owner's standing Singapore cap, including posts by any publisher.
@@ -84,28 +84,6 @@ def message_hoodies(products: list) -> list:
             and any(message in product["title"].lower() for message in messages)]
 
 
-def to_square(src: str, dst: str) -> None:
-    """A 4:5 slide on a 1:1 card, whole and centred on its own background colour, so nothing is cropped."""
-    from PIL import Image
-    im = Image.open(src).convert("RGB")
-    bg = im.getpixel((4, 4))
-    side = max(im.width, im.height)
-    canvas = Image.new("RGB", (side, side), bg)
-    canvas.paste(im, ((side - im.width) // 2, (side - im.height) // 2))
-    canvas.resize((1080, 1080), Image.LANCZOS).save(dst, "JPEG", quality=90)
-
-
-def hosted_by_facebook(page: str, token: str, url: str) -> str:
-    """Cards showed up blank (2 November 2026): Facebook fetched the picture later from the temporary host,
-    which had expired or refused it. So each card image is first uploaded to the Page as an unpublished
-    photo, and the card uses Facebook's own copy of it, which does not disappear."""
-    photo = call("POST", f"{page}/photos", token, {"url": url, "published": "false"})
-    images = call("GET", photo["id"], token, {"fields": "images"}).get("images", [])
-    if not images:
-        raise RuntimeError("Facebook stored the photo but returned no image address")
-    return max(images, key=lambda i: i.get("width", 0))["source"]
-
-
 def page_token(page: str, token: str) -> str:
     """Return a Page token: FB_PAGE_TOKEN_GMS may hold the owner's user token
     instead (1 November 2026), and a user token with pages_show_list can ask for
@@ -143,7 +121,8 @@ def main():
         if not args.date:
             ap.error("--date is needed to publish")
         folder = os.path.join(args.out, args.date, f"carousel-{args.slot}")
-        meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
+        with open(os.path.join(folder, "carousel.json"), encoding="utf-8") as source:
+            meta = json.load(source)
         first = meta["caption"].split("\n", 1)[0].strip()
         posts = recent(page, token)
         done = next((p for p in posts if (p.get("message") or "").strip().startswith(first)), None)
@@ -158,32 +137,38 @@ def main():
             return
         if stamps and (now - max(stamps)).total_seconds() < MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
-        # The owner (1 November 2026): on Facebook the post must be one image you swipe, like a Meta ads
-        # carousel, not a grid of small photos. So it is a link carousel: each slide is a card (square, as
-        # Facebook shows them) that opens the shop when tapped.
-        def public(path):
-            for _, host in IG.HOSTS:
-                try:
-                    return IG.upload_temporary(path, host)
-                except Exception as error:
-                    print(f"upload did not work ({error}); trying the next host", file=sys.stderr)
-            sys.exit(f"could not make {os.path.basename(path)} public: nothing published")
-
-        # 2 November 2026: the cards came out blank. Facebook ignores a custom "picture" (and name) on links
-        # to a domain the Page has not verified in Meta Business, so each card now links a real product page:
-        # Facebook shows that product's own photo and name, the card opens it, and the carousel reads like an ad.
-        products = json.load(urllib.request.urlopen(SHOP.rstrip("/") + "/products.json?limit=250", timeout=60))["products"]
-        products = message_hoodies(products)
-        if len(products) < 3:
-            sys.exit("could not read enough products from the shop: nothing published")
-        start = (args.slot - 1) * 5
-        picks = [products[(start + i) % len(products)] for i in range(min(5, len(products)))]
-        def price(x):
-            v = (x.get("variants") or [{}])[0].get("price")
-            return f" · S${float(v):.0f}" if v else ""
-        cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}", "name": x["title"],
-                  "description": "Shop now at goodmessagestudio.com" + price(x),
-                  "picture": x["images"][0]["src"].split("?")[0]} for x in picks]
+        # Six editorial carousel slots and two product showcases. Both use
+        # native Facebook photos, never fragile product link-preview cards.
+        product_showcase = args.slot in (4, 8)
+        cards = []
+        if product_showcase:
+            products = json.load(urllib.request.urlopen(SHOP + "/products.json?limit=250", timeout=60))["products"]
+            products = message_hoodies(products)
+            if len(products) < 3:
+                sys.exit("could not read enough verified products: nothing published")
+            picks = [products[((args.slot - 1) * 5 + i) % len(products)] for i in range(min(5, len(products)))]
+            for product in picks:
+                value = (product.get("variants") or [{}])[0].get("price")
+                label = f"Shop now · S${float(value):.0f}" if value else "Shop now"
+                cards.append(dict(name=product["title"], description=label,
+                                  link=SHOP + "/products/" + product["handle"],
+                                  picture=product["images"][0]["src"].split("?")[0]))
+        else:
+            from PIL import Image
+            base = os.environ.get("GMS_PUBLIC_ASSET_BASE", "").rstrip("/")
+            if not base.startswith("https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/"):
+                sys.exit("immutable reviewed asset base missing: nothing published")
+            names = meta.get("slides", [])
+            if not 2 <= len(names) <= 10:
+                sys.exit("Facebook carousel needs 2 to 10 reviewed slides: nothing published")
+            for name in names:
+                if os.path.basename(name) != name:
+                    sys.exit("invalid reviewed slide path: nothing published")
+                with Image.open(os.path.join(folder, name)) as image:
+                    image.verify()
+                url = base + "/" + name
+                IG.check_public(url)
+                cards.append(dict(name=first, description="", link=SHOP, picture=url))
         # Native photo IDs are durable. Link-preview cards can lose their images
         # even after a successful scrape (owner evidence, 3 November).
         # Fail closed before feed publication unless every selected photo exists.
@@ -203,7 +188,8 @@ def main():
         message = message.replace("(link in bio)", "")
         if "https://goodmessagestudio.com" not in message:
             message += "\n\nShop now: https://goodmessagestudio.com"
-        message += "\n\n" + "\n".join(card["name"] + price(picks[i]) + "\n" + card["link"] for i, card in enumerate(cards))
+        if product_showcase:
+            message += "\n\n" + "\n\n".join(card["name"] + "\n" + card["description"] + "\n" + card["link"] for card in cards)
         params = {"message": message,
                   "attached_media": json.dumps([{"media_fbid": photo_id} for photo_id in photo_ids])}
         # A feed failure is ambiguous. Never blindly retry a post creation.
@@ -214,7 +200,7 @@ def main():
     except RuntimeError as error:
         sys.exit(f"Facebook: {error}")
     with open(os.path.join(folder, "published-facebook.json"), "w", encoding="utf-8") as fh:
-        json.dump({"post_id": post["id"], "permalink": link}, fh, indent=1)
+        json.dump({"post_id": post["id"], "permalink": link, "format": "native_products" if product_showcase else "native_editorial_carousel", "photo_ids": photo_ids}, fh, indent=1)
     print(f"published: {link}")
 
 
