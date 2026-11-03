@@ -113,6 +113,8 @@ def page_token(page: str, token: str) -> str:
     back, so it is used as it is."""
     try:
         return call("GET", page, token, {"fields": "access_token"}).get("access_token") or token
+    except Stop:
+        raise
     except RuntimeError:
         return token
 
@@ -190,6 +192,8 @@ def main():
                 seen = call("POST", "", token, {"id": card["link"], "scrape": "true"})
                 if seen.get("image"):
                     ready.append(card)
+            except Stop:
+                raise
             except RuntimeError as error:
                 print(f"Facebook could not read {card['link']} ({error}); card left out", file=sys.stderr)
         if len(ready) < 2:
@@ -204,6 +208,8 @@ def main():
                   "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}
         try:
             post = call("POST", f"{page}/feed", token, params)
+        except Stop:
+            raise
         except RuntimeError as error:
             # Some Pages take at most 5 cards: keep the cover, the first points and the shop slide.
             if "child" not in str(error).lower() and "attachment" not in str(error).lower():

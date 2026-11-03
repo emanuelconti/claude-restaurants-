@@ -103,6 +103,15 @@ class RecoveryExceptionTests(unittest.TestCase):
   self.assertEqual(channel_plan('gms',FB_RECOVERY_CRON),('facebook',))
 
 class DurableCounterTests(unittest.TestCase):
+ def test_facebook_restriction_cannot_fall_back_to_another_token(self):
+  import ast
+  from pathlib import Path
+  tree=ast.parse((Path(__file__).parent/'publishers/gms/fb_publish.py').read_text())
+  node=next(x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name=='page_token')
+  class Stop(RuntimeError):pass
+  def restricted(*args,**kwargs):raise Stop('Meta says temporarily restricted')
+  scope={'Stop':Stop,'call':restricted};exec(compile(ast.Module(body=[node],type_ignores=[]),'facebook-restriction-guard','exec'),scope)
+  with self.assertRaises(Stop):scope['page_token']('configured-page','test-placeholder')
  def test_facebook_cards_exclude_unverified_generic_hoodies(self):
   import ast
   from pathlib import Path
