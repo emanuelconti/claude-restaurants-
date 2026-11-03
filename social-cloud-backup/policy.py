@@ -13,6 +13,7 @@ FB_RECOVERY_CRON = '7,27,37,47,57 6-15 3 11 *'  # owner-authorized 3 November re
 GMS_CRON = '17 8-23 * * *'  # 08:17-23:17 Singapore, including recovery checks
 WATCHDOG_CRON = '41 0-23 * * *'  # Independent UTC recovery; target() always uses each market's own clock.
 QUEUE_DAYS = frozenset(('2026-11-03', '2026-11-04', '2026-11-05'))
+STOP_SIGNALS = ('blocked', 'limit', 'spam', 'restricted', 'temporarily', 'too soon', 'quota')
 
 def timezone_for(brand):
  return {'gms': SINGAPORE, 'sp': ZoneInfo('Europe/Madrid'), 'sin': TZ}[brand]

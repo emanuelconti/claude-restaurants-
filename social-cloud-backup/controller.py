@@ -1,7 +1,7 @@
 """Cloud publisher for exact assets that passed local visual QA."""
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
-from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 # Owner, 3 November: keep the cloud publisher running after the Claude quota reset.
@@ -68,6 +68,10 @@ if recover and not recovery_allowed(now):
  raise SystemExit('The owner-authorized GMS catch-up exception has expired; nothing published.')
 def process_channel(b,channel):
  tag=b+':'+channel
+ block_key='platform_block:'+tag
+ if state.get(block_key):
+  print(tag+': paused after a platform restriction; no API retry until verified operator clearance.',flush=True)
+  return False
  try:
   posts=history(b,channel)
   brand_now=local_now(dt.datetime.now(dt.timezone.utc),b)
@@ -118,12 +122,16 @@ def process_channel(b,channel):
   rc,out=run(b,script,*args)
   success=any(x in out for x in ['published:','published (public):','already published:'])
   if rc or not success:
+   if any(word in out.lower() for word in STOP_SIGNALS):
+    state[block_key]='Platform restriction: operator verification required before clearing this lock.';save()
    # All errors retain a hold. A later remote read can reconcile a successful-but-uncertain request.
    raise RuntimeError('Publisher stopped or response was ambiguous. No automatic retry.')
   state[key]='success: '+out.strip();save()
   return True
   # A YouTube public request must actually produce a public video; publisher verifies status.
  except Exception as e:
+  if any(word in str(e).lower() for word in STOP_SIGNALS):
+   state[block_key]='Platform restriction: operator verification required before clearing this lock.';save()
   errors.append(tag+': '+str(e));print('ERROR '+errors[-1],flush=True);return False
 for b in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
  for channel in channel_plan(b,cron,recover):

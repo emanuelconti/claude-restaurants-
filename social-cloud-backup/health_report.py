@@ -14,13 +14,17 @@ for v in config.values():
 (R/'private').mkdir(exist_ok=True)
 p=R/'private/environment.json';p.write_text(json.dumps(config));p.chmod(0o600)
 manifest=json.loads((R/'queue.json').read_text())
+state_path=R/'state.json'
+platform_state=json.loads(state_path.read_text()) if state_path.exists() else {}
 (R/'performance').mkdir(exist_ok=True)
 health={'day_utc':now.date().isoformat(),'brands':{}}
 for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),('sin','INSTAGRAM_TOKEN_SINCRONIA','sincronia.live'),('gms','INSTAGRAM_TOKEN_SOWLD','goodmessage_studio')]:
  zone=timezone_for(brand);day=now.astimezone(zone).date();key=day.isoformat()
  path=R/'performance'/f'{brand}.json'
  old=json.loads(path.read_text()) if path.exists() else {}
- if old.get('market_date')!=key or old.get('schema_version')!=2:
+ paused=any(k.startswith('platform_block:'+brand+':') and v for k,v in platform_state.items())
+ if paused:print(f'Public metrics for {brand} retained while a platform restriction requires verification; no extra API probes.')
+ if not paused and (old.get('market_date')!=key or old.get('schema_version')!=2):
   result=subprocess.run([sys.executable,str(R/'run.py'),brand,'performance_snapshot.py',brand,variable,handle,str(zone)],capture_output=True,text=True)
   if result.returncode:
    print(f'Public results unavailable for {brand}; publication remains independent.')
@@ -49,7 +53,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
  for d in coverage:
   if d['approved_items']!=8:break
   contiguous+=1
- health['brands'][brand]={'timezone':str(zone),'market_date':key,'days_covered_including_today':contiguous,'coverage':coverage}
+ health['brands'][brand]={'timezone':str(zone),'market_date':key,'days_covered_including_today':contiguous,'coverage':coverage,'paused_channels':[k.split(':',2)[2] for k,v in platform_state.items() if k.startswith('platform_block:'+brand+':') and v]}
 (R/'health.json').write_text(json.dumps(health,indent=2)+'\n')
 needs=[f"{b}: {v['days_covered_including_today']} reviewed days including today ({v['timezone']})." for b,v in health['brands'].items() if v['days_covered_including_today']<3]
 def api(method,path,body=None):

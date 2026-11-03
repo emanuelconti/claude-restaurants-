@@ -18,11 +18,21 @@ class RecoveryControllerTests(unittest.TestCase):
    slot=int(args[args.index('--slot')+1]);item=items[slot-1]
    posts.append(dict(title=item['title'],stamp=now.isoformat()))
    return 0,'published: https://example.com/'+item['id']
-  ns=dict(dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,count_known_posts=count_known_posts,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,QUEUE_DAYS=QUEUE_DAYS,
+  ns=dict(dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,count_known_posts=count_known_posts,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,QUEUE_DAYS=QUEUE_DAYS,STOP_SIGNALS=STOP_SIGNALS,
    history=lambda b,c:list(posts),manifest=items,state={},save=lambda:None,errors=[],sys=types.SimpleNamespace(argv=['controller.py','--recover-gms']),recover_today=True,
    verify=lambda item:None,R=Path('/reviewed'),subprocess=types.SimpleNamespace(check_output=lambda *a,**kw:'reviewedcommit'),os=types.SimpleNamespace(environ={}),brands={'gms':('TOKEN_NAME','goodmessage_studio')},run=run)
   exec(compile(ast.Module(body=[fn],type_ignores=[]),'controller.py','exec'),ns)
   return ns,posts
+ def test_platform_restriction_stops_following_runs_before_any_api_call(self):
+  ns,posts=self.fixture('ig');calls=[]
+  def blocked(b,c):
+   calls.append((b,c));raise RuntimeError('Meta says temporarily restricted')
+  ns['history']=blocked
+  self.assertFalse(ns['process_channel']('gms','ig'))
+  self.assertIn('platform_block:gms:ig',ns['state'])
+  self.assertFalse(ns['process_channel']('gms','ig'))
+  self.assertEqual(calls,[('gms','ig')])
+  self.assertEqual(len(ns['errors']),1)
  def test_standing_publication_continues_after_old_temporary_expiry(self):
   ns,posts=self.fixture('ig',at=dt.datetime(2026,11,7,8,41,tzinfo=SINGAPORE))
   ns['recover_today']=False;ns['sys'].argv=['controller.py']

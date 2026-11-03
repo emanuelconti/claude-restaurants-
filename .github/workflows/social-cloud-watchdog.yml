@@ -1,0 +1,32 @@
+name: Social cloud recovery timer
+on:
+  workflow_dispatch:
+    inputs:
+      smoke_test:
+        description: One short timer test; automatic successors always use the normal 45-minute wait
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: social-cloud-recovery-timer
+  cancel-in-progress: true
+jobs:
+  recover:
+    environment: ${{ inputs.smoke_test == true && 'social-publisher-recovery-smoke' || 'social-publisher-recovery-wait' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Recheck publisher state and wake the same guarded queue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          state=$(gh api "repos/$GH_REPO/actions/workflows/social-cloud-backup.yml" --jq .state)
+          if [ "$state" != active ]; then
+            echo "Publisher is disabled; owner control is respected. Recovery stops here."
+            exit 0
+          fi
+          gh workflow run social-cloud-backup.yml --repo "$GH_REPO" --ref claude/coao-8jloui -f mode=publish -f brand=all
+          echo "One cloud recovery requested. The publisher checks local clocks, counts, receipts and platform limits."
