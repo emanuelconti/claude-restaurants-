@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """A Sowld carousel: a swipeable list post for Instagram, rendered as JPEGs.
 
-    python3 carousel.py                                   # today (Rome time), slot 1
+    python3 carousel.py                                   # today (Singapore time), slot 1
     python3 carousel.py --date 2026-10-30 --slot 2        # any day and slot; the same pair always gives the same post
     python3 carousel.py --slot 3 --topic topic.json       # a topic written for this run
 
@@ -35,7 +35,7 @@ import carousels as C  # noqa: E402
 W, H = 1080, 1350
 MARGIN = 80
 TEXT_W = W - 2 * MARGIN
-TZ = ZoneInfo("Europe/Rome")
+TZ = ZoneInfo("Asia/Singapore")
 
 
 def fade(w: int, h: int, colour, start: float, end: float, top_alpha: int, bottom_alpha: int) -> Image.Image:
@@ -330,7 +330,7 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--date", default=None, help="YYYY-MM-DD; default today in Rome")
+    ap.add_argument("--date", default=None, help="YYYY-MM-DD; default today in Singapore")
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--cache", default=os.path.join(HERE, ".cache"))
     ap.add_argument("--slot", type=int, default=1, choices=range(1, C.SLOTS + 1), help="which of the day's carousels")
