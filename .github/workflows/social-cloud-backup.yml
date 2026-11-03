@@ -13,7 +13,7 @@ on:
       mode:
         description: Check credentials only or process approved queue
         type: choice
-        options: [validate, check, publish, recover-gms]
+        options: [validate, check, publish, recover-gms, owner-av-test-20261103]
         default: validate
       brand:
         description: Brand to check or publish (scheduled runs use their own market)
@@ -58,6 +58,8 @@ jobs:
             python social-cloud-backup/controller.py --check
           elif [ "$BACKUP_MODE" = recover-gms ]; then
             python social-cloud-backup/controller.py --recover-gms
+          elif [ "$BACKUP_MODE" = owner-av-test-20261103 ]; then
+            python social-cloud-backup/controller.py --owner-av-test-20261103
           else
             python social-cloud-backup/controller.py
           fi
