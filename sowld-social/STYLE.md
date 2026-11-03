@@ -1,3 +1,5 @@
+> Read ../SOCIAL_MARKET_RULES.md first. Current audience and Singapore-local schedule supersede the historical six-slot schedule below. All daily counts reset at midnight Asia/Singapore.
+
 # Writing a Good Message Studio carousel
 
 ## Strategy: organic that works like paid targeting (the owner, 1 November 2026)
