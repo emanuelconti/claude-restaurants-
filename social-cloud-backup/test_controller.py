@@ -4,15 +4,16 @@ from pathlib import Path
 from policy import *
 
 class RecoveryControllerTests(unittest.TestCase):
- def fixture(self,channel,already=0):
+ def fixture(self,channel,already=0,at=None):
   source=(Path(__file__).parent/'controller.py').read_text()
   fn=next(n for n in ast.parse(source).body if isinstance(n,ast.FunctionDef) and n.name=='process_channel')
-  now=dt.datetime(2026,11,3,14,30,tzinfo=SINGAPORE)
+  now=at or dt.datetime(2026,11,3,14,30,tzinfo=SINGAPORE)
+  day=now.astimezone(SINGAPORE).date().isoformat()
   class Clock:
    @staticmethod
    def now(zone):return now.astimezone(zone)
   posts=[dict(title=f'Other {n}',stamp=now.isoformat()) for n in range(already)]
-  items=[dict(id=f'gms-{n}',brand='gms',date='2026-11-03',slot=n+1,title=f'Topic {n}',folder=f'queue/gms/2026-11-03/carousel-{n+1}') for n in range(8)]
+  items=[dict(id=f'gms-{n}',brand='gms',date=day,slot=n+1,title=f'Topic {n}',folder=f'queue/gms/{day}/carousel-{n+1}') for n in range(8)]
   def run(brand,script,*args):
    slot=int(args[args.index('--slot')+1]);item=items[slot-1]
    posts.append(dict(title=item['title'],stamp=now.isoformat()))
@@ -22,6 +23,13 @@ class RecoveryControllerTests(unittest.TestCase):
    verify=lambda item:None,R=Path('/reviewed'),subprocess=types.SimpleNamespace(check_output=lambda *a,**kw:'reviewedcommit'),os=types.SimpleNamespace(environ={}),brands={'gms':('TOKEN_NAME','goodmessage_studio')},run=run)
   exec(compile(ast.Module(body=[fn],type_ignores=[]),'controller.py','exec'),ns)
   return ns,posts
+ def test_standing_publication_continues_after_old_temporary_expiry(self):
+  ns,posts=self.fixture('ig',at=dt.datetime(2026,11,7,8,41,tzinfo=SINGAPORE))
+  ns['recover_today']=False;ns['sys'].argv=['controller.py']
+  self.assertTrue(ns['process_channel']('gms','ig'))
+  self.assertFalse(ns['process_channel']('gms','ig'))
+  self.assertEqual(len(posts),1)
+  self.assertEqual(ns['errors'],[])
  def test_explicit_recovery_fills_only_missing_posts_up_to_eight(self):
   ns,posts=self.fixture('ig',2)
   for _ in range(8):
