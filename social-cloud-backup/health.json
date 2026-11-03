@@ -1,0 +1,110 @@
+{
+  "day_utc": "2026-11-03",
+  "brands": {
+    "sp": {
+      "timezone": "Europe/Madrid",
+      "market_date": "2026-11-03",
+      "days_covered_including_today": 3,
+      "coverage": [
+        {
+          "date": "2026-11-03",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-04",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-05",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-06",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-07",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-08",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-09",
+          "approved_items": 0
+        }
+      ]
+    },
+    "sin": {
+      "timezone": "Europe/Paris",
+      "market_date": "2026-11-03",
+      "days_covered_including_today": 3,
+      "coverage": [
+        {
+          "date": "2026-11-03",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-04",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-05",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-06",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-07",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-08",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-09",
+          "approved_items": 0
+        }
+      ]
+    },
+    "gms": {
+      "timezone": "Asia/Singapore",
+      "market_date": "2026-11-03",
+      "days_covered_including_today": 3,
+      "coverage": [
+        {
+          "date": "2026-11-03",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-04",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-05",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-06",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-07",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-08",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-11-09",
+          "approved_items": 0
+        }
+      ]
+    }
+  }
+}
