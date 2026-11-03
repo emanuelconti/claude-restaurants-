@@ -71,10 +71,4 @@ if os.environ.get('GH_TOKEN'):
   if not existing:api('POST','issues',{'title':title,'body':body})
   elif existing.get('body')!=body:api('PATCH',f"issues/{existing['number']}",{'body':body})
  elif existing:api('PATCH',f"issues/{existing['number']}",{'state':'closed'})
- # Remove the dated exception once over, without changing any other workflow field.
- if now.astimezone(ZoneInfo('Asia/Singapore')).date()>dt.date(2026,11,3):
-  remote=api('GET','contents/.github/workflows/social-cloud-backup.yml?ref=claude/coao-8jloui')
-  if remote:
-   old=base64.b64decode(remote['content']).decode();new='\n'.join(line for line in old.split('\n') if "cron: '7,27,37,47,57 6-15 3 11 *'" not in line)
-   if new!=old:api('PUT','contents/.github/workflows/social-cloud-backup.yml',{'message':'Remove completed one-day Facebook recovery schedule','branch':'claude/coao-8jloui','sha':remote['sha'],'content':base64.b64encode(new.encode()).decode()})
 print('Market result snapshots and independent queue-coverage checks completed.')

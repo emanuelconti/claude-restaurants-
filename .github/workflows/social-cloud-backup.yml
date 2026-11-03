@@ -8,7 +8,6 @@ on:
     - cron: '17 8-23 * * *'
       timezone: Asia/Singapore
     - cron: '41 0-23 * * *' # UTC recovery checks; policy retains each brand's local slots and daily cap
-    - cron: '7,27,37,47,57 6-15 3 11 *' # exceptional GMS Facebook recovery on 3 November 2026 only
   workflow_dispatch:
     inputs:
       mode:
