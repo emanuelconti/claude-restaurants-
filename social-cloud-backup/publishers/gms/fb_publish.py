@@ -21,6 +21,8 @@ temporarily. The token never goes in a URL or in the output.
 from __future__ import annotations
 
 import argparse
+import io
+import uuid
 import datetime as dt
 import json
 import os
@@ -50,12 +52,20 @@ def call(method: str, path: str, token: str, params: dict | None = None) -> dict
     params = dict(params or {})
     url = f"{API}/{path}"
     data = None
+    headers = {"Authorization": f"Bearer {token}"}
     if method == "GET":
         if params:
             url += "?" + urllib.parse.urlencode(params)
+    elif isinstance(params.get("source"), bytes):
+        picture = params.pop("source")
+        boundary = "gms-" + uuid.uuid4().hex
+        fields = [f'--{boundary}\r\nContent-Disposition: form-data; name="{key}"\r\n\r\n{value}\r\n'.encode() for key, value in params.items()]
+        fields += [f'--{boundary}\r\nContent-Disposition: form-data; name="source"; filename="product-card.jpg"\r\nContent-Type: image/jpeg\r\n\r\n'.encode(), picture, f'\r\n--{boundary}--\r\n'.encode()]
+        data = b"".join(fields)
+        headers["Content-Type"] = "multipart/form-data; boundary=" + boundary
     else:
         data = urllib.parse.urlencode(params).encode()
-    req = urllib.request.Request(url, data=data, method=method, headers={"Authorization": f"Bearer {token}"})
+    req = urllib.request.Request(url, data=data, method=method, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=90) as r:
             return json.loads(r.read().decode() or "{}")
@@ -82,6 +92,39 @@ def message_hoodies(products: list) -> list:
     return [product for product in products
             if product.get("images") and "hoodie" in product.get("title", "").lower()
             and any(message in product["title"].lower() for message in messages)]
+
+
+def product_card(image_bytes: bytes, title: str, description: str) -> bytes:
+    """Bake the product label into a native photo; no external link-preview image.
+
+    Preserve the real product photo without cropping its print. The shop link
+    stays in the post/photo caption; this is not an ad-style clickable link card.
+    """
+    from PIL import Image, ImageDraw, ImageFont, ImageOps
+    source = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+    if min(source.size) < 320:
+        raise RuntimeError("Product source is a tiny placeholder; nothing published")
+    card = Image.new("RGB", (1080, 1350), "#f9fafb")
+    source = ImageOps.contain(source, (1080, 1080), Image.Resampling.LANCZOS)
+    card.paste(source, ((1080-source.width)//2, (1080-source.height)//2))
+    draw = ImageDraw.Draw(card); draw.line((0,1080,1080,1080), fill="#d5d7dc", width=2)
+    def font(size):
+        for path in (os.environ.get("GMS_CARD_FONT", ""), "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/System/Library/Fonts/Supplemental/Arial.ttf"):
+            if path and os.path.isfile(path):return ImageFont.truetype(path,size)
+        raise RuntimeError("Product-card font missing; nothing published")
+    for size in range(44,27,-1):
+        face=font(size);lines=[];line=""
+        for word in title.split():
+            candidate=(line+" "+word).strip()
+            if draw.textlength(candidate,font=face)>984 and line:lines.append(line);line=word
+            else:line=candidate
+        lines.append(line)
+        if len(lines)<=2:break
+    if len(lines)>2:raise RuntimeError("Product label does not fit; nothing published")
+    for i,line in enumerate(lines):draw.text((48,1110+i*55),line,font=face,fill="#15161b")
+    draw.text((48,1240),description,font=font(30),fill="#5d626b")
+    draw.text((48,1287),"goodmessagestudio.com",font=font(28),fill="#244638")
+    out=io.BytesIO();card.save(out,"JPEG",quality=93,optimize=True);return out.getvalue()
 
 
 def page_token(page: str, token: str) -> str:
@@ -174,9 +217,14 @@ def main():
         # Fail closed before feed publication unless every selected photo exists.
         photo_ids = []
         for card in cards:
-            photo = call("POST", f"{page}/photos", token,
-                         {"url": card["picture"], "published": "false",
-                          "caption": card["name"] + "\n" + card["description"] + "\n" + card["link"]})
+            params = {"published": "false", "caption": card["name"] + "\n" + card["description"] + "\n" + card["link"]}
+            if product_showcase:
+                with urllib.request.urlopen(card["picture"], timeout=60) as response:
+                    raw = response.read()
+                params["source"] = product_card(raw, card["name"], card["description"])
+            else:
+                params["url"] = card["picture"]
+            photo = call("POST", f"{page}/photos", token, params)
             if not photo.get("id"):
                 raise RuntimeError("Facebook did not acknowledge the native photo; no feed post published")
             stored = call("GET", photo["id"], token, {"fields": "images"})
