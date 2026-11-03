@@ -1,4 +1,6 @@
 {
+  "schema_version": 2,
+  "channels": {},
   "brand": "sp",
   "account": "socialperks.es",
   "timezone": "Europe/Madrid",
