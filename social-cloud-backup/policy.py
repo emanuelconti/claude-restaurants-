@@ -3,14 +3,17 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo('Europe/Paris')  # temporary-backup expiry and European brands
 SINGAPORE = ZoneInfo('Asia/Singapore')
-HOURS = (7, 8, 9, 13, 14, 15, 19, 20)
+HOURS = (9, 11, 14, 16, 17, 18, 20, 22)
+SIN_HOURS = (8, 10, 12, 14, 16, 18, 20, 21)
 GMS_HOURS = (8, 10, 12, 14, 15, 18, 20, 21)
-EU_CRON = '58 6-22 3-5 11 *'
+EU_CRON = '58 6-22 3-5 11 *'  # accepted only for older queued workflow events
+SP_CRON = '47 8-22 3-5 11 *'  # 09:47-23:47 Madrid
+SIN_CRON = '23 7-22 3-5 11 *'  # 08:23-23:23 Paris
 GMS_CRON = '17 0-15 3-5 11 *'  # 08:17-23:17 Singapore, including recovery checks
 QUEUE_DAYS = frozenset(('2026-11-03', '2026-11-04', '2026-11-05'))
 
 def timezone_for(brand):
- return SINGAPORE if brand == 'gms' else TZ
+ return {'gms': SINGAPORE, 'sp': ZoneInfo('Europe/Madrid'), 'sin': TZ}[brand]
 
 def local_now(now, brand):
  if now.tzinfo is None:
@@ -19,13 +22,15 @@ def local_now(now, brand):
 
 def target(now, brand='sp'):
  local = local_now(now, brand)
- minute = 17 if brand == 'gms' else 58
- hours = GMS_HOURS if brand == 'gms' else HOURS
+ minute = {'gms':17,'sp':47,'sin':23}[brand]
+ hours = {'gms':GMS_HOURS,'sp':HOURS,'sin':SIN_HOURS}[brand]
  return sum((local.hour, local.minute) >= (hour, minute) for hour in hours)
 
 def selected_brands(cron='', requested='all'):
  if cron:
   if cron == EU_CRON: return ('sp', 'sin')
+  if cron == SP_CRON: return ('sp',)
+  if cron == SIN_CRON: return ('sin',)
   if cron == GMS_CRON: return ('gms',)
   raise ValueError('Unknown cloud schedule; refusing to publish')
  if requested == 'all': return ('sp', 'sin', 'gms')

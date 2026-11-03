@@ -1,7 +1,8 @@
 name: Temporary social cloud backup
 on:
   schedule:
-    - cron: '58 6-22 3-5 11 *' # SocialPerks/Sincronia, Europe/Paris
+    - cron: '47 8-22 3-5 11 *' # SocialPerks only, 09:47-23:47 Europe/Madrid
+    - cron: '23 7-22 3-5 11 *' # Sincronia only, 08:23-23:23 Europe/Paris
     - cron: '17 0-15 3-5 11 *' # GMS only, 08:17-23:17 Asia/Singapore
   workflow_dispatch:
     inputs:

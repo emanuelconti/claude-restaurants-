@@ -16,7 +16,9 @@ Owner correction: 3 November 2026. Read this before SOCIAL_HANDOFF.md, STYLE.md,
 
 ## SocialPerks and Sincronia
 
-SocialPerks: Spanish B2B venue owners in Spain, Instagram @socialperks.es. Sincronia: English, European founders seeking funding, Instagram @sincronia.live. Their day and schedule remain Europe/Paris (same local clock as Madrid). Do not shift these accounts onto Singapore hours.
+- SocialPerks: Spanish B2B owners of cafés, restaurants, bars, gyms, salons, spas, hotels and shops in Spain, Instagram @socialperks.es. Asia/Singapore never applies. Use Europe/Madrid for the day and analytics. Temporary primary slots: 09:47, 11:47, 14:47, 16:47, 17:47, 18:47, 20:47, 22:47 Madrid, with hourly recovery through 23:47. Editorial focus: practical venue operations, quiet-hour demand, referral economics, staff-ready check-in. No consumer-fashion or founder-funding content. Prices/claims must follow the current verified product, not retired subscription wording.
+- Sincronia: English, European early-stage founders seeking funding, Instagram @sincronia.live. Use Europe/Paris for the day and analytics. Temporary primary slots: 08:23, 10:23, 12:23, 14:23, 16:23, 18:23, 20:23, 21:23 Paris, with hourly recovery through 23:23. Editorial focus: funding readiness, grants versus equity, applications, pitch evidence and founder work. Verify any programme, deadline or eligibility before presenting it as current. Never guarantee funding.
+- These are distinct initial editorial calendars based on the audiences. Optimise them separately from real account results; do not call a starting timetable a measured optimum. Each account has its own cap and actual platform history, never another brand's count.
 
 ## Shared safety and ownership
 
