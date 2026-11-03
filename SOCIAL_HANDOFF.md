@@ -1,4 +1,4 @@
-> Current owner instruction, 3 November 2026: read [SOCIAL_MARKET_RULES.md](SOCIAL_MARKET_RULES.md) FIRST. It supersedes older schedules and channel lists below. GMS uses Asia/Singapore, women 18–38 in Singapore, English and SGD; SocialPerks uses Spanish/Spain/Europe-Madrid; Sincronia uses English/European founders/Europe-Paris. GitHub Actions owns publishing during 3–5 November, independently of Claude quota and the Mac. Do not start a competing publisher. Resume only after checking receipts and the documented handover.
+> Current owner instruction, 3 November 2026: read SOCIAL_MARKET_RULES.md and SOCIAL_CLOUD_RUNBOOK.md FIRST. The cloud is the sole standing publisher, also after Thursday. Chrome Claude is primary editor; Safari Claude is backup editor only. Each brand has its own audience and market calendar; GMS is English/SGD/women in Singapore/Asia-Singapore. Older schedules and channel lists below are historical.
 
 # Social accounts: shared handoff (read this before touching any of them)
 
