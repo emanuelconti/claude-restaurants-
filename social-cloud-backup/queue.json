@@ -1637,7 +1637,6 @@
     "title": "5 ways to keep a friendship easy to return to",
     "folder": "queue/gms/2026-11-06/carousel-5",
     "sha256": {
-      "tiktok.mp4": "a089645be5c3af1dfd3696117d5692c1dc175378205472b96100721feb7146ab",
       "slide-03.jpg": "7d51a5d230dc3772516a1a96fd58c945fdb23159d07bac9b6ed39725d40aa4cf",
       "slide-02.jpg": "7e79256a6618f437fac3a7276c5d6dc8939fc3462a7b40ccea9bcc00ca11772d",
       "carousel.json": "1b22568eacc60d1de291d68dbe2d0d3f5004fcac6c3907fe8382ccc363337bdf",
@@ -1652,7 +1651,13 @@
     "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
     "publish_order": 3,
     "market_timezone": "Asia/Singapore",
-    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
+    "kind": "reel",
+    "reel_sha256": {
+      "reel.mp4": "a089645be5c3af1dfd3696117d5692c1dc175378205472b96100721feb7146ab",
+      "reel.json": "15a782061e94f04a08b2b28c9a976b2e550f888fbef4b65de324ead706b2ddeb"
+    },
+    "reel_qa": "Reviewed seven-scene vertical sequence, all decoded frames matched approved slides; original audible music"
   },
   {
     "id": "gms-2026-11-06-6",
