@@ -46,3 +46,7 @@ The screenshots show missing images in old multi_share_no_end_card link posts. A
 ### Native product showcase reliability (3 November evening)
 
 Facebook product slots 4/8 bake verified photo/name/SGD price into a portrait native upload; other slots attach every reviewed editorial slide. Sources and Facebook-native photo dimensions must be at least 320×320. A tiny/missing acknowledgement stops before feed creation, not a partial or link-preview fallback. Product destinations remain in captions. Older broken posts are not implicitly repaired by the new format. YouTube preflight rejects missing or silent audio; preserve original GMS music and test receipts.
+
+### Timely content is editorial, not an autonomous news publisher
+
+The owner permits occasional relevant news explainers within the normal daily slots, subject to the source/date/rights checks in SOCIAL_MARKET_RULES.md. Existing publisher only consumes reviewed assets. Do not create another news posting routine or publish the screenshot’s financial story without fresh verification and brand relevance.
