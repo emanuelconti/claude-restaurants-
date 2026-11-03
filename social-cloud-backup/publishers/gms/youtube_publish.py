@@ -92,6 +92,16 @@ def main():
     w, h, seconds = probe(video)
     if h <= w or seconds > 60:
         sys.exit(f"not a Short: {w}x{h}, {seconds:.1f} s (needs vertical and at most 60 s): nothing uploaded")
+    # Every new GMS Short must have the approved audible soundtrack.
+    audio = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0",
+                            "-show_entries", "stream=codec_type", "-of", "csv=p=0", video],
+                           capture_output=True, text=True, check=True).stdout.strip()
+    if audio != "audio":
+        sys.exit("Approved Short has no audio track: nothing uploaded")
+    level = subprocess.run(["ffmpeg", "-hide_banner", "-i", video, "-vn", "-af", "volumedetect",
+                            "-f", "null", "-"], capture_output=True, text=True, check=True).stderr
+    if "mean_volume: -inf" in level or "mean_volume:" not in level:
+        sys.exit("Approved Short soundtrack is silent or unreadable: nothing uploaded")
     # The owner (2 November 2026): every Short must point to the shop, so the site is in the
     # title (the only text shown under a Short) and on the first line of the description.
     title = (meta["title"][:62] + " | goodmessagestudio.com #Shorts")[:100]
