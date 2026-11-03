@@ -184,39 +184,30 @@ def main():
         cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}", "name": x["title"],
                   "description": "Shop now at goodmessagestudio.com" + price(x),
                   "picture": x["images"][0]["src"].split("?")[0]} for x in picks]
-        # A card stays blank when Facebook has not read the product page yet: ask it to read each page now,
-        # and keep only the pages that came back with an image (owner, 2 November 2026: no blank cards, ever).
-        ready = []
+        # Native photo IDs are durable. Link-preview cards can lose their images
+        # even after a successful scrape (owner evidence, 3 November).
+        # Fail closed before feed publication unless every selected photo exists.
+        photo_ids = []
         for card in cards:
-            try:
-                seen = call("POST", "", token, {"id": card["link"], "scrape": "true"})
-                if seen.get("image"):
-                    ready.append(card)
-            except Stop:
-                raise
-            except RuntimeError as error:
-                print(f"Facebook could not read {card['link']} ({error}); card left out", file=sys.stderr)
-        if len(ready) < 2:
-            sys.exit("Facebook could not read enough product pages with an image: nothing published")
-        cards = ready
+            photo = call("POST", f"{page}/photos", token,
+                         {"url": card["picture"], "published": "false",
+                          "caption": card["name"] + "\n" + card["description"] + "\n" + card["link"]})
+            if not photo.get("id"):
+                raise RuntimeError("Facebook did not acknowledge the native photo; no feed post published")
+            stored = call("GET", photo["id"], token, {"fields": "images"})
+            if not stored.get("images"):
+                raise RuntimeError("Facebook native photo has no stored image; no feed post published")
+            photo_ids.append(str(photo["id"]))
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
         # Keep a clickable shop route in the post itself even if a Facebook placement hides card labels.
         message = message.replace("(link in bio)", "")
         if "https://goodmessagestudio.com" not in message:
             message += "\n\nShop now: https://goodmessagestudio.com"
-        params = {"message": message, "link": SHOP, "multi_share_end_card": "false",
-                  "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}
-        try:
-            post = call("POST", f"{page}/feed", token, params)
-        except Stop:
-            raise
-        except RuntimeError as error:
-            # Some Pages take at most 5 cards: keep the cover, the first points and the shop slide.
-            if "child" not in str(error).lower() and "attachment" not in str(error).lower():
-                raise
-            keep = cards[:4] + [cards[-2] if len(cards) > 5 else cards[-1]]
-            params["child_attachments"] = json.dumps(keep[:5])
-            post = call("POST", f"{page}/feed", token, params)
+        message += "\n\n" + "\n".join(card["name"] + price(picks[i]) + "\n" + card["link"] for i, card in enumerate(cards))
+        params = {"message": message,
+                  "attached_media": json.dumps([{"media_fbid": photo_id} for photo_id in photo_ids])}
+        # A feed failure is ambiguous. Never blindly retry a post creation.
+        post = call("POST", f"{page}/feed", token, params)
         link = call("GET", post["id"], token, {"fields": "permalink_url"}).get("permalink_url")
     except Stop as stop:
         sys.exit(str(stop))
