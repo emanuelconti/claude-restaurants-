@@ -1,0 +1,37 @@
+name: Social cloud recovery timer
+on:
+  workflow_run:
+    workflows: [Social publisher by market]
+    types: [completed]
+    branches: [claude/coao-8jloui]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: social-cloud-recovery-timer
+  cancel-in-progress: true
+jobs:
+  recover:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.head_repository.full_name == github.repository &&
+       github.event.workflow_run.head_branch == 'claude/coao-8jloui' &&
+       (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch') &&
+       github.event.workflow_run.conclusion != 'cancelled')
+    environment: social-publisher-recovery-wait
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Recheck publisher state and wake the same guarded queue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          state=$(gh api "repos/$GH_REPO/actions/workflows/social-cloud-backup.yml" --jq .state)
+          if [ "$state" != active ]; then
+            echo "Publisher is disabled; owner control is respected. Recovery stops here."
+            exit 0
+          fi
+          gh workflow run social-cloud-backup.yml --repo "$GH_REPO" --ref claude/coao-8jloui -f mode=publish -f brand=all
+          echo "One cloud recovery requested. The publisher checks local clocks, counts, receipts and platform limits."
