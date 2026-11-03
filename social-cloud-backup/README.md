@@ -12,7 +12,7 @@ Each source slide and cover was visually inspected. Each reel hook, five scenes 
 
 ## Schedule and duplicate prevention
 
-Cumulative targets at 07:58,08:58,09:58,13:58,14:58,15:58,19:58,20:58 Paris: 1,2,3,4,5,6,7,8. A lightweight cloud check runs hourly 07:58–23:58 to allow recovery, particularly when Facebook's 60 actual minutes have not elapsed. Recovery checks do not raise the target or daily cap. At most one new item per account/channel in a run.
+SocialPerks and Sincronia cumulative targets at 07:58,08:58,09:58,13:58,14:58,15:58,19:58,20:58 Europe/Paris: 1,2,3,4,5,6,7,8. Good Message Studio has a separate Asia/Singapore calendar and targets at 08:17,10:17,12:17,14:17,15:17,18:17,20:17,21:17 Singapore. Its hourly :17 cloud checks run 08:17–23:17 Singapore, including the owner’s night, and count all four channels independently on the Singapore date. The two cron events are routed to their own brands. GMS inner publisher guards also use Asia/Singapore. See ../SOCIAL_MARKET_RULES.md for targeting and shared handoff. A lightweight cloud check runs hourly 07:58–23:58 to allow recovery, particularly when Facebook's 60 actual minutes have not elapsed. Recovery checks do not raise the target or daily cap. At most one new item per account/channel in a run.
 
 Every channel uses its own verified identity, current remote history, count and exact-title deduplication. Claude's posts count towards the same eight/day target. A second read occurs immediately before publishing. Workflow concurrency serializes cloud runs. No cross-account API transaction exists, so simultaneous external publication by Claude cannot be locked by this workflow; its scheduled times are offset from Claude's main runs.
 

@@ -1,7 +1,7 @@
 """Cloud publisher for exact assets that passed local visual QA."""
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
-from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 if now>=dt.datetime(2026,11,6,2,tzinfo=TZ):
@@ -59,12 +59,16 @@ def history(b,channel):
  rc,out=run('gms','cloud_channel_stats.py',channel,quiet=True)
  if rc:raise RuntimeError(channel+' identity/history unavailable')
  return json.loads(out)['posts']
-for b in brands:
+for b in selected_brands(os.environ.get('BACKUP_CRON',''),os.environ.get('BACKUP_BRAND','all')):
  for channel in (['ig'] if b!='gms' else ['ig','threads','youtube','facebook']):
   tag=b+':'+channel
   try:
-   posts=history(b,channel);count=count_today(posts,now)
-   print(f'{tag}: identity verified; {count} posts today.',flush=True)
+   posts=history(b,channel)
+   brand_now=local_now(dt.datetime.now(dt.timezone.utc),b)
+   if brand_now.date().isoformat() not in QUEUE_DAYS:
+    print(tag+': outside approved local calendar days; skipped.');continue
+   count=count_today(posts,brand_now,b)
+   print(f'{tag}: identity verified; {count} posts today ({brand_now.tzinfo}, {brand_now.date()}).',flush=True)
    if '--check' in sys.argv:continue
    # Reconcile completed and ambiguous attempts against actual remote titles first.
    for item in manifest:
@@ -75,17 +79,20 @@ for b in brands:
    save()
    held=[k for k,v in state.items() if k.endswith(':'+channel) and k.startswith(b+'-') and v.startswith('held:')]
    if held:raise RuntimeError('An earlier publication is ambiguous; reconcile it before sending another item')
-   if count>=min(target(now),8):continue
-   if channel=='facebook' and not gap_ok(posts,now,60):
+   if count>=min(target(brand_now,b),8):continue
+   if channel=='facebook' and not gap_ok(posts,brand_now,60):
     print(tag+': Facebook 60-minute gap respected; skipped.');continue
-   item=next_item(manifest,b,channel,now.date().isoformat(),state)
+   item=next_item(manifest,b,channel,brand_now.date().isoformat(),state)
    if item is None:raise RuntimeError('No unused approved item for today while below target')
    verify(item);key=item['id']+':'+channel
    # Second remote read immediately before publication reduces overlap with Claude.
    latest=history(b,channel)
-   if count_today(latest,now)>=min(target(now),8):continue
+   fresh_now=local_now(dt.datetime.now(dt.timezone.utc),b)
+   if fresh_now.date()!=brand_now.date():
+    print(tag+': local date changed while checking; skipped.');continue
+   if count_today(latest,fresh_now,b)>=min(target(brand_now,b),8):continue
    if seen(item,channel,latest):state[key]='confirmed remotely';save();continue
-   if channel=='facebook' and not gap_ok(latest,now,60):continue
+   if channel=='facebook' and not gap_ok(latest,fresh_now,60):continue
    state[key]='held: publication attempt started; reconcile remotely before retry';save()
    args=['--date',item['date'],'--out',str(R/'queue'/b)]
    reel=item.get('kind')=='reel'

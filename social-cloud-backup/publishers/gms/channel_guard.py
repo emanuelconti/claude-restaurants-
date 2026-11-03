@@ -33,7 +33,7 @@ STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon
 DAILY_CAP = 8  # temporary backup: eight actual posts per local day, including Claude posts
 MIN_GAP = 0  # owner, 2 Nov 2026: no wait on YouTube/Pinterest/TikTok (only Facebook keeps 60)
 CROSS_GAP = 0  # the owner, 2 November 2026: the channels go out together; 60 min per channel and 10/day stay
-MADRID = ZoneInfo("Europe/Madrid")
+SINGAPORE = ZoneInfo("Asia/Singapore")
 
 
 class Stop(RuntimeError):
@@ -86,7 +86,7 @@ def http(method: str, url: str, token: str | None = None, form: dict | None = No
 def check_limits(stamps: list, channel: str, cap: int = DAILY_CAP, gap: int = MIN_GAP) -> None:
     """stamps: aware datetimes of the channel's recent posts. Raises Stop when a limit says no."""
     now = dt.datetime.now(dt.timezone.utc)
-    today = sum(1 for s in stamps if s.astimezone(MADRID).date() == now.astimezone(MADRID).date())
+    today = sum(1 for s in stamps if s.astimezone(SINGAPORE).date() == now.astimezone(SINGAPORE).date())
     if today >= cap:
         raise Stop(f"daily cap: {channel} already has {today} posts today (cap {cap}), nothing published")
     if stamps:

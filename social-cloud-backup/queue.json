@@ -42,7 +42,7 @@
     "brand": "sp",
     "date": "2026-11-03",
     "slot": 3,
-    "title": "5 preguntas antes de ofrecer un pequeño regalo",
+    "title": "5 preguntas antes de ofrecer un peque\u00f1o regalo",
     "folder": "queue/sp/2026-11-03/carousel-3",
     "sha256": {
       "slide-03.jpg": "6103d06241e284a0f79643a897337f061d9a9ecf7ba7ac9cfcbf9440d26473ae",
@@ -61,7 +61,7 @@
     "brand": "sp",
     "date": "2026-11-03",
     "slot": 4,
-    "title": "5 cosas que revisar en la carta de tu cafetería",
+    "title": "5 cosas que revisar en la carta de tu cafeter\u00eda",
     "folder": "queue/sp/2026-11-03/carousel-4",
     "sha256": {
       "slide-03.jpg": "a98bc05bf209117e0a41df547daded92c3c07623d05d38a8878fe35170f3315c",
@@ -80,7 +80,7 @@
     "brand": "sp",
     "date": "2026-11-03",
     "slot": 5,
-    "title": "5 detalles para preparar una cita de peluquería",
+    "title": "5 detalles para preparar una cita de peluquer\u00eda",
     "folder": "queue/sp/2026-11-03/carousel-5",
     "sha256": {
       "slide-03.jpg": "5fa733f0ce2bcf26f8638b8c7665f71a59df4de5f4bd2c63aae9a890476c2f82",
@@ -137,7 +137,7 @@
     "brand": "sp",
     "date": "2026-11-03",
     "slot": 8,
-    "title": "5 detalles útiles en una tienda de barrio",
+    "title": "5 detalles \u00fatiles en una tienda de barrio",
     "folder": "queue/sp/2026-11-03/carousel-8",
     "sha256": {
       "slide-03.jpg": "6a2b6783e6e7ce413c41014316b8baaa581958d7a1b12119b3f9606acb100e9f",
@@ -175,7 +175,7 @@
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 2,
-    "title": "5 cosas para un relevo de turno más claro",
+    "title": "5 cosas para un relevo de turno m\u00e1s claro",
     "folder": "queue/sp/2026-11-04/carousel-2",
     "sha256": {
       "slide-03.jpg": "b3b7cb50abf781509a1c4745fe2d7ff4833caf41e8778bf1237d5d762596c837",
@@ -213,7 +213,7 @@
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 4,
-    "title": "5 detalles de una confirmación de reserva útil",
+    "title": "5 detalles de una confirmaci\u00f3n de reserva \u00fatil",
     "folder": "queue/sp/2026-11-04/carousel-4",
     "sha256": {
       "slide-03.jpg": "e5d3a68aba90024dd6b2aec4ef4e8a012ec221c33716b8abf35021238f244715",
@@ -251,7 +251,7 @@
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 6,
-    "title": "5 cosas que aclarar antes de una sesión de bienestar",
+    "title": "5 cosas que aclarar antes de una sesi\u00f3n de bienestar",
     "folder": "queue/sp/2026-11-04/carousel-6",
     "sha256": {
       "slide-03.jpg": "3cd7f05bb82d5573e2d522f947a8cbc5e3236756d0f161da9be60f7afe1b665b",
@@ -289,7 +289,7 @@
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 8,
-    "title": "5 señales de que tu mensaje de oferta necesita una revisión",
+    "title": "5 se\u00f1ales de que tu mensaje de oferta necesita una revisi\u00f3n",
     "folder": "queue/sp/2026-11-04/carousel-8",
     "sha256": {
       "slide-03.jpg": "3e517247b66fac5c2c56acb50738f4f0c94ac644eea7187e3645c5f36555e1ed",
@@ -327,7 +327,7 @@
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 2,
-    "title": "5 detalles que hacen más claro un escaparate",
+    "title": "5 detalles que hacen m\u00e1s claro un escaparate",
     "folder": "queue/sp/2026-11-05/carousel-2",
     "sha256": {
       "slide-03.jpg": "81c4effbb70eb564eb3c09caac838d51de2cf1652fae1e8437f13f18c863627c",
@@ -346,7 +346,7 @@
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 3,
-    "title": "5 momentos para comprobar la información de tu hotel",
+    "title": "5 momentos para comprobar la informaci\u00f3n de tu hotel",
     "folder": "queue/sp/2026-11-05/carousel-3",
     "sha256": {
       "slide-03.jpg": "8df8869f71e0c3ec7600dce6942bd42b1b86cf9bbd7ad9d7e4b10cfe649e58cd",
@@ -422,7 +422,7 @@
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 7,
-    "title": "5 detalles para organizar las consultas de tu salón",
+    "title": "5 detalles para organizar las consultas de tu sal\u00f3n",
     "folder": "queue/sp/2026-11-05/carousel-7",
     "sha256": {
       "slide-03.jpg": "2080ee1c49fb89be0d4afe12a2a732f87eb490f7ccf47b00406276cd9b03d91f",
@@ -926,15 +926,18 @@
       "slide-04.jpg": "f2a5c3dc486d04cc758f7362391938f8646317b33b320226c7d7b8b14037f592",
       "slide-06.jpg": "01760cc8c65bd0e7cae2beee6082e86722375179cde9986a2a46975e110ec012",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "a13b9170c35d05888d84c8c05639b90afd00cb1e49c1750faa6940fba1552b1c"
+      "carousel.json": "86738d6096c789484c2f7218eaa358b6aa06661e186b2b05f819220850fd49ef"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
     "kind": "reel",
     "reel_sha256": {
       "reel.mp4": "fbc2b5852e1cc1c45d2957b2a781f6268bce1c225e1cf81e3f16fc7fb9ddfb75",
-      "reel.json": "904960ac64096bdc85209af33dacde88b2bdf8be2f41700388d4a239452a69b0"
+      "reel.json": "43ca92f38ceb0a435840ca491be93347588b53c32d27a34cd965dba678f06508"
     },
-    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+    "reel_qa": "Hook, each of five scenes and closing scene inspected",
+    "publish_order": 3,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-2",
@@ -951,11 +954,14 @@
       "slide-04.jpg": "5fb77e94cff95e9deed91c08762787ca6b2383531261054a31d99f9a5705aec7",
       "slide-06.jpg": "09fd85be16f7d1a31f702c2da3b9dfa631a6367e8688a4bd352041e12a3812e9",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "1b46cd16014fe93ddf7863dda682073c629070044b49b7a5c3a22dfce5b58771",
+      "carousel.json": "fc526f1f2cc8ac28b2c865ba8cf4250d254862098f5de33dc657b6b076401291",
       "tiktok.mp4": "f883bee7e38f486ce1b3567764430934c6267a14eff8cd93607f7f90daebcda0"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 1,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-3",
@@ -972,11 +978,14 @@
       "slide-04.jpg": "340b3b6ff5675532cdc2b11f2adc2d6625e4543e2c3918ec71ade7b32f131338",
       "slide-06.jpg": "853899226fa2c20a978ad2760da0fd395b98b46d60172c2af5754fb5f3a13428",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "238edea19a9ae6314bd690b3a9d3fce80e5f078bfbef7e571eb2c5c76e3a8e62",
+      "carousel.json": "54fc02336369e24d62d44f13a982e751ae3771d8da6c85468447fdf439033ff2",
       "tiktok.mp4": "6c9e54db5ca8bb39732c94d67e28fbb4275bd2115071cd806a77c63758cd3a3a"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 4,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-4",
@@ -993,11 +1002,14 @@
       "slide-04.jpg": "d9847f86aff4f6593bb98d21359ed865924f766fba199901144216ec19af0c5c",
       "slide-06.jpg": "758f8d6ac49c14e928b5eb10302e47da0c1f3b7460e934e7fbe8fc1b356857ea",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "36f3045bb25fca9999bbfe221cd40a0cd685c44a342b92de0eb179cdcc7c8fef",
+      "carousel.json": "4049b698c04bc4acf225fbda6f0032e1ab6625d5f9988fbbbd0756472e664399",
       "tiktok.mp4": "cfbe2b7d48ea010806edcbdea462f86b16db49f7216580efd8b4d024dcc12026"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 6,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-5",
@@ -1014,11 +1026,14 @@
       "slide-04.jpg": "62704ec45cea6307e7169320a4de9743022d25866a10fc254769db71cddc8e1f",
       "slide-06.jpg": "64ffec14762c1d4b7f2966e8ba2fb6110e3c99d3bbed7983b4749b2927bf6381",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "50b9fb5bf50b0b0cd9950da1af3dfcf8edfe64f15c100d39003c124c7b24778d",
+      "carousel.json": "07fab8724598d355361dd4c7a99ea0e11247a38e01e811f7f93fb1a0aea734e1",
       "tiktok.mp4": "935b9c0c1a4500ce3f22b5f53abcf2d79afa5c8b4bbff3955b2c979ad11e3db0"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 2,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-6",
@@ -1035,11 +1050,14 @@
       "slide-04.jpg": "156b2e6c22ff9a35f8f1dbcc25ea3f8c2b41daff9414394d1a784e54229b64ba",
       "slide-06.jpg": "b77167c0c6724ecf995e9d9ae263f052631ed85ee2c56bf62887c51b7312d175",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "7dd557bd3ea24f9ed5c3b68dc05847dcf9cf382304345ab5ea29ed7625d6c259",
+      "carousel.json": "ac1f2adeb4bbc58b2c2a1f39dd7e4192e7cc482f05173eccafc6868a5422defe",
       "tiktok.mp4": "913e58b1d69d4ff2d2386276758984c727dea3e2ea1aea7b39bf15ea0e2ca5dd"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 7,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-7",
@@ -1056,11 +1074,14 @@
       "slide-04.jpg": "d6795333477aa91f8b2810f1e073d0ff5b795c66ac2f9f0764eed03c05e6fbdf",
       "slide-06.jpg": "0d00eab8021c71b37e9702bbdabdb390012a0e4f5c7e2cf87a55d24a23bce920",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "bf30a652ffa79930d5ac63ecd2d5050ee3d6eaf50a3ef133f2d0e3573f00d633",
+      "carousel.json": "0848f527000443c46c5e078f46d2632974d21932f76443ec77b3cfbb7ae5a7ad",
       "tiktok.mp4": "bf12b6bce02892b08c0caef2f4c327df32c2dacf7592a097017bdadf1bd09bfa"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 5,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-03-8",
@@ -1077,11 +1098,14 @@
       "slide-04.jpg": "aeba395ce9df56284a737d0645b68e0657009e61d8fc618cb66e300c737a4f1d",
       "slide-06.jpg": "b6b42f3cb5964b554b0fafa669118ef9d6a19c3df83b8a5c9580d0a9bae4d0c2",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "464d7eb64beb20ae8dd67b22b1f1e2554800934891c7b951b88ff2b4cf08f091",
+      "carousel.json": "8fbdf463a7adeb604b4b93f567ca106c6a638eab7f1ae24cca2f0777e5db6137",
       "tiktok.mp4": "90c7c452ed6b8ea8b34e537fd767b1f587928afe0566f7b7532279856d961f7f"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 8,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-1",
@@ -1098,15 +1122,18 @@
       "slide-04.jpg": "1fafb5785d1b5870cb638c198d58c9baaf2290deab439a91734e94ee61f24e39",
       "slide-06.jpg": "dc110584641418e06ddc3c45d90a89f3239b4a3b48b758cad5c3a8c66e2564f4",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "c66d22da2a561a8b46ca18623642d0c7873f0a8b7344c28f3362443f766a4d35"
+      "carousel.json": "1eddfb34f18eabfd8134bb2c7e31167ff0a369dd50e23d6281e7ad4975e93a02"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
     "kind": "reel",
     "reel_sha256": {
       "reel.mp4": "93f3cfd51dc8a78bd90d07f30a2dfac559b5d073387208d61a3d111011cf4976",
-      "reel.json": "02d2045ee9e6b61c4a161caf7e6fe66f8b9bcacdad253cbbef6a8180f78b04df"
+      "reel.json": "ee70460187ada4cbca75bde92ee88c5ff62efdd5b8a0d60fc526e62e131715fe"
     },
-    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+    "reel_qa": "Hook, each of five scenes and closing scene inspected",
+    "publish_order": 3,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-2",
@@ -1123,11 +1150,14 @@
       "slide-04.jpg": "3e6a9c59609e2d2591e7b92e3967c3030bc320657dc2ed0a488cba3d3c749f2d",
       "slide-06.jpg": "7138d721f678a990f565741fbb05c19d745e1a8a9fa6f88d1898202236af416b",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "b7894aa297302543eb512ab2b440b27ddf95319ff18b9a2b41b43e68389c0a04",
+      "carousel.json": "c7a9846eb93f52c41f8c38ae381a1a02b89401394d45f4ad9c1ad4a33390b4c3",
       "tiktok.mp4": "e8500080e4f64f1d5011eb46ccf349ff9e5efe05dfcdf7806385f62e50d56be7"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 8,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-3",
@@ -1144,11 +1174,14 @@
       "slide-04.jpg": "c5c46843a11aa32fcbeeac68b198721f978ec2a487313b695cc18815a49e5e1a",
       "slide-06.jpg": "6d8fbc069286cf8ac499f1209ed217323796b939babeaec4ef433bab647d2111",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "22e6f0d5b86ca051fdd90692e5bd1cfd872de4403628ab4d1020e8c04b2cb210",
+      "carousel.json": "693d27c7aafe4e87dc942ea665f2c698a1af517528865dff07ad4de7f6e7160b",
       "tiktok.mp4": "e3a9cd4af0cb0db3e0efa1248fceda594d17d85a662afc47aba0cc08ad2d5ddb"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 4,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-4",
@@ -1165,11 +1198,14 @@
       "slide-04.jpg": "c7824edfb0e0206fca85635129f38db1dbbb74ec8376a3154346b61e1d6284ae",
       "slide-06.jpg": "7a5749514b1642089adc0050183ebd2a39f560043fc9f6971d4d2c789ee7a73b",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "1ef0494026dbfe60b29f31268752e68cb120fd89af8fe57a09aa9348c1f10670",
+      "carousel.json": "8c7c65bd80ddb12decb4e0fbbda53274ddb4a73ee420bd12ced3fd04ece0c715",
       "tiktok.mp4": "f2af2a2ab624e4c06cef3adfb5135ec3598a5ebe5c1cba7206f7d69828d9107c"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 6,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-5",
@@ -1186,11 +1222,14 @@
       "slide-04.jpg": "d95b0f68e6bf5f57a3f8e9ee9a1936e94307bf464a36ae0be01fb3d95c3f8a33",
       "slide-06.jpg": "7a1161e85ffbba7f2d81c987e845e2cb4418c334d018d1993d5342da3d3434cf",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "2ec80f6ae5ad0484db1420892dff5d77ddc6028635c980ac69de22d0a87be834",
+      "carousel.json": "0fc3ef26fca96cf42f8d73fec1ee8a88da8f93778c281dfa92c2b45db48930e3",
       "tiktok.mp4": "1d46c984d21242321686d5c2f17c91d8c4a2dd6b24b3a2d447e36a43c1d43ea1"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 7,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-6",
@@ -1207,11 +1246,14 @@
       "slide-04.jpg": "6a57193c478ed4a19b1c8aa92b4fe34ecbf237ee5fbf75a5db910c32192e0b58",
       "slide-06.jpg": "9795de6f74ef551cdfb1a78381cb9de7f36e790f87d86fa9ba00b9f96da3044e",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "8dfda70a8e3e77a80d12433c196511c9bba3457bc4d006f56a4a9d7751922ddf",
+      "carousel.json": "be22c03f8f70034fdd28208960ac19b166eaa3f868b36d678ad3cd26acfd1585",
       "tiktok.mp4": "9801243f31126e75b7faf4280d1f483ed5a549b456111ce3afcd6f4e4a8629c7"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 1,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-7",
@@ -1228,11 +1270,14 @@
       "slide-04.jpg": "abb6347c7957f93308f454d486ac3885b28cc510bd2a58a77190a074d284a65a",
       "slide-06.jpg": "59ea72d9809624c41eda26390367441ea789f1dedf81afd06acec9e5a731521a",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "4f0dd8bc4b32948c6453eea44e2f2b68492a69220045d23f17bd883fe83602d5",
+      "carousel.json": "41dcd51680402fcdd3882eaaa08aeec197aba4d390ed186935c355f95e971e30",
       "tiktok.mp4": "2596aa5215e6cfb94f61643503042f7e5492658787c3a3b8ca04052c06b0e3d9"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 2,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-04-8",
@@ -1249,11 +1294,14 @@
       "slide-04.jpg": "93249131fa49232116887ed51719155a5e54cb377ba92e64a4ba70f70280ac51",
       "slide-06.jpg": "612851033ec78ad539fec1a6ff956b971277ad8f4735e81393e53b8ef269c634",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "4ea7594f88ab07276b693896343b61b23965d223d03e1bac6f1133e5fe38d9b8",
+      "carousel.json": "ab10d9c2ae26df542f41eb59e67f31721177334d777e2c927c7fe55958f5f321",
       "tiktok.mp4": "5aa6adae8807f32b08f04cc926dd5923faf7fddd1e8415c064ccff1db143d252"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 5,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-1",
@@ -1270,15 +1318,18 @@
       "slide-04.jpg": "6eca7bd16cd727af058de40565c8eb5744d98aad3cddf87d367ea604904ccc5e",
       "slide-06.jpg": "9081b04c4c158b903900016fbce9e5dd94e31ef139ca56cc13ff6caf1a106415",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "af192949b104d801fc1e6ba4a9d70238e11790d55d18b167f8292d4cbb53b3bb"
+      "carousel.json": "4c9251129a664b01210324309bdfc1cf1c5ccca6603080ca76fb52e0bf20e1bf"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
     "kind": "reel",
     "reel_sha256": {
       "reel.mp4": "e82f88227e11fcb5b424cae331cb78490bf4b8db08d42fb4dd574cc754e04e83",
-      "reel.json": "bab09da7465b3a917a6c05bb933593124d58b602e902e3f7879798e48c659d72"
+      "reel.json": "3ab3b0939d1b2b225a12570bbd7b41dbeeab0bc538bb73b200956945bfeb1af7"
     },
-    "reel_qa": "Hook, each of five scenes and closing scene inspected"
+    "reel_qa": "Hook, each of five scenes and closing scene inspected",
+    "publish_order": 3,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-2",
@@ -1295,11 +1346,14 @@
       "slide-04.jpg": "bf9ab5453db34aeda1dbf0e19ece1ef0b525b0781fd2b27128ee99173b409df7",
       "slide-06.jpg": "1cab31db3ee3e8bd9b0fb23f253cede5c1f6438fd1433ebe299ec124227c8492",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "438c614e28024e9065ca93b3623f4f7c0235987d0a8388549a68e749299dcf7f",
+      "carousel.json": "7355427984e2ef84dc09a578a9561d24b6eee646a2acf61eb22b323ff22bda36",
       "tiktok.mp4": "2ff53b6a5ed63a037bed75c34ce832596cc93b551a08934b063ebf135b60456e"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 1,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-3",
@@ -1316,11 +1370,14 @@
       "slide-04.jpg": "a97dbee24e755faaa127f2a69c1e69358d5b346b0d77c5d9a8a353c4412560c6",
       "slide-06.jpg": "29a0779c3621e35e4acea8cdff89cf2df0db38e839344947841fa9ed6a9f20a4",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "fd562cc85acb0db75c86c819f73fc85974f0d2c7219bd9eec277c8a6840dfe2e",
+      "carousel.json": "f511a858d0976ff2984dea7b9f27b65f4400778a945ecad8fe107ed0e23eaef6",
       "tiktok.mp4": "7e6aa1dba4db339f7301a8f116baef2b3d3d82d58a2acf90cee8cf930ba3995d"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 5,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-4",
@@ -1337,11 +1394,14 @@
       "slide-04.jpg": "fbcf69b6579c095461093471054cca03a48d48ed372354a6630261348b46a228",
       "slide-06.jpg": "dc108131ac7ae3cfcd6334b8aa689671e9d52671fa6f19e3a7dc18c489f7bb6c",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "4e11bd45a8e61ef9e3714b713d474d9504d136dc2490be51bf229c024495cd14",
+      "carousel.json": "caf4c5d7e7684d17b66b589df8b2600f3714e93bbb01015e7b3cf21a278200a1",
       "tiktok.mp4": "9e5c50217eaf4736097d5af6f83446814e1e33b8b098ac53720bbba1cdc43394"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 4,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-5",
@@ -1358,11 +1418,14 @@
       "slide-04.jpg": "7b1734a04516454931684ff85672aae3799499fcac58dcc1d71cddb8642ffac1",
       "slide-06.jpg": "6ca74d90151327485979bbd293605ee7806e0d6a39653aaf5f3dc76db8c5ded3",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "1249d1d663b4592b73038f6f8a1fda9ee111adf431a7da3f9559a711c151a58e",
+      "carousel.json": "362ee534393c1e6c436cb856272a49c9b2efb16da968b3f72adf8693248e6536",
       "tiktok.mp4": "525448f154dbc0e983dfbc3f498bf29776fc1caa869b22b69bcc4aa2c23fcf0f"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 6,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-6",
@@ -1379,11 +1442,14 @@
       "slide-04.jpg": "1bec70587922747a15611b271f89f6d99e9b013089affda9004b37c801330604",
       "slide-06.jpg": "75ad5d65c58936d1aec6496b96b2b127850b09930478d2cc6ddda7d322fc0c08",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "697863c3abc6f1b2019ec917bbb46a6c05f6ef05d34662926c0f33dc12dff244",
+      "carousel.json": "e8ba01c4d462f8786427afe2652877fa9bbd04bd2a52fec492e9f76100379182",
       "tiktok.mp4": "6fe21c091fa6b6fba71f31fc33afa520e4be443c674cf6bcf2fe993f6d421499"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 2,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-7",
@@ -1400,11 +1466,14 @@
       "slide-04.jpg": "34166ed4e31cd3250f1afc58fd9c6324810c86ebb4ed38b09deddd4970c1cff3",
       "slide-06.jpg": "13d0750f3d27acc7b83d7a16061dbb4519f5bac3a56213b95288b89c9ebd42bf",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "80013abea05e8b5eb30aa7adaba9700c751fc90e62b33bfe60e52d354098216b",
+      "carousel.json": "ac6d13fd320df756e7be6c801625a2ad9d128ed300cf5783891dae20714769da",
       "tiktok.mp4": "489f4fe4725eb99789db44925650981d92453a447689779c111ee270d72f5ba9"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 8,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   },
   {
     "id": "gms-2026-11-05-8",
@@ -1421,10 +1490,13 @@
       "slide-04.jpg": "948d617aee3e3db1cd9c40beb96366143dfb23320c7f25bd2c711569261c6bfb",
       "slide-06.jpg": "93989491309617b234856bcfe0cddacea39508e86f590da2926dac2d560ee30d",
       "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85",
-      "carousel.json": "1cc6895bc9e097d05bd9af271cd3d0d8c437894b215d53fa4bdea18387e5949f",
+      "carousel.json": "32b3511180c7b1c7ff1dd0cb353940ad89157f17c136db435c920ffccf0daf44",
       "tiktok.mp4": "adffd51e4ce4bb06c7a8813aab2d3788b39835600095ed149a23b122b65244f3"
     },
     "qa": "Every slide and cover visually inspected; approved 2026-11-03",
-    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255"
+    "video_qa": "Seven decoded scene frames compared with reviewed source slides, mean pixel error below 6/255",
+    "publish_order": 7,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women in Singapore, 18-38; SGD; message hoodies only"
   }
 ]

@@ -1,7 +1,8 @@
 name: Temporary social cloud backup
 on:
   schedule:
-    - cron: '58 6-22 3-5 11 *'
+    - cron: '58 6-22 3-5 11 *' # SocialPerks/Sincronia, Europe/Paris
+    - cron: '17 0-15 3-5 11 *' # GMS only, 08:17-23:17 Asia/Singapore
   workflow_dispatch:
     inputs:
       mode:
@@ -9,6 +10,11 @@ on:
         type: choice
         options: [validate, check, publish]
         default: validate
+      brand:
+        description: Brand to check or publish (scheduled runs use their own market)
+        type: choice
+        options: [all, gms, sp, sin]
+        default: all
 permissions:
   contents: write
 concurrency:
@@ -36,6 +42,8 @@ jobs:
         env:
           SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
           BACKUP_MODE: ${{ inputs.mode }}
+          BACKUP_BRAND: ${{ inputs.brand }}
+          BACKUP_CRON: ${{ github.event.schedule }}
         run: |
           if [ "$BACKUP_MODE" = validate ]; then
             python social-cloud-backup/controller.py --validate

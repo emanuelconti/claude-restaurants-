@@ -1,0 +1,25 @@
+# Shared social market rules
+
+Owner correction: 3 November 2026. Read this before SOCIAL_HANDOFF.md, STYLE.md, any publishing routine or older chat instructions. This is shared across all three brand branches and applies to every Claude and Codex account. Never merge their audiences or calendars.
+
+## Good Message Studio
+
+- Market: Singapore. Audience: English-speaking women aged 18 to 38 living in Singapore: students, young professionals, friends buying thoughtful gifts, young mothers. This is an organic content brief, not a claim that a platform restricts delivery to that demographic. No advertising spend is authorized.
+- Calendar, remote-history count, daily reset, queue date and performance-hour reporting: Asia/Singapore, UTC+8, throughout the year. Never Europe/Madrid, Rome, Paris, browser time or server UTC. At 08:17 Singapore it is 01:17 Paris in November; publish from the cloud while the owner's Mac is off.
+- Temporary cloud backup (3–5 November): eight posts per actual Singapore day per active channel, including posts by any Claude. Primary Singapore slots: 08:17, 10:17, 12:17, 14:17, 15:17, 18:17, 20:17, 21:17. Hourly :17 checks through 23:17 are recovery opportunities, not extra posts. At most one new item/channel/run. No catch-up burst.
+- Match content to the Singapore moment: morning commute/workday, friendship/shareable notes, lunchtime reel, afternoon useful product/gift ideas, journey home, evening friendship/self-kindness. Existing reviewed queue is reordered accordingly; the reel is at lunchtime. These are initial editorial windows, not proven best-performing hours.
+- English copy and SGD prices. Verify any price, fabric, stock, delivery claim or offer in the real store before using it. Everyday local relevance can include MRT commutes, office air-conditioning, kopi, rainy afternoons and gifts for her; use it naturally, without stereotypes or inventing facts.
+- Feature only real message hoodies from goodmessagestudio.com. No plain garments, irrelevant objects, AI-looking people, or invented reviews. Inspect every slide, cover and reel scene.
+- Useful searchable captions, a few relevant Singapore/style/gift keywords, and varied relevant hashtags including #GoodMessageStudio and #Singapore. Instagram points to the shop link in bio. Facebook and Threads have a real shop URL; YouTube points to the clickable shop link on the channel page. Do not pretend a Shorts description link is clickable.
+- Optimise only from measured results: read PERFORMANCE.md, review Singapore-local posting hours and actual reach, saves, shares, shop clicks and retention when available. Give reach/engagement denominators and sample sizes; do not call likes alone conversion or invent demographic certainty. With insufficient data retain the balanced starting schedule. No new paid analytics permissions or ad campaigns.
+- Enabled backup channels: Instagram @goodmessage_studio, its Facebook Page, Threads @goodmessage_studio and YouTube UCsQQkWC_XVXr4_axBT-KZNA only. Pinterest, TikTok and Stories remain OFF pending separate confirmed approval/instruction.
+
+## SocialPerks and Sincronia
+
+SocialPerks: Spanish B2B venue owners in Spain, Instagram @socialperks.es. Sincronia: English, European founders seeking funding, Instagram @sincronia.live. Their day and schedule remain Europe/Paris (same local clock as Madrid). Do not shift these accounts onto Singapore hours.
+
+## Shared safety and ownership
+
+From 3–5 November the publisher of record is GitHub Actions, not a Claude usage-dependent routine: https://github.com/emanuelconti/claude-restaurants-/actions/workflows/social-cloud-backup.yml . Scheduler is on default claude/coao-8jloui; controller, reviewed media and state.json receipts are on codex/social-cloud-backup. Read actual platform histories and receipts before attempting anything. Do not run another publisher in parallel during backup ownership. A limit-exhausted Claude cannot process a message now; these committed instructions must be read after it resumes.
+
+Check the per-channel real count and identity, use exact-title dedupe, preserve held ambiguous requests, never blindly retry, stop the affected channel on platform restrictions. Facebook retains 60 actual minutes between posts. YouTube must be confirmed public, not merely requested public. No token values in files or messages. Expiry remains 6 November 2026 02:00 Europe/Paris; hand over deliberately, never silently restart old duplicates.

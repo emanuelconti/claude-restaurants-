@@ -323,7 +323,7 @@ def main():
         # Never more than DAILY_CAP a day, and never two posts close together, counted
         # on the account itself: on 31 October a burst of posts got the Meta app blocked.
         from zoneinfo import ZoneInfo
-        local = ZoneInfo("Europe/Rome")
+        local = ZoneInfo("Asia/Singapore")
         now = dt.datetime.now(dt.timezone.utc)
         stamps = [dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for m in recent if m.get("timestamp")]
         today = sum(1 for t in stamps if t.astimezone(local).date() == now.astimezone(local).date())

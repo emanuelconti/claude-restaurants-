@@ -1,19 +1,51 @@
 import datetime as dt
 from zoneinfo import ZoneInfo
-TZ=ZoneInfo('Europe/Paris')
-HOURS=(7,8,9,13,14,15,19,20)
-def target(now):return sum(now.hour>=h for h in HOURS)
-def youtube_title(title):return (title[:62]+' | goodmessagestudio.com #Shorts')[:100]
-def seen(item,channel,posts):
- wanted=youtube_title(item['title']) if channel=='youtube' else item['title']
- return next((p for p in posts if p['title']==wanted),None)
-def count_today(posts,now):
- return sum(dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')).astimezone(TZ).date()==now.date() for p in posts if p.get('stamp'))
-def next_item(items,brand,channel,day,state):
- return next((x for x in items if x['brand']==brand and x['date']==day and not state.get(x['id']+':'+channel)),None)
-def gap_ok(posts,now,minutes):
- stamps=[dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')) for p in posts if p.get('stamp')]
- return not stamps or (now-max(stamps)).total_seconds()>=minutes*60
+
+TZ = ZoneInfo('Europe/Paris')  # temporary-backup expiry and European brands
+SINGAPORE = ZoneInfo('Asia/Singapore')
+HOURS = (7, 8, 9, 13, 14, 15, 19, 20)
+GMS_HOURS = (8, 10, 12, 14, 15, 18, 20, 21)
+EU_CRON = '58 6-22 3-5 11 *'
+GMS_CRON = '17 0-15 3-5 11 *'  # 08:17-23:17 Singapore, including recovery checks
+QUEUE_DAYS = frozenset(('2026-11-03', '2026-11-04', '2026-11-05'))
+
+def timezone_for(brand):
+ return SINGAPORE if brand == 'gms' else TZ
+
+def local_now(now, brand):
+ if now.tzinfo is None:
+  raise ValueError('An aware timestamp is required')
+ return now.astimezone(timezone_for(brand))
+
+def target(now, brand='sp'):
+ local = local_now(now, brand)
+ minute = 17 if brand == 'gms' else 58
+ hours = GMS_HOURS if brand == 'gms' else HOURS
+ return sum((local.hour, local.minute) >= (hour, minute) for hour in hours)
+
+def selected_brands(cron='', requested='all'):
+ if cron:
+  if cron == EU_CRON: return ('sp', 'sin')
+  if cron == GMS_CRON: return ('gms',)
+  raise ValueError('Unknown cloud schedule; refusing to publish')
+ if requested == 'all': return ('sp', 'sin', 'gms')
+ if requested in ('sp', 'sin', 'gms'): return (requested,)
+ raise ValueError('Unknown brand')
+
+def youtube_title(title): return (title[:62]+' | goodmessagestudio.com #Shorts')[:100]
+def seen(item, channel, posts):
+ wanted = youtube_title(item['title']) if channel == 'youtube' else item['title']
+ return next((p for p in posts if p['title'] == wanted), None)
+def count_today(posts, now, brand='sp'):
+ day = local_now(now, brand).date()
+ zone = timezone_for(brand)
+ return sum(dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')).astimezone(zone).date() == day for p in posts if p.get('stamp'))
+def next_item(items, brand, channel, day, state):
+ ordered = sorted(items, key=lambda x: x.get('publish_order', x.get('slot', 0)))
+ return next((x for x in ordered if x['brand'] == brand and x['date'] == day and not state.get(x['id']+':'+channel)), None)
+def gap_ok(posts, now, minutes):
+ stamps = [dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')) for p in posts if p.get('stamp')]
+ return not stamps or (now-max(stamps)).total_seconds() >= minutes*60
 
 def parse_ig_history(text):
  import re

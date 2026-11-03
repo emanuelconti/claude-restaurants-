@@ -1,5 +1,5 @@
 import datetime as dt,unittest
-from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history
+from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history,SINGAPORE,local_now,selected_brands,EU_CRON,GMS_CRON
 class QueuePolicyTests(unittest.TestCase):
  def setUp(self):
   self.day='2026-11-03';self.now=dt.datetime(2026,11,3,20,58,tzinfo=TZ)
@@ -39,4 +39,51 @@ class QueuePolicyTests(unittest.TestCase):
  def test_empty_caption_still_counts_as_a_real_post(self):
   rows=parse_ig_history('2026-11-03T08:00:00+0000  \n2026-11-03T09:00:00+0000 A title\n')
   self.assertEqual(len(rows),2);self.assertEqual(rows[0]['title'],'');self.assertEqual(count_today(rows,self.now),2)
+class SingaporeMarketTests(unittest.TestCase):
+ def test_one_instant_has_two_different_calendar_days(self):
+  now=dt.datetime(2026,11,3,17,tzinfo=dt.timezone.utc)
+  self.assertEqual(local_now(now,'sp').date().isoformat(),'2026-11-03')
+  self.assertEqual(local_now(now,'gms').date().isoformat(),'2026-11-04')
+ def test_midnight_resets_gms_only_at_singapore_midnight(self):
+  posts=[dict(stamp='2026-11-03T15:59:59Z'),dict(stamp='2026-11-03T16:00:00Z')]
+  now=dt.datetime(2026,11,3,16,1,tzinfo=dt.timezone.utc)
+  self.assertEqual(count_today(posts,now,'gms'),1)
+  self.assertEqual(count_today(posts,now,'sp'),2)
+ def test_gms_uses_singapore_slots_with_minutes(self):
+  now=dt.datetime(2026,11,4,8,16,tzinfo=SINGAPORE)
+  self.assertEqual(target(now,'gms'),0)
+  self.assertEqual(target(now.replace(minute=17),'gms'),1)
+  self.assertEqual(target(now.replace(hour=12,minute=17),'gms'),3)
+  self.assertEqual(target(now.replace(hour=21,minute=17),'gms'),8)
+ def test_european_trigger_cannot_publish_gms(self):
+  self.assertEqual(selected_brands(EU_CRON),('sp','sin'))
+  self.assertEqual(selected_brands(GMS_CRON),('gms',))
+  self.assertEqual(selected_brands('', 'gms'),('gms',))
+  with self.assertRaises(ValueError):selected_brands('unrecognized schedule')
+ def test_singapore_morning_runs_during_owners_night(self):
+  singapore=dt.datetime(2026,11,4,8,17,tzinfo=SINGAPORE)
+  self.assertEqual(singapore.astimezone(TZ).strftime('%H:%M'),'01:17')
+  self.assertEqual(target(singapore,'gms'),1)
+  self.assertEqual(target(singapore,'sp'),0)
+ def test_facebook_spacing_uses_actual_elapsed_time_in_singapore(self):
+  now=dt.datetime(2026,11,4,15,17,tzinfo=SINGAPORE)
+  self.assertFalse(gap_ok([dict(stamp='2026-11-04T06:18:00Z')],now,60))
+  self.assertTrue(gap_ok([dict(stamp='2026-11-04T06:17:00Z')],now,60))
+ def test_reviewed_queue_and_reel_match_local_time(self):
+  import json
+  from pathlib import Path
+  items=json.loads((Path(__file__).parent/'queue.json').read_text())
+  for day in ('2026-11-03','2026-11-04','2026-11-05'):
+   ordered=sorted([x for x in items if x['brand']=='gms' and x['date']==day],key=lambda x:x['publish_order'])
+   self.assertEqual([x['publish_order'] for x in ordered],list(range(1,9)))
+   self.assertEqual(ordered[2].get('kind'),'reel')
+   self.assertTrue(all(x['market_timezone']=='Asia/Singapore' for x in ordered))
+ def test_all_gms_inner_guards_use_singapore(self):
+  from pathlib import Path
+  root=Path(__file__).parent/'publishers/gms'
+  for filename in ('ig_publish.py','reel_publish.py','channel_guard.py','threads_publish.py','fb_publish.py'):
+   source=(root/filename).read_text()
+   self.assertIn('ZoneInfo("Asia/Singapore")',source)
+   self.assertNotIn('ZoneInfo("Europe/',source)
+
 if __name__=='__main__':unittest.main()
