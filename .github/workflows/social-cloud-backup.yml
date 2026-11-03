@@ -3,13 +3,14 @@ on:
   schedule:
     - cron: '47 8-22 3-5 11 *' # SocialPerks only, 09:47-23:47 Europe/Madrid
     - cron: '23 7-22 3-5 11 *' # Sincronia only, 08:23-23:23 Europe/Paris
+    - cron: '7,27,37,47,57 6-15 3 11 *' # exceptional GMS Facebook recovery on 3 November
     - cron: '17 0-15 3-5 11 *' # GMS only, 08:17-23:17 Asia/Singapore
   workflow_dispatch:
     inputs:
       mode:
         description: Check credentials only or process approved queue
         type: choice
-        options: [validate, check, publish]
+        options: [validate, check, publish, recover-gms]
         default: validate
       brand:
         description: Brand to check or publish (scheduled runs use their own market)
@@ -24,7 +25,7 @@ concurrency:
 jobs:
   backup:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,6 +51,8 @@ jobs:
             python social-cloud-backup/controller.py --validate
           elif [ "$BACKUP_MODE" = check ]; then
             python social-cloud-backup/controller.py --check
+          elif [ "$BACKUP_MODE" = recover-gms ]; then
+            python social-cloud-backup/controller.py --recover-gms
           else
             python social-cloud-backup/controller.py
           fi
