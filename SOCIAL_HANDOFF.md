@@ -1,3 +1,5 @@
+> Current owner instruction, 3 November 2026: read [SOCIAL_MARKET_RULES.md](SOCIAL_MARKET_RULES.md) FIRST. It supersedes older schedules and channel lists below. GMS uses Asia/Singapore, women 18–38 in Singapore, English and SGD; SocialPerks uses Spanish/Spain/Europe-Madrid; Sincronia uses English/European founders/Europe-Paris. GitHub Actions owns publishing during 3–5 November, independently of Claude quota and the Mac. Do not start a competing publisher. Resume only after checking receipts and the documented handover.
+
 # Social accounts: shared handoff (read this before touching any of them)
 
 For every Claude, Codex or person who works on @socialperks.es, Good Message Studio (@goodmessage_studio, formerly @sowld.ai, and its Facebook Page) or @sincronia.live. Last updated 2 November 2026 (10 a day). The owner is Emanuel; everything below is his decision unless marked otherwise. Keep this file current when something changes.
