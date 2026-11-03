@@ -11,6 +11,7 @@ SP_CRON = '47 9-23 * * *'  # 09:47-23:47 Madrid
 SIN_CRON = '23 8-23 * * *'  # 08:23-23:23 Paris
 FB_RECOVERY_CRON = '7,27,37,47,57 6-15 3 11 *'  # owner-authorized 3 November recovery only
 GMS_CRON = '17 8-23 * * *'  # 08:17-23:17 Singapore, including recovery checks
+WATCHDOG_CRON = '41 * * * *'  # Independent UTC recovery; target() always uses each market's own clock.
 QUEUE_DAYS = frozenset(('2026-11-03', '2026-11-04', '2026-11-05'))
 
 def timezone_for(brand):
@@ -29,6 +30,7 @@ def target(now, brand='sp'):
 
 def selected_brands(cron='', requested='all'):
  if cron:
+  if cron == WATCHDOG_CRON: return ('sp', 'sin', 'gms')
   if cron == EU_CRON: return ('sp', 'sin')
   if cron == SP_CRON: return ('sp',)
   if cron == SIN_CRON: return ('sin',)

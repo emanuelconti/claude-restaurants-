@@ -40,6 +40,14 @@ class QueuePolicyTests(unittest.TestCase):
   rows=parse_ig_history('2026-11-03T08:00:00+0000  \n2026-11-03T09:00:00+0000 A title\n')
   self.assertEqual(len(rows),2);self.assertEqual(rows[0]['title'],'');self.assertEqual(count_today(rows,self.now),2)
 class SingaporeMarketTests(unittest.TestCase):
+ def test_utc_recovery_keeps_each_market_clock_and_cap(self):
+  from policy import WATCHDOG_CRON
+  self.assertEqual(selected_brands(WATCHDOG_CRON),('sp','sin','gms'))
+  now=dt.datetime(2026,11,4,0,41,tzinfo=dt.timezone.utc)
+  self.assertEqual(target(now,'gms'),1)
+  self.assertEqual(target(now,'sp'),0)
+  self.assertEqual(target(now,'sin'),0)
+  self.assertEqual(target(now.replace(hour=15),'gms'),8)
  def test_one_instant_has_two_different_calendar_days(self):
   now=dt.datetime(2026,11,3,17,tzinfo=dt.timezone.utc)
   self.assertEqual(local_now(now,'sp').date().isoformat(),'2026-11-03')
