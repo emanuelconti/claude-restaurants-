@@ -6,6 +6,31 @@
       "reason": "RuntimeError",
       "posts": [
         {
+          "title": "5 messages for the friend starting something new",
+          "stamp": "2026-11-03T14:56:54+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1430950352526093"
+        },
+        {
+          "title": "5 reminders for your journey home",
+          "stamp": "2026-11-03T13:22:44+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1430874169200378"
+        },
+        {
+          "title": "5 things a kind note does not need",
+          "stamp": "2026-11-03T11:49:17+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1430802259207569"
+        },
+        {
+          "title": "5 ways to make a small gift feel personal",
+          "stamp": "2026-11-03T10:15:33+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1430729505881511"
+        },
+        {
+          "title": "5 kind messages for your next coffee catch-up",
+          "stamp": "2026-11-03T09:00:56+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1430677755886686"
+        },
+        {
           "title": "5 quiet ways to say I appreciate you",
           "stamp": "2026-11-03T07:57:29+0000",
           "url": "https://www.facebook.com/1429179606036501/posts/1430638672557261"
@@ -76,7 +101,7 @@
           "title": "5 things a kind note does not need | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-03T06:38:25Z",
           "visibility": "public",
-          "views": "0",
+          "views": "1",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/vyhu9HBYou0"
@@ -94,7 +119,7 @@
           "title": "5 kind messages for your next coffee catch-up | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-03T06:38:14Z",
           "visibility": "public",
-          "views": "2",
+          "views": "4",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/i9twRD4aiP0"
@@ -103,7 +128,7 @@
           "title": "5 kind lines for a busy Tuesday | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-03T06:38:12Z",
           "visibility": "public",
-          "views": "0",
+          "views": "4",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/x0gXtxzqLyA"
@@ -293,7 +318,7 @@
       "title": "5 ways to make a small gift feel personal",
       "stamp": "2026-11-03T14:29:06+08:00",
       "local_hour": 14,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfRPVSTlIAa/"
     },
@@ -475,7 +500,7 @@
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-03",
+  "market_date": "2026-11-04",
   "mature_hour_summary": [
     {
       "local_hour": 1,
@@ -519,13 +544,23 @@
     },
     {
       "local_hour": 16,
-      "posts": 3,
-      "median_public_interactions": 1
+      "posts": 4,
+      "median_public_interactions": 0.5
+    },
+    {
+      "local_hour": 18,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 22,
+      "posts": 1,
+      "median_public_interactions": 4
     }
   ],
   "timing_status": "insufficient comparable samples"
