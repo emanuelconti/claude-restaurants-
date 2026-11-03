@@ -156,304 +156,320 @@
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 1,
-    "title": "5 preguntas para revisar una franja floja",
+    "title": "5 formas de sacar el plan del grupo de WhatsApp",
     "folder": "queue/sp/2026-11-04/carousel-1",
     "sha256": {
-      "slide-03.jpg": "520f2250129a16106718a3f7b4fa91da0d8d9b7d6b27b2bed5bc44dd129698db",
-      "slide-02.jpg": "97754e624cea7c9b56c9ddb4922fbeb0e7b3054ba608b7f41ab8fc18eae6f041",
-      "slide-01.jpg": "c8afef7354e3dddd6956dcfedd1f38803ec8bc3accb6e453eecf9bb03b41aa18",
-      "slide-05.jpg": "2525961ce540219e1d7320c5ca21d23f5da546e20e1955a330593a41345b4a7f",
-      "slide-04.jpg": "efe8de86372a5a56732f719b85cae94cc8959cfa5e9370e0501de0d57d823c58",
-      "slide-06.jpg": "38e0af9ca607beeafd44b04186dc2a2b8a8568fd66cc30cc4d594b28890ac82a",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "a00df719ea691e537b5f162c2f5a1f73dd7a550b4fdf7be88103515c4b3f8216"
+      "slide-03.jpg": "80b7645ecb168fc97fa2a75f57e99d5e6884a7abd07ed810170f0d303a277ce4",
+      "slide-02.jpg": "64d870a728319f5bfb6efac8ce2e43035a6b47106cb50e92fdb089adb743a6e5",
+      "carousel.json": "f755b1eb8ac24a1293069d47da9c8645a124f2389c79a8180507b2f990e21a5d",
+      "slide-01.jpg": "9dac4421d442e43a01718b4f9a726e144893232735b793bb3e45e8f306e77a1e",
+      "slide-05.jpg": "c84492339691095f7d09fdb7e554b49092aeac871d0a5be3307a7d00b06a8f3b",
+      "slide-04.jpg": "03e74b12af2a7471a2cc598b270916575e7b2225ea9ef98b50a781a4539e6674",
+      "slide-06.jpg": "0bf5c9a4281ce1a20e6aaa1c5b7ca1fe540863672385413d9fb9caa1a0ce145c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-2",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 2,
-    "title": "5 cosas para un relevo de turno más claro",
+    "title": "5 detalles de una cena que se recuerdan",
     "folder": "queue/sp/2026-11-04/carousel-2",
     "sha256": {
-      "slide-03.jpg": "b3b7cb50abf781509a1c4745fe2d7ff4833caf41e8778bf1237d5d762596c837",
-      "slide-02.jpg": "7ba5027c6bcf1c69a7279410fc53271a943caa755f5b4728cd27d28707d167d4",
-      "slide-01.jpg": "c49e519a2a011dc1ffeab89d45189dbc7c838a14c6fbcf8f1047b674e62fb945",
-      "slide-05.jpg": "94a93c0797a41ffe18e7e4057323aac436a0883f592bfbd3f83d3fecb147b0d1",
-      "slide-04.jpg": "239b1ae6091760197a279d1cb720674096ab1aa96667176d3c67c89a1481af43",
-      "slide-06.jpg": "6f076fd1219642b945b4260312ad1b0605d3e0978d11e3d991569d8454be1913",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "ec3123e2da3fc37e47b7dd8a180bcb4f44e01d8e237925e1cc72e0e7436578a7"
+      "slide-03.jpg": "4ba7e0150297129479caceb6f10e68af3ab94617b80283bce9846ec39017a39c",
+      "slide-02.jpg": "3896b1e6d5fb3a82d987525fc6338bc78ccdeaa4be9fbbdd2af2fd8744b81014",
+      "carousel.json": "3ed9fd19d5a61f549f7f6b552a83074b7b9fdbe21d772fcf8c1eb8afc2179361",
+      "slide-01.jpg": "ad3033ea7c7d1530fc1ed54f8224ce75fc084695c09ab0b3965e22fff3560a5c",
+      "slide-05.jpg": "f5f6708b85890187bc5b2b03adb0541113b89507e7f44b3707a85f71fe98422b",
+      "slide-04.jpg": "2223cdca2b71aa3fd8fd28e8a1579b3effdbd1b6cfc3ce56053d90d23fa14cd8",
+      "slide-06.jpg": "3427d85c25ff2375f222d722b3ac323f914f9d56ea9d98673e5a08ed008282c5",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-3",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 3,
-    "title": "5 maneras de explicar una espera sin incomodar",
+    "title": "5 planes para quedar sin montar un gran evento",
     "folder": "queue/sp/2026-11-04/carousel-3",
     "sha256": {
-      "slide-03.jpg": "2951c52713d9710522e1bfd36d45daf5d9f0c0b72c20af66bc8855306bbc9823",
-      "slide-02.jpg": "a1663a5f2a50d482d24f99956de761ca817c09852caab4f16724538521ea7e02",
-      "slide-01.jpg": "a12335334ab55c7886b16106e4786fd3d672680ea382404da26ff81e43ce87f2",
-      "slide-05.jpg": "67a094c62ec07018d8c06a6573a449e4036f67e1a071a59f5e441a73c63b9433",
-      "slide-04.jpg": "24e834af658b07ca4e72695031dac52639187e9da5ff162bcc204ba2bc468939",
-      "slide-06.jpg": "63b82ac8e76a92aee011f33a2eb38c8aa23144611674595887060f7b111e062d",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "ced06be2b53ef024339ece8153c365e5b12f58a45cb5a42a05a12f7f64856139"
+      "slide-03.jpg": "70d47d40afc80b83f0759366bb7e31770d11bf169d8f0e8f0a1222b9436dae42",
+      "slide-02.jpg": "d2364c4000d59044853112fa1961b391fa528722720ab2694dcd4b4baef1a9c4",
+      "carousel.json": "052cfcd9c4af47aea1aa3d8d9c9d95a9e40addc51f53c792d760b69c13ecbf5c",
+      "slide-01.jpg": "5973a2c7b26979709d8c2162abca6a25c12c018bdff3eff941a2770fc30ed1be",
+      "slide-05.jpg": "8326762add076c648ecb4d895cff7d515ee6db1910aa29ba6226617010624381",
+      "slide-04.jpg": "abb2928215609cca0d906e91b8a9c666eda280fbc6aa2b0d3d39bef436fb889d",
+      "slide-06.jpg": "b27cfac3bd019fd8a9c9666b7b8064130a480525c4a43e0e3be96a22f7a49b01",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-4",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 4,
-    "title": "5 detalles de una confirmación de reserva útil",
+    "title": "5 cosas que preguntar antes de elegir bar",
     "folder": "queue/sp/2026-11-04/carousel-4",
     "sha256": {
-      "slide-03.jpg": "e5d3a68aba90024dd6b2aec4ef4e8a012ec221c33716b8abf35021238f244715",
-      "slide-02.jpg": "4d7029ed2139760ef58145a37841645209ecff02bed853271cc80297ed2e24c3",
-      "slide-01.jpg": "16f237fcf6130a2d869e2ee220b54fccf035761cd54dfa379f9936bcf2c3d065",
-      "slide-05.jpg": "683020017a7e1ad7169c336ea21b71cebe6b9f66ac30f31cdd1e5d46e30b5414",
-      "slide-04.jpg": "77dd283e59803c2bfcab334062b958ce15e181118fb7327453d1b8c8e123c61a",
-      "slide-06.jpg": "5ec892d70935d000873fa036a3993a6d3e7887cbe802fc76423a5fa06eceefcf",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "ec4abbc8cd22fc075aa29267fbd752dee8aad59644ec165f9c60a936080bff79"
+      "slide-03.jpg": "6e78e6a379bb64f416363974354638b58813b787c65df4dbd608b40e7bab80ed",
+      "slide-02.jpg": "ed992d1c909ad8b4df4af8842d3ac87f30c3100a402e1d8ccaacc0521a68ddc5",
+      "carousel.json": "f2a1bc9fa04c2019a7755402e9cd06f174d33419a1f5443314f47e6adf52ea9e",
+      "slide-01.jpg": "329f64a246dc14acb984536d32048fbe839e5fcedcffec6b2ba31481f8b25ffc",
+      "slide-05.jpg": "4f542ac511e10c54ea02f3d5300cd08098fdf0e523aea6098f1426ad95c6821d",
+      "slide-04.jpg": "2a40d523b1e4b1556e163a79773a313850830243664720607e5ece2014b0e393",
+      "slide-06.jpg": "8d6c731d0f5f62868daa8aaf678186d8b92bf2b4846f787d01425c4ed94d7a38",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-5",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 5,
-    "title": "5 formas de cuidar la segunda visita",
+    "title": "5 maneras de hacer sentir parte a alguien nuevo",
     "folder": "queue/sp/2026-11-04/carousel-5",
     "sha256": {
-      "slide-03.jpg": "109d374b992aaf7f06f824cfd16454e86cc66c147b2647066efcbff2c0698513",
-      "slide-02.jpg": "1a0dbeece4ce5402ea357037abbda17aa17bd7aed3ecd220afa2b2278df0dde0",
-      "slide-01.jpg": "95ee217ec6607f6d74af164d011e3a23b3da95a80826bfb291a1c43ba493609f",
-      "slide-05.jpg": "5d32b12d57241d7ae1a778981c66af34774c872d79078340c16d61817c8a9858",
-      "slide-04.jpg": "e5e0f4acc814f44215f5207d897f354cc7d171e51f1a203f6187e79b81feca6b",
-      "slide-06.jpg": "9627075bc48d57413d6c977a943a366f771955460e741fd78ce25a16d76bd281",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "04a195ebc504a52e652433301c69f68a8eb062695ce42d32540c6a0669f81188"
+      "slide-03.jpg": "c359946b578418e41079df7a6d7900d24879f6fc1721fe41f42644993e38b65a",
+      "slide-02.jpg": "8b8f50f907de697e7d38592c98158d32e19aaebeaa7fab4a53222d5746a9ea02",
+      "carousel.json": "ad2bf32f451868cd4e23675b47f85a63791d48bdc0c1ea33a27e0207b5132a6c",
+      "slide-01.jpg": "e84e9b3d2249495e5523c021003e2fb58462d8ea76698c996a6338fa1ca96cba",
+      "slide-05.jpg": "4f05520ee66bd30efa65747327741d141512286bab2bfce0c22ba68c914104a6",
+      "slide-04.jpg": "b70b9799059683de72da86b6c1c649f96658d90e41f1f8be41de3770cfec3af7",
+      "slide-06.jpg": "c15c01b206a3f0a4bd09882ad6861e8c9f9b7e435cc9f68fedea41c949fd7603",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-6",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 6,
-    "title": "5 cosas que aclarar antes de una sesión de bienestar",
+    "title": "5 preguntas antes de llenar una hora floja",
     "folder": "queue/sp/2026-11-04/carousel-6",
     "sha256": {
-      "slide-03.jpg": "3cd7f05bb82d5573e2d522f947a8cbc5e3236756d0f161da9be60f7afe1b665b",
-      "slide-02.jpg": "a3a74e5276cf2c8b78c81223429ea70f6de9ed815f416264ac56f17ce9360632",
-      "slide-01.jpg": "6c7d54df3653ebff9734fe83473266e624da94831ba2cae04098470360fbbc17",
-      "slide-05.jpg": "6bb44331d297390de0361d8bc4c3a5ac9fbe59d1ac2027926e9fa5d4277f2050",
-      "slide-04.jpg": "a9c2a53905bf1ee15c7d9c612a5e9e8bcfc8f6852cb730f757534f5e8656d105",
-      "slide-06.jpg": "3b0da7ec8a9c2d6b1adff02bf9e12929818bf6c0586db595e41222d42d7f0319",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "124133d1c83f4964caff2e04c131a7b1787829d6f7a67ac1e25b2f7a824f521d"
+      "slide-03.jpg": "0ab8d10fd2b06da7a7a81d31dfe22503f11b03154a2fc77e47c22303d0f8586b",
+      "slide-02.jpg": "1ef213992154ea202059584f12fe8cd6966fff06c6edfcdfb0c9aff243e788f2",
+      "carousel.json": "5f18ba7ed383a43446fdf101d487e6e888af4b02ea4e473995c12920e91b0d6b",
+      "slide-01.jpg": "03e5b650840a099e261d2cb2aaf7ef57f105e6c172fba80e3acc10dedcdd1e45",
+      "slide-05.jpg": "3584e99d02f1ed5272727b2ec1e687ccc9d113bbb3f561c0b435c0d412e61145",
+      "slide-04.jpg": "499170a619f78949631d58d86405f44779bbc7029f1cc2170bb4c41420036d19",
+      "slide-06.jpg": "455d8db628b62b20af84f71520c2bab11c1f2e336aea511e93fe337fb2a8d18c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-7",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 7,
-    "title": "5 detalles para explicar bien una clase",
+    "title": "5 cosas para disfrutar una escapada sin correr",
     "folder": "queue/sp/2026-11-04/carousel-7",
     "sha256": {
-      "slide-03.jpg": "ceba13050c8276a0609df27bcccae225f3a2aba233c248037fc48394ae080858",
-      "slide-02.jpg": "cafe8f35d392e28a82cbdd8ddc945c3e35421c89757cc0ba680ddcab00a17d7a",
-      "slide-01.jpg": "fc7d88df819f05f24fa88aa353582ed8573060f1d713142ce84320ad88f3c893",
-      "slide-05.jpg": "c924219778a9b2c6f5989aabb7bb830a0873a71c69b8072f19f43d9f5836a59d",
-      "slide-04.jpg": "f9b7861595a62a13857b0882533d711bb02281e235e6e33f5b80802e8fce0154",
-      "slide-06.jpg": "1f3914431744ecb84b90bff68b388fa0d8800d790effb89152715453fec83553",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "a20a3abafeb29f5cb7918946057a7f187b02de6a498896f9548d10a113ae66bb"
+      "slide-03.jpg": "b8adcb171959d468b9536894a512246542d8749b43613e8a4326451d6b1e4fd8",
+      "slide-02.jpg": "2f0b53b45068de880d0d470ac73eb6e5d4bdf67d652b381f8a0d21f605876e10",
+      "carousel.json": "f72cd35ee521fef48e1fc494793025a3532176d19603778a9b4e3082d8e5bddc",
+      "slide-01.jpg": "5d328747b043101626820a03f5697254c54afd78517858f224843100486e168c",
+      "slide-05.jpg": "c5fe4d51406bc587b15fa2819c12b29d176880d2a64dc2408460783a11cc3099",
+      "slide-04.jpg": "19c80f2ecce576089e17f03614ee34941b2d780b223f3f73d8c58872d417ddac",
+      "slide-06.jpg": "7f1d325c620070cda19bc44745f1d4bf447197fb8de98bb07550e329ba2566ee",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-04-8",
     "brand": "sp",
     "date": "2026-11-04",
     "slot": 8,
-    "title": "5 señales de que tu mensaje de oferta necesita una revisión",
+    "title": "5 detalles para recibir mejor a un grupo",
     "folder": "queue/sp/2026-11-04/carousel-8",
     "sha256": {
-      "slide-03.jpg": "3e517247b66fac5c2c56acb50738f4f0c94ac644eea7187e3645c5f36555e1ed",
-      "slide-02.jpg": "9ac3dc8c00c454be88f9c177bdb1fac4eda022c0e7f7517b17fc859719adbb20",
-      "slide-01.jpg": "5bb9526cc8b3130231805d5b626d632357df9b05661117aee5a2bff6e91a7006",
-      "slide-05.jpg": "ee14276496c526e177fb6071273bb15a88c852d02fad3a8de84d5058aa3406ef",
-      "slide-04.jpg": "5cc798a31abaff686b5a8d2b49cb0a922d7152bedee26397507b9402fb85795e",
-      "slide-06.jpg": "2c4235c215e386f5ca788823220de7e32de14e510a167c9eb6d9e0d117a9a704",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "a789fa7755e7e73c04097c04030a4b994c4d8da1f9cd934b0574e71800b6b0b9"
+      "slide-03.jpg": "6b8701b3a3e0f5459481b1706c82a8b0c0d5eb4dfd7c1827554fc44837f5c313",
+      "slide-02.jpg": "6d1fae4958a198e6ac82e81440b0eba67503c08bfe2db1f69faa7ca4702bdc33",
+      "carousel.json": "8ddf0b62d16ecaeff8ccddf3d44757fe98408ac41dc8a2a044eebc664c6e81c2",
+      "slide-01.jpg": "0fd53f483d9ec3f3fd8402b0e3a78569320f84932702abe6c31aef1b4b254d4e",
+      "slide-05.jpg": "ee1e445d7bbcb4d6f1ab880f2c2339c631ff8527bc55ed1bd0e8497ca3ff9cb1",
+      "slide-04.jpg": "23e060364c91ece6a95da7e90c3a8964193805a89e0e35d076091d9529e91351",
+      "slide-06.jpg": "bbe0fd17c9080bc3ee40cdd98be25e5707547fe12d311b20dbc769a42da7dd4a",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-1",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 1,
-    "title": "5 preguntas al revisar las reservas de la semana",
+    "title": "5 mensajes para volver a ver a ese amigo",
     "folder": "queue/sp/2026-11-05/carousel-1",
     "sha256": {
-      "slide-03.jpg": "d659a52e06db715958b5111949a2ac86a853e52579fd69628f5069297c4dbc6c",
-      "slide-02.jpg": "a75290927c17a210cb9beee646a6146f8222fc7e2408371bf0190aa05683a046",
-      "slide-01.jpg": "80fc373790d1224a046a1facdf8d77d4c23c1ebd8bafa90cfc202dd85de9e691",
-      "slide-05.jpg": "a5a7ee26ac2fa07c1579990606af6ebc5ce096f0fc167a828dade7f88935a1bf",
-      "slide-04.jpg": "1594f1484263a5532bd6a8976e1223e1c2972ef6b0864357c1dfa51adb4266a2",
-      "slide-06.jpg": "24b16ceccab1b272eee3505817c36dfd76da252bdf2f26284d252f6aaf95ed87",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "2e65e4b695166bb928e028aec97034d1600d5327d4ff90fbdf23c75f489d41e7"
+      "slide-03.jpg": "31c9b9e80cc1d75458a23a8f1a95fcb8dd07cd547e4a90573730c834b6b45224",
+      "slide-02.jpg": "1c3946d6d4c2d4480dad053bd85ff8dd957a590c1f66752b142ff0ca82a1e5a8",
+      "carousel.json": "4a103bd202a5922a6daca651f9817c2fad187de871e95a3b291aee860dba6082",
+      "slide-01.jpg": "8f07c7b70b867c8cd77c36565e013996ab9ad9276167e1dba24139dd5f9ea1e2",
+      "slide-05.jpg": "126faa35557f27108effd044bb559900ac2d0074d757bb05e47200f03df38c27",
+      "slide-04.jpg": "4a5a9cdb078ca50a32dcac245d5c0a169fe29029d0a118a7714f96e53dfbf00b",
+      "slide-06.jpg": "39424017780d6ff00049613be0d9528fd81447e221615c6a1914130e928009f9",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-2",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 2,
-    "title": "5 detalles que hacen más claro un escaparate",
+    "title": "5 cosas que hacen fácil compartir unas tapas",
     "folder": "queue/sp/2026-11-05/carousel-2",
     "sha256": {
-      "slide-03.jpg": "81c4effbb70eb564eb3c09caac838d51de2cf1652fae1e8437f13f18c863627c",
-      "slide-02.jpg": "a8b2c40e4114917861f7682af368c00ade0c04d64abee05bd19c19aafebac1b2",
-      "slide-01.jpg": "aeb792368e9bc2e184eb92acc5308007caa03fca70a3bc00ef0b4e00a2c2e457",
-      "slide-05.jpg": "72404516857e765c2d16ffb01c1191889de49eb511630dd24f9fc6634696fbb5",
-      "slide-04.jpg": "683b03e20b559e6b2c607b0996b9bd4580a4dd0e7166ba42ae72b3e9cf9ac87a",
-      "slide-06.jpg": "28cc3006ec0570ea2aa596b75573aa79f865894f80c9d64ab7bc6dff7b18884d",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "1e84738c4d1f362a2118bd3c7ae8fa9e65a501ec3d1da8e7846288604e2bec31"
+      "slide-03.jpg": "baa26e1d46125020002e75a7ee7e0fc2b9e7db6af3bd89be29b01caaedbceada",
+      "slide-02.jpg": "0e6be8f24cb0e6f4766b860a28d5d9457a735889263a2221b4488c7710db001f",
+      "carousel.json": "7c5c38a7ee5ed5aef4e9a60229c547f8ddcfceb5d9eb12e17bdc3b5b25af349d",
+      "slide-01.jpg": "a658260421309db1786e5a101c5e166befcee5120ec946281a1cb69ccb3e7051",
+      "slide-05.jpg": "c85d281757c282f6eb7524a0ac2eb43d836e717dd0797f9e1eeaf8b77a5a1dbb",
+      "slide-04.jpg": "53e5731b63a72320602ea3776a1a6083dd5fd15b99d14b99b0b3ee0ab1ed101b",
+      "slide-06.jpg": "4107935282eb12f754b33c08d0af24e68ad1c9365f4c19f17a37ca7bd859fca9",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-3",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 3,
-    "title": "5 momentos para comprobar la información de tu hotel",
+    "title": "5 señales de que necesitabas quedar un rato",
     "folder": "queue/sp/2026-11-05/carousel-3",
     "sha256": {
-      "slide-03.jpg": "8df8869f71e0c3ec7600dce6942bd42b1b86cf9bbd7ad9d7e4b10cfe649e58cd",
-      "slide-02.jpg": "31b57a0a8760d27d9e11ef211843869f021b5a5461432aaeb9c2153fdec0ae9f",
-      "slide-01.jpg": "76cb40ed54265f4d6cbe4db73ce665c8ca3204da8c4a2e59aa207b26870f0c59",
-      "slide-05.jpg": "8ac982b9f05c757cf2e1a800074bf6590c983e30bf74bc037be436f58a515531",
-      "slide-04.jpg": "4b442d5c8323497cfd2e6299947358060b8b140d0829fad89638e5da8ab9cea3",
-      "slide-06.jpg": "f35934904a47636051a97e5aabef671cbd083bfd2b587539a3d555896eb21187",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "c6e4cf338859da1fea2f03602a498f81f5303e059a8b219650ceb1034d18bb0f"
+      "slide-03.jpg": "ca6536ed5092a737d18750072c20f60bdd28bf0bc97826fbb09cd09d2e8a9708",
+      "slide-02.jpg": "c9ef1d8b68cc98e79250cdee0c49c9c1fa4e92c68b7a04d2e3ee50f05254d230",
+      "carousel.json": "97c6ff2794739103533794f4ae4c933818a1c5a1a243f414b5929ded8632e723",
+      "slide-01.jpg": "7b6c3203c23baef19fe2f6b68b6d48bb37d1e80f1c306671c5a8a455829b4556",
+      "slide-05.jpg": "c32cf40ec9e235294b8f3ca7a5ab3f74fdcc22f281b6920a95296c09b8d6dc3d",
+      "slide-04.jpg": "8839a06334779ee7e557e5862eeaa5fbd8bcc5d230d01007ec9f30d935adebe7",
+      "slide-06.jpg": "590e1bc1358b92197dff47bd2172dfc26cd003d14013ede5360e06f04fd322ac",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-4",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 4,
-    "title": "5 formas de responder una duda repetida",
+    "title": "5 formas de elegir sitio sin discutir media hora",
     "folder": "queue/sp/2026-11-05/carousel-4",
     "sha256": {
-      "slide-03.jpg": "29d55aeda48d61c9400c19958d26177112d9df828c61a63e6522376e52936476",
-      "slide-02.jpg": "7e970da6d92eb7ae3275865b4d6fb26ee87baaf2ccb6b42f390a65a8b95b3d6b",
-      "slide-01.jpg": "2149e9e616730186455552ecd3b91dbc7b126a5ed083de02d0d49fc7e83f8ab7",
-      "slide-05.jpg": "12014a99f78644ae96b6402663643a970fbe64a9827ed272830dce99deb0eab6",
-      "slide-04.jpg": "35871907e426863272272fcd666fd85a639591fc1a821c3dc39782892c14de77",
-      "slide-06.jpg": "fb39d18ca0250feecb00e9768612ce27ef2e4e3d52eaf25a1f917d9152b7abb1",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "38bd1f6c705ab4dfa8475b49a8a1b56337ef1d4685f159a356360c1fb438ac16"
+      "slide-03.jpg": "e95afc42f0c101236314a88d8ffb52ffda9f2edaa1c4cee4f4cae157ea2f0cb4",
+      "slide-02.jpg": "db16ccc60dbf25aed0681882f9cf6b30e880ad79b8e96dfa87c0c979a308514d",
+      "carousel.json": "c1110c1b2d7e234efe90bfddabc794603ee35203e47e7d4497a61f212466cb18",
+      "slide-01.jpg": "267d544bb193abc57c422f276aca0df59624ebc9c413bd2cfa3ccf9c0d6a2c73",
+      "slide-05.jpg": "bee7c822eb69eb7c8025d1cc0b6fdbb2398a885c16f47450ae8768ab3dbc7d3e",
+      "slide-04.jpg": "55f894860a48ac14adc519d50208a8899ba09311ea43844c6f532df7224a969c",
+      "slide-06.jpg": "a55031b9d815a6b797960aaf5b0e9e1856461a1431fe7f132982ceab82f87db3",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-5",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 5,
-    "title": "5 detalles para recibir a un grupo en tu restaurante",
+    "title": "5 gestos para agradecer un buen rato",
     "folder": "queue/sp/2026-11-05/carousel-5",
     "sha256": {
-      "slide-03.jpg": "f79a5d2f43cf7240d213b255757ef21a4045da328d853bcf41f4841e9972d1b2",
-      "slide-02.jpg": "c8de4b1b51fd47c0e4eec8e9fc1444a58f9d9d4c7818dbcdce7e2ffdd02721b4",
-      "slide-01.jpg": "0b5f191e4c8d3c245a806a94ad8b67e20e4f4a86b153b51cbc9aed350de8e101",
-      "slide-05.jpg": "5a789775c0833263bfcbe81527c5c6a249f433b4d5fd90efb4acdb5ab07bdde5",
-      "slide-04.jpg": "405e053f5571e34cc1bad6f3cbce8a63b41bf0b8dd1e1a745ab90e1f6c853e18",
-      "slide-06.jpg": "9f699c03523f3d41b580a42e1e2d7f2f8ef313084fc58d90369ca828aaf2ba90",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "6c947d66eff4fe53a040a78d88787d9005ec5cab7691b4233f1b2f04cd1de6ff"
+      "slide-03.jpg": "927a0d37dc0c19bd4a0d8c92ee3326dd58fdfaef8963e8ec7e5247047491c7d1",
+      "slide-02.jpg": "fde0c25a689802996b8ebc581be5bd307b1ee19bf6982b106d2da6f73c267a4b",
+      "carousel.json": "ecc4f968bf94b82232750fc20c095d4479102cec272ac98f515b8e3b83a1a0ef",
+      "slide-01.jpg": "cdecc7b9491e22d805c4f9c3bf0f8140777f142cdd962b422f22a25084c4509a",
+      "slide-05.jpg": "1c7c89dadce1dfa3c2c51d246494b3b2a5ba539d7dde9c8625564be96c1e7b38",
+      "slide-04.jpg": "a1c2b26b3e62c2bf37d1bf918386e35810e1b0249e633d30ff0be69040eace38",
+      "slide-06.jpg": "ba048dda5740c50aeedea272323c93290d69f2f726a41a653fbedd55dd5b9d12",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-6",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 6,
-    "title": "5 cosas antes de publicar una foto de tu negocio",
+    "title": "5 cosas que aprender de quien vuelve a tu local",
     "folder": "queue/sp/2026-11-05/carousel-6",
     "sha256": {
-      "slide-03.jpg": "79e5d6a6d24d442687827c0c18d85c78ec856c418c3bfa6cb3b5ff15c549304a",
-      "slide-02.jpg": "b90962d60ac12152c5afda46fd732fd2ae99d8850e151142e53aee536197475b",
-      "slide-01.jpg": "2857763eeafcc13ded99300ad37fdd47019d73fd907421cdca3981ac8ec63e55",
-      "slide-05.jpg": "f38f5746c6aa397adae2f827ef7fa8ee4d777b028d38f76b55c0c5920b9f6fad",
-      "slide-04.jpg": "6564654a6058c46b8535d240850e5ae113d51e738b68df615ccd1bd5881d02f6",
-      "slide-06.jpg": "a79587e8a90097a61ea88e4920ba99abd58d81e7b45a7ba5471524a2226b9c75",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "88e1d8bbd35868381cea69767737c9bb8372f507a13b731512e7aa604be66a5b"
+      "slide-03.jpg": "06a9a2b2c444b002be8abeeb4311305c968328ddfe868306a271dfc819e7d5d0",
+      "slide-02.jpg": "f585f671251027e20ffb6aa7c7bfdba628d2ec9c72ae784bc6dcfce9ec259da1",
+      "carousel.json": "2f4cc6df3a7baf8530870f4f541d436940617bb84873a2d3ab67d9af95d2263c",
+      "slide-01.jpg": "7edba7a06ce75031cb3bd83ce39f2a7d0d60f38db559b2b81ebf1967dcdf81e5",
+      "slide-05.jpg": "43670172a5c2644d860677c68eda96ba005f3383baa66695e616ef1d4234e7ff",
+      "slide-04.jpg": "52b37e777d361422ee41abae6e3455e8410b8d415e3da137ab40e03bbc993b8a",
+      "slide-06.jpg": "819e3e998a143671607e049ba15a8fecce2a7f3bf5c54627972e1b1808a48d2d",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-7",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 7,
-    "title": "5 detalles para organizar las consultas de tu salón",
+    "title": "5 ideas para una tarde sin grandes gastos",
     "folder": "queue/sp/2026-11-05/carousel-7",
     "sha256": {
-      "slide-03.jpg": "2080ee1c49fb89be0d4afe12a2a732f87eb490f7ccf47b00406276cd9b03d91f",
-      "slide-02.jpg": "47bc8cb9bc40459c509a5f112f16857d02c1ace129cd6cfa4174a2fa92a1a7e9",
-      "slide-01.jpg": "abd1d69f4ae55939a126c7b6b94dc0b12ed8f4ac9c8002f5cf8b6a9a088018e6",
-      "slide-05.jpg": "42fa9bb20db086058c3c1856c10883811cb6170f89ace38d7e7ecde45acc8d5d",
-      "slide-04.jpg": "6ef7beef4e56b250cdf1b67e344290656980ee237ba7b2f501870eeb4911206d",
-      "slide-06.jpg": "2d2c46b4c5cdf61c5b1a669a091322265d76ecc8a17af8174ea22d6ce4ad7864",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "525e27d91c44a1e0ff34dc46080dfe4cabbb983c373bfa7833a2b2fa3de6c63a"
+      "slide-03.jpg": "899c781fcefda30f0dc13da7d6f96c1d0d910df849c3e5c5cb8eae609e10731b",
+      "slide-02.jpg": "a67ae035f5974b59f242a94d65e7993c33469a10c7d35b80c551112907ea5fba",
+      "carousel.json": "ef5d4ab780b85ab1550fc99e8154068b7a320d74838f0c77763390a5afc7327f",
+      "slide-01.jpg": "ce8b48646a0721265de2c2c5b9bcfdf2bbb804978934cfc431cb0d26c9711696",
+      "slide-05.jpg": "7e29d5a415a526d0fc64c6627b7cd73b5f9ace896d250bfad856aeb59b892e35",
+      "slide-04.jpg": "87243a68e2ac293bf739ff10e0cea06c1e0435aa89ec042d136f5472304c3e56",
+      "slide-06.jpg": "a84807385e4eb8d20e912c50baa9174bed3ab4fc3c788942339bb3ddd06efa5b",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sp-2026-11-05-8",
     "brand": "sp",
     "date": "2026-11-05",
     "slot": 8,
-    "title": "5 preguntas para cerrar una prueba comercial",
+    "title": "5 maneras de recomendar un sitio sin sonar a anuncio",
     "folder": "queue/sp/2026-11-05/carousel-8",
     "sha256": {
-      "slide-03.jpg": "34637f5cb1a3f53ff3400b8a4b760aeaae2cc4f9e9eeb8193fd677b619253610",
-      "slide-02.jpg": "b93585318814619752f4105561bec07c7f340a78d22345c5dfed17efcc537f63",
-      "slide-01.jpg": "b175b8c88790fc52a866886c673679ea4719010373296bf84d530d90d937be19",
-      "slide-05.jpg": "8144037e82a1f2f45339fa71f0633241a7f1c5be91a6d5d347d9945308c9d710",
-      "slide-04.jpg": "2724cf860d2bcc180766405a7b8ce079378c482d94fd44d94d8bbde17be23fea",
-      "slide-06.jpg": "73af53b0eb2733aff0b579b7afd3e4a10d4dac18dfc760c55dc51640846cd5e3",
-      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6",
-      "carousel.json": "bdf844d1aaba6041be6a93aaecce197ccfe5bae7ee5bf3863841c10646bb1b1f"
+      "slide-03.jpg": "5d3b23d15f6d99c6d40f28c64062c2dd2e8da29c330c07f1a6af7342899de4c9",
+      "slide-02.jpg": "6232723512f75dcb0e5d6dceb4b815f4d299c06bbe98f0554cb4147683ce26d5",
+      "carousel.json": "ed661be26aed580e86e6950fc2917ab7664ae0029ae022ca9a544822d6c17937",
+      "slide-01.jpg": "5448e8d4e2bbd6153d8f5fdd58a5e4287f2ffbbd1523ab3068d19539ca48828c",
+      "slide-05.jpg": "58a82d097fc14ff3b7fec2fa0e550cf1351300af1ebb68e827b6931b28aedb7d",
+      "slide-04.jpg": "55d003d66176260130993dfac00722b34b69b35489c2fb079335a1c2f49d7e02",
+      "slide-06.jpg": "a1ba4c90170ccaea8e725f18095cdc2d9903540731c80095f8f40fac3f8d2be9",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "Every slide and cover visually inspected; approved 2026-11-03"
+    "qa": "Approved: all seven rendered slides visually inspected in four full contact sheets, 3 November evening; hospitality-first Spanish editorial update",
+    "audience": "Spanish-speaking people going out with friends; hospitality niche; some owner content"
   },
   {
     "id": "sin-2026-11-03-1",
