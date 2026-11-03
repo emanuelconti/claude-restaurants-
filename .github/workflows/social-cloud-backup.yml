@@ -24,6 +24,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
 concurrency:
   group: social-cloud-backup
   cancel-in-progress: false
@@ -78,3 +79,16 @@ jobs:
             git diff --cached --quiet || git commit -m "Record cloud publishing receipts"
             git push origin HEAD:codex/social-cloud-backup
           fi
+      - name: Arm the next server-side recovery
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          state=$(gh api "repos/$GH_REPO/actions/workflows/social-cloud-watchdog.yml" --jq .state)
+          if [ "$state" != active ]; then
+            echo "Recovery timer disabled; owner control is respected."
+            exit 0
+          fi
+          gh workflow run social-cloud-watchdog.yml --repo "$GH_REPO" --ref claude/coao-8jloui -f smoke_test=false
+          echo "Next recovery armed with the normal server-side wait."

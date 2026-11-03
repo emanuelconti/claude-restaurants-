@@ -1,9 +1,5 @@
 name: Social cloud recovery timer
 on:
-  workflow_run:
-    workflows: [Social publisher by market]
-    types: [completed]
-    branches: [claude/coao-8jloui]
   workflow_dispatch:
     inputs:
       smoke_test:
@@ -18,12 +14,6 @@ concurrency:
   cancel-in-progress: true
 jobs:
   recover:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (github.event.workflow_run.head_repository.full_name == github.repository &&
-       github.event.workflow_run.head_branch == 'claude/coao-8jloui' &&
-       (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch') &&
-       github.event.workflow_run.conclusion != 'cancelled')
     environment: ${{ inputs.smoke_test == true && 'social-publisher-recovery-smoke' || 'social-publisher-recovery-wait' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
