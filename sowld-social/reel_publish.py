@@ -56,7 +56,7 @@ def main():
         if done:
             print(f"already published: {done.get('permalink')}")
             return
-        local = ZoneInfo("Europe/Rome")
+        local = ZoneInfo("Asia/Singapore")
         now = dt.datetime.now(dt.timezone.utc)
         stamps = [dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for m in recent if m.get("timestamp")]
         today = sum(1 for t in stamps if t.astimezone(local).date() == now.astimezone(local).date())
