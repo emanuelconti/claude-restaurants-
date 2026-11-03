@@ -12,7 +12,7 @@ organically on Facebook too. It reads, from the environment:
   then asks Facebook for the Page token itself;
 - FB_PAGE_ID_GMS: the Page's id.
 
-Same safety rules as ig_publish.py: at most 3 posts a day (Europe/Madrid),
+Same safety rules as ig_publish.py: at most 3 posts a day (Asia/Singapore),
 at least 60 minutes between posts, never the same caption twice, and it stops
 for good on any answer from Meta that says blocked, limit, spam, restricted or
 temporarily. The token never goes in a URL or in the output.
@@ -39,7 +39,7 @@ API = "https://graph.facebook.com/v21.0"
 MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 60  # minutes
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
-MADRID = ZoneInfo("Europe/Madrid")
+SINGAPORE = ZoneInfo("Asia/Singapore")
 
 
 class Stop(RuntimeError):
@@ -138,7 +138,7 @@ def main():
             return
         now = dt.datetime.now(dt.timezone.utc)
         stamps = [dt.datetime.strptime(p["created_time"], "%Y-%m-%dT%H:%M:%S%z") for p in posts if p.get("created_time")]
-        today = sum(1 for s in stamps if s.astimezone(MADRID).date() == now.astimezone(MADRID).date())
+        today = sum(1 for s in stamps if s.astimezone(SINGAPORE).date() == now.astimezone(SINGAPORE).date())
         if today >= MAX_PER_DAY:
             print(f"daily cap: the Page already has {today} posts today, nothing published")
             return
