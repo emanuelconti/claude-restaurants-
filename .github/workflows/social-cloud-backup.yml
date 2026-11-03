@@ -1,10 +1,13 @@
-name: Temporary social cloud backup
+name: Social publisher by market
 on:
   schedule:
-    - cron: '47 8-22 3-5 11 *' # SocialPerks only, 09:47-23:47 Europe/Madrid
-    - cron: '23 7-22 3-5 11 *' # Sincronia only, 08:23-23:23 Europe/Paris
-    - cron: '7,27,37,47,57 6-15 3 11 *' # exceptional GMS Facebook recovery on 3 November
-    - cron: '17 0-15 3-5 11 *' # GMS only, 08:17-23:17 Asia/Singapore
+    - cron: '47 9-23 * * *'
+      timezone: Europe/Madrid
+    - cron: '23 8-23 * * *'
+      timezone: Europe/Paris
+    - cron: '17 8-23 * * *'
+      timezone: Asia/Singapore
+    - cron: '7,27,37,47,57 6-15 3 11 *' # exceptional GMS Facebook recovery on 3 November 2026 only
   workflow_dispatch:
     inputs:
       mode:
@@ -19,6 +22,7 @@ on:
         default: all
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: social-cloud-backup
   cancel-in-progress: false
@@ -56,6 +60,12 @@ jobs:
           else
             python social-cloud-backup/controller.py
           fi
+      - name: Daily market results and queue health
+        if: always()
+        env:
+          SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
+          GH_TOKEN: ${{ github.token }}
+        run: python social-cloud-backup/health_report.py
       - name: Persist publication receipts
         if: always()
         run: |
@@ -63,6 +73,7 @@ jobs:
             git config user.name social-backup-bot
             git config user.email social-backup-bot@users.noreply.github.com
             git add social-cloud-backup/state.json
+            git add social-cloud-backup/performance/ social-cloud-backup/health.json 2>/dev/null || true
             git diff --cached --quiet || git commit -m "Record cloud publishing receipts"
             git push origin HEAD:codex/social-cloud-backup
           fi
