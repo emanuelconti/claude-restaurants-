@@ -42,3 +42,7 @@ Product link-preview cards continued to show blank pictures after scraping. New 
 
 ## Facebook format repair, 3 November evening
 The screenshots show missing images in old multi_share_no_end_card link posts. API media URLs alone are not visual proof. Future posts use durable native Page photo IDs, not child_attachments/link-preview cards. Slots 4 and 8 are verified message-hoodie product showcases; other carousel slots use the actual reviewed editorial JPGs and original caption. All contain the full shop URL. No temporary image hosts. Native upload and stored-image acknowledgement precede the single feed creation. Existing old link posts are not repaired by this code change and must not be claimed repaired. Reels are optional only after their own supported publisher and reviewed inventory are verified.
+
+### Native product showcase reliability (3 November evening)
+
+Facebook product slots 4/8 bake verified photo/name/SGD price into a portrait native upload; other slots attach every reviewed editorial slide. Sources and Facebook-native photo dimensions must be at least 320×320. A tiny/missing acknowledgement stops before feed creation, not a partial or link-preview fallback. Product destinations remain in captions. Older broken posts are not implicitly repaired by the new format. YouTube preflight rejects missing or silent audio; preserve original GMS music and test receipts.
