@@ -1,6 +1,8 @@
 """Read public post counters only. No advertising actions or private audience exports."""
 import datetime as dt,json,os,sys
 from zoneinfo import ZoneInfo
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"gms"))
 import ig_publish as IG
 brand,variable,expected,zone=sys.argv[1:]
 token=os.environ[variable]

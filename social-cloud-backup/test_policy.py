@@ -75,7 +75,7 @@ class SingaporeMarketTests(unittest.TestCase):
   import json
   from pathlib import Path
   items=json.loads((Path(__file__).parent/'queue.json').read_text())
-  for day in ('2026-11-03','2026-11-04','2026-11-05'):
+  for day in sorted({x['date'] for x in items if x['brand']=='gms'}):
    ordered=sorted([x for x in items if x['brand']=='gms' and x['date']==day],key=lambda x:x['publish_order'])
    self.assertEqual([x['publish_order'] for x in ordered],list(range(1,9)))
    self.assertEqual(ordered[2].get('kind'),'reel')
