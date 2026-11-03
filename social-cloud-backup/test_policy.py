@@ -1,5 +1,5 @@
 import datetime as dt,unittest
-from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history,SINGAPORE,local_now,selected_brands,EU_CRON,GMS_CRON,SP_CRON,SIN_CRON
+from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history,SINGAPORE,local_now,selected_brands,EU_CRON,GMS_CRON,SP_CRON,SIN_CRON,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit
 class QueuePolicyTests(unittest.TestCase):
  def setUp(self):
   self.day='2026-11-03';self.now=dt.datetime(2026,11,3,20,58,tzinfo=TZ)
@@ -87,5 +87,19 @@ class SingaporeMarketTests(unittest.TestCase):
    source=(root/filename).read_text()
    self.assertIn('ZoneInfo("Asia/Singapore")',source)
    self.assertNotIn('ZoneInfo("Europe/',source)
+
+class RecoveryExceptionTests(unittest.TestCase):
+ def test_exception_is_gms_only_and_facebook_stays_one(self):
+  now=dt.datetime(2026,11,3,14,30,tzinfo=SINGAPORE)
+  self.assertEqual(attempt_limit('gms','ig',True,now),8)
+  self.assertEqual(attempt_limit('gms','facebook',True,now),1)
+  self.assertEqual(attempt_limit('sp','ig',True,now),1)
+  self.assertEqual(attempt_limit('gms','ig',False,now),1)
+ def test_exception_expires_at_singapore_midnight(self):
+  self.assertFalse(recovery_allowed(dt.datetime(2026,11,3,16,tzinfo=dt.timezone.utc)))
+  self.assertEqual(attempt_limit('gms','ig',True,dt.datetime(2026,11,4,8,tzinfo=SINGAPORE)),1)
+ def test_extra_recovery_cron_is_only_facebook(self):
+  self.assertEqual(selected_brands(FB_RECOVERY_CRON),('gms',))
+  self.assertEqual(channel_plan('gms',FB_RECOVERY_CRON),('facebook',))
 
 if __name__=='__main__':unittest.main()
