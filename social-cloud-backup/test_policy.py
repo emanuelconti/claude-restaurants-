@@ -103,6 +103,15 @@ class RecoveryExceptionTests(unittest.TestCase):
   self.assertEqual(channel_plan('gms',FB_RECOVERY_CRON),('facebook',))
 
 class DurableCounterTests(unittest.TestCase):
+ def test_facebook_cards_exclude_unverified_generic_hoodies(self):
+  import ast
+  from pathlib import Path
+  tree=ast.parse((Path(__file__).parent/'publishers/gms/fb_publish.py').read_text())
+  node=next(x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name=='message_hoodies')
+  scope={};exec(compile(ast.Module(body=[node],type_ignores=[]),'facebook-product-guard','exec'),scope)
+  titles=['Oversized Pullover Hoodie','Oversized Half-Zip Hoodie','Vintage Cotton Hoodie','Enjoy The Little Things Hoodie','Peace Starts With Us Hoodie','Be Kind Rainbow Hoodie','Do What Makes You Happy Hoodie','Be Kind Tote']
+  result=scope['message_hoodies']([dict(title=title,images=[{'src':'verified-product-image'}]) for title in titles])
+  self.assertEqual([x['title'] for x in result],titles[3:7])
  def test_receipts_close_eventually_consistent_history_gap(self):
   now=dt.datetime(2026,11,3,15,tzinfo=SINGAPORE)
   items=[dict(id=f'gms-{i}',brand='gms',date='2026-11-03',title=f'Topic {i}') for i in range(6)]

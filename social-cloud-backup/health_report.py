@@ -20,7 +20,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
  zone=timezone_for(brand);day=now.astimezone(zone).date();key=day.isoformat()
  path=R/'performance'/f'{brand}.json'
  old=json.loads(path.read_text()) if path.exists() else {}
- if old.get('market_date')!=key:
+ if old.get('market_date')!=key or old.get('schema_version')!=2:
   result=subprocess.run([sys.executable,str(R/'run.py'),brand,'performance_snapshot.py',brand,variable,handle,str(zone)],capture_output=True,text=True)
   if result.returncode:
    print(f'Public results unavailable for {brand}; publication remains independent.')
@@ -36,6 +36,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
     path.write_text(json.dumps(snapshot,indent=2)+'\n')
     lines=[f'# {brand}: daily measured results',f'Market date: {key}. Timezone: {zone}.',snapshot['limits'],f"Observed posts: {len(snapshot['posts'])}.",f"Timing: {snapshot['timing_status']}."]
     for row in snapshot['mature_hour_summary']:lines.append(f"Hour {row['local_hour']:02d}:00: n={row['posts']}, median public likes+comments={row['median_public_interactions']} (posts 24h to 7d old).")
+    for channel,entry in snapshot.get('channels',{}).items():lines.append(f"{channel}: {entry['availability']}; observed posts={len(entry.get('posts',[]))}. Per-post public counters are in the JSON snapshot; missing counters are not zero.")
     lines.append('Primary editor adapts future reviewed themes, captions and local windows from this evidence. Do not infer purchase conversion, causality or demographic targeting from these counters.')
     (R/'performance'/f'{brand}.md').write_text('\n'.join(lines)+'\n')
    except (ValueError,KeyError):print(f'Invalid public-result response for {brand}; retained previous snapshot.')
