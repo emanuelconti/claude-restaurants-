@@ -1,0 +1,111 @@
+sp|5 formas de elegir un café para una conversación larga|El mejor sitio depende del plan que quieres tener.|cafe
+El ruido|Piensa si podréis escucharos sin levantar la voz.|La conversación también cuenta.
+La hora|Consulta el horario antes de salir.|Evita empezar con prisas.
+El espacio|Pregunta si hay sitio para vuestro grupo.|No lo des por hecho.
+Lo que apetece|Comparte la carta antes de decidir.|Cada persona puede elegir.
+La salida|Un plan sencillo puede durar lo que necesitéis.|Sin obligación de alargarlo.
+
+sp|5 mensajes para proponer unas tapas sin un gran plan|Una invitación concreta es más fácil de responder.|restaurant
+Un día posible|Di cuándo te vendría bien quedar.|Empezar ayuda.
+Un lugar claro|Envía el nombre y la dirección del sitio.|Menos mensajes para ubicarse.
+Un grupo pequeño|Cuenta quién se apunta sin presionar a nadie.|Ven si te apetece.
+Una alternativa|Propón otra hora si la primera no encaja.|El plan puede adaptarse.
+Un cierre sencillo|Confirma lo acordado en una sola frase.|Nos vemos allí.
+
+sp|5 detalles para disfrutar el bar sin pensar en la foto|El recuerdo puede empezar antes de sacar el móvil.|restaurant
+Mira alrededor|Fíjate en el espacio y en la compañía.|Ya estás en el plan.
+Pregunta por la carta|Elige algo que de verdad te apetezca.|No hace falta seguir la tendencia.
+Incluye otra opción|Cuenta con quien no quiere beber alcohol.|El encuentro es de todos.
+Deja un rato el móvil|Si os apetece, centraos en la conversación.|La foto puede esperar.
+Vuelve con calma|Acuerda cómo regresar antes de salir.|Cuidar el final también importa.
+
+sp|5 preguntas para organizar una escapada con amigos|Aclarar lo básico deja más espacio para disfrutar.|hotel
+Qué presupuesto encaja|Hablad del total antes de reservar.|Sin dar nada por supuesto.
+Cómo llegamos|Comparad las opciones de transporte.|Compartid los horarios.
+Qué incluye la estancia|Consultad las condiciones del alojamiento.|Una foto no lo explica todo.
+Qué quiere hacer cada uno|Dejad espacio para ritmos distintos.|No hace falta hacerlo todo juntos.
+Qué queda libre|Reservad algún rato sin actividades.|También se puede improvisar.
+
+sp|5 gestos que hacen más cómodo un primer encuentro|No necesitas un plan perfecto para recibir bien.|cafe
+Explica el punto de encuentro|Di dónde esperarás y cómo reconocerte.|Llegar resulta más fácil.
+Haz una presentación|Da contexto sin convertirlo en una biografía.|Un nombre puede abrir la charla.
+Pregunta algo sencillo|Empieza por lo que os reúne allí.|Sin interrogatorio.
+Respeta los silencios|No todos cogen confianza al mismo ritmo.|Dales espacio.
+Agradece la compañía|Un mensaje después puede ser breve.|Me ha gustado verte.
+
+sp|5 cosas que revisar antes del servicio del viernes|Unos minutos de preparación pueden evitar dudas al equipo.|restaurant
+La disponibilidad|Confirma qué mesas o franjas podéis ofrecer.|Parte de la capacidad real.
+La información|Asegura que el equipo conoce la propuesta del día.|Una misma respuesta.
+Los límites|Aclara cuántos extras podéis servir y su coste.|Decidir antes ayuda.
+La bienvenida|Define quién recibe y confirma las llegadas.|Que nadie tenga que adivinar.
+Lo que aprenderéis|Anota incidencias concretas al cerrar.|Mejorar empieza por observar.
+
+sp|5 formas de descubrir un sitio nuevo sin ir a ciegas|Una recomendación mejora cuando lleva contexto.|restaurant
+Pregunta a alguien cercano|Averigua qué le gustó exactamente.|Algo más que está bien.
+Mira la carta actual|Consulta precios y opciones antes de ir.|Decide con información.
+Comprueba el horario|Revisa si cambia el día que quieres ir.|No todos los días son iguales.
+Explica vuestro plan|Pregunta si el lugar encaja con el grupo.|Evita malentendidos.
+Deja tu opinión concreta|Cuenta qué viviste sin exagerar.|Ayuda a la siguiente persona.
+
+sp|5 maneras de dejar un buen recuerdo como cliente|Los pequeños gestos también viajan de vuelta.|cafe
+Avisa si cambias de plan|Cancela con tiempo cuando puedas.|Otra persona puede aprovechar la mesa.
+Pregunta con respeto|El equipo puede aclarar tus dudas.|Hablar bien facilita las cosas.
+Cuida el espacio|Déjalo como te gustaría encontrarlo.|Es de todos durante un rato.
+Reconoce lo que salió bien|Di qué detalle te gustó.|Una frase concreta cuenta.
+Recomienda con honestidad|Explica para quién encaja el sitio.|Sin prometer por el local.
+
+sin|5 questions before a founder accepts an introduction|An introduction works better when the next step is clear.|work
+Who is the right person?|Check whether they work on your stage and sector.|Relevance before volume.
+Why this conversation?|Write the reason in one short sentence.|Make the connection understandable.
+What can be shared?|Ask before forwarding a deck or private details.|Permission is practical.
+What is the ask?|Choose advice, a meeting or a referral.|One next step is enough.
+Who follows up?|Agree who sends the first message.|Avoid a silent handover.
+
+sin|5 details to put in a useful investor update|A short update should help someone understand what changed.|work
+The period|State the dates the update covers.|Give every number a window.
+The evidence|Describe actual usage or customer conversations.|Separate facts from targets.
+The cash position|Use a consistent basis for cash and spending.|Explain the assumptions.
+The obstacle|Name the concrete issue you are working through.|Specific beats dramatic.
+The request|Say what help would move the work forward.|Make replying easier.
+
+sin|5 ways to test whether a pilot is teaching you anything|A signup is a starting point for learning.|work
+Define the first action|Choose the behaviour you want to observe.|Be explicit before launch.
+Watch real use|Record whether people complete the core task.|Access is not adoption.
+Ask about the last attempt|Discuss what happened rather than hypothetical interest.|Use a concrete example.
+Record the cost|Include support time and delivery effort.|Learning still uses resources.
+Choose the next decision|Say what would make you continue or change course.|A pilot needs an ending.
+
+sin|5 checks before calling a number traction|A clear label makes a small result more useful.|work
+Name the unit|Say users, businesses, visits or receipts.|They are different measures.
+State the period|Include when the result was observed.|Time changes the meaning.
+Separate stages|Keep registrations, active use and payment distinct.|Do not merge the funnel.
+Show the denominator|Explain how many people had the opportunity.|A percentage needs context.
+Keep the source|Save a reproducible record behind the claim.|Make it easy to verify.
+
+sin|5 things to clarify before offering a trial|A trial is easier to evaluate when both sides know the terms.|work
+The scope|Say which functions or services are included.|Avoid guessing later.
+The duration|State the start and end conditions.|Use a clear time window.
+The effort|Explain what the customer needs to do.|Their time is a cost too.
+The next step|Describe what happens when the trial ends.|Do not imply an automatic purchase.
+The learning|Agree what you want to review together.|A conversation can be the outcome.
+
+sin|5 questions to ask before hiring for growth|More outreach is not always the next bottleneck.|work
+What is already working?|Identify a channel with real evidence.|Start with something repeatable.
+What is the role doing?|Name the responsibility and expected output.|Avoid a list of every task.
+What can you afford?|Model the full cost and cash timing.|Use a realistic commitment.
+How will success be assessed?|Choose observable measures and a review date.|Agree before starting.
+What support exists?|Provide tools, context and feedback.|A person is not a growth system.
+
+sin|5 habits for keeping a financial model readable|A model is useful when someone else can follow it.|work
+Label the assumptions|Distinguish inputs from calculated results.|Make changes traceable.
+Keep units visible|Use the currency and time period consistently.|Remove avoidable ambiguity.
+Reconcile the totals|Check cash, costs and revenue across tabs.|One story in every view.
+Show a slower case|Model what happens if progress takes longer.|Timing is an assumption.
+Date the version|Keep the source and the last review date.|Know which file you sent.
+
+sin|5 ways to end the founder week with a clearer Monday|You do not need to solve every open question on Friday.|work
+Record the decision|Write what was decided and why.|Save the reasoning while it is fresh.
+Name the open question|Separate missing evidence from missing work.|They need different next steps.
+Choose one priority|Say what matters most when you return.|Make the start smaller.
+Keep promises visible|List the follow-ups you actually owe.|Avoid relying on memory.
+Leave room to stop|A useful note can hold the work until Monday.|The list can wait.
