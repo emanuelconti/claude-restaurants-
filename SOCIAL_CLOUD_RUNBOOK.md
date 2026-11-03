@@ -1,0 +1,26 @@
+# Social cloud operations: primary editor, backup editor, one publisher
+
+Owner-authorized standing arrangement, 3 November 2026. Read SOCIAL_MARKET_RULES.md first. No paid calls, purchases or new social permissions. Enabled channels remain SP Instagram, Sincronia Instagram and GMS Instagram/Facebook/Threads/YouTube. Pinterest, TikTok and Stories are off.
+
+## Sources and roles
+
+Repository: emanuelconti/claude-restaurants-. Workflow `.github/workflows/social-cloud-backup.yml` lives on default `claude/coao-8jloui` and checks out `codex/social-cloud-backup`. All reviewed inventory and receipts live on that execution branch. Publishing is deterministic on GitHub-hosted runners, not on a Mac or a Claude conversation. The normal Chrome Claude account prepares/optimises content; Safari's Claude account is backup editor only. Routine quotas may stop editors; they do not stop a runner from consuming inventory already prepared.
+
+GMS primary: trig_01JyRzzAfbsqvYfv1TBWZP6R, one daily 07:13 Asia/Singapore. European primary: trig_018CzvbW5QE7qNpfvmjE7WMs, one daily 07:13 Europe/Madrid, with separate SP/Sin briefs. Backup: trig_01SGVvDtrZHjbECD8UZexYQz, one routine at 07:43 and 15:43 Singapore; first check GMS, second check European inventory. Do not create additional publication routines or use run_daily.py --catch-up.
+
+## Replenishing inventory
+
+1. Fetch the latest execution branch and the relevant source branch. Read root SOCIAL_MARKET_RULES.md, current STYLE.md, concise PERFORMANCE.md and cloud `social-cloud-backup/performance/<brand>.json`/`.md`. Source branches: GMS claude/ricerche-automatiche-performance-x5pstt (sowld-social), SP claude/socialperks-continuous-build-lgdgd6 (social-video), Sin claude/graduate-deadlines-consulting-k8obxv (sincronia/social).
+2. Read queue.json, state.json and health.json. Target seven future MARKET days, eight UNIQUE topics/day/brand. Never copy another brand's date or clock. Stop cheaply if healthy. Backup acts only on actual gaps or failed primary work; never overwrite a recent primary preparation. Use a fresh branch and fast-forward/merge preserving newer work; a conflicting queue edit means re-read, never force-push.
+3. Render real JPGs/JSON and GMS videos into `social-cloud-backup/queue/<brand>/<local-date>/carousel-<slot>/`. GMS has one reviewed reel per day in `reel/` and seven prebuilt 1080x1920 Shorts in carousel folders. Every source slide, cover and reel scene requires visual review. No fabricated QA flag or regenerated hashes on unreviewed images. The GMS cloud copy's carousels.py is a publishing dependency, not a full current renderer: use the SOURCE branch renderers and current real shop photos.
+4. Extend queue.json in the existing schema: stable unique id, brand, date, slot, folder, exact title, sha256 for JPG/JSON/MP4. Reel entries have kind=reel and reel_sha256. GMS publish_order places the reel at lunch; assign the rest by Singapore context. Never reuse an id/title already in queue or receipts. No secrets or private telemetry in public commits.
+5. Run `python -m unittest discover -s social-cloud-backup -p 'test_*.py'` and `python social-cloud-backup/controller.py --validate` with genuine ffprobe available. The validator checks all exact media hashes, eight topics per brand/date, no duplicate IDs/titles and one actual valid MP4 per GMS topic. Commit approved files and manifest; fetch/merge remote state before pushing. Never overwrite state.json.
+6. Manual workflow mode `check` verifies identities/histories/media and does NOT publish; `validate` uses no social credentials. Normal publication is scheduled. `recover-gms` is a dated 3 November exception and must not be used later. Durable receipts and platform history jointly enforce caps despite eventual consistency.
+
+## Health and optimisation
+
+`health_report.py` runs after workflows, independently of publish success. It takes at most one public Instagram-result snapshot per brand's own day, writes public likes/comments and local-hour medians for mature posts, and keeps missing metrics explicit. It does not claim reach, demographics, orders, ROAS or causal best times from public likes. Editors read real results, adapt audience-specific themes/captions and only change timing when sample sizes justify it. Never mix engagement across brands or markets.
+
+Health reports show seven-day actual reviewed coverage. Below three days including today, one GitHub issue is opened/updated; it closes when coverage recovers. A queue shortage is a real issue, not permission to re-post yesterday or invent an image. A current-day shortage stops only the affected brand. Platform restrictions and ambiguous responses hold only their channel. Report exact required token reauthorization; never buy credits, revoke grants, bypass limits or reveal credentials. Existing schedules resume when Claude quota resets; backup idles once primary work/coverage is healthy.
+
+Current starting inventory was visually verified for 3–5 November only. This is a fact, not seven days of coverage. Replenish promptly when either editor regains quota; cloud health makes the gap visible. A failure-free software schedule cannot guarantee future platform uptime, valid tokens or unlimited fresh content without a functioning editor.
