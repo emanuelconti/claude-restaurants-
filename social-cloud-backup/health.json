@@ -34,7 +34,8 @@
           "date": "2026-11-09",
           "approved_items": 0
         }
-      ]
+      ],
+      "paused_channels": []
     },
     "sin": {
       "timezone": "Europe/Paris",
@@ -69,7 +70,8 @@
           "date": "2026-11-09",
           "approved_items": 0
         }
-      ]
+      ],
+      "paused_channels": []
     },
     "gms": {
       "timezone": "Asia/Singapore",
@@ -104,7 +106,8 @@
           "date": "2026-11-09",
           "approved_items": 0
         }
-      ]
+      ],
+      "paused_channels": []
     }
   }
 }
