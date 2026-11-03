@@ -12,7 +12,7 @@ organically on Facebook too. It reads, from the environment:
   then asks Facebook for the Page token itself;
 - FB_PAGE_ID_GMS: the Page's id.
 
-Same safety rules as ig_publish.py: at most 3 posts a day (Asia/Singapore),
+Same safety rules as ig_publish.py: at most 8 posts a day (Asia/Singapore),
 at least 60 minutes between posts, never the same caption twice, and it stops
 for good on any answer from Meta that says blocked, limit, spam, restricted or
 temporarily. The token never goes in a URL or in the output.
@@ -70,6 +70,18 @@ def call(method: str, path: str, token: str, params: dict | None = None) -> dict
 
 
 SHOP = "https://goodmessagestudio.com"
+
+
+def message_hoodies(products: list) -> list:
+    """Only the four message ranges verified in the owner's current brand brief.
+
+    A generic 'Oversized' title does not prove a printed message. New ranges
+    require editorial verification before they can enter automatic cards.
+    """
+    messages = ("enjoy the little things", "peace starts with us", "be kind", "do what makes you happy")
+    return [product for product in products
+            if product.get("images") and "hoodie" in product.get("title", "").lower()
+            and any(message in product["title"].lower() for message in messages)]
 
 
 def to_square(src: str, dst: str) -> None:
@@ -159,8 +171,7 @@ def main():
         # to a domain the Page has not verified in Meta Business, so each card now links a real product page:
         # Facebook shows that product's own photo and name, the card opens it, and the carousel reads like an ad.
         products = json.load(urllib.request.urlopen(SHOP.rstrip("/") + "/products.json?limit=250", timeout=60))["products"]
-        products = [x for x in products if x.get("images") and "hoodie" in x["title"].lower()
-                    and not any(w in x["title"].lower() for w in ("cotton", "vintage", "basic", "plain", "blank", "essential"))]  # only message hoodies (owner, 2 Nov)
+        products = message_hoodies(products)
         if len(products) < 3:
             sys.exit("could not read enough products from the shop: nothing published")
         start = (args.slot - 1) * 5
