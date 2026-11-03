@@ -1,11 +1,10 @@
 """Cloud publisher for exact assets that passed local visual QA."""
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
-from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
-if now>=dt.datetime(2026,11,6,2,tzinfo=TZ):
- print('Temporary backup expired: nothing published.');sys.exit()
+# Owner, 3 November: keep the cloud publisher running after the Claude quota reset.
 manifest=json.loads((R/'queue.json').read_text())
 def verify(item):
  folder=R/item['folder']
@@ -22,16 +21,19 @@ if '--validate' in sys.argv or '--check' in sys.argv:
  import shutil
  if shutil.which('ffprobe'):
   videos=list((R/'queue/gms').rglob('*.mp4'))
-  assert len(videos)==24,('Expected 24 reviewed videos',len(videos))
+  expected=len([x for x in manifest if x['brand']=='gms'])
+  assert len(videos)==expected,('Expected one reviewed video per GMS topic',expected,len(videos))
   for video in videos:
    probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height','-show_entries','format=duration','-of','json',str(video)],text=True))
    stream=probe['streams'][0]
    assert stream['width']==1080 and stream['height']==1920 and 0<float(probe['format']['duration'])<=60,str(video)
-  print('PASS: 24 actual MP4 files are 1080x1920, valid duration under 60 seconds.')
+  print(f'PASS: {len(videos)} actual MP4 files are 1080x1920, valid duration under 60 seconds.')
 if '--validate' in sys.argv:
- for day in ('2026-11-03','2026-11-04','2026-11-05'):
-  for b in ('sp','sin','gms'):
-   assert len([x for x in manifest if x['brand']==b and x['date']==day])==8,(b,day)
+ assert len({x['id'] for x in manifest})==len(manifest),'Duplicate queue IDs'
+ assert len({(x['brand'],x['title']) for x in manifest})==len(manifest),'Repeated brand/topic title'
+ for b,day in {(x['brand'],x['date']) for x in manifest}:
+  daily=[x for x in manifest if x['brand']==b and x['date']==day]
+  assert len(daily)==8 and len({x['slot'] for x in daily})==8,(b,day)
  print(f'PASS: {len(manifest)} reviewed queue items, eight per brand/day; asset hashes match. No credentials loaded or publications attempted.')
  sys.exit()
 cfg=json.loads(os.environ['SOCIAL_BACKUP_ENV'])
@@ -69,14 +71,14 @@ def process_channel(b,channel):
  try:
   posts=history(b,channel)
   brand_now=local_now(dt.datetime.now(dt.timezone.utc),b)
-  if brand_now.date().isoformat() not in QUEUE_DAYS:
-   print(tag+': outside approved local calendar days; skipped.');return False
-  count=count_today(posts,brand_now,b)
+  if '--check' not in sys.argv and not any(x['brand']==b and x['date']==brand_now.date().isoformat() for x in manifest):
+   raise RuntimeError('Reviewed queue has no content for this market date; replenish it, never invent or repost')
+  count=count_known_posts(posts,brand_now,b,channel,manifest,state)
   print(f'{tag}: identity verified; {count} posts today ({brand_now.tzinfo}, {brand_now.date()}).',flush=True)
   if '--check' in sys.argv:return False
   # Reconcile completed and ambiguous attempts against actual remote titles first.
   for item in manifest:
-   if item['brand']==b and (found:=seen(item,channel,posts)):
+   if item['brand']==b and not state.get(item['id']+':'+channel,'').startswith('withdrawn:') and (found:=seen(item,channel,posts)):
     if channel=='youtube' and found.get('visibility')!='public':
      raise RuntimeError('An expected public YouTube upload is not public; do not upload it again. Check Google approval or processing status.')
     state[item['id']+':'+channel]='confirmed remotely: '+(found.get('url') or item['title'])
@@ -94,7 +96,7 @@ def process_channel(b,channel):
   fresh_now=local_now(dt.datetime.now(dt.timezone.utc),b)
   if fresh_now.date()!=brand_now.date():
    print(tag+': local date changed while checking; skipped.');return False
-  if count_today(latest,fresh_now,b)>=(8 if recover_today else min(target(brand_now,b),8)):return False
+  if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today else min(target(brand_now,b),8)):return False
   if seen(item,channel,latest):state[key]='confirmed remotely';save();return False
   if channel=='facebook' and not gap_ok(latest,fresh_now,60):return False
   state[key]='held: publication attempt started; reconcile remotely before retry';save()

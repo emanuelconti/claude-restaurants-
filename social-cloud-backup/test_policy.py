@@ -1,5 +1,5 @@
 import datetime as dt,unittest
-from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history,SINGAPORE,local_now,selected_brands,EU_CRON,GMS_CRON,SP_CRON,SIN_CRON,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit
+from policy import TZ,target,seen,count_today,next_item,gap_ok,youtube_title,parse_ig_history,SINGAPORE,local_now,selected_brands,EU_CRON,GMS_CRON,SP_CRON,SIN_CRON,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts
 class QueuePolicyTests(unittest.TestCase):
  def setUp(self):
   self.day='2026-11-03';self.now=dt.datetime(2026,11,3,20,58,tzinfo=TZ)
@@ -101,5 +101,24 @@ class RecoveryExceptionTests(unittest.TestCase):
  def test_extra_recovery_cron_is_only_facebook(self):
   self.assertEqual(selected_brands(FB_RECOVERY_CRON),('gms',))
   self.assertEqual(channel_plan('gms',FB_RECOVERY_CRON),('facebook',))
+
+class DurableCounterTests(unittest.TestCase):
+ def test_receipts_close_eventually_consistent_history_gap(self):
+  now=dt.datetime(2026,11,3,15,tzinfo=SINGAPORE)
+  items=[dict(id=f'gms-{i}',brand='gms',date='2026-11-03',title=f'Topic {i}') for i in range(6)]
+  posts=[dict(title='Other 1',stamp=now.isoformat()),dict(title='Other 2',stamp=now.isoformat())]
+  state={x['id']+':youtube':'success: public' for x in items}
+  self.assertEqual(count_known_posts(posts,now,'gms','youtube',items,state),8)
+  posts.append(dict(title=youtube_title('Topic 0'),stamp=now.isoformat()))
+  self.assertEqual(count_known_posts(posts,now,'gms','youtube',items,state),8)
+ def test_receipts_do_not_leak_across_channels_or_singapore_days(self):
+  now=dt.datetime(2026,11,4,0,tzinfo=SINGAPORE)
+  items=[dict(id='gms-0',brand='gms',date='2026-11-03',title='Topic')]
+  self.assertEqual(count_known_posts([],now,'gms','youtube',items,{'gms-0:youtube':'success: public'}),0)
+ def test_dst_changes_europe_but_never_singapore_clock(self):
+  for month,paris_hour in ((1,1),(7,2)):
+   local=dt.datetime(2027,month,4,8,17,tzinfo=SINGAPORE)
+   self.assertEqual(local.astimezone(TZ).hour,paris_hour)
+   self.assertEqual(target(local,'gms'),1)
 
 if __name__=='__main__':unittest.main()

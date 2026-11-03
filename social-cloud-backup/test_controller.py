@@ -17,7 +17,7 @@ class RecoveryControllerTests(unittest.TestCase):
    slot=int(args[args.index('--slot')+1]);item=items[slot-1]
    posts.append(dict(title=item['title'],stamp=now.isoformat()))
    return 0,'published: https://example.com/'+item['id']
-  ns=dict(dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,QUEUE_DAYS=QUEUE_DAYS,
+  ns=dict(dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,count_known_posts=count_known_posts,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,QUEUE_DAYS=QUEUE_DAYS,
    history=lambda b,c:list(posts),manifest=items,state={},save=lambda:None,errors=[],sys=types.SimpleNamespace(argv=['controller.py','--recover-gms']),recover_today=True,
    verify=lambda item:None,R=Path('/reviewed'),subprocess=types.SimpleNamespace(check_output=lambda *a,**kw:'reviewedcommit'),os=types.SimpleNamespace(environ={}),brands={'gms':('TOKEN_NAME','goodmessage_studio')},run=run)
   exec(compile(ast.Module(body=[fn],type_ignores=[]),'controller.py','exec'),ns)
@@ -34,5 +34,14 @@ class RecoveryControllerTests(unittest.TestCase):
   self.assertFalse(ns['process_channel']('gms','facebook'))
   self.assertEqual(len(posts),1)
   self.assertEqual(ns['state'],{})
+
+ def test_delayed_remote_history_cannot_cause_extra_uploads(self):
+  ns,posts=self.fixture('ig',2)
+  original=list(posts)
+  ns['history']=lambda b,c:list(original)
+  for _ in range(8):
+   if not ns['process_channel']('gms','ig'):break
+  self.assertEqual(len(posts),8)
+  self.assertEqual(len(ns['state']),6)
 
 if __name__=='__main__':unittest.main()

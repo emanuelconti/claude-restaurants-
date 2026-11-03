@@ -1,6 +1,6 @@
-# Temporary cloud social backup
+# Social cloud publishing by market
 
-Runs on GitHub-hosted Ubuntu, independently of the owner's Mac and Claude subscription quota. Valid 3–5 November 2026, hard expiry 6 November at 02:00 Europe/Paris. No payments or paid AI calls.
+Runs on GitHub-hosted Ubuntu, independently of the owner's Mac and Claude subscription quota. Standing service authorised by the owner on 3 November 2026, including after the Thursday Claude quota reset. Only approved inventory can be published; current coverage is recorded in health.json. No payments or paid AI calls.
 
 ## Coverage
 
@@ -24,4 +24,4 @@ The owner explicitly authorized the minimal credential set in encrypted GitHub A
 
 Enabled: SP and Sin Instagram; GMS Instagram, Facebook, Threads, YouTube. Pinterest, TikTok and Stories remain off. There are no App Store, product, pricing, Stripe, outreach or other project changes.
 
-Scheduler: .github/workflows/social-cloud-backup.yml on default branch claude/coao-8jloui, checking out codex/social-cloud-backup. Check and validate modes never publish. The temporary Codex heartbeat monitors cloud status only; it is not a second publisher.
+Scheduler: .github/workflows/social-cloud-backup.yml on default branch claude/coao-8jloui, checking out codex/social-cloud-backup. Check and validate modes never publish. The Codex heartbeat monitors cloud status only; it is not a second publisher. Read ../SOCIAL_CLOUD_RUNBOOK.md for primary/backup editor roles, seven-day inventory target, daily public-result snapshots and deduplicated low-inventory alerts.

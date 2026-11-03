@@ -7,10 +7,10 @@ HOURS = (9, 11, 14, 16, 17, 18, 20, 22)
 SIN_HOURS = (8, 10, 12, 14, 16, 18, 20, 21)
 GMS_HOURS = (8, 10, 12, 14, 15, 18, 20, 21)
 EU_CRON = '58 6-22 3-5 11 *'  # accepted only for older queued workflow events
-SP_CRON = '47 8-22 3-5 11 *'  # 09:47-23:47 Madrid
-SIN_CRON = '23 7-22 3-5 11 *'  # 08:23-23:23 Paris
+SP_CRON = '47 9-23 * * *'  # 09:47-23:47 Madrid
+SIN_CRON = '23 8-23 * * *'  # 08:23-23:23 Paris
 FB_RECOVERY_CRON = '7,27,37,47,57 6-15 3 11 *'  # owner-authorized 3 November recovery only
-GMS_CRON = '17 0-15 3-5 11 *'  # 08:17-23:17 Singapore, including recovery checks
+GMS_CRON = '17 8-23 * * *'  # 08:17-23:17 Singapore, including recovery checks
 QUEUE_DAYS = frozenset(('2026-11-03', '2026-11-04', '2026-11-05'))
 
 def timezone_for(brand):
@@ -73,3 +73,18 @@ def channel_plan(brand, cron='', recover=False):
 def attempt_limit(brand, channel, recover, now):
  # Explicit one-day exception requested by owner; Facebook never bypasses 60 minutes.
  return 8 if recover and recovery_allowed(now) and brand == 'gms' and channel != 'facebook' else 1
+
+
+def count_known_posts(posts, now, brand, channel, items, state):
+ """Include durable success receipts while the platform history is still catching up."""
+ day=local_now(now,brand).date().isoformat()
+ remote=[p for p in posts if (channel!='youtube' or p.get('visibility','public')=='public') and p.get('stamp') and dt.datetime.fromisoformat(p['stamp'].replace('Z','+00:00')).astimezone(timezone_for(brand)).date().isoformat()==day]
+ remote_titles={p['title'] for p in remote}
+ extra=0
+ for item in items:
+  if item['brand']!=brand or item['date']!=day:continue
+  receipt=state.get(item['id']+':'+channel,'')
+  if not receipt.startswith(('success:', 'confirmed remotely')):continue
+  title=youtube_title(item['title']) if channel=='youtube' else item['title']
+  if title not in remote_titles:extra+=1
+ return len(remote)+extra
