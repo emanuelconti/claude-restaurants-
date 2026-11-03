@@ -5,6 +5,11 @@ on:
     types: [completed]
     branches: [claude/coao-8jloui]
   workflow_dispatch:
+    inputs:
+      smoke_test:
+        description: One short timer test; automatic successors always use the normal 45-minute wait
+        type: boolean
+        default: false
 permissions:
   contents: read
   actions: write
@@ -19,7 +24,7 @@ jobs:
        github.event.workflow_run.head_branch == 'claude/coao-8jloui' &&
        (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch') &&
        github.event.workflow_run.conclusion != 'cancelled')
-    environment: social-publisher-recovery-wait
+    environment: ${{ inputs.smoke_test == true && 'social-publisher-recovery-smoke' || 'social-publisher-recovery-wait' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
