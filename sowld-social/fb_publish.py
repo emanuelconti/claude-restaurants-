@@ -169,7 +169,8 @@ def main():
             v = (x.get("variants") or [{}])[0].get("price")
             return f" · S${float(v):.0f}" if v else ""
         cards = [{"link": f"{SHOP.rstrip('/')}/products/{x['handle']}", "name": x["title"],
-                  "description": "Shop now at goodmessagestudio.com" + price(x)} for x in picks]
+                  "description": "Shop now at goodmessagestudio.com" + price(x),
+                  "picture": x["images"][0]["src"].split("?")[0]} for x in picks]
         # A card stays blank when Facebook has not read the product page yet: ask it to read each page now,
         # and keep only the pages that came back with an image (owner, 2 November 2026: no blank cards, ever).
         ready = []
@@ -184,6 +185,9 @@ def main():
             sys.exit("Facebook could not read enough product pages with an image: nothing published")
         cards = ready
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
+        message = message.replace("(link in bio)", "")
+        if "https://goodmessagestudio.com" not in message:
+            message += "\n\nShop now: https://goodmessagestudio.com"
         params = {"message": message, "link": SHOP, "multi_share_end_card": "false",
                   "multi_share_optimized": "false", "child_attachments": json.dumps(cards)}
         try:
