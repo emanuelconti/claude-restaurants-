@@ -14,7 +14,7 @@ class Formats(unittest.TestCase):
    def api(method,path,token,params=None):
     calls.append((method,path,params or {}))
     if path.endswith('/photos'):return {'id':f'photo{len(calls)}'}
-    if method=='GET' and path.startswith('photo'):return {'images':[{'source':'stored'}]}
+    if method=='GET' and path.startswith('photo'):return {'images':[{'source':'stored','width':1080,'height':1350}]}
     if path.endswith('/feed'):return {'id':'post'}
     return {'permalink_url':'https://facebook.com/verified'}
    catalog={'products':[dict(title=t+' Hoodie',handle=str(i),images=[{'src':'https://cdn.shopify.com/test.jpg'}],variants=[{'price':'79'}]) for i,t in enumerate(('Be Kind','Peace Starts With Us','Enjoy The Little Things'))]}

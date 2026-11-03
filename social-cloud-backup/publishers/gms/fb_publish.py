@@ -180,8 +180,8 @@ def main():
             if not photo.get("id"):
                 raise RuntimeError("Facebook did not acknowledge the native photo; no feed post published")
             stored = call("GET", photo["id"], token, {"fields": "images"})
-            if not stored.get("images"):
-                raise RuntimeError("Facebook native photo has no stored image; no feed post published")
+            if not any(image.get("width", 0) >= 320 and image.get("height", 0) >= 320 for image in stored.get("images", [])):
+                raise RuntimeError("Facebook native photo is missing or a tiny placeholder; no feed post published")
             photo_ids.append(str(photo["id"]))
         message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
         # Keep a clickable shop route in the post itself even if a Facebook placement hides card labels.
