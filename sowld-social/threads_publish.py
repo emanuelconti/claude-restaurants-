@@ -10,7 +10,7 @@ Good Message Studio profile with threads_basic and threads_content_publish
 (made in the same Meta app, "Threads API" use case). The token goes in an
 Authorization header, never in a URL or in the output.
 
-Same safety rules as ig_publish.py: at most 6 posts a day (Europe/Madrid date),
+Same safety rules as ig_publish.py: at most 6 posts a day (Asia/Singapore date),
 at least 60 minutes between posts, never the same first line twice, and a full
 stop on any answer that says blocked, limit, spam, restricted or temporarily.
 Threads takes at most 500 characters of text, so the caption is shortened to the
@@ -39,7 +39,7 @@ API = "https://graph.threads.net/v1.0"
 MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 0  # owner, 2 Nov 2026: no wait on Threads (Facebook keeps 60)
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
-MADRID = ZoneInfo("Europe/Madrid")
+SINGAPORE = ZoneInfo("Asia/Singapore")
 
 
 class Stop(RuntimeError):
@@ -118,7 +118,7 @@ def main():
             return
         now = dt.datetime.now(dt.timezone.utc)
         stamps = [dt.datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for p in posts if p.get("timestamp")]
-        today = sum(1 for s in stamps if s.astimezone(MADRID).date() == now.astimezone(MADRID).date())
+        today = sum(1 for s in stamps if s.astimezone(SINGAPORE).date() == now.astimezone(SINGAPORE).date())
         if today >= MAX_PER_DAY:
             print(f"daily cap: the profile already has {today} posts today, nothing published")
             return
