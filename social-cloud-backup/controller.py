@@ -62,8 +62,11 @@ def history(b,channel):
  if rc:raise RuntimeError(channel+' identity/history unavailable')
  return json.loads(out)['posts']
 cron=os.environ.get('BACKUP_CRON','')
+owner_test='--owner-av-test-20261103' in sys.argv
+if owner_test and not (dt.datetime(2026,11,3,20,tzinfo=dt.timezone.utc) <= dt.datetime.now(dt.timezone.utc) < dt.datetime(2026,11,4,0,tzinfo=dt.timezone.utc)):
+ raise SystemExit('The dated owner audiovisual test has expired; nothing published.')
 recover='--recover-gms' in sys.argv
-recover_today=recovery_allowed(now) and (recover or cron==FB_RECOVERY_CRON)
+recover_today=owner_test or (recovery_allowed(now) and (recover or cron==FB_RECOVERY_CRON))
 if recover and not recovery_allowed(now):
  raise SystemExit('The owner-authorized GMS catch-up exception has expired; nothing published.')
 def process_channel(b,channel):
@@ -133,10 +136,20 @@ def process_channel(b,channel):
   if any(word in str(e).lower() for word in STOP_SIGNALS):
    state[block_key]='Platform restriction: operator verification required before clearing this lock.';save()
   errors.append(tag+': '+str(e));print('ERROR '+errors[-1],flush=True);return False
-for b in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
- for channel in channel_plan(b,cron,recover):
-  for attempt in range(attempt_limit(b,channel,recover,now)):
-   if not process_channel(b,channel):break
+if owner_test:
+ # Owner explicitly requested exactly three new YouTube Shorts and one normal
+ # Facebook carousel, once on 3 November evening. Same lock, identities,
+ # hashes, remote dedupe, daily caps and Facebook gap as ordinary publication.
+ for channel,ceiling in (('youtube',3),('facebook',1)):
+  key='owner_av_test_20261103:'+channel
+  while int(state.get(key,0)) < ceiling:
+   if not process_channel('gms',channel):break
+   state[key]=int(state.get(key,0))+1;save()
+else:
+ for b in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
+  for channel in channel_plan(b,cron,recover):
+   for attempt in range(attempt_limit(b,channel,recover,now)):
+    if not process_channel(b,channel):break
 if errors:raise SystemExit('\n'.join(errors))
 if '--check' in sys.argv:
  import urllib.request
