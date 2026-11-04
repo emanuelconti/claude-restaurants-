@@ -1,0 +1,111 @@
+sp|5 planes que caben entre un café y la comida|Quedar un rato también es un plan.|cafe
+Un café sin grandes novedades|No hace falta tener una noticia enorme para ver a alguien.|La compañía ya es un motivo.
+Compartir algo de comer|Preguntad qué os apetece antes de pedir para todos.|Lo sencillo también se disfruta.
+Probar una mesa nueva|Elegid una cafetería que os venga bien a los dos.|Descubrir no exige ir lejos.
+Invitar a quien acaba de llegar|Un encuentro pequeño puede ser más cómodo que un grupo enorme.|Dejad espacio para conoceros.
+Poner una hora de salida|Si tenéis poco tiempo, decidlo desde el principio.|Un rato cuenta igual.
+
+sp|5 frases para invitar sin poner presión|Una invitación puede dejar sitio para un no.|restaurant
+Me gustaría verte un rato|Empieza por la persona, sin vender un plan perfecto.|El sitio viene después.
+Te apetece comer algo|Propón una idea concreta que también pueda cambiar.|Mejor fácil que espectacular.
+Podemos mirar un día distinto|Ofrece otra fecha si de verdad te viene bien.|Que no suene a obligación.
+Puede ser algo más pequeño|Un café también vale si una cena no encaja.|No hace falta hacerlo enorme.
+Si esta vez no puedes, otra será|Deja la puerta abierta sin pedir explicaciones.|Invitar también es cuidar el tono.
+
+sp|5 cosas que hacen mejor una sobremesa|A veces lo mejor empieza cuando ya habéis comido.|restaurant
+No mirar el siguiente plan|Si os apetece seguir, dejad un rato sin agenda.|La conversación puede tener espacio.
+Preguntar por lo pequeño|No todo lo que merece contarse es una gran noticia.|Las historias normales también cuentan.
+Dejar terminar la anécdota|Escuchar sin preparar la siguiente historia cambia el ritmo.|No hace falta competir.
+Preguntar antes de pedir más|Que cada persona pueda elegir si quiere seguir.|Compartir no es decidir por todos.
+Cuidar el tiempo del local|Respetad sus horarios y preguntad si tenéis dudas.|Disfrutar también es tenerlo en cuenta.
+
+sp|5 detalles para elegir un bar cuando no todos beben|Lo importante es que el plan le encaje a todo el grupo.|cafe
+Mirar opciones para todos|Consultad la carta de bebidas antes de elegir.|Nadie tiene que justificarse.
+Preguntar por el ambiente|Elegid un lugar donde podáis conversar si eso os apetece.|El ruido también forma parte del plan.
+Compartir un presupuesto|Decid qué os viene bien gastar antes de sentaros.|Hablarlo evita adivinar.
+Dejar libre lo que pide cada uno|No convirtáis una elección en un debate.|La compañía no depende de la copa.
+Tener una alternativa sencilla|Si el sitio está lleno, acordad otro cercano.|El plan puede seguir sin drama.
+
+sp|5 acuerdos pequeños antes de una noche de hotel|La escapada empieza mejor cuando no hay que adivinarlo todo.|hotel
+Confirmar la llegada|Revisad la hora de entrada y avisad si necesitáis otra opción.|Preguntar es mejor que suponer.
+Separar descanso y planes|Hablad de cuánto queréis salir y cuánto descansar.|No todos viajamos al mismo ritmo.
+Leer qué está incluido|Consultad las condiciones de vuestra reserva.|Una foto no es una confirmación.
+Aclarar los gastos comunes|Acordad qué vais a compartir y cómo lo pagaréis.|Mejor hablarlo antes.
+Elegir una cosa para disfrutar|No hace falta llenar cada hora de la estancia.|También podéis dejar huecos.
+
+sp|5 preguntas útiles al terminar un sábado de servicio|Para los equipos de bares y restaurantes: apuntar antes de olvidar.|restaurant
+Dónde hubo esperas|Anotad el momento concreto, sin convertirlo en una culpa.|Buscad el paso que se puede mejorar.
+Qué preguntas se repitieron|Una duda frecuente puede necesitar una respuesta más visible.|Escuchad lo que pidió claridad.
+Qué horario quedó tranquilo|Separad la impresión de los registros que tengáis.|No rellenéis datos de memoria.
+Qué prometisteis a un cliente|Dejad claro quién responderá y cuándo.|Que el seguimiento tenga dueño.
+Qué probaréis la próxima vez|Elegid un cambio pequeño y una manera de observarlo.|No hace falta cambiarlo todo.
+
+sp|5 maneras de recomendar un restaurante de verdad|Hablar de lo que viviste ayuda más que decir que es perfecto.|restaurant
+Cuenta qué te gustó|Un plato o un detalle concreto dice más que una lista de adjetivos.|Tu experiencia puede ser suficiente.
+Di para qué plan lo ves|Una cena tranquila y un grupo grande no buscan lo mismo.|Ponle contexto.
+Aclara cuándo fuiste|Un servicio cambia y tu visita tiene una fecha.|Habla de lo que sabes.
+Deja elegir a la otra persona|Recomendar no obliga a que le guste igual.|Cada uno tiene sus preferencias.
+Reconoce si hubo un incentivo|Si recibiste algo por compartirlo, dilo con claridad.|La confianza también va aquí.
+
+sp|5 cosas que recordar después de una buena cena|No todo el recuerdo cabe en una foto.|restaurant
+La conversación que no esperabas|A veces un tema pequeño termina siendo lo mejor del encuentro.|Dejad que el rato os sorprenda.
+Quien hizo sitio para alguien|Un gesto discreto puede cambiar cómo se siente el grupo.|Vale la pena notarlo.
+El plato que compartisteis|Preguntar qué le gustó al otro también alarga el recuerdo.|No hace falta puntuarlo todo.
+El gracias al despedirse|Si te lo pasaste bien, puedes decirlo de forma sencilla.|No lo guardes para una ocasión enorme.
+Las ganas de repetir|Proponer otra fecha es opcional, no una promesa automática.|Que siga siendo un gusto.
+
+sin|5 ways to make a founder weekend less scattered|A short reset can be useful without becoming another workday.|work
+Choose one loose end|Pick a task small enough to finish in the time you have.|A reset needs a boundary.
+Write down what can wait|Separate next week's work from things you can leave alone today.|Not every idea is urgent.
+Leave a clear handover|If someone is covering, note what actually needs a response.|Clarity helps people switch off.
+Give the useful thought a place|Save the idea instead of keeping it open in your head.|A note can be enough for now.
+Stop at the time you chose|An unfinished list is not a reason to work all evening.|Leave some space beyond the business.
+
+sin|5 questions before calling a conversation customer research|A friendly reaction and useful evidence are different things.|work
+Who was speaking|Record whether they could actually use or buy the product.|Context matters to the answer.
+What did you ask|Keep the question alongside the response.|A leading question can shape praise.
+What do they do today|Ask about a recent real situation, not only a future intention.|Start with their current behaviour.
+What did they choose next|Separate a compliment from a test, a purchase or no action.|Keep the observation precise.
+What would change your mind|Write down what result would challenge your idea.|Research should be allowed to surprise you.
+
+sin|5 details that make a product demo easier to follow|Show one complete task before explaining every feature.|work
+Name the person using it|Say whose problem the demonstration follows.|Give the viewer a starting point.
+Show the actual trigger|Explain what makes that person open the product.|A feature needs a situation.
+Complete one real task|Walk through the actions without pretending a mockup is live.|Label a prototype honestly.
+Show what happened next|Make the resulting state visible.|A click is not the whole outcome.
+Keep a place for questions|Note what the viewer misunderstood before adding more slides.|Confusion is useful feedback.
+
+sin|5 questions before spending a pilot budget|A learning goal should connect the spend to a decision.|work
+What are you trying to learn|Write the assumption in plain language.|A busy pilot is not automatically informative.
+What needs to be paid for|List actual services and time you expect to use.|Separate estimates from invoices.
+What would be enough evidence|Decide what you need to observe before expanding.|Choose this before seeing the result.
+Who watches the remaining cash|Give the check a person and a date.|A budget needs regular attention.
+What happens if the result is weak|Keep a stop or revision option in the plan.|More spend is not the only next step.
+
+sin|5 things to put beside an application deadline|A date alone does not tell a founder what to do next.|work
+The official source|Keep the current call link beside the date.|A saved post is not the full guidance.
+The time and timezone|Copy the deadline exactly as the official source states it.|Do not assume local midnight.
+The required documents|List the actual files requested for that call.|Requirements differ between programmes.
+The person responsible|Name who prepares, reviews and submits.|Avoid a shared assumption.
+Your internal check date|Leave room to open files and resolve questions.|Treat it as your plan, not the official deadline.
+
+sin|5 checks before publishing a startup progress post|A clear update can be ambitious without overstating the facts.|work
+Label the stage|Distinguish a prototype, a pilot and a live paid service.|The reader should not have to guess.
+Name what changed|Describe the actual development since your last update.|Specific beats impressive-sounding.
+Keep permission in view|Ask before naming a customer or sharing their material.|Participation is not a public endorsement.
+Separate results and targets|A future goal should not look like a completed milestone.|Use dates and clear labels.
+Choose one useful request|Say what kind of feedback or introduction would help.|Make the next action understandable.
+
+sin|5 ways to prepare a useful co-founder conversation|Clarity about the work comes before a grand title.|work
+Describe the current position|Say what exists, what is unfinished and who owns the work.|Start with the same facts.
+Talk about the actual role|Discuss decisions, responsibilities and time available.|A title cannot do that job.
+Compare expectations|Ask what each person needs from the collaboration.|Make differences visible early.
+Separate discussion from commitment|Do not present an informal conversation as agreed ownership.|Record only what was actually agreed.
+Choose a concrete next step|A defined task or another meeting can test the working relationship.|Leave room for an honest decision.
+
+sin|5 notes to leave your future founder self|A few clear lines can make next week's restart easier.|work
+What you finished|List the result, not every hour spent on it.|Give the work a useful record.
+What is still uncertain|Keep the open question visible.|Uncertainty does not disappear in a deck.
+What someone is waiting for|Write the promised follow-up and the real due date.|Make the next reply easier.
+What deserves another test|Note the assumption and the simplest next observation.|Do not restart the whole debate.
+What can stay closed tonight|Choose where to stop for now.|A clear ending can help the next beginning.
