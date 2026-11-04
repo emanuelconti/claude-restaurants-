@@ -1,0 +1,935 @@
+sp {
+  "title": "Un plan entre clases, sin complicarse",
+  "hook": "Un rato juntos puede caber en una tarde normal.",
+  "photos": "cafe",
+  "photo_ids": [
+    "1495474472287-4d71bcdd2085",
+    "1497935586351-b67a49e012bf",
+    "1509042239860-f550ce710b93",
+    "1511920170033-f8396924c348",
+    "1521017432531-fbd92d768814",
+    "1538688525198-9b88f6f53126"
+  ],
+  "points": [
+    [
+      "Propón una hora",
+      [
+        "Mejor una invitación concreta que un ya veremos."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Busca una zona cómoda",
+      [
+        "Que llegar no sea la parte más larga del plan."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Pregunta por el presupuesto",
+      [
+        "Un buen rato no necesita gastar mucho."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Deja sitio a un no",
+      [
+        "Otra semana también puede ser."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Disfruta de la compañía",
+      [
+        "No hace falta convertirlo en un gran evento."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Un rato juntos puede caber en una tarde normal. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1495474472287-4d71bcdd2085",
+  "cta": false,
+  "point_sets": [
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe"
+  ]
+}
+
+sp {
+  "title": "La mesa donde caben todos",
+  "hook": "Hacer sitio también es una forma de invitar.",
+  "photos": "restaurant",
+  "photo_ids": [
+    "1513104890138-7c749659a591",
+    "1514362545857-3bc16c4c7d1b",
+    "1514933651103-005eec06c04b",
+    "1517248135467-4c7edcad34c4",
+    "1544982560-63ad67a35c23",
+    "1550966871-3ed3cdb5ed0c"
+  ],
+  "points": [
+    [
+      "Cuenta con quien llega nuevo",
+      [
+        "Explícale el plan sin dar nada por hecho."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Pregunta antes de pedir",
+      [
+        "Gustos y necesidades no se adivinan."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Compartir es opcional",
+      [
+        "Cada persona puede elegir lo que le apetece."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Hablad de la cuenta",
+      [
+        "Acordarlo al principio evita una sorpresa."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Repetid lo que funciona",
+      [
+        "Una mesa familiar puede convertirse en costumbre."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Hacer sitio también es una forma de invitar. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1513104890138-7c749659a591",
+  "cta": false,
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ]
+}
+
+sp {
+  "title": "Un martes de tapas con amigos",
+  "hook": "Lo sencillo puede ser el mejor plan de la semana.",
+  "photos": "restaurant",
+  "photo_ids": [
+    "1514362545857-3bc16c4c7d1b",
+    "1514933651103-005eec06c04b",
+    "1517248135467-4c7edcad34c4",
+    "1544982560-63ad67a35c23",
+    "1550966871-3ed3cdb5ed0c",
+    "1551024709-8f23befc6f87"
+  ],
+  "points": [
+    [
+      "Elegid una zona",
+      [
+        "Quedar cerca facilita que todo el mundo llegue."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Mirad la carta",
+      [
+        "Acordad algo que encaje con el grupo."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Sin prisa por cambiar",
+      [
+        "Un sitio agradable no exige una ruta entera."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Dejad hueco para hablar",
+      [
+        "La conversación también es parte del plan."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Volved por cómo os trataron",
+      [
+        "Los buenos recuerdos suelen tener detalles pequeños."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Lo sencillo puede ser el mejor plan de la semana. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1514362545857-3bc16c4c7d1b",
+  "cta": false,
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ]
+}
+
+sp {
+  "title": "Un bar tranquilo también puede ser el plan",
+  "hook": "No todas las quedadas necesitan una noche enorme.",
+  "photos": "cafe",
+  "photo_ids": [
+    "1511920170033-f8396924c348",
+    "1521017432531-fbd92d768814",
+    "1538688525198-9b88f6f53126",
+    "1554118811-1e0d58224f24",
+    "1565252556328-92ee4a9a0983",
+    "1621523133136-cea844f32bdf"
+  ],
+  "points": [
+    [
+      "Buscad un momento cómodo",
+      [
+        "Elegid una hora que os venga bien."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Preguntad qué hay",
+      [
+        "Puede haber opciones con y sin alcohol."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Poned fácil llegar",
+      [
+        "Compartid el sitio y una hora concreta."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Cuidad a quien no conoce al grupo",
+      [
+        "Una presentación cambia el ambiente."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Cada uno a su ritmo",
+      [
+        "Una buena noche no depende de beber más."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "No todas las quedadas necesitan una noche enorme. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1511920170033-f8396924c348",
+  "cta": false,
+  "point_sets": [
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe"
+  ]
+}
+
+sp {
+  "title": "Qué hace que quieras volver a un hotel",
+  "hook": "A veces recuerdas mejor un detalle que una habitación.",
+  "photos": "hotel",
+  "photo_ids": [
+    "1551882547-ff40c63fe5fa",
+    "1600585154340-be6161a56a0c",
+    "1559339352-11d035aa65de",
+    "1524758631624-e2822e304c36",
+    "1538688525198-9b88f6f53126",
+    "1551882547-ff40c63fe5fa"
+  ],
+  "points": [
+    [
+      "Una bienvenida clara",
+      [
+        "Saber dónde ir hace más fácil la llegada."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Un consejo útil",
+      [
+        "Un lugar cercano que encaja contigo."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Tiempo sin prisa",
+      [
+        "Disfrutar de un espacio también cuenta."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Trato atento",
+      [
+        "Que te escuchen sin tener que insistir."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Un recuerdo compartido",
+      [
+        "El viaje también es la compañía."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "A veces recuerdas mejor un detalle que una habitación. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1551882547-ff40c63fe5fa",
+  "cta": false,
+  "point_sets": [
+    "hotel",
+    "hotel",
+    "hotel",
+    "hotel",
+    "hotel"
+  ]
+}
+
+sp {
+  "title": "Horas tranquilas, experiencias bien pensadas",
+  "hook": "Para locales: empieza por una franja y mide visitas reales.",
+  "photos": "cafe",
+  "photo_ids": [
+    "1538688525198-9b88f6f53126",
+    "1554118811-1e0d58224f24",
+    "1565252556328-92ee4a9a0983",
+    "1621523133136-cea844f32bdf",
+    "1641924675896-b6a5aaf64861",
+    "1445116572660-236099ec97a0"
+  ],
+  "points": [
+    [
+      "Elige una franja concreta",
+      [
+        "No necesitas llenar toda la semana a la vez."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Ofrece algo asumible",
+      [
+        "Decide el coste y cuántas personas puedes recibir."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Haz fácil invitar",
+      [
+        "Da al cliente una forma clara de traer a alguien."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Confirma quién viene",
+      [
+        "Una reserva no equivale a una visita."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Aprende antes de ampliar",
+      [
+        "El piloto actual dura sesenta días y es gratuito."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Para locales: empieza por una franja y mide visitas reales. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1538688525198-9b88f6f53126",
+  "cta": false,
+  "point_sets": [
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe"
+  ]
+}
+
+sp {
+  "title": "La quedada que incluye a quien acaba de llegar",
+  "hook": "Una ciudad nueva se conoce también con personas.",
+  "photos": "cafe",
+  "photo_ids": [
+    "1554118811-1e0d58224f24",
+    "1565252556328-92ee4a9a0983",
+    "1621523133136-cea844f32bdf",
+    "1641924675896-b6a5aaf64861",
+    "1445116572660-236099ec97a0",
+    "1495474472287-4d71bcdd2085"
+  ],
+  "points": [
+    [
+      "Invita sin hacer un examen",
+      [
+        "No hace falta conocer a todo el grupo."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Explica dónde estáis",
+      [
+        "Un punto de encuentro claro ayuda."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Pregunta qué le apetece",
+      [
+        "No todos buscan el mismo tipo de plan."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Comparte un sitio cercano",
+      [
+        "Lo cotidiano también enseña la ciudad."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Deja abierto el próximo café",
+      [
+        "La amistad puede empezar con un rato sencillo."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Una ciudad nueva se conoce también con personas. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1554118811-1e0d58224f24",
+  "cta": false,
+  "point_sets": [
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe"
+  ]
+}
+
+sp {
+  "title": "Del buen servicio a la recomendación",
+  "hook": "Para locales: la experiencia debe merecer que vuelvan.",
+  "photos": "restaurant",
+  "photo_ids": [
+    "1551024709-8f23befc6f87",
+    "1559339352-11d035aa65de",
+    "1572116469696-31de0f17cc34",
+    "1579751626657-72bc17010498",
+    "1600028068383-ea11a7a101f3",
+    "1659690402718-ea07d943fd42"
+  ],
+  "points": [
+    [
+      "Cuida el primer encuentro",
+      [
+        "Una invitación no sustituye una buena atención."
+      ],
+      "Un paso sencillo."
+    ],
+    [
+      "Explica el detalle incluido",
+      [
+        "Que nadie tenga que adivinar las condiciones."
+      ],
+      "Sin presión."
+    ],
+    [
+      "Respeta el límite del local",
+      [
+        "Los regalos también tienen un coste real."
+      ],
+      "Cada persona decide."
+    ],
+    [
+      "Comprueba la visita",
+      [
+        "Cuenta personas que vienen, no solo clics."
+      ],
+      "Cuida los detalles."
+    ],
+    [
+      "Revisa lo aprendido",
+      [
+        "Amplía cuando tengas señales de que funciona."
+      ],
+      "Revisa qué funciona."
+    ]
+  ],
+  "caption": "Para locales: la experiencia debe merecer que vuelvan. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/",
+  "hashtags": "#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+  "cover_photo_id": "1551024709-8f23befc6f87",
+  "cta": false,
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ]
+}
+
+sin {
+  "title": "Before you call a pilot successful",
+  "hook": "Agree on the evidence before you see the result.",
+  "photos": "work",
+  "photo_ids": [
+    "1434030216411-0b793f4b4173",
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3",
+    "1488190211105-8b0e65b80b4e",
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643"
+  ],
+  "points": [
+    [
+      "Name the behaviour",
+      [
+        "What should a real customer actually do?"
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Record the starting point",
+      [
+        "A comparison needs a baseline."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Count the full cost",
+      [
+        "Include founder and support time."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Keep the weak signals",
+      [
+        "Silence and drop-off are part of the evidence."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Choose the next decision",
+      [
+        "A pilot should help you decide something."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Agree on the evidence before you see the result. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1434030216411-0b793f4b4173",
+  "cta": false
+}
+
+sin {
+  "title": "A founder update people can actually read",
+  "hook": "One clear page is often better than a long narrative.",
+  "photos": "work",
+  "photo_ids": [
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3",
+    "1488190211105-8b0e65b80b4e",
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643",
+    "1517842645767-c639042777db"
+  ],
+  "points": [
+    [
+      "Start with what changed",
+      [
+        "Give the reader a concrete development."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Separate facts from targets",
+      [
+        "A forecast is not an achieved milestone."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Explain one obstacle",
+      [
+        "Say what it changes and what you are doing."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Make one useful ask",
+      [
+        "Be precise about the introduction or help needed."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Keep the same measures",
+      [
+        "Consistency makes progress easier to judge."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "One clear page is often better than a long narrative. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1484480974693-6ca0a78fb36b",
+  "cta": false
+}
+
+sin {
+  "title": "What a small round needs to fund",
+  "hook": "Raise for a credible next stage, not a headline.",
+  "photos": "work",
+  "photo_ids": [
+    "1516321318423-f06f85e504b3",
+    "1488190211105-8b0e65b80b4e",
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643",
+    "1517842645767-c639042777db",
+    "1486312338219-ce68d2c6f44d"
+  ],
+  "points": [
+    [
+      "Define the milestone",
+      [
+        "Say what the money should let you demonstrate."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "List the work",
+      [
+        "Connect spending to the activities required."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Show the monthly cash",
+      [
+        "Profit and cash do not arrive at the same time."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Keep a reserve",
+      [
+        "A delay should be visible in the model."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Describe the decision point",
+      [
+        "What happens if the milestone is missed?"
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Raise for a credible next stage, not a headline. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1516321318423-f06f85e504b3",
+  "cta": false
+}
+
+sin {
+  "title": "A warm introduction is only the first step",
+  "hook": "Preparation still matters after someone opens the door.",
+  "photos": "work",
+  "photo_ids": [
+    "1488190211105-8b0e65b80b4e",
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643",
+    "1517842645767-c639042777db",
+    "1486312338219-ce68d2c6f44d",
+    "1434030216411-0b793f4b4173"
+  ],
+  "points": [
+    [
+      "Explain why this person",
+      [
+        "Show a real fit with their focus."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Send a short forwardable note",
+      [
+        "Make the introduction easy to understand."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Link the right evidence",
+      [
+        "Choose a concise deck, not every file you own."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Ask for a specific conversation",
+      [
+        "A clear purpose helps both sides prepare."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Follow up with substance",
+      [
+        "A useful update beats repeated just checking in."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Preparation still matters after someone opens the door. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1488190211105-8b0e65b80b4e",
+  "cta": false
+}
+
+sin {
+  "title": "Free users and paying customers tell different stories",
+  "hook": "Keep both in the model, with honest labels.",
+  "photos": "work",
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643",
+    "1517842645767-c639042777db",
+    "1486312338219-ce68d2c6f44d",
+    "1434030216411-0b793f4b4173",
+    "1484480974693-6ca0a78fb36b"
+  ],
+  "points": [
+    [
+      "Record activation",
+      [
+        "Did someone use the core workflow?"
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Observe repeated use",
+      [
+        "One session is not a retained habit."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Test a real buying decision",
+      [
+        "Interest alone is not collected revenue."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Keep free costs visible",
+      [
+        "Support and infrastructure still cost money."
+      ],
+      "State assumptions."
+    ],
+    [
+      "State what is unknown",
+      [
+        "An assumption stays an assumption until tested."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Keep both in the model, with honest labels. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1506784983877-45594efa4cbe",
+  "cta": false
+}
+
+sin {
+  "title": "Prepare the evidence behind one slide",
+  "hook": "A clean deck needs a traceable source underneath.",
+  "photos": "work",
+  "photo_ids": [
+    "1499750310107-5fef28a66643",
+    "1517842645767-c639042777db",
+    "1486312338219-ce68d2c6f44d",
+    "1434030216411-0b793f4b4173",
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3"
+  ],
+  "points": [
+    [
+      "Choose the exact claim",
+      [
+        "Avoid combining several different measures."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Keep the date",
+      [
+        "Numbers change over time."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Save the source",
+      [
+        "Make the evidence easy to find again."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Explain the definition",
+      [
+        "Two similar labels can measure different things."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Show the limitation",
+      [
+        "A small sample should look like a small sample."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "A clean deck needs a traceable source underneath. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1499750310107-5fef28a66643",
+  "cta": false
+}
+
+sin {
+  "title": "When a programme looks perfect for your startup",
+  "hook": "Check fit before spending a week on the application.",
+  "photos": "work",
+  "photo_ids": [
+    "1517842645767-c639042777db",
+    "1486312338219-ce68d2c6f44d",
+    "1434030216411-0b793f4b4173",
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3",
+    "1488190211105-8b0e65b80b4e"
+  ],
+  "points": [
+    [
+      "Read the official criteria",
+      [
+        "A summary may leave out an exclusion."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Check your legal stage",
+      [
+        "Some support needs an incorporated entity."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "Check the location rules",
+      [
+        "Country and establishment can matter."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "Estimate the application cost",
+      [
+        "Founder time belongs in that decision."
+      ],
+      "State assumptions."
+    ],
+    [
+      "Keep another route open",
+      [
+        "One application should not be the whole plan."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Check fit before spending a week on the application. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1517842645767-c639042777db",
+  "cta": false
+}
+
+sin {
+  "title": "A useful end-of-day founder note",
+  "hook": "Five lines can keep tomorrow clearer.",
+  "photos": "work",
+  "photo_ids": [
+    "1486312338219-ce68d2c6f44d",
+    "1434030216411-0b793f4b4173",
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3",
+    "1488190211105-8b0e65b80b4e",
+    "1506784983877-45594efa4cbe"
+  ],
+  "points": [
+    [
+      "What moved?",
+      [
+        "Record one concrete piece of progress."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "What did you learn?",
+      [
+        "Write the observation before the interpretation."
+      ],
+      "Check the evidence."
+    ],
+    [
+      "What is blocked?",
+      [
+        "Name the dependency, not just the frustration."
+      ],
+      "Keep it traceable."
+    ],
+    [
+      "What matters next?",
+      [
+        "Choose one action with a reason."
+      ],
+      "State assumptions."
+    ],
+    [
+      "What can wait?",
+      [
+        "Protect time for work that changes the outcome."
+      ],
+      "Decide the next step."
+    ]
+  ],
+  "caption": "Five lines can keep tomorrow clearer. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cover_photo_id": "1486312338219-ce68d2c6f44d",
+  "cta": false
+}

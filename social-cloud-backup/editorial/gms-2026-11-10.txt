@@ -1,0 +1,479 @@
+{
+  "title": "Small ways to make a new friend feel included",
+  "hook": "A welcome can be practical, not a big performance.",
+  "photos": "life",
+  "points": [
+    [
+      "Give one clear invite",
+      [
+        "Say where and when, then leave room for a no."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Save a place",
+      [
+        "Make space beside you before the group settles."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Explain the small things",
+      [
+        "An inside joke is friendlier with a little context."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Ask, then listen",
+      [
+        "Let her answer without planning your next story."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Follow up tomorrow",
+      [
+        "A short message can make the next meeting easier."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "A welcome can be practical, not a big performance. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "A kinder lunch break in Singapore",
+  "hook": "A break does not have to become another task.",
+  "photos": "life",
+  "points": [
+    [
+      "Leave a little room",
+      [
+        "You do not need to fill every minute."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Ask what sounds good",
+      [
+        "Let both of you choose the lunch plan."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Put the phone away",
+      [
+        "Give one conversation your full attention."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Keep the plan simple",
+      [
+        "A familiar spot can be enough."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Say thanks",
+      [
+        "Being good company is worth noticing."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "A break does not have to become another task. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "What to say when her plans change",
+  "hook": "Being flexible can be its own kind of care.",
+  "photos": "life",
+  "points": [
+    [
+      "No apology needed",
+      [
+        "Let her know she does not owe you a long explanation."
+      ],
+      "Start with one person."
+    ],
+    [
+      "We can choose again",
+      [
+        "Offer a different day without pressure."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Keep what works",
+      [
+        "A shorter catch-up still counts."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Ask what helps",
+      [
+        "Company and space can both be good answers."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Leave the door open",
+      [
+        "I would love to see you when it suits us both."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "Being flexible can be its own kind of care. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Four messages you can actually wear",
+  "hook": "A thoughtful gift starts with the person, not the occasion.",
+  "photos": "life",
+  "points": [
+    [
+      "Enjoy the little things",
+      [
+        "For the friend who notices ordinary good moments."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Peace starts with us",
+      [
+        "For a message about how we treat each other."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Be kind",
+      [
+        "A simple reminder for everyday life."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Do what makes you happy",
+      [
+        "Choose a message that sounds like her."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Check before gifting",
+      [
+        "Look at sizing and the full product details together."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "A thoughtful gift starts with the person, not the occasion. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "text",
+    "text",
+    "text",
+    "text",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "A Tuesday reminder for your group chat",
+  "hook": "You can keep the friendship and skip the pressure.",
+  "photos": "life",
+  "points": [
+    [
+      "Reply when you can",
+      [
+        "A quick check-in is not a test."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Ask one real question",
+      [
+        "How has your day actually been?"
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Share a small win",
+      [
+        "Good things do not need to be impressive."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Make space for quiet",
+      [
+        "Not everyone wants to talk all the time."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Offer an easy plan",
+      [
+        "Coffee soon, if you feel like it."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "You can keep the friendship and skip the pressure. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Make a small thank-you feel personal",
+  "hook": "A specific detail says more than a generic compliment.",
+  "photos": "life",
+  "points": [
+    [
+      "Name the moment",
+      [
+        "Tell her which thing made a difference."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Say what it meant",
+      [
+        "Your company made that afternoon easier."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Keep it yours",
+      [
+        "Use the words you would say out loud."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Choose with care",
+      [
+        "If you give a gift, pick a message she would wear."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Remove the obligation",
+      [
+        "A thank-you does not ask for something back."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "A specific detail says more than a generic compliment. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Friendship on a rainy Singapore evening",
+  "hook": "The plan can change without the evening being wasted.",
+  "photos": "life",
+  "points": [
+    [
+      "Pick somewhere sheltered",
+      [
+        "Agree on a simple meeting place."
+      ],
+      "Start with one person."
+    ],
+    [
+      "Give a time update",
+      [
+        "Let her know if the journey takes longer."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Make a smaller plan",
+      [
+        "A short catch-up can still be lovely."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "Offer another day",
+      [
+        "Staying home is a perfectly good choice."
+      ],
+      "Give each other room."
+    ],
+    [
+      "Get home kindly",
+      [
+        "A quick made-it-home message is enough."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "The plan can change without the evening being wasted. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Little things worth keeping from today",
+  "hook": "You do not need a perfect day to keep one good part.",
+  "photos": "life",
+  "points": [
+    [
+      "A kind sentence",
+      [
+        "Remember who made you feel seen."
+      ],
+      "Start with one person."
+    ],
+    [
+      "A shared laugh",
+      [
+        "An ordinary moment can be the best one."
+      ],
+      "Let it be simple."
+    ],
+    [
+      "Something you noticed",
+      [
+        "Light, a view, a familiar little detail."
+      ],
+      "Keep it personal."
+    ],
+    [
+      "A slower minute",
+      [
+        "Rest does not need to be earned."
+      ],
+      "Give each other room."
+    ],
+    [
+      "A message for tomorrow",
+      [
+        "Send a little warmth to someone you care about."
+      ],
+      "Small things count."
+    ]
+  ],
+  "caption": "You do not need a perfect day to keep one good part. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGGifts #Friendship #MessageHoodie",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
