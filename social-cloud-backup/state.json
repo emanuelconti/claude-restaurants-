@@ -77,8 +77,11 @@
   "gms-2026-11-04-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1431741872446941",
   "sp-2026-11-04-2:ig": "success: account: @socialperks.es\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfUoqQhgUXD/",
   "sin-2026-11-04-3:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfUoyVtAS6m/",
-  "gms-2026-11-04-5:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfUo45CAXe9/",
-  "gms-2026-11-04-5:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfUo99uG-lM",
-  "gms-2026-11-04-5:youtube": "success: plan: 1 Short, 1080x1920, 24.5 s, title '5 lines for the friend who likes simple plans | goodmessagestudio.com #Shorts', privacy public\nchannel ok: Good Message Studio, 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/hVSrB27Boyw",
-  "gms-2026-11-04-5:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1431912419096553"
+  "gms-2026-11-04-5:ig": "confirmed remotely: 5 lines for the friend who likes simple plans",
+  "gms-2026-11-04-5:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfUo99uG-lM",
+  "gms-2026-11-04-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/hVSrB27Boyw",
+  "gms-2026-11-04-5:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1431912419096553",
+  "gms-2026-11-04-2:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfUsCXvDeMf/",
+  "gms-2026-11-04-2:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfUsITXnA0W",
+  "gms-2026-11-04-2:youtube": "success: plan: 1 Short, 1080x1920, 24.5 s, title '5 kind things to say after a long day | goodmessagestudio.com #Shorts', privacy public\nchannel ok: Good Message Studio, 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/6JICsYWM2x0"
 }
