@@ -50,3 +50,7 @@ Facebook product slots 4/8 bake verified photo/name/SGD price into a portrait na
 ### Timely content is editorial, not an autonomous news publisher
 
 The owner permits occasional relevant news explainers within the normal daily slots, subject to the source/date/rights checks in SOCIAL_MARKET_RULES.md. Existing publisher only consumes reviewed assets. Do not create another news posting routine or publish the screenshot’s financial story without fresh verification and brand relevance.
+
+### First baked product showcase visually verified, 4 November
+
+Normal scheduled Facebook post https://www.facebook.com/1429179606036501/posts/1431621302458998 was opened in the authenticated browser. All four native images loaded at 960x1200. The first full photo was opened and showed the complete Enjoy The Little Things garment plus baked product name, S$79 price and shop address. The other three product images, SGD labels and full product URLs were present. This verifies the new native format; it does not repair old link-card posts retroactively. No extra test was published.

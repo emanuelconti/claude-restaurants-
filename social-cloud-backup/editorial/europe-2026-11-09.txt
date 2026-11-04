@@ -1,0 +1,111 @@
+sp|5 motivos para proponer un café entre semana|No hace falta esperar al sábado para verse.|cafe
+Tienes una historia pequeña|La anécdota del trayecto también merece contarse.|No todo necesita una gran noticia.
+Os viene bien estar cerca|Un sitio del barrio puede ahorrar más decisiones.|Lo fácil también apetece.
+Solo tenéis un rato|Decid cuánto tiempo hay y disfrutad de ese hueco.|No hace falta toda la tarde.
+Hace tiempo que decís a ver cuándo|Una propuesta concreta puede sacar el plan del chat.|Que os encaje a los dos.
+Te apetece su compañía|No necesitas otro argumento para preguntar.|Un café puede ser suficiente.
+
+sp|5 reglas no escritas de una buena ronda de tapas|Compartir mesa no significa pensar todos igual.|restaurant
+Preguntar antes de pedir de más|Deja que cada persona diga lo que le apetece.|La mesa también se organiza hablando.
+No hacer del gusto un concurso|Que alguien prefiera otra cosa no estropea el plan.|Hay sitio para pedidos distintos.
+Dejar un poco de espacio|Ni la mesa ni la conversación tienen que llenarse de golpe.|El rato puede coger ritmo.
+Hablar de la cuenta a tiempo|Acordad cómo pagar antes de que llegue el momento.|La claridad evita adivinar.
+Dar las gracias al despedirse|El equipo del local también forma parte de ese rato.|Un gesto sencillo se nota.
+
+sp|5 planes fáciles para conocer tu nueva ciudad|Para quien estudia lejos de casa y empieza por el barrio.|cafe
+Probar un café cerca|Elige un sitio al que puedas volver sin organizar un viaje.|Empieza por lo que tienes al lado.
+Invitar a una persona|Una conversación puede ser más fácil que una mesa enorme.|No tienes que conocer a todo el mundo.
+Elegir una hora realista|Preguntad cuándo os viene bien entre clases y otras cosas.|El plan no tiene que competir con todo.
+Volver al sitio que te gustó|Reconocer una calle o una mesa también ayuda a ubicarse.|Lo familiar se construye poco a poco.
+Dejar hueco para otra ocasión|No hace falta convertir el primer café en todo el fin de semana.|Un buen comienzo puede ser pequeño.
+
+sp|5 detalles que hacen más cómoda una tarde en el hotel|No todo el viaje tiene que pasar fuera.|hotel
+Preguntar qué espacios están abiertos|Consulta al equipo antes de dar por hecho un horario.|La información del lugar manda.
+Dejar un rato sin itinerario|Puedes disfrutar del alojamiento que elegiste.|No hace falta salir corriendo otra vez.
+Acordar el siguiente plan|Si viajas con alguien, pregunta qué le apetece de verdad.|Descansar también puede encajar.
+Conocer lo que está incluido|Revisa tu reserva antes de pedir un servicio.|No todas las estancias son iguales.
+Cerrar el día a vuestro ritmo|Una conversación tranquila puede ser el último plan.|El viaje también tiene pausas.
+
+sp|5 mensajes para el amigo que siempre propone el plan|Organizar algo sencillo también lleva un poco de atención.|restaurant
+Gracias por preguntar qué nos encajaba|Se notó que querías que pudiéramos venir.|Ese detalle también cuenta.
+Qué bien que eligieras algo fácil|A veces era justo lo que necesitaba la semana.|Un plan pequeño puede acertar.
+La próxima propuesta la hago yo|Puedes repartir el trabajo sin hacer un discurso.|La amistad también se organiza entre varios.
+Me gustó el rato sin prisas|Si eso fue lo mejor, puedes decirlo así.|No necesitas una frase perfecta.
+Me alegró que nos viéramos|El lugar estuvo bien, pero tu compañía era el plan.|Díselo con tus palabras.
+
+sp|5 decisiones antes de ofrecer un regalo en tu local|Para hostelería: un extra bonito también necesita límites.|restaurant
+Elegir una franja concreta|Empieza por el momento que de verdad quieres probar.|No hace falta activar toda la semana.
+Contar el coste real|Incluye los extras para invitados y para quien los trae.|El valor percibido no es el coste.
+Acordar cuántos puedes entregar|El equipo debe saber dónde está el límite.|Un tope claro evita improvisar.
+Definir cuándo se confirma la visita|Una reserva y una persona en el local no son lo mismo.|El regalo sigue a la visita.
+Explicar la regla al equipo|Prueba el recorrido antes de enseñarlo al primer cliente.|Que sea fácil también en el mostrador.
+
+sp|5 cosas que agradecer al descubrir un sitio nuevo|La recomendación puede empezar con un gesto pequeño.|cafe
+La persona que te llevó|Alguien pensó que ese lugar podía gustarte.|La invitación ya era un detalle.
+Una explicación sin prisas|Preguntar por la carta también forma parte de llegar.|Gracias a quien se toma ese rato.
+Una mesa que os encajaba|La comodidad puede estar en algo muy sencillo.|No todo es decoración.
+El pedido que elegiste tú|No hace falta acertar con lo más popular.|Tu gusto también tiene sitio.
+Las ganas de volver|Si te apetece repetir, guarda lo que te gustó.|Un lugar puede volverse familiar.
+
+sp|5 preguntas para escuchar mejor a tus clientes habituales|Para bares y cafés: empieza por una conversación real.|restaurant
+Qué les gusta de venir|No adivines el motivo solo por el pedido.|Escucha antes de cambiarlo todo.
+Cuándo les resulta cómodo|Pregunta por sus horarios sin convertirlo en un compromiso.|Una preferencia no es una reserva.
+Qué recomendarían a un amigo|Deja que nombren su detalle favorito.|Puede no ser el que esperabas.
+Qué les cuesta entender|La carta o una oferta pueden ser claras para ti y no para ellos.|Una duda es información útil.
+Qué vas a probar con lo aprendido|Elige una mejora pequeña y observa qué pasa.|Conversar no demuestra un resultado todavía.
+
+sin|5 questions to answer before a founder meeting starts|Make the conversation about a decision, not a tour of every file.|work
+What do we need to decide|Write the question in one clear sentence.|Start with the purpose.
+What is already known|Bring the records that support the current picture.|A confident tone is not evidence.
+What is still an assumption|Label the parts you have not tested.|The gap can stay visible.
+Who owns the next step|Give the action a person and a realistic time.|A shared intention needs an owner.
+What will change the decision|Name the evidence you will look for next.|Leave with a way to learn.
+
+sin|5 things that do not belong in a traction headline|Keep the first line honest enough to stand on its own.|work
+A target presented as a result|A plan for next year is still a plan.|Put it in the forecast.
+Interest renamed as revenue|An encouraging conversation is not a payment.|Use the stage that actually happened.
+Every account counted as active|Define the action and period behind active use.|A signup is a different event.
+A percentage without its base|Keep the sample size and dates beside the rate.|Make the scale visible.
+A pilot called a partnership|Describe the actual commitment and scope.|Use the words the evidence supports.
+
+sin|5 checks before a grant deadline enters your calendar|A useful reminder begins with the current official call.|work
+Read the original notice|Use the funding body's own page or document.|A repost is a starting point, not the rule.
+Find the time and timezone|Do not infer the deadline from a date alone.|Record what the notice says.
+Check which stage is due|An expression of interest may differ from the full application.|Name the exact submission.
+Note what is still required|List documents and approvals you do not yet have.|A reminder does not prepare them.
+Choose someone to recheck changes|Save the source and review it before submission.|Calls can be amended.
+
+sin|5 ways to describe a pilot without overselling it|Let another founder understand what the test can really show.|work
+Name the narrow question|Say what you are trying to learn.|A pilot is not every future promise.
+Describe who took part|Keep invited, started and completed separate.|Different stages need different counts.
+Record the conditions|Explain timing, support and any free access.|Context changes the interpretation.
+Show what was observed|Put the actual records beside the conclusion.|A story can support, not replace, evidence.
+Keep the limits in the summary|Say what the test cannot establish yet.|Credibility includes the boundary.
+
+sin|5 small systems for a calmer founder inbox|Make the next response easier to find.|work
+Give decisions one home|Keep the agreed answer beside its date.|Do not rely on the longest thread.
+Separate waiting from doing|A reply you need is not the same as an action you can start.|Two lists can prevent a false priority.
+Use a clear subject line|Name the topic and the decision needed.|Help the reader find it again.
+Keep useful attachments together|Link the current version rather than another unnamed copy.|Make the source easy to recognise.
+Close the loop when it is done|Tell the person what changed.|A short confirmation can save another follow-up.
+
+sin|5 questions before you quote an investor's feedback|Use the response to learn without inventing its meaning.|work
+What did they actually say|Keep the wording in your private notes.|Memory can turn a hint into a verdict.
+Was it a request or a decision|A question does not always mean a rejection.|Preserve the distinction.
+Which part can you verify|Look for the underlying customer or product evidence.|Test the issue, not the tone.
+What can you change usefully|Choose a concrete next step that fits your stage.|Not every comment needs a pivot.
+Can the feedback be shared|Treat a private conversation as private unless agreed otherwise.|Learning does not require public attribution.
+
+sin|5 things to put beside a runway estimate|The number is useful when its assumptions are visible.|work
+The starting date|Say when the cash balance was measured.|A moving picture needs a timestamp.
+The expenses included|List recurring costs and planned one-off spending.|An omitted cost is not a saving.
+The revenue assumption|Separate actual receipts from expected sales.|Forecasts are not cash already held.
+The hiring plan|Show which roles are assumed and when they begin.|Timing changes the burn.
+The next review point|Choose when to compare the estimate with reality.|A model needs updating as facts change.
+
+sin|5 ways to end a working day with a useful handover|Tomorrow does not need a mystery to solve.|work
+Save the current version|Give it a name another person can recognise.|The final file should not have four owners.
+Record the unresolved question|Say what stopped the task from moving.|Blocked is different from forgotten.
+Leave the next action|Write the smallest step someone can start with.|A heading alone is not a handover.
+Keep the evidence nearby|Link the test, note or source that matters.|Less searching at the next start.
+Choose a stopping point|You can close the day without calling unfinished work complete.|Honest progress is still progress.

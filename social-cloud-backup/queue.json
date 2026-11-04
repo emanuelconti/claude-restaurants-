@@ -3057,5 +3057,515 @@
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
     "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-1",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 1,
+    "title": "5 motivos para proponer un café entre semana",
+    "folder": "queue/sp/2026-11-09/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "fa16ad858c48088af260dec62252f762c0d24f59511af6ca24507452a18e9c2e",
+      "slide-02.jpg": "a6c343d8247c03e472d8888c632bdd2d3723f68f534207969b414ce2e40d7087",
+      "carousel.json": "7af744ce1e5988f407ee6f2be686d55c90308e0d450c4a38d31414b00cb157a1",
+      "slide-01.jpg": "89a8aaa79a116622d21e42f1f3d6148e3928d5e38f2bfb4e96309a10003d127b",
+      "slide-05.jpg": "dd5526afb93cc403e56a629f94a06c5d732d7c80e92d593c4b51d4d69f29bf4c",
+      "slide-04.jpg": "e3d8905d066b9c31975e5b02f971bd8df00acfe56298f7bfcf56b9dc6e9eb096",
+      "slide-06.jpg": "f9f64c33914ae210868b642516265e0b84ff57dc8f556853e36b99509f2db005",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-2",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 2,
+    "title": "5 reglas no escritas de una buena ronda de tapas",
+    "folder": "queue/sp/2026-11-09/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "45c614dd3e3f22da1945afb57ce9614245b09101d67e3b0aac1633ad6014003d",
+      "slide-02.jpg": "179288284708abd3a9f1a5d258b813905fef078cb98d484d18cc055605ec9517",
+      "carousel.json": "ee9cf3a32bc57d77a7f531c00fda334fa637e4279a631b123cb1a4a0ecc96b8f",
+      "slide-01.jpg": "7482267d0d18b2b411c0c6d215904eaaba128e131328d314cf715932d668730f",
+      "slide-05.jpg": "37276918b0534d9c27f2aa8b361dd373768e6073533a05e3a421a2fc4a17817b",
+      "slide-04.jpg": "701e94cebd1eac9eea0f52b4859f2f1fe7a1c7d606446d54e22a78a6716f60a9",
+      "slide-06.jpg": "bb9ccd28d79131bb06e37b2f73e0bc0f4c9226ade6094ace8bc4b0d6841ee76e",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-3",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 3,
+    "title": "5 planes fáciles para conocer tu nueva ciudad",
+    "folder": "queue/sp/2026-11-09/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "3f2424748a29a4757b89d213d636bc62286cc98269d43065f9bb439c187e775b",
+      "slide-02.jpg": "9f86d8443cc118cfabd947a84b2e948733447d27b1fe817e4cedb000c0c43dd5",
+      "carousel.json": "6601ef7700cfb4bba9bca9e014175de63fc1e32f294819721b29e6b1598b80dd",
+      "slide-01.jpg": "85c0f2333de39d556b335790f118eda18655b99e60e2e4d8569b3b9af7f7d088",
+      "slide-05.jpg": "50fc6fbea4d92df0065803c58990c7fded4be6a15b3f3618cf4a8e3012741577",
+      "slide-04.jpg": "08478d849de9ce0be753a18f662e49467eefa696b582228abbb927cc8aa22d93",
+      "slide-06.jpg": "f4ff0598a3be882bb5d23d93f560af8c7ac637870d6947932cffcec49d3a42c2",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-4",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 4,
+    "title": "5 detalles que hacen más cómoda una tarde en el hotel",
+    "folder": "queue/sp/2026-11-09/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "8dee023aef7bb7eb46ba81f7eb602524a0356aced72e8778855138fca45995ec",
+      "slide-02.jpg": "f1dde8b5a324f4df0b5524672e61fb38fe7a19fd81f9a51320176fad2440a725",
+      "carousel.json": "fd2e9baea4587c3b61ddd7158a5794a4e9d4230f034f4bf38e1da02269ddc5c8",
+      "slide-01.jpg": "96fc4b5811fa3308a37bcd7c16ecf0a4dc4bb743e399e12cdc82202e9e863191",
+      "slide-05.jpg": "3a699d654729164e72e9f01d64fc75928262595f74f4242981c582fc8788f3dc",
+      "slide-04.jpg": "0026d5bac6db0817d1411edaed6957ae28ebca8e1391836c358753ab41d0cbf2",
+      "slide-06.jpg": "faee1a5fe8469f9919fa63392aad6422c36520a4feefa3aff521487aaa1f3fbc",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-5",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 5,
+    "title": "5 mensajes para el amigo que siempre propone el plan",
+    "folder": "queue/sp/2026-11-09/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "3662d11832f4b60876a3e187770ee602877748f1dea74642a2c5aa037bf5dd83",
+      "slide-02.jpg": "2fb2858a972f7ebbe71e8de17cb9febbf97e77c1f98e16d4b64a81ff3e1b5bf7",
+      "carousel.json": "e502740c2440b57a80e0637346cbb7131533e8d87a6a95c590648850b4790645",
+      "slide-01.jpg": "17f1844b8f6bedfbbf1789feab7a2e5d9df0d3987dc990d5db1bf5514286fef1",
+      "slide-05.jpg": "c7af80c3a0443da97d6a1325fed492057fab23000c4ccf6569fa86e9d7474864",
+      "slide-04.jpg": "2ad44b8c86636e9d65abef6fb298514ddae6fe68b25d6e877ac823a7e71bc18a",
+      "slide-06.jpg": "182e5aa3c575953e027876e260dff76a2284d7d4dc28effe3c34b0528b28e8e1",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-6",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 6,
+    "title": "5 decisiones antes de ofrecer un regalo en tu local",
+    "folder": "queue/sp/2026-11-09/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "22188b8cde7f5ee285eedc25ab2abc878e3e8aa8a78440458ee6985b3633425d",
+      "slide-02.jpg": "3d84b07bba87aa3345c18633d18635fca4c95060db38b48ee98c33b80dd088e8",
+      "carousel.json": "e823f48fd48298b4abc11350ac7e99cd78897d7543a71203b214ee1315d7338a",
+      "slide-01.jpg": "edf9f7e288597e6016c9f5f98abd4456230450595cd0df748f08dcb21f323b9f",
+      "slide-05.jpg": "585c1410a3ffc70ef727d846d528d82d408abab5b7320eab042d62294cb48b8e",
+      "slide-04.jpg": "43c8b0d5bdcec87a15906f4d1eda4e5e7b0f7c2c7b067e19981eacc4d75abdb2",
+      "slide-06.jpg": "cf4954016d44a72a051e0b24ee0a2e0f6c943ee5ebb05c075a05ea66f9068e5f",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-7",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 7,
+    "title": "5 cosas que agradecer al descubrir un sitio nuevo",
+    "folder": "queue/sp/2026-11-09/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "d3d4a44d38afb7463aac5d1588412d1be159a5390acf3397244b99c47d4bc7d7",
+      "slide-02.jpg": "9f1903beb0da6af57dedc899300c96d146c51a3adf32aff2b43f241b27c9bcde",
+      "carousel.json": "9893d35ede59b6e8b7da4eb23fec5ca85de46d3c43369742dd5d407a00a2c929",
+      "slide-01.jpg": "80e8af3ef41eef2f3a4efc8daeaedab8eb020dc45b364703a6c61e74477985ef",
+      "slide-05.jpg": "9feff9c24311fc5c002eef3514a41832c7be55c5b4bd81091b25cfb8b8adc105",
+      "slide-04.jpg": "90aad1e2c2038fc65868eeea2e9c1d98399cb86358051a7bd6646580cd9cd9a7",
+      "slide-06.jpg": "968ddbbdc96277ed72f1f3172b0f13836b173ea310062047319dfe9840f38f5c",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-09-8",
+    "brand": "sp",
+    "date": "2026-11-09",
+    "slot": 8,
+    "title": "5 preguntas para escuchar mejor a tus clientes habituales",
+    "folder": "queue/sp/2026-11-09/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "9da1eeb67de52aed01ab3b025f66664cca04060469145661144fe160cb63df54",
+      "slide-02.jpg": "6f478ee66c7f3cbb9b5516a87b854feae238ca6d922ebb7d0f3957a4124190f5",
+      "carousel.json": "935b13e9b9ef474ac76d752c3fb14669d9a530ac158323ca7393c2bd779c328d",
+      "slide-01.jpg": "184050ce7899f0574a7404af6e49a6cf2e310616d5bd2a101cca1f98d862a741",
+      "slide-05.jpg": "bbf20cde35d65439f949bcf22fda2cbe90e28ba97b7a414816173eb14431a10d",
+      "slide-04.jpg": "1e8aa5b460fb6ad743f47d12de80b7903dd73024f49e1b6d77ec54fab7b68aa0",
+      "slide-06.jpg": "15b8ba97c77e6e47f34e938c9ef81d941d2f3380db4b669ea6f3a108a7fabd17",
+      "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-1",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 1,
+    "title": "5 questions to answer before a founder meeting starts",
+    "folder": "queue/sin/2026-11-09/carousel-1",
+    "sha256": {
+      "slide-03.jpg": "b5c56f70b62c86f0fc9ffe7be39002cdb64f533170cc9f0d73a7ee301c66b880",
+      "slide-02.jpg": "e4159aa3f077f9e1f9da5b4fc2242eabaa81b4c9f41e74e6602ce16fcffd53ff",
+      "carousel.json": "0d905164eb5c364a575fb9dee56515ff11d7e341e1994426f80f775b87165f3b",
+      "slide-01.jpg": "af93a46fa58e3643aa07881dc5100cfb7bdd2e289497e42984d178cc288aae67",
+      "slide-05.jpg": "7ed76e19c01c0b3fe11ca7bbe2c431cfd14b6b4893d1f7993b85e04d5d8adbcd",
+      "slide-04.jpg": "d66bc1334049f1ece547245841fb03f3ad8dd265c227217b7341268f52c4ed1f",
+      "slide-06.jpg": "d78267fb7a6ac8631df12c224d833c93d939f6e73fda0f54783e388e2b4704ec",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-2",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 2,
+    "title": "5 things that do not belong in a traction headline",
+    "folder": "queue/sin/2026-11-09/carousel-2",
+    "sha256": {
+      "slide-03.jpg": "426cb7096dbe37a6859f3177883ea54ce7b13a8afdf1b6fed3a83980ef1572ed",
+      "slide-02.jpg": "9970c9800517a94c6cb49bfa2abf77ce3645b986abd31c420a3e4e77dd3e1fd3",
+      "carousel.json": "a5e170f6b3a4e315fa40574ce231ff08d6976cbdaf3087580554af109ccca330",
+      "slide-01.jpg": "ed9c5605a246dabab2b49bc9e5400bc31f63170f0d9e588b3fafc250ce434db5",
+      "slide-05.jpg": "8cbfee4e5b0008a994b6d7a0e853576f461b11b229a78303a6451192cf2041f1",
+      "slide-04.jpg": "b007558c426e6d534d751faa734798a1dc8bb8434837a9c058ab6f7e667cc83b",
+      "slide-06.jpg": "a1bb50ebad30481a825d21556e4a7218fb494cbcdf11f29b90e734e260105726",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-3",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 3,
+    "title": "5 checks before a grant deadline enters your calendar",
+    "folder": "queue/sin/2026-11-09/carousel-3",
+    "sha256": {
+      "slide-03.jpg": "d0b5b59f9338cda6d10af67a8c59f7825c3bccdf4519b2cd299352a9a5b534b1",
+      "slide-02.jpg": "f9c97ae55751430e57f45672c23788a5335107736a25d6d7c5068751c218d4d2",
+      "carousel.json": "f01dc0720d9f51b50d4be2a147485f533bdf38d002d313633058710b1324ca44",
+      "slide-01.jpg": "c1c66dc284afff3249f5b388837ffb6727263988e5e0503f4bef627d2a7fecf5",
+      "slide-05.jpg": "01bfcb462ff2b34a75fff656bd77b64cec23502fc3ff5394e4f3fed3e3dd3a1a",
+      "slide-04.jpg": "9cae71ced5afcd91eacb8dbf7c6048fa75c95f99518e3e0183e46272320d8449",
+      "slide-06.jpg": "6329df65c9f6b11bcb717e54619d5c8980a4493db89aed63b56788e133d8b464",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-4",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 4,
+    "title": "5 ways to describe a pilot without overselling it",
+    "folder": "queue/sin/2026-11-09/carousel-4",
+    "sha256": {
+      "slide-03.jpg": "7b62086c202bb4b56bcab3bb83c9bcfd88fd84ed52c17f1e1095fcfb23c63a64",
+      "slide-02.jpg": "0f37a1d6955ebd8d8224c05ece3d1b76efc8ed8a4aa342c4a3eb0ce696561418",
+      "carousel.json": "d0e5c683a38acc1f4a1b17ce013f8620647c29a61f50667da13163607059be53",
+      "slide-01.jpg": "88cb91486ee846688e24dd3083779df814f7a02d6647df34b92e584168834713",
+      "slide-05.jpg": "00ae3331c116e3cd2853e6a4baed1ed281281dcadad7e9117f87d94dbf2698b9",
+      "slide-04.jpg": "9cc806c5efea6862d118c4de80b10e0215e61d54387e64ad70e8e45237c37bb0",
+      "slide-06.jpg": "c2350f28f1a0edfc380c3d128409fa114c4265f778621fafc460971d7fd3c16d",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-5",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 5,
+    "title": "5 small systems for a calmer founder inbox",
+    "folder": "queue/sin/2026-11-09/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "af7508d32ed96466e58efcd3b6d4527f4143b5b97dafaf3b204c4070b44399c6",
+      "slide-02.jpg": "f4d0b005a8318fccfeb50365ce68c6153b62ec1580094addc96cc847bfd69854",
+      "carousel.json": "e9de40ad6e6d37a5d041fe0a1dfe802ab64bdf45b38d29bac750950e7f6a3f38",
+      "slide-01.jpg": "66e91a4b119358478d35103d65f3e6344f80f662cd07d28b2a3ffd999177bd6f",
+      "slide-05.jpg": "78234973c990d0ac2bdedebe8303bb55774f4891da0174aaf27f666615d2df06",
+      "slide-04.jpg": "e2fd48fa3fba0179cce13c11ce4c07574db28501e21813918966095d4c857afa",
+      "slide-06.jpg": "72268a4876a9d2bdd43157486ebab10857ece5a05a8c9ee0f682d5ab8f2be44a",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-6",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 6,
+    "title": "5 questions before you quote an investor's feedback",
+    "folder": "queue/sin/2026-11-09/carousel-6",
+    "sha256": {
+      "slide-03.jpg": "c5feb53bb18b300a939cb1802652d4951d5374168bce51ec3110359874e67157",
+      "slide-02.jpg": "94c0772692d37551fc7927ee8944cf7236c63baccf12f29b1a942cfe7fbb9fd3",
+      "carousel.json": "1b7e1f141c2b76c088eeaa0a93368ed616a1418c42ea146c3f8ac6d2e1e0f64f",
+      "slide-01.jpg": "e64134efa6e6130b2b30b12566d5d6d2f7fcf5237e79c9ecffbcd8661ccf464f",
+      "slide-05.jpg": "ad99c097f5940fa24d7e780a3fc588eb4818495f283f158affb7f8854d1d27df",
+      "slide-04.jpg": "52563856c6b56d63d9d2bf774eb3f3bef803ae0c0122969d4babf9e354456140",
+      "slide-06.jpg": "38957e49bbead3b09e3dd082758449c63860ca1b8d5f034b3c780fc1083c6ced",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-7",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 7,
+    "title": "5 things to put beside a runway estimate",
+    "folder": "queue/sin/2026-11-09/carousel-7",
+    "sha256": {
+      "slide-03.jpg": "8831a4988041017c4e181c461c7111263e8a993c26a403779256c7c6f91e25a5",
+      "slide-02.jpg": "7d89b19d2968b10f6f2238bf5e8a83d43094d9e193d06df586477c846dda27ba",
+      "carousel.json": "b15854f498eb622fd9af5aa79ee2dbd7d11d76646bd8c83b279a69f5c413a6c0",
+      "slide-01.jpg": "fab14437cf720e761ad1c3836cad15da11a06ac52ed9f9e3b79702cf37301cf9",
+      "slide-05.jpg": "e47d5af6b14b5f66392a488a504592c7d26ee997886f4410fb1401b84a95e9a1",
+      "slide-04.jpg": "615727cca0d91d9345b9a7f44e8c5887f2f48aaec5e5461070f97645f4c571a2",
+      "slide-06.jpg": "70205aa61684bf7adc1bdeaf9f6320fb4b90bfcdd181f51271ac4181701b0e41",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sin-2026-11-09-8",
+    "brand": "sin",
+    "date": "2026-11-09",
+    "slot": 8,
+    "title": "5 ways to end a working day with a useful handover",
+    "folder": "queue/sin/2026-11-09/carousel-8",
+    "sha256": {
+      "slide-03.jpg": "0f5d6f7495870051c69b6c8b98f5f82a99fb0d8d1090e1a9cb18682075034f11",
+      "slide-02.jpg": "ef1282e71c5f77b2c9ee35c2aba7da19a60292e93c8ea7b0fc6f4b0035202785",
+      "carousel.json": "9c4c7e45abfedcc4bd9eef287eeb654826f0532527d4995cb0a8ae08fdbabb80",
+      "slide-01.jpg": "cfb33b8417281a0baf7a3ce65c9b74a05967d0d7f344d922ae70319f98ef1910",
+      "slide-05.jpg": "ab46a4b5a8fc724d732e1eaba6e6b1d4a09d6552b12c8bb800386a61843fdd22",
+      "slide-04.jpg": "1297f28eb79f02b373f50011aa4c4961a16314a10976282baac6165c07e84743",
+      "slide-06.jpg": "956cf9965290d0e56d8032b8833af35ac5a52843fec04d393e8d65af34c5462d",
+      "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
+    },
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "gms-2026-11-09-1",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 1,
+    "title": "5 messages for the friend on the early train",
+    "folder": "queue/gms/2026-11-09/carousel-1",
+    "sha256": {
+      "tiktok.mp4": "eaeb9567513ecd116f9fc6558f1353b57a3427a6bb078cab973e2dc9d4aa012b",
+      "slide-03.jpg": "f6b6510420db05e7dc27cda203f8596300aed00a539a6220b13d689821598c27",
+      "slide-02.jpg": "abd541b785f53e7450b7d1e502a990f91b090e2b0ac4ba0aaaa2c64d11d3f4ae",
+      "carousel.json": "5e816fa5a86a398abba355ec1f8ee7c37a31c16caff71fd90f7c691a4ddb91da",
+      "slide-01.jpg": "8f9839c7c8f858d6621232a1c22c440272f707117efd6de7c16a6e6e4033453d",
+      "slide-05.jpg": "de697c855d427befe77a55b550365abb071c2a324756cc86f0599d1785b63dbc",
+      "slide-04.jpg": "8dc9d21c8ced23cedd12c7202318e9e766ef7d4e6d10faadc1140624417877a9",
+      "slide-06.jpg": "89b975ec5a60b345a93a46384f6df23de7db76cdadaaf75ecc551126402a0e83",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.34/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 1,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-2",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 2,
+    "title": "5 ways to be the colleague who makes lunch nicer",
+    "folder": "queue/gms/2026-11-09/carousel-2",
+    "sha256": {
+      "tiktok.mp4": "3cfb271a65980680097d8915e6c4da27d902d57945344e2dc066222e28db9e7c",
+      "slide-03.jpg": "11e025836adda400ee8bb750b99876db909533122d5d4b5f84219dd8984f5edf",
+      "slide-02.jpg": "96ac73dd1ac2f3dd788422a4af6f5c4d507509667b20d9be7537123ccf5d3f68",
+      "carousel.json": "5d2fcca0425081e207845fd76cd4180443e0249568aa91c7b08eb47e65e4baeb",
+      "slide-01.jpg": "40af222cbc3e1c78c0540ce4caf3ebb4beec1a54ca04e88b39973f5a0e303a4a",
+      "slide-05.jpg": "cf5a5557d10f76ba48e64af02db29dfe9441673595ba18416baa8745225eb55f",
+      "slide-04.jpg": "304ddedc293939f2f2d3cf62b0806e5a251e23ac58580d166d1c969d2dbd1911",
+      "slide-06.jpg": "eabc6753c024965adea2db90954058077d8020483dc1f59a58faf1edd9097660",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.72/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 2,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-3",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 3,
+    "title": "5 little joys between the office and home",
+    "folder": "queue/gms/2026-11-09/carousel-3",
+    "sha256": {
+      "tiktok.mp4": "1aca466eaa3091d01ff447296c8ccda8b6469783c2cfe840b67c75e62daab5cb",
+      "slide-03.jpg": "e47bb08ccad6e82304f39704e35477960f4677fbd3c00c1f724cb5870ffd84a5",
+      "slide-02.jpg": "26fcdc4dc30ffc4f74d7f9b8e1aa4f3c3019e279143c3d640e268eb9301d83de",
+      "carousel.json": "375e7fa43d7f874d1b615328c0b9c6561b2c7ee0f2a27a1ab696a1dbc01f437e",
+      "slide-01.jpg": "7f3fd6618bd38afd7a16b4d8ff4d746bad57893e68440bc2d66a4f1b9391e50c",
+      "slide-05.jpg": "4ed8eea5598f48049ae2a7f2a350f8fcb6e451b76de26aa37b607fbb37e9cd74",
+      "slide-04.jpg": "f7c943823b7a9c51eda75b351583c28a9b7d58cb2743e886ddbd643850bd52cf",
+      "slide-06.jpg": "5c9a4dd8bc90356066f5d67d2e268b178ab802a636a07575bc42c5371075e24e",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.28/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 5,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-4",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 4,
+    "title": "5 notes to tuck into a message hoodie gift",
+    "folder": "queue/gms/2026-11-09/carousel-4",
+    "sha256": {
+      "tiktok.mp4": "ab6a0c1d555bafd8fd581c527ff5837438d3d44946097ffa8a581765e5cd5b85",
+      "slide-03.jpg": "345509dafa51638c5547a20c9df4edd8adc407acc1b7182f1bef05b3caf3b12c",
+      "slide-02.jpg": "35628e23d1ee0cd2cc74b803ce10e722366d8cadbbdd728b056c2485baddc2b1",
+      "carousel.json": "66b67e28aa60136cac0ab30b2dd7b81c15c69448a85c906b708a88c64e9a4b4c",
+      "slide-01.jpg": "4c71446e5a2c40309440b014913d53b5a2c46f2e228fee66d706948f5d447d6c",
+      "slide-05.jpg": "fa9290c0cd8bdc0849de1762daef666093511d65b08f8d2a1ef4b9019a9a091f",
+      "slide-04.jpg": "72e39f184f242a0913fcc662b25a7b19e677839ad52995e4d549627ee6a26067",
+      "slide-06.jpg": "552fada1023769011cdd8d26b300d280eacfda356f39b90702257c8c0979491d",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.62/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 4,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-5",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 5,
+    "title": "5 kinder lines for a busy Monday",
+    "folder": "queue/gms/2026-11-09/carousel-5",
+    "sha256": {
+      "slide-03.jpg": "b4194f75ed7155d0844ff51dc6486fba1a276473c69d8999cd8d4bd497584e9c",
+      "slide-02.jpg": "025bfd7101c6bc37312540e05b65e606a457da37b455f18070625b30e15de7ed",
+      "carousel.json": "eebbcd1745626ca150e294b499b3d27450484dc725ebdfe8e42892cbd079831f",
+      "slide-01.jpg": "60781671a5b25e9ab68432df188b3fe1297bf7e7d27211dfc605cec0d66b16ee",
+      "slide-05.jpg": "75cb1870510f9ea608b0376dc1b7c8cf396795c9badf1a3783aa573b0524ab03",
+      "slide-04.jpg": "96ac41736847b5e0b639ed10d77902409e5fc08bc61da5dab844f914692a360f",
+      "slide-06.jpg": "56b6a0531553fed5f695b896f22276befe145063d17046c4fef123852104e510",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "Original 14.5 second Reel, every scene sampled and visually inspected",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 3,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
+    "kind": "reel",
+    "reel_sha256": {
+      "reel.mp4": "8771a39a94cee49073aedb662868cec91b4a01f6d1bf0a0080154f7ffaa590ec",
+      "reel.json": "efe0b45f58cb0a50306b7762388ec3603f5098900ae67f867ad88c12ca7c95b3",
+      "cover.jpg": "3b4f843c957251801d3d30146b3a3b5be8f0c09c6feda11a27e9014d2667c514"
+    },
+    "reel_qa": "Eight scene samples visually inspected including hook and shop end card; source renderer slow pushes, text/product/photo mix; original AAC audio mean -18.5dB peak -4.4dB"
+  },
+  {
+    "id": "gms-2026-11-09-6",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 6,
+    "title": "5 signs a friendship has room for real life",
+    "folder": "queue/gms/2026-11-09/carousel-6",
+    "sha256": {
+      "tiktok.mp4": "2c513b259925098de94a2fdb73c0630ab51180db0c3be7d9122a208fd7a411ac",
+      "slide-03.jpg": "6329bdfeeae22be96a06e1142838e45e4b7d33848dd66834f5b4a49256f9e969",
+      "slide-02.jpg": "92be820ffa5730fbe51ca3bc1e88db8e103475ffad32b72d2ef92ff2a664cdd3",
+      "carousel.json": "96e83a5ca9d34ca5605233242859790b69eb7ee08978df2c9e0cc0f4ab2b39dc",
+      "slide-01.jpg": "1337de9a472d0ff231f2cc83a64b17492cbe4a286e0f78b740ced63531ad58d3",
+      "slide-05.jpg": "4482fb4ac70f4855516ec2195c5b0e5c0d85479f8d6f4f69bfd99c404e1ab5d7",
+      "slide-04.jpg": "d30757505118054824d026d73a6145a44a5fc310f53a3015025617e2679278fe",
+      "slide-06.jpg": "f8b9760d4fdc54b440331f35266f1cbcf919100eba7ab39a6e3690ff8107b896",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.62/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 6,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-7",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 7,
+    "title": "5 small kindnesses for your next group outing",
+    "folder": "queue/gms/2026-11-09/carousel-7",
+    "sha256": {
+      "tiktok.mp4": "73d1074ebf05d82bef7af4a35f2e4c967719ad4cc5efda15bb50ad0cb0e4445d",
+      "slide-03.jpg": "fad113bb967d98500313570cae3dd2e507a4ed559d99faebe172bc9669d44505",
+      "slide-02.jpg": "d9217d9127fd1b80c410d90f40d7ce91eb5198d025e292a33555a5d75b8db058",
+      "carousel.json": "6d7eeee90d2e8f4e4a25160970e35742a790bdc07c9d67df17850c31c08c2767",
+      "slide-01.jpg": "bbce227f638081edb50c01c5098ddb85b069f48d3734a7291c8d8c4044bd4ea2",
+      "slide-05.jpg": "af30ce512ee0f49c91fbf898651afd2b760cd1205baf651d96e1af71b1619b09",
+      "slide-04.jpg": "2b75dba50eb08d422809fe55ba50ab964378823fd7fc54a78a9cd3358faf72e2",
+      "slide-06.jpg": "666f8be78cbbae04c0219486ec0f69d9c5959ac78ae3f914d850134fc42db934",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.35/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 7,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
+  },
+  {
+    "id": "gms-2026-11-09-8",
+    "brand": "gms",
+    "date": "2026-11-09",
+    "slot": 8,
+    "title": "5 ways to make tonight feel less like a deadline",
+    "folder": "queue/gms/2026-11-09/carousel-8",
+    "sha256": {
+      "tiktok.mp4": "5a3ef254b4fb50985a3091eb0357e39c0d59f8a130c07a8fb52818d37bb5935a",
+      "slide-03.jpg": "7ac733a1c833d2f2ffa53b50f15b85d7a7ea75fd9e046551fa8012d4aa820361",
+      "slide-02.jpg": "87cfeb53fd2878a849e5ae0bef7a24bb1572366aee7b997594579a6a97d5536d",
+      "carousel.json": "854e761003eebb3214470e47cc10fb683909a618094d5723b1587f5ae31e3c50",
+      "slide-01.jpg": "6f733eb737da86a66095267fc46761f940bfba77c6cdcdeca84cdb3a7d8a5269",
+      "slide-05.jpg": "2e3930ca9d33c15d10230bd3075eb94118e11bd806e9e404cbdadef35222b312",
+      "slide-04.jpg": "cd7c945892806d184267c7d2b2b457bed471b656b959f5045f657a73ce340582",
+      "slide-06.jpg": "cb39384598857f453dc4fd926908a4dda9aa53b5d25ea3d907748b7f154919c5",
+      "slide-07.jpg": "8fbb4f72fd18db243608af93fd52f7225043556b91533fd6d03c8d4c8f9e7e85"
+    },
+    "qa": "All seven slides visually inspected in contact sheets, 4 November morning",
+    "video_qa": "All seven decoded midpoint frames matched reviewed slides; maximum mean pixel error 3.55/255",
+    "audio_qa": "Original GMS soft beat from reel.py, AAC decoded and non-silent",
+    "publish_order": 8,
+    "market_timezone": "Asia/Singapore",
+    "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies"
   }
 ]
