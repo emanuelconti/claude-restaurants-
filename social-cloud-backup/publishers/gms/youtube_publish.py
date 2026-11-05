@@ -76,6 +76,7 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--publish", action="store_true", help="really upload (needs GMS_YOUTUBE_ENABLED=1)")
     ap.add_argument("--carousel-slot", type=int, help="upload this rendered carousel as a Short slideshow instead of the reel")
+    ap.add_argument("--reel-dir", default="reel", help="the reviewed reel folder of the day (reel, reel-7, ...)")
     args = ap.parse_args()
 
     if args.carousel_slot:  # owner, 2 Nov 2026: every Good Message Studio post also on YouTube
@@ -86,7 +87,9 @@ def main():
         if not os.path.exists(os.path.join(folder, meta["video"])):
             raise RuntimeError("Approved prebuilt Short is missing: nothing uploaded")
     else:
-        folder = os.path.join(args.out, args.date, "reel")
+        if os.path.basename(args.reel_dir) != args.reel_dir:
+            sys.exit("invalid reel folder: nothing uploaded")
+        folder = os.path.join(args.out, args.date, args.reel_dir)
         meta = json.loads(open_text(os.path.join(folder, "reel.json")))
     video = os.path.join(folder, meta["video"])
     w, h, seconds = probe(video)

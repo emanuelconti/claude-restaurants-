@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-08",
+ "title": "5 señales de una buena compañía para el café",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 señales de una buena compañía para el café\n\nNo tienen nada que ver con pedir lo mismo.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. No tienen nada que ver con pedir lo mismo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 990 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-01.jpg",
+   "match_error": 0.21,
+   "runner_up": 48.54
+  },
+  {
+   "unsplash": "1511920170033-f8396924c348",
+   "slide": "slide-02.jpg",
+   "match_error": 1.08,
+   "runner_up": 38.99
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-03.jpg",
+   "match_error": 1.67,
+   "runner_up": 39.78
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-04.jpg",
+   "match_error": 0.95,
+   "runner_up": 41.32
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-05.jpg",
+   "match_error": 1.41,
+   "runner_up": 38.74
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-06.jpg",
+   "match_error": 1.03,
+   "runner_up": 46.09
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Puedes llegar sin un discurso",
+  "Una pausa no resulta rara",
+  "Escucha la historia pequeña",
+  "Pregunta qué te viene bien",
+  "No convierte el rato en una obligación",
+  "end card"
+ ]
+}

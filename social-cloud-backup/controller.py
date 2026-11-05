@@ -1,33 +1,43 @@
 """Cloud publisher for exact assets that passed local visual QA."""
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 # Owner, 3 November: keep the cloud publisher running after the Claude quota reset.
 manifest=json.loads((R/'queue.json').read_text())
+def reel_folder(item):
+ name=item.get('reel_dir','reel')
+ assert Path(name).name==name and re.fullmatch(r'reel(-[1-8])?',name),name
+ return R/'queue'/item['brand']/item['date']/name
 def verify(item):
  folder=R/item['folder']
  assert folder.resolve().is_relative_to((R/'queue').resolve())
  for name,digest in item['sha256'].items():
   assert Path(name).name==name
   assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==digest
- # Reel hashes are relative to the date folder, not to the carousel folder.
+ # Reel hashes are relative to the reel folder of the date (reel, reel-<slot>), not to the carousel folder.
  for name,digest in item.get('reel_sha256',{}).items():
-  p=R/'queue'/item['brand']/item['date']/'reel'/name
+  p=reel_folder(item)/name
   assert Path(name).name==name and hashlib.sha256(p.read_bytes()).hexdigest()==digest
 for item in manifest:verify(item)
 if '--validate' in sys.argv or '--check' in sys.argv:
  import shutil
  if shutil.which('ffprobe'):
-  videos=list((R/'queue/gms').rglob('*.mp4'))
-  expected=len([x for x in manifest if x['brand']=='gms'])
-  assert len(videos)==expected,('Expected one reviewed video per GMS topic',expected,len(videos))
-  for video in videos:
-   probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height','-show_entries','format=duration','-of','json',str(video)],text=True))
-   stream=probe['streams'][0]
-   assert stream['width']==1080 and stream['height']==1920 and 0<float(probe['format']['duration'])<=60,str(video)
-  print(f'PASS: {len(videos)} actual MP4 files are 1080x1920, valid duration under 60 seconds.')
+  import media_checks as M
+  expected=[]
+  for x in manifest:
+   if 'tiktok.mp4' in x['sha256']:expected.append((x,R/x['folder']/'tiktok.mp4',False))
+   if x.get('kind')=='reel':expected.append((x,reel_folder(x)/'reel.mp4',True))
+  actual={p.resolve() for p in (R/'queue').rglob('*.mp4')}
+  assert actual=={p.resolve() for _,p,_ in expected},('Every MP4 must be a reviewed queue asset',len(actual),len(expected))
+  assert all(x['brand']=='gms' or reel for x,_,reel in expected),'Only GMS has prebuilt Shorts'
+  assert len([1 for x in manifest if x['brand']=='gms' and 'tiktok.mp4' not in x['sha256'] and x.get('kind')!='reel'])==0,'One reviewed video per GMS topic'
+  for x,video,reel in expected:
+   M.check_video(video,new_reel=reel and x.get('reel_dir','reel')!='reel',legacy_silent_ok=x['date']<'2026-11-04')
+   if reel:M.check_reel_folder(reel_folder(x),x['title'])
+  print(f'PASS: {len(expected)} actual MP4 files are 1080x1920 H.264 with decoded non-silent AAC audio (3 November legacy Shorts exempt); new reels are 30 fps, 15-30 s, with matching covers and captions.')
 if '--validate' in sys.argv:
  assert len({x['id'] for x in manifest})==len(manifest),'Duplicate queue IDs'
  assert len({(x['brand'],x['title']) for x in manifest})==len(manifest),'Repeated brand/topic title'
@@ -69,6 +79,16 @@ recover='--recover-gms' in sys.argv
 recover_today=owner_test or (recovery_allowed(now) and (recover or cron==FB_RECOVERY_CRON))
 if recover and not recovery_allowed(now):
  raise SystemExit('The owner-authorized GMS catch-up exception has expired; nothing published.')
+def receipt_stamps(tag):
+ # Facebook history can lag (Reels especially); the durable receipt also enforces the 60-minute gap.
+ stamp=state.get('last_publish_utc:'+tag)
+ return [dict(title='',stamp=stamp)] if stamp else []
+def facebook_format(item,state):
+ # Owner, 5 November: about one Facebook post in three is clickable product cards (orders 2, 5, 8);
+ # reels at lunch/evening (3, 7); reviewed editorial photo posts otherwise (1, 4, 6).
+ order=item.get('publish_order',item['slot'])
+ if order in (2,5,8):return 'products' if state.get('fb_cards_paused') else 'cards'
+ return 'editorial'
 def process_channel(b,channel):
  tag=b+':'+channel
  block_key='platform_block:'+tag
@@ -93,7 +113,7 @@ def process_channel(b,channel):
   held=[k for k,v in state.items() if k.endswith(':'+channel) and k.startswith(b+'-') and v.startswith('held:')]
   if held:raise RuntimeError('An earlier publication is ambiguous; reconcile it before sending another item')
   if count>=(8 if recover_today else min(target(brand_now,b),8)):return False
-  if channel=='facebook' and not gap_ok(posts,brand_now,60):
+  if channel=='facebook' and not gap_ok(posts+receipt_stamps(tag),brand_now,60):
    print(tag+': Facebook 60-minute gap respected; skipped.');return False
   item=next_item(manifest,b,channel,brand_now.date().isoformat(),state)
   if item is None:raise RuntimeError('No unused approved item for today while below target')
@@ -105,31 +125,45 @@ def process_channel(b,channel):
    print(tag+': local date changed while checking; skipped.');return False
   if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today else min(target(brand_now,b),8)):return False
   if seen(item,channel,latest):state[key]='confirmed remotely';save();return False
-  if channel=='facebook' and not gap_ok(latest,fresh_now,60):return False
+  if channel=='facebook' and not gap_ok(latest+receipt_stamps(tag),fresh_now,60):return False
   state[key]='held: publication attempt started; reconcile remotely before retry';save()
   args=['--date',item['date'],'--out',str(R/'queue'/b)]
   reel=item.get('kind')=='reel'
   sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
   asset_base=f'https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/{sha}/social-cloud-backup/'+item['folder']
   os.environ['GMS_PUBLIC_ASSET_BASE']=asset_base
-  os.environ['GMS_PUBLIC_VIDEO_URL']=f'https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/{sha}/social-cloud-backup/queue/gms/'+item['date']+'/reel/reel.mp4' if reel else ''
+  reel_dir=item.get('reel_dir','reel')
+  reel_base=f'https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/{sha}/social-cloud-backup/queue/{b}/{item["date"]}/{reel_dir}/'
+  os.environ['REEL_PUBLIC_VIDEO_URL']=os.environ['GMS_PUBLIC_VIDEO_URL']=reel_base+'reel.mp4' if reel else ''
+  os.environ['REEL_PUBLIC_COVER_URL']=reel_base+'cover.jpg' if reel and 'cover.jpg' in item.get('reel_sha256',{}) else ''
   if channel=='ig':
    script='reel_publish.py' if reel else 'ig_publish.py'
    args+=['--token-env',brands[b][0]]
-   if not reel:args+=['--slot',str(item['slot']),'--base-url',asset_base]
+   args+=['--reel-dir',reel_dir] if reel else ['--slot',str(item['slot']),'--base-url',asset_base]
   elif channel=='youtube':
    script='youtube_publish.py';args+=['--publish']
-   if not reel:args+=['--carousel-slot',str(item['slot'])]
+   args+=['--reel-dir',reel_dir] if reel else ['--carousel-slot',str(item['slot'])]
+  elif channel=='facebook' and reel:
+   script='fb_reel_publish.py';args+=['--reel-dir',reel_dir]
+  elif channel=='facebook':
+   script='fb_publish.py';args+=['--slot',str(item['slot']),'--format',facebook_format(item,state)]
   else:
-   script={'threads':'threads_publish.py','facebook':'fb_publish.py'}[channel];args+=['--slot',str(item['slot'])]
+   script='threads_publish.py';args+=['--slot',str(item['slot'])]
   rc,out=run(b,script,*args)
+  if channel=='facebook':
+   for marker in ('cards_withdrawn:','cards_unavailable:'):
+    if marker in out:
+     # Fail safe: stop trying the card format until an operator reviews the evidence.
+     state['fb_cards_paused']=marker+' '+out.split(marker,1)[1].split('\n',1)[0].strip()[:300];save()
   success=any(x in out for x in ['published:','published (public):','already published:'])
   if rc or not success:
    if any(word in out.lower() for word in STOP_SIGNALS):
     state[block_key]='Platform restriction: operator verification required before clearing this lock.';save()
    # All errors retain a hold. A later remote read can reconcile a successful-but-uncertain request.
    raise RuntimeError('Publisher stopped or response was ambiguous. No automatic retry.')
-  state[key]='success: '+out.strip();save()
+  state[key]='success: '+out.strip()
+  if channel=='facebook':state['last_publish_utc:'+tag]=dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
+  save()
   return True
   # A YouTube public request must actually produce a public video; publisher verifies status.
  except Exception as e:
@@ -151,10 +185,15 @@ else:
    for attempt in range(attempt_limit(b,channel,recover,now)):
     if not process_channel(b,channel):break
 if errors:raise SystemExit('\n'.join(errors))
+if '--check' in sys.argv and os.environ.get('BACKUP_BRAND','all') in ('all','gms'):
+ # Read-only evidence for the clickable product-card format; never publishes.
+ rc,out=run('gms','fb_publish.py','--diagnose-cards')
+ if rc:print('Facebook card diagnostics unavailable (exit %d); publishing is unaffected.'%rc)
 if '--check' in sys.argv:
  import urllib.request
  sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
  paths=['queue/'+b+'/2026-11-03/carousel-1/slide-01.jpg' for b in brands]+['queue/gms/2026-11-03/reel/reel.mp4']
+ paths+=[str(reel_folder(x).relative_to(R)/'reel.mp4') for x in manifest if x.get('reel_dir','reel')!='reel'][:3]
  for path in paths:
   url=f'https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/{sha}/social-cloud-backup/'+path
   with urllib.request.urlopen(urllib.request.Request(url,headers={'Range':'bytes=0-63'}),timeout=60) as response:header=response.read(64)

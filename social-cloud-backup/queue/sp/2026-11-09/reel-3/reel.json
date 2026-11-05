@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-09",
+ "title": "5 planes fáciles para conocer tu nueva ciudad",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 planes fáciles para conocer tu nueva ciudad\n\nPara quien estudia lejos de casa y empieza por el barrio.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. Para quien estudia lejos de casa y empieza por el barrio.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 537 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-01.jpg",
+   "match_error": 0.21,
+   "runner_up": 48.54
+  },
+  {
+   "unsplash": "1511920170033-f8396924c348",
+   "slide": "slide-02.jpg",
+   "match_error": 1.08,
+   "runner_up": 38.99
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-03.jpg",
+   "match_error": 1.82,
+   "runner_up": 43.54
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-04.jpg",
+   "match_error": 1.06,
+   "runner_up": 44.65
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-05.jpg",
+   "match_error": 1.39,
+   "runner_up": 39.02
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-06.jpg",
+   "match_error": 1.14,
+   "runner_up": 44.55
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Probar un café cerca",
+  "Invitar a una persona",
+  "Elegir una hora realista",
+  "Volver al sitio que te gustó",
+  "Dejar hueco para otra ocasión",
+  "end card"
+ ]
+}

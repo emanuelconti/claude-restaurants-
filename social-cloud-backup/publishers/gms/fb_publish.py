@@ -144,12 +144,227 @@ def recent(page: str, token: str) -> list:
     return call("GET", f"{page}/posts", token, {"fields": "message,created_time,permalink_url", "limit": 25}).get("data", [])
 
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs):
+        return None
+
+
+def fetch_direct(url: str, limit: int = 8_000_000) -> tuple:
+    """GET without following redirects: (status, content_type, body). Cards need direct answers."""
+    opener = urllib.request.build_opener(NoRedirect)
+    try:
+        with opener.open(urllib.request.Request(url, headers={"User-Agent": "facebookexternalhit/1.1"}), timeout=60) as r:
+            return r.status, r.headers.get("Content-Type", ""), r.read(limit)
+    except urllib.error.HTTPError as error:
+        return error.code, error.headers.get("Content-Type", ""), b""
+
+
+def image_size(raw: bytes) -> tuple:
+    from PIL import Image
+    with Image.open(io.BytesIO(raw)) as image:
+        image.load()
+        return image.size, image.format, image.convert("L").getextrema()
+
+
+def card_picture(product: dict) -> dict | None:
+    """The product's own Shopify CDN photo, square and at least 600x600 (owner's preflight bar)."""
+    for image in product.get("images", []):
+        w, h = image.get("width", 0), image.get("height", 0)
+        if w >= 600 and h >= 600 and 0.9 <= w / h <= 1.1 and image.get("src", "").startswith("https://cdn.shopify.com/"):
+            return image
+    return None
+
+
+def preflight_card(card: dict) -> list:
+    """Every card must have a directly served large image and a live product page with og tags."""
+    problems = []
+    status, ctype, raw = fetch_direct(card["picture"])
+    if status != 200:
+        problems.append(f"picture answered {status} (redirects are not accepted)")
+    elif ctype.split(";")[0].strip() not in ("image/jpeg", "image/png"):
+        problems.append(f"picture type {ctype}")
+    else:
+        (w, h), fmt, extrema = image_size(raw)
+        if w < 600 or h < 600:
+            problems.append(f"picture is {w}x{h}, below 600x600")
+        if extrema[0] == extrema[1]:
+            problems.append("picture is a blank single colour")
+    status, ctype, page = fetch_direct(card["link"], 2_000_000)
+    if status != 200:
+        problems.append(f"product page answered {status}")
+    elif b'property="og:image"' not in page or card["link"].encode() not in page:
+        problems.append("product page lacks og:image/og:url")
+    return problems
+
+
+def unwrap(url: str) -> str:
+    parsed = urllib.parse.urlparse(url or "")
+    if parsed.netloc.endswith("facebook.com") and parsed.path.startswith("/l.php"):
+        url = urllib.parse.parse_qs(parsed.query).get("u", [""])[0]
+    return url.split("?")[0].rstrip("/")
+
+
+def readback_cards(post_id: str, token: str, cards: list) -> list:
+    """Mandatory: every child attachment must come back with a real, large image and its own product link."""
+    data = call("GET", post_id, token, {"fields": "attachments{type,subattachments.limit(10){media,target,url,title}}"})
+    subs = [sub for att in data.get("attachments", {}).get("data", []) for sub in att.get("subattachments", {}).get("data", [])]
+    problems, checks = [], []
+    for card in cards:
+        want = card["link"].rstrip("/")
+        sub = next((x for x in subs if unwrap((x.get("target") or {}).get("url") or x.get("url")) == want), None)
+        if not sub:
+            problems.append(f"{card['name']}: no clickable child attachment to its product")
+            continue
+        image = (sub.get("media") or {}).get("image") or {}
+        w, h, src = image.get("width", 0), image.get("height", 0), image.get("src", "")
+        ok = w >= 300 and h >= 300 and src.startswith("https://")
+        if ok:
+            try:
+                with urllib.request.urlopen(src, timeout=60) as r:
+                    (rw, rh), _, extrema = image_size(r.read())
+                ok = rw >= 300 and rh >= 300 and extrema[0] != extrema[1]
+                w, h = rw, rh
+            except Exception as error:  # an unreadable stored image is a broken card
+                ok = False
+        checks.append(dict(product=card["name"], link=want, image=f"{w}x{h}", ok=ok))
+        if not ok:
+            problems.append(f"{card['name']}: stored card image missing or tiny ({w}x{h})")
+    return problems, checks
+
+
+def withdraw(post_id: str, token: str) -> bool:
+    """Remove a just-created broken card post so it is never left public."""
+    try:
+        call("DELETE", post_id, token)
+    except RuntimeError:
+        pass
+    try:
+        call("GET", post_id, token, {"fields": "id"})
+    except RuntimeError:
+        return True
+    try:
+        call("POST", post_id, token, {"is_published": "false"})
+        return call("GET", post_id, token, {"fields": "is_published"}).get("is_published") is False
+    except RuntimeError:
+        return False
+
+
+def link_ownership(link: str, token: str) -> bool:
+    """Meta: custom link posts need the link owned by the posting Page (ownership_permissions)."""
+    call("POST", "", token, {"id": link, "scrape": "true"})
+    info = call("GET", "", token, {"id": link, "fields": "ownership_permissions{can_customize_link_posts}"})
+    return bool((info.get("ownership_permissions") or {}).get("can_customize_link_posts"))
+
+
+def product_cards(slot: int, date: str) -> list:
+    products = json.load(urllib.request.urlopen(SHOP + "/products.json?limit=250", timeout=60))["products"]
+    cards = []
+    for product in message_hoodies(products):
+        image = card_picture(product)
+        if image is None:
+            continue
+        value = (product.get("variants") or [{}])[0].get("price")
+        cards.append(dict(name=product["title"], description=f"Shop now · S${float(value):.0f}" if value else "Shop now",
+                          link=SHOP + "/products/" + product["handle"], picture=image["src"]))
+    if len(cards) < 2:
+        return []
+    shift = (int(date.replace("-", "")) + slot) % len(cards)
+    return (cards[shift:] + cards[:shift])[:5]
+
+
+def diagnose(page: str, token: str) -> None:
+    """Read-only evidence for the card format: product pages, pictures, ownership, recent card posts."""
+    products = json.load(urllib.request.urlopen(SHOP + "/products.json?limit=250", timeout=60))["products"]
+    for product in message_hoodies(products):
+        link = SHOP + "/products/" + product["handle"]
+        _, _, html = fetch_direct(link, 2_000_000)
+        import re
+        og = re.search(rb'property="og:image" content="([^"]+)"', html)
+        og_url = og.group(1).decode() if og else ""
+        og_status = fetch_direct(og_url)[0] if og_url else None
+        image = card_picture(product)
+        problems = preflight_card(dict(name=product["title"], link=link, picture=image["src"])) if image else ["no square image >= 600x600"]
+        try:
+            info = call("GET", "", token, {"id": link, "fields": "ownership_permissions{can_customize_link_posts},og_object{image}"})
+        except RuntimeError as error:
+            info = {"error": str(error)[:160]}
+        print(json.dumps(dict(product=product["title"], og_image=og_url, og_image_status=og_status,
+                              sizes=[f"{i.get('width')}x{i.get('height')}" for i in product.get("images", [])],
+                              card_picture=(image or {}).get("src"), preflight=problems or "ok", meta=info)))
+    posts = call("GET", f"{page}/posts", token, {"fields": "created_time,attachments{type,subattachments.limit(10){media,target}}", "limit": 50}).get("data", [])
+    for post in posts:
+        for att in post.get("attachments", {}).get("data", []):
+            subs = att.get("subattachments", {}).get("data", [])
+            if att.get("type", "").startswith("multi_share") or any((x.get("target") or {}).get("url", "").find("products") >= 0 for x in subs):
+                dims = [f"{((x.get('media') or {}).get('image') or {}).get('width')}x{((x.get('media') or {}).get('image') or {}).get('height')}" for x in subs]
+                print(json.dumps(dict(post=post.get("id"), created=post.get("created_time"), type=att.get("type"), child_images=dims)))
+
+
+def build_message(meta: dict, cards: list) -> str:
+    message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
+    # Keep a clickable shop route in the post itself even if a Facebook placement hides card labels.
+    message = message.replace("(link in bio)", "")
+    if "https://goodmessagestudio.com" not in message:
+        message += "\n\nShop now: https://goodmessagestudio.com"
+    if cards:
+        message += "\n\n" + "\n\n".join(card["name"] + "\n" + card["description"] + "\n" + card["link"] for card in cards)
+    return message
+
+
+def publish_cards(page: str, token: str, meta: dict, args) -> dict | None:
+    """Clickable swipeable product cards (Page feed child_attachments, Graph API docs read 5 November 2026).
+
+    Returns the receipt, or None when the format is not safely possible so the
+    caller publishes the verified native showcase instead. A just-created post
+    whose read-back shows any missing/tiny card image is withdrawn first.
+    """
+    import time
+    cards = product_cards(args.slot, args.date)
+    usable = []
+    for card in cards:
+        problems = preflight_card(card)
+        if problems:
+            print(f"card skipped: {card['name']}: {'; '.join(problems)}")
+        else:
+            usable.append(card)
+    if len(usable) < 2:
+        print("cards_unavailable: fewer than two products pass the image/page preflight")
+        return None
+    for card in usable:
+        if not link_ownership(card["link"], token):
+            print("cards_unavailable: Meta reports the Page cannot customise link posts for " + card["link"]
+                  + " (ownership_permissions.can_customize_link_posts is false)")
+            return None
+    params = {"message": build_message(meta, usable), "link": SHOP, "multi_share_end_card": "false", "multi_share_optimized": "false",
+              "child_attachments": json.dumps([{k: card[k] for k in ("link", "name", "description", "picture")} for card in usable])}
+    post = call("POST", f"{page}/feed", token, params)
+    post_id = post.get("id")
+    if not post_id:
+        raise RuntimeError("Facebook did not acknowledge the card post; held for reconciliation")
+    problems, checks = ["read-back not attempted"], []
+    for wait in (15, 30, 45):
+        time.sleep(wait)
+        problems, checks = readback_cards(post_id, token, usable)
+        if not problems:
+            break
+    if problems:
+        if not withdraw(post_id, token):
+            raise RuntimeError(f"card post {post_id} failed read-back and could not be withdrawn; operator review needed")
+        print(f"cards_withdrawn: {post_id}: {'; '.join(problems)}")
+        return None
+    link = call("GET", post_id, token, {"fields": "permalink_url"}).get("permalink_url")
+    return {"post_id": post_id, "permalink": link, "format": "clickable_product_cards", "cards": checks}
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--date")
     ap.add_argument("--slot", type=int, default=1)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--check-token", action="store_true")
+    ap.add_argument("--format", choices=["editorial", "products", "cards"], default=None,
+                    help="editorial photos, native product showcase, or clickable product cards (falls back to the showcase)")
+    ap.add_argument("--diagnose-cards", action="store_true", help="read-only evidence for product cards")
     args = ap.parse_args()
     token = os.environ.get("FB_PAGE_TOKEN_GMS", "").strip()
     page = os.environ.get("FB_PAGE_ID_GMS", "").strip()
@@ -157,6 +372,9 @@ def main():
         sys.exit("FB_PAGE_TOKEN_GMS or FB_PAGE_ID_GMS is not set: nothing published")
     try:
         token = page_token(page, token)
+        if args.diagnose_cards:
+            diagnose(page, token)
+            return
         if args.check_token:
             name = call("GET", page, token, {"fields": "name"}).get("name", "?")
             print(f"token ok: Page {name!r}, {len(recent(page, token))} recent posts read, publishing not tried")
@@ -182,7 +400,16 @@ def main():
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
         # Six editorial carousel slots and two product showcases. Both use
         # native Facebook photos, never fragile product link-preview cards.
-        product_showcase = args.slot in (4, 8)
+        fmt = args.format or ("products" if args.slot in (4, 8) else "editorial")
+        if fmt == "cards":
+            receipt = publish_cards(page, token, meta, args)
+            if receipt:
+                with open(os.path.join(folder, "published-facebook.json"), "w", encoding="utf-8") as fh:
+                    json.dump(receipt, fh, indent=1)
+                print(f"published: {receipt['permalink']}")
+                return
+            fmt = "products"  # verified native showcase fallback, nothing broken left public
+        product_showcase = fmt == "products"
         cards = []
         if product_showcase:
             products = json.load(urllib.request.urlopen(SHOP + "/products.json?limit=250", timeout=60))["products"]
@@ -231,13 +458,7 @@ def main():
             if not any(image.get("width", 0) >= 320 and image.get("height", 0) >= 320 for image in stored.get("images", [])):
                 raise RuntimeError("Facebook native photo is missing or a tiny placeholder; no feed post published")
             photo_ids.append(str(photo["id"]))
-        message = meta["caption"].replace(C.CAPTION_SHARE, C.CAPTION_SHARE_LINK).replace(C.CAPTION_SAVE, C.CAPTION_SAVE + "\n\n" + C.CAPTION_SHARE_LINK)
-        # Keep a clickable shop route in the post itself even if a Facebook placement hides card labels.
-        message = message.replace("(link in bio)", "")
-        if "https://goodmessagestudio.com" not in message:
-            message += "\n\nShop now: https://goodmessagestudio.com"
-        if product_showcase:
-            message += "\n\n" + "\n\n".join(card["name"] + "\n" + card["description"] + "\n" + card["link"] for card in cards)
+        message = build_message(meta, cards if product_showcase else [])
         params = {"message": message,
                   "attached_media": json.dumps([{"media_fbid": photo_id} for photo_id in photo_ids])}
         # A feed failure is ambiguous. Never blindly retry a post creation.

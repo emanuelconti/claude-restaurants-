@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-10",
+ "title": "Un martes de tapas con amigos",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Un martes de tapas con amigos\n\nLo sencillo puede ser el mejor plan de la semana.\n\nLo sencillo puede ser el mejor plan de la semana. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 94 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1514362545857-3bc16c4c7d1b",
+   "slide": "slide-01.jpg",
+   "match_error": 0.05,
+   "runner_up": 16.07
+  },
+  {
+   "unsplash": "1514933651103-005eec06c04b",
+   "slide": "slide-02.jpg",
+   "match_error": 1.17,
+   "runner_up": 21.66
+  },
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-03.jpg",
+   "match_error": 1.05,
+   "runner_up": 33.56
+  },
+  {
+   "unsplash": "1544982560-63ad67a35c23",
+   "slide": "slide-04.jpg",
+   "match_error": 0.78,
+   "runner_up": 54.46
+  },
+  {
+   "unsplash": "1550966871-3ed3cdb5ed0c",
+   "slide": "slide-05.jpg",
+   "match_error": 1.89,
+   "runner_up": 51.24
+  },
+  {
+   "unsplash": "1551024709-8f23befc6f87",
+   "slide": "slide-06.jpg",
+   "match_error": 0.9,
+   "runner_up": 46.45
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elegid una zona",
+  "Mirad la carta",
+  "Sin prisa por cambiar",
+  "Dejad hueco para hablar",
+  "Volved por cómo os trataron",
+  "end card"
+ ]
+}

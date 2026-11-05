@@ -13,7 +13,13 @@ elif channel=='facebook':
  page=os.environ['FB_PAGE_ID_GMS'];token=F.page_token(page,os.environ['FB_PAGE_TOKEN_GMS'])
  name=F.call('GET',page,token,{'fields':'name'}).get('name')
  if name!='Good Message Studio':raise SystemExit('Wrong Facebook Page identity')
- rows=[{'title':(p.get('message') or '').split('\n',1)[0].strip(),'stamp':p.get('created_time'),'url':p.get('permalink_url')} for p in F.recent(page,token)]
+ import fb_reel_publish as FR
+ posts=F.recent(page,token)
+ # Page Reels published through video_reels count toward the same cap and 60-minute gap.
+ first=lambda p:(p.get('message') or '').split('\n',1)[0].strip()
+ seen={p.get('permalink_url') for p in posts}|{first(p) for p in posts if first(p)}
+ posts+=[r for r in FR.reels(page,token) if r.get('permalink_url') not in seen and first(r) not in seen]
+ rows=[{'title':(p.get('message') or '').split('\n',1)[0].strip(),'stamp':p.get('created_time'),'url':p.get('permalink_url')} for p in posts]
 elif channel=='youtube':
  import youtube_publish as Y
  import channel_guard as G

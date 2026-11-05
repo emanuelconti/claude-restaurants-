@@ -33,6 +33,7 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--token-env", default="INSTAGRAM_TOKEN_SOWLD")
     ap.add_argument("--ig-id", default=None)
+    ap.add_argument("--reel-dir", default="reel")
     args = ap.parse_args()
     token = os.environ.get(args.token_env, "").strip()
     if not token:
@@ -45,7 +46,9 @@ def main():
     os.environ["IG_STRICT_ACCOUNT"] = "1"
     if token.startswith("EAA"):
         IG.API = "https://graph.facebook.com/v21.0"
-    folder = os.path.join(args.out, args.date, "reel")
+    if os.path.basename(args.reel_dir) != args.reel_dir:
+        sys.exit("invalid reel folder: nothing published")
+    folder = os.path.join(args.out, args.date, args.reel_dir)
     meta = json.load(open(os.path.join(folder, "reel.json"), encoding="utf-8"))
     try:
         user, username = IG.resolve(token, None)
@@ -81,7 +84,12 @@ def main():
                 problems.append(f"{name}: {error}")
         if not url:
             sys.exit("could not make the video public: " + "; ".join(problems))
-        item = IG.call("POST", f"{user}/media", token, {"media_type": "REELS", "video_url": url, "caption": meta["caption"], "share_to_feed": "true"})
+        params = {"media_type": "REELS", "video_url": url, "caption": meta["caption"], "share_to_feed": "true"}
+        cover = os.environ.get("REEL_PUBLIC_COVER_URL", "")
+        if cover.startswith("https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/"):
+            IG.check_public(cover)
+            params["cover_url"] = cover
+        item = IG.call("POST", f"{user}/media", token, params)
         wait_video(item["id"], token)
         media = IG.call("POST", f"{user}/media_publish", token, {"creation_id": item["id"]})
         link = IG.call("GET", media["id"], token, {"fields": "permalink"}).get("permalink")

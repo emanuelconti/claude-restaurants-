@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-07",
+ "title": "5 cosas que hacen mejor una sobremesa",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 cosas que hacen mejor una sobremesa\n\nA veces lo mejor empieza cuando ya habéis comido.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. A veces lo mejor empieza cuando ya habéis comido.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal Más sobre SocialPerks: socialperkses.com (enlace en la bio).",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 516 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1513104890138-7c749659a591",
+   "replaces": "1514362545857-3bc16c4c7d1b",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1659690402718-ea07d943fd42",
+   "replaces": "1514933651103-005eec06c04b",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1666282020483-6ebeb210b1c3",
+   "replaces": "1517248135467-4c7edcad34c4",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1544982560-63ad67a35c23",
+   "slide": "slide-04.jpg",
+   "match_error": 0.85,
+   "runner_up": 54.73
+  },
+  {
+   "unsplash": "1516997121675-4c2d1684aa3e",
+   "replaces": "1550966871-3ed3cdb5ed0c",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1551024709-8f23befc6f87",
+   "slide": "slide-06.jpg",
+   "match_error": 0.9,
+   "runner_up": 46.45
+  }
+ ],
+ "scenes": [
+  "hook",
+  "No mirar el siguiente plan",
+  "Preguntar por lo pequeño",
+  "Dejar terminar la anécdota",
+  "Preguntar antes de pedir más",
+  "Cuidar el tiempo del local",
+  "end card"
+ ]
+}

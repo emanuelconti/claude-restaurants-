@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-09",
+ "title": "5 checks before a grant deadline enters your calendar",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 checks before a grant deadline enters your calendar\n\nA useful reminder begins with the current official call.\n\nPractical preparation for European founders. A useful reminder begins with the current official call. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 893 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "replaces": "1516321318423-f06f85e504b3",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "replaces": "1488190211105-8b0e65b80b4e",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.55,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-04.jpg",
+   "match_error": 1.46,
+   "runner_up": 53.6
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-05.jpg",
+   "match_error": 0.64,
+   "runner_up": 33.64
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-06.jpg",
+   "match_error": 0.92,
+   "runner_up": 38.08
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Read the original notice",
+  "Find the time and timezone",
+  "Check which stage is due",
+  "Note what is still required",
+  "Choose someone to recheck changes",
+  "end card"
+ ]
+}

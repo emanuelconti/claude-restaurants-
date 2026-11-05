@@ -54,3 +54,17 @@ The owner permits occasional relevant news explainers within the normal daily sl
 ### First baked product showcase visually verified, 4 November
 
 Normal scheduled Facebook post https://www.facebook.com/1429179606036501/posts/1431621302458998 was opened in the authenticated browser. All four native images loaded at 960x1200. The first full photo was opened and showed the complete Enjoy The Little Things garment plus baked product name, S$79 price and shop address. The other three product images, SGD labels and full product URLs were present. This verifies the new native format; it does not repair old link-card posts retroactively. No extra test was published.
+
+## Reels and Facebook formats, 5 November 2026
+Read the matching section at the end of SOCIAL_MARKET_RULES.md first.
+
+Editors (primary trig_018CzvbW5QE7qNpfvmjE7WMs for SP/Sin, trig_01JyRzzAfbsqvYfv1TBWZP6R for GMS, backup trig_01SGVvDtrZHjbECD8UZexYQz) produce two Reels per brand per new day:
+1. Prepare the eight carousels as before (slides + carousel.json + editorial text in editorial/<brand or europe>-<date>.txt).
+2. Render the Reels from the reviewed topics: `python social-cloud-backup/reelkit/render.py --brand sp --ids sp-<date>-3,sp-<date>-7 --cache <scratch> --sheets <scratch>/sheets` (Sin: slots 3,7; GMS: the ids with publish_order 7, the lunch reel stays in reel/ via publishers/gms/reel.py or reel-<slot> via render.py). Fonts/marks come from the source branches (publishers/<brand>/fonts, assets; not committed). Output: queue/<brand>/<date>/reel-<slot>/reel.mp4, reel.json, cover.jpg.
+3. Inspect every contact sheet; fix and re-render anything unreadable, mismatched or off-brief. Copy the sheets to editorial/qa-reels-<date>/.
+4. `python social-cloud-backup/reelkit/approve.py --ids ... --qa "Contact sheet inspected <date>"` writes kind=reel, reel_dir and reel_sha256.
+5. Run the unit tests and `controller.py --validate`: every MP4 must be referenced by the queue, 1080x1920, 30 fps, H.264 + AAC with decoded non-silent audio; new Reels 15-30 s with a 1080x1920 cover and a caption opening with the exact title.
+
+Publisher: the controller passes REEL_PUBLIC_VIDEO_URL / REEL_PUBLIC_COVER_URL pinned to the commit for any brand and folder (GMS_PUBLIC_VIDEO_URL kept for compatibility). Instagram: publishers/<brand>/reel_publish.py (SP @socialperks.es Europe/Madrid, Sin @sincronia.live Europe/Paris, GMS Asia/Singapore), shared logic in publishers/reel_common.py. YouTube uses the Reel of reel items. Facebook: reel items go to publishers/gms/fb_reel_publish.py (native Page Reels, local upload to rupload.facebook.com, status read-back); 2/5/8 go to fb_publish.py --format cards. Facebook history now includes Page Reels and a durable last_publish_utc receipt also enforces the 60-minute gap. `--check` runs `fb_publish.py --diagnose-cards` (read-only).
+
+If state.json has fb_cards_paused, cards are off and slots 2/5/8 use the native showcase. Clear it only after reviewing the logged evidence and fixing the cause.

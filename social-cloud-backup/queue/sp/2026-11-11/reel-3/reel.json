@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-11",
+ "title": "La terraza también sirve para ponerse al día",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "La terraza también sirve para ponerse al día\n\nEl mejor motivo para quedar puede ser hablar.\n\nEl mejor motivo para quedar puede ser hablar. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 745 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-01.jpg",
+   "match_error": 0.23,
+   "runner_up": 57.3
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-02.jpg",
+   "match_error": 0.95,
+   "runner_up": 41.32
+  },
+  {
+   "unsplash": "1551882547-ff40c63fe5fa",
+   "slide": "slide-03.jpg",
+   "match_error": 1.38,
+   "runner_up": 37.49
+  },
+  {
+   "unsplash": "1600585154340-be6161a56a0c",
+   "slide": "slide-04.jpg",
+   "match_error": 0.6,
+   "runner_up": 18.26
+  },
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-05.jpg",
+   "match_error": 0.5,
+   "runner_up": 25.95
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "slide": "slide-06.jpg",
+   "match_error": 0.76,
+   "runner_up": 36.01
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Invita con algo concreto",
+  "Pregunta por las opciones",
+  "No hace falta una ocasión",
+  "Escucha con tiempo",
+  "Guarda el lugar, no la prisa",
+  "end card"
+ ]
+}

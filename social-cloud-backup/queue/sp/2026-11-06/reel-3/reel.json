@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-06",
+ "title": "5 detalles para disfrutar el bar sin pensar en la foto",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 detalles para disfrutar el bar sin pensar en la foto\n\nEl recuerdo puede empezar antes de sacar el móvil.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. El recuerdo puede empezar antes de sacar el móvil.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 493 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1514362545857-3bc16c4c7d1b",
+   "slide": "slide-01.jpg",
+   "match_error": 0.05,
+   "runner_up": 16.07
+  },
+  {
+   "unsplash": "1514933651103-005eec06c04b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.55,
+   "runner_up": 21.35
+  },
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-03.jpg",
+   "match_error": 1.55,
+   "runner_up": 33.74
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-04.jpg",
+   "match_error": 0.55,
+   "runner_up": 32.8
+  },
+  {
+   "unsplash": "1550966871-3ed3cdb5ed0c",
+   "slide": "slide-05.jpg",
+   "match_error": 1.89,
+   "runner_up": 51.24
+  },
+  {
+   "unsplash": "1551024709-8f23befc6f87",
+   "slide": "slide-06.jpg",
+   "match_error": 0.47,
+   "runner_up": 44.84
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Mira alrededor",
+  "Pregunta por la carta",
+  "Incluye otra opción",
+  "Deja un rato el móvil",
+  "Vuelve con calma",
+  "end card"
+ ]
+}
