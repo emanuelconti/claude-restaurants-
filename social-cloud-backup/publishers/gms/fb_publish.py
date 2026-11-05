@@ -279,7 +279,7 @@ def diagnose(page: str, token: str) -> None:
         link = SHOP + "/products/" + product["handle"]
         _, _, html = fetch_direct(link, 2_000_000)
         import re
-        og = re.search(rb'property="og:image" content="([^"]+)"', html)
+        og = re.search(rb'property="og:image"\s+content="([^"]+)"', html)
         og_url = og.group(1).decode() if og else ""
         og_status = fetch_direct(og_url)[0] if og_url else None
         image = card_picture(product)
@@ -296,8 +296,19 @@ def diagnose(page: str, token: str) -> None:
         for att in post.get("attachments", {}).get("data", []):
             subs = att.get("subattachments", {}).get("data", [])
             if att.get("type", "").startswith("multi_share") or any((x.get("target") or {}).get("url", "").find("products") >= 0 for x in subs):
-                dims = [f"{((x.get('media') or {}).get('image') or {}).get('width')}x{((x.get('media') or {}).get('image') or {}).get('height')}" for x in subs]
-                print(json.dumps(dict(post=post.get("id"), created=post.get("created_time"), type=att.get("type"), child_images=dims)))
+                children = []
+                for x in subs:
+                    image = (x.get("media") or {}).get("image") or {}
+                    row = dict(api=f"{image.get('width')}x{image.get('height')}", target=unwrap((x.get("target") or {}).get("url"))[-40:])
+                    try:
+                        with urllib.request.urlopen(image.get("src", ""), timeout=60) as r:
+                            raw = r.read()
+                        (w, h), fmt, extrema = image_size(raw)
+                        row.update(fetched=f"{w}x{h}", fmt=fmt, blank=extrema[0] == extrema[1], host=urllib.parse.urlparse(image.get("src", "")).netloc)
+                    except Exception as error:
+                        row.update(fetched="error " + type(error).__name__)
+                    children.append(row)
+                print(json.dumps(dict(post=post.get("id", "").split("_")[-1], created=post.get("created_time"), type=att.get("type"), children=children)))
 
 
 def build_message(meta: dict, cards: list) -> str:
