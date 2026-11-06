@@ -108,3 +108,8 @@ Token alarm: routine "ALLARME TOKEN social" (07:11 Madrid daily, push + EMAIL to
 ## CONTENT DIRECTION (owner, 6 November 2026) — overrides older topic lists
 
 People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar without thinking about the photo"). Write about LIFE: everyday moments, motivation, encouragement, small wins, friendship, courage to start, keep going, be kind to yourself, enjoy the people around you. Human, warm, short lines people want to save and send to a friend. Then connect it naturally to us: SocialPerks = share the places you love with your friends and get rewarded / owners: your regulars are your best advertising (invite to join, link in bio); Good Message Studio = wear the message that keeps you going (message hoodies, link in bio). At least 8 posts out of 10 must be life/motivation first, product second. Reels especially: one strong motivating hook in the first second.
+
+
+## THREADS SPAM WARNING (6 November 2026)
+
+Threads removed a Good Message Studio post for spam ("actions at high volume"). Now: at most 3 Threads posts a day, at least 3 hours apart, NO link in the post text (link only in the profile bio), and only the strongest, most human topics go to Threads. Every Claude and Codex: never raise these, never post the same text on Threads twice, and if Threads or any platform warns about spam, lower the volume on that channel at once and tell the owner.

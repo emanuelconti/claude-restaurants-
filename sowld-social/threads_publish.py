@@ -36,8 +36,8 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
-MAX_PER_DAY = 10  # (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
-MIN_GAP = 0  # owner, 2 Nov 2026: no wait on Threads (Facebook keeps 60)
+MAX_PER_DAY = 3  # Threads removed a post for spam on 6 Nov 2026 (high volume): at most 3 a day
+MIN_GAP = 180  # Threads spam removal 6 Nov 2026: at least 3 hours between Threads posts
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 SINGAPORE = ZoneInfo("Asia/Singapore")
 
@@ -84,7 +84,7 @@ def wait_ready(container: str, token: str, timeout: float = 180) -> None:
 
 def short_caption(caption: str) -> str:
     parts = [p.strip() for p in caption.split("\n\n") if p.strip() and not p.strip().startswith("#")]
-    text = "\n\n".join(parts[:2] + [C.CAPTION_SHARE_LINK])  # a real, clickable link on Threads
+    text = "\n\n".join(parts[:2])  # no link in the post: repeated links read as spam on Threads (6 Nov 2026); the link is in the bio
     return text if len(text) <= 500 else text[:497].rsplit(" ", 1)[0] + "..."
 
 
