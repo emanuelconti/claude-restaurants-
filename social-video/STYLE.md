@@ -1,5 +1,8 @@
 # Writing the day's carousel
 
+> **Owner, 6 November 2026, overrides anything narrower below:** topics are everyday life and motivation first (habits, mornings, starting, getting back up, friendship, small wins, a push to act today). The brand appears only at the end, where it fits naturally. No niche how-tos. Full rule: top of SOCIAL_MARKET_RULES.md.
+
+
 ## Strategy: who we target and how (the owner, 1 November 2026)
 
 **This section overrides anything below that says otherwise.** SocialPerks sells to the people who run a physical place, so the page now speaks to them first: owners and managers of local businesses in Barcelona and the rest of Spain. Cafés, bars, restaurants, hotels and hostels, gyms, yoga and pilates studios, massage centres and spas, beauty and nail salons, hairdressers and barbershops, shops. We have no ad budget, so the posts must reach them as precisely as a paid campaign would: content that is obviously about their day, words they search for, hashtags they follow, and posts they send to another owner.
