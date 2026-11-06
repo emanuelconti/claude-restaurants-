@@ -156,3 +156,8 @@ Never feature neutral products (plain caps, plain tees, blank basics) in posts, 
 ## CONTEXT RULE FOR EVERY IMAGE (owner, 2 November 2026, very important; for every Claude and for Codex)
 
 Every photo must show exactly what its slide talks about, for that account audience. A post about where to eat shows food, a table, a restaurant; never a bicycle, a random street, an object with no link to the text. SocialPerks: cafés, restaurants, bars, gyms, salons, spas, hotels, shops, owners at work. Sincronia: founders at work, desks, meetings, money/pitch scenes. Good Message Studio: only the message hoodies and real life scenes that match the line. Before publishing, look at EVERY slide image (not only the cover) and ask: does this photo obviously belong to this sentence? If not, change the photo or do not publish. A photo that does not fit is worse than no post.
+
+
+## CONTENT DIRECTION (owner, 6 November 2026) — overrides older topic lists
+
+People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar without thinking about the photo"). Write about LIFE: everyday moments, motivation, encouragement, small wins, friendship, courage to start, keep going, be kind to yourself, enjoy the people around you. Human, warm, short lines people want to save and send to a friend. Then connect it naturally to us: SocialPerks = share the places you love with your friends and get rewarded / owners: your regulars are your best advertising (invite to join, link in bio); Good Message Studio = wear the message that keeps you going (message hoodies, link in bio). At least 8 posts out of 10 must be life/motivation first, product second. Reels especially: one strong motivating hook in the first second.
