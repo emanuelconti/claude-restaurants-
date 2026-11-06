@@ -233,19 +233,24 @@ def readback_cards(post_id: str, token: str, cards: list) -> list:
 
 
 def withdraw(post_id: str, token: str) -> bool:
-    """Remove a just-created broken card post so it is never left public."""
+    """Remove a broken card post so it is never left public: delete, else unpublish; verify either way."""
+    import time
     try:
-        call("DELETE", post_id, token)
-    except RuntimeError:
-        pass
+        print("delete:", json.dumps(call("DELETE", post_id, token)))
+    except RuntimeError as error:
+        print("delete refused:", str(error)[:300])
+    time.sleep(5)
     try:
-        call("GET", post_id, token, {"fields": "id"})
-    except RuntimeError:
+        still = call("GET", post_id, token, {"fields": "id,is_published"})
+        print("after delete:", json.dumps(still))
+    except RuntimeError as error:
+        print("gone:", str(error)[:200])
         return True
     try:
-        call("POST", post_id, token, {"is_published": "false"})
+        print("unpublish:", json.dumps(call("POST", post_id, token, {"is_published": "false"})))
         return call("GET", post_id, token, {"fields": "is_published"}).get("is_published") is False
-    except RuntimeError:
+    except RuntimeError as error:
+        print("unpublish refused:", str(error)[:300])
         return False
 
 
@@ -376,6 +381,7 @@ def main():
     ap.add_argument("--format", choices=["editorial", "products", "cards"], default=None,
                     help="editorial photos, native product showcase, or clickable product cards (falls back to the showcase)")
     ap.add_argument("--diagnose-cards", action="store_true", help="read-only evidence for product cards")
+    ap.add_argument("--withdraw", default=None, help="operator-approved: delete (or unpublish) one broken Page post by id")
     args = ap.parse_args()
     token = os.environ.get("FB_PAGE_TOKEN_GMS", "").strip()
     page = os.environ.get("FB_PAGE_ID_GMS", "").strip()
@@ -383,6 +389,15 @@ def main():
         sys.exit("FB_PAGE_TOKEN_GMS or FB_PAGE_ID_GMS is not set: nothing published")
     try:
         token = page_token(page, token)
+        if args.withdraw:
+            owner = call("GET", args.withdraw, token, {"fields": "from{id,name}"}).get("from") or {}
+            if owner.get("name") != "Good Message Studio":
+                sys.exit("withdraw: post is not on the Good Message Studio Page; nothing changed")
+            ok = withdraw(args.withdraw, token)
+            print(("withdrawn: " if ok else "withdraw failed: ") + args.withdraw)
+            if not ok:
+                sys.exit(1)
+            return
         if args.diagnose_cards:
             diagnose(page, token)
             return

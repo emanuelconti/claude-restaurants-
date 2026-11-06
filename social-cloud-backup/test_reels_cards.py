@@ -24,14 +24,22 @@ def controller_fn(name):
 
 class FormatPlan(unittest.TestCase):
     def setUp(self):
-        scope = {}
+        scope = {'CARDS_ENABLED': True}
         exec(compile(ast.Module(body=[controller_fn('facebook_format')], type_ignores=[]), 'c', 'exec'), scope)
         self.fmt = scope['facebook_format']
+        self.scope = scope
 
     def test_one_in_three_facebook_posts_are_product_cards(self):
         plan = [self.fmt(dict(publish_order=o, slot=o), {}) for o in range(1, 9)]
         self.assertEqual(plan.count('cards'), 3)
         self.assertEqual([plan[i] for i in (1, 4, 7)], ['cards'] * 3)
+
+    def test_cards_are_off_in_production_after_6_november_evidence(self):
+        import re
+        self.assertRegex((ROOT / 'controller.py').read_text(), r'(?m)^CARDS_ENABLED=False$')
+        self.scope['CARDS_ENABLED'] = False
+        self.assertEqual(self.fmt(dict(publish_order=2, slot=2), {}), 'products')
+        self.scope['CARDS_ENABLED'] = True
 
     def test_paused_cards_fall_back_to_native_showcase(self):
         self.assertEqual(self.fmt(dict(publish_order=5, slot=5), {'fb_cards_paused': 'cards_withdrawn: x'}), 'products')

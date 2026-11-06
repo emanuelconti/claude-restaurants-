@@ -149,8 +149,9 @@
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
   "last_publish_utc:gms:facebook": "2026-11-06T02:33:56+00:00",
-  "gms-2026-11-06-3:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfYijMaCTC6/",
-  "gms-2026-11-06-3:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
-  "gms-2026-11-06-3:youtube": "success: plan: 1 Short, 1080x1920, 24.5 s, title '5 kind lines for a friend changing direction | goodmessagestudio.com #Shorts', privacy public\nchannel ok: Good Message Studio, 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/020RHRmK0mw",
-  "gms-2026-11-06-3:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1433433698944425"
+  "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
+  "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
+  "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
+  "gms-2026-11-06-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433433698944425",
+  "withdrawn_fb:1429179606036501_1433433698944425": "withdraw failed: 6 Nov card post: 2 of 3 card pictures served as 1x1 blanks by Meta 40 min after a passing read-back (check run 42155005771); owner rule: never leave a broken card post public"
 }
