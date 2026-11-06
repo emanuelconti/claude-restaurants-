@@ -148,5 +148,9 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-06T00:57:31+00:00"
+  "last_publish_utc:gms:facebook": "2026-11-06T02:33:56+00:00",
+  "gms-2026-11-06-3:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfYijMaCTC6/",
+  "gms-2026-11-06-3:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
+  "gms-2026-11-06-3:youtube": "success: plan: 1 Short, 1080x1920, 24.5 s, title '5 kind lines for a friend changing direction | goodmessagestudio.com #Shorts', privacy public\nchannel ok: Good Message Studio, 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/020RHRmK0mw",
+  "gms-2026-11-06-3:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1433433698944425"
 }
