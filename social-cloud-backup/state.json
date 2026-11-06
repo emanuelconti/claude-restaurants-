@@ -154,8 +154,8 @@
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
   "gms-2026-11-06-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433433698944425",
   "withdrawn_fb:1429179606036501_1433433698944425": "withdraw failed: 6 Nov card post: 2 of 3 card pictures served as 1x1 blanks by Meta 40 min after a passing read-back (check run 42155005771); owner rule: never leave a broken card post public",
-  "gms-2026-11-06-5:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/DfYu-jNDnAe/",
-  "gms-2026-11-06-5:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfYvHwwG2Av",
-  "gms-2026-11-06-5:youtube": "success: plan: 1 Short, 1080x1920, 24.5 s, title '5 ways to keep a friendship easy to return to | goodmessagestudio.com #Shorts', privacy public\nchannel ok: Good Message Studio, 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/mP2EyCxexDY",
-  "gms-2026-11-06-5:facebook": "success: published: https://www.facebook.com/reel/1598921814858086/"
+  "gms-2026-11-06-5:ig": "confirmed remotely: 5 ways to keep a friendship easy to return to",
+  "gms-2026-11-06-5:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYvHwwG2Av",
+  "gms-2026-11-06-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/mP2EyCxexDY",
+  "gms-2026-11-06-5:facebook": "confirmed remotely: https://www.facebook.com/reel/1598921814858086/"
 }
