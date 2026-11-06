@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "5 ways to end the founder week with a clearer Monday",
+      "stamp": "2026-11-06T21:49:02+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfagIUcF4uo/"
+    },
+    {
+      "title": "5 habits for keeping a financial model readable",
+      "stamp": "2026-11-06T21:01:36+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfaaqd4I_ej/"
+    },
+    {
+      "title": "5 questions to ask before hiring for growth",
+      "stamp": "2026-11-06T19:05:10+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfaNYO8FUX5/"
+    },
+    {
+      "title": "5 things to clarify before offering a trial",
+      "stamp": "2026-11-06T17:00:25+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfZ_Fn1lOA5/"
+    },
+    {
+      "title": "5 checks before calling a number traction",
+      "stamp": "2026-11-06T15:02:31+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfZxmyjl5TK/"
+    },
+    {
+      "title": "5 ways to test whether a pilot is teaching you anything",
+      "stamp": "2026-11-06T12:29:22+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfZgAkYj1yx/"
+    },
+    {
+      "title": "5 details to put in a useful investor update",
+      "stamp": "2026-11-06T10:56:32+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfZVc7vmEGl/"
+    },
+    {
+      "title": "5 questions before a founder accepts an introduction",
+      "stamp": "2026-11-06T08:31:04+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 1,
+      "url": "https://www.instagram.com/p/DfZEz8ojfRn/"
+    },
+    {
       "title": "5 questions for your next planning review",
       "stamp": "2026-11-05T21:39:16+01:00",
       "local_hour": 21,
@@ -340,26 +404,10 @@
       "likes": 3,
       "comments": 0,
       "url": "https://www.instagram.com/reel/DcgNKDbOTFI/"
-    },
-    {
-      "title": "",
-      "stamp": "2026-08-25T15:34:07+02:00",
-      "local_hour": 15,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DcdwS3_K605/"
-    },
-    {
-      "title": "",
-      "stamp": "2026-08-24T15:21:48+02:00",
-      "local_hour": 15,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DcbKGFFukhu/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-06",
+  "market_date": "2026-11-07",
   "mature_hour_summary": [
     {
       "local_hour": 8,
@@ -368,13 +416,13 @@
     },
     {
       "local_hour": 9,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 6,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 10,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 11,
@@ -388,13 +436,13 @@
     },
     {
       "local_hour": 13,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 15,
@@ -403,13 +451,13 @@
     },
     {
       "local_hour": 16,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 18,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 19,
@@ -418,13 +466,13 @@
     },
     {
       "local_hour": 20,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 21,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 22,
