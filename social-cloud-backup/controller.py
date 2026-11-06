@@ -83,11 +83,16 @@ def receipt_stamps(tag):
  # Facebook history can lag (Reels especially); the durable receipt also enforces the 60-minute gap.
  stamp=state.get('last_publish_utc:'+tag)
  return [dict(title='',stamp=stamp)] if stamp else []
+CARDS_ENABLED=False
 def facebook_format(item,state):
  # Owner, 5 November: about one Facebook post in three is clickable product cards (orders 2, 5, 8);
  # reels at lunch/evening (3, 7); reviewed editorial photo posts otherwise (1, 4, 6).
  order=item.get('publish_order',item['slot'])
- if order in (2,5,8):return 'products' if state.get('fb_cards_paused') else 'cards'
+ # 6 November evidence (check run 42155005771): the first card post passed its read-back at 02:33 UTC,
+ # but 40 minutes later Meta's external image cache served 2 of 3 card pictures as 1x1 blanks, and older
+ # posts flip between real and blank. External card pictures are not persistent, so cards stay OFF and
+ # these slots use the native photo showcase (Meta-hosted photos, product URLs in the caption).
+ if order in (2,5,8):return 'cards' if CARDS_ENABLED and not state.get('fb_cards_paused') else 'products'
  return 'editorial'
 def process_channel(b,channel):
  tag=b+':'+channel
@@ -180,6 +185,12 @@ if owner_test:
    if not process_channel('gms',channel):break
    state[key]=int(state.get(key,0))+1;save()
 else:
+ if 'gms' in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
+  for post in json.loads((R/'facebook_withdraw.json').read_text()) if (R/'facebook_withdraw.json').exists() else []:
+   key='withdrawn_fb:'+post['post_id']
+   if not state.get(key):
+    rc,out=run('gms','fb_publish.py','--withdraw',post['post_id'])
+    state[key]=('withdrawn: ' if rc==0 else 'withdraw failed: ')+post['reason'];save()
  for b in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
   for channel in channel_plan(b,cron,recover):
    for attempt in range(attempt_limit(b,channel,recover,now)):

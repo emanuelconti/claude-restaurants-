@@ -376,6 +376,7 @@ def main():
     ap.add_argument("--format", choices=["editorial", "products", "cards"], default=None,
                     help="editorial photos, native product showcase, or clickable product cards (falls back to the showcase)")
     ap.add_argument("--diagnose-cards", action="store_true", help="read-only evidence for product cards")
+    ap.add_argument("--withdraw", default=None, help="operator-approved: delete (or unpublish) one broken Page post by id")
     args = ap.parse_args()
     token = os.environ.get("FB_PAGE_TOKEN_GMS", "").strip()
     page = os.environ.get("FB_PAGE_ID_GMS", "").strip()
@@ -383,6 +384,14 @@ def main():
         sys.exit("FB_PAGE_TOKEN_GMS or FB_PAGE_ID_GMS is not set: nothing published")
     try:
         token = page_token(page, token)
+        if args.withdraw:
+            if not args.withdraw.startswith(page + "_"):
+                sys.exit("withdraw: post is not on this Page; nothing changed")
+            ok = withdraw(args.withdraw, token)
+            print(("withdrawn: " if ok else "withdraw failed: ") + args.withdraw)
+            if not ok:
+                sys.exit(1)
+            return
         if args.diagnose_cards:
             diagnose(page, token)
             return
