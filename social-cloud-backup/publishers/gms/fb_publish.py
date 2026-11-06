@@ -233,19 +233,24 @@ def readback_cards(post_id: str, token: str, cards: list) -> list:
 
 
 def withdraw(post_id: str, token: str) -> bool:
-    """Remove a just-created broken card post so it is never left public."""
+    """Remove a broken card post so it is never left public: delete, else unpublish; verify either way."""
+    import time
     try:
-        call("DELETE", post_id, token)
-    except RuntimeError:
-        pass
+        print("delete:", json.dumps(call("DELETE", post_id, token)))
+    except RuntimeError as error:
+        print("delete refused:", str(error)[:300])
+    time.sleep(5)
     try:
-        call("GET", post_id, token, {"fields": "id"})
-    except RuntimeError:
+        still = call("GET", post_id, token, {"fields": "id,is_published"})
+        print("after delete:", json.dumps(still))
+    except RuntimeError as error:
+        print("gone:", str(error)[:200])
         return True
     try:
-        call("POST", post_id, token, {"is_published": "false"})
+        print("unpublish:", json.dumps(call("POST", post_id, token, {"is_published": "false"})))
         return call("GET", post_id, token, {"fields": "is_published"}).get("is_published") is False
-    except RuntimeError:
+    except RuntimeError as error:
+        print("unpublish refused:", str(error)[:300])
         return False
 
 
