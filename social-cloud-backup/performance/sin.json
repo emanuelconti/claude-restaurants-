@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "5 questions for your next planning review",
+      "stamp": "2026-11-05T21:39:16+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfX6NmtmFUe/"
+    },
+    {
+      "title": "5 checks before comparing two funding options",
+      "stamp": "2026-11-05T20:51:40+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfX0xV8l_CR/"
+    },
+    {
+      "title": "5 things to agree before sharing a funding task",
+      "stamp": "2026-11-05T18:39:56+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfXlsS7jPCj/"
+    },
+    {
+      "title": "5 questions before calling something recurring revenue",
+      "stamp": "2026-11-05T16:39:24+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfXX59HAF2Q/"
+    },
+    {
+      "title": "5 checks before reporting a project expense",
+      "stamp": "2026-11-05T14:44:43+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfXKxiPF41y/"
+    },
+    {
+      "title": "5 questions before you promise a launch date",
+      "stamp": "2026-11-05T13:08:59+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfW_0qel12L/"
+    },
+    {
+      "title": "5 things to check when a funding email arrives",
+      "stamp": "2026-11-05T10:45:50+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfWvcVnFLVM/"
+    },
+    {
+      "title": "5 questions before joining an accelerator",
+      "stamp": "2026-11-05T09:10:38+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfWkisKjDVv/"
+    },
+    {
       "title": "5 checks for a funding presentation appendix",
       "stamp": "2026-11-04T22:12:18+01:00",
       "local_hour": 22,
@@ -295,16 +359,21 @@
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-05",
+  "market_date": "2026-11-06",
   "mature_hour_summary": [
     {
       "local_hour": 8,
-      "posts": 4,
-      "median_public_interactions": 0.5
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 9,
       "posts": 5,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 10,
+      "posts": 1,
       "median_public_interactions": 0
     },
     {
@@ -329,18 +398,18 @@
     },
     {
       "local_hour": 15,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 16,
-      "posts": 1,
+      "posts": 3,
       "median_public_interactions": 0
     },
     {
       "local_hour": 18,
-      "posts": 2,
-      "median_public_interactions": 1.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
@@ -353,10 +422,20 @@
       "median_public_interactions": 0
     },
     {
+      "local_hour": 21,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 22,
+      "posts": 1,
+      "median_public_interactions": 1
+    },
+    {
       "local_hour": 23,
       "posts": 2,
       "median_public_interactions": 0.0
     }
   ],
-  "timing_status": "insufficient comparable samples"
+  "timing_status": "editor review required before changing schedule"
 }
