@@ -385,8 +385,9 @@ def main():
     try:
         token = page_token(page, token)
         if args.withdraw:
-            if not args.withdraw.startswith(page + "_"):
-                sys.exit("withdraw: post is not on this Page; nothing changed")
+            owner = call("GET", args.withdraw, token, {"fields": "from{id,name}"}).get("from") or {}
+            if owner.get("name") != "Good Message Studio":
+                sys.exit("withdraw: post is not on the Good Message Studio Page; nothing changed")
             ok = withdraw(args.withdraw, token)
             print(("withdrawn: " if ok else "withdraw failed: ") + args.withdraw)
             if not ok:

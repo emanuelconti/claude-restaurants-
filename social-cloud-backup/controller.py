@@ -188,7 +188,7 @@ else:
  if 'gms' in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
   for post in json.loads((R/'facebook_withdraw.json').read_text()) if (R/'facebook_withdraw.json').exists() else []:
    key='withdrawn_fb:'+post['post_id']
-   if not state.get(key):
+   if not state.get(key,'').startswith('withdrawn:'):
     rc,out=run('gms','fb_publish.py','--withdraw',post['post_id'])
     state[key]=('withdrawn: ' if rc==0 else 'withdraw failed: ')+post['reason'];save()
  for b in (('gms',) if recover else selected_brands(cron,os.environ.get('BACKUP_BRAND','all'))):
