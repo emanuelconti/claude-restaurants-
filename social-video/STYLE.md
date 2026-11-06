@@ -129,3 +129,8 @@ Every photo must show exactly what its slide talks about, for that account audie
 ## Every point names its photo set (owner, 2 November 2026)
 
 A bar/waiter slide once showed a barber's clipper. Now every written topic MUST include "point_sets": one set per point, matching what that point talks about (cafe, restaurant, gym, beauty, wellness, hotel, shop, city, life, money). Example: a slide about the waiter who knows your order -> "cafe" or "restaurant", never "beauty". After rendering, look at every slide: if any photo does not obviously fit its text, change the set or the photo_ids and render again. Never publish a slide whose photo does not fit.
+
+
+## CONTENT DIRECTION (owner, 6 November 2026) — overrides older topic lists
+
+People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar without thinking about the photo"). Write about LIFE: everyday moments, motivation, encouragement, small wins, friendship, courage to start, keep going, be kind to yourself, enjoy the people around you. Human, warm, short lines people want to save and send to a friend. Then connect it naturally to us: SocialPerks = share the places you love with your friends and get rewarded / owners: your regulars are your best advertising (invite to join, link in bio); Good Message Studio = wear the message that keeps you going (message hoodies, link in bio). At least 8 posts out of 10 must be life/motivation first, product second. Reels especially: one strong motivating hook in the first second.
