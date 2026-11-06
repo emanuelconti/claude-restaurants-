@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-11",
+ "title": "A pilot partner is not a testimonial yet",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "A pilot partner is not a testimonial yet\n\nPermission and evidence matter before publishing names.\n\nPermission and evidence matter before publishing names. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 367 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "replaces": "1506784983877-45594efa4cbe",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-02.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.54,
+   "runner_up": 38.49
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-05.jpg",
+   "match_error": 0.92,
+   "runner_up": 42.67
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-06.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Confirm the relationship",
+  "Agree on public wording",
+  "Use a dated result",
+  "Keep the scope visible",
+  "Respect a no",
+  "end card"
+ ]
+}

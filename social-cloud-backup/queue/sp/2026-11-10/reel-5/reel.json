@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-10",
+ "title": "Qué hace que quieras volver a un hotel",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Qué hace que quieras volver a un hotel\n\nA veces recuerdas mejor un detalle que una habitación.\n\nA veces recuerdas mejor un detalle que una habitación. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 212 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1551882547-ff40c63fe5fa",
+   "slide": "slide-01.jpg",
+   "match_error": 0.2,
+   "runner_up": 32.87
+  },
+  {
+   "unsplash": "1600585154340-be6161a56a0c",
+   "slide": "slide-02.jpg",
+   "match_error": 0.3,
+   "runner_up": 14.8
+  },
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-03.jpg",
+   "match_error": 0.5,
+   "runner_up": 25.95
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "slide": "slide-04.jpg",
+   "match_error": 0.57,
+   "runner_up": 34.83
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-05.jpg",
+   "match_error": 0.56,
+   "runner_up": 38.47
+  },
+  {
+   "unsplash": "1551882547-ff40c63fe5fa",
+   "slide": "slide-06.jpg",
+   "match_error": 1.32,
+   "runner_up": 38.3
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Una bienvenida clara",
+  "Un consejo útil",
+  "Tiempo sin prisa",
+  "Trato atento",
+  "Un recuerdo compartido",
+  "end card"
+ ]
+}

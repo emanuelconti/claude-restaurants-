@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-08",
+ "title": "5 maneras de dejar hueco a alguien nuevo en el plan",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 maneras de dejar hueco a alguien nuevo en el plan\n\nIncluir no significa poner a una persona en el centro de todo.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. Incluir no significa poner a una persona en el centro de todo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 528 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-01.jpg",
+   "match_error": 0.34,
+   "runner_up": 33.9
+  },
+  {
+   "unsplash": "1544982560-63ad67a35c23",
+   "slide": "slide-02.jpg",
+   "match_error": 0.42,
+   "runner_up": 54.14
+  },
+  {
+   "unsplash": "1550966871-3ed3cdb5ed0c",
+   "slide": "slide-03.jpg",
+   "match_error": 2.04,
+   "runner_up": 51.7
+  },
+  {
+   "unsplash": "1551024709-8f23befc6f87",
+   "slide": "slide-04.jpg",
+   "match_error": 0.9,
+   "runner_up": 46.45
+  },
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-05.jpg",
+   "match_error": 1.03,
+   "runner_up": 26.89
+  },
+  {
+   "unsplash": "1572116469696-31de0f17cc34",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 18.63
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Explicar quién viene",
+  "Elegir un sitio fácil",
+  "No hablar solo de recuerdos internos",
+  "Preguntar sin interrogar",
+  "Dejarle elegir cuánto participar",
+  "end card"
+ ]
+}

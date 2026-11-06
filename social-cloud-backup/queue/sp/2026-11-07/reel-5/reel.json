@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-07",
+ "title": "5 acuerdos pequeños antes de una noche de hotel",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 acuerdos pequeños antes de una noche de hotel\n\nLa escapada empieza mejor cuando no hay que adivinarlo todo.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. La escapada empieza mejor cuando no hay que adivinarlo todo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 182 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1551882547-ff40c63fe5fa",
+   "slide": "slide-01.jpg",
+   "match_error": 0.2,
+   "runner_up": 32.87
+  },
+  {
+   "unsplash": "1600585154340-be6161a56a0c",
+   "slide": "slide-02.jpg",
+   "match_error": 0.6,
+   "runner_up": 18.26
+  },
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-03.jpg",
+   "match_error": 1.34,
+   "runner_up": 31.39
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "slide": "slide-04.jpg",
+   "match_error": 0.76,
+   "runner_up": 36.01
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-05.jpg",
+   "match_error": 1.06,
+   "runner_up": 44.65
+  },
+  {
+   "unsplash": "1551882547-ff40c63fe5fa",
+   "slide": "slide-06.jpg",
+   "match_error": 1.32,
+   "runner_up": 38.3
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Confirmar la llegada",
+  "Separar descanso y planes",
+  "Leer qué está incluido",
+  "Aclarar los gastos comunes",
+  "Elegir una cosa para disfrutar",
+  "end card"
+ ]
+}

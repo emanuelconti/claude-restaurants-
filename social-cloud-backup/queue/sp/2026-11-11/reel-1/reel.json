@@ -1,0 +1,51 @@
+{
+ "date": "2026-11-11",
+ "title": "Un café antes de volver a estudiar",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Un café antes de volver a estudiar\n\nLa pausa también puede tener buena compañía.\n\nLa pausa también puede tener buena compañía. Ideas para los sitios de tu barrio y la gente con quien los compartes. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #VidaLocal #Restaurantes #Cafeterias",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 230 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1445116572660-236099ec97a0",
+   "replaces": "1495474472287-4d71bcdd2085",
+   "reason": "variety: same 'cafe' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "replaces": "1497935586351-b67a49e012bf",
+   "reason": "variety: same 'cafe' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "replaces": "1509042239860-f550ce710b93",
+   "reason": "variety: same 'cafe' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "replaces": "1511920170033-f8396924c348",
+   "reason": "variety: same 'cafe' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "replaces": "1521017432531-fbd92d768814",
+   "reason": "variety: same 'cafe' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-06.jpg",
+   "match_error": 0.95,
+   "runner_up": 41.32
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elegid una duración realista",
+  "Quedad cerca",
+  "Preguntad por el ruido",
+  "Guardad el móvil un rato",
+  "Volved con una buena sensación",
+  "end card"
+ ]
+}

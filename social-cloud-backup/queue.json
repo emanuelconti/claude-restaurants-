@@ -1859,7 +1859,15 @@
       "slide-06.jpg": "7742381650b185f895abb52658169b7c79c9709e0efd6093bc87563b76ea2938",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 3 November night; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 3 November night; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "7a79730ae5f887bc5087d3390212c18f027cbebd6e269fbddfcd04eed3f6df13",
+      "reel.json": "4939168a9bcc7d50ae87eeb9e9aad49fe86a634c25fbb44b829b0688578aee27",
+      "cover.jpg": "b6335db1a1ac5961cbae7564f952cd2ee28140acf4216c3c0169981d004eae6e"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-06-6",
@@ -2125,7 +2133,15 @@
     "publish_order": 1,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "ca64eddfbe49dbbb54c53ae5fd3b572b4b06149e6ef34e6be84a73d4400b2f5d",
+      "reel.json": "52a5f9e25ace5d1b88ae4142ef38f4b3959a18adb5ac41a28ca49968d3aa57f0",
+      "cover.jpg": "624ffb7be5183cdaa13a3c066e2c1672db2a87e295ccd2e5ff81e9b9b17e9b77"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-07-2",
@@ -2272,7 +2288,15 @@
     "publish_order": 6,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-6",
+    "reel_sha256": {
+      "reel.mp4": "6b74ea28e128b59f0f5382533ec7fd4a2fd4d41f77443e693573d01fc5e021fa",
+      "reel.json": "861db5fedacefac54e11165a4f4963a44eb30bffc0ff3ec8a81750b7e249f8f6",
+      "cover.jpg": "71b10a14497242cf01b1cc1805ee2073ce7793454e4800cf5e824f1a11d62d9a"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-07-7",
@@ -2349,7 +2373,15 @@
       "slide-06.jpg": "3f2cf6c0a9d9a40fedb136331f62f1e738ae1e60eda60b9a5948760179e7cef2",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "bf5b7962904b7a2d3e91363b1dda037f1ea791a1edc6b7a46723e2bb72d4172c",
+      "reel.json": "ca2339a6081bd2327efbeaff7298abdcdff4bc2a15b36be52a971c324169c797",
+      "cover.jpg": "47ffe441f7388e220791aae938cc2a638591b6b825cb631c8f94740eec501c16"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.1 dB peak -0.8 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sp-2026-11-07-2",
@@ -2433,7 +2465,15 @@
       "slide-06.jpg": "c9877b4bf2d14eb14c77888be7a7dfa8d6a654fe20f57b4ee4fe26bf560aaf3b",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "b8fd9f61ac0e4b5749a7c1da0b27c0841770c4fe720b5e5e79117ef1e2cfbaa4",
+      "reel.json": "abd311d8d629678e3453fac762ebefd147b162d3b10f0d6166994a28246ccc82",
+      "cover.jpg": "0ce49ddae2ebc8fceb6b2c062b53cc3f05c89269c9d7fcda88506b3a519d69ac"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.5 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-07-6",
@@ -2517,7 +2557,15 @@
       "slide-06.jpg": "e3ec76683b8797eb9bbf51aa96194391ca1db9bc0857c9ca9906ac3ce5928bab",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "ecab2bc26d326e9de321150da187806c7d37bae24d9c442c9e670444e9d464b9",
+      "reel.json": "97b198738c2f103fc464be46ac5d4d07aa8a04c769709f105ce80e66c605c0b3",
+      "cover.jpg": "5882effb682b272fe92ef298bcfedd7a17f532fa1bd91fb9d8cb91ca56c70ace"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sin-2026-11-07-2",
@@ -2601,7 +2649,15 @@
       "slide-06.jpg": "04cb0ccd1b94ac488ea8167fdebdb6cca2d9d27252820faca285829b6a7170c3",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "40840653f328c6422a3d45a58830e7220c90fe6989c4271707c3b923d4e82257",
+      "reel.json": "0ab24d86dfdb336bf36a029ee5a78e566f13c97f60d68cd317de1f3b70da10cc",
+      "cover.jpg": "7974d6fb85fc7c3f46e44d370063ad67dc4fe42bbe916e2020b97e9c0467a336"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-07-6",
@@ -2699,7 +2755,15 @@
     "publish_order": 1,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "ae58df7c5fcf9d030cc74da8498f0d8315c11bd2a89fe8fbb2990bce73ccce9a",
+      "reel.json": "4da71d7eed1c95bcbab4b8cfb7cb412f8719537b35ee743799adbfaf80d24357",
+      "cover.jpg": "da6ee359a59e7d5dabcbcbb94933a934411f5ee15b92d074e6f7bf952b53a218"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-08-2",
@@ -2846,7 +2910,15 @@
     "publish_order": 6,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-6",
+    "reel_sha256": {
+      "reel.mp4": "7776ec71e5b9c082b9e42008b0ccf351a8b9f41013de08d2d57630a206b8a83b",
+      "reel.json": "dad352547d0bad1583bc5fa02a3fbfad0514b44f7815d899887dcd124304ae69",
+      "cover.jpg": "08770e89f729912faa995adb308aca66ac29bd32d824b1601f7e9bfc85e20899"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-08-7",
@@ -2923,7 +2995,15 @@
       "slide-06.jpg": "846be771cf03d962f23013b4db129737e39c66e88cf4f58368dfeb8b253ea808",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "f0b8cf5aa2ba282d61956c1ec1f9bb6095254fdac27e50c7b1e65010360d3625",
+      "reel.json": "8d2b90ebc42fc5222e53371ea8b45181f84350575318736c8696aa19c2acf94f",
+      "cover.jpg": "2d5faa5477169918926d1a87030b47d34f08b06511064910aba6b5595ae5a2bf"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.1 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-08-2",
@@ -3007,7 +3087,15 @@
       "slide-06.jpg": "a720ee5f75b21bbbb2b3cdf43455132210f247c262da51b6ff503cd8720ff160",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "de7de8536d9781c2fadf1b80a4c451cbb44312272ab7a8bde1d3f6ab45f906ab",
+      "reel.json": "af52890a710abe61ed32a942dc9bc390e1499795ade5b17169d4af06e408fa24",
+      "cover.jpg": "ed6702b44e35d2c763a6998024c591a0d91d52be28a3e9fa95daf5c3df144ecc"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.7 dB peak -0.9 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-08-6",
@@ -3091,7 +3179,15 @@
       "slide-06.jpg": "a33c9e2b783dfcc464829e05c7175f09ca5973494b0ee099d07bd6c511a93837",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "03e5e96a49bbec9b64b5ad683692ed9a8840549da2629742138b396645c0ceea",
+      "reel.json": "9748bdde1f84535f7244110c3cc39be3eaf82d6a20081af82aa9855529a3252c",
+      "cover.jpg": "44b3aa53f95285af7635807db523f8d08133279f2858cacce6be8e5dda514cf6"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 3 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-08-2",
@@ -3175,7 +3271,15 @@
       "slide-06.jpg": "efa42e234065a495cd071ebee3aa15068cd171466b9b49e4b10c92c8e0bbc82c",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November overnight; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "4ff62e1bb8c9eb75a2796820463bdc37a21c456ad945ae448c826a1c6c414cd3",
+      "reel.json": "a2d19496f91e7f002f73cdc29c042621a15b60846114edd996c55823c3d45bbe",
+      "cover.jpg": "e3158f3878d583713ba3c8221854643ec8803019bf9c304a049909c0779eff28"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-08-6",
@@ -3259,7 +3363,15 @@
       "slide-06.jpg": "f9f64c33914ae210868b642516265e0b84ff57dc8f556853e36b99509f2db005",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "34fdbd6def040aec513c233d7a014f1a564113bc1c65fb3cd19f66ec59bbe771",
+      "reel.json": "77ebba18d55e84aec37951b268bd5011b5ee5a290e556f492270e201f29dc472",
+      "cover.jpg": "8f37daa6e088fdee836ed30d1be2d3fc270b07e47799677ce6ef63aaae353256"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.9 dB peak -1.0 dB; 6 scene photos, 5 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sp-2026-11-09-2",
@@ -3343,7 +3455,15 @@
       "slide-06.jpg": "182e5aa3c575953e027876e260dff76a2284d7d4dc28effe3c34b0528b28e8e1",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "fe5f6cc71b5acfe687f9c5620b5f0f08ad4e07dac2c923b2bca66a302496f95d",
+      "reel.json": "ff60e11cba64b6bfab60032a6945ccb07fda213aad5860b78cb86b88ef5f2529",
+      "cover.jpg": "ed5aa43f4c0403e0e4403ae486b1d50b7d24f4feafcda92a12384337148e95b2"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -0.7 dB; 6 scene photos, 6 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sp-2026-11-09-6",
@@ -3427,7 +3547,15 @@
       "slide-06.jpg": "d78267fb7a6ac8631df12c224d833c93d939f6e73fda0f54783e388e2b4704ec",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "549cf41cfb86095ba0cbf6298338c690e0736c4d6e919e4ecdea77041766e2fc",
+      "reel.json": "bab29362cd2f23aeb6291170072af6f9eac6bd40dad2fa38b40bd24972928573",
+      "cover.jpg": "06b18d759be298dfd2fb7ac911084135b45a4561d17f7c800f8f7283bbe44810"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-09-2",
@@ -3511,7 +3639,15 @@
       "slide-06.jpg": "72268a4876a9d2bdd43157486ebab10857ece5a05a8c9ee0f682d5ab8f2be44a",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November morning; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "a42b0947ebd0054884e18fd194905593fcbf19f6d691c5767518355d8e08d3e2",
+      "reel.json": "990d67d87a7489afea7a2f1dcb9f57301d0f2fe9302b427fb455b7b44b0ba567",
+      "cover.jpg": "1427ac7c837c4b2a62e2ef428719fb41952b7d186b86e1ce630c4b78d9408c44"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-09-6",
@@ -3609,7 +3745,15 @@
     "publish_order": 1,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "ecc91bb25265fd7b25bef75112d4c0bc7c93025456d5c0bd3ac4c57af517e7aa",
+      "reel.json": "8473c5b9cd907bd335fb3b90577a1a7827b2ccb703d644da1cadc909a7b8fa96",
+      "cover.jpg": "0384456eb0e5129e47b4880be8c858ad7be11a76bc1ff41393a424ffdd5edfff"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-09-2",
@@ -3756,7 +3900,15 @@
     "publish_order": 6,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-6",
+    "reel_sha256": {
+      "reel.mp4": "ff6f5cb9606421a332f502265f1e11b1fb61bec50fa49eef18ce0091fa3f67ee",
+      "reel.json": "3f5c1333c2136ba04e820aac2123a4648aafacf1cb8407afeaa6e7df6dbf8d17",
+      "cover.jpg": "4228d21f7ae862dd788e6a7d517173b6c227f4a6bab2fb12f3f4fac9f8957ac1"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-09-7",
@@ -3847,7 +3999,15 @@
     "publish_order": 1,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "7af2a60737a4c69622644a6b24bfcefd339513cffdc83cb16d8367ed574e1da7",
+      "reel.json": "3377c13a3f1b7f95c8a52558c94a69959468a9cccf63495ebe2fc03c7eff1494",
+      "cover.jpg": "575d1492f90da6bb4e33b81d88bb4b8b5cee8c83e0b8f1e1d0fb415f9f72310f"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-10-2",
@@ -3994,7 +4154,15 @@
     "publish_order": 6,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-6",
+    "reel_sha256": {
+      "reel.mp4": "f6bbb58a83819b1c4a9ee893e0e662e4a130e1f19273110ff3898f9b88863624",
+      "reel.json": "f74104cffee36754750a3dd09af8547f69657c1c216ab52e9515ff504069efe6",
+      "cover.jpg": "c9f45f3434606d03656ee6ee328c16ab345a018069135ea519a143a368276b7e"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-10-7",
@@ -4071,7 +4239,15 @@
       "slide-06.jpg": "b85fc9dfe0c1137d22155f47cf6d02f5477d8ca675329c2748c7cce679322ed6",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "b88d8037171df926b80eee31f8da37daff55b8767bdf39b43e5217ccf688f900",
+      "reel.json": "9eeecce96ab7f45abec8a04c646c939524b9464d42954b6d32cae114685aedc0",
+      "cover.jpg": "27087937d14a9ed9517c10626941a41b6c9b555adbc5123c937a29d9a6dca2b8"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.7 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-10-2",
@@ -4155,7 +4331,15 @@
       "slide-06.jpg": "212164672cd066bc4f8354faaa3a75e1a5837afdccd189f7c59c67a77c4efe91",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "7ab9ca80b8ccb0252a1be3c90290ef2709cc63483e9454dfe3b8b5e11cbe3580",
+      "reel.json": "edc111469c7acf6797fff2b1b8842229cd1ebe8d559430901724c2fea475f0e7",
+      "cover.jpg": "d182bba5b8b154c7562c6a5d781be7474d68aa5944bdee2ee89724f542faee67"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.7 dB peak -1.2 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sp-2026-11-10-6",
@@ -4239,7 +4423,15 @@
       "slide-06.jpg": "29fa0bfa297cecdb3813964a0fa4d306c31d742e1736987bca69a1a01af45fdc",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "cd2b4348250e5dbe303facade549185a3ec17f34e532ae028884e1e0d84d06b9",
+      "reel.json": "176f9fbc9f8b74b837404b8cf4226f77fe68d839414551fa3c9610e0f48e5b9d",
+      "cover.jpg": "9e915d5c39a0cf0f5b11c89437b47aa0a280a4218f7e1fb731cf5071f2a60944"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 2 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-10-2",
@@ -4323,7 +4515,15 @@
       "slide-06.jpg": "fdcfd4fdc6494d6fd749a2c86da2773c170cf9132d9f3f498bf2fd30890813be",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "ea47fd88ebb9cb5acfd7d6a7e4ae822cba3aee746a95c232a8cca671022b7e6c",
+      "reel.json": "bd9dfa66f509c22176e18eaf48c935e28dd264c3656a4cd310f6d24f873330c0",
+      "cover.jpg": "21b2a6869f5298b39d17274e011f369f13d11a1d19b0c15e77fd2471a186e585"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-10-6",
@@ -4421,7 +4621,15 @@
     "publish_order": 1,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "b9eeab3928087a1c5261120332a067739a7377d671cd1a75840094d59ea933a9",
+      "reel.json": "06a7c7f5b0a6dc10b93f4de0e23abb0cafa55f518c95179cce8b4b08faca6eac",
+      "cover.jpg": "d316c7ad7503600526d4119ec222e78b88792006786bbf3fb91b2db2c8a14770"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-11-2",
@@ -4568,7 +4776,15 @@
     "publish_order": 6,
     "market_timezone": "Asia/Singapore",
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
-    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026"
+    "facebook_qa": "Modern Facebook slides (fb-01..07, real message-hoodie photos, bold sans) visually inspected 6 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-6",
+    "reel_sha256": {
+      "reel.mp4": "6d38c123755b7dc4a264f7f10d093a75fd54ce30651f70fda4132c1f4855cad1",
+      "reel.json": "81cfee88e341af080850a4ec02527f38ff4c7ca46204af3cc2b1edb514ab279f",
+      "cover.jpg": "29e8c6fe9f76d8d2b8b24ebe16c310e984fe26c6121e068bc7c6da338147306f"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-11-7",
@@ -4645,7 +4861,15 @@
       "slide-06.jpg": "4efa09e2c57c215b0a0b4b9feb1ead233fdbc0b98a7ba72614aee6c10b826de7",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "fb591217c15f3a4a54614c730af217560c604dd560456cb63263dd6b27400a2c",
+      "reel.json": "4defbc8100ce3c8f5ab06b114a5548c4f05e0174b7e4c55cce22c22013de954a",
+      "cover.jpg": "d39d93c4de189c677563a60dfd7bbd8523de58404f5b77c7efbc42ff2b68823d"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.8 dB peak -1.0 dB; 6 scene photos, 5 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sp-2026-11-11-2",
@@ -4729,7 +4953,15 @@
       "slide-06.jpg": "2b9004ef606b155c6a7a2221b515ffcf01c23e2dfb8eba290e5d2b80eb7225b7",
       "slide-07.jpg": "46ebd3e7168d4a0e7dd3fcb9bc9c34638989bb4b23cd5d5ad4f14fd191d6c3d6"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "1a90a4866e1b8e3ac8dc0b06de8223df3d3743d4d647694ffa88c237b0f4a94c",
+      "reel.json": "d94fbfbfc0b6a7e269d0ffceb1d0b375d43c7c441139441adda68a403102c321",
+      "cover.jpg": "f6a821e60ec3289230aca23107ba534a2d2b63fd16d3e5394fcbddccae72573d"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.8 dB peak -0.9 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sp-2026-11-11-6",
@@ -4813,7 +5045,15 @@
       "slide-06.jpg": "105479c223af9534b291ba94badb8a88b4042d40b7506f9ab05c985f8282e2e3",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "bcf66385f1305df08797907835c62e74a80dd2dc2e59f8bd6ea8403c01f4baa6",
+      "reel.json": "d5852a272c2ab155ee6f22b2c03829b22d6d82bbabb23beb2378ca04df2bdeb7",
+      "cover.jpg": "387d36bd6db071ac035457271907e513b72876969e2c7f1c727800db29421d77"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 3 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-11-2",
@@ -4897,7 +5137,15 @@
       "slide-06.jpg": "47762b3cc6a9a707e46d8b4859036140844067853879f6826de24cfad8dbbebd",
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
-    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+    "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "80a462048bbb5bcc495b0d2b09635254afc5703179f7ee41d5707c76f7c96b09",
+      "reel.json": "080c894105388041e808d6035e635aca72128c722492f5aee5bb8990c615d7ff",
+      "cover.jpg": "dc325ecef0b868fa1208bbd484261cd2c78a9357e63f70c5f89356c4aacc7794"
+    },
+    "reel_qa": "Contact sheet (hook first frame, hook settled, two frames per scene, end card) inspected 6 November 2026 by Claude for the owner's four-Reels-a-day request; 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
   },
   {
     "id": "sin-2026-11-11-6",

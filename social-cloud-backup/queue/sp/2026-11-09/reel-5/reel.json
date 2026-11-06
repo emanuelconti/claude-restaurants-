@@ -1,0 +1,50 @@
+{
+ "date": "2026-11-09",
+ "title": "5 mensajes para el amigo que siempre propone el plan",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 mensajes para el amigo que siempre propone el plan\n\nOrganizar algo sencillo también lleva un poco de atención.\n\nIdeas para disfrutar de los sitios de tu barrio y de la compañía. Organizar algo sencillo también lleva un poco de atención.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #PlanesConAmigos #Restaurantes #Cafeterias #VidaLocal",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 622 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "replaces": "1517248135467-4c7edcad34c4",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1470337458703-46ad1756a187",
+   "replaces": "1544982560-63ad67a35c23",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1513104890138-7c749659a591",
+   "replaces": "1550966871-3ed3cdb5ed0c",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1514362545857-3bc16c4c7d1b",
+   "replaces": "1551024709-8f23befc6f87",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1514933651103-005eec06c04b",
+   "replaces": "1559339352-11d035aa65de",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1579751626657-72bc17010498",
+   "replaces": "1572116469696-31de0f17cc34",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Gracias por preguntar qué nos encajaba",
+  "Qué bien que eligieras algo fácil",
+  "La próxima propuesta la hago yo",
+  "Me gustó el rato sin prisas",
+  "Me alegró que nos viéramos",
+  "end card"
+ ]
+}

@@ -241,16 +241,25 @@ class InstagramReelAllBrands(unittest.TestCase):
             self.assertIn(zone, source)
             self.assertIn(token, source)
 
-    def test_future_days_carry_two_reels_per_brand(self):
+    def test_future_days_carry_the_reels_per_brand(self):
+        # Owner, 5 November: two Reels a day (3, 7). Owner, 6 November: at least three or four
+        # Reels a day on every Instagram profile, so from 7 November four of the eight topics are
+        # Reels: SocialPerks and Sincronia 1, 3, 5, 7; GMS 1, 3, 6, 7 (Facebook keeps its product
+        # cards at 2, 5, 8). Earlier days keep 3 and 7 (SocialPerks 6 November also 5).
         items = json.loads((ROOT / 'queue.json').read_text())
+        four = {'sp': [1, 3, 5, 7], 'sin': [1, 3, 5, 7], 'gms': [1, 3, 6, 7]}
         for brand in ('sp', 'sin', 'gms'):
             days = sorted({x['date'] for x in items if x['brand'] == brand and x.get('reel_dir', 'reel') != 'reel' and x.get('kind') == 'reel'})
             self.assertTrue(days, brand)
             for day in days:
                 reels = [x for x in items if x['brand'] == brand and x['date'] == day and x.get('kind') == 'reel']
-                self.assertEqual(len(reels), 2, (brand, day))
                 orders = sorted(x.get('publish_order', x['slot']) for x in reels)
-                self.assertEqual(orders, [3, 7], (brand, day))
+                if day >= '2026-11-07':
+                    self.assertEqual(orders, four[brand], (brand, day))
+                elif (brand, day) == ('sp', '2026-11-06'):
+                    self.assertEqual(orders, [3, 5, 7], (brand, day))
+                else:
+                    self.assertEqual(orders, [3, 7], (brand, day))
 
 
 if __name__ == '__main__':

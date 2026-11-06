@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-08",
+ "title": "5 ways to start a founder week with fewer open loops",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "5 ways to start a founder week with fewer open loops\n\nPrepare the handover, not a perfect version of Monday.\n\nPractical preparation for European founders. Prepare the handover, not a perfect version of Monday. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 933 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "replaces": "1434030216411-0b793f4b4173",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "replaces": "1484480974693-6ca0a78fb36b",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1520607162513-77705c0f0d4a",
+   "replaces": "1516321318423-f06f85e504b3",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.87,
+   "runner_up": 40.14
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-05.jpg",
+   "match_error": 0.6,
+   "runner_up": 25.47
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-06.jpg",
+   "match_error": 1.46,
+   "runner_up": 53.6
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Choose the first decision",
+  "Write down the next action",
+  "Check who is waiting",
+  "Leave a source beside the number",
+  "Keep the rest in one place",
+  "end card"
+ ]
+}

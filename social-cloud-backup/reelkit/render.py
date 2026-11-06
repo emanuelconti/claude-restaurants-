@@ -299,7 +299,11 @@ def render(brand, item, cache: Path, matcher=None):
     sources = []
     if brand.name == 'gms':
         day = int(item['date'][-2:])
-        picks = [GMS_PHOTOS[(day + k) % len(GMS_PHOTOS)] for k in range(6)]
+        # Owner, 6 November: four Reels a day. The extra Reels (publish_order 1 and 6) start
+        # further along the same reviewed hoodie photos so a day's Reels never repeat one order;
+        # the existing lunch/evening Reels keep their original order.
+        shift = {1: 2, 6: 4}.get(item.get('publish_order', item['slot']), 0)
+        picks = [GMS_PHOTOS[(day + shift + k) % len(GMS_PHOTOS)] for k in range(6)]
         photos = [fetch(u, cache / 'gms') for u, _ in picks]
         sources = [dict(url=u, product=p) for u, p in picks]
     else:
