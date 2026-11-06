@@ -439,7 +439,7 @@ def main():
             base = os.environ.get("GMS_PUBLIC_ASSET_BASE", "").rstrip("/")
             if not base.startswith("https://raw.githubusercontent.com/emanuelconti/claude-restaurants-/"):
                 sys.exit("immutable reviewed asset base missing: nothing published")
-            names = meta.get("slides", [])
+            names = meta.get("facebook_slides") or meta.get("slides", [])  # modern Facebook slides when reviewed
             if not 2 <= len(names) <= 10:
                 sys.exit("Facebook carousel needs 2 to 10 reviewed slides: nothing published")
             for name in names:
@@ -461,7 +461,9 @@ def main():
                     raw = response.read()
                 params["source"] = product_card(raw, card["name"], card["description"])
             else:
-                params["url"] = card["picture"]
+                # Upload the reviewed local bytes: never depend on Meta fetching an external host.
+                with open(os.path.join(folder, card["picture"].rsplit("/", 1)[-1]), "rb") as fh:
+                    params["source"] = fh.read()
             photo = call("POST", f"{page}/photos", token, params)
             if not photo.get("id"):
                 raise RuntimeError("Facebook did not acknowledge the native photo; no feed post published")
