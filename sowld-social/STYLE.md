@@ -1,5 +1,8 @@
 > Read ../SOCIAL_MARKET_RULES.md first. Current audience and Singapore-local schedule supersede the historical six-slot schedule below. All daily counts reset at midnight Asia/Singapore.
 
+> **Owner, 6 November 2026, overrides anything narrower below:** topics are everyday life and motivation first (habits, mornings, starting, getting back up, friendship, small wins, a push to act today). The brand appears only at the end, where it fits naturally. No niche how-tos. Full rule: top of SOCIAL_MARKET_RULES.md.
+
+
 # Writing a Good Message Studio carousel
 
 ## Strategy: organic that works like paid targeting (the owner, 1 November 2026)
