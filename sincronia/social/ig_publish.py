@@ -34,7 +34,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://graph.facebook.com/v21.0"
 MAX_SLIDES = 10  # Instagram's limit for one carousel
-DAILY_CAP = 10  # posts a day on the account, whoever published them (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
+DAILY_CAP = 13  # owner 4 Nov 2026: 8 carousels + up to 4-5 Reels a day; posts a day on the account, whoever published them (the owner, 2 November 2026: 10 a day, never in a burst: 60 minutes apart)
 MIN_GAP = 0  # owner, 2 Nov 2026: no wait between Instagram posts (Facebook keeps 60); 10/day cap stays
 # Meta's answers that mean "slow down": retrying them is what gets the app blocked.
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily")
