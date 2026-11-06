@@ -1,0 +1,413 @@
+<title>SocialPerks post del giorno</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* One phone-width column: the day's video framed like a Reel, then what to do with it, then the week. */
+:root {
+  --bg: #f5f4fa;
+  --surface: #ffffff;
+  --fg: #17142b;
+  --muted: #5e5a74;
+  --line: #e3e0ef;
+  --accent: #3a2be0;
+  --accent-soft: #ebe9fd;
+  --on-accent: #ffffff;
+  --ok: #1c6b4c;
+  --ring: linear-gradient(135deg, #fdc468, #df4996 38%, #8a3ab9 68%, #3a2be0);
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Figtree", "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0d1a; --surface: #1a1729; --fg: #f1f0f8; --muted: #a9a6bf; --line: #2c2942;
+    --accent: #8b80ff; --accent-soft: #252148; --on-accent: #0f0d1a; --ok: #5fcf9f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0d1a; --surface: #1a1729; --fg: #f1f0f8; --muted: #a9a6bf; --line: #2c2942;
+  --accent: #8b80ff; --accent-soft: #252148; --on-accent: #0f0d1a; --ok: #5fcf9f; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font: 16px/1.5 var(--body); }
+.page {
+  max-width: 34rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+  display: grid; gap: 28px;
+}
+.eyebrow { font: 700 12px/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0; }
+h1 { font: 800 clamp(2rem, 8vw, 2.6rem)/1.02 var(--display); letter-spacing: -0.02em; margin: 8px 0 0; text-wrap: balance; }
+h1::first-letter { text-transform: uppercase; }
+h2 { font: 700 1.15rem/1.2 var(--display); margin: 0; text-wrap: balance; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip { font: 600 13px/1 var(--body); padding: 8px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.reel { display: grid; gap: 16px; }
+.frame { padding: 4px; border-radius: 30px; background: var(--ring); width: min(100%, 22rem); justify-self: center; }
+.frame video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: 26px; background: #000; object-fit: cover; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.actions > button { flex: 1 1 9rem; }
+button {
+  font: 700 15px/1.2 var(--body); min-height: 48px; padding: 12px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+}
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+button:disabled { opacity: 0.6; cursor: default; }
+button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.caption {
+  margin: 0; padding: 16px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line);
+  white-space: pre-wrap; overflow-wrap: anywhere; font: 15px/1.55 var(--body);
+}
+.note { margin: 0; color: var(--muted); font-size: 14px; }
+.steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; color: var(--muted); font-size: 15px; }
+.steps li::before {
+  counter-increment: step; content: counter(step); display: grid; place-items: center;
+  width: 28px; height: 28px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: 700 13px/1 var(--body);
+}
+.steps strong { color: var(--fg); font-weight: 600; }
+details { border-top: 1px solid var(--line); padding-top: 18px; }
+summary { cursor: pointer; font: 700 1.05rem/1.3 var(--display); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details > .reel { margin-top: 16px; }
+.week { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.day { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 10px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.day img { width: 56px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; background: var(--line); }
+.day .what { min-width: 0; }
+.day .when { font-weight: 700; }
+.day .kind { color: var(--muted); font-size: 14px; }
+.day-actions { display: grid; gap: 6px; }
+.day button { min-height: 44px; padding: 10px 14px; font-size: 14px; }
+.carousel { display: grid; gap: 16px; }
+.swipe-wrap { position: relative; }
+.swipe {
+  display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  scrollbar-width: none; border-radius: 22px; -webkit-overflow-scrolling: touch;
+}
+.swipe::-webkit-scrollbar { display: none; }
+.swipe img { flex: 0 0 100%; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 22px; background: var(--line); scroll-snap-align: center; scroll-snap-stop: always; }
+.count { position: absolute; top: 12px; right: 12px; padding: 6px 11px; border-radius: 999px; background: rgba(15, 13, 26, 0.72); color: #fff; font: 700 13px/1 var(--body); pointer-events: none; }
+.dots { display: flex; justify-content: center; gap: 6px; }
+.dots span { width: 7px; height: 7px; border-radius: 999px; background: var(--line); transition: background .2s, width .2s; }
+.dots span.on { width: 18px; background: var(--accent); }
+.carousel-title { font: 700 1.05rem/1.3 var(--display); margin: 0; }
+.carousels { display: grid; gap: 32px; }
+.carousels > article { display: grid; gap: 14px; }
+.posted { margin: 0; font-size: 14px; color: var(--ok); font-weight: 600; }
+.posted a { color: inherit; }
+[hidden] { display: none !important; }
+.empty { padding: 24px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+@media (prefers-reduced-motion: no-preference) { button { transition: transform .12s ease; } button:active:not(:disabled) { transform: scale(0.98); } }
+</style>
+
+<main class="page" id="app">
+  <header>
+    <p class="eyebrow">Post del giorno</p>
+    <h1 id="when">I post di oggi</h1>
+    <div class="chips" id="chips"></div>
+  </header>
+  <section class="carousel" aria-labelledby="carousel-title" id="carousel-section" hidden>
+    <p class="eyebrow" id="carousel-title">Caroselli di oggi</p>
+    <div id="carousels" class="carousels"></div>
+    <p class="note" id="zip-note" hidden>Dall'app Claude arriva un unico file ZIP con tutte le slide: aprilo in File (si apre una cartella), tocca Seleziona, poi Seleziona tutto, Condividi e «Salva immagini». Oppure apri questa pagina in Safari: lì le slide vanno direttamente in Foto.</p>
+    <p class="note">Si pubblicano da soli su Instagram, uno la mattina, uno a pranzo e uno la sera: qui arrivano man mano, con il link al post. Il pulsante serve se li vuoi anche su TikTok: salva le slide, poi su TikTok tocca +, Foto, scegli le slide in ordine e incolla il testo.</p>
+  </section>
+  <section class="reel" id="today" aria-labelledby="today-title"></section>
+  <section aria-labelledby="how-title" style="display:grid;gap:14px" id="how-section">
+    <h2 id="how-title">Come pubblicare il video</h2>
+    <ol class="steps">
+      <li><span><strong>Tocca «Condividi su Instagram o TikTok».</strong> Si apre la condivisione del telefono: scegli Instagram (Reel) o TikTok. Il testo si copia da solo.</span></li>
+      <li><span><strong>Incolla il testo</strong> come didascalia.</span></li>
+      <li><span><strong>Pubblica</strong> come Reel su Instagram e, con lo stesso pulsante, anche su TikTok. La versione inglese è qui sotto, se ti serve.</span></li>
+      <li><span><strong>La musica la scegli tu.</strong> Il video non ha musica, solo l'effetto dei tagli: in Instagram o TikTok tocca l'icona della musica e scegli un brano di tendenza (solo lì è legale). I tagli cadono a 120 battiti al minuto, il ritmo di molti brani di tendenza. Da account business molti brani non compaiono, da account creator sì.</span></li>
+    </ol>
+  </section>
+  <details id="english">
+    <summary>Versione inglese</summary>
+    <div class="reel" id="today-en"></div>
+  </details>
+  <section aria-labelledby="week-title" style="display:grid;gap:14px" id="week-section">
+    <h2 id="week-title">Questa settimana</h2>
+    <ul class="week" id="week"></ul>
+  </section>
+  <p class="note" id="save-note" hidden>La condivisione diretta non è disponibile in questo browser: apri la pagina nell'app Claude o da Safari o Chrome sul telefono.</p>
+</main>
+
+<script type="application/json" id="sp-days">__DAYS__</script>
+<script>
+(() => {
+  let days = [];
+  try { days = JSON.parse(document.getElementById("sp-days").textContent) || []; } catch { days = []; }
+  const blob = (id) => "/_blob/" + id;
+  const dateLabel = (iso, opts) => new Intl.DateTimeFormat("it-IT", { timeZone: "UTC", ...opts }).format(new Date(iso + "T12:00:00Z"));
+  const el = (tag, attrs = {}, ...kids) => {
+    const node = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") node.className = v; else if (k === "text") node.textContent = v; else node.setAttribute(k, v);
+    }
+    for (const kid of kids) if (kid) node.append(kid);
+    return node;
+  };
+
+  // Sharing, not saving: the button hands the video straight to the phone's
+  // share sheet, where Instagram and TikTok are, and copies the caption on the
+  // way so it is ready to paste. The page's own share (Web Share with a file)
+  // is tried first; inside the Claude app the share sheet comes from
+  // `downloads`, which on iPhone opens the same sheet. The file is fetched
+  // ahead of the tap (today's Spanish one on load), because a share has to
+  // start from the tap itself.
+  let downloads = null;
+  const files = new Map();
+  function videoFile(id, filename) {
+    if (!files.has(id)) {
+      files.set(id, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); })
+        .then((b) => new File([b], filename, { type: "video/mp4" })));
+      files.get(id).catch(() => files.delete(id));
+    }
+    return files.get(id);
+  }
+  function imageFile(id, filename) {
+    const key = "img:" + id;
+    if (!files.has(key)) {
+      files.set(key, fetch(blob(id)).then((r) => { if (!r.ok) throw new Error("fetch"); return r.blob(); })
+        .then((b) => new File([b], filename, { type: "image/jpeg" })));
+      files.get(key).catch(() => files.delete(key));
+    }
+    return files.get(key);
+  }
+  // A day's carousels; days written before there were several kept one as `carousel`.
+  const carouselsOf = (day) => (day.carousels || (day.carousel ? [day.carousel] : [])).filter((c) => c && c.slides && c.slides.length);
+  function slideFiles(day, car) {
+    const slot = car.slot || 1;
+    return Promise.all(car.slides.map((id, i) => imageFile(id, `socialperks-${day.date}-${slot}-${String(i + 1).padStart(2, "0")}.jpg`)));
+  }
+  // A ZIP with no compression (JPEGs do not shrink): local headers, the
+  // central directory and its end record, as the format describes.
+  const crcTable = (() => {
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; }
+    return t;
+  })();
+  function crc32(bytes) {
+    let c = 0xffffffff;
+    for (let i = 0; i < bytes.length; i++) c = crcTable[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
+    return (c ^ 0xffffffff) >>> 0;
+  }
+  async function zipOf(list) {
+    const enc = new TextEncoder();
+    const parts = [], central = [];
+    let offset = 0;
+    for (const file of list) {
+      const data = new Uint8Array(await file.arrayBuffer());
+      const name = enc.encode(file.name), crc = crc32(data);
+      const local = new DataView(new ArrayBuffer(30));
+      local.setUint32(0, 0x04034b50, true); local.setUint16(4, 20, true); local.setUint16(8, 0, true);
+      local.setUint32(14, crc, true); local.setUint32(18, data.length, true); local.setUint32(22, data.length, true);
+      local.setUint16(26, name.length, true);
+      parts.push(local, name, data);
+      const entry = new DataView(new ArrayBuffer(46));
+      entry.setUint32(0, 0x02014b50, true); entry.setUint16(4, 20, true); entry.setUint16(6, 20, true);
+      entry.setUint32(16, crc, true); entry.setUint32(20, data.length, true); entry.setUint32(24, data.length, true);
+      entry.setUint16(28, name.length, true); entry.setUint32(42, offset, true);
+      central.push(entry, name);
+      offset += 30 + name.length + data.length;
+    }
+    const size = central.reduce((n, part) => n + part.byteLength, 0);
+    const end = new DataView(new ArrayBuffer(22));
+    end.setUint32(0, 0x06054b50, true); end.setUint16(8, list.length, true); end.setUint16(10, list.length, true);
+    end.setUint32(12, size, true); end.setUint32(16, offset, true);
+    return new Blob([...parts, ...central, end], { type: "application/zip" });
+  }
+  // The slides go to the share sheet together, in order, so «Salva immagini»
+  // puts them in Photos as one set. Inside the Claude app a page can hand over
+  // only one file, so there they travel as one ZIP: Files opens it into a
+  // folder, and from there all the slides share at once.
+  async function shareSlides(day, car, button) {
+    const label = button.dataset.label;
+    let copied = false;
+    const caption = car.caption || "";
+    if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
+    button.disabled = true;
+    button.textContent = "Preparo le immagini…";
+    try {
+      const list = await slideFiles(day, car);
+      let shared = false;
+      if (navigator.canShare && navigator.share) {
+        try {
+          if (navigator.canShare({ files: list })) {
+            await navigator.share({ files: list });
+            shared = true;
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") { button.textContent = label; return; }
+        }
+      }
+      if (!shared) {
+        if (!downloads) throw new Error("unavailable");
+        await downloads.save({ filename: `socialperks-${day.date}-carosello-${car.slot || 1}.zip`, data: await zipOf(list) });
+        document.getElementById("zip-note").hidden = false;
+      }
+      button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
+    } catch (error) {
+      if (error && error.code === "declined") button.textContent = label;
+      else {
+        button.textContent = "Non è partito, riprova";
+        document.getElementById("save-note").hidden = false;
+      }
+    } finally {
+      button.disabled = false;
+      if (button.textContent !== label) setTimeout(() => { button.textContent = label; }, 3500);
+    }
+  }
+  function slidesButton(day, car, label, primary) {
+    const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
+    button.dataset.label = label;
+    button.addEventListener("click", () => shareSlides(day, car, button));
+    return button;
+  }
+  function carousel(target, day, car) {
+    const slides = car.slides;
+    const track = el("div", { class: "swipe", tabindex: "0", "aria-label": `Carosello, ${slides.length} immagini: scorri` });
+    slides.forEach((id, i) => track.append(el("img", { src: blob(id), alt: i === 0 ? car.title : `Slide ${i + 1} di ${slides.length}`, loading: i < 2 ? "eager" : "lazy", decoding: "async" })));
+    const count = el("span", { class: "count", text: `1/${slides.length}` });
+    const dots = el("div", { class: "dots", "aria-hidden": "true" });
+    slides.forEach((_, i) => dots.append(el("span", { class: i === 0 ? "on" : "" })));
+    track.addEventListener("scroll", () => {
+      const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth + 10));
+      count.textContent = `${Math.min(i + 1, slides.length)}/${slides.length}`;
+      [...dots.children].forEach((d, j) => d.classList.toggle("on", j === i));
+    }, { passive: true });
+    const text = car.caption || "";
+    const area = el("p", { class: "caption", text });
+    const posted = car.permalink
+      ? el("p", { class: "posted" }, "Pubblicato su Instagram: ", el("a", { href: car.permalink, target: "_blank", rel: "noopener", text: "apri il post" }))
+      : null;
+    target.append(el("article", {},
+      el("p", { class: "carousel-title", text: car.title }), posted,
+      el("div", { class: "swipe-wrap" }, track, count), dots,
+      el("div", { class: "actions" }, slidesButton(day, car, `Salva o condividi le ${slides.length} immagini`, !car.permalink), copyButton(text, area)),
+      area,
+    ));
+  }
+  async function share(id, filename, caption, button) {
+    const label = button.dataset.label;
+    // Copied first, while the tap still counts as the viewer's.
+    let copied = false;
+    if (caption && navigator.clipboard) navigator.clipboard.writeText(caption).then(() => { copied = true; }, () => {});
+    button.disabled = true;
+    button.textContent = "Preparo il video…";
+    try {
+      const file = await videoFile(id, filename);
+      let shared = false;
+      if (navigator.canShare && navigator.share) {
+        try {
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({ files: [file] });
+            shared = true;
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") { button.textContent = label; return; }
+        }
+      }
+      if (!shared) {
+        if (!downloads) throw new Error("unavailable");
+        await downloads.save({ filename, data: file });
+      }
+      button.textContent = copied ? "Fatto. Il testo è già copiato" : "Fatto";
+    } catch (error) {
+      if (error && error.code === "declined") button.textContent = label;
+      else {
+        button.textContent = "Non è partito, riprova";
+        document.getElementById("save-note").hidden = false;
+      }
+    } finally {
+      button.disabled = false;
+      if (button.textContent !== label) setTimeout(() => { button.textContent = label; }, 3500);
+    }
+  }
+  function shareButton(id, filename, caption, label, primary) {
+    const button = el("button", { type: "button", class: primary ? "primary" : "", text: label });
+    button.dataset.label = label;
+    button.addEventListener("click", () => share(id, filename, caption, button));
+    return button;
+  }
+  function copyButton(text, area) {
+    const button = el("button", { type: "button", text: "Copia testo" });
+    button.addEventListener("click", () => {
+      const done = () => { button.textContent = "Copiato"; setTimeout(() => { button.textContent = "Copia testo"; }, 2000); };
+      const select = () => { const range = document.createRange(); range.selectNodeContents(area); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range); button.textContent = "Testo selezionato"; };
+      try { navigator.clipboard.writeText(text).then(done, select); } catch { select(); }
+    });
+    return button;
+  }
+  function reel(target, day, lang) {
+    const name = `socialperks-${day.date}-${lang}.mp4`;
+    const video = el("video", { controls: "", playsinline: "", preload: "metadata", src: blob(day[lang]), "aria-label": lang === "es" ? "Video in spagnolo" : "Video in inglese" });
+    if (day.cover && lang === "es") video.setAttribute("poster", blob(day.cover));
+    const text = (day.caption && day.caption[lang]) || "";
+    const area = el("p", { class: "caption", text });
+    target.append(
+      el("div", { class: "frame" }, video),
+      el("div", { class: "actions" }, shareButton(day[lang], name, text, "Condividi su Instagram o TikTok", true), copyButton(text, area)),
+      area,
+    );
+  }
+
+  const today = days[0];
+  if (!today) {
+    document.getElementById("today").append(el("div", { class: "empty" },
+      el("h2", { id: "today-title", text: "Ancora niente per oggi" }),
+      el("p", { class: "note", text: "Il primo arriva domattina alle 7:51, ora di Madrid, insieme a una notifica." })));
+    document.getElementById("english").hidden = true;
+    document.getElementById("week-section").hidden = true;
+  } else {
+    document.getElementById("when").textContent = dateLabel(today.date, { weekday: "long", day: "numeric", month: "long" });
+    const chips = document.getElementById("chips");
+    for (const label of today.es ? [today.place, today.format, "Spagnolo"] : ["Carosello", "Spagnolo"]) chips.append(el("span", { class: "chip", text: label }));
+    // Days can be a carousel alone (the owner, 30 October: carousels only for now).
+    const section = document.getElementById("today");
+    if (today.es) {
+      section.append(el("h2", { id: "today-title", class: "eyebrow", text: "Video del giorno" }));
+      reel(section, today, "es");
+      reel(document.getElementById("today-en"), today, "en");
+    } else {
+      for (const id of ["today", "how-section", "english"]) document.getElementById(id).hidden = true;
+    }
+    const todays = carouselsOf(today);
+    if (todays.length) {
+      document.getElementById("carousel-section").hidden = false;
+      if (todays.length === 1) document.getElementById("carousel-title").textContent = "Carosello di oggi";
+      for (const car of todays) carousel(document.getElementById("carousels"), today, car);
+    }
+    const week = document.getElementById("week");
+    const earlier = days.slice(1);
+    if (!earlier.length) document.getElementById("week-section").hidden = true;
+    for (const day of earlier) {
+      const cars = carouselsOf(day);
+      const first = day.cover || (cars[0] && cars[0].slides[0]);
+      const thumb = first ? el("img", { src: blob(first), alt: "" }) : el("img", { alt: "" });
+      week.append(el("li", { class: "day" }, thumb,
+        el("div", { class: "what" },
+          el("div", { class: "when", text: dateLabel(day.date, { weekday: "short", day: "numeric", month: "short" }) }),
+          el("div", { class: "kind", text: day.es ? `${day.place} · ${day.format}` : cars.map((c) => c.title).join(" · ") })),
+        el("div", { class: "day-actions" },
+          day.es ? shareButton(day.es, `socialperks-${day.date}-es.mp4`, (day.caption && day.caption.es) || "", "Video", false) : null,
+          ...cars.map((c, i) => slidesButton(day, c, cars.length > 1 ? `Carosello ${i + 1}` : "Carosello", false)))));
+    }
+  }
+
+  // Warm today's Spanish video so the first tap opens the share sheet at once;
+  // the English one when its section opens.
+  if (days[0] && days[0].es) videoFile(days[0].es, `socialperks-${days[0].date}-es.mp4`).catch(() => {});
+  const english = document.getElementById("english");
+  english.addEventListener("toggle", () => { if (english.open && days[0] && days[0].en) videoFile(days[0].en, `socialperks-${days[0].date}-en.mp4`).catch(() => {}); });
+
+  if (window.claude && window.claude.use) {
+    window.claude.use("downloads").then((ns) => { downloads = ns; }, () => {});
+  }
+})();
+</script>
