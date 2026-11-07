@@ -103,3 +103,7 @@ SocialPerks: written topics must include "point_sets" (one photo set per point).
 ## CONTENT DIRECTION (owner, 6 November 2026) — overrides older topic lists
 
 People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar without thinking about the photo"). Write about LIFE: everyday moments, motivation, encouragement, small wins, friendship, courage to start, keep going, be kind to yourself, enjoy the people around you. Human, warm, short lines people want to save and send to a friend. Then connect it naturally to us: SocialPerks = share the places you love with your friends and get rewarded / owners: your regulars are your best advertising (invite to join, link in bio); Good Message Studio = wear the message that keeps you going (message hoodies, link in bio). At least 8 posts out of 10 must be life/motivation first, product second. Reels especially: one strong motivating hook in the first second.
+
+## Threads (owner, 7 November 2026)
+
+Threads kept removing Good Message Studio posts as spam. The cloud publisher (codex/social-cloud-backup) now sends at most two Threads posts a day, at the lunch and evening slots, with the topic text only: no shop link, no hashtags, no repeated closing lines. Do not raise it or add the link back without the owner.
