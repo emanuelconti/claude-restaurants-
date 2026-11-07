@@ -148,3 +148,11 @@ class DurableCounterTests(unittest.TestCase):
    self.assertEqual(target(local,'gms'),1)
 
 if __name__=='__main__':unittest.main()
+
+
+class ThreadsCapTests(unittest.TestCase):
+ def test_threads_gets_two_spaced_posts_a_day(self):
+  # Owner, 7 November: Meta removed Threads posts as spam at eight a day.
+  from policy import daily_cap
+  self.assertEqual([daily_cap('threads', t) for t in range(9)], [0, 0, 0, 1, 1, 1, 1, 2, 2])
+  self.assertEqual(daily_cap('ig', 8), 8)

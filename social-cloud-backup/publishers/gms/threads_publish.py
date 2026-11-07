@@ -83,8 +83,13 @@ def wait_ready(container: str, token: str, timeout: float = 180) -> None:
 
 
 def short_caption(caption: str) -> str:
-    parts = [p.strip() for p in caption.split("\n\n") if p.strip() and not p.strip().startswith("#")]
-    text = "\n\n".join(parts[:2] + [C.CAPTION_SHARE_LINK])  # a real, clickable link on Threads
+    # Owner, 7 November: Threads removed posts as spam. The same shop link and the same closing lines on
+    # every post read as spam, so a Threads post is the topic itself: no link (it is on the profile), no
+    # hashtags, no shop or save/share lines.
+    boiler = (C.CAPTION_SHARE_LINK, getattr(C, "CAPTION_SHARE", None), getattr(C, "CAPTION_SAVE", None))
+    parts = [p.strip() for p in caption.split("\n\n") if p.strip() and not p.strip().startswith("#")
+             and "http" not in p and "goodmessagestudio.com" not in p.lower() and p.strip() not in boiler]
+    text = "\n\n".join(parts[:2])
     return text if len(text) <= 500 else text[:497].rsplit(" ", 1)[0] + "..."
 
 

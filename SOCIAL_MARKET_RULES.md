@@ -11,6 +11,10 @@ This overrides every narrower topic rule below for SocialPerks and Good Message 
 - No narrow hospitality how-tos (cocktail details, menus, venue operations, photo etiquette), no product walkthroughs as topics, no B2B posts for venue owners in the main feed. GMS keeps real message-hoodie photos and the Singapore audience; SocialPerks keeps Spanish, Spain and its photos; Sincronia is unchanged.
 - At the next preparation, editors replace any not-yet-published SocialPerks and GMS topic from 8 November onward that breaks this rule. Already published posts stay.
 
+## Owner, 7 November 2026: Threads removed GMS posts as spam
+
+Threads gets at most TWO posts a day (the lunch and evening slots, policy.daily_cap), never eight. Its text is the topic only: no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Do not raise the cap or put the link back without the owner.
+
 ## Good Message Studio
 
 - Market: Singapore. Audience: English-speaking women aged 18 to 38 living in Singapore: students, young professionals, friends buying thoughtful gifts, young mothers. This is an organic content brief, not a claim that a platform restricts delivery to that demographic. No advertising spend is authorized.

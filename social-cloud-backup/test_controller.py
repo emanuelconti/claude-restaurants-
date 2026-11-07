@@ -18,7 +18,7 @@ class RecoveryControllerTests(unittest.TestCase):
    slot=int(args[args.index('--slot')+1]);item=items[slot-1]
    posts.append(dict(title=item['title'],stamp=now.isoformat()))
    return 0,'published: https://example.com/'+item['id']
-  ns=dict(CARDS_ENABLED=False,receipt_stamps=lambda tag:[],facebook_format=lambda item,state:'editorial',reel_folder=lambda item:Path('/reviewed'),dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,count_known_posts=count_known_posts,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,QUEUE_DAYS=QUEUE_DAYS,STOP_SIGNALS=STOP_SIGNALS,
+  ns=dict(CARDS_ENABLED=False,receipt_stamps=lambda tag:[],facebook_format=lambda item,state:'editorial',reel_folder=lambda item:Path('/reviewed'),dt=types.SimpleNamespace(datetime=Clock,timezone=dt.timezone),local_now=local_now,count_today=count_today,count_known_posts=count_known_posts,seen=seen,next_item=next_item,gap_ok=gap_ok,target=target,daily_cap=daily_cap,QUEUE_DAYS=QUEUE_DAYS,STOP_SIGNALS=STOP_SIGNALS,
    history=lambda b,c:list(posts),manifest=items,state={},save=lambda:None,errors=[],sys=types.SimpleNamespace(argv=['controller.py','--recover-gms']),recover_today=True,
    verify=lambda item:None,R=Path('/reviewed'),subprocess=types.SimpleNamespace(check_output=lambda *a,**kw:'reviewedcommit'),os=types.SimpleNamespace(environ={}),brands={'gms':('TOKEN_NAME','goodmessage_studio')},run=run)
   exec(compile(ast.Module(body=[fn],type_ignores=[]),'controller.py','exec'),ns)

@@ -73,6 +73,12 @@ def channel_plan(brand, cron='', recover=False):
  if cron == FB_RECOVERY_CRON: return ('facebook',)
  return ('ig',) if brand != 'gms' else ('ig','threads','youtube','facebook')
 
+def daily_cap(channel, slots_due):
+ """Posts allowed so far today on one channel. Threads (owner, 7 November): Meta kept removing posts
+ as spam at eight a day, so it gets at most two, the lunch and evening slots, never close together."""
+ if channel == 'threads': return sum(slots_due >= k for k in (3, 7))
+ return min(slots_due, 8)
+
 def attempt_limit(brand, channel, recover, now):
  # Explicit one-day exception requested by owner; Facebook never bypasses 60 minutes.
  return 8 if recover and recovery_allowed(now) and brand == 'gms' and channel != 'facebook' else 1

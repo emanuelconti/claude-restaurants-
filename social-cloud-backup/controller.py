@@ -2,7 +2,7 @@
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS,daily_cap
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 # Owner, 3 November: keep the cloud publisher running after the Claude quota reset.
@@ -117,7 +117,7 @@ def process_channel(b,channel):
   save()
   held=[k for k,v in state.items() if k.endswith(':'+channel) and k.startswith(b+'-') and v.startswith('held:')]
   if held:raise RuntimeError('An earlier publication is ambiguous; reconcile it before sending another item')
-  if count>=(8 if recover_today else min(target(brand_now,b),8)):return False
+  if count>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b))):return False
   if channel=='facebook' and not gap_ok(posts+receipt_stamps(tag),brand_now,60):
    print(tag+': Facebook 60-minute gap respected; skipped.');return False
   item=next_item(manifest,b,channel,brand_now.date().isoformat(),state)
@@ -128,7 +128,7 @@ def process_channel(b,channel):
   fresh_now=local_now(dt.datetime.now(dt.timezone.utc),b)
   if fresh_now.date()!=brand_now.date():
    print(tag+': local date changed while checking; skipped.');return False
-  if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today else min(target(brand_now,b),8)):return False
+  if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b))):return False
   if seen(item,channel,latest):state[key]='confirmed remotely';save();return False
   if channel=='facebook' and not gap_ok(latest+receipt_stamps(tag),fresh_now,60):return False
   state[key]='held: publication attempt started; reconcile remotely before retry';save()
