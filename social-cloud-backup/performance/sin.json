@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "5 documents to keep ready before any grant deadline",
+      "stamp": "2026-11-07T19:53:57+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfc3wFHl5on/"
+    },
+    {
+      "title": "5 things to remember after a rejection email",
+      "stamp": "2026-11-07T19:52:18+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfc3kaYF56T/"
+    },
+    {
+      "title": "5 questions before calling a conversation customer research",
+      "stamp": "2026-11-07T18:26:39+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfctxFSk5qv/"
+    },
+    {
+      "title": "5 ways to make a founder weekend less scattered",
+      "stamp": "2026-11-07T16:57:38+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfcjibEj4iy/"
+    },
+    {
+      "title": "Founders: 5 small wins worth writing down this week",
+      "stamp": "2026-11-07T13:49:08+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 1,
+      "url": "https://www.instagram.com/p/DfcOAIQF9Kh/"
+    },
+    {
+      "title": "Small wins every founder should celebrate",
+      "stamp": "2026-11-07T07:56:39+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfblq0EF34o/"
+    },
+    {
+      "title": "What to do when a hard week gets to you",
+      "stamp": "2026-11-07T07:55:14+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfblgfzmwIk/"
+    },
+    {
+      "title": "Founder mornings that keep you moving",
+      "stamp": "2026-11-07T07:49:36+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfbk3HojF5p/"
+    },
+    {
       "title": "5 ways to end the founder week with a clearer Monday",
       "stamp": "2026-11-06T21:49:02+01:00",
       "local_hour": 21,
@@ -340,89 +404,25 @@
       "likes": 1,
       "comments": 1,
       "url": "https://www.instagram.com/p/DfKudKuF5MH/"
-    },
-    {
-      "title": "The 7 stages of a lunch break that was supposed to be a real break",
-      "stamp": "2026-10-31T14:40:59+01:00",
-      "local_hour": 14,
-      "likes": 1,
-      "comments": 2,
-      "url": "https://www.instagram.com/p/DfKSYNpFD65/"
-    },
-    {
-      "title": "How to restart after a week that went nowhere",
-      "stamp": "2026-10-31T09:52:56+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfJxaYuF93U/"
-    },
-    {
-      "title": "Things you only understand once you work for yourself",
-      "stamp": "2026-10-31T09:50:08+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfJxF4NIN_v/"
-    },
-    {
-      "title": "The 6 kinds of tired (and what each one actually needs)",
-      "stamp": "2026-10-31T09:47:15+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfJwwiEl1Nk/"
-    },
-    {
-      "title": "The 6 stages of starting something new",
-      "stamp": "2026-10-31T08:32:23+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfJoMDGFyg-/"
-    },
-    {
-      "title": "7 things to do before you check your phone",
-      "stamp": "2026-10-31T08:30:51+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfJoBFpl4H-/"
-    },
-    {
-      "title": "8 signs you are further along than you think",
-      "stamp": "2026-10-31T08:28:42+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfJnxZkFlmC/"
-    },
-    {
-      "title": "",
-      "stamp": "2026-08-26T14:25:12+02:00",
-      "local_hour": 14,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DcgNKDbOTFI/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-07",
+  "market_date": "2026-11-08",
   "mature_hour_summary": [
     {
       "local_hour": 8,
-      "posts": 5,
+      "posts": 3,
       "median_public_interactions": 0
     },
     {
       "local_hour": 9,
-      "posts": 6,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 10,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 11,
@@ -431,8 +431,8 @@
     },
     {
       "local_hour": 12,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 13,
@@ -441,13 +441,13 @@
     },
     {
       "local_hour": 14,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 15,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 16,
@@ -455,14 +455,19 @@
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 17,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 18,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 20,
@@ -471,7 +476,7 @@
     },
     {
       "local_hour": 21,
-      "posts": 2,
+      "posts": 4,
       "median_public_interactions": 0.0
     },
     {
