@@ -95,6 +95,7 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--check-token", action="store_true")
     ap.add_argument("--dry-run", action="store_true", help="every check, nothing published")
+    ap.add_argument("--text", help="a short human post written for Threads (text only, no slides): the 9 Nov 2026 rule")
     args = ap.parse_args()
     token = os.environ.get("THREADS_TOKEN_GMS", "").strip()
     if not token:
@@ -109,8 +110,12 @@ def main():
         if not args.date:
             ap.error("--date is needed to publish")
         folder = os.path.join(args.out, args.date, f"carousel-{args.slot}")
-        meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
-        text = short_caption(meta["caption"])
+        if args.text:
+            os.makedirs(folder, exist_ok=True)
+            meta, text = {"slides": []}, args.text.strip()[:500]
+        else:
+            meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
+            text = short_caption(meta["caption"])
         first = text.split("\n", 1)[0].strip()
         done = next((p for p in posts if (p.get("text") or "").strip().startswith(first)), None)
         if done:
@@ -140,6 +145,13 @@ def main():
             G.check_cross_channel()
         except G.Stop as stop:
             sys.exit(str(stop))
+        if args.text:
+            post = call("POST", f"{user}/threads", token, {"media_type": "TEXT", "text": text})
+            wait_ready(post["id"], token)
+            media = call("POST", f"{user}/threads_publish", token, {"creation_id": post["id"]})
+            link = call("GET", media["id"], token, {"fields": "permalink"}).get("permalink")
+            print(f"published: {link}")
+            return
         children = []
         for name in meta["slides"][:20]:
             url = None
