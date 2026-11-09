@@ -532,18 +532,18 @@ GMS_HEROES = [
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
-]
-GMS_COVERS = [
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
-    "TEXT:0",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
-    "TEXT:1",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
-    "TEXT:2",
-    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
-    "TEXT:3",
     "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/5946603d-16fa-459e-99e4-85ff7d8f3abf.jpg"
+]
+GMS_COVERS = [  # 9 Nov 2026: mostly real photos of the message hoodies worn
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "TEXT:0",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "TEXT:2",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/5946603d-16fa-459e-99e4-85ff7d8f3abf.jpg",
     "TEXT:4",
     "TEXT:5",
     "TEXT:6"
