@@ -107,3 +107,15 @@ People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar wi
 ## Threads (owner, 7 November 2026)
 
 Threads kept removing Good Message Studio posts as spam. The cloud publisher (codex/social-cloud-backup) now sends at most two Threads posts a day, at the lunch and evening slots, with the topic text only: no shop link, no hashtags, no repeated closing lines. Do not raise it or add the link back without the owner.
+## THREADS SPAM WARNING (6 November 2026)
+
+Threads removed a Good Message Studio post for spam ("actions at high volume"). Now: at most 3 Threads posts a day, at least 3 hours apart, NO link in the post text (link only in the profile bio), and only the strongest, most human topics go to Threads. Every Claude and Codex: never raise these, never post the same text on Threads twice, and if Threads or any platform warns about spam, lower the volume on that channel at once and tell the owner.
+
+## Organic growth playbook (owner, 9 November 2026: zero views, zero sales; find a way)
+
+Posting alone does not grow a new account. What the routines must do every run (GMS first, same logic for SocialPerks and Sincronia):
+- Reels are the reach engine: 4 a day, first second = a human, motivating hook in big type; 7-15 s; loopable; on-screen text that people want to send to a friend ("send this to her"). Carousels are for saves.
+- Shareable life lines (motivation, friendship, small wins), product only as the natural answer; 1 post in 5 may sell.
+- Captions end with one question that invites a comment, and a "send this to..." line. Local hashtags (Singapore for GMS, Spanish cities for SocialPerks), 5-8, mixed sizes.
+- Read PERFORMANCE.md every run and copy the format of the best post of the week (hook, length, cover type).
+Growth the owner must do by hand (platform rules forbid automating likes, follows, comments, DMs): 15 minutes a day replying to comments, commenting on 10 local accounts, and sending the best Reel to friends and groups; gifting 1 hoodie a week to a Singapore micro-creator (2k-20k followers) in exchange for an honest post.
