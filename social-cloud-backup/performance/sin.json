@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "5 ways to end a working day with a useful handover",
+      "stamp": "2026-11-09T21:46:44+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfiOQDpjXpx/"
+    },
+    {
+      "title": "5 things to put beside a runway estimate",
+      "stamp": "2026-11-09T20:58:16+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfiIqY7gQ3z/"
+    },
+    {
+      "title": "5 questions before you quote an investor's feedback",
+      "stamp": "2026-11-09T18:45:04+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfh5dKXlOA_/"
+    },
+    {
+      "title": "5 small systems for a calmer founder inbox",
+      "stamp": "2026-11-09T16:28:50+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfhp1dUnHDv/"
+    },
+    {
+      "title": "5 ways to describe a pilot without overselling it",
+      "stamp": "2026-11-09T14:46:44+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfheMHinDOI/"
+    },
+    {
+      "title": "5 checks before a grant deadline enters your calendar",
+      "stamp": "2026-11-09T12:56:25+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfhRh_UCtF6/"
+    },
+    {
+      "title": "5 things that do not belong in a traction headline",
+      "stamp": "2026-11-09T10:33:27+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 1,
+      "url": "https://www.instagram.com/p/DfhBMtKl8Ca/"
+    },
+    {
+      "title": "5 questions to answer before a founder meeting starts",
+      "stamp": "2026-11-09T08:57:49+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfg2NztgJLu/"
+    },
+    {
       "title": "5 things to clarify in a warm investor introduction",
       "stamp": "2026-11-08T21:46:48+01:00",
       "local_hour": 21,
@@ -340,84 +404,20 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfSqhMSGCL7/"
-    },
-    {
-      "title": "5 documents worth keeping in one funding folder",
-      "stamp": "2026-11-03T19:10:09+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfSfkJAGuYP/"
-    },
-    {
-      "title": "5 questions before you book an investor meeting",
-      "stamp": "2026-11-03T16:44:26+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfSO4-nEdjy/"
-    },
-    {
-      "title": "5 checks for a useful funding deadline calendar",
-      "stamp": "2026-11-03T15:10:34+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfSEI_uDbFF/"
-    },
-    {
-      "title": "5 things to separate in your startup budget",
-      "stamp": "2026-11-03T12:49:02+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfRz8rGl80v/"
-    },
-    {
-      "title": "5 questions before you build a funding shortlist",
-      "stamp": "2026-11-03T11:15:10+01:00",
-      "local_hour": 11,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfRpM64oFzH/"
-    },
-    {
-      "title": "5 checks before you send a funding application",
-      "stamp": "2026-11-03T08:56:54+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfRZYkhmOGt/"
-    },
-    {
-      "title": "5 questions to answer before choosing a funding route",
-      "stamp": "2026-11-02T23:22:53+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfQXshND1nH/"
-    },
-    {
-      "title": "6 things to prepare before you ask for funding",
-      "stamp": "2026-11-02T19:56:25+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfQAENXlHEI/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-09",
+  "market_date": "2026-11-10",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 8,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.5
     },
     {
       "local_hour": 9,
@@ -426,13 +426,8 @@
     },
     {
       "local_hour": 10,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 11,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 12,
@@ -441,8 +436,8 @@
     },
     {
       "local_hour": 13,
-      "posts": 2,
-      "median_public_interactions": 0.5
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 14,
@@ -451,18 +446,18 @@
     },
     {
       "local_hour": 15,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 16,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 17,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 18,
@@ -471,18 +466,18 @@
     },
     {
       "local_hour": 19,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 20,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 22,
@@ -491,8 +486,8 @@
     },
     {
       "local_hour": 23,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     }
   ],
   "timing_status": "editor review required before changing schedule"

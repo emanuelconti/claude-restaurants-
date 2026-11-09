@@ -3,13 +3,9 @@
   "brands": {
     "sp": {
       "timezone": "Europe/Madrid",
-      "market_date": "2026-11-09",
+      "market_date": "2026-11-10",
       "days_covered_including_today": 7,
       "coverage": [
-        {
-          "date": "2026-11-09",
-          "approved_items": 8
-        },
         {
           "date": "2026-11-10",
           "approved_items": 8
@@ -32,6 +28,10 @@
         },
         {
           "date": "2026-11-15",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-16",
           "approved_items": 8
         }
       ],
@@ -39,13 +39,9 @@
     },
     "sin": {
       "timezone": "Europe/Paris",
-      "market_date": "2026-11-09",
+      "market_date": "2026-11-10",
       "days_covered_including_today": 7,
       "coverage": [
-        {
-          "date": "2026-11-09",
-          "approved_items": 8
-        },
         {
           "date": "2026-11-10",
           "approved_items": 8
@@ -68,6 +64,10 @@
         },
         {
           "date": "2026-11-15",
+          "approved_items": 8
+        },
+        {
+          "date": "2026-11-16",
           "approved_items": 8
         }
       ],
