@@ -36,8 +36,8 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
-MAX_PER_DAY = 3  # Threads removed a post for spam on 6 Nov 2026 (high volume): at most 3 a day
-MIN_GAP = 180  # Threads spam removal 6 Nov 2026: at least 3 hours between Threads posts
+MAX_PER_DAY = 1  # 9 Nov 2026: 9 posts removed as spam on 6-7 Nov; one a day, human. Before: Threads removed a post for spam on 6 Nov 2026 (high volume): at most 3 a day
+MIN_GAP = 1200  # 20 hours. Before: Threads spam removal 6 Nov 2026: at least 3 hours between Threads posts
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 SINGAPORE = ZoneInfo("Asia/Singapore")
 
@@ -124,6 +124,10 @@ def main():
             return
         if stamps and (now - max(stamps)).total_seconds() < MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
+        # Owner, 9 November 2026: Threads removed 9 posts as spam. Rest the account for a week, then 1 a day.
+        if dt.date.today() < dt.date(2026, 11, 16) and not args.dry_run:
+            print("Threads paused until 16 November 2026 (account recovering from spam removals): nothing published")
+            return
         if args.dry_run:
             print(f"dry run: {len(meta['slides'])} slides and {len(text)} characters of text would be posted; nothing published")
             return

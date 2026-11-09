@@ -134,3 +134,11 @@ Every run: `python3 comments.py --token-env <account token> --list`, then answer
 - Gifting moments sell hoodies: 11.11, 12.12, Christmas, birthdays, "for your best friend". Use them in Reels and carousels in the weeks before.
 - Search brings buyers without followers: YouTube Shorts titles and Pinterest pins use what people search ("gift for her Singapore", "oversized hoodie Singapore", "positive quote hoodie").
 - Test and copy: every day try one new Reel hook style; PERFORMANCE.md keeps the winner, and the next days use it more.
+
+## THREADS: 9 posts removed as spam on 6-7 November 2026 — new rules (owner, 9 November)
+
+Threads is PAUSED until 16 November 2026 (the script refuses to publish before then) so the young account can recover. From 16 November: at most ONE Threads post a day (20 hours apart), and it must read like a real person, not a template:
+- no listicle titles ("5 ways to...", "5 messages for..."), no carousel of the same slides posted on Instagram, no shop link, no repeated closing line ("Save this, or send it to someone..." is banned);
+- a short personal thought or a question in 1-3 sentences, different every day (e.g. "Who was the first person you texted this morning?"), sometimes with one real photo of a hoodie worn;
+- reply to every comment on Threads like a person.
+Any Claude or Codex: never raise these limits; if Threads removes another post, stop Threads again for 2 weeks and tell the owner.
