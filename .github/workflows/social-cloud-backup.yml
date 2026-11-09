@@ -52,6 +52,11 @@ jobs:
       - name: Verify or publish reviewed queue
         env:
           SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
+          # Pinterest (owner, 9 November): its own secrets, so SOCIAL_BACKUP_ENV never has to be rewritten.
+          PINTEREST_APP_ID_GMS: ${{ secrets.PINTEREST_APP_ID_GMS }}
+          PINTEREST_APP_SECRET_GMS: ${{ secrets.PINTEREST_APP_SECRET_GMS }}
+          PINTEREST_REFRESH_TOKEN_GMS: ${{ secrets.PINTEREST_REFRESH_TOKEN_GMS }}
+          PINTEREST_BOARD_GMS: ${{ secrets.PINTEREST_BOARD_GMS }}
           BACKUP_MODE: ${{ inputs.mode }}
           BACKUP_BRAND: ${{ inputs.brand }}
           BACKUP_CRON: ${{ github.event.schedule }}
