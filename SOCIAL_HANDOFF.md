@@ -127,3 +127,10 @@ Growth the owner must do by hand (platform rules forbid automating likes, follow
 ## Comments (owner, 9 November 2026: he cannot do it by hand)
 
 Every run: `python3 comments.py --token-env <account token> --list`, then answer each real comment with `--reply <id> "text"`: warm, human, short, in the comment language, often with a question back; max 20 per run. Ignore and never answer spam/scam comments (e.g. "can we repost it, send me DM", promo pages, crypto). Only our own posts: never like, follow, comment or DM other accounts (forbidden automation).
+
+## Free growth levers for Good Message Studio (owner, 9 November 2026: no budget, no gifts, no time, no site changes)
+
+- Ride what Singapore is talking about: each run, before writing, think of this week in Singapore (weather, MRT, office life, exams/PSLE results, Deepavali, 11.11 and 12.12 sales, Christmas at Orchard Road, year-end, CNY in February) and make at least 1 post in 3 about it, in a warm human way. Singapore English, local references (kopi, hawker, MRT, aircon), never stereotypes.
+- Gifting moments sell hoodies: 11.11, 12.12, Christmas, birthdays, "for your best friend". Use them in Reels and carousels in the weeks before.
+- Search brings buyers without followers: YouTube Shorts titles and Pinterest pins use what people search ("gift for her Singapore", "oversized hoodie Singapore", "positive quote hoodie").
+- Test and copy: every day try one new Reel hook style; PERFORMANCE.md keeps the winner, and the next days use it more.
