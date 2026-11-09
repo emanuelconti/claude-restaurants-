@@ -71,12 +71,14 @@ def recovery_allowed(now):
 
 def channel_plan(brand, cron='', recover=False):
  if cron == FB_RECOVERY_CRON: return ('facebook',)
- return ('ig',) if brand != 'gms' else ('ig','threads','youtube','facebook')
+ return ('ig',) if brand != 'gms' else ('ig','threads','youtube','facebook','pinterest')
 
 def daily_cap(channel, slots_due):
  """Posts allowed so far today on one channel. Threads (owner, 7 November): Meta kept removing posts
  as spam at eight a day, so it gets at most two, the lunch and evening slots, never close together."""
  if channel == 'threads': return sum(slots_due >= k for k in (3, 7))
+ # Pinterest (owner, 9 November, Standard access approved): three Pins a day, morning, afternoon, evening.
+ if channel == 'pinterest': return sum(slots_due >= k for k in (2, 5, 8))
  return min(slots_due, 8)
 
 def attempt_limit(brand, channel, recover, now):

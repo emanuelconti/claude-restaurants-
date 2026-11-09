@@ -20,6 +20,13 @@ elif channel=='facebook':
  seen={p.get('permalink_url') for p in posts}|{first(p) for p in posts if first(p)}
  posts+=[r for r in FR.reels(page,token) if r.get('permalink_url') not in seen and first(r) not in seen]
  rows=[{'title':(p.get('message') or '').split('\n',1)[0].strip(),'stamp':p.get('created_time'),'url':p.get('permalink_url')} for p in posts]
+elif channel=='pinterest':
+ import pinterest_publish as P
+ import channel_guard as G
+ token=P.get_token()
+ if G.http('GET',P.API+'/user_account',token).get('username')!='lpstylehub':raise SystemExit('Wrong Pinterest identity')
+ pins=G.http('GET',P.API+'/pins?page_size=50',token).get('items',[])
+ rows=[{'title':(p.get('title') or '').strip(),'stamp':(p['created_at'] if p['created_at'].endswith('Z') or '+' in p['created_at'][10:] else p['created_at']+'Z'),'url':'https://www.pinterest.com/pin/'+p['id']+'/'} for p in pins if p.get('created_at')]
 elif channel=='youtube':
  import youtube_publish as Y
  import channel_guard as G

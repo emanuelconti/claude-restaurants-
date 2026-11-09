@@ -11,6 +11,10 @@ This overrides every narrower topic rule below for SocialPerks and Good Message 
 - No narrow hospitality how-tos (cocktail details, menus, venue operations, photo etiquette), no product walkthroughs as topics, no B2B posts for venue owners in the main feed. GMS keeps real message-hoodie photos and the Singapore audience; SocialPerks keeps Spanish, Spain and its photos; Sincronia is unchanged.
 - At the next preparation, editors replace any not-yet-published SocialPerks and GMS topic from 8 November onward that breaks this rule. Already published posts stay.
 
+## Owner, 9 November 2026: Pinterest on for Good Message Studio
+
+Pinterest Standard access is approved (app "Good Message Studio Publisher"). The cloud publisher sends at most three carousel Pins a day (publish slots 2, 5 and 8, never Reels) to the lpstylehub business account's GMS board, linking to goodmessagestudio.com, with channel_guard's gaps. It goes live as soon as PINTEREST_APP_ID_GMS, PINTEREST_APP_SECRET_GMS, PINTEREST_REFRESH_TOKEN_GMS and PINTEREST_BOARD_GMS are in the SOCIAL_BACKUP_ENV secret; until then it skips quietly. TikTok and Stories stay off.
+
 ## Owner, 7 November 2026: Threads removed GMS posts as spam
 
 Threads gets at most TWO posts a day (the lunch and evening slots, policy.daily_cap), never eight. Its text is the topic only: no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Do not raise the cap or put the link back without the owner.

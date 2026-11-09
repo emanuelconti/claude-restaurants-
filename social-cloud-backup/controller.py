@@ -49,7 +49,9 @@ if '--validate' in sys.argv:
 cfg=json.loads(os.environ['SOCIAL_BACKUP_ENV'])
 for v in cfg.values():
  if len(str(v))>15 and os.environ.get('GITHUB_ACTIONS'):print('::add-mask::'+str(v))
-cfg.update(GMS_PINTEREST_ENABLED='0',GMS_TIKTOK_ENABLED='0',GMS_YOUTUBE_PRIVACY='public')
+# Pinterest goes live only when its credentials are in SOCIAL_BACKUP_ENV (owner, 9 November: Standard access approved).
+PINTEREST_READY=bool(cfg.get('PINTEREST_BOARD_GMS') and (cfg.get('PINTEREST_TOKEN_GMS') or (cfg.get('PINTEREST_REFRESH_TOKEN_GMS') and cfg.get('PINTEREST_APP_SECRET_GMS'))))
+cfg.update(GMS_PINTEREST_ENABLED='1' if PINTEREST_READY else '0',GMS_TIKTOK_ENABLED='0',GMS_YOUTUBE_PRIVACY='public')
 (R/'private').mkdir(exist_ok=True);(R/'private/environment.json').write_text(json.dumps(cfg));os.chmod(R/'private/environment.json',0o600)
 def run(b,script,*args,quiet=False):
  p=subprocess.run([sys.executable,str(R/'run.py'),b,script,*args],capture_output=True,text=True)
@@ -97,6 +99,9 @@ def facebook_format(item,state):
 def process_channel(b,channel):
  tag=b+':'+channel
  block_key='platform_block:'+tag
+ if channel=='pinterest' and not PINTEREST_READY:
+  print(tag+': Pinterest credentials not in SOCIAL_BACKUP_ENV yet; skipped.',flush=True)
+  return False
  if state.get(block_key):
   print(tag+': paused after a platform restriction; no API retry until verified operator clearance.',flush=True)
   return False
@@ -120,7 +125,7 @@ def process_channel(b,channel):
   if count>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b))):return False
   if channel=='facebook' and not gap_ok(posts+receipt_stamps(tag),brand_now,60):
    print(tag+': Facebook 60-minute gap respected; skipped.');return False
-  item=next_item(manifest,b,channel,brand_now.date().isoformat(),state)
+  item=next_item([x for x in manifest if channel!='pinterest' or x.get('kind')!='reel'],b,channel,brand_now.date().isoformat(),state)
   if item is None:raise RuntimeError('No unused approved item for today while below target')
   verify(item);key=item['id']+':'+channel
   # Second remote read immediately before publication reduces overlap with Claude.
@@ -152,6 +157,8 @@ def process_channel(b,channel):
    script='fb_reel_publish.py';args+=['--reel-dir',reel_dir]
   elif channel=='facebook':
    script='fb_publish.py';args+=['--slot',str(item['slot']),'--format',facebook_format(item,state)]
+  elif channel=='pinterest':
+   script='pinterest_publish.py';args+=['--slot',str(item['slot']),'--publish']
   else:
    script='threads_publish.py';args+=['--slot',str(item['slot'])]
   rc,out=run(b,script,*args)
