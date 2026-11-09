@@ -119,3 +119,8 @@ Posting alone does not grow a new account. What the routines must do every run (
 - Captions end with one question that invites a comment, and a "send this to..." line. Local hashtags (Singapore for GMS, Spanish cities for SocialPerks), 5-8, mixed sizes.
 - Read PERFORMANCE.md every run and copy the format of the best post of the week (hook, length, cover type).
 Growth the owner must do by hand (platform rules forbid automating likes, follows, comments, DMs): 15 minutes a day replying to comments, commenting on 10 local accounts, and sending the best Reel to friends and groups; gifting 1 hoodie a week to a Singapore micro-creator (2k-20k followers) in exchange for an honest post.
+
+
+## Comments (owner, 9 November 2026: he cannot do it by hand)
+
+Every run: `python3 comments.py --token-env <account token> --list`, then answer each real comment with `--reply <id> "text"`: warm, human, short, in the comment language, often with a question back; max 20 per run. Ignore and never answer spam/scam comments (e.g. "can we repost it, send me DM", promo pages, crypto). Only our own posts: never like, follow, comment or DM other accounts (forbidden automation).
