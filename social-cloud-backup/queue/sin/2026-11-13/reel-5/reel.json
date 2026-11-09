@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-13",
+ "title": "Questions to ask an investor before saying yes",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Questions to ask an investor before saying yes\n\nDue diligence goes both ways.\n\nQuestions founders can ask to check fit before taking money. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 289 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "replaces": "1519389950473-47ba0277781c",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "replaces": "1517842645767-c639042777db",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1493857671505-72967e2e2760",
+   "slide": "slide-05.jpg",
+   "match_error": 1.28,
+   "runner_up": 33.54
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-06.jpg",
+   "match_error": 0.47,
+   "runner_up": 20.49
+  }
+ ],
+ "scenes": [
+  "hook",
+  "How do you help after investing?",
+  "What does your timeline look like?",
+  "Who makes the decision?",
+  "Can I talk to founders you backed?",
+  "What would make this a no?",
+  "end card"
+ ]
+}

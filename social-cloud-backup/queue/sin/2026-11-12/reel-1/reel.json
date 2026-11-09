@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-12",
+ "title": "Know these numbers before an investor call",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Know these numbers before an investor call\n\nMost first calls stumble on the basics, not on the vision.\n\nFive figures to have ready before any first conversation. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 861 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-01.jpg",
+   "match_error": 0.17,
+   "runner_up": 19.93
+  },
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "slide": "slide-02.jpg",
+   "match_error": 0.3,
+   "runner_up": 29.85
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-03.jpg",
+   "match_error": 1.38,
+   "runner_up": 35.9
+  },
+  {
+   "unsplash": "1520607162513-77705c0f0d4a",
+   "slide": "slide-04.jpg",
+   "match_error": 0.56,
+   "runner_up": 60.17
+  },
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "slide": "slide-05.jpg",
+   "match_error": 0.87,
+   "runner_up": 35.65
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-06.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Monthly burn",
+  "Runway in months",
+  "Revenue or usage",
+  "Cost of one new customer",
+  "What the round buys",
+  "end card"
+ ]
+}

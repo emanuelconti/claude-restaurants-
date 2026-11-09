@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-13",
+ "title": "Viernes: termina la semana con algo hecho",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Viernes: termina la semana con algo hecho\n\nUna tarea cerrada hoy es un fin de semana más ligero.\n\nCómo cerrar la semana sin cargas pendientes y llegar al fin de semana con la cabeza libre.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 923 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-01.jpg",
+   "match_error": 0.2,
+   "runner_up": 48.7
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.47,
+   "runner_up": 20.49
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-03.jpg",
+   "match_error": 1.08,
+   "runner_up": 36.02
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.85,
+   "runner_up": 37.75
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-05.jpg",
+   "match_error": 0.56,
+   "runner_up": 41.68
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.36,
+   "runner_up": 22.41
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elige la tarea que más pesa",
+  "Ponle un tiempo corto",
+  "Cierra lo que puedas cerrar",
+  "Deja una nota para el lunes",
+  "Desconecta de verdad",
+  "end card"
+ ]
+}

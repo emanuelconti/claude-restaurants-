@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-13",
+ "title": "Ideas para una comida de viernes con compañeros",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Ideas para una comida de viernes con compañeros\n\nLa mejor reunión de la semana puede ser alrededor de una mesa.\n\nCómo organizar una comida de viernes que una al equipo sin que nadie tenga que organizarlo todo. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 489 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-01.jpg",
+   "match_error": 0.34,
+   "runner_up": 33.9
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-02.jpg",
+   "match_error": 2.02,
+   "runner_up": 34.46
+  },
+  {
+   "unsplash": "1514362545857-3bc16c4c7d1b",
+   "replaces": "1550966871-3ed3cdb5ed0c",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1659690402718-ea07d943fd42",
+   "slide": "slide-04.jpg",
+   "match_error": 1.16,
+   "runner_up": 38.11
+  },
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-05.jpg",
+   "match_error": 1.74,
+   "runner_up": 49.57
+  },
+  {
+   "unsplash": "1600028068383-ea11a7a101f3",
+   "slide": "slide-06.jpg",
+   "match_error": 2.27,
+   "runner_up": 45.68
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elige un sitio cerca",
+  "Reserva para el grupo",
+  "Platos para compartir",
+  "Nada de trabajo en la mesa",
+  "Invita a quien acaba de llegar",
+  "end card"
+ ]
+}

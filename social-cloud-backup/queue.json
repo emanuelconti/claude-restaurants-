@@ -5211,5 +5211,748 @@
       "slide-07.jpg": "39d0c086b52b5c05ef50998d53a5c8dd790198fb1a1b00b8b7409ad2efc4f486"
     },
     "qa": "All seven slides and cover visually inspected, 4 November afternoon; hospitality/European founder brief respectively"
+  },
+  {
+    "id": "sp-2026-11-12-1",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 1,
+    "title": "Empieza antes de sentirte listo",
+    "folder": "queue/sp/2026-11-12/carousel-1",
+    "sha256": {
+      "carousel.json": "32d393e5a6133150ca7bc2df1be8eaf2e716a6ace9b27a43bd4a9f8581db1755",
+      "slide-01.jpg": "e8bd1c83b69ab78d5f841281271addf4f75df9e186b498c80f06176c2af7897f",
+      "slide-02.jpg": "939ddba2666c227032ca3ccc8b5c0751546813c77b1692dd569309ba4a7bab49",
+      "slide-03.jpg": "443941fdec219c79faedd402fd31b3b5a4143ae81a8aee9a697a323359a495a7",
+      "slide-04.jpg": "cd9098e4b091839e3e32fa8efd86e445e7be25e88420aad24fb6a94bc8c99ca9",
+      "slide-05.jpg": "a985b1b343d26a841e15908d459b4fb9a5061eb4ffa30ec658426122cac8b055",
+      "slide-06.jpg": "135c8334721d6e11b80020ee497eeeff1b9ed6bc7b62cea10e58dfe48cf09d6a",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "f72e11020d4c82147b1b1469bdb0882a63dddd7cb889ca1ef3b94f6a12e8cab1",
+      "reel.json": "2a55ea7f3e970b2049e1dcb9670584056b53163d89b630cbe8e8ab04aaae6c3a",
+      "cover.jpg": "724ee99be5a629bdf5d6b121c9885dad50a46b9523ec6b7dee26d298d374d9fe"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.4 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-12-2",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 2,
+    "title": "Pequeñas victorias que cuentan aunque nadie las vea",
+    "folder": "queue/sp/2026-11-12/carousel-2",
+    "sha256": {
+      "carousel.json": "cc24de9d6a2b8c337be9c910d30cff1043d50b5233c5bf5fd415be52faedf4fb",
+      "slide-01.jpg": "463da5f1c3467f36c8aa23f35a8a05ebda0ad690cece679b25990c5abc289a13",
+      "slide-02.jpg": "5bf9c975bba5c64f85aab673e6cb0b285966469d7cbbad35e8dd8992d061a7b5",
+      "slide-03.jpg": "aafc67053973a6eaa9113ca787016c8b92e7338728c7e78ccf649d0647dde1c0",
+      "slide-04.jpg": "09284ce2d4a04edc5d18b6278e23ff84bfe8db245563f02544bc830a27b2cb25",
+      "slide-05.jpg": "b905e62449ee461d2a06b8db04f2981985a3411723184aca0c056d0d75363b37",
+      "slide-06.jpg": "5ac44f5187edecedd3abb759d256869fb2c742370c1645d2bf7ac820da7cc731",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-12-3",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 3,
+    "title": "Cómo aprovechar la pausa de la comida",
+    "folder": "queue/sp/2026-11-12/carousel-3",
+    "sha256": {
+      "carousel.json": "6e1034a8258a464b3846a5e202005841f5e712b9bed4639fb6f5ac0033b5aa4d",
+      "slide-01.jpg": "741cfb1e12bc2d2585303a54e82ee5a973e8ad123d94b114b95a2cfe15c50932",
+      "slide-02.jpg": "f64a902537c9798069e8019029f811904c0ecbe53855440b0bd0a16437cda0db",
+      "slide-03.jpg": "cf5ad1904c90e8855f8c8ca21f2fb2028a6e0cee4f3282400ab8a3fdb73ae13f",
+      "slide-04.jpg": "9383a4466a81e00e60a15361bfbdcb869c5548df6bb5b2c5695671408e938aca",
+      "slide-05.jpg": "d61788557c2316de08f2ec96bae218d4361955172f6e8550ce53f404ae24209d",
+      "slide-06.jpg": "2e1c60276a8fc587bfdde0f4f2a5bed4720e855b7e5254d7e6feac4c022004ff",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "c37eb4279cba8fc725164e32cd30b5b910950d698f4d200bf7771aeb60cc45ce",
+      "reel.json": "0c2ea6f2848a9fa418bce8cb6928d7c5b40c3fb46917c8e987a0f796014cf212",
+      "cover.jpg": "06fbc1d31e5439fc1538b83cde7bb8ef22a211b4ea1ef15fdde0ff03008a0ad5"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.4 dB peak -0.9 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-12-4",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 4,
+    "title": "Descansar no es rendirse",
+    "folder": "queue/sp/2026-11-12/carousel-4",
+    "sha256": {
+      "carousel.json": "da370bd00e7d1532a59f723c449ec93436ec258e5732c07dcd5269b8b6915272",
+      "slide-01.jpg": "720f9dd2537d64c3bb1395cc62f17babddf626ef6da11bf7383e8af23647fb7a",
+      "slide-02.jpg": "e9db6f910d1524646c65716b9485929f263f5750ab26069a6fcdb9254e251994",
+      "slide-03.jpg": "2132c03525de5bbc4f690d15d9abfacba8a7462e150d0cbf8025d27d0150de1e",
+      "slide-04.jpg": "4ce2d6a9332378d01c0775b2cb113844b016aee0cc40b32e6027fe18cd68af2b",
+      "slide-05.jpg": "d0da2ec21bd5d06907734681b43eace75343894bba7cf4924d76b490c3671c9b",
+      "slide-06.jpg": "a18adb73507fc8b87c3f99909c90e5d726dddab545464eaa257b786499bd5528",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-12-5",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 5,
+    "title": "Mensajes para un amigo que tiene una semana difícil",
+    "folder": "queue/sp/2026-11-12/carousel-5",
+    "sha256": {
+      "carousel.json": "606082ccc2ca606e8d19bafcf86dfae5423060929fa210a444b92f314a314fb1",
+      "slide-01.jpg": "5d04490b10d4ff551b0b57a472865f99b34a69a3f6c2ddf79bbf9caf237a48a7",
+      "slide-02.jpg": "5f2159adf8c340db4c76d92dfa57a57ace96b6de32eedee5d4c1fa7d4bb5c924",
+      "slide-03.jpg": "0b54c8895de4dc110dce0f2a90d582e29ed6f58708ea1b9d068c5475eb153af4",
+      "slide-04.jpg": "80b637c94a02a104e52f787baa783dcaa9bd97615ea27a7b0e343cc8942cd34a",
+      "slide-05.jpg": "512874553d0b8203980e6fd06af9ff886445444048011a5ef3d0e17327574958",
+      "slide-06.jpg": "7c71adf2dba692bc65c0024405cf9b6b4bd053f6122404ae81bbc703355e0413",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "f1dfd8b1b39c4231219282dfd448bdf3c7ece5fe37e4ffc0d60c65f406ecc2a6",
+      "reel.json": "21b37eee67320e414bf00074656aa54980b950e99d9c7bd90ac87f5bd838a261",
+      "cover.jpg": "7794266bafc670aab7fb41eec1ceeb589fe0ca696bac796eac33799b9c21a4fb"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -1.0 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sp-2026-11-12-6",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 6,
+    "title": "Cinco recordatorios para compararte menos",
+    "folder": "queue/sp/2026-11-12/carousel-6",
+    "sha256": {
+      "carousel.json": "4bb014eb45e2f7fe09b6a4412b2bdd6c6fd60b9b9262f92195f2a15744a4f62f",
+      "slide-01.jpg": "f148b78832a4ccb873f5996f54f3de79103c2ad095518d98d502771cae30dcc2",
+      "slide-02.jpg": "e12ecb86d4c0bd339210b231d71fe198f2092f76c691050e3166b85cb35fafcd",
+      "slide-03.jpg": "6931fb02b5ac2a14a6f17eb37be441c9d82c16386533d15166ddee22c06f7797",
+      "slide-04.jpg": "b4072ab9d593e294af246f60c14358afa0a83db1b4712dbca03d0a979e3427c7",
+      "slide-05.jpg": "0e4586d159ab2707d959fd2c8395c2d851ae6cbdfa2037a27265b20bb65616e7",
+      "slide-06.jpg": "ba366ac765509f0a5ba93778707418855d1d4f31463343fe7ea785e123867b02",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-12-7",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 7,
+    "title": "Planes de jueves que no necesitan excusa",
+    "folder": "queue/sp/2026-11-12/carousel-7",
+    "sha256": {
+      "carousel.json": "36039533f2bcafd76804c9482ed92415af37b547ec46ac313c3b68f091a0e454",
+      "slide-01.jpg": "0a814dc824c5c0b033ffd2688e32e5c3fff9f91f28339e0e47820ff8bf06d9fe",
+      "slide-02.jpg": "cb5b750db77aa6e5beff5cf063dbb9fe8aa0063f89f6dc4218cd29eced04f8e0",
+      "slide-03.jpg": "ac0183189ce971e080dfda586f1f0b72ef915085423f39e07bf4383bbeb351c1",
+      "slide-04.jpg": "e495d43ba824b0336b06043540570b08f92927605224e31b9a9ced698aad0637",
+      "slide-05.jpg": "a3fb4febe4147dbf6ee68af074da2462bdfa5b4c3735b32a12fa45f4ce48c116",
+      "slide-06.jpg": "7a6513e36f70e6a0704fe8ac11014cd5e345c1a15b1ce5a8ed788165c88001ff",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "6d7c1b8b16009da70bd1df5bd8b261917ebbec23bcfbd21722ced7925f22893d",
+      "reel.json": "3cb424b94e07f85afbc3d0cf2ac6e8a325d8eb22ec6d53aae663b28b202d97f8",
+      "cover.jpg": "19dac3f28e5d109d82d456cd4c355478c120ee35c4b2fcffe21ca3426e858ff7"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.4 dB peak -0.9 dB; 6 scene photos, 2 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sp-2026-11-12-8",
+    "brand": "sp",
+    "date": "2026-11-12",
+    "slot": 8,
+    "title": "Cierra el día con calma antes de dormir",
+    "folder": "queue/sp/2026-11-12/carousel-8",
+    "sha256": {
+      "carousel.json": "981d22c5d67d999acb7cd21db2a4e700f7f3022ce264aa8b8c43c458df521d3d",
+      "slide-01.jpg": "a886b1fc426c559e31551b4b2080bb69ea5a393d3afb4997f1cd4bb195407ace",
+      "slide-02.jpg": "123d36297037a14b8a2b0a3d0b7c367d412f7b920eaf1cb87612645c27b4b6e7",
+      "slide-03.jpg": "255cca700b5eb808fe0cc342e81b04dd15eb6428e6bddc85d4b91b3536737b52",
+      "slide-04.jpg": "64f6eddd9f266a35ae83db52c60c268cf20e2013b142471dabcd7dd30793724f",
+      "slide-05.jpg": "eed5d527f164d398ace34902f683697da9514d8eba6b678f8cc14a642314abf1",
+      "slide-06.jpg": "4316c8e59eb4df4296d270ba3f2c7cf14e9fad8bab434c650a4c592f60811d7d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-13-1",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 1,
+    "title": "Viernes: termina la semana con algo hecho",
+    "folder": "queue/sp/2026-11-13/carousel-1",
+    "sha256": {
+      "carousel.json": "043aaf86f698193bf7f3989ee208d8441e103549081aed89efc79c129f5f1901",
+      "slide-01.jpg": "524040244a43d4c6cb128db13beb90241bc245ccaed0acd13ce002c10cac719f",
+      "slide-02.jpg": "f17dc5aab905ad984a4c7fe8c5314882c2d385c072d4bebbf6673e8a29bd84ba",
+      "slide-03.jpg": "342ed31532fa5bbeb8db3e90129366280558045578675c592f07e0a8869caa6f",
+      "slide-04.jpg": "80cecc99d0482e3f46aee945b1a0f909540e43d19205d1beacf002073bed29b1",
+      "slide-05.jpg": "cb9dac458759204606719b1bfb91787267dcb69201d49bba8382b36f3de4f60f",
+      "slide-06.jpg": "9176cb67b5f6337be7501631283b52ee55ec040f40734c20c880590d05c0947d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "5ac0b6cec116567b3fc701d14824d324aa2a4ba79401a6858c310ecd93b06671",
+      "reel.json": "305f12f19780e4528a57aaf3282d8ee20a432c88923e1b754e277d30d9c78141",
+      "cover.jpg": "a3222b415ea0508fb224c67a55042378b69f30331b98cf232fa0bd5dc7d93866"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.4 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-13-2",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 2,
+    "title": "Gente que te suma: cómo reconocerla",
+    "folder": "queue/sp/2026-11-13/carousel-2",
+    "sha256": {
+      "carousel.json": "ad4cbef05244f9bc10c34d312ce503ff7a7a0d636ca53e43b87bb50fc1678abf",
+      "slide-01.jpg": "51d20339c5af21db8cbda902f76fa8a64105818d5d590315a3b5cd59a6bd214a",
+      "slide-02.jpg": "073b8a16b762e2fb645685f9a05dd04ec877d96dc6ce4578e58866bf40cdf60e",
+      "slide-03.jpg": "c1da44c8880da23a0e5fd3612b64d585972677437fc3ac7d13365547c038c075",
+      "slide-04.jpg": "cd4a507e756ebf4ddd9bebffd3c873207ebb391a2f4d7215c0c716069974c2ab",
+      "slide-05.jpg": "7c3b4a32617a17fca0901be22ed83d3633d0f105eb084b642d4d0d1acf70147d",
+      "slide-06.jpg": "f921810e85de42ee1ef5c6af98c0184fb6231b8a1e5b4144a38d0e35e6023c5a",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-13-3",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 3,
+    "title": "Ideas para una comida de viernes con compañeros",
+    "folder": "queue/sp/2026-11-13/carousel-3",
+    "sha256": {
+      "carousel.json": "cd0e1c2115d7b19fa09d1637009ec5e014fea704a4d043352ce5e0f29743c87a",
+      "slide-01.jpg": "db8d0c4c9850ca28474b983900876e5d42216e873e84fdbd44f3f0890d01fb61",
+      "slide-02.jpg": "4f85a51d35e31d91e9727bd495dc7f3b15cbc597df660490cb55a33287d7990f",
+      "slide-03.jpg": "a2665c220920075f8a6390ccf8b4f3ddf309643bf9116a7f681696356aaa7945",
+      "slide-04.jpg": "710b86aaf0d58f548456e3450742a809c2946255bcbce6e3dea12cb7e81495a3",
+      "slide-05.jpg": "74a44c08b2d7286c80097aec7a0f2f3a50e65b051d5f54d1b481f4a7aab8ed5d",
+      "slide-06.jpg": "ea8c82fcb61b8e04f50b63a5da1497db45c70c38c63a8b3faecd8dcf0b8f3e55",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "444ea59241569beda23d03481508dd0d1927f42b0ac797bd17f6653f5176ba1f",
+      "reel.json": "834e40fdcd8839ca5a6d0bd2b299227a29e32b029994fc7f9cd511d537c34239",
+      "cover.jpg": "68827f146068f57ad9bb3fcde1c63dc4f6408e15b6e483b721dbbad07a5147f4"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.1 dB peak -0.8 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sp-2026-11-13-4",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 4,
+    "title": "Hábitos pequeños que se notan en un mes",
+    "folder": "queue/sp/2026-11-13/carousel-4",
+    "sha256": {
+      "carousel.json": "7fc2c524673058bb976acaa0b029bc0d6df1afa8b8cc45a2de6ae1411a1e488c",
+      "slide-01.jpg": "00d790d26d521ceb5328fcd28808d960d4b078071ffac879e23605f7fc324b6c",
+      "slide-02.jpg": "c9f9db6af032190fa78253d945ecee0c071f4bc1b88244fdbf6ded6fc8012105",
+      "slide-03.jpg": "8dfc083f23246af03a53dd2723b067031d273ee23932b2601d7e1205bfb8db33",
+      "slide-04.jpg": "7fb519fd3d47ef7be1607a0d51e85b98f367376dacde126f04c0115a92cec42f",
+      "slide-05.jpg": "a6a11b2f6cedc41fc509931c86a83c243a8d7285e11fa7d7f3ce032175480537",
+      "slide-06.jpg": "5fc9ed8d327c0306f89a21260a462e5e1735a0212f9be3292303359c45c222c2",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-13-5",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 5,
+    "title": "Cómo volver a levantarte después de una semana dura",
+    "folder": "queue/sp/2026-11-13/carousel-5",
+    "sha256": {
+      "carousel.json": "815fa9b4e788864c086549af33de0d271d462799d1e9b4092ba830e40b264c23",
+      "slide-01.jpg": "d565eac5955115d2947ab2df569718f427527775135097c1d6112964125c86dc",
+      "slide-02.jpg": "c0ffff73166c16ab9639d6bc22aebc8d284dbaf67f84fcee9943a9ee03ab1d3f",
+      "slide-03.jpg": "754c522f11a620e29ec0c8b1ecfa68389350d376f93d9f04fc9ca388ebd33190",
+      "slide-04.jpg": "6bc48656437882926cd65e3ce5c35cdeae7a59e1401a1c2a2aa47408abcbb2f1",
+      "slide-05.jpg": "22f5c8b83718463a6e87c54e15d891883df859c061fe0b1ad465eef2a9618cc1",
+      "slide-06.jpg": "9b131a6c8339e9b9a25a951c14e6e48b4459b276eb837321efbb1be5c8f3c552",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "6a77d005aa9d5510f01206a6533cbe3aecd0cdf66b104413c20a42aa06c38e5d",
+      "reel.json": "f18758a7ab543bb9a55aef9057641596a83b20ae9093290b7f56995425a835d6",
+      "cover.jpg": "1b81a789149ab871be162653f1dc5596e42859530e5824eaff92e69098d4aa82"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.3 dB peak -1.1 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sp-2026-11-13-6",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 6,
+    "title": "Cosas que agradecer esta semana",
+    "folder": "queue/sp/2026-11-13/carousel-6",
+    "sha256": {
+      "carousel.json": "d54459bd8731ad2d4dd28d8acb39ba5981b9035d92925434614060730efe613b",
+      "slide-01.jpg": "3ca19d96ed03d1795971fded5859124efd325d0ea7a9f8c7394fa8b024605b13",
+      "slide-02.jpg": "b49e9a180ba30eac10a7b8941f03f7f29f29e9838487e72318898f11e5b2fa7e",
+      "slide-03.jpg": "fccad1978e9000b83483904a013dd816ba2c8a0c12a0f8e15ed6f05b5d1d1e6d",
+      "slide-04.jpg": "e2ec403e6ad9f4ab1e2e6a9d3d6f03ccf657dd62e9b75bd508cc0307114cd776",
+      "slide-05.jpg": "0bd2cd24e34a0a0cdfe8087138e3111a1244e17d5bfb320f997dbcd4e3c89c60",
+      "slide-06.jpg": "94c80598d2a732b485d6d2ea87d779f09b97778f9acef8bbdb82ec404bef4fa1",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sp-2026-11-13-7",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 7,
+    "title": "Planes de viernes para cualquier presupuesto",
+    "folder": "queue/sp/2026-11-13/carousel-7",
+    "sha256": {
+      "carousel.json": "03d86d28e5285594ee45d84a965dccb682f1b2a63cf3baa0b6122e18770f58d4",
+      "slide-01.jpg": "c38d90b48446db9e4d1cadb4850c79dd2649cc6876d45639d299bafc0e3c9c41",
+      "slide-02.jpg": "2b163435a717b4ce514c30310982bb1ac17c01135e771376b80c091eef1ce04d",
+      "slide-03.jpg": "b4728a104413f7ee86b9edac46f3b1bfe8e6aead89dfec575604061a039c6827",
+      "slide-04.jpg": "7a3b0aa440923aaa2581f05c6086c9f2063b705eb76ec32e5b20555a7ae78b9d",
+      "slide-05.jpg": "82f39fdb00b636069828a3db460e69afc7a333e4ae4eb8b535bdadd9741f62d3",
+      "slide-06.jpg": "2e2b843531151f82944081414d54f72209bad978314fcbac292de1105dfb0256",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "5408ccd0c0e953ab658c09c50b95cd9a6ad50ea0528e89f584e87dad22f80f86",
+      "reel.json": "7b1fcc8c6a1c5cd6675fb9ef29176b717b5925163be9bcd5cf44052d5c2e5f27",
+      "cover.jpg": "ec9345b3dd3e2b08bcba3070dd8189a993104821de6f1cc5f3d935db1be93736"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.7 dB peak -1.1 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sp-2026-11-13-8",
+    "brand": "sp",
+    "date": "2026-11-13",
+    "slot": 8,
+    "title": "Confía un poco más en ti",
+    "folder": "queue/sp/2026-11-13/carousel-8",
+    "sha256": {
+      "carousel.json": "d7e29ee66d2ad812a610c7cc195bd655ed3cb2e6e5a76c0be75cf9825b785e46",
+      "slide-01.jpg": "42e4b7eba651ac387d703a04b0c2492ec3d68a7af54a499d0189b635e17b5ade",
+      "slide-02.jpg": "676f295d8afbe28c161f14bd084f73be0b07b37418ade7c8b9f026a239e35608",
+      "slide-03.jpg": "2827ec8fe6c860a35193035e3e4681b32a47e1f0abb8f1538fea3493d8373921",
+      "slide-04.jpg": "b7b5f2fa3949142274e6054fc637575d0402e0d4be560ea93f13ab02ae9c6105",
+      "slide-05.jpg": "120fac9e814b61ce31abb6a4ea2d518fde6e760091e2e14a806bfc1873ac3457",
+      "slide-06.jpg": "b4cee1f5d383b0197bc633b27870ce1e52d2953e61dbe3c14e6fd3f7f9e363a6",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); 6 November everyday-life brief, every photo chosen for its own slide"
+  },
+  {
+    "id": "sin-2026-11-12-1",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 1,
+    "title": "Know these numbers before an investor call",
+    "folder": "queue/sin/2026-11-12/carousel-1",
+    "sha256": {
+      "carousel.json": "038914faeafc88e53ed19abfa3115cb68029c1c07e9ceb5e30c05c2c99782882",
+      "slide-01.jpg": "0d4a90e0d83f9cf5d9fca14472e75bbd7ce09b59d918018a503ae0e439f1f091",
+      "slide-02.jpg": "4ea556bb1c6d51b62bddde60c35dd015e7bd3c0afb38129f460eeb6d7e18afd9",
+      "slide-03.jpg": "2ab5e78659330cb5bb6d1264d9cb7e77e136d109b991894eca333abf6fbf9e14",
+      "slide-04.jpg": "6fc84a582a70447ede2457c8ee6adb725a445926d22f2d5d81f74dec40641ecf",
+      "slide-05.jpg": "c7523107b844c70ff8c44bd66225bb6e572416eb885c734bfe9df8eb153f484d",
+      "slide-06.jpg": "d922f3ebf11fe11a5d3cfaebbe307ab3a18428ddf251ed44a1ca03393293706c",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "6fa8e874652da38d57d73c3ddf668271c1cd8dbfe56a4c4016749ca6c07b6515",
+      "reel.json": "263327979de6ba8befaa0d8986238d5ff1cfd1620eb6ce994ed5652fc5aa259d",
+      "cover.jpg": "c1d3cfadfc923f3297fb3947ada99c65e40de575a0178fd6382f007e47043e58"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-12-2",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 2,
+    "title": "Grant or equity: questions to ask first",
+    "folder": "queue/sin/2026-11-12/carousel-2",
+    "sha256": {
+      "carousel.json": "debfd68a458421972913a7746cf48dcc793cca57d192c0efaed991d581228147",
+      "slide-01.jpg": "5a6031bfb26673e7d29465cd514b61467eea5469dae88f9e47a9362bceace94a",
+      "slide-02.jpg": "8ca5eb71a9a775ded994e7e30fa1ec962524711cf62541aaee38628e5eebc32e",
+      "slide-03.jpg": "a5ca6430ad69a94757d0c2f1e3b7e1540d20714e9213646a10eb68b3f9a0b063",
+      "slide-04.jpg": "b5388a0499ee66e689da7a295af2b462659c6933bcb8181158ae166362afd65f",
+      "slide-05.jpg": "46000513f891d04fe080edb6ca86694d6d123201af0e17b26b0ca3699e81ce69",
+      "slide-06.jpg": "8ad2d844b28d04d4d74fc93b7bb5228b347463e108d7462681fac4ebd5c0f810",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-12-3",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 3,
+    "title": "Write a one-line description people remember",
+    "folder": "queue/sin/2026-11-12/carousel-3",
+    "sha256": {
+      "carousel.json": "a400eb3b3c53a73a5942d8f148f062acec9acd515f84f8d4cbf13ffb32fe9f7d",
+      "slide-01.jpg": "9417a1950e04ce2cd2f93a31440542221977404b287bd60410d4a524ebd63797",
+      "slide-02.jpg": "92f6abb6ca7bb5ffd1fa14f51a876af9f7e6a9699a6c2d246790e8958229fe5e",
+      "slide-03.jpg": "a6c4614f64e192d382b9455bbc200918961a3a74601a18286e3e34bc4561ba60",
+      "slide-04.jpg": "c1e49e6c3c7eb198166c299e53db148d5f1de87f24f5b433dfca751a6389249f",
+      "slide-05.jpg": "22eb532378c2bc6534e71437b1808ff96982e541220eccc2eba3763d926d1262",
+      "slide-06.jpg": "27ea54a75084ae814c29506ad50810006118edad901546c5baa6ff8cde779637",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "0a89fd71ec1b6cbd48003dc3a57511f9d2ebd839a67ee40b2b832c22cb8ee825",
+      "reel.json": "3dd25261814a16c8eb26f12be7e6e32a1b666327a841965ede26abf7f52ea335",
+      "cover.jpg": "07cc22c7372f92c2c2d2dde886bb4e663defaceef814babc3c6035f575266395"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-12-4",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 4,
+    "title": "Signs your pitch deck is doing too much",
+    "folder": "queue/sin/2026-11-12/carousel-4",
+    "sha256": {
+      "carousel.json": "3c2aac2ae9179d91dd1f9c981dff3b55e727838c86172cc3111f634076ffa51e",
+      "slide-01.jpg": "567c87fe2872df8cd022b5180f501717b5153269b7006e4f85131033c6d6f763",
+      "slide-02.jpg": "3c059fccda3c494392ee4c536cb6c0b369fb054ab1af5f6a95bd0bb31ced98e6",
+      "slide-03.jpg": "b8db1d9836c4f5b5c4d4caa12f4b80a3ae14cc11458298d472b6c1a2933c9c32",
+      "slide-04.jpg": "fca922f0dfd373eb454b53691febc40c8472ca6ec02a08250edc91990a5dbab7",
+      "slide-05.jpg": "c655ff02871f92f058608729c530929b6608edd117be3f9a871993e79f867e5f",
+      "slide-06.jpg": "a99f8632be865df85b15f9067e5471be61dfd873d55f93d421e9b4042454c930",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-12-5",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 5,
+    "title": "Before you ask for an intro, prepare this",
+    "folder": "queue/sin/2026-11-12/carousel-5",
+    "sha256": {
+      "carousel.json": "f9a183b8495d60a56898d0131aeaff959e81470780cb40ce3202beed8836f00d",
+      "slide-01.jpg": "9ed5de47fd85923caa77895c3dd138220759613e31bb4de105330b9ce5e78ef3",
+      "slide-02.jpg": "64c48a3e76ecc0cbcda3452f80f3299c09a563aafd155d2a7d8d7a0259fb2ae3",
+      "slide-03.jpg": "678058b616a19ddf0cc3b66270bb1002536a1d4d89273e558682a19f2d3ab8f2",
+      "slide-04.jpg": "555e21d132a46003c0306385271e3a44c5511c0c3361b7af526aae1b94ebd550",
+      "slide-05.jpg": "a5a3ca5961abc221f8ce285ffea446da92de30aae0223fc4c6ae900bb8b49d77",
+      "slide-06.jpg": "82c0100881193e9792fc3599d498b5255a4f396add994d50b7192720fd94b811",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "7d3e7bcd5aad751ed44c476ac5e65d954014588572200f29c932f57fd044c1f8",
+      "reel.json": "cd05c5ac24cf568ed12ce2ea9c8aaf582fee6502f8112d931ae35232e2c0d2ab",
+      "cover.jpg": "3184740a3c4f6145fae71bb2303340ae9d1b00171b42c3a9bbbc65c87b1e1939"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-12-6",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 6,
+    "title": "Customer interviews that help your application",
+    "folder": "queue/sin/2026-11-12/carousel-6",
+    "sha256": {
+      "carousel.json": "4fed9b97b4a228ec0bc568f986e06de01cdc7e75d121296429841c8138d31a6f",
+      "slide-01.jpg": "0900eda92b2b1b1d022b4b82011dcd9764ffb24751cbb513498310758c36c941",
+      "slide-02.jpg": "9acf8977fad5079ce23e256b3322eac2c8af99e3c67f3a218ddb579e3b2db4d0",
+      "slide-03.jpg": "927c2645fcc5ff4244fa511ec97cd357e7233d69cae9ba41df7b8dacd8717ccd",
+      "slide-04.jpg": "2aae29bdb964c2c87fdd76791c8055275769f0c71e735c3404cef76524c4c270",
+      "slide-05.jpg": "fd22e6d587b764609f6cdbc61afdbf8be6c068de1ed9f25b3754a378eb08f89f",
+      "slide-06.jpg": "8744a1c57406910a0e7363d3440df85ff3018d0e3a878f4ddbe661641ff5995e",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-12-7",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 7,
+    "title": "What to do the week after a rejection",
+    "folder": "queue/sin/2026-11-12/carousel-7",
+    "sha256": {
+      "carousel.json": "4c5c7780063c1b97f1b0d723afce47ba1617d53ae218555f221f5e73dc146bc8",
+      "slide-01.jpg": "6b57dde26398b9c5d9dfb64b4498d627450d7eb167e5cd43d705bf4e85643034",
+      "slide-02.jpg": "56d400928a2f815990648ba460ea05b3a1cbf5e155a69ad887bb50e8230cd862",
+      "slide-03.jpg": "9ea37617e617ffb7ede88726e5ae3aa327c13e8784f42f5e6747739b7782d1be",
+      "slide-04.jpg": "282cd022206031e864ac49be677ac81f8801e017d0be13919a593563415a7b52",
+      "slide-05.jpg": "79ee3d6c49dc6df8117c73553dd63ae5f56251f45e3b881ae1b7ca3fb6c89c37",
+      "slide-06.jpg": "85ff9201e4f882b95fa20d11b6fc6d8b3bbb9e026c6d23fc1d8cac71d1faf71d",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "5c990f939c474f09e5bb7c53711fd85d6e29c5275246396a6bf18662184fc771",
+      "reel.json": "6a8012a5fbafd7566c3e3ca3ec31940b3cd96c5a4440283cd1e1a5b833905f9b",
+      "cover.jpg": "a1ca54f8c9dff5de095336d0f51191a90bc4fe56c7e0f554f71bc52783822c80"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 3 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-12-8",
+    "brand": "sin",
+    "date": "2026-11-12",
+    "slot": 8,
+    "title": "Keep a weekly founder log",
+    "folder": "queue/sin/2026-11-12/carousel-8",
+    "sha256": {
+      "carousel.json": "11df338bdd282906e6b19bed95170b43b2bb39fad2d48bb3e56d135344ac6798",
+      "slide-01.jpg": "a830e39cb3c1c536ab3583c3ffe82f71fece62c180906a71a238f864524ea394",
+      "slide-02.jpg": "1a7303bcf81dfa9d75921b289d100b91798701ada19921d80205d4b2ca38fa43",
+      "slide-03.jpg": "3e1ad875344a365fd4f601491efed97ee06f452bd8c81d9721b16330a7bb4c91",
+      "slide-04.jpg": "2cc1dce02b2f8d4b1b9c0108b53f13e2c28e55335b72241d882680f18b6184ef",
+      "slide-05.jpg": "dbd9ee1d1d2cadff389a85ce8c8b74daa4ab47e86d1063c960b99bc23aa7448f",
+      "slide-06.jpg": "397453106bbf522e720a35618a942822ca40282f47028255a9e3a72960b86de5",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-13-1",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 1,
+    "title": "Five questions for a founder Friday review",
+    "folder": "queue/sin/2026-11-13/carousel-1",
+    "sha256": {
+      "carousel.json": "cbf3baef109d0cead105acf4d1e95395b49857d4054dbdb60228e61d5f6a0119",
+      "slide-01.jpg": "140c548aa9774c477b642ed3ef4bef2d29a3516b5a9a9c131a97ea860f490d87",
+      "slide-02.jpg": "7336dfa33f63aaf09129f7883c21d249dacc2c4b719918ab00b9819c2ddfa83b",
+      "slide-03.jpg": "d88d4a216c93043a46e9b27c4fb1b3d382614ae7e90eaefbc307b4dfbe5dddb4",
+      "slide-04.jpg": "6a0067a52ccc290372b2c99c340275608b20bd351542aab60a4fe5e49259ed63",
+      "slide-05.jpg": "8ff242a71e9d65365c3e77dc2bad7f3fe1d91a3f67bda39d614a8195ad1209f1",
+      "slide-06.jpg": "7bb305e43be76eab907c9c692d99e5d6ecf01ce4fc5e9b5e0aa86677c12fe0f6",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "b064a400dc12e86e66de530525193fdbcddd1e972a0c4b6b15d93006e7c20060",
+      "reel.json": "5ec55f89633e47d392ce6eee6aadf72eb4e5482546af7e2a094d9d0242467a62",
+      "cover.jpg": "366ea3d80b1615cac829d0fa23a6994bd2461f1047f0626710dcc4093afb1736"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 3 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-13-2",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 2,
+    "title": "Milestones that make the next round easier",
+    "folder": "queue/sin/2026-11-13/carousel-2",
+    "sha256": {
+      "carousel.json": "d5ae096d94231fd2ce3a6fb9fe452611afd57b572892fc68bf311ac45518cdda",
+      "slide-01.jpg": "74c71a3e946a6b1ca0876e94fa28bad66ebc8fcb768393b0401b4ef4f91b880f",
+      "slide-02.jpg": "4db9421f486077c6c0b6b4d1cc9c26fc29581cfb8eb915f205054b60fd660155",
+      "slide-03.jpg": "00b3462a5140bf325bad9445ccc050500ffa6c5ceb014a31ff54d0f94a93d89d",
+      "slide-04.jpg": "9d0d5dd3fc97be0fd3cdece90b06b13730bb44c5b2a7098bfd74713e2389e5c2",
+      "slide-05.jpg": "bb25b958ca866b42ddf644f2d5ddda6f9b511423b53441e16467a0a64d1b049a",
+      "slide-06.jpg": "1a62215bcf876040b565db38c577585dad3cf7d0505fab5cbba99c02b0a6b331",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-13-3",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 3,
+    "title": "How to show traction honestly",
+    "folder": "queue/sin/2026-11-13/carousel-3",
+    "sha256": {
+      "carousel.json": "64fd89e8877fbd88d2e35d5362155d7d7468fd408fe413af8fb6949e510b9230",
+      "slide-01.jpg": "3435d330b0d418e2ec0c20b66beb91832e0d292ddc2289836d5bd2460edad3f1",
+      "slide-02.jpg": "7f49d56099b43e4d49c12af3a4d6876bfb84f6ee7f135a8ae4a4789bfc51214d",
+      "slide-03.jpg": "2ac7ac2573e222b57f56fd0a504a85024532939d0170d7f9b8b7dd246a8d8a3f",
+      "slide-04.jpg": "c4eb6d4216899db73fd57ee5d4a2fd8da8c268754271ab4078c067010b6115a2",
+      "slide-05.jpg": "d90d61378c6fb12b389cdaf2b248b99c7ab26432f584f6c493399d50ef0b56f6",
+      "slide-06.jpg": "c7b3c4abacdd205f8d03b47e46fbe6b6c76aa3e1c699c5b42ff423d46fcd58c6",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "424710dc13d007488c6f02a4bcabef4002a09f004a027949288968f31755e7dd",
+      "reel.json": "b185c465ab63321650dc82b6f1b87c03fec2af3f01d7c86f16989a5e534bafa0",
+      "cover.jpg": "7f29d668095473ac0f002073d7808d67bad92ef32a93774f6ee5f9241c06eecf"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 4 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-13-4",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 4,
+    "title": "What a data room needs on day one",
+    "folder": "queue/sin/2026-11-13/carousel-4",
+    "sha256": {
+      "carousel.json": "a9e8cdab83a262d4cf79027af31aa7dfaedc0ca95ff75587e63b2ee6d2150ab7",
+      "slide-01.jpg": "669a6c93ad6e52430b2f20855adb54bb82330422778bb083a8860c53481b538d",
+      "slide-02.jpg": "517ae5d4898126e78d182184fe43274bf1f70e7434460a948fe10bb40df983f9",
+      "slide-03.jpg": "c91fd9fe3134755e0e41eb737f339065248f6d66f958f13d1167cb8b67e4a6e2",
+      "slide-04.jpg": "46d8316f0c96e7f22421e8eecde7a2742344cad806f41ec1d90997bc58522ced",
+      "slide-05.jpg": "adf3b007563c3f986582182ea07e1167fca4446330b91161a05e98903bd4056c",
+      "slide-06.jpg": "b38d9c22122cf9a2e4806ab5b2168123b92111814496397aba7988d9eb4d5633",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-13-5",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 5,
+    "title": "Questions to ask an investor before saying yes",
+    "folder": "queue/sin/2026-11-13/carousel-5",
+    "sha256": {
+      "carousel.json": "e185c429dabe5d4427ffd15a20496b032250ad86ff868257f48ec734d608ecec",
+      "slide-01.jpg": "789e4cb8e71212700cbac07a6affde43d1e1cc0351204355cc5c0142018f685e",
+      "slide-02.jpg": "bfcc82942e17710ffa25d5ece3e6e3d687fcadb494dcd2d8881184251d4f203b",
+      "slide-03.jpg": "54eae2657d7e996b2ac95481f65ffbf44b3f90ce05005e1d3829dad9be76a463",
+      "slide-04.jpg": "f1cd0fe44db619a42e2cbce3b81b92de5edc5f5741c5fe5eb80a9af9d4538fdd",
+      "slide-05.jpg": "01ae05a56440fb6e191bce5445d66540d4ba87c96807aee2c7783ad0dfadf40b",
+      "slide-06.jpg": "1768c8f7e1a0daf1a5e1be08069660bfab3f8546673453fbf51dd913aa1bdfc3",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "975fa6c15f4481fa158f353ef89841c1459a2e8a302c11df3c58b33b0306b2d0",
+      "reel.json": "0142d201b3fe049567b0464aa8a9707f9240af7ef0668c2aa2f42bd2ebafe21a",
+      "cover.jpg": "b90b6169e027f9a2e4ed60bedf3facb88c7064e5754214d363f3f96ca870a980"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 2 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-13-6",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 6,
+    "title": "A use of funds an evaluator can follow",
+    "folder": "queue/sin/2026-11-13/carousel-6",
+    "sha256": {
+      "carousel.json": "07c7258edf09e9f4409bbbf371b587c9c77ac0ecaa1f2506dc1f50f8cebdf9e1",
+      "slide-01.jpg": "1d4235a9bf5bd58050e7fc1530113a74c159a78967fa86377fcd717240e1bb12",
+      "slide-02.jpg": "5dcf8ec7a611e29de0e8cfe9cc2d6a6331b2e44b9b7f57023879fd8d9c33ff2e",
+      "slide-03.jpg": "ab818ba16d9eb424ab46171a24d0a9e65dceee561a748d9b3511a1cea7e2dba4",
+      "slide-04.jpg": "339f771d50a03d5f6acb4e0315444d648b9a08fc0c6a14af1ade5f6255ad6c23",
+      "slide-05.jpg": "7ac4c307bdae15754e64c26a69842871d6e4f80a43de66a1bbc91343226e5189",
+      "slide-06.jpg": "886ceb723cc3891c70ff3b5e8323db452a352acfb97f5b3af9b78f807657779f",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
+  },
+  {
+    "id": "sin-2026-11-13-7",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 7,
+    "title": "Protect your energy during a fundraise",
+    "folder": "queue/sin/2026-11-13/carousel-7",
+    "sha256": {
+      "carousel.json": "99cecb9b1545d695a85a14fd2ae35c97702803893bb16d461d03eea51aa2ef6a",
+      "slide-01.jpg": "4f0f675fdf821adf742107d93cd6fdba370711fe6e16a60eaf9d513135e07b22",
+      "slide-02.jpg": "4a59ecb36add4260625021f42bd9fd9e681dc1aadc9e8dc8b12493e3addcd3cb",
+      "slide-03.jpg": "866766f085587ea228ac5ce228a84983de1ea8fd91173dd01019c377e7e10da6",
+      "slide-04.jpg": "601440a441898757c5a0f43066ad93f47fcb215b31ebf159aec7f06195951bf8",
+      "slide-05.jpg": "1513fe6ea1e5e332b6626d816b752aeded8422e3350051603d0bea27bf49da9d",
+      "slide-06.jpg": "82b5c9471627d97f17546e36bb7254a5c9b4ee56459c4add8c540c8af017bb9b",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "cafc64f352a346590b244c2382032af911676d5aea08fbbadb9d4c3e1aed581c",
+      "reel.json": "911bc2e16299571e15509ee8a4390a06124fd0f7223dc6fb844aa596e8ec2139",
+      "cover.jpg": "5535441cebc1accfdfbcf266ab68cff957ee63e593545a7ef03a069333ade4b2"
+    },
+    "reel_qa": "Contact sheet inspected 9 November 2026: text readable, photos match each scene, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, 1 swapped for variety within the same reviewed photo set"
+  },
+  {
+    "id": "sin-2026-11-13-8",
+    "brand": "sin",
+    "date": "2026-11-13",
+    "slot": 8,
+    "title": "Write down assumptions before the next test",
+    "folder": "queue/sin/2026-11-13/carousel-8",
+    "sha256": {
+      "carousel.json": "1443e2aac6eacd2fcd8a8f46527d6f66695829bb8735395b0f933fff841c3bd2",
+      "slide-01.jpg": "608308a1061d7673dcb1eea16796d515cf1da9772b7cd770a9953fdecdb2f180",
+      "slide-02.jpg": "5f01fce4aa7eca252f26e169d8abfe6fce449f297113c7d1c107fa819253648b",
+      "slide-03.jpg": "9892fe49cb0a44aa53a02dd2376b50bf72e8363d4e3fc924076235270a2b1db4",
+      "slide-04.jpg": "3008ac6593b43ac8ed260f9c3064486e32afe9a6795591f76703b4ca03cace37",
+      "slide-05.jpg": "9417f05329e22a5b4e1cb37a2fc5e1fc5fda9be3f7d0e3ce21dc78e676b7dd1a",
+      "slide-06.jpg": "a1781ebd9df6404cb97e13287224fbf0bff90ce5687f1374c1c097ceecd89b17",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "All slides and cover visually inspected 9 November 2026 by Claude (primary editor while the other account is off); European founder funding-readiness brief, evergreen, no programme or funding promises"
   }
 ]

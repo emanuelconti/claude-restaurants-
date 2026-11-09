@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-13",
+ "title": "Cómo volver a levantarte después de una semana dura",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo volver a levantarte después de una semana dura\n\nUna mala semana no define a nadie.\n\nPara quien llega al viernes sin fuerzas: pasos pequeños para recuperar el ánimo sin exigirse de más.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 116 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-01.jpg",
+   "match_error": 0.47,
+   "runner_up": 26.2
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "replaces": "1517842645767-c639042777db",
+   "reason": "variety: same 'life' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-03.jpg",
+   "match_error": 1.82,
+   "runner_up": 48.58
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-04.jpg",
+   "match_error": 1.79,
+   "runner_up": 60.09
+  },
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "slide": "slide-05.jpg",
+   "match_error": 1.31,
+   "runner_up": 49.2
+  },
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-06.jpg",
+   "match_error": 0.8,
+   "runner_up": 45.66
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Nómbralo",
+  "Descansa sin culpa",
+  "Haz una cosa que te guste",
+  "Busca a tu gente",
+  "Empieza el lunes con un paso",
+  "end card"
+ ]
+}

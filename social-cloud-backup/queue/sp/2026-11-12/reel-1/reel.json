@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-12",
+ "title": "Empieza antes de sentirte listo",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Empieza antes de sentirte listo\n\nLa motivación suele llegar cuando ya has empezado, no antes.\n\nCinco formas de arrancar hoy aunque no tengas ganas, y por qué un amigo ayuda más que cualquier plan. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 658 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 31.34
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.52,
+   "runner_up": 22.05
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.43,
+   "runner_up": 24.63
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.87,
+   "runner_up": 40.14
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-05.jpg",
+   "match_error": 1.82,
+   "runner_up": 43.54
+  },
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "slide": "slide-06.jpg",
+   "match_error": 1.16,
+   "runner_up": 49.31
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Haz la versión pequeña",
+  "No esperes al lunes",
+  "Deja listo el primer paso",
+  "Cuéntaselo a alguien",
+  "Celebra que has empezado",
+  "end card"
+ ]
+}

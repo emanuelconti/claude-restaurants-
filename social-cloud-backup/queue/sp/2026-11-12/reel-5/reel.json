@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-12",
+ "title": "Mensajes para un amigo que tiene una semana difícil",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Mensajes para un amigo que tiene una semana difícil\n\nA veces basta con que alguien se acuerde de ti.\n\nFrases sencillas para acompañar a alguien que lo está pasando mal, y un plan para veros pronto. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 580 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-01.jpg",
+   "match_error": 0.2,
+   "runner_up": 43.68
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "replaces": "1499750310107-5fef28a66643",
+   "reason": "variety: same 'city' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1445116572660-236099ec97a0",
+   "slide": "slide-03.jpg",
+   "match_error": 1.33,
+   "runner_up": 43.67
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-04.jpg",
+   "match_error": 1.79,
+   "runner_up": 60.09
+  },
+  {
+   "unsplash": "1511527661048-7fe73d85e9a4",
+   "slide": "slide-05.jpg",
+   "match_error": 0.57,
+   "runner_up": 26.84
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-06.jpg",
+   "match_error": 1.14,
+   "runner_up": 46.32
+  }
+ ],
+ "scenes": [
+  "hook",
+  "\"Me acordé de ti\"",
+  "\"¿Quieres hablar o distraerte?\"",
+  "\"No tienes que contestar\"",
+  "\"Estoy orgulloso de ti\"",
+  "\"¿Un café esta semana?\"",
+  "end card"
+ ]
+}

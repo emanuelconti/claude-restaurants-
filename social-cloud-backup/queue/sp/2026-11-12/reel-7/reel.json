@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-12",
+ "title": "Planes de jueves que no necesitan excusa",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Planes de jueves que no necesitan excusa\n\nNo hace falta que sea viernes para ver a tu gente.\n\nIdeas fáciles para quedar entre semana sin complicarse ni trasnochar. Tu sitio favorito también abre los jueves. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 14 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1510812431401-41d2bd2722f3",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 43.32
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-02.jpg",
+   "match_error": 1.41,
+   "runner_up": 39.11
+  },
+  {
+   "unsplash": "1550966871-3ed3cdb5ed0c",
+   "slide": "slide-03.jpg",
+   "match_error": 1.89,
+   "runner_up": 51.41
+  },
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-04.jpg",
+   "match_error": 1.03,
+   "runner_up": 26.89
+  },
+  {
+   "unsplash": "1470337458703-46ad1756a187",
+   "replaces": "1659690402718-ea07d943fd42",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1513104890138-7c749659a591",
+   "replaces": "1466978913421-dad2ebd01d17",
+   "reason": "variety: same 'restaurant' photo set as the reviewed slide"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Un café al salir de clase o del trabajo",
+  "Cena temprana en el barrio",
+  "Paseo con parada final",
+  "Tapas para compartir",
+  "Invita a alguien nuevo",
+  "end card"
+ ]
+}

@@ -1,0 +1,935 @@
+sp {
+  "title": "Viernes: termina la semana con algo hecho",
+  "hook": "Una tarea cerrada hoy es un fin de semana más ligero.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "cafe"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo cerrar la semana sin cargas pendientes y llegar al fin de semana con la cabeza libre.",
+  "points": [
+    [
+      "Elige la tarea que más pesa",
+      [
+        "Esa que llevas días aplazando."
+      ],
+      "Empieza por ahí."
+    ],
+    [
+      "Ponle un tiempo corto",
+      [
+        "Cuarenta y cinco minutos con todo apagado."
+      ],
+      "El foco hace el resto."
+    ],
+    [
+      "Cierra lo que puedas cerrar",
+      [
+        "Responde, envía, archiva."
+      ],
+      "Menos ruido el lunes."
+    ],
+    [
+      "Deja una nota para el lunes",
+      [
+        "Escribe dónde te quedaste."
+      ],
+      "Tu yo del lunes te lo agradecerá."
+    ],
+    [
+      "Desconecta de verdad",
+      [
+        "El descanso también es parte del trabajo."
+      ],
+      "Te lo has ganado."
+    ]
+  ],
+  "photo_ids": [
+    "1488190211105-8b0e65b80b4e",
+    "1484480974693-6ca0a78fb36b",
+    "1501139083538-0139583c060f",
+    "1486312338219-ce68d2c6f44d",
+    "1517842645767-c639042777db",
+    "1470252649378-9c29740c9fa8"
+  ],
+  "cover_photo_id": "1488190211105-8b0e65b80b4e"
+}
+
+sp {
+  "title": "Gente que te suma: cómo reconocerla",
+  "hook": "Algunas personas hacen que todo pese un poco menos.",
+  "photos": "city",
+  "point_sets": [
+    "city",
+    "cafe",
+    "life",
+    "restaurant",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+  "caption": "Señales de las amistades que te hacen bien, y una idea para cuidarlas este fin de semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Te alegran las buenas noticias",
+      [
+        "Celebran lo tuyo como si fuera suyo."
+      ],
+      "Eso no se encuentra siempre."
+    ],
+    [
+      "Te escuchan sin mirar el móvil",
+      [
+        "La atención es un regalo."
+      ],
+      "Se nota cuando está."
+    ],
+    [
+      "Te dicen la verdad con cariño",
+      [
+        "Sin herir, pero sin mentir."
+      ],
+      "La confianza se construye así."
+    ],
+    [
+      "Proponen planes",
+      [
+        "No siempre esperan a que lo hagas tú."
+      ],
+      "Las ganas se contagian."
+    ],
+    [
+      "Te sientes tú mismo",
+      [
+        "No tienes que actuar para gustar."
+      ],
+      "Cuida a esa gente."
+    ]
+  ],
+  "photo_ids": [
+    "1666282020483-6ebeb210b1c3",
+    "1510812431401-41d2bd2722f3",
+    "1445116572660-236099ec97a0",
+    "1495474472287-4d71bcdd2085",
+    "1559339352-11d035aa65de",
+    "1514933651103-005eec06c04b"
+  ],
+  "cover_photo_id": "1666282020483-6ebeb210b1c3"
+}
+
+sp {
+  "title": "Ideas para una comida de viernes con compañeros",
+  "hook": "La mejor reunión de la semana puede ser alrededor de una mesa.",
+  "photos": "restaurant",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "cafe",
+    "restaurant",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+  "caption": "Cómo organizar una comida de viernes que una al equipo sin que nadie tenga que organizarlo todo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige un sitio cerca",
+      [
+        "Cinco minutos andando y nadie se queda fuera."
+      ],
+      "Fácil para todos."
+    ],
+    [
+      "Reserva para el grupo",
+      [
+        "Una llamada el jueves evita esperas."
+      ],
+      "Llegar y sentarse."
+    ],
+    [
+      "Platos para compartir",
+      [
+        "Así cada uno prueba y nadie elige solo."
+      ],
+      "La mesa conversa."
+    ],
+    [
+      "Nada de trabajo en la mesa",
+      [
+        "Hablad de todo menos del correo pendiente."
+      ],
+      "La pausa es la pausa."
+    ],
+    [
+      "Invita a quien acaba de llegar",
+      [
+        "La persona nueva del equipo lo recordará."
+      ],
+      "Así se hace equipo."
+    ]
+  ],
+  "photo_ids": [
+    "1517248135467-4c7edcad34c4",
+    "1583422409516-2895a77efded",
+    "1550966871-3ed3cdb5ed0c",
+    "1659690402718-ea07d943fd42",
+    "1466978913421-dad2ebd01d17",
+    "1600028068383-ea11a7a101f3"
+  ],
+  "cover_photo_id": "1517248135467-4c7edcad34c4"
+}
+
+sp {
+  "title": "Hábitos pequeños que se notan en un mes",
+  "hook": "Lo que repites cada día pesa más que lo que haces una vez.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "wellness",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco hábitos de pocos minutos que, repetidos, cambian cómo te sientes. Guárdalo y elige uno.",
+  "points": [
+    [
+      "Un vaso de agua al despertar",
+      [
+        "Antes del café y antes del móvil."
+      ],
+      "Empieza por algo fácil."
+    ],
+    [
+      "Diez minutos de paseo",
+      [
+        "Sin objetivo, solo moverte."
+      ],
+      "Tu cabeza se ordena."
+    ],
+    [
+      "Una página al día",
+      [
+        "Treinta páginas al mes sin darte cuenta."
+      ],
+      "Poco a poco suma."
+    ],
+    [
+      "Un mensaje a alguien querido",
+      [
+        "Mantener el contacto también es un hábito."
+      ],
+      "Las amistades se riegan."
+    ],
+    [
+      "Ordenar cinco minutos",
+      [
+        "Un espacio despejado despeja la mente."
+      ],
+      "Menos caos, más calma."
+    ]
+  ],
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1495364141860-b0d03eccd065",
+    "1529422643029-d4585747aaf2",
+    "1434030216411-0b793f4b4173",
+    "1499750310107-5fef28a66643",
+    "1496181133206-80ce9b88a853"
+  ],
+  "cover_photo_id": "1506784983877-45594efa4cbe"
+}
+
+sp {
+  "title": "Cómo volver a levantarte después de una semana dura",
+  "hook": "Una mala semana no define a nadie.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "wellness",
+    "life",
+    "cafe",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Para quien llega al viernes sin fuerzas: pasos pequeños para recuperar el ánimo sin exigirse de más.",
+  "points": [
+    [
+      "Nómbralo",
+      [
+        "Decir que ha sido una semana difícil ya alivia."
+      ],
+      "Reconocerlo es el primer paso."
+    ],
+    [
+      "Descansa sin culpa",
+      [
+        "Recuperar energía no es perder el tiempo."
+      ],
+      "Tu cuerpo lo necesita."
+    ],
+    [
+      "Haz una cosa que te guste",
+      [
+        "Algo pequeño que sea solo para ti."
+      ],
+      "Vuelve a sentirte tú."
+    ],
+    [
+      "Busca a tu gente",
+      [
+        "Un rato con alguien que te entiende cambia el tono."
+      ],
+      "No lo cargues solo."
+    ],
+    [
+      "Empieza el lunes con un paso",
+      [
+        "No con todo, solo con uno."
+      ],
+      "Así se vuelve."
+    ]
+  ],
+  "photo_ids": [
+    "1447752875215-b2761acb3c5d",
+    "1517842645767-c639042777db",
+    "1641924675896-b6a5aaf64861",
+    "1509042239860-f550ce710b93",
+    "1621523133136-cea844f32bdf",
+    "1485965120184-e220f721d03e"
+  ],
+  "cover_photo_id": "1447752875215-b2761acb3c5d"
+}
+
+sp {
+  "title": "Cosas que agradecer esta semana",
+  "hook": "Mirar lo que sí salió bien también entrena la cabeza.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "cafe",
+    "city",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un repaso rápido de la semana para quedarte con lo bueno, por pequeño que sea.",
+  "points": [
+    [
+      "Una conversación que te hizo bien",
+      [
+        "Recuerda con quién y de qué hablasteis."
+      ],
+      "Eso también es suerte."
+    ],
+    [
+      "Un momento de calma",
+      [
+        "Un café tranquilo, un paseo, un silencio."
+      ],
+      "Lo simple también cuenta."
+    ],
+    [
+      "Algo que aprendiste",
+      [
+        "Aunque fuera por equivocarte."
+      ],
+      "Errar también enseña."
+    ],
+    [
+      "Alguien que te ayudó",
+      [
+        "Quizá merece un mensaje de gracias."
+      ],
+      "Agradecer acerca."
+    ],
+    [
+      "Lo que hiciste por ti",
+      [
+        "Descansar, moverte, decir que no."
+      ],
+      "Tú también cuentas."
+    ]
+  ],
+  "photo_ids": [
+    "1565252556328-92ee4a9a0983",
+    "1554118811-1e0d58224f24",
+    "1610701596007-11502861dcfa",
+    "1484480974693-6ca0a78fb36b",
+    "1495474472287-4d71bcdd2085",
+    "1506126613408-eca07ce68773"
+  ],
+  "cover_photo_id": "1565252556328-92ee4a9a0983"
+}
+
+sp {
+  "title": "Planes de viernes para cualquier presupuesto",
+  "hook": "Ver a tus amigos no tiene por qué costar mucho.",
+  "photos": "city",
+  "point_sets": [
+    "city",
+    "cafe",
+    "restaurant",
+    "city",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #Motivacion",
+  "caption": "Ideas para el viernes por la noche que funcionan con poco dinero y mucha compañía. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Paseo al atardecer",
+      [
+        "La ciudad tiene sus mejores luces gratis."
+      ],
+      "Empieza por ahí."
+    ],
+    [
+      "Un café largo",
+      [
+        "Una mesa tranquila da para toda la tarde."
+      ],
+      "Lo importante es la charla."
+    ],
+    [
+      "Tapas en vuestro sitio de siempre",
+      [
+        "Pocas raciones y mucho que contar."
+      ],
+      "Compartir sale mejor."
+    ],
+    [
+      "Mirador o plaza",
+      [
+        "Un sitio al aire libre para veros sin prisa."
+      ],
+      "Sin entradas ni reservas."
+    ],
+    [
+      "Cena en casa de alguien",
+      [
+        "Cada uno trae un plato."
+      ],
+      "La mejor mesa es la de los amigos."
+    ]
+  ],
+  "photo_ids": [
+    "1511527661048-7fe73d85e9a4",
+    "1583422409516-2895a77efded",
+    "1521017432531-fbd92d768814",
+    "1514933651103-005eec06c04b",
+    "1559339352-11d035aa65de",
+    "1528712306091-ed0763094c98"
+  ],
+  "cover_photo_id": "1511527661048-7fe73d85e9a4"
+}
+
+sp {
+  "title": "Confía un poco más en ti",
+  "hook": "Ya has superado días que creías imposibles.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Recordatorios para los días de dudas, para leer antes de dormir o compartir con alguien que los necesite.",
+  "points": [
+    [
+      "Recuerda lo que ya superaste",
+      [
+        "Hubo días peores y aquí sigues."
+      ],
+      "Tienes pruebas."
+    ],
+    [
+      "Habla contigo como con un amigo",
+      [
+        "Con la misma paciencia y el mismo cariño."
+      ],
+      "Te lo mereces."
+    ],
+    [
+      "Decide sin esperar certezas",
+      [
+        "Casi nadie está seguro del todo."
+      ],
+      "Avanza con dudas."
+    ],
+    [
+      "Acepta que puedes equivocarte",
+      [
+        "Equivocarse es parte de intentarlo."
+      ],
+      "Nadie acierta siempre."
+    ],
+    [
+      "Mira cuánto has crecido",
+      [
+        "La persona de hace un año estaría orgullosa."
+      ],
+      "Confía en el proceso."
+    ]
+  ],
+  "photo_ids": [
+    "1499209974431-9dddcece7f88",
+    "1501139083538-0139583c060f",
+    "1509042239860-f550ce710b93",
+    "1506784983877-45594efa4cbe",
+    "1517842645767-c639042777db",
+    "1470252649378-9c29740c9fa8"
+  ],
+  "cover_photo_id": "1499209974431-9dddcece7f88"
+}
+
+sin {
+  "title": "Five questions for a founder Friday review",
+  "hook": "Fifteen minutes on Friday saves a confused Monday.",
+  "photos": "work",
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1499750310107-5fef28a66643",
+    "1501139083538-0139583c060f",
+    "1493857671505-72967e2e2760",
+    "1519389950473-47ba0277781c",
+    "1517842645767-c639042777db"
+  ],
+  "cover_photo_id": "1506784983877-45594efa4cbe",
+  "caption": "A short weekly review for founders preparing a round or an application. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "What moved forward?",
+      [
+        "Name the progress, however small."
+      ],
+      "Credit the work."
+    ],
+    [
+      "What stalled, and why?",
+      [
+        "Blocked, unclear or simply not important?"
+      ],
+      "Find the cause."
+    ],
+    [
+      "Who should hear from you?",
+      [
+        "A customer, an investor or a mentor."
+      ],
+      "Keep people warm."
+    ],
+    [
+      "What did users teach you?",
+      [
+        "One insight from a real conversation."
+      ],
+      "Stay close to users."
+    ],
+    [
+      "What is Monday's first task?",
+      [
+        "Decide it now, start fresh next week."
+      ],
+      "Start with a plan."
+    ]
+  ]
+}
+
+sin {
+  "title": "Milestones that make the next round easier",
+  "hook": "Raise money to buy proof, not only runway.",
+  "photos": "work",
+  "photo_ids": [
+    "1447752875215-b2761acb3c5d",
+    "1484480974693-6ca0a78fb36b",
+    "1516321318423-f06f85e504b3",
+    "1506784983877-45594efa4cbe",
+    "1517842645767-c639042777db",
+    "1501139083538-0139583c060f"
+  ],
+  "cover_photo_id": "1447752875215-b2761acb3c5d",
+  "caption": "How to choose milestones that an investor or evaluator can check later. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Pick milestones a stranger can check",
+      [
+        "Shipped, signed, measured, not almost."
+      ],
+      "Make them verifiable."
+    ],
+    [
+      "Tie each one to a risk",
+      [
+        "Each milestone should remove a doubt."
+      ],
+      "Reduce risk."
+    ],
+    [
+      "Set realistic dates",
+      [
+        "Add time for hiring and approvals."
+      ],
+      "Under-promise."
+    ],
+    [
+      "Show what you will learn",
+      [
+        "Some milestones are answers, not features."
+      ],
+      "Learning counts."
+    ],
+    [
+      "Keep a buffer",
+      [
+        "Plans slip; cash should not run out first."
+      ],
+      "Plan for delays."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to show traction honestly",
+  "hook": "Small and true beats big and vague.",
+  "photos": "work",
+  "photo_ids": [
+    "1520607162513-77705c0f0d4a",
+    "1554224155-6726b3ff858f",
+    "1506784983877-45594efa4cbe",
+    "1563013544-824ae1b704d3",
+    "1499750310107-5fef28a66643",
+    "1519389950473-47ba0277781c"
+  ],
+  "cover_photo_id": "1520607162513-77705c0f0d4a",
+  "caption": "Ways to present early traction that evaluators trust. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Use one clear metric",
+      [
+        "The one that best shows customers value it."
+      ],
+      "Pick your best signal."
+    ],
+    [
+      "Show the time period",
+      [
+        "Weekly, monthly, since launch: say which."
+      ],
+      "Context matters."
+    ],
+    [
+      "Separate pilots from paying customers",
+      [
+        "Both matter, but they are not the same."
+      ],
+      "Label them clearly."
+    ],
+    [
+      "Mention churn if it exists",
+      [
+        "Hiding it costs more trust later."
+      ],
+      "Honesty builds trust."
+    ],
+    [
+      "Explain what changed it",
+      [
+        "What you did that moved the number."
+      ],
+      "Show cause, not luck."
+    ]
+  ]
+}
+
+sin {
+  "title": "What a data room needs on day one",
+  "hook": "It does not need to be perfect, just organised.",
+  "photos": "work",
+  "photo_ids": [
+    "1488190211105-8b0e65b80b4e",
+    "1434030216411-0b793f4b4173",
+    "1554224155-6726b3ff858f",
+    "1499750310107-5fef28a66643",
+    "1493857671505-72967e2e2760",
+    "1496181133206-80ce9b88a853"
+  ],
+  "cover_photo_id": "1488190211105-8b0e65b80b4e",
+  "caption": "A starter checklist for an early-stage data room before investor conversations. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Company documents",
+      [
+        "Incorporation, shareholder agreements, key contracts."
+      ],
+      "The legal basics."
+    ],
+    [
+      "Cap table",
+      [
+        "Who owns what, including options."
+      ],
+      "Keep it current."
+    ],
+    [
+      "Key metrics sheet",
+      [
+        "The numbers from your deck, with sources."
+      ],
+      "Make them traceable."
+    ],
+    [
+      "Customer evidence",
+      [
+        "Pilots, letters, interview notes."
+      ],
+      "Proof in one place."
+    ],
+    [
+      "Product overview",
+      [
+        "Screens, demo link, roadmap."
+      ],
+      "Show what exists."
+    ]
+  ]
+}
+
+sin {
+  "title": "Questions to ask an investor before saying yes",
+  "hook": "Due diligence goes both ways.",
+  "photos": "work",
+  "photo_ids": [
+    "1516321318423-f06f85e504b3",
+    "1519389950473-47ba0277781c",
+    "1506784983877-45594efa4cbe",
+    "1517842645767-c639042777db",
+    "1493857671505-72967e2e2760",
+    "1484480974693-6ca0a78fb36b"
+  ],
+  "cover_photo_id": "1516321318423-f06f85e504b3",
+  "caption": "Questions founders can ask to check fit before taking money. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "How do you help after investing?",
+      [
+        "Ask for examples, not promises."
+      ],
+      "Look for specifics."
+    ],
+    [
+      "What does your timeline look like?",
+      [
+        "From first call to money in the bank."
+      ],
+      "Plan around it."
+    ],
+    [
+      "Who makes the decision?",
+      [
+        "One partner or a full committee."
+      ],
+      "Know the process."
+    ],
+    [
+      "Can I talk to founders you backed?",
+      [
+        "Including the ones where it went badly."
+      ],
+      "Ask the real users."
+    ],
+    [
+      "What would make this a no?",
+      [
+        "Better to hear it early."
+      ],
+      "Surface the doubts."
+    ]
+  ]
+}
+
+sin {
+  "title": "A use of funds an evaluator can follow",
+  "hook": "Every euro should point to a milestone.",
+  "photos": "work",
+  "photo_ids": [
+    "1563013544-824ae1b704d3",
+    "1484480974693-6ca0a78fb36b",
+    "1554224155-6726b3ff858f",
+    "1501139083538-0139583c060f",
+    "1520607162513-77705c0f0d4a",
+    "1488190211105-8b0e65b80b4e"
+  ],
+  "cover_photo_id": "1563013544-824ae1b704d3",
+  "caption": "How to present a use of funds section in an application or a deck. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start from the milestones",
+      [
+        "Work backwards from what you must prove."
+      ],
+      "Goals first."
+    ],
+    [
+      "Split by team, product, growth",
+      [
+        "Simple categories are easier to check."
+      ],
+      "Keep it readable."
+    ],
+    [
+      "Include a margin for delays",
+      [
+        "Hiring and approvals rarely run on time."
+      ],
+      "Be realistic."
+    ],
+    [
+      "Show monthly burn after the raise",
+      [
+        "So the runway claim can be checked."
+      ],
+      "Make it traceable."
+    ],
+    [
+      "Keep it to one page",
+      [
+        "Detail goes in the appendix."
+      ],
+      "Clarity wins."
+    ]
+  ]
+}
+
+sin {
+  "title": "Protect your energy during a fundraise",
+  "hook": "A fundraise is a marathon with sprints in it.",
+  "photos": "work",
+  "photo_ids": [
+    "1470252649378-9c29740c9fa8",
+    "1486312338219-ce68d2c6f44d",
+    "1506784983877-45594efa4cbe",
+    "1447752875215-b2761acb3c5d",
+    "1519389950473-47ba0277781c",
+    "1495364141860-b0d03eccd065"
+  ],
+  "cover_photo_id": "1470252649378-9c29740c9fa8",
+  "caption": "Habits that help founders keep building the company while raising. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Block time for the product",
+      [
+        "Fundraising should not swallow every hour."
+      ],
+      "Keep building."
+    ],
+    [
+      "Batch investor calls",
+      [
+        "Two afternoons a week, not every day."
+      ],
+      "Protect your focus."
+    ],
+    [
+      "Keep one habit outside work",
+      [
+        "A walk, a sport, a dinner with friends."
+      ],
+      "Stay human."
+    ],
+    [
+      "Share the load",
+      [
+        "Let your co-founder or team own parts of it."
+      ],
+      "You are not alone."
+    ],
+    [
+      "Sleep is part of the plan",
+      [
+        "Tired founders make worse decisions."
+      ],
+      "Rest is strategy."
+    ]
+  ]
+}
+
+sin {
+  "title": "Write down assumptions before the next test",
+  "hook": "Unwritten assumptions become excuses later.",
+  "photos": "work",
+  "photo_ids": [
+    "1484480974693-6ca0a78fb36b",
+    "1517842645767-c639042777db",
+    "1516321318423-f06f85e504b3",
+    "1563013544-824ae1b704d3",
+    "1506784983877-45594efa4cbe",
+    "1434030216411-0b793f4b4173"
+  ],
+  "cover_photo_id": "1484480974693-6ca0a78fb36b",
+  "caption": "A simple way to run product and market tests that produce evidence for funders. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write it as one sentence",
+      [
+        "We believe that this group will do this."
+      ],
+      "Make it testable."
+    ],
+    [
+      "Decide what would disprove it",
+      [
+        "Set the number before you see the result."
+      ],
+      "No moving goalposts."
+    ],
+    [
+      "Set a small budget",
+      [
+        "Time and money you can afford to lose."
+      ],
+      "Test cheaply."
+    ],
+    [
+      "Pick a date to check",
+      [
+        "Tests without deadlines never end."
+      ],
+      "Put it in the calendar."
+    ],
+    [
+      "Record the result, even if bad",
+      [
+        "A failed test is still evidence."
+      ],
+      "Keep the record."
+    ]
+  ]
+}

@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-12",
+ "title": "What to do the week after a rejection",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "What to do the week after a rejection\n\nA no is information, not a verdict on you.\n\nA calm plan for the days after a funding rejection, so the next application is stronger. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 896 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-01.jpg",
+   "match_error": 0.11,
+   "runner_up": 11.3
+  },
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "replaces": "1499750310107-5fef28a66643",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "replaces": "1488190211105-8b0e65b80b4e",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-04.jpg",
+   "match_error": 0.43,
+   "runner_up": 24.63
+  },
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "replaces": "1470252649378-9c29740c9fa8",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-06.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Ask for one reason",
+  "Separate fit from quality",
+  "Update your list",
+  "Take a day off",
+  "Apply one lesson",
+  "end card"
+ ]
+}

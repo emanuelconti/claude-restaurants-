@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-13",
+ "title": "Protect your energy during a fundraise",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Protect your energy during a fundraise\n\nA fundraise is a marathon with sprints in it.\n\nHabits that help founders keep building the company while raising. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 94 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-02.jpg",
+   "match_error": 0.85,
+   "runner_up": 37.75
+  },
+  {
+   "unsplash": "1496181133206-80ce9b88a853",
+   "replaces": "1506784983877-45594efa4cbe",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 1.75,
+   "runner_up": 31.24
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-05.jpg",
+   "match_error": 0.61,
+   "runner_up": 33.0
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-06.jpg",
+   "match_error": 0.53,
+   "runner_up": 47.02
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Block time for the product",
+  "Batch investor calls",
+  "Keep one habit outside work",
+  "Share the load",
+  "Sleep is part of the plan",
+  "end card"
+ ]
+}
