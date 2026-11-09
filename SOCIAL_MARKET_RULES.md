@@ -13,7 +13,7 @@ This overrides every narrower topic rule below for SocialPerks and Good Message 
 
 ## Owner, 9 November 2026: Pinterest on for Good Message Studio
 
-Pinterest Standard access is approved (app "Good Message Studio Publisher"). The cloud publisher sends at most three carousel Pins a day (publish slots 2, 5 and 8, never Reels) to the lpstylehub business account's GMS board, linking to goodmessagestudio.com, with channel_guard's gaps. It goes live as soon as PINTEREST_APP_ID_GMS, PINTEREST_APP_SECRET_GMS, PINTEREST_REFRESH_TOKEN_GMS and PINTEREST_BOARD_GMS are in the SOCIAL_BACKUP_ENV secret; until then it skips quietly. TikTok and Stories stay off.
+Pinterest Standard access is approved (app "Good Message Studio Publisher"). The cloud publisher sends at most three carousel Pins a day (publish slots 2, 5 and 8, never Reels) to the lpstylehub business account's GMS board, linking to goodmessagestudio.com, with channel_guard's gaps. It goes live as soon as PINTEREST_APP_ID_GMS, PINTEREST_APP_SECRET_GMS, PINTEREST_REFRESH_TOKEN_GMS and PINTEREST_BOARD_GMS are set as their own four repository secrets (or inside SOCIAL_BACKUP_ENV); until then it skips quietly. Never rewrite SOCIAL_BACKUP_ENV just to add them. TikTok and Stories stay off.
 
 ## Owner, 7 November 2026: Threads removed GMS posts as spam
 
