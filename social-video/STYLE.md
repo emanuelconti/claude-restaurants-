@@ -137,3 +137,10 @@ A bar/waiter slide once showed a barber's clipper. Now every written topic MUST 
 ## CONTENT DIRECTION (owner, 6 November 2026) — overrides older topic lists
 
 People do not care about narrow, niche tips (e.g. "5 details to enjoy the bar without thinking about the photo"). Write about LIFE: everyday moments, motivation, encouragement, small wins, friendship, courage to start, keep going, be kind to yourself, enjoy the people around you. Human, warm, short lines people want to save and send to a friend. Then connect it naturally to us: SocialPerks = share the places you love with your friends and get rewarded / owners: your regulars are your best advertising (invite to join, link in bio); Good Message Studio = wear the message that keeps you going (message hoodies, link in bio). At least 8 posts out of 10 must be life/motivation first, product second. Reels especially: one strong motivating hook in the first second.
+
+
+## Free growth levers for SocialPerks (owner, 9 November 2026: no budget, no time, no site changes)
+
+- Ride what Spain is talking about: at least 1 post in 3 about this week in Spain (Black Friday and Christmas season for bars and restaurants, "puente", Navidad, Reyes on 6 January, rebajas, the cold months when terraces empty, La Liga nights, Monday blues), warm and human, linked to "your regulars bring their friends".
+- Search brings owners without followers: YouTube/Reel titles and captions use what owners search in Spanish ("cómo atraer clientes a mi bar", "marketing para restaurantes", "fidelizar clientes cafetería").
+- Test and copy: every day one new Reel hook style; PERFORMANCE.md keeps the winner, the next days use it more.

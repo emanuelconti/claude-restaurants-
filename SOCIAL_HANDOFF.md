@@ -124,3 +124,10 @@ Growth the owner must do by hand (platform rules forbid automating likes, follow
 ## Comments (owner, 9 November 2026: he cannot do it by hand)
 
 Every run: `python3 comments.py --token-env <account token> --list`, then answer each real comment with `--reply <id> "text"`: warm, human, short, in the comment language, often with a question back; max 20 per run. Ignore and never answer spam/scam comments (e.g. "can we repost it, send me DM", promo pages, crypto). Only our own posts: never like, follow, comment or DM other accounts (forbidden automation).
+
+
+## Free growth levers for SocialPerks (owner, 9 November 2026: no budget, no time, no site changes)
+
+- Ride what Spain is talking about: at least 1 post in 3 about this week in Spain (Black Friday and Christmas season for bars and restaurants, "puente", Navidad, Reyes on 6 January, rebajas, the cold months when terraces empty, La Liga nights, Monday blues), warm and human, linked to "your regulars bring their friends".
+- Search brings owners without followers: YouTube/Reel titles and captions use what owners search in Spanish ("cómo atraer clientes a mi bar", "marketing para restaurantes", "fidelizar clientes cafetería").
+- Test and copy: every day one new Reel hook style; PERFORMANCE.md keeps the winner, the next days use it more.
