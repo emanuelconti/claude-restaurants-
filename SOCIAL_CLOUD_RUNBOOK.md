@@ -68,3 +68,12 @@ Editors (primary trig_018CzvbW5QE7qNpfvmjE7WMs for SP/Sin, trig_01JyRzzAfbsqvYfv
 Publisher: the controller passes REEL_PUBLIC_VIDEO_URL / REEL_PUBLIC_COVER_URL pinned to the commit for any brand and folder (GMS_PUBLIC_VIDEO_URL kept for compatibility). Instagram: publishers/<brand>/reel_publish.py (SP @socialperks.es Europe/Madrid, Sin @sincronia.live Europe/Paris, GMS Asia/Singapore), shared logic in publishers/reel_common.py. YouTube uses the Reel of reel items. Facebook: reel items go to publishers/gms/fb_reel_publish.py (native Page Reels, local upload to rupload.facebook.com, status read-back); 2/5/8 go to fb_publish.py --format cards. Facebook history now includes Page Reels and a durable last_publish_utc receipt also enforces the 60-minute gap. `--check` runs `fb_publish.py --diagnose-cards` (read-only).
 
 If state.json has fb_cards_paused, cards are off and slots 2/5/8 use the native showcase. Clear it only after reviewing the logged evidence and fixing the cause.
+
+## 9 November 2026: what changed (read before touching the publisher)
+
+- SOCIAL_BACKUP_ENV was overwritten by mistake and every channel stopped. It was rebuilt from the Claude environment (all keys verified live). Never "Update" that secret to add one key: Update replaces the whole JSON. New keys go in their own repository secret, passed by the workflow and merged in controller.py, like the four PINTEREST_* secrets.
+- YouTube and Threads are switched on in controller.py (GMS_YOUTUBE_ENABLED=1, GMS_THREADS_ENABLED=1), not by flags in the secret, so a rewritten secret can no longer silently turn them off.
+- Pinterest is live for GMS: at most three carousel Pins a day (slots 2, 5, 8, never Reels), lpstylehub account, history read with an identity check. First Pins published 9 November.
+- Two holds were reconciled against the platforms and found absent: Facebook gms-2026-11-07-6 (left unpublished, its day had passed) and YouTube gms-2026-11-09-8 (published afterwards).
+- Editorial rules at the top of SOCIAL_MARKET_RULES.md win over older briefs: 6 November everyday life and motivation first for SocialPerks and GMS; 7 November Threads two a day, no link, no hashtags; 9 November Pinterest.
+- The backup editor routine (trig_01SGVvDtrZHjbECD8UZexYQz, 07:43 and 15:43 Singapore) now prepares inventory whenever fewer than four market days are approved.
