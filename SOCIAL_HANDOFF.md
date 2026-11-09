@@ -131,3 +131,7 @@ Every run: `python3 comments.py --token-env <account token> --list`, then answer
 - Ride what Spain is talking about: at least 1 post in 3 about this week in Spain (Black Friday and Christmas season for bars and restaurants, "puente", Navidad, Reyes on 6 January, rebajas, the cold months when terraces empty, La Liga nights, Monday blues), warm and human, linked to "your regulars bring their friends".
 - Search brings owners without followers: YouTube/Reel titles and captions use what owners search in Spanish ("cómo atraer clientes a mi bar", "marketing para restaurantes", "fidelizar clientes cafetería").
 - Test and copy: every day one new Reel hook style; PERFORMANCE.md keeps the winner, the next days use it more.
+
+## Editors on two Claude accounts (owner, 9 November 2026)
+
+GitHub Actions (branch codex/social-cloud-backup) publishes every channel, Pinterest included. One Claude account runs the primary editor routine, the other (Safari) must run the backup editor routine. If you are on the Safari account, read "Two editors, one on each Claude account" at the top of SOCIAL_MARKET_RULES.md on codex/social-cloud-backup and create the backup routine described there if it does not exist yet.
