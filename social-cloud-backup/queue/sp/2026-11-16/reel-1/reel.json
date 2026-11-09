@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-16",
+ "title": "Lunes: una sola prioridad para hoy",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Lunes: una sola prioridad para hoy\n\nNo tienes que hacerlo todo hoy.\n\nCómo elegir una única prioridad para el lunes y avanzar sin agobiarte.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 584 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-01.jpg",
+   "match_error": 0.14,
+   "runner_up": 46.84
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.47,
+   "runner_up": 20.49
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.44,
+   "runner_up": 40.07
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-05.jpg",
+   "match_error": 0.24,
+   "runner_up": 33.75
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-06.jpg",
+   "match_error": 0.61,
+   "runner_up": 31.22
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Escribe todo lo pendiente",
+  "Marca lo que importa",
+  "Bloquea una hora",
+  "Empieza por ahí",
+  "Celébralo al terminar",
+  "end card"
+ ]
+}

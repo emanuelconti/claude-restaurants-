@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-14",
+ "title": "Cena con amigos: cómo organizarla sin estrés",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cena con amigos: cómo organizarla sin estrés\n\nLa mejor cena es la que se disfruta también quien la organiza.\n\nConsejos prácticos para una cena con amigos en casa o fuera, sin pasarlo mal organizándola. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 870 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-01.jpg",
+   "match_error": 0.41,
+   "runner_up": 67.56
+  },
+  {
+   "unsplash": "1659690402718-ea07d943fd42",
+   "slide": "slide-02.jpg",
+   "match_error": 1.16,
+   "runner_up": 38.11
+  },
+  {
+   "unsplash": "1666282020483-6ebeb210b1c3",
+   "slide": "slide-03.jpg",
+   "match_error": 1.85,
+   "runner_up": 48.6
+  },
+  {
+   "unsplash": "1510812431401-41d2bd2722f3",
+   "slide": "slide-04.jpg",
+   "match_error": 0.62,
+   "runner_up": 38.25
+  },
+  {
+   "unsplash": "1544982560-63ad67a35c23",
+   "slide": "slide-05.jpg",
+   "match_error": 0.78,
+   "runner_up": 54.46
+  },
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-06.jpg",
+   "match_error": 1.55,
+   "runner_up": 33.73
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Decide el sitio pronto",
+  "Pon una hora concreta",
+  "Reparte tareas",
+  "Platos para compartir",
+  "Deja que la noche fluya",
+  "end card"
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-16",
+ "title": "Comida de lunes con compañeros",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Comida de lunes con compañeros\n\nComer juntos el lunes hace la semana más ligera.\n\nIdeas para que la comida del lunes con compañeros sea un buen comienzo de semana. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 65 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1550966871-3ed3cdb5ed0c",
+   "slide": "slide-01.jpg",
+   "match_error": 0.15,
+   "runner_up": 33.47
+  },
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-02.jpg",
+   "match_error": 1.7,
+   "runner_up": 33.47
+  },
+  {
+   "unsplash": "1544982560-63ad67a35c23",
+   "slide": "slide-03.jpg",
+   "match_error": 0.42,
+   "runner_up": 54.82
+  },
+  {
+   "unsplash": "1666282020483-6ebeb210b1c3",
+   "slide": "slide-04.jpg",
+   "match_error": 1.85,
+   "runner_up": 48.6
+  },
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-05.jpg",
+   "match_error": 1.74,
+   "runner_up": 49.57
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-06.jpg",
+   "match_error": 0.69,
+   "runner_up": 39.1
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elige un sitio cerca",
+  "Menú del día",
+  "Habla del fin de semana",
+  "Invita a quien llegó hace poco",
+  "Paseo de vuelta",
+  "end card"
+ ]
+}

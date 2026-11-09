@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-14",
+ "title": "Brunch casero: ideas fáciles para compartir",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Brunch casero: ideas fáciles para compartir\n\nUn brunch en casa es la excusa perfecta para reunir a los tuyos.\n\nCómo montar un brunch sencillo en casa con amigos, sin pasar la mañana en la cocina. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 299 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "slide": "slide-01.jpg",
+   "match_error": 0.31,
+   "runner_up": 49.33
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg",
+   "match_error": 1.76,
+   "runner_up": 48.55
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-03.jpg",
+   "match_error": 0.19,
+   "runner_up": 45.8
+  },
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-04.jpg",
+   "match_error": 1.74,
+   "runner_up": 49.57
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-05.jpg",
+   "match_error": 0.55,
+   "runner_up": 32.8
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-06.jpg",
+   "match_error": 1.79,
+   "runner_up": 60.09
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Elige tres cosas, no diez",
+  "Prepara la víspera",
+  "Que cada uno traiga algo",
+  "Café para todos",
+  "Sin prisa para recoger",
+  "end card"
+ ]
+}

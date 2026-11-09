@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-16",
+ "title": "Pausa de café: cinco minutos que cuentan",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Pausa de café: cinco minutos que cuentan\n\nUna pausa bien hecha vale más que una hora a medias.\n\nCómo convertir la pausa del café en un momento que de verdad te recargue durante la semana. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 390 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1442975631115-c4f7b05b8a2c",
+   "slide": "slide-01.jpg",
+   "match_error": 0.24,
+   "runner_up": 37.94
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-02.jpg",
+   "match_error": 0.69,
+   "runner_up": 39.1
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-03.jpg",
+   "match_error": 0.61,
+   "runner_up": 31.22
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-04.jpg",
+   "match_error": 0.19,
+   "runner_up": 45.8
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-05.jpg",
+   "match_error": 1.79,
+   "runner_up": 60.09
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-06.jpg",
+   "match_error": 1.67,
+   "runner_up": 39.78
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Levántate de la mesa",
+  "Invita a un compañero",
+  "Deja el móvil",
+  "Respira hondo tres veces",
+  "Vuelve con una idea clara",
+  "end card"
+ ]
+}

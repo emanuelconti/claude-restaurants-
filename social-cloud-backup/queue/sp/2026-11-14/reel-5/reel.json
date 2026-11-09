@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-14",
+ "title": "Recorre tu barrio como si fueras turista",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Recorre tu barrio como si fueras turista\n\nLo que tienes cerca también merece una visita.\n\nUn plan de sábado para redescubrir tu barrio con otros ojos, a solas o con amigos. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 706 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1529422643029-d4585747aaf2",
+   "slide": "slide-01.jpg",
+   "match_error": 0.26,
+   "runner_up": 29.31
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-02.jpg",
+   "match_error": 1.06,
+   "runner_up": 33.37
+  },
+  {
+   "unsplash": "1442975631115-c4f7b05b8a2c",
+   "slide": "slide-03.jpg",
+   "match_error": 1.12,
+   "runner_up": 26.6
+  },
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.8,
+   "runner_up": 45.66
+  },
+  {
+   "unsplash": "1511527661048-7fe73d85e9a4",
+   "slide": "slide-05.jpg",
+   "match_error": 0.57,
+   "runner_up": 26.84
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-06.jpg",
+   "match_error": 0.95,
+   "runner_up": 41.32
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Cambia de camino",
+  "Entra en un sitio nuevo",
+  "Pregunta a quien vive allí",
+  "Haz fotos de detalles",
+  "Termina en tu sitio favorito",
+  "end card"
+ ]
+}

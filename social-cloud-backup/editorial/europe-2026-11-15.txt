@@ -1,0 +1,791 @@
+sp {
+  "title": "Domingo lento: permiso para descansar",
+  "hook": "No tienes que ganarte el descanso.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un recordatorio para el domingo: descansar es parte de avanzar. Guárdalo y compártelo.",
+  "points": [
+    [
+      "Empieza sin plan",
+      [
+        "Deja la mañana abierta."
+      ],
+      "Lo que surja está bien."
+    ],
+    [
+      "Prepara un buen café",
+      [
+        "Hazlo con calma, como un ritual."
+      ],
+      "Pequeños placeres."
+    ],
+    [
+      "Haz algo con las manos",
+      [
+        "Cocinar, ordenar, dibujar."
+      ],
+      "La mente descansa."
+    ],
+    [
+      "Sal aunque sea un rato",
+      [
+        "Un paseo corto cambia el día."
+      ],
+      "Muévete un poco."
+    ],
+    [
+      "No compares tu domingo",
+      [
+        "Lo que hacen otros no es tu medida."
+      ],
+      "Tu ritmo vale."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo preparar la semana en veinte minutos",
+  "hook": "Veinte minutos el domingo te ahorran horas de lunes.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un método rápido para organizar la semana el domingo por la tarde sin quitarte el descanso.",
+  "points": [
+    [
+      "Mira el calendario",
+      [
+        "Citas, entregas y planes de la semana."
+      ],
+      "Sin sorpresas."
+    ],
+    [
+      "Elige tres prioridades",
+      [
+        "Lo que de verdad tiene que salir."
+      ],
+      "Lo demás es extra."
+    ],
+    [
+      "Planifica una comida",
+      [
+        "Saber qué comerás el lunes quita una decisión."
+      ],
+      "Menos estrés."
+    ],
+    [
+      "Deja algo bueno en la agenda",
+      [
+        "Un café o una cena con alguien."
+      ],
+      "Algo que esperar."
+    ],
+    [
+      "Cierra la libreta",
+      [
+        "Y vuelve al domingo."
+      ],
+      "La semana ya está lista."
+    ]
+  ]
+}
+
+sp {
+  "title": "Paseos de domingo que te despejan",
+  "hook": "Caminar es la forma más fácil de ordenar la cabeza.",
+  "photos": "city",
+  "point_sets": [
+    "city",
+    "city",
+    "city",
+    "city",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas de paseos de domingo, a solas o en compañía, para empezar la semana con la mente despejada. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un parque cercano",
+      [
+        "No hace falta ir lejos para respirar."
+      ],
+      "Lo cerca también vale."
+    ],
+    [
+      "Ruta con parada de café",
+      [
+        "Camina y premia el paseo."
+      ],
+      "El destino es la charla."
+    ],
+    [
+      "Junto al mar o al río",
+      [
+        "El agua calma más de lo que parece."
+      ],
+      "Busca horizonte."
+    ],
+    [
+      "Un barrio que no conoces",
+      [
+        "Descubre calles nuevas sin prisa."
+      ],
+      "Curiosidad activa."
+    ],
+    [
+      "Sube a un mirador",
+      [
+        "Ver la ciudad desde arriba pone las cosas en su sitio."
+      ],
+      "Cambia la perspectiva."
+    ]
+  ]
+}
+
+sp {
+  "title": "Comida de domingo: ideas para disfrutar todos",
+  "hook": "La comida del domingo une más que cualquier plan.",
+  "photos": "restaurant",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para una comida de domingo con familia o amigos en la que todos disfruten, incluido quien cocina. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un plato principal sencillo",
+      [
+        "Algo al horno que se haga solo."
+      ],
+      "Menos tiempo en la cocina."
+    ],
+    [
+      "Entrantes para picar",
+      [
+        "Mientras llega todo el mundo."
+      ],
+      "Nadie espera con hambre."
+    ],
+    [
+      "Mesa larga y sin móviles",
+      [
+        "Al menos durante la comida."
+      ],
+      "Conversación primero."
+    ],
+    [
+      "Que todos ayuden",
+      [
+        "Poner la mesa, servir, recoger."
+      ],
+      "Así nadie se agota."
+    ],
+    [
+      "Un postre para compartir",
+      [
+        "Una bandeja al centro y varias cucharas."
+      ],
+      "El final dulce."
+    ]
+  ]
+}
+
+sp {
+  "title": "Escribe lo que quieres para esta semana",
+  "hook": "Lo que escribes se vuelve más real.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un ejercicio de cinco minutos para el domingo: escribe lo que quieres sentir y conseguir esta semana.",
+  "points": [
+    [
+      "Cómo quieres sentirte",
+      [
+        "Tranquilidad, energía, ilusión."
+      ],
+      "Empieza por ahí."
+    ],
+    [
+      "Una cosa que quieres lograr",
+      [
+        "Pequeña y concreta."
+      ],
+      "Que se pueda medir."
+    ],
+    [
+      "Una persona a la que ver",
+      [
+        "Pon nombre y día."
+      ],
+      "La gente también es objetivo."
+    ],
+    [
+      "Algo que vas a dejar",
+      [
+        "Un hábito que no te ayuda."
+      ],
+      "Hacer espacio."
+    ],
+    [
+      "Una frase para el lunes",
+      [
+        "Algo que leer cuando cueste."
+      ],
+      "Tu propio empujón."
+    ]
+  ]
+}
+
+sp {
+  "title": "Un café con alguien que hace tiempo que no ves",
+  "hook": "Las amistades también se riegan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué merece la pena recuperar el contacto con alguien y cómo dar el primer paso sin que resulte raro. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Escribe sin dar explicaciones",
+      [
+        "Me he acordado de ti, ¿un café?"
+      ],
+      "Así de fácil."
+    ],
+    [
+      "Propón día y sitio",
+      [
+        "Concretar ayuda a que pase."
+      ],
+      "Sin vaguedades."
+    ],
+    [
+      "Elige un lugar tranquilo",
+      [
+        "Donde se pueda hablar sin gritar."
+      ],
+      "El sitio importa."
+    ],
+    [
+      "Pregunta y escucha",
+      [
+        "Pon al día la amistad sin prisas."
+      ],
+      "Interés de verdad."
+    ],
+    [
+      "Deja la próxima cita abierta",
+      [
+        "Que no pasen otros seis meses."
+      ],
+      "Mantén el hilo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Terrazas y atardeceres: planes de domingo por la tarde",
+  "hook": "La tarde del domingo pide luz, calma y buena compañía.",
+  "photos": "restaurant",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para disfrutar la tarde del domingo fuera de casa antes de empezar la semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Una terraza al sol",
+      [
+        "Aprovecha las últimas horas de luz."
+      ],
+      "La luz es el plan."
+    ],
+    [
+      "Un mirador al atardecer",
+      [
+        "Llega antes de que caiga el sol."
+      ],
+      "Merece la espera."
+    ],
+    [
+      "Merienda en una cafetería",
+      [
+        "Algo dulce y conversación larga."
+      ],
+      "Sin mirar el reloj."
+    ],
+    [
+      "Tapas tempranas",
+      [
+        "Cena ligera para dormir bien."
+      ],
+      "Domingo sin excesos."
+    ],
+    [
+      "Vuelta a casa paseando",
+      [
+        "Cierra el día con un paseo."
+      ],
+      "Termina en calma."
+    ]
+  ]
+}
+
+sp {
+  "title": "Prepárate para un buen lunes",
+  "hook": "Un buen lunes empieza el domingo por la noche.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Rutina corta de domingo por la noche para empezar la semana con más calma y menos prisas.",
+  "points": [
+    [
+      "Deja la mesa preparada",
+      [
+        "Taza y desayuno a mano para mañana."
+      ],
+      "Empieza con ventaja."
+    ],
+    [
+      "Mira el primer compromiso",
+      [
+        "Sabes a qué hora y dónde."
+      ],
+      "Sin sustos."
+    ],
+    [
+      "Prepara algo para desayunar",
+      [
+        "Aunque sea sencillo."
+      ],
+      "Mañana lo agradecerás."
+    ],
+    [
+      "Apaga pantallas antes",
+      [
+        "Media hora sin móvil ayuda a dormir."
+      ],
+      "Tu descanso es primero."
+    ],
+    [
+      "Acuéstate a una hora fija",
+      [
+        "El lunes se nota."
+      ],
+      "Constancia que cuenta."
+    ]
+  ]
+}
+
+sin {
+  "title": "Set next week's founder priorities",
+  "hook": "A founder week without priorities fills itself with noise.",
+  "photos": "work",
+  "caption": "A Sunday routine to choose the three things that matter most for the coming week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Review last week honestly",
+      [
+        "What moved and what did not."
+      ],
+      "Start from reality."
+    ],
+    [
+      "List everything open",
+      [
+        "Get it all on one page."
+      ],
+      "Empty your head."
+    ],
+    [
+      "Pick three outcomes",
+      [
+        "Results, not activities."
+      ],
+      "Outcomes over tasks."
+    ],
+    [
+      "Block time for each",
+      [
+        "If it is not in the calendar, it slips."
+      ],
+      "Protect the work."
+    ],
+    [
+      "Share them with your team",
+      [
+        "Everyone knows what matters."
+      ],
+      "Alignment saves time."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to ask for feedback that is useful",
+  "hook": "Vague questions get polite answers.",
+  "photos": "work",
+  "caption": "How to ask mentors, users and investors for feedback you can actually use. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask about one thing",
+      [
+        "The pricing page, not the whole company."
+      ],
+      "Narrow the question."
+    ],
+    [
+      "Ask what they would change",
+      [
+        "Not whether they like it."
+      ],
+      "Invite criticism."
+    ],
+    [
+      "Ask for examples",
+      [
+        "When did this confuse you?"
+      ],
+      "Specifics help."
+    ],
+    [
+      "Do not defend in the moment",
+      [
+        "Listen first, decide later."
+      ],
+      "Collect, then judge."
+    ],
+    [
+      "Thank them and follow up",
+      [
+        "Tell them what you changed."
+      ],
+      "They will help again."
+    ]
+  ]
+}
+
+sin {
+  "title": "A Sunday walk for one hard decision",
+  "hook": "Some decisions get clearer away from the screen.",
+  "photos": "work",
+  "caption": "Use a Sunday walk to think through one difficult founder decision before the week starts. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Name the decision",
+      [
+        "Write it in one sentence first."
+      ],
+      "Define it clearly."
+    ],
+    [
+      "List the real options",
+      [
+        "Usually two or three, not ten."
+      ],
+      "Keep it simple."
+    ],
+    [
+      "Think about the worst case",
+      [
+        "Could the company survive it?"
+      ],
+      "Know your limits."
+    ],
+    [
+      "Ask what you would advise a friend",
+      [
+        "Distance makes things clearer."
+      ],
+      "Change perspective."
+    ],
+    [
+      "Set a date to decide",
+      [
+        "Open decisions drain energy."
+      ],
+      "Close the loop."
+    ]
+  ]
+}
+
+sin {
+  "title": "Rest is part of the roadmap",
+  "hook": "Burned out founders make slow, expensive mistakes.",
+  "photos": "work",
+  "caption": "Why rest belongs in a startup plan and how to build it into your week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Plan rest like a meeting",
+      [
+        "Put it in the calendar."
+      ],
+      "Make it visible."
+    ],
+    [
+      "Protect sleep",
+      [
+        "Late nights cost more than they give."
+      ],
+      "Sleep is performance."
+    ],
+    [
+      "Take one full day off",
+      [
+        "No messages, no dashboards."
+      ],
+      "Fully disconnect."
+    ],
+    [
+      "Notice early warning signs",
+      [
+        "Irritability, poor focus, no joy."
+      ],
+      "Act early."
+    ],
+    [
+      "Talk about it with your team",
+      [
+        "Rest is easier when it is normal."
+      ],
+      "Lead by example."
+    ]
+  ]
+}
+
+sin {
+  "title": "Build a simple financial model in one afternoon",
+  "hook": "A rough model beats no model at all.",
+  "photos": "work",
+  "caption": "Steps to a first financial model that answers the questions investors and evaluators ask. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with costs",
+      [
+        "Team, tools, rent, marketing."
+      ],
+      "Know your burn."
+    ],
+    [
+      "Add a few revenue drivers",
+      [
+        "Customers, price, conversion."
+      ],
+      "Keep drivers few."
+    ],
+    [
+      "Work monthly for two years",
+      [
+        "Enough detail to see the runway."
+      ],
+      "Monthly view."
+    ],
+    [
+      "Write down every assumption",
+      [
+        "Next to the number it affects."
+      ],
+      "Make it checkable."
+    ],
+    [
+      "Test a bad scenario",
+      [
+        "What if sales take twice as long?"
+      ],
+      "Plan for delays."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare for a demo day",
+  "hook": "Three minutes on stage take weeks of preparation.",
+  "photos": "work",
+  "caption": "A preparation plan for demo days and pitch events, from story to rehearsal. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Know the audience",
+      [
+        "Investors, partners or customers."
+      ],
+      "Shape the message."
+    ],
+    [
+      "One story, one ask",
+      [
+        "Do not try to say everything."
+      ],
+      "Focus wins."
+    ],
+    [
+      "Rehearse with a timer",
+      [
+        "Out loud, many times."
+      ],
+      "Practice builds calm."
+    ],
+    [
+      "Prepare for questions",
+      [
+        "List the ten hardest ones."
+      ],
+      "No surprises."
+    ],
+    [
+      "Plan the follow up",
+      [
+        "Who you will contact and how."
+      ],
+      "The pitch is the start."
+    ]
+  ]
+}
+
+sin {
+  "title": "Questions to ask before joining an accelerator",
+  "hook": "Not every programme fits every startup.",
+  "photos": "work",
+  "caption": "Questions to compare accelerators and incubators before you accept a place. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "What do they ask in return?",
+      [
+        "Equity, fees or neither."
+      ],
+      "Read the terms."
+    ],
+    [
+      "Who are the mentors?",
+      [
+        "Real operators or only names?"
+      ],
+      "Check the people."
+    ],
+    [
+      "What did past teams achieve?",
+      [
+        "Ask alumni directly."
+      ],
+      "Talk to founders."
+    ],
+    [
+      "How much time does it take?",
+      [
+        "Workshops, travel, reporting."
+      ],
+      "Count the hours."
+    ],
+    [
+      "Does it fit your stage and sector?",
+      [
+        "Generic help may not be enough."
+      ],
+      "Match the fit."
+    ]
+  ]
+}
+
+sin {
+  "title": "Ways to find your first ten customers",
+  "hook": "The first ten customers rarely come from ads.",
+  "photos": "work",
+  "caption": "Practical ways to find early customers when you have no budget and no brand yet. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with your network",
+      [
+        "People who already trust you."
+      ],
+      "Warm first."
+    ],
+    [
+      "Go where they gather",
+      [
+        "Events, forums, local groups."
+      ],
+      "Be present."
+    ],
+    [
+      "Offer a hands on pilot",
+      [
+        "Do things manually at first."
+      ],
+      "Service before scale."
+    ],
+    [
+      "Ask each one for a referral",
+      [
+        "Happy users know similar people."
+      ],
+      "One leads to two."
+    ],
+    [
+      "Write down why they said yes",
+      [
+        "Their words shape your pitch."
+      ],
+      "Learn the reason."
+    ]
+  ]
+}

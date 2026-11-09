@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-14",
+ "title": "How to write a monthly investor update",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to write a monthly investor update\n\nA short update every month builds trust before you need it.\n\nA simple structure for a monthly update to investors, mentors and supporters. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 409 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-01.jpg",
+   "match_error": 0.17,
+   "runner_up": 19.93
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-02.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.16,
+   "runner_up": 24.02
+  },
+  {
+   "unsplash": "1520607162513-77705c0f0d4a",
+   "slide": "slide-04.jpg",
+   "match_error": 1.1,
+   "runner_up": 57.15
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-05.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-06.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Lead with three numbers",
+  "Say what went well",
+  "Say what went badly",
+  "Ask for one thing",
+  "Send it on the same day",
+  "end card"
+ ]
+}

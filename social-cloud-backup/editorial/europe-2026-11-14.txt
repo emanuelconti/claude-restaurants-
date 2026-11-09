@@ -1,0 +1,791 @@
+sp {
+  "title": "Sábado sin prisas: cómo empezar el día",
+  "hook": "El fin de semana empieza mejor cuando no corres.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco gestos para una mañana de sábado que te deje con energía para todo el fin de semana.",
+  "points": [
+    [
+      "Despierta sin alarma",
+      [
+        "Deja que el cuerpo decida por una vez."
+      ],
+      "Descansar también es un plan."
+    ],
+    [
+      "Un café sin pantalla",
+      [
+        "Diez minutos solo para ti y la taza."
+      ],
+      "Empieza en calma."
+    ],
+    [
+      "Sal a la luz",
+      [
+        "Un paseo corto por la mañana despeja la cabeza."
+      ],
+      "La luz cambia el ánimo."
+    ],
+    [
+      "Desayuna sin prisa",
+      [
+        "Y, si puedes, en buena compañía."
+      ],
+      "Disfruta lo simple."
+    ],
+    [
+      "Elige un solo objetivo",
+      [
+        "Algo que te apetezca, no una obligación."
+      ],
+      "El resto puede esperar."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco planes de sábado con amigos",
+  "hook": "No hace falta un gran plan para pasarlo bien.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas sencillas para quedar con tus amigos este sábado, sin gastar mucho y sin complicarse. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Paseo y café",
+      [
+        "Una ruta corta y una parada en tu cafetería favorita."
+      ],
+      "Lo simple funciona."
+    ],
+    [
+      "Vermut a media mañana",
+      [
+        "Una mesa en la terraza y charla sin reloj."
+      ],
+      "Tradición que une."
+    ],
+    [
+      "Comida para compartir",
+      [
+        "Varios platos al centro y que cada uno pruebe."
+      ],
+      "Compartir acerca."
+    ],
+    [
+      "Atardecer juntos",
+      [
+        "Un mirador o una terraza para ver caer el sol."
+      ],
+      "Un plan gratis."
+    ],
+    [
+      "Brindad por la semana",
+      [
+        "Por lo que salió bien y por lo que viene."
+      ],
+      "Celebrar también es cuidarse."
+    ]
+  ]
+}
+
+sp {
+  "title": "Brunch casero: ideas fáciles para compartir",
+  "hook": "Un brunch en casa es la excusa perfecta para reunir a los tuyos.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Cómo montar un brunch sencillo en casa con amigos, sin pasar la mañana en la cocina. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige tres cosas, no diez",
+      [
+        "Huevos, fruta y pan bueno ya son un brunch."
+      ],
+      "Menos es más."
+    ],
+    [
+      "Prepara la víspera",
+      [
+        "Corta la fruta y deja la mesa lista."
+      ],
+      "Mañana solo disfrutas."
+    ],
+    [
+      "Que cada uno traiga algo",
+      [
+        "Un zumo, unos dulces, un queso."
+      ],
+      "La mesa se llena sola."
+    ],
+    [
+      "Café para todos",
+      [
+        "Una cafetera grande y tazas a mano."
+      ],
+      "El café une la mesa."
+    ],
+    [
+      "Sin prisa para recoger",
+      [
+        "La sobremesa es la mejor parte."
+      ],
+      "Quedaos un rato más."
+    ]
+  ]
+}
+
+sp {
+  "title": "Un sábado para cuidarte",
+  "hook": "Cuidarte no es egoísmo, es mantenimiento.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños cuidados para recargar este fin de semana. Guárdalo para cuando lo necesites.",
+  "points": [
+    [
+      "Duerme lo que necesites",
+      [
+        "El cansancio acumulado se nota en todo."
+      ],
+      "Recupera horas."
+    ],
+    [
+      "Muévete a tu ritmo",
+      [
+        "Estirar, caminar o bailar en casa."
+      ],
+      "El cuerpo lo agradece."
+    ],
+    [
+      "Come algo que te guste",
+      [
+        "Sin culpa y con calma, a la mesa."
+      ],
+      "Disfruta el momento."
+    ],
+    [
+      "Sal a respirar",
+      [
+        "Un parque o un paseo cerca de casa."
+      ],
+      "El aire despeja."
+    ],
+    [
+      "Apaga notificaciones",
+      [
+        "Unas horas sin avisos también son descanso."
+      ],
+      "Tu atención es tuya."
+    ]
+  ]
+}
+
+sp {
+  "title": "Recorre tu barrio como si fueras turista",
+  "hook": "Lo que tienes cerca también merece una visita.",
+  "photos": "city",
+  "point_sets": [
+    "city",
+    "city",
+    "city",
+    "city",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Un plan de sábado para redescubrir tu barrio con otros ojos, a solas o con amigos. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Cambia de camino",
+      [
+        "Toma calles por las que nunca pasas."
+      ],
+      "Sorpréndete cerca."
+    ],
+    [
+      "Entra en un sitio nuevo",
+      [
+        "Esa cafetería que siempre miras desde fuera."
+      ],
+      "Hoy es el día."
+    ],
+    [
+      "Pregunta a quien vive allí",
+      [
+        "Los vecinos conocen los mejores rincones."
+      ],
+      "La gente es el mapa."
+    ],
+    [
+      "Haz fotos de detalles",
+      [
+        "Puertas, balcones, letreros antiguos."
+      ],
+      "Mira con calma."
+    ],
+    [
+      "Termina en tu sitio favorito",
+      [
+        "Y cuéntale a alguien lo que descubriste."
+      ],
+      "Compartir lo hace mejor."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños gestos que alegran el día a alguien",
+  "hook": "A veces basta un detalle para cambiar el día de otra persona.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Gestos sencillos para hacer sentir bien a alguien este fin de semana. Elige uno y hazlo hoy.",
+  "points": [
+    [
+      "Invita a un café",
+      [
+        "Sin motivo, solo porque sí."
+      ],
+      "Lo inesperado se recuerda."
+    ],
+    [
+      "Escribe una nota",
+      [
+        "Unas líneas a mano valen mucho."
+      ],
+      "Las palabras se guardan."
+    ],
+    [
+      "Escucha sin mirar el móvil",
+      [
+        "Dar atención completa es un regalo."
+      ],
+      "Estar de verdad."
+    ],
+    [
+      "Recuerda algo que te contó",
+      [
+        "Pregunta cómo fue aquello que le preocupaba."
+      ],
+      "Demuestra que importa."
+    ],
+    [
+      "Dilo en voz alta",
+      [
+        "Gracias, me alegro de verte, te echaba de menos."
+      ],
+      "No lo des por hecho."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cena con amigos: cómo organizarla sin estrés",
+  "hook": "La mejor cena es la que se disfruta también quien la organiza.",
+  "photos": "restaurant",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Consejos prácticos para una cena con amigos en casa o fuera, sin pasarlo mal organizándola. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Decide el sitio pronto",
+      [
+        "Casa o restaurante, pero que esté claro."
+      ],
+      "La duda cansa."
+    ],
+    [
+      "Pon una hora concreta",
+      [
+        "A las nueve funciona mejor que por la noche."
+      ],
+      "Claridad es amabilidad."
+    ],
+    [
+      "Reparte tareas",
+      [
+        "Uno trae postre, otro bebida, otro pan."
+      ],
+      "Nadie carga con todo."
+    ],
+    [
+      "Platos para compartir",
+      [
+        "Menos servir, más hablar."
+      ],
+      "Todos prueban de todo."
+    ],
+    [
+      "Deja que la noche fluya",
+      [
+        "Sin horarios rígidos para la sobremesa."
+      ],
+      "Lo mejor llega al final."
+    ]
+  ]
+}
+
+sp {
+  "title": "Ideas para una noche tranquila en casa",
+  "hook": "Quedarte en casa también puede ser el mejor plan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para disfrutar una noche de sábado en casa, a solas o con alguien, sin sentir que te pierdes nada.",
+  "points": [
+    [
+      "Cocina algo nuevo",
+      [
+        "Una receta sencilla que nunca has probado."
+      ],
+      "Aprender también relaja."
+    ],
+    [
+      "Una película elegida con calma",
+      [
+        "Sin pasar media hora buscando."
+      ],
+      "Decide y disfruta."
+    ],
+    [
+      "Llama a alguien lejos",
+      [
+        "Una conversación larga sin prisas."
+      ],
+      "La distancia se acorta."
+    ],
+    [
+      "Escribe cómo fue la semana",
+      [
+        "Tres líneas bastan."
+      ],
+      "Ordena la cabeza."
+    ],
+    [
+      "Acuéstate sin culpa",
+      [
+        "Dormir temprano un sábado también vale."
+      ],
+      "Mañana lo agradecerás."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to write a monthly investor update",
+  "hook": "A short update every month builds trust before you need it.",
+  "photos": "work",
+  "caption": "A simple structure for a monthly update to investors, mentors and supporters. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Lead with three numbers",
+      [
+        "Revenue or usage, burn and runway."
+      ],
+      "Same numbers every month."
+    ],
+    [
+      "Say what went well",
+      [
+        "One or two wins, with facts."
+      ],
+      "Keep it short."
+    ],
+    [
+      "Say what went badly",
+      [
+        "Honest problems build more trust than silence."
+      ],
+      "No surprises later."
+    ],
+    [
+      "Ask for one thing",
+      [
+        "An intro, a hire, a piece of advice."
+      ],
+      "Make it easy to help."
+    ],
+    [
+      "Send it on the same day",
+      [
+        "Consistency shows discipline."
+      ],
+      "Put it in the calendar."
+    ]
+  ]
+}
+
+sin {
+  "title": "Signs your startup idea is worth testing",
+  "hook": "You do not need certainty. You need a reason to test.",
+  "photos": "work",
+  "caption": "Early signals that an idea deserves a small, cheap test before you commit more time. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "People describe the problem unprompted",
+      [
+        "They bring it up before you ask."
+      ],
+      "Listen for pain."
+    ],
+    [
+      "They already pay for a workaround",
+      [
+        "Money spent on a fix is a strong signal."
+      ],
+      "Follow the spending."
+    ],
+    [
+      "You can reach them easily",
+      [
+        "A clear channel makes testing cheap."
+      ],
+      "Access matters."
+    ],
+    [
+      "The problem repeats",
+      [
+        "Weekly pain beats a yearly annoyance."
+      ],
+      "Frequency counts."
+    ],
+    [
+      "You care enough to keep going",
+      [
+        "Early stages are slow and need energy."
+      ],
+      "Motivation is a resource."
+    ]
+  ]
+}
+
+sin {
+  "title": "What a first accelerator application should show",
+  "hook": "Evaluators read hundreds. Make yours easy to follow.",
+  "photos": "work",
+  "caption": "Points to cover in a first accelerator or incubator application. Always read each programme's own criteria. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "A clear problem",
+      [
+        "Who has it and how often."
+      ],
+      "Start with the pain."
+    ],
+    [
+      "Why your team",
+      [
+        "What you know that others do not."
+      ],
+      "Show the fit."
+    ],
+    [
+      "Evidence so far",
+      [
+        "Interviews, pilots, early users."
+      ],
+      "Small proof counts."
+    ],
+    [
+      "What you will do in the programme",
+      [
+        "Concrete goals for the weeks inside."
+      ],
+      "Show a plan."
+    ],
+    [
+      "Honest open questions",
+      [
+        "What you still need to learn."
+      ],
+      "Self awareness reads well."
+    ]
+  ]
+}
+
+sin {
+  "title": "A weekend reset for founders",
+  "hook": "The company needs you rested on Monday.",
+  "photos": "work",
+  "caption": "Small habits for a founder weekend that recharges instead of draining. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Close the laptop on purpose",
+      [
+        "Decide when work stops this weekend."
+      ],
+      "Make it a choice."
+    ],
+    [
+      "Move your body",
+      [
+        "A walk, a run, a swim."
+      ],
+      "Clear the head."
+    ],
+    [
+      "See people outside the startup",
+      [
+        "Friends who know you, not your metrics."
+      ],
+      "Stay grounded."
+    ],
+    [
+      "Write down what is on your mind",
+      [
+        "Get worries out of your head."
+      ],
+      "Paper holds it for you."
+    ],
+    [
+      "Plan one thing for Monday",
+      [
+        "Just one, so you start with direction."
+      ],
+      "Then let it go."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to find a co-founder you can work with",
+  "hook": "Skills matter. Working well together matters more.",
+  "photos": "work",
+  "caption": "Practical steps to meet and test a potential co-founder before committing. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Look where builders gather",
+      [
+        "Hackathons, programmes, university labs."
+      ],
+      "Go where the work is."
+    ],
+    [
+      "Work on something small first",
+      [
+        "A two week project shows how you work together."
+      ],
+      "Test before you commit."
+    ],
+    [
+      "Talk about money and time early",
+      [
+        "Salary needs, hours, personal limits."
+      ],
+      "No hidden expectations."
+    ],
+    [
+      "Agree on how to decide",
+      [
+        "Who decides what when you disagree."
+      ],
+      "Avoid deadlocks."
+    ],
+    [
+      "Put it in writing",
+      [
+        "Roles, equity and vesting, with advice."
+      ],
+      "Clarity protects both."
+    ]
+  ]
+}
+
+sin {
+  "title": "Turn customer complaints into product decisions",
+  "hook": "A complaint is free research if you read it properly.",
+  "photos": "work",
+  "caption": "How to collect and sort customer complaints so they guide the product instead of distracting the team. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Collect them in one place",
+      [
+        "One list, not scattered chats."
+      ],
+      "See the pattern."
+    ],
+    [
+      "Tag by problem, not by person",
+      [
+        "Group similar complaints together."
+      ],
+      "Count, do not react."
+    ],
+    [
+      "Ask what they were trying to do",
+      [
+        "The goal behind the complaint matters."
+      ],
+      "Find the job."
+    ],
+    [
+      "Fix the frequent and painful",
+      [
+        "Rare annoyances can wait."
+      ],
+      "Prioritise honestly."
+    ],
+    [
+      "Tell users what changed",
+      [
+        "Closing the loop builds loyalty."
+      ],
+      "Show you listened."
+    ]
+  ]
+}
+
+sin {
+  "title": "Plan a cheap experiment for next week",
+  "hook": "Small tests save months of building the wrong thing.",
+  "photos": "work",
+  "caption": "A weekend template for planning one low cost experiment you can run next week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Pick one question",
+      [
+        "What do you most need to know now?"
+      ],
+      "One at a time."
+    ],
+    [
+      "Choose the cheapest test",
+      [
+        "A landing page, a call, a manual pilot."
+      ],
+      "No code if possible."
+    ],
+    [
+      "Set the success number",
+      [
+        "Decide it before the test starts."
+      ],
+      "No moving goalposts."
+    ],
+    [
+      "Book the time",
+      [
+        "Put the work in next week's calendar."
+      ],
+      "Make it real."
+    ],
+    [
+      "Plan how you will record it",
+      [
+        "A simple sheet with date and result."
+      ],
+      "Evidence for later."
+    ]
+  ]
+}
+
+sin {
+  "title": "Write your founder story in five lines",
+  "hook": "People remember stories better than slides.",
+  "photos": "work",
+  "caption": "A short exercise to explain why you are building your company, for pitches, applications and interviews. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Where you saw the problem",
+      [
+        "A specific moment or experience."
+      ],
+      "Make it real."
+    ],
+    [
+      "Why it stayed with you",
+      [
+        "What made you care enough to act."
+      ],
+      "Show motivation."
+    ],
+    [
+      "What you tried first",
+      [
+        "Early attempts and what you learned."
+      ],
+      "Show learning."
+    ],
+    [
+      "What you are building now",
+      [
+        "In plain words, without jargon."
+      ],
+      "Keep it simple."
+    ],
+    [
+      "Where you want to take it",
+      [
+        "A clear next milestone."
+      ],
+      "End with direction."
+    ]
+  ]
+}

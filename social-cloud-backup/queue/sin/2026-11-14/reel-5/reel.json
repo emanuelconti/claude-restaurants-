@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-14",
+ "title": "How to find a co-founder you can work with",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to find a co-founder you can work with\n\nSkills matter. Working well together matters more.\n\nPractical steps to meet and test a potential co-founder before committing. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 7 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1493857671505-72967e2e2760",
+   "slide": "slide-01.jpg",
+   "match_error": 0.22,
+   "runner_up": 44.24
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-02.jpg",
+   "match_error": 1.67,
+   "runner_up": 39.78
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "replaces": "1519389950473-47ba0277781c",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "replaces": "1488190211105-8b0e65b80b4e",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1442975631115-c4f7b05b8a2c",
+   "slide": "slide-05.jpg",
+   "match_error": 1.12,
+   "runner_up": 26.6
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "replaces": "1517842645767-c639042777db",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Look where builders gather",
+  "Work on something small first",
+  "Talk about money and time early",
+  "Agree on how to decide",
+  "Put it in writing",
+  "end card"
+ ]
+}

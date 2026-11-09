@@ -1,0 +1,791 @@
+sp {
+  "title": "Lunes: una sola prioridad para hoy",
+  "hook": "No tienes que hacerlo todo hoy.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo elegir una única prioridad para el lunes y avanzar sin agobiarte.",
+  "points": [
+    [
+      "Escribe todo lo pendiente",
+      [
+        "Sácalo de la cabeza al papel."
+      ],
+      "Primero vaciar."
+    ],
+    [
+      "Marca lo que importa",
+      [
+        "Lo que tendría más efecto si sale hoy."
+      ],
+      "Solo una."
+    ],
+    [
+      "Bloquea una hora",
+      [
+        "Sin correos ni mensajes."
+      ],
+      "Protege ese tiempo."
+    ],
+    [
+      "Empieza por ahí",
+      [
+        "Antes de lo urgente de otros."
+      ],
+      "Tu prioridad primero."
+    ],
+    [
+      "Celébralo al terminar",
+      [
+        "Un café, un paseo, un mensaje."
+      ],
+      "Premia el avance."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco ideas para que el tiempo te rinda",
+  "hook": "No se trata de hacer más, sino de perder menos.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños cambios para aprovechar mejor el tiempo esta semana sin vivir con el reloj encima.",
+  "points": [
+    [
+      "Agrupa tareas parecidas",
+      [
+        "Correos juntos, llamadas juntas."
+      ],
+      "Menos cambios de foco."
+    ],
+    [
+      "Silencia avisos",
+      [
+        "Mira el móvil cuando tú decidas."
+      ],
+      "Tu atención manda."
+    ],
+    [
+      "Usa bloques cortos",
+      [
+        "Veinticinco minutos y una pausa."
+      ],
+      "Ritmo sostenible."
+    ],
+    [
+      "Di que no con amabilidad",
+      [
+        "No todo cabe en tu semana."
+      ],
+      "Elegir es avanzar."
+    ],
+    [
+      "Revisa el día al final",
+      [
+        "Qué salió y qué pasa a mañana."
+      ],
+      "Cierra el ciclo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pausa de café: cinco minutos que cuentan",
+  "hook": "Una pausa bien hecha vale más que una hora a medias.",
+  "photos": "cafe",
+  "point_sets": [
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe",
+    "cafe"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Cómo convertir la pausa del café en un momento que de verdad te recargue durante la semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Levántate de la mesa",
+      [
+        "Cambiar de sitio ya es descansar."
+      ],
+      "Muévete un poco."
+    ],
+    [
+      "Invita a un compañero",
+      [
+        "Cinco minutos de charla mejoran el día."
+      ],
+      "Compañía que suma."
+    ],
+    [
+      "Deja el móvil",
+      [
+        "El café no necesita pantalla."
+      ],
+      "Desconexión real."
+    ],
+    [
+      "Respira hondo tres veces",
+      [
+        "Antes del primer sorbo."
+      ],
+      "Vuelve al presente."
+    ],
+    [
+      "Vuelve con una idea clara",
+      [
+        "Qué harás al sentarte."
+      ],
+      "Pausa con propósito."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo no llevarte el trabajo a casa",
+  "hook": "Salir del trabajo también es una habilidad.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Hábitos para cerrar la jornada y llegar a casa con la cabeza libre, empezando este lunes.",
+  "points": [
+    [
+      "Cierra con una lista",
+      [
+        "Apunta lo que queda para mañana."
+      ],
+      "Fuera de la cabeza."
+    ],
+    [
+      "Ordena la mesa",
+      [
+        "Un final visible para el día."
+      ],
+      "Ritual de cierre."
+    ],
+    [
+      "Cambia de ambiente al llegar",
+      [
+        "Otra luz, otra música, otro ritmo."
+      ],
+      "Señal clara."
+    ],
+    [
+      "Camina un tramo",
+      [
+        "El trayecto también desconecta."
+      ],
+      "Paso a paso."
+    ],
+    [
+      "Haz algo que te guste",
+      [
+        "Aunque sean diez minutos."
+      ],
+      "Tu tiempo es tuyo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Comida de lunes con compañeros",
+  "hook": "Comer juntos el lunes hace la semana más ligera.",
+  "photos": "restaurant",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para que la comida del lunes con compañeros sea un buen comienzo de semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige un sitio cerca",
+      [
+        "Cinco minutos andando y nadie se queda fuera."
+      ],
+      "Fácil para todos."
+    ],
+    [
+      "Menú del día",
+      [
+        "Rápido, rico y sin complicaciones."
+      ],
+      "Sin pensar demasiado."
+    ],
+    [
+      "Habla del fin de semana",
+      [
+        "No todo tiene que ser trabajo."
+      ],
+      "Conócete con el equipo."
+    ],
+    [
+      "Invita a quien llegó hace poco",
+      [
+        "Incluir cuesta poco y se recuerda."
+      ],
+      "Abre el círculo."
+    ],
+    [
+      "Paseo de vuelta",
+      [
+        "Un rodeo corto antes de volver."
+      ],
+      "Aire antes de la tarde."
+    ]
+  ]
+}
+
+sp {
+  "title": "Mensajes para animar a alguien este lunes",
+  "hook": "Un mensaje a tiempo puede cambiar una semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Frases sencillas para mandar a alguien que empieza la semana con cuesta arriba.",
+  "points": [
+    [
+      "Estoy aquí si me necesitas",
+      [
+        "Sin presión, solo presencia."
+      ],
+      "Saber que alguien está."
+    ],
+    [
+      "Esta semana te va a salir",
+      [
+        "Confiar en alguien le da fuerza."
+      ],
+      "Cree en esa persona."
+    ],
+    [
+      "¿Un café esta semana?",
+      [
+        "Un plan concreto vale más que un ánimo."
+      ],
+      "Pon fecha."
+    ],
+    [
+      "Me acordé de ti",
+      [
+        "No hace falta motivo."
+      ],
+      "Lo simple llega."
+    ],
+    [
+      "Paso a paso",
+      [
+        "Nadie tiene que resolverlo todo hoy."
+      ],
+      "Quita peso."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de lunes por la tarde que suman",
+  "hook": "El lunes también puede tener algo que esperar.",
+  "photos": "city",
+  "point_sets": [
+    "city",
+    "city",
+    "city",
+    "city",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas de planes cortos para el lunes por la tarde que te dan energía para el resto de la semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Una clase o un deporte",
+      [
+        "Moverte después del trabajo despeja."
+      ],
+      "Energía para la semana."
+    ],
+    [
+      "Un café con un amigo",
+      [
+        "Una hora basta para ponerse al día."
+      ],
+      "Corto pero bueno."
+    ],
+    [
+      "Cocina algo especial",
+      [
+        "Un lunes no tiene por qué ser aburrido."
+      ],
+      "Date un gusto."
+    ],
+    [
+      "Paseo en bici",
+      [
+        "Un recorrido corto por la ciudad."
+      ],
+      "Libertad sobre ruedas."
+    ],
+    [
+      "Cena temprana fuera",
+      [
+        "Una mesa tranquila y vuelta pronto."
+      ],
+      "Lunes con algo bueno."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cierra el lunes con calma",
+  "hook": "Lo hecho hoy ya cuenta.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Una rutina breve para terminar el lunes en paz y dormir mejor. Guárdala para toda la semana.",
+  "points": [
+    [
+      "Repasa tres cosas buenas",
+      [
+        "Pequeñas o grandes, todas cuentan."
+      ],
+      "Mira lo que salió."
+    ],
+    [
+      "Prepara mañana en dos minutos",
+      [
+        "Lo justo para no pensar más."
+      ],
+      "Y luego suelta."
+    ],
+    [
+      "Una infusión sin pantallas",
+      [
+        "La cabeza baja el ritmo."
+      ],
+      "Calma antes de dormir."
+    ],
+    [
+      "Escribe lo que te preocupa",
+      [
+        "En papel pesa menos."
+      ],
+      "Fuera de la cabeza."
+    ],
+    [
+      "Duerme a tu hora",
+      [
+        "La semana se construye descansando."
+      ],
+      "Descansar es lo primero."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to present your team on one slide",
+  "hook": "Investors back people before products.",
+  "photos": "work",
+  "caption": "How to show why your team can build this company, in one clear slide. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Name and role",
+      [
+        "Who does what, in plain words."
+      ],
+      "Clear roles."
+    ],
+    [
+      "One relevant fact each",
+      [
+        "Experience that matters for this problem."
+      ],
+      "Relevance over prestige."
+    ],
+    [
+      "Show the gaps you know",
+      [
+        "And how you plan to fill them."
+      ],
+      "Honesty reads well."
+    ],
+    [
+      "Mention advisors carefully",
+      [
+        "Only those who are really involved."
+      ],
+      "No borrowed names."
+    ],
+    [
+      "Keep it visual",
+      [
+        "Photos and short lines, not CVs."
+      ],
+      "Easy to scan."
+    ]
+  ]
+}
+
+sin {
+  "title": "Write a cold email an investor will read",
+  "hook": "Short, specific and easy to forward.",
+  "photos": "work",
+  "caption": "How to write a first email to an investor you have no connection to. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "A subject line with substance",
+      [
+        "Sector, stage and one number."
+      ],
+      "Earn the open."
+    ],
+    [
+      "Why them",
+      [
+        "Mention a relevant investment or focus."
+      ],
+      "Show research."
+    ],
+    [
+      "Three lines on the company",
+      [
+        "Problem, solution, traction."
+      ],
+      "Keep it tight."
+    ],
+    [
+      "A clear ask",
+      [
+        "A twenty minute call next week."
+      ],
+      "Make it easy."
+    ],
+    [
+      "Attach nothing heavy",
+      [
+        "A link to a short deck is enough."
+      ],
+      "Respect their time."
+    ]
+  ]
+}
+
+sin {
+  "title": "Monday pipeline check for founders",
+  "hook": "What you do not track on Monday slips by Friday.",
+  "photos": "work",
+  "caption": "A weekly review of sales and investor conversations to keep momentum. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "List every open conversation",
+      [
+        "Customers, partners, investors."
+      ],
+      "See the whole pipeline."
+    ],
+    [
+      "Mark the next step for each",
+      [
+        "A date and an action."
+      ],
+      "No vague follow ups."
+    ],
+    [
+      "Drop what is stuck",
+      [
+        "Some leads will not move."
+      ],
+      "Focus your energy."
+    ],
+    [
+      "Spot the bottleneck",
+      [
+        "Where do conversations stall?"
+      ],
+      "Fix the stage."
+    ],
+    [
+      "Celebrate one move forward",
+      [
+        "Progress keeps the team going."
+      ],
+      "Notice the wins."
+    ]
+  ]
+}
+
+sin {
+  "title": "Find your local startup ecosystem",
+  "hook": "Every city has more support than it first appears.",
+  "photos": "work",
+  "caption": "How to map the people and programmes that can help an early startup in your city. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with universities",
+      [
+        "Labs, incubators and alumni networks."
+      ],
+      "Close to talent."
+    ],
+    [
+      "Find founder meetups",
+      [
+        "Regular events where builders talk."
+      ],
+      "Show up often."
+    ],
+    [
+      "Check public programmes",
+      [
+        "Regional and national schemes vary a lot."
+      ],
+      "Read the criteria."
+    ],
+    [
+      "Meet other founders",
+      [
+        "They share contacts and warnings."
+      ],
+      "Peers help most."
+    ],
+    [
+      "Give back early",
+      [
+        "Help others and people help you."
+      ],
+      "Build goodwill."
+    ]
+  ]
+}
+
+sin {
+  "title": "Price your product before it feels finished",
+  "hook": "Waiting for the perfect product delays the real test.",
+  "photos": "work",
+  "caption": "Why early pricing teaches you more than free pilots, and how to start. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Charge something",
+      [
+        "Even a small price filters real interest."
+      ],
+      "Payment is a signal."
+    ],
+    [
+      "Anchor on value",
+      [
+        "What does it save or earn the customer?"
+      ],
+      "Price the outcome."
+    ],
+    [
+      "Offer one simple plan",
+      [
+        "Too many options slow decisions."
+      ],
+      "Keep it simple."
+    ],
+    [
+      "Promise to adjust",
+      [
+        "Early customers accept change if you are honest."
+      ],
+      "Be transparent."
+    ],
+    [
+      "Track who says no and why",
+      [
+        "Objections tell you what to fix."
+      ],
+      "Learn from no."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to handle a hard question in a pitch",
+  "hook": "A good answer to a hard question can win the room.",
+  "photos": "work",
+  "caption": "How to respond calmly to difficult investor questions without losing the pitch. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Pause before answering",
+      [
+        "A second of thought looks confident."
+      ],
+      "Calm first."
+    ],
+    [
+      "Answer the actual question",
+      [
+        "Not the one you prepared."
+      ],
+      "Listen closely."
+    ],
+    [
+      "Admit what you do not know",
+      [
+        "Then say how you will find out."
+      ],
+      "Honesty wins."
+    ],
+    [
+      "Use one fact",
+      [
+        "A number or example beats a speech."
+      ],
+      "Be concrete."
+    ],
+    [
+      "Follow up in writing",
+      [
+        "Send the fuller answer after."
+      ],
+      "Turn doubt into trust."
+    ]
+  ]
+}
+
+sin {
+  "title": "Start the week with one clear goal",
+  "hook": "One clear goal beats ten good intentions.",
+  "photos": "work",
+  "caption": "A Monday habit for founders: choose the one result that would make this week a success. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask what matters most",
+      [
+        "If only one thing moved this week."
+      ],
+      "Find the lever."
+    ],
+    [
+      "Make it measurable",
+      [
+        "A number, a date or a decision."
+      ],
+      "Know when it is done."
+    ],
+    [
+      "Tell your team",
+      [
+        "Shared goals get support."
+      ],
+      "Say it out loud."
+    ],
+    [
+      "Protect time for it",
+      [
+        "Block the hours first."
+      ],
+      "Calendar before chat."
+    ],
+    [
+      "Check it on Friday",
+      [
+        "Did it move? Why or why not?"
+      ],
+      "Learn weekly."
+    ]
+  ]
+}
+
+sin {
+  "title": "Common mistakes in grant applications",
+  "hook": "Good projects lose points on avoidable details.",
+  "photos": "work",
+  "caption": "Frequent mistakes in startup grant and programme applications, and how to avoid them. Always follow each call's official rules. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Missing the eligibility check",
+      [
+        "Read who can apply before you write."
+      ],
+      "Check first."
+    ],
+    [
+      "Answering a different question",
+      [
+        "Reuse text only when it fits."
+      ],
+      "Answer what is asked."
+    ],
+    [
+      "Vague impact claims",
+      [
+        "Say what will change and how you will measure it."
+      ],
+      "Be specific."
+    ],
+    [
+      "A budget that does not match the plan",
+      [
+        "Every cost should link to an activity."
+      ],
+      "Keep it consistent."
+    ],
+    [
+      "Submitting at the last minute",
+      [
+        "Portals slow down near deadlines."
+      ],
+      "Submit early."
+    ]
+  ]
+}

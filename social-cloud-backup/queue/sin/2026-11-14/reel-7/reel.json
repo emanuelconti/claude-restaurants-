@@ -1,0 +1,54 @@
+{
+ "date": "2026-11-14",
+ "title": "Plan a cheap experiment for next week",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Plan a cheap experiment for next week\n\nSmall tests save months of building the wrong thing.\n\nA weekend template for planning one low cost experiment you can run next week. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 383 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-01.jpg",
+   "match_error": 0.14,
+   "runner_up": 46.84
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-02.jpg",
+   "match_error": 0.16,
+   "runner_up": 24.02
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "replaces": "1563013544-824ae1b704d3",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "replaces": "1488190211105-8b0e65b80b4e",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-05.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-06.jpg",
+   "match_error": 1.08,
+   "runner_up": 36.02
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Pick one question",
+  "Choose the cheapest test",
+  "Set the success number",
+  "Book the time",
+  "Plan how you will record it",
+  "end card"
+ ]
+}

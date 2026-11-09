@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-15",
+ "title": "Domingo lento: permiso para descansar",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Domingo lento: permiso para descansar\n\nNo tienes que ganarte el descanso.\n\nUn recordatorio para el domingo: descansar es parte de avanzar. Guárdalo y compártelo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 871 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1497935586351-b67a49e012bf",
+   "slide": "slide-01.jpg",
+   "match_error": 0.21,
+   "runner_up": 18.54
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg",
+   "match_error": 1.82,
+   "runner_up": 48.58
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-03.jpg",
+   "match_error": 0.22,
+   "runner_up": 55.75
+  },
+  {
+   "unsplash": "1528712306091-ed0763094c98",
+   "slide": "slide-04.jpg",
+   "match_error": 1.18,
+   "runner_up": 51.28
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-05.jpg",
+   "match_error": 1.75,
+   "runner_up": 31.24
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-06.jpg",
+   "match_error": 1.4,
+   "runner_up": 31.28
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Empieza sin plan",
+  "Prepara un buen café",
+  "Haz algo con las manos",
+  "Sal aunque sea un rato",
+  "No compares tu domingo",
+  "end card"
+ ]
+}

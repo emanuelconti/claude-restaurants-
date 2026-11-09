@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-15",
+ "title": "Escribe lo que quieres para esta semana",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Escribe lo que quieres para esta semana\n\nLo que escribes se vuelve más real.\n\nUn ejercicio de cinco minutos para el domingo: escribe lo que quieres sentir y conseguir esta semana.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 592 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 29.16
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-02.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-04.jpg",
+   "match_error": 0.61,
+   "runner_up": 31.22
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-05.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-06.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Cómo quieres sentirte",
+  "Una cosa que quieres lograr",
+  "Una persona a la que ver",
+  "Algo que vas a dejar",
+  "Una frase para el lunes",
+  "end card"
+ ]
+}

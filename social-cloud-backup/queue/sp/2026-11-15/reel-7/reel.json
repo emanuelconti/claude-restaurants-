@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-15",
+ "title": "Terrazas y atardeceres: planes de domingo por la tarde",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Terrazas y atardeceres: planes de domingo por la tarde\n\nLa tarde del domingo pide luz, calma y buena compañía.\n\nIdeas para disfrutar la tarde del domingo fuera de casa antes de empezar la semana. https://www.socialperkses.com/\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n¿Tienes un sitio favorito? Llévate a un amigo: socialperkses.com\n\n#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 22 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1559339352-11d035aa65de",
+   "slide": "slide-01.jpg",
+   "match_error": 0.23,
+   "runner_up": 57.3
+  },
+  {
+   "unsplash": "1554118811-1e0d58224f24",
+   "slide": "slide-02.jpg",
+   "match_error": 0.69,
+   "runner_up": 39.1
+  },
+  {
+   "unsplash": "1511527661048-7fe73d85e9a4",
+   "slide": "slide-03.jpg",
+   "match_error": 0.57,
+   "runner_up": 26.84
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-04.jpg",
+   "match_error": 1.03,
+   "runner_up": 46.09
+  },
+  {
+   "unsplash": "1514933651103-005eec06c04b",
+   "slide": "slide-05.jpg",
+   "match_error": 0.55,
+   "runner_up": 21.35
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-06.jpg",
+   "match_error": 1.71,
+   "runner_up": 34.7
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Una terraza al sol",
+  "Un mirador al atardecer",
+  "Merienda en una cafetería",
+  "Tapas tempranas",
+  "Vuelta a casa paseando",
+  "end card"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-14",
+ "title": "What a first accelerator application should show",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "What a first accelerator application should show\n\nEvaluators read hundreds. Make yours easy to follow.\n\nPoints to cover in a first accelerator or incubator application. Always read each programme's own criteria. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 54 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1496181133206-80ce9b88a853",
+   "slide": "slide-01.jpg",
+   "match_error": 0.09,
+   "runner_up": 22.09
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "replaces": "1484480974693-6ca0a78fb36b",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-03.jpg",
+   "match_error": 0.61,
+   "runner_up": 33.0
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "replaces": "1506784983877-45594efa4cbe",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  },
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "slide": "slide-05.jpg",
+   "match_error": 0.9,
+   "runner_up": 37.59
+  },
+  {
+   "unsplash": "1541807084-5c52b6b3adef",
+   "replaces": "1517842645767-c639042777db",
+   "reason": "variety: same 'work' photo set as the reviewed slide"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "A clear problem",
+  "Why your team",
+  "Evidence so far",
+  "What you will do in the programme",
+  "Honest open questions",
+  "end card"
+ ]
+}
