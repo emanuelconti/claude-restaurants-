@@ -53,7 +53,8 @@ for v in cfg.values():
  if len(str(v))>15 and os.environ.get('GITHUB_ACTIONS'):print('::add-mask::'+str(v))
 # Pinterest goes live only when its credentials are in SOCIAL_BACKUP_ENV (owner, 9 November: Standard access approved).
 PINTEREST_READY=bool(cfg.get('PINTEREST_BOARD_GMS') and (cfg.get('PINTEREST_TOKEN_GMS') or (cfg.get('PINTEREST_REFRESH_TOKEN_GMS') and cfg.get('PINTEREST_APP_SECRET_GMS'))))
-cfg.update(GMS_PINTEREST_ENABLED='1' if PINTEREST_READY else '0',GMS_TIKTOK_ENABLED='0',GMS_YOUTUBE_PRIVACY='public')
+# YouTube and Threads are approved channels (SOCIAL_MARKET_RULES.md): switched on here, not by a flag in the secret.
+cfg.update(GMS_YOUTUBE_ENABLED='1',GMS_THREADS_ENABLED='1',GMS_PINTEREST_ENABLED='1' if PINTEREST_READY else '0',GMS_TIKTOK_ENABLED='0',GMS_YOUTUBE_PRIVACY='public')
 (R/'private').mkdir(exist_ok=True);(R/'private/environment.json').write_text(json.dumps(cfg));os.chmod(R/'private/environment.json',0o600)
 def run(b,script,*args,quiet=False):
  p=subprocess.run([sys.executable,str(R/'run.py'),b,script,*args],capture_output=True,text=True)
