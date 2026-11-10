@@ -286,7 +286,7 @@
   "sin-2026-11-10-3:ig": "confirmed remotely: What a small round needs to fund",
   "gms-2026-11-10-7:ig": "confirmed remotely: Friendship on a rainy Singapore evening",
   "gms-2026-11-10-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Dfj9fY8FoIx",
-  "gms-2026-11-10-7:facebook": "held: publication attempt started; reconcile remotely before retry",
+  "gms-2026-11-10-7:facebook": "skipped: verified pre-upload daily-cap return in run 42819957236 (2026-11-10T12:58:55Z); no upload session or feed POST; expired market day, never replay",
   "sin-2026-11-10-4:ig": "confirmed remotely: A warm introduction is only the first step",
   "gms-2026-11-10-8:ig": "confirmed remotely: Little things worth keeping from today",
   "gms-2026-11-10-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228555138/",
