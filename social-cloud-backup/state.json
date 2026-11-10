@@ -284,7 +284,10 @@
   "gms-2026-11-10-6:facebook": "confirmed remotely: https://www.facebook.com/reel/989282767586772/",
   "sp-2026-11-10-2:ig": "confirmed remotely: La mesa donde caben todos",
   "sin-2026-11-10-3:ig": "confirmed remotely: What a small round needs to fund",
-  "gms-2026-11-10-7:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/Dfj9XGLCFH9/",
-  "gms-2026-11-10-2:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/Dfj9fY8FoIx",
-  "gms-2026-11-10-7:facebook": "held: publication attempt started; reconcile remotely before retry"
+  "gms-2026-11-10-7:ig": "confirmed remotely: Friendship on a rainy Singapore evening",
+  "gms-2026-11-10-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Dfj9fY8FoIx",
+  "gms-2026-11-10-7:facebook": "held: publication attempt started; reconcile remotely before retry",
+  "sin-2026-11-10-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfkC81fDJDz/",
+  "gms-2026-11-10-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfkDDHMDXfc/",
+  "gms-2026-11-10-3:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'What to say when her plans change', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 6 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821228555138/"
 }
