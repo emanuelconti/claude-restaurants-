@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A useful end-of-day founder note",
+      "stamp": "2026-11-10T21:38:01+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfkyC-ll8Uy/"
+    },
+    {
+      "title": "When a programme looks perfect for your startup",
+      "stamp": "2026-11-10T20:51:23+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfksrEPtPWn/"
+    },
+    {
+      "title": "Prepare the evidence behind one slide",
+      "stamp": "2026-11-10T18:26:15+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfkcG7LnBDV/"
+    },
+    {
+      "title": "Free users and paying customers tell different stories",
+      "stamp": "2026-11-10T16:24:45+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfkOJ7zovCd/"
+    },
+    {
+      "title": "A warm introduction is only the first step",
+      "stamp": "2026-11-10T14:46:25+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfkC81fDJDz/"
+    },
+    {
+      "title": "What a small round needs to fund",
+      "stamp": "2026-11-10T13:15:02+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfj4cwUtJi4/"
+    },
+    {
+      "title": "A founder update people can actually read",
+      "stamp": "2026-11-10T10:44:07+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfjnN73G1hg/"
+    },
+    {
+      "title": "Before you call a pilot successful",
+      "stamp": "2026-11-10T09:05:32+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfjb5SWgFqn/"
+    },
+    {
       "title": "5 ways to end a working day with a useful handover",
       "stamp": "2026-11-09T21:46:44+01:00",
       "local_hour": 21,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfVTvYugczQ/"
-    },
-    {
-      "title": "5 questions before hiring for a funded project",
-      "stamp": "2026-11-04T18:25:52+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfU_SYdGh44/"
-    },
-    {
-      "title": "5 checks before sharing your financial model",
-      "stamp": "2026-11-04T16:34:46+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUyk_ZFPRE/"
-    },
-    {
-      "title": "5 ways to make your application answers clearer",
-      "stamp": "2026-11-04T16:26:53+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUxrVujN4-/"
-    },
-    {
-      "title": "5 things a founder can clarify before a finance call",
-      "stamp": "2026-11-04T15:09:12+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUoyVtAS6m/"
-    },
-    {
-      "title": "5 questions to clarify your next business milestone",
-      "stamp": "2026-11-04T10:51:59+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfULV8zjdFh/"
-    },
-    {
-      "title": "5 checks before adding a grant to your plan",
-      "stamp": "2026-11-04T08:53:58+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfT914NDr_c/"
-    },
-    {
-      "title": "5 questions before describing your traction",
-      "stamp": "2026-11-03T23:24:08+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfS8oDHgbqU/"
-    },
-    {
-      "title": "5 distinctions that make a forecast easier to read",
-      "stamp": "2026-11-03T20:45:51+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfSqhMSGCL7/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-10",
+  "market_date": "2026-11-11",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -431,8 +431,8 @@
     },
     {
       "local_hour": 12,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
@@ -441,18 +441,18 @@
     },
     {
       "local_hour": 14,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 15,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 15,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 16,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 17,
@@ -476,18 +476,13 @@
     },
     {
       "local_hour": 21,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 6,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 22,
       "posts": 1,
       "median_public_interactions": 1
-    },
-    {
-      "local_hour": 23,
-      "posts": 1,
-      "median_public_interactions": 0
     }
   ],
   "timing_status": "editor review required before changing schedule"

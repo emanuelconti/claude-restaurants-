@@ -6,6 +6,70 @@
   "timezone": "Europe/Madrid",
   "posts": [
     {
+      "title": "Del buen servicio a la recomendaci\u00f3n",
+      "stamp": "2026-11-10T23:00:13+01:00",
+      "local_hour": 23,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfk7dF7j_Ob/"
+    },
+    {
+      "title": "La quedada que incluye a quien acaba de llegar",
+      "stamp": "2026-11-10T20:50:04+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfkshLPigKS/"
+    },
+    {
+      "title": "Horas tranquilas, experiencias bien pensadas",
+      "stamp": "2026-11-10T19:14:29+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfkhoEdFKnn/"
+    },
+    {
+      "title": "Qu\u00e9 hace que quieras volver a un hotel",
+      "stamp": "2026-11-10T18:25:13+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfkb83lCTDE/"
+    },
+    {
+      "title": "Un bar tranquilo tambi\u00e9n puede ser el plan",
+      "stamp": "2026-11-10T17:30:34+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfkVvCgl1hE/"
+    },
+    {
+      "title": "Un martes de tapas con amigos",
+      "stamp": "2026-11-10T15:36:55+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfkIr0hGOn9/"
+    },
+    {
+      "title": "La mesa donde caben todos",
+      "stamp": "2026-11-10T13:14:12+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfj4Y1SH_aF/"
+    },
+    {
+      "title": "Un plan entre clases, sin complicarse",
+      "stamp": "2026-11-10T09:55:19+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfjhl2vkpB2/"
+    },
+    {
       "title": "5 detalles que hacen m\u00e1s c\u00f3moda una tarde en el hotel",
       "stamp": "2026-11-09T23:21:02+01:00",
       "local_hour": 23,
@@ -340,79 +404,15 @@
       "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfVEumvDpgN/"
-    },
-    {
-      "title": "5 maneras de hacer sentir parte a alguien nuevo",
-      "stamp": "2026-11-04T18:24:35+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfU_Jc3mrNU/"
-    },
-    {
-      "title": "5 cosas que preguntar antes de elegir bar",
-      "stamp": "2026-11-04T17:21:57+01:00",
-      "local_hour": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfU3-LOjimY/"
-    },
-    {
-      "title": "5 planes para quedar sin montar un gran evento",
-      "stamp": "2026-11-04T16:25:57+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUxkAMDfGA/"
-    },
-    {
-      "title": "5 detalles de una cena que se recuerdan",
-      "stamp": "2026-11-04T15:08:09+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUoqQhgUXD/"
-    },
-    {
-      "title": "5 formas de sacar el plan del grupo de WhatsApp",
-      "stamp": "2026-11-04T10:19:30+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfUHn6gk7ux/"
-    },
-    {
-      "title": "5 detalles \u00fatiles en una tienda de barrio",
-      "stamp": "2026-11-03T23:33:23+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfS9sMqkke6/"
-    },
-    {
-      "title": "5 formas de orientar a alguien nuevo en tu gimnasio",
-      "stamp": "2026-11-03T23:31:18+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfS9ckTGlsp/"
-    },
-    {
-      "title": "5 detalles que ayudan al llegar a un hotel",
-      "stamp": "2026-11-03T19:09:05+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfSfcE_mlqW/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-10",
+  "market_date": "2026-11-11",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 6,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 9,
@@ -421,38 +421,38 @@
     },
     {
       "local_hour": 10,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 12,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 13,
+      "posts": 5,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 15,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 15,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 16,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 17,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 18,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.5
     },
     {
       "local_hour": 19,
@@ -461,8 +461,8 @@
     },
     {
       "local_hour": 20,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 21,
@@ -471,8 +471,8 @@
     },
     {
       "local_hour": 23,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     }
   ],
   "timing_status": "editor review required before changing schedule"
