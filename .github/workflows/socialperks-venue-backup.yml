@@ -28,6 +28,5 @@ jobs:
       - name: Guarded private Gmail queue
         env:
           SOCIALPERKS_GMAIL_APP_PASSWORD: ${{ secrets.SOCIALPERKS_GMAIL_APP_PASSWORD }}
-          SOCIALPERKS_OUTREACH_IMPORT: ${{ secrets.SOCIALPERKS_OUTREACH_IMPORT }}
           OUTREACH_MODE: ${{ github.event_name == 'schedule' && 'send' || inputs.mode }}
         run: python3 scripts/outreach_cloud.py --mode "$OUTREACH_MODE"

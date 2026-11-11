@@ -1,7 +1,7 @@
 """Owner-authorised venue fallback. Private reviewed queue and history stay in Gmail.
 
-Default/check never writes mail or sends. Import consumes an ephemeral encrypted
-Actions secret into recipient-free Gmail drafts. Send obeys market hours and
+Default/check never writes mail or sends. Import consumes a reviewed recipient-free Gmail draft
+into private queue drafts, without sending data to GitHub secrets. Send obeys market hours and
 uses a durable inflight marker before SMTP; uncertain outcomes never retry.
 """
 from __future__ import annotations
@@ -528,10 +528,15 @@ def run(mode, store, credential, now):
     playbook = store.playbook()
     queue = store.queue(today)
     if mode == 'import':
-        payload = json.loads(os.environ.get('SOCIALPERKS_OUTREACH_IMPORT', 'null'))
+        imports = [i for i in store.items('Drafts', 'HEADER Subject ' + quoted('SocialPerks reviewed cloud import')) if str(i['msg'].get('Subject','')) == 'SocialPerks reviewed cloud import']
+        require(len(imports) == 1, 'private_import_missing_or_ambiguous')
+        source = imports[0]
+        require(not addresses(source['msg']) and SELF in addresses(source['msg'], ('From',)), 'import_draft_not_internal')
+        payload = json.loads(text(source['msg']))
         require(isinstance(payload, dict) and isinstance(payload.get('policy'), str), 'private_policy_required')
         store.import_policy(payload['policy'], today)
         import_queue(store, payload.get('entries'), today)
+        store.label(source, add=('\\Trash',))
         return 'imported_private_reviewed_drafts'
     policy_bytes = store.policy(today)
     checker_bytes = Path('scripts/outreach/verify_address.py').read_bytes()
