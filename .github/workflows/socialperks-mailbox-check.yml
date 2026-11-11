@@ -16,10 +16,17 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.SOCIALPERKS_GMAIL_APP_PASSWORD }}
         run: |
           python3 - <<'PYCODE'
-          import imaplib, os, sys
-          password = ''.join(os.environ.get('GMAIL_APP_PASSWORD', '').split())
+          import imaplib, os, sys, unicodedata
+          raw_password = os.environ.get('GMAIL_APP_PASSWORD', '')
+          password = ''.join(c for c in raw_password if not c.isspace() and unicodedata.category(c) != 'Cf').strip("\"'`")
           if not password:
               print('MAILBOX_ACCESS=missing_dedicated_credential')
+              sys.exit(1)
+          if password == 'SOCIALPERKS_GMAIL_APP_PASSWORD':
+              print('MAILBOX_ACCESS=secret_name_copied_instead_of_google_password')
+              sys.exit(1)
+          if password.lower() == 'socialperks.team@gmail.com':
+              print('MAILBOX_ACCESS=email_copied_instead_of_google_password')
               sys.exit(1)
           if len(password) != 16 or not password.isascii() or not password.isalnum():
               print('MAILBOX_ACCESS=malformed_dedicated_app_password')
