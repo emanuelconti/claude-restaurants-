@@ -1,4 +1,6 @@
 import copy
+import base64
+import json
 import io
 import contextlib
 import datetime as dt
@@ -16,6 +18,16 @@ def entry():
     q['content_sha256']=o.digest(q['subject']+'\n'+q['body'])
     return q
 class Boundaries(TestCase):
+    def test_import_roundtrip_with_mail_wrapping(self):
+        raw=json.dumps({'policy':'A < B, https://example.org/','entries':[]}).encode()
+        encoded=base64.b64encode(raw).decode()
+        wrapped='\n'.join(encoded[i:i+35] for i in range(0,len(encoded),35))
+        value='SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1:'+o.digest(raw)+'\n'+wrapped
+        self.assertEqual(o.decode_private_import(value)['policy'],'A < B, https://example.org/')
+    def test_corrupt_import_never_approved(self):
+        raw=b'{}'
+        with self.assertRaises(o.Hold):
+            o.decode_private_import('SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1:'+'0'*64+'\n'+base64.b64encode(raw).decode())
     def test_valid(self): self.assertEqual(o.validate_entry(entry(),DAY)['city'],'paris')
     def test_unapproved(self):
         q=entry();q['approved']=False

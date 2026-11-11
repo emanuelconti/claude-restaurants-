@@ -7,6 +7,8 @@ uses a durable inflight marker before SMTP; uncertain outcomes never retry.
 from __future__ import annotations
 
 import argparse
+import base64
+import binascii
 import datetime as dt
 import email
 import email.policy
@@ -216,6 +218,19 @@ def validate_entry(q, today):
     require(q.get('content_sha256') == digest(subject + '\n' + body), 'reviewed_copy_changed')
     require(q.get('hypothesis'), 'daily_hypothesis_missing')
     return q
+
+
+def decode_private_import(value):
+    parts = value.strip().split(':', 1)
+    require(len(parts) == 2 and parts[0] == 'SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1', 'import_envelope_missing')
+    checksum, separator, encoded = parts[1].partition('\n')
+    require(separator and re.fullmatch('[a-f0-9]{64}', checksum), 'import_envelope_invalid')
+    try:
+        raw = base64.b64decode(''.join(encoded.split()), validate=True)
+        require(digest(raw) == checksum, 'private_import_changed')
+        return json.loads(raw)
+    except (binascii.Error, ValueError, UnicodeError):
+        raise Hold('private_import_encoding_invalid') from None
 
 
 class Gmail:
@@ -533,7 +548,7 @@ def run(mode, store, credential, now):
         require(len(imports) == 1, 'private_import_missing_or_ambiguous')
         source = imports[0]
         require(not addresses(source['msg']) and SELF in addresses(source['msg'], ('From',)), 'import_draft_not_internal')
-        payload = json.loads(text(source['msg']))
+        payload = decode_private_import(text(source['msg']))
         require(isinstance(payload, dict) and isinstance(payload.get('policy'), str), 'private_policy_required')
         store.import_policy(payload['policy'], today)
         import_queue(store, payload.get('entries'), today)
