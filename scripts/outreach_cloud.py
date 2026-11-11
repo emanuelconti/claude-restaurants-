@@ -266,7 +266,7 @@ class Gmail:
             require(len(values) == 1, 'history_fetch_incomplete')
             metadata, body = values[0]
             result.append({'folder': folder, 'uid': uid, 'msg': email.message_from_bytes(body, policy=email.policy.default),
-                           'raw': body, 'labels': metadata.decode('ascii', 'replace')})
+                           'raw': body, 'labels': (metadata + b' ' + b' '.join(r for r in rows if isinstance(r, bytes))).decode('ascii', 'replace')})
         return result
 
     def label(self, item, add=(), remove=()):

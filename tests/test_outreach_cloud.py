@@ -29,6 +29,13 @@ class Boundaries(TestCase):
         raw=b'{}'
         with self.assertRaises(o.Hold):
             o.decode_private_import('SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1:'+'0'*64+'\n'+base64.b64encode(raw).decode())
+    def test_gmail_fetch_metadata_after_body_literal(self):
+        store=o.Gmail.__new__(o.Gmail);store.client=MagicMock();store.select=MagicMock()
+        body=b'From: socialperks.team@gmail.com\r\nTo: hello@example.org\r\n\r\nPrivate body'
+        store.client.uid.side_effect=[('OK',[b'4']),('OK',[(b'4 (UID 4 BODY[] {99}',body),b' X-GM-LABELS ("outreach/venue") X-GM-THRID 1234)'])]
+        item=store.items('Sent')[0]
+        self.assertIn('outreach/venue',item['labels']);self.assertIn('X-GM-THRID 1234',item['labels'])
+        self.assertNotIn('Private body',item['labels'])
     def test_real_to_without_cc_bcc_is_preserved(self):
         m=EmailMessage();m['To']='bienvenue@example.org'
         self.assertEqual(o.addresses(m),{'bienvenue@example.org'})
