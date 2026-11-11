@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-11T00:21:23+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-11T03:05:35+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -301,5 +301,8 @@
   "sin-2026-11-10-8:ig": "confirmed remotely: A useful end-of-day founder note",
   "sp-2026-11-10-8:ig": "confirmed remotely: Del buen servicio a la recomendaci\u00f3n",
   "gms-2026-11-11-1:ig": "confirmed remotely: How to invite the quiet friend",
-  "gms-2026-11-11-1:facebook": "confirmed remotely: https://www.facebook.com/reel/3022580281467640/"
+  "gms-2026-11-11-1:facebook": "confirmed remotely: https://www.facebook.com/reel/3022580281467640/",
+  "gms-2026-11-11-2:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfleWGllPFJ/",
+  "gms-2026-11-11-2:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1438733601747768",
+  "gms-2026-11-11-2:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Five gentle check-ins that are not just how are you', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 7 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821228604190/"
 }
