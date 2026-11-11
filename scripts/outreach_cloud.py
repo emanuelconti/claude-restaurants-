@@ -26,6 +26,7 @@ import socket
 import subprocess
 import sys
 import tempfile
+import traceback
 import time
 import unicodedata
 import urllib.request
@@ -612,7 +613,10 @@ def main():
         print('OUTREACH_HOLD=' + str(error))
     except (imaplib.IMAP4.error, smtplib.SMTPException):
         print('OUTREACH_HOLD=mail_service_error')
-    except Exception:
+    except Exception as error:
+        frames = traceback.extract_tb(error.__traceback__)
+        frame = next((f for f in reversed(frames) if f.filename.endswith('outreach_cloud.py')), None)
+        print('OUTREACH_DIAGNOSTIC=' + type(error).__name__ + ':' + (str(frame.lineno) if frame else 'external'))
         print('OUTREACH_HOLD=unexpected_error')
     return 1
 
