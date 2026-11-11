@@ -224,6 +224,7 @@ def decode_private_import(value):
     parts = value.strip().split(':', 1)
     require(len(parts) == 2 and parts[0] == 'SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1', 'import_envelope_missing')
     checksum, separator, encoded = parts[1].partition('\n')
+    checksum = checksum.strip()
     require(separator and re.fullmatch('[a-f0-9]{64}', checksum), 'import_envelope_invalid')
     try:
         raw = base64.b64decode(''.join(encoded.split()), validate=True)

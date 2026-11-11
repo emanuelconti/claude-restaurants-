@@ -24,6 +24,7 @@ class Boundaries(TestCase):
         wrapped='\n'.join(encoded[i:i+35] for i in range(0,len(encoded),35))
         value='SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1:'+o.digest(raw)+'\n'+wrapped
         self.assertEqual(o.decode_private_import(value)['policy'],'A < B, https://example.org/')
+        self.assertEqual(o.decode_private_import(value.replace('\n','\r\n'))['policy'],'A < B, https://example.org/')
     def test_corrupt_import_never_approved(self):
         raw=b'{}'
         with self.assertRaises(o.Hold):
