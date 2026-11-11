@@ -304,6 +304,12 @@ class Gmail:
     def contacted(self, recipient):
         return bool(self.items('Sent', 'OR (OR TO ' + quoted(recipient) + ' CC ' + quoted(recipient) + ') BCC ' + quoted(recipient)))
 
+    def pending(self, recipient):
+        target = recipient.casefold()
+        # Recipient-free control drafts cannot collide with a genuine queued mail.
+        return any(target in addresses(item['msg'])
+                   for item in self.items('Drafts') + self.items('All', 'in:scheduled', raw=True))
+
     def receipt(self, queue_id):
         return self.items('Sent', 'HEADER Message-ID ' + quoted(f'<sp-venue-{queue_id}@socialperkses.com>'))
 
@@ -423,6 +429,8 @@ def send_one(store, item, credential, smtp_factory=smtplib.SMTP_SSL):
     with smtp_factory('smtp.gmail.com', 465, timeout=30) as smtp:
         smtp.login(SELF, credential)
         store.confirm_approved(item)
+        require(not store.pending(q['recipient']), 'recipient_has_pending_message')
+        require(not store.contacted(q['recipient']), 'already_contacted')
         # This marker must exist even if DATA succeeds but the connection dies.
         store.label(item, add=(INFLIGHT,), remove=(APPROVED,))
         try:

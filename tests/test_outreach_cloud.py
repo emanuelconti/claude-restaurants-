@@ -72,10 +72,15 @@ class Boundaries(TestCase):
         with self.assertRaises(o.Hold):o.send_one(store,{'entry':entry()},'fake',smtp)
         smtp.assert_not_called()
     def test_ambiguous_marks_inflight(self):
-        store=MagicMock();store.contacted.return_value=False;smtp=MagicMock();smtp.return_value.__enter__.return_value.send_message.side_effect=OSError()
+        store=MagicMock();store.contacted.return_value=False;store.pending.return_value=False;smtp=MagicMock();smtp.return_value.__enter__.return_value.send_message.side_effect=OSError()
         with self.assertRaisesRegex(o.Hold,'ambiguous_send_hold'):o.send_one(store,{'entry':entry()},'fake',smtp)
         self.assertEqual(store.label.call_args.kwargs['add'],(o.INFLIGHT,))
         store.receipt.assert_not_called()
+    def test_pending_draft_blocks_smtp_data(self):
+        store=MagicMock();store.contacted.return_value=False;store.pending.return_value=True;smtp=MagicMock()
+        with self.assertRaisesRegex(o.Hold,'recipient_has_pending_message'):
+            o.send_one(store,{'entry':entry()},'fake',smtp)
+        smtp.return_value.__enter__.return_value.send_message.assert_not_called()
     def test_receipt_identity(self):
         m=EmailMessage();m['To']='wrong@example.org';m['Message-ID']='<wrong>'
         with self.assertRaises(o.Hold):o.confirm_receipts(MagicMock(),{'entry':entry()},[{'msg':m}])
