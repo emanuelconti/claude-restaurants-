@@ -1,0 +1,39 @@
+name: Verify SocialPerks cloud mailbox (read only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: socialperks-cloud-mailbox-readonly
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify existing SocialPerks mailbox access without sending
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python3 - <<'PYCODE'
+          import imaplib, os, sys
+          password = os.environ.get('GMAIL_APP_PASSWORD', '').strip()
+          if not password:
+              print('MAILBOX_ACCESS=missing_existing_credential')
+              sys.exit(1)
+          try:
+              with imaplib.IMAP4_SSL('imap.gmail.com', 993, timeout=30) as mailbox:
+                  mailbox.login('socialperks.team@gmail.com', password)
+                  status, _ = mailbox.select('INBOX', readonly=True)
+                  if status != 'OK':
+                      print('MAILBOX_ACCESS=readonly_inbox_unavailable')
+                      sys.exit(1)
+                  print('MAILBOX_ACCESS=verified_socialperks_team')
+                  print('SENDING=not_attempted')
+          except imaplib.IMAP4.error:
+              print('MAILBOX_ACCESS=existing_credential_not_authorized_for_socialperks_team')
+              sys.exit(1)
+          except (OSError, TimeoutError):
+              print('MAILBOX_ACCESS=network_unavailable')
+              sys.exit(1)
+          PYCODE
