@@ -1,0 +1,33 @@
+name: SocialPerks guarded venue backup
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check is read-only; import loads reviewed private drafts; send uses market guards'
+        type: choice
+        options: [check, import, send]
+        default: check
+  schedule:
+    - cron: '5 11,16 * * 1-5'
+permissions:
+  contents: read
+concurrency:
+  group: outreach
+  cancel-in-progress: false
+jobs:
+  venue-backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test delivery boundaries before mailbox access
+        run: python3 -m unittest discover -s tests -p 'test_outreach_cloud.py'
+      - name: Guarded private Gmail queue
+        env:
+          SOCIALPERKS_GMAIL_APP_PASSWORD: ${{ secrets.SOCIALPERKS_GMAIL_APP_PASSWORD }}
+          SOCIALPERKS_OUTREACH_IMPORT: ${{ secrets.SOCIALPERKS_OUTREACH_IMPORT }}
+          OUTREACH_MODE: ${{ github.event_name == 'schedule' && 'send' || inputs.mode }}
+        run: python3 scripts/outreach_cloud.py --mode "$OUTREACH_MODE"
