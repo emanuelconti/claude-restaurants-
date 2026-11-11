@@ -29,6 +29,12 @@ class Boundaries(TestCase):
         raw=b'{}'
         with self.assertRaises(o.Hold):
             o.decode_private_import('SOCIALPERKS_PRIVATE_IMPORT_BASE64_V1:'+'0'*64+'\n'+base64.b64encode(raw).decode())
+    def test_real_to_without_cc_bcc_is_preserved(self):
+        m=EmailMessage();m['To']='bienvenue@example.org'
+        self.assertEqual(o.addresses(m),{'bienvenue@example.org'})
+    def test_valid_sent_receipt_is_accepted(self):
+        q=entry();m=EmailMessage();m['To']=q['recipient'];m['Message-ID']=f'<sp-venue-{q["id"]}@socialperkses.com>'
+        store=MagicMock();o.confirm_receipts(store,{'entry':q},[{'msg':m}]);store.label.assert_called_once()
     def test_valid(self): self.assertEqual(o.validate_entry(entry(),DAY)['city'],'paris')
     def test_unapproved(self):
         q=entry();q['approved']=False
@@ -117,6 +123,8 @@ class RunBoundaries(TestCase):
         self.item={'entry':q,'labels':o.APPROVED,'raw':b'reviewed'}
         self.store.queue.return_value=[self.item]
         self.store.policy.return_value=b'private policy'
+        playbook=EmailMessage();playbook.set_content('Private shared playbook')
+        self.store.playbook.return_value={'msg':playbook,'raw':b'playbook'}
         self.store.sent_today.return_value=[]
         self.store.contacted.return_value=False
         self.store.suppressed.return_value=False

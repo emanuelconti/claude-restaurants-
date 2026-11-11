@@ -96,7 +96,7 @@ def roles_at(now):
 
 
 def addresses(message, fields=('To', 'Cc', 'Bcc')):
-    return {addr.casefold() for _, addr in getaddresses([str(message.get(f, '')) for f in fields]) if addr}
+    return {addr.casefold() for _, addr in getaddresses([str(message[f]) for f in fields if message.get(f)]) if addr}
 
 
 def is_first_contact(message):
@@ -579,12 +579,15 @@ def run(mode, store, credential, now):
         return 'outside_market_hours'
     cohorts, retired = learn(store, today, write=True)
     # Reconcile first. Old accepted mail is never sent again, even after expiry.
+    reconciled_count = 0
     for item in queue:
         if INFLIGHT in item['labels']:
             receipts = store.receipt(item['entry']['id'])
             require(receipts, 'unresolved_inflight_hold')
             confirm_receipts(store, item, receipts)
             store.label(item, add=('\\Trash',), remove=(INFLIGHT,))
+            reconciled_count += 1
+    print('OUTREACH_PRIOR_SENT_RECONCILED=' + str(reconciled_count))
     store.no_bounce_today(today)
     sent = store.sent_today(today)
     allowed_roles = [role for role in roles if not primary_worked(sent, role)]
@@ -614,11 +617,16 @@ def run(mode, store, credential, now):
         counts[q['role']] = counts.get(q['role'], 0) + 1
         sent_count += 1
     print('OUTREACH_SENT_CONFIRMED=' + str(sent_count))
-    if sent_count:
-        note = (f'Cloud venue backup {today.isoformat()}: {sent_count} first contacts confirmed in remote Sent. '
+    cohorts, retired = learn(store, today, write=False)
+    marker = '[cloud-cohort-snapshot:' + today.isoformat() + ':' + digest(json.dumps(cohorts, sort_keys=True)) + ']'
+    if sent_count or reconciled_count or marker not in text(playbook['msg']):
+        hypothesis = queue[0]['entry']['hypothesis'] if queue else 'No new reviewed inventory; no copy generated.'
+        note = (f'Cloud venue backup {today.isoformat()}: {sent_count} new first contacts confirmed in remote Sent; '
+                f'{reconciled_count} earlier sent receipts reconciled without sending again. '
                 'No follow-up. Sign-ups not checked; no conversion claim. '
-                'Use actual reply cohorts and denominators before changing the reviewed copy. '
-                'Hypothesis: ' + candidates[0]['entry']['hypothesis'] + '\nObserved reply cohorts (not sign-ups): ' + json.dumps(cohorts, ensure_ascii=False) + '\nGroups below 20 sends are descriptive only. No automatic copy rewrite or causal claim. Retired variants: ' + ', '.join(sorted(retired)))
+                'Hypothesis: ' + hypothesis + '\nObserved reply cohorts (not sign-ups): ' + json.dumps(cohorts, ensure_ascii=False) +
+                '\nGroups below20 sends are descriptive only. No automatic copy rewrite or causal claim. Retired variants: ' +
+                ', '.join(sorted(retired)) + '\n' + marker)
         store.append_learning(playbook, note)
     return 'completed_guarded_venue_pass'
 
