@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "Finish today with a cleaner evidence folder",
+      "stamp": "2026-11-11T23:17:14+01:00",
+      "local_hour": 23,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfniM9Roa-F/"
+    },
+    {
+      "title": "Equity is not a shortcut around clear roles",
+      "stamp": "2026-11-11T21:03:06+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfnSzZACxyz/"
+    },
+    {
+      "title": "Make the next product test smaller",
+      "stamp": "2026-11-11T20:14:36+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfnNTBhFIrv/"
+    },
+    {
+      "title": "A pilot partner is not a testimonial yet",
+      "stamp": "2026-11-11T19:25:14+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfnHnTWxH2q/"
+    },
+    {
+      "title": "Your runway needs a slower-collection scenario",
+      "stamp": "2026-11-11T18:36:34+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfnCEuymJhP/"
+    },
+    {
+      "title": "An application checklist before you press submit",
+      "stamp": "2026-11-11T12:33:10+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfmYc2SBT2S/"
+    },
+    {
+      "title": "What investors mean by repeatability",
+      "stamp": "2026-11-11T10:56:51+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfmNdycjVp-/"
+    },
+    {
+      "title": "Before you add a new market to the deck",
+      "stamp": "2026-11-11T08:49:31+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfl-3BZB4aq/"
+    },
+    {
       "title": "A useful end-of-day founder note",
       "stamp": "2026-11-10T21:38:01+01:00",
       "local_hour": 21,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfX0xV8l_CR/"
-    },
-    {
-      "title": "5 things to agree before sharing a funding task",
-      "stamp": "2026-11-05T18:39:56+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfXlsS7jPCj/"
-    },
-    {
-      "title": "5 questions before calling something recurring revenue",
-      "stamp": "2026-11-05T16:39:24+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfXX59HAF2Q/"
-    },
-    {
-      "title": "5 checks before reporting a project expense",
-      "stamp": "2026-11-05T14:44:43+01:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfXKxiPF41y/"
-    },
-    {
-      "title": "5 questions before you promise a launch date",
-      "stamp": "2026-11-05T13:08:59+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfW_0qel12L/"
-    },
-    {
-      "title": "5 things to check when a funding email arrives",
-      "stamp": "2026-11-05T10:45:50+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfWvcVnFLVM/"
-    },
-    {
-      "title": "5 questions before joining an accelerator",
-      "stamp": "2026-11-05T09:10:38+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfWkisKjDVv/"
-    },
-    {
-      "title": "5 checks for a funding presentation appendix",
-      "stamp": "2026-11-04T22:12:18+01:00",
-      "local_hour": 22,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfVZNTuFzE1/"
-    },
-    {
-      "title": "5 things to include in a useful founder update",
-      "stamp": "2026-11-04T21:24:32+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfVTvYugczQ/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-11",
+  "market_date": "2026-11-12",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -471,18 +471,13 @@
     },
     {
       "local_hour": 20,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 21,
       "posts": 6,
       "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 22,
-      "posts": 1,
-      "median_public_interactions": 1
     }
   ],
   "timing_status": "editor review required before changing schedule"
