@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "Keep a weekly founder log",
+      "stamp": "2026-11-12T22:06:43+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfp-6w1FwLN/"
+    },
+    {
+      "title": "What to do the week after a rejection",
+      "stamp": "2026-11-12T20:31:56+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfp0CbAMolR/"
+    },
+    {
+      "title": "Customer interviews that help your application",
+      "stamp": "2026-11-12T18:55:11+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfppANjl4M1/"
+    },
+    {
+      "title": "Before you ask for an intro, prepare this",
+      "stamp": "2026-11-12T16:41:32+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfpZq1khvya/"
+    },
+    {
+      "title": "Signs your pitch deck is doing too much",
+      "stamp": "2026-11-12T15:02:39+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfpOY5bFyUz/"
+    },
+    {
+      "title": "Write a one-line description people remember",
+      "stamp": "2026-11-12T12:57:00+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfo_-IbhKcy/"
+    },
+    {
+      "title": "Grant or equity: questions to ask first",
+      "stamp": "2026-11-12T10:32:41+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfovfk4F3iJ/"
+    },
+    {
+      "title": "Know these numbers before an investor call",
+      "stamp": "2026-11-12T08:55:02+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfokS3eNmjE/"
+    },
+    {
       "title": "Finish today with a cleaner evidence folder",
       "stamp": "2026-11-11T23:17:14+01:00",
       "local_hour": 23,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Dfaaqd4I_ej/"
-    },
-    {
-      "title": "5 questions to ask before hiring for growth",
-      "stamp": "2026-11-06T19:05:10+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfaNYO8FUX5/"
-    },
-    {
-      "title": "5 things to clarify before offering a trial",
-      "stamp": "2026-11-06T17:00:25+01:00",
-      "local_hour": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfZ_Fn1lOA5/"
-    },
-    {
-      "title": "5 checks before calling a number traction",
-      "stamp": "2026-11-06T15:02:31+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfZxmyjl5TK/"
-    },
-    {
-      "title": "5 ways to test whether a pilot is teaching you anything",
-      "stamp": "2026-11-06T12:29:22+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfZgAkYj1yx/"
-    },
-    {
-      "title": "5 details to put in a useful investor update",
-      "stamp": "2026-11-06T10:56:32+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfZVc7vmEGl/"
-    },
-    {
-      "title": "5 questions before a founder accepts an introduction",
-      "stamp": "2026-11-06T08:31:04+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfZEz8ojfRn/"
-    },
-    {
-      "title": "5 questions for your next planning review",
-      "stamp": "2026-11-05T21:39:16+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfX6NmtmFUe/"
-    },
-    {
-      "title": "5 checks before comparing two funding options",
-      "stamp": "2026-11-05T20:51:40+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfX0xV8l_CR/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-12",
+  "market_date": "2026-11-13",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -417,7 +417,7 @@
     {
       "local_hour": 8,
       "posts": 2,
-      "median_public_interactions": 0.5
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 9,
@@ -445,24 +445,19 @@
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 15,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 16,
       "posts": 3,
       "median_public_interactions": 0
     },
     {
       "local_hour": 17,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 18,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 19,
@@ -478,6 +473,11 @@
       "local_hour": 21,
       "posts": 6,
       "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 23,
+      "posts": 1,
+      "median_public_interactions": 0
     }
   ],
   "timing_status": "editor review required before changing schedule"
