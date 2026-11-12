@@ -77,3 +77,7 @@ If state.json has fb_cards_paused, cards are off and slots 2/5/8 use the native 
 - Two holds were reconciled against the platforms and found absent: Facebook gms-2026-11-07-6 (left unpublished, its day had passed) and YouTube gms-2026-11-09-8 (published afterwards).
 - Editorial rules at the top of SOCIAL_MARKET_RULES.md win over older briefs: 6 November everyday life and motivation first for SocialPerks and GMS; 7 November Threads two a day, no link, no hashtags; 9 November Pinterest.
 - The backup editor routine (trig_01SGVvDtrZHjbECD8UZexYQz, 07:43 and 15:43 Singapore) now prepares inventory whenever fewer than four market days are approved.
+
+## 12 November 2026: link cards retired everywhere
+
+Five Facebook link-card posts (6 to 8 November) came from the OLD source-branch fb_publish.py run by another routine, not from this publisher, and showed blank product pictures in the app (Be Kind Rainbow Hoodie) although the API reported a good image. They were deleted. The source-branch script now refuses to publish; Facebook goes out only from this publisher with Meta-hosted photos. Do not turn CARDS_ENABLED back on.
