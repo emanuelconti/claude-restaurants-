@@ -9,7 +9,7 @@ R=Path(__file__).resolve().parent
 now=dt.datetime.now(dt.timezone.utc)
 repo='emanuelconti/claude-restaurants-'
 config=json.loads(os.environ['SOCIAL_BACKUP_ENV'])
-config.update({k:os.environ[k] for k in ('PINTEREST_APP_ID_GMS','PINTEREST_APP_SECRET_GMS','PINTEREST_REFRESH_TOKEN_GMS','PINTEREST_BOARD_GMS','YOUTUBE_REFRESH_TOKEN_GMS') if os.environ.get(k)})
+config.update({k:os.environ[k] for k in ('PINTEREST_APP_ID_GMS','PINTEREST_APP_SECRET_GMS','PINTEREST_REFRESH_TOKEN_GMS','PINTEREST_BOARD_GMS','YOUTUBE_REFRESH_TOKEN_GMS','YOUTUBE_CLIENT_ID_GMS','YOUTUBE_CLIENT_SECRET_GMS') if os.environ.get(k)})
 for v in config.values():
  if len(str(v))>15 and os.environ.get('GITHUB_ACTIONS'):print('::add-mask::'+str(v))
 (R/'private').mkdir(exist_ok=True)

@@ -48,7 +48,7 @@ if '--validate' in sys.argv:
  sys.exit()
 cfg=json.loads(os.environ['SOCIAL_BACKUP_ENV'])
 # Pinterest has its own repository secrets (owner, 9 November), so the main JSON secret is never rewritten.
-cfg.update({k:os.environ[k] for k in ('PINTEREST_APP_ID_GMS','PINTEREST_APP_SECRET_GMS','PINTEREST_REFRESH_TOKEN_GMS','PINTEREST_BOARD_GMS','YOUTUBE_REFRESH_TOKEN_GMS') if os.environ.get(k)})
+cfg.update({k:os.environ[k] for k in ('PINTEREST_APP_ID_GMS','PINTEREST_APP_SECRET_GMS','PINTEREST_REFRESH_TOKEN_GMS','PINTEREST_BOARD_GMS','YOUTUBE_REFRESH_TOKEN_GMS','YOUTUBE_CLIENT_ID_GMS','YOUTUBE_CLIENT_SECRET_GMS') if os.environ.get(k)})
 for v in cfg.values():
  if len(str(v))>15 and os.environ.get('GITHUB_ACTIONS'):print('::add-mask::'+str(v))
 # Pinterest goes live only when its credentials are in SOCIAL_BACKUP_ENV (owner, 9 November: Standard access approved).
