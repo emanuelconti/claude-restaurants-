@@ -81,7 +81,8 @@ def message_hoodies(products: list) -> list:
     messages = ("enjoy the little things", "peace starts with us", "be kind", "do what makes you happy")
     return [product for product in products
             if product.get("images") and "hoodie" in product.get("title", "").lower()
-            and any(message in product["title"].lower() for message in messages)]
+            and any(message in product["title"].lower() for message in messages)
+            and product.get("handle") != "be-kind-rainbow-hoodie"]  # 12 Nov 2026: always blank on Facebook; out until the domain is verified in Meta
 
 
 def to_square(src: str, dst: str) -> None:
