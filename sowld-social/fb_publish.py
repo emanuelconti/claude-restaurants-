@@ -131,6 +131,12 @@ def main():
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
     ap.add_argument("--check-token", action="store_true")
     args = ap.parse_args()
+    # Owner, 12 November 2026: link cards from this script kept showing blank product pictures in the
+    # Facebook app (Meta's external image cache), even when the API reported a good image. The cloud
+    # publisher on codex/social-cloud-backup posts Facebook with Meta-hosted photos; this script never does.
+    if not args.check_token:
+        sys.exit("Facebook link cards are retired: the cloud publisher (codex/social-cloud-backup) posts "
+                 "Facebook. Nothing published.")
     token = os.environ.get("FB_PAGE_TOKEN_GMS", "").strip()
     page = os.environ.get("FB_PAGE_ID_GMS", "").strip()
     if not token or not page:
