@@ -142,3 +142,6 @@ Threads is PAUSED until 16 November 2026 (the script refuses to publish before t
 - use `threads_publish.py --date <today> --slot <n> --text "..."` (text only): a short personal thought or a question in 1-3 sentences, different every day (e.g. "Who was the first person you texted this morning?"), sometimes with one real photo of a hoodie worn;
 - reply to every comment on Threads like a person.
 Any Claude or Codex: never raise these limits; if Threads removes another post, stop Threads again for 2 weeks and tell the owner.
+
+
+Facebook (12 Nov 2026): the Be Kind Rainbow Hoodie card keeps coming out blank (Facebook fails to load that product page image, the file itself is fine). It is left out of the link-carousel cards until the owner verifies goodmessagestudio.com in Meta Business (then cards can carry our own pictures). Any publisher that builds Facebook cards (also social-cloud-backup on codex/social-cloud-backup) must skip it too.
