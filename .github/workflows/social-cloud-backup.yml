@@ -58,6 +58,8 @@ jobs:
           PINTEREST_REFRESH_TOKEN_GMS: ${{ secrets.PINTEREST_REFRESH_TOKEN_GMS }}
           PINTEREST_BOARD_GMS: ${{ secrets.PINTEREST_BOARD_GMS }}
           YOUTUBE_REFRESH_TOKEN_GMS: ${{ secrets.YOUTUBE_REFRESH_TOKEN_GMS }}
+          YOUTUBE_CLIENT_ID_GMS: ${{ secrets.YOUTUBE_CLIENT_ID_GMS }}
+          YOUTUBE_CLIENT_SECRET_GMS: ${{ secrets.YOUTUBE_CLIENT_SECRET_GMS }}
           BACKUP_MODE: ${{ inputs.mode }}
           BACKUP_BRAND: ${{ inputs.brand }}
           BACKUP_CRON: ${{ github.event.schedule }}
@@ -78,6 +80,8 @@ jobs:
         env:
           SOCIAL_BACKUP_ENV: ${{ secrets.SOCIAL_BACKUP_ENV }}
           YOUTUBE_REFRESH_TOKEN_GMS: ${{ secrets.YOUTUBE_REFRESH_TOKEN_GMS }}
+          YOUTUBE_CLIENT_ID_GMS: ${{ secrets.YOUTUBE_CLIENT_ID_GMS }}
+          YOUTUBE_CLIENT_SECRET_GMS: ${{ secrets.YOUTUBE_CLIENT_SECRET_GMS }}
           GH_TOKEN: ${{ github.token }}
         run: python social-cloud-backup/health_report.py
       - name: Persist publication receipts
