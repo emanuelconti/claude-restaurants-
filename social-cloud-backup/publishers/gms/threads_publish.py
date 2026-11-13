@@ -23,6 +23,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -36,8 +37,12 @@ import carousels as C  # noqa: E402
 import ig_publish as IG  # noqa: E402  (temporary image hosts)
 
 API = "https://graph.threads.net/v1.0"
-MAX_PER_DAY = 8  # temporary backup: eight actual posts per local day, including Claude posts
-MIN_GAP = 0  # owner, 2 Nov 2026: no wait on Threads (Facebook keeps 60)
+# Owner, 13 November 2026 (stricter rule, wins over every older one): 9 posts were removed as spam on
+# 6-7 November. Nothing before 16 November, then at most ONE post a day, at least 20 hours apart, text only
+# (1-3 human sentences, no link, no hashtags, no slides).
+THREADS_RESUME = "2026-11-16"
+MAX_PER_DAY = 1
+MIN_GAP = 20 * 60  # minutes
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 SINGAPORE = ZoneInfo("Asia/Singapore")
 
@@ -83,14 +88,16 @@ def wait_ready(container: str, token: str, timeout: float = 180) -> None:
 
 
 def short_caption(caption: str) -> str:
-    # Owner, 7 November: Threads removed posts as spam. The same shop link and the same closing lines on
-    # every post read as spam, so a Threads post is the topic itself: no link (it is on the profile), no
-    # hashtags, no shop or save/share lines.
+    # Owner, 7 and 13 November: Threads removed posts as spam. A Threads post is 1-3 human sentences of the
+    # topic itself: no link (it is on the profile), no hashtags, no shop or save/share lines, no slides.
     boiler = (C.CAPTION_SHARE_LINK, getattr(C, "CAPTION_SHARE", None), getattr(C, "CAPTION_SAVE", None))
     parts = [p.strip() for p in caption.split("\n\n") if p.strip() and not p.strip().startswith("#")
              and "http" not in p and "goodmessagestudio.com" not in p.lower() and p.strip() not in boiler]
-    text = "\n\n".join(parts[:2])
-    return text if len(text) <= 500 else text[:497].rsplit(" ", 1)[0] + "..."
+    text = " ".join(parts[:1]).replace("\n", " ")
+    text = re.sub(r"\s*#\w+", "", text).strip()
+    sentences = re.split(r"(?<=[.!?])\s+", text)
+    text = " ".join(sentences[:3]).strip()
+    return text if len(text) <= 280 else text[:277].rsplit(" ", 1)[0] + "..."
 
 
 def main():
@@ -122,6 +129,11 @@ def main():
             print(f"already published: {done.get('permalink')}")
             return
         now = dt.datetime.now(dt.timezone.utc)
+        if now.astimezone(SINGAPORE).date().isoformat() < THREADS_RESUME:
+            print(f"Threads is paused until {THREADS_RESUME} (owner, 13 November): nothing published")
+            return
+        if not text:
+            sys.exit("no human text left after removing links and hashtags: nothing published")
         stamps = [dt.datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z") for p in posts if p.get("timestamp")]
         today = sum(1 for s in stamps if s.astimezone(SINGAPORE).date() == now.astimezone(SINGAPORE).date())
         if today >= MAX_PER_DAY:
@@ -130,7 +142,7 @@ def main():
         if stamps and (now - max(stamps)).total_seconds() < MIN_GAP * 60:
             sys.exit(f"too soon: the last post went out {int((now - max(stamps)).total_seconds() // 60)} min ago (minimum {MIN_GAP}), nothing published")
         if args.dry_run:
-            print(f"dry run: {len(meta['slides'])} slides and {len(text)} characters of text would be posted; nothing published")
+            print(f"dry run: a text-only post of {len(text)} characters would be posted; nothing published")
             return
         # OFF until the owner confirms the account and rights (1 November 2026).
         if os.environ.get("GMS_THREADS_ENABLED", "").strip() != "1":
@@ -141,24 +153,8 @@ def main():
             G.check_cross_channel()
         except G.Stop as stop:
             sys.exit(str(stop))
-        children = []
-        for name in meta["slides"][:20]:
-            url = os.environ.get("GMS_PUBLIC_ASSET_BASE", "").rstrip("/") + "/" + name if os.environ.get("GMS_PUBLIC_ASSET_BASE") else None
-            if url:
-                IG.check_public(url)
-            for _, host in ([] if url else IG.HOSTS):
-                try:
-                    url = IG.upload_temporary(os.path.join(folder, name), host)
-                    break
-                except Exception as error:
-                    print(f"upload did not work ({error}); trying the next host", file=sys.stderr)
-            if not url:
-                sys.exit(f"could not make {name} public: nothing published")
-            item = call("POST", f"{user}/threads", token, {"media_type": "IMAGE", "image_url": url, "is_carousel_item": "true"})
-            children.append(item["id"])
-        for child in children:
-            wait_ready(child, token)
-        post = call("POST", f"{user}/threads", token, {"media_type": "CAROUSEL", "children": ",".join(children), "text": text})
+        # Text only (owner, 13 November): no slides, no images, no link.
+        post = call("POST", f"{user}/threads", token, {"media_type": "TEXT", "text": text})
         wait_ready(post["id"], token)
         media = call("POST", f"{user}/threads_publish", token, {"creation_id": post["id"]})
         link = call("GET", media["id"], token, {"fields": "permalink"}).get("permalink")

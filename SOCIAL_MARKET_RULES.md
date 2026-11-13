@@ -23,7 +23,7 @@ Pinterest Standard access is approved (app "Good Message Studio Publisher"). The
 
 ## Owner, 7 November 2026: Threads removed GMS posts as spam (updated 13 November)
 
-Owner, 13 November 2026 (stricter, wins): Threads is PAUSED until 16 November 2026 (9 posts removed as spam on 6-7 November; 2 more went out on 13 November), then at most ONE post a day, evening slot only (policy.daily_cap, THREADS_RESUME). Before that, the rule was at most two posts a day (lunch and evening slots), never eight. Its text is the topic only: no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Do not raise the cap or put the link back without the owner.
+Owner, 13 November 2026 (stricter, wins): Threads is PAUSED until 16 November 2026 (9 posts removed as spam on 6-7 November; 2 more went out on 13 November), then at most ONE post a day, evening slot only (policy.daily_cap, THREADS_RESUME). Before that, the rule was at most two posts a day (lunch and evening slots), never eight. At least 20 hours between two posts. A Threads post is TEXT ONLY, 1-3 human sentences (threads_publish.py posts media_type TEXT, never slides or images): no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Enforced twice: policy.daily_cap in controller.py and THREADS_RESUME / MAX_PER_DAY / MIN_GAP in publishers/gms/threads_publish.py (tests in test_threads_rule.py). Do not raise the cap or put the link back without the owner.
 
 ## Good Message Studio
 

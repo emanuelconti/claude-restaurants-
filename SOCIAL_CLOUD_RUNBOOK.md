@@ -75,7 +75,7 @@ If state.json has fb_cards_paused, cards are off and slots 2/5/8 use the native 
 - YouTube and Threads are switched on in controller.py (GMS_YOUTUBE_ENABLED=1, GMS_THREADS_ENABLED=1), not by flags in the secret, so a rewritten secret can no longer silently turn them off.
 - Pinterest is live for GMS: at most three carousel Pins a day (slots 2, 5, 8, never Reels), lpstylehub account, history read with an identity check. First Pins published 9 November.
 - Two holds were reconciled against the platforms and found absent: Facebook gms-2026-11-07-6 (left unpublished, its day had passed) and YouTube gms-2026-11-09-8 (published afterwards).
-- Editorial rules at the top of SOCIAL_MARKET_RULES.md win over older briefs: 6 November everyday life and motivation first for SocialPerks and GMS; 7 November Threads two a day, no link, no hashtags; 9 November Pinterest.
+- Editorial rules at the top of SOCIAL_MARKET_RULES.md win over older briefs: 6 November everyday life and motivation first for SocialPerks and GMS; 13 November Threads paused until 16 November, then one text-only post a day (1-3 sentences, 20 hours apart), no link, no hashtags, no slides; 9 November Pinterest.
 - The backup editor routine (trig_01SGVvDtrZHjbECD8UZexYQz, 07:43 and 15:43 Singapore) now prepares inventory whenever fewer than four market days are approved.
 
 ## 12 November 2026: link cards retired everywhere
