@@ -373,5 +373,7 @@
   "gms-2026-11-13-1:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfqwghelZ6t",
   "gms-2026-11-13-5:facebook": "confirmed remotely: https://www.facebook.com/reel/1637629078106360/",
   "gms-2026-11-13-4:ig": "confirmed remotely: Write a message they will keep",
-  "gms-2026-11-13-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1441040478183747"
+  "gms-2026-11-13-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1441040478183747",
+  "gms-2026-11-13-3:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfrGWwUFRzx/",
+  "gms-2026-11-13-4:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Write a message they will keep', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 13 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821228769120/"
 }

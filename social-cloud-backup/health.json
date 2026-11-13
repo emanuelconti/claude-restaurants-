@@ -4,7 +4,7 @@
     "sp": {
       "timezone": "Europe/Madrid",
       "market_date": "2026-11-13",
-      "days_covered_including_today": 4,
+      "days_covered_including_today": 5,
       "coverage": [
         {
           "date": "2026-11-13",
@@ -24,7 +24,7 @@
         },
         {
           "date": "2026-11-17",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-18",
