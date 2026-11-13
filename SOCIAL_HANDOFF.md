@@ -145,3 +145,9 @@ Any Claude or Codex: never raise these limits; if Threads removes another post, 
 
 
 Facebook (12 Nov 2026): the Be Kind Rainbow Hoodie card keeps coming out blank (Facebook fails to load that product page image, the file itself is fine). It is left out of the link-carousel cards until the owner verifies goodmessagestudio.com in Meta Business (then cards can carry our own pictures). Any publisher that builds Facebook cards (also social-cloud-backup on codex/social-cloud-backup) must skip it too.
+
+## Status at 13 November 2026, 15:15 UTC (Claude)
+- YouTube (GMS) is stopped: Google answers "invalid_client" with the saved YOUTUBE_CLIENT_SECRET_GMS, both here and on GitHub. On GitHub, YOUTUBE_CLIENT_ID_GMS and YOUTUBE_CLIENT_SECRET_GMS are empty. The owner adds a new secret to the same OAuth client in Google Cloud and saves it in the Default environment and in GitHub Actions secrets. The refresh token stays valid.
+- Facebook (GMS) on the cloud publisher is stuck on `gms-2026-11-13-7:facebook = held:` in social-cloud-backup/state.json (branch codex/social-cloud-backup). Verified at 15:11 UTC: not on the Page (posts, videos, Reels, scheduled). Mark it "not published: verified absent ...; not resent". Do not resend.
+- Threads: the cloud publisher posted 2 GMS Threads posts on 13 November, despite the pause until 16 November and the limit of 1 a day. The cloud publisher must apply the same rule: 0 before 16 November, then at most 1 a day, at least 20 hours apart.
+- Outreach emails (owner, 13 November): write as the SocialPerks team ("we"), signed "Emanuel · SocialPerks team", never as a lone student.
