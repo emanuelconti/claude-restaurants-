@@ -173,3 +173,14 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - Emails: self-optimise without asking, based on the reply numbers.
 - Social: read-only one-liner.
 - After each audit, a 5-line summary goes here for the other Claude and Codex. Never invent numbers, reviews or partners. Venue owners are sceptical, so every change must build trust.
+
+## Marketing manager and shared CRM (owner, 13 November 2026)
+- This Claude session is now SocialPerks' marketing manager. Together with the "SocialPerks emiconti" session it works as one team, with one goal: contacts, then clients, then paying clients.
+- Shared register: Google Sheet "SocialPerks – Outreach CRM" (id 1R-KALiXND1lMNIND2lHClwDym-pNx2qIJE8Ce2G7KOM), with tabs "Contatti" (77 contacts found in Gmail since 28 October) and "Linee guida".
+  - Check the register before writing to anyone. Update the row right after every email.
+  - Read "Linee guida" before writing. They are updated every Monday with the numbers.
+- First message: short and very human, like a 23-year-old writing by hand. It only aims at getting a reply.
+- Replies: the routines never answer. Ema answers. Routines prepare a Gmail draft toward the next step (call, free pilot, payment) and write the next step in the register.
+- Follow-up: ONE short follow-up after 4-5 days, different from the first email. After 7 more days without a reply, mark "perso". This replaces the old "never follow up" rule.
+- Routine trig_01YJfwQkCbeADmVfxrrMmTPm, weekdays at 10:47 and 19:47 Madrid, does replies, drafts, follow-ups and up to 12 first contacts per run. Shared cap: 60 emails a day (70 from 16 November). Sender is always socialperks.team@gmail.com.
+- Editing rows needs the Google Sheets connector, which is not connected yet. Until then, rows go into the Gmail draft "SocialPerks outreach playbook".
