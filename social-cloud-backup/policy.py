@@ -73,10 +73,15 @@ def channel_plan(brand, cron='', recover=False):
  if cron == FB_RECOVERY_CRON: return ('facebook',)
  return ('ig',) if brand != 'gms' else ('ig','threads','youtube','facebook','pinterest')
 
-def daily_cap(channel, slots_due):
- """Posts allowed so far today on one channel. Threads (owner, 7 November): Meta kept removing posts
- as spam at eight a day, so it gets at most two, the lunch and evening slots, never close together."""
- if channel == 'threads': return sum(slots_due >= k for k in (3, 7))
+THREADS_RESUME = '2026-11-16'
+
+def daily_cap(channel, slots_due, day=None):
+ """Posts allowed so far today on one channel. Threads (owner, 7 and 13 November): Meta removed 9 posts
+ as spam on 6-7 November, so Threads is paused until 16 November, then one post a day in the evening slot
+ (about 24 hours apart, never the 20-hour minimum broken)."""
+ if channel == 'threads':
+  if day and day < THREADS_RESUME: return 0
+  return 1 if slots_due >= 7 else 0
  # Pinterest (owner, 9 November, Standard access approved): three Pins a day, morning, afternoon, evening.
  if channel == 'pinterest': return sum(slots_due >= k for k in (2, 5, 8))
  return min(slots_due, 8)
@@ -99,3 +104,11 @@ def count_known_posts(posts, now, brand, channel, items, state):
   title=youtube_title(item['title']) if channel=='youtube' else item['title']
   if title not in remote_titles:extra+=1
  return len(remote)+extra
+
+
+def held_age_hours(value, now):
+ """Hours since a 'held:' publication attempt started, or None when the receipt has no start time."""
+ import re
+ m = re.search(r'started at (\S+?);', value or '')
+ if not m: return None
+ return (now - dt.datetime.fromisoformat(m.group(1))).total_seconds() / 3600

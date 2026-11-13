@@ -151,8 +151,15 @@ if __name__=='__main__':unittest.main()
 
 
 class ThreadsCapTests(unittest.TestCase):
- def test_threads_gets_two_spaced_posts_a_day(self):
+ def test_threads_paused_then_one_a_day(self):
   # Owner, 7 November: Meta removed Threads posts as spam at eight a day.
   from policy import daily_cap
-  self.assertEqual([daily_cap('threads', t) for t in range(9)], [0, 0, 0, 1, 1, 1, 1, 2, 2])
+  self.assertEqual([daily_cap('threads', t, '2026-11-15') for t in range(9)], [0] * 9)
+  self.assertEqual([daily_cap('threads', t, '2026-11-16') for t in range(9)], [0, 0, 0, 0, 0, 0, 0, 1, 1])
   self.assertEqual(daily_cap('ig', 8), 8)
+
+ def test_held_age(self):
+  from policy import held_age_hours
+  now = dt.datetime(2026, 11, 13, 15, 0, tzinfo=dt.timezone.utc)
+  self.assertAlmostEqual(held_age_hours('held: publication attempt started at 2026-11-13T12:30:00+00:00; reconcile remotely before retry', now), 2.5)
+  self.assertIsNone(held_age_hours('held: publication attempt started; reconcile remotely before retry', now))

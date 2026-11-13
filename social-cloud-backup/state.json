@@ -380,6 +380,6 @@
   "gms-2026-11-13-6:ig": "confirmed remotely: Reconnect with a friend you drifted from",
   "gms-2026-11-13-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1073606635709170/",
   "gms-2026-11-13-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Dfrnro5FbhY",
-  "gms-2026-11-13-7:facebook": "held: publication attempt started; reconcile remotely before retry",
+  "gms-2026-11-13-7:facebook": "not published: verified absent from the Page posts, videos, Reels and scheduled posts at 15:11 UTC on 13 November (Claude, owner-authorized); not resent",
   "gms-2026-11-13-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228788668/"
 }

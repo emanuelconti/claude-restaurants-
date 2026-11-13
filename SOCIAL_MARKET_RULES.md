@@ -21,9 +21,9 @@ This overrides every narrower topic rule below for SocialPerks and Good Message 
 
 Pinterest Standard access is approved (app "Good Message Studio Publisher"). The cloud publisher sends at most three carousel Pins a day (publish slots 2, 5 and 8, never Reels) to the lpstylehub business account's GMS board, linking to goodmessagestudio.com, with channel_guard's gaps. It goes live as soon as PINTEREST_APP_ID_GMS, PINTEREST_APP_SECRET_GMS, PINTEREST_REFRESH_TOKEN_GMS and PINTEREST_BOARD_GMS are set as their own four repository secrets (or inside SOCIAL_BACKUP_ENV); until then it skips quietly. Never rewrite SOCIAL_BACKUP_ENV just to add them. TikTok and Stories stay off.
 
-## Owner, 7 November 2026: Threads removed GMS posts as spam
+## Owner, 7 November 2026: Threads removed GMS posts as spam (updated 13 November)
 
-Threads gets at most TWO posts a day (the lunch and evening slots, policy.daily_cap), never eight. Its text is the topic only: no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Do not raise the cap or put the link back without the owner.
+Owner, 13 November 2026 (stricter, wins): Threads is PAUSED until 16 November 2026 (9 posts removed as spam on 6-7 November; 2 more went out on 13 November), then at most ONE post a day, evening slot only (policy.daily_cap, THREADS_RESUME). Before that, the rule was at most two posts a day (lunch and evening slots), never eight. Its text is the topic only: no shop link (it is on the profile), no hashtags, no repeated shop or save/share lines. Do not raise the cap or put the link back without the owner.
 
 ## Good Message Studio
 
@@ -99,3 +99,10 @@ Supersedes "two of the eight daily topics per brand are Reels". The owner: peopl
 - Music: always the original in-code tracks (SocialPerks daily.py music(); Sincronia and GMS soft_beat()), audible and checked. The Instagram Graph API cannot attach Instagram's library or trending sounds, and third-party songs are never used without a licence. Keep evolving the in-code beats (tempo, energy) rather than borrowing tracks.
 - Targeting stays each brand's brief: SocialPerks Spanish everyday life and motivation, linked naturally to friends and favourite places (6 November rule at the top); Sincronia English funding readiness for European founders; GMS English Singapore friendship and message hoodies.
 - Measure before changing the mix again: compare Reel and carousel reach, saves, shares and watch time per brand over at least two weeks of real posts.
+
+
+## Owner, 13 November 2026: never stuck, and both systems back each other up
+- A 'held:' receipt no longer stops a channel for good: controller.py turns it into 'confirmed remotely' when the post is on the platform, or, still absent 2 hours after the attempt (the start time is in the receipt), into 'not published ... not resent', and goes on with the next item. Never resend a held item.
+- The Claude routines (GMS on Singapore hours, SocialPerks + Sincronia on Madrid hours) and this GitHub publisher cover each other: both count what is already on the platform today before posting, so neither doubles the other. Never remove that check.
+- YouTube 13 November: Google answers invalid_client (the app's client secret is no longer valid), and YOUTUBE_CLIENT_ID_GMS / YOUTUBE_CLIENT_SECRET_GMS are empty in GitHub secrets. Only the owner can add a new secret in Google Cloud and save it in the Claude Default environment and in GitHub Actions secrets.
+- Outreach emails speak as the SocialPerks team ('we'), signed 'Emanuel Conti · Team SocialPerks · https://www.socialperkses.com'.

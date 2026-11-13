@@ -2,7 +2,7 @@
 import datetime as dt,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS,daily_cap
+from policy import TZ,target,seen,count_today,next_item,gap_ok,parse_ig_history,local_now,selected_brands,QUEUE_DAYS,FB_RECOVERY_CRON,recovery_allowed,channel_plan,attempt_limit,count_known_posts,STOP_SIGNALS,daily_cap,held_age_hours
 R=Path(__file__).resolve().parent
 now=dt.datetime.now(TZ)
 # Owner, 3 November: keep the cloud publisher running after the Claude quota reset.
@@ -124,8 +124,17 @@ def process_channel(b,channel):
     state[item['id']+':'+channel]='confirmed remotely: '+(found.get('url') or item['title'])
   save()
   held=[k for k,v in state.items() if k.endswith(':'+channel) and k.startswith(b+'-') and v.startswith('held:')]
+  # Owner, 13 November: a held attempt must not stop the channel for good. The loop above already turned
+  # every held item found on the platform into 'confirmed remotely'; one still absent two hours after its
+  # start is recorded as not published (never resent) and the channel goes on with the next item.
+  for k in list(held):
+   age=held_age_hours(state[k],dt.datetime.now(dt.timezone.utc))
+   if age is not None and age>=2:
+    state[k]=f'not published: absent from the remote history {age:.1f} hours after the attempt (automatic check); not resent'
+    held.remove(k);print(tag+': '+k+' verified absent after 2 hours; recorded as not published, not resent.',flush=True)
+  save()
   if held:raise RuntimeError('An earlier publication is ambiguous; reconcile it before sending another item')
-  if count>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b))):return False
+  if count>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b),brand_now.date().isoformat())):return False
   if channel=='facebook' and not gap_ok(posts+receipt_stamps(tag),brand_now,60):
    print(tag+': Facebook 60-minute gap respected; skipped.');return False
   item=next_item([x for x in manifest if channel!='pinterest' or x.get('kind')!='reel'],b,channel,brand_now.date().isoformat(),state)
@@ -136,10 +145,10 @@ def process_channel(b,channel):
   fresh_now=local_now(dt.datetime.now(dt.timezone.utc),b)
   if fresh_now.date()!=brand_now.date():
    print(tag+': local date changed while checking; skipped.');return False
-  if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b))):return False
+  if count_known_posts(latest,fresh_now,b,channel,manifest,state)>=(8 if recover_today and channel!='threads' else daily_cap(channel,target(brand_now,b),brand_now.date().isoformat())):return False
   if seen(item,channel,latest):state[key]='confirmed remotely';save();return False
   if channel=='facebook' and not gap_ok(latest+receipt_stamps(tag),fresh_now,60):return False
-  state[key]='held: publication attempt started; reconcile remotely before retry';save()
+  state[key]='held: publication attempt started at '+dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')+'; reconcile remotely before retry';save()
   args=['--date',item['date'],'--out',str(R/'queue'/b)]
   reel=item.get('kind')=='reel'
   sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
