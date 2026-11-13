@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "Milestones that make the next round easier",
+      "stamp": "2026-11-13T21:27:58+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfsfSBcFzHM/"
+    },
+    {
+      "title": "Five questions for a founder Friday review",
+      "stamp": "2026-11-13T20:38:55+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfsZoYkh2wy/"
+    },
+    {
+      "title": "What a funding reviewer wants to see in five minutes",
+      "stamp": "2026-11-13T13:59:01+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfrr5zxFOId/"
+    },
+    {
+      "title": "For the founder who had a quiet week",
+      "stamp": "2026-11-13T13:57:33+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfrrvGMl7--/"
+    },
+    {
+      "title": "Year-end funding check: 6 things to sort before December",
+      "stamp": "2026-11-13T13:56:09+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfrrlLplM06/"
+    },
+    {
+      "title": "Signs your startup is ready for public funding",
+      "stamp": "2026-11-13T07:54:43+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfrCNoKFD0r/"
+    },
+    {
+      "title": "Grants, loans or equity: what each one costs you",
+      "stamp": "2026-11-13T07:53:24+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfrCEU2mLYX/"
+    },
+    {
+      "title": "Close the week before Friday dinner",
+      "stamp": "2026-11-13T07:52:08+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfrB7OFl9Fk/"
+    },
+    {
       "title": "Keep a weekly founder log",
       "stamp": "2026-11-12T22:06:43+01:00",
       "local_hour": 22,
@@ -340,84 +404,20 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/Dfc3kaYF56T/"
-    },
-    {
-      "title": "5 questions before calling a conversation customer research",
-      "stamp": "2026-11-07T18:26:39+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfctxFSk5qv/"
-    },
-    {
-      "title": "5 ways to make a founder weekend less scattered",
-      "stamp": "2026-11-07T16:57:38+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfcjibEj4iy/"
-    },
-    {
-      "title": "Founders: 5 small wins worth writing down this week",
-      "stamp": "2026-11-07T13:49:08+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfcOAIQF9Kh/"
-    },
-    {
-      "title": "Small wins every founder should celebrate",
-      "stamp": "2026-11-07T07:56:39+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfblq0EF34o/"
-    },
-    {
-      "title": "What to do when a hard week gets to you",
-      "stamp": "2026-11-07T07:55:14+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfblgfzmwIk/"
-    },
-    {
-      "title": "Founder mornings that keep you moving",
-      "stamp": "2026-11-07T07:49:36+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfbk3HojF5p/"
-    },
-    {
-      "title": "5 ways to end the founder week with a clearer Monday",
-      "stamp": "2026-11-06T21:49:02+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfagIUcF4uo/"
-    },
-    {
-      "title": "5 habits for keeping a financial model readable",
-      "stamp": "2026-11-06T21:01:36+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfaaqd4I_ej/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-13",
+  "market_date": "2026-11-14",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 8,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 9,
@@ -426,23 +426,28 @@
     },
     {
       "local_hour": 10,
+      "posts": 5,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 12,
       "posts": 4,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 12,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 13,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
       "posts": 2,
       "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 15,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 16,
@@ -466,13 +471,18 @@
     },
     {
       "local_hour": 20,
+      "posts": 5,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 21,
       "posts": 4,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 21,
-      "posts": 6,
-      "median_public_interactions": 0.0
+      "local_hour": 22,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 23,
