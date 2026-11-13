@@ -8344,5 +8344,192 @@
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
     "video_qa": "Seven-slide Short (slow zoom, cross-fades), one decoded frame per slide visually inspected against the reviewed slides, 9 November 2026",
     "audio_qa": "Original synthesized warm track from carousel_reel.py music(), AAC decoded and non-silent"
+  },
+  {
+    "id": "sp-2026-11-17-1",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 1,
+    "title": "Martes: pequeños avances que cuentan",
+    "folder": "queue/sp/2026-11-17/carousel-1",
+    "sha256": {
+      "carousel.json": "a9bd8608e24661989c45fdad768d5473e1116d2feaa5d9ed491716275dc1a1bc",
+      "slide-01.jpg": "4b79baca0de0ce5e30c81c034e5a06bfaf2254d6e52f471f8d8eea083c39ee24",
+      "slide-02.jpg": "36598e2f31357a9c68826aa551421b1a5dd06035e1868f14d6332b153e29baa2",
+      "slide-03.jpg": "37a8b017829e4cf16f8488f568e1c2f3fed4ba50823d7cd4ec7ebf133b35e718",
+      "slide-04.jpg": "97b6cc8a1233127adedeff2bf50ba185b1afc976072359e425f6b887cc10626d",
+      "slide-05.jpg": "14f942985c2402fa67e8ada5051331fd787f8598436c68563292078257ac60ba",
+      "slide-06.jpg": "4c89654ba83f4e9c95ad8a4ca06ad1b2c36c535ac837af96022471e1b9573aed",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "02c699e092666c533ba250280f1ab5776c121ff46ae419ad5566069edb8ee830",
+      "reel.json": "acd5cacb8bea542ac6d37ab1eeae1653f2fdd543141aa654038a486c820ff7a5",
+      "cover.jpg": "253fbd6954b1acbd759b5fa22d6f48880c8c77b50412548b85e3dec40cc1075e"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.9 dB peak -1.1 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-17-2",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 2,
+    "title": "Cinco planes de martes para quedar con amigos",
+    "folder": "queue/sp/2026-11-17/carousel-2",
+    "sha256": {
+      "carousel.json": "617f8a03ea81916d20fe2020a8b1f33b2b12d92f8e5a1f1d7bccba62944d27f2",
+      "slide-01.jpg": "bb2a128ae25bbb99577672dc7dba764a14303573fad6612fd8d25f17b45d65cc",
+      "slide-02.jpg": "cf04719dd4fa2d3cc56b986681220478030c5d66d5fa4d869700271de4f06b92",
+      "slide-03.jpg": "548b2be2f232989c1bee4011ac0152bcd742fce7e6fb2029c316b795e26be9cc",
+      "slide-04.jpg": "66a5f7b40ffe7aa50fffd8680ac215ec3530dda792e02ee6984c8b42338f0311",
+      "slide-05.jpg": "3b8380e17f5667dc89ff6612bf5d5e76fdabe066f01f566388e3f2f65362ac13",
+      "slide-06.jpg": "10bcfe32c0a06fd0c60b2464e753f1961293ae6b4d1f75e8ab8ac8086467c31f",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026"
+  },
+  {
+    "id": "sp-2026-11-17-3",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 3,
+    "title": "Cómo cuidar tu energía a mitad de semana",
+    "folder": "queue/sp/2026-11-17/carousel-3",
+    "sha256": {
+      "carousel.json": "2faab3be67a4d12e2ea2278b7d29c118c8a9d4e7ee7e2506dc90d04122e9a801",
+      "slide-01.jpg": "f53c8b437da57dbccf4f5ba19aa44e58b55eefc01af6f2deb583f26cfb2d6a53",
+      "slide-02.jpg": "be7555def55d418e6bfd011316fa314b2b08db424dec7577fc85e7a4bf63dae2",
+      "slide-03.jpg": "ee5e3e5d3826e192339175830e1daf57b9bd396b106082c74027b4f37d44d04f",
+      "slide-04.jpg": "edb35d7f72ac39a691234b432c98c63464f6cfa9a2561e8b334ad63a9d2c7e41",
+      "slide-05.jpg": "02c989660c57847fbaffdc9665b0bfb403d3d3b4b58dafc55cef8d426f87eda0",
+      "slide-06.jpg": "f05b05bf8a71840db9c3210ae3f80a3e39dc82ee12fb24f3a0c394e0d561c429",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "47e31e65a3ef742425e3931baee836457e86ab981f2efa50fe26cf39d882aabc",
+      "reel.json": "c456b7c8e306e5c2597b21d98bd19f584bad41e5b5d246195f9138d1d9e7a845",
+      "cover.jpg": "e47985a2d87291464c43c345dc457cc0f58d99d2ab65f8bf4b7dfccb949bb697"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.5 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-17-4",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 4,
+    "title": "Hablar menos del móvil y más en persona",
+    "folder": "queue/sp/2026-11-17/carousel-4",
+    "sha256": {
+      "carousel.json": "9ef1938d253e2c20abb28af1b72a8e327491fb4844aab50b8e02ee2ee6b45be5",
+      "slide-01.jpg": "c6a399ab835e3043f4f5f3fd50a68c6fa6bc9873034498498526f779a4ada503",
+      "slide-02.jpg": "49a1c8e53de1499666bc9e0224c9e562d847839bcc45177c565e846fef94261a",
+      "slide-03.jpg": "0c9293be540a5a40b912e110a82f0e32f39a62ea40fe94171007f23cff6b1faa",
+      "slide-04.jpg": "91358fced07548ef0904473de447e5ba6e05be764508343bc6c2866be102f946",
+      "slide-05.jpg": "3850f05029b135b49ef4625b1ff0d63782937808421e18b4fb0b87ca0703c718",
+      "slide-06.jpg": "c631bb792a4d57cd84ed8c04fec9b7782e3ab89f7ef447f220d197039e8c1696",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026"
+  },
+  {
+    "id": "sp-2026-11-17-5",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 5,
+    "title": "Cinco hábitos para dormir mejor esta semana",
+    "folder": "queue/sp/2026-11-17/carousel-5",
+    "sha256": {
+      "carousel.json": "15f38d93c9df7ed82918773ea89e533fa774ce4237f201f966b6e7c2540a427b",
+      "slide-01.jpg": "77e0f0526e8fba062c8eb72c12f43a319c4ad3ec9487245fab4879ced81ddd9a",
+      "slide-02.jpg": "f59965516144831d57d6ee02238c68d5f4fd19d33db483074c036c968d6e50bb",
+      "slide-03.jpg": "9558b0ddfcf37ee2fcb00d4158e8e4f0d19c005fc6a888dd0333ad0d712e9e22",
+      "slide-04.jpg": "374b024f240c283ff579a82f5436423ec0c85a4702909b35c152312f47746132",
+      "slide-05.jpg": "af5a661a06a745a4868afa4f151f0d33b25925708b1df3778a6e0c13bfd5dec3",
+      "slide-06.jpg": "7fef177d7ecd6b6680143099f66a48f0314ff276b3e064b4b156e8680e72b93d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "cd210b0e43c7f295b4880c8168344539a185e46bf251331296427ebe76e68375",
+      "reel.json": "1b0443310dd639c049c9f911ea630b54b52845bf9b51cc203771f8a7f69282ca",
+      "cover.jpg": "6acd9224fffcf56640649f2a7aaedb24eddf315d47c84398873967bd43a555b6"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.7 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-17-6",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 6,
+    "title": "Un buen sitio de barrio vale oro",
+    "folder": "queue/sp/2026-11-17/carousel-6",
+    "sha256": {
+      "carousel.json": "24c6eb5b48f4098c91118e5fc5a910485452bf5e8ca0a076a4484e0929b20bae",
+      "slide-01.jpg": "6adbace75f3bcada12fb1cd1339e1c72302b7a38cdf6ed5d7d9ae7d5165abf25",
+      "slide-02.jpg": "60ddee5534c86d2b3ed1fab0b6d3557dc61c9ce8109cb99b96e9cc2c63a87f34",
+      "slide-03.jpg": "94afeb6a02ca7d1d525fb6325cb5a9fa8742d3051cd00b3445c75a5940e55607",
+      "slide-04.jpg": "a90aa8ff7d39ae3ba3467cfc229887cf113e66a78e5b01e86e9974997adc6d54",
+      "slide-05.jpg": "d9d2e85e8675c8aaa04e252236e73865ce510060c8a91a3320fa78e1a7895901",
+      "slide-06.jpg": "0c0b4e8ca516e0310d8f9dcb7fc1f9e665d35fe7c8c93b55c3f675e668928058",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026"
+  },
+  {
+    "id": "sp-2026-11-17-7",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 7,
+    "title": "Cómo empezar algo nuevo sin miedo",
+    "folder": "queue/sp/2026-11-17/carousel-7",
+    "sha256": {
+      "carousel.json": "354f0fc3853f9fa71c50542dddab5548651605880ac144281c9ea3771ef3897a",
+      "slide-01.jpg": "f88ce87c06e626d2395120067f5c94d8252779e3142ce66158e781eb7612c1fb",
+      "slide-02.jpg": "bd5832957e62eb054e8ae6f2d654910be0a611570dc98aefde7bc8d6b860f881",
+      "slide-03.jpg": "b52fdb2226c4396ca0cf564d5bb3c2222fc104a36a8042a2653994663117f68f",
+      "slide-04.jpg": "266778e599ea0587900534357f81956c808ce438403f76e0fb7a84a29810add0",
+      "slide-05.jpg": "a0ccbb4f7cb874041abba5c5921e0803185ed457a9fa761940972cadc876ec88",
+      "slide-06.jpg": "8d7c773e1757cb2b468d8e8cb54c8ae8317285a1e25a88027c56f465422aaa3d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "f6fd6ace8b12b5c3bcc6cbd49840c77efcc74daf7c9cf374d826f56209496ed3",
+      "reel.json": "0a4d99ded6e9845612ea9d455f73e3796db1fb537a5ed6653a473bf4c462075a",
+      "cover.jpg": "7f55cf631624db388545e3111dfbcf38e4db65bf4c113ed17c13c1938c8c6939"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.3 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-17-8",
+    "brand": "sp",
+    "date": "2026-11-17",
+    "slot": 8,
+    "title": "Martes por la noche: cerrar bien el día",
+    "folder": "queue/sp/2026-11-17/carousel-8",
+    "sha256": {
+      "carousel.json": "0f4e3a706b50767ec542dfb4d0adacf83cea9da1d3b80837c3ce7674ee2dd4dc",
+      "slide-01.jpg": "35e05d6842953d86cdbb25d9fae5c1b6d3f4aa7e661e33ccc6ea68b4346cfe8c",
+      "slide-02.jpg": "4c3c0fb34df9333d1a61883be81636a8fe040010ca01f46083a08b53bcccf07a",
+      "slide-03.jpg": "831ee6d3e77ce050080a372f6e6247031b3c1b398e999a373ae451225891b772",
+      "slide-04.jpg": "4d134947587015d0dc590a5b1f694f80e62e6fcaeda4de5daac2bc04db2b63b3",
+      "slide-05.jpg": "30bb984bd7e2c860fe4d70e3d1283a66b90fdcb87c1215de59a46bfff965ddf1",
+      "slide-06.jpg": "5156fa5a6830bc617dbe2ffcafe1dade8d474430eab44371c545be6f5cc91131",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026"
   }
 ]

@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-17",
+ "title": "Cómo empezar algo nuevo sin miedo",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo empezar algo nuevo sin miedo\n\nNadie empieza sabiendo hacerlo bien.\n\nCinco ideas para dar el primer paso en algo nuevo, aunque dé vértigo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 854 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-01.jpg",
+   "match_error": 0.12,
+   "runner_up": 11.3
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.8,
+   "runner_up": 40.75
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-05.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Hazlo pequeño",
+  "Acepta ser principiante",
+  "Cuéntaselo a alguien",
+  "Mide el avance, no la perfección",
+  "Vuelve mañana",
+  "end card"
+ ]
+}

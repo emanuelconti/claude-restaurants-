@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-17",
+ "title": "Cómo cuidar tu energía a mitad de semana",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo cuidar tu energía a mitad de semana\n\nLa energía se gestiona, no solo se gasta.\n\nGestos sencillos para llegar al jueves con energía y buen humor.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 839 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 49.39
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.53,
+   "runner_up": 47.02
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-03.jpg",
+   "match_error": 0.41,
+   "runner_up": 23.62
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 1.75,
+   "runner_up": 31.24
+  },
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-05.jpg",
+   "match_error": 1.0,
+   "runner_up": 48.27
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-06.jpg",
+   "match_error": 0.69,
+   "runner_up": 36.4
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Duerme a la misma hora",
+  "Bebe agua antes del café",
+  "Muévete diez minutos",
+  "Come sin pantallas",
+  "Di que no a una cosa",
+  "end card"
+ ]
+}

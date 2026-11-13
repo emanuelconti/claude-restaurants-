@@ -1,0 +1,423 @@
+sp {
+  "title": "Martes: pequeños avances que cuentan",
+  "hook": "No hace falta un gran día para avanzar.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco formas sencillas de avanzar un poco este martes, sin agobiarte.",
+  "points": [
+    [
+      "Termina una cosa pequeña",
+      [
+        "Un correo, una llamada, un cajón."
+      ],
+      "Cerrar da energía."
+    ],
+    [
+      "Divide lo grande",
+      [
+        "El primer paso, nada más."
+      ],
+      "Empezar es la mitad."
+    ],
+    [
+      "Apunta lo que hiciste",
+      [
+        "Al final del día, tres líneas."
+      ],
+      "Verás que avanzas."
+    ],
+    [
+      "Pide ayuda a tiempo",
+      [
+        "Una pregunta ahorra horas."
+      ],
+      "Nadie lo sabe todo."
+    ],
+    [
+      "Celebra el avance",
+      [
+        "Un café, un paseo, un mensaje."
+      ],
+      "Lo pequeño suma."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco planes de martes para quedar con amigos",
+  "hook": "El martes también puede ser el mejor día de la semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para quedar entre semana sin complicarse: cortas, cerca y con buena compañía. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Café después del trabajo",
+      [
+        "Media hora en tu cafetería de siempre."
+      ],
+      "Corto y bueno."
+    ],
+    [
+      "Cena temprana",
+      [
+        "A las ocho, en un sitio tranquilo."
+      ],
+      "Mesa sin esperas."
+    ],
+    [
+      "Paseo y algo dulce",
+      [
+        "Una vuelta por el barrio y un helado."
+      ],
+      "Plan sencillo."
+    ],
+    [
+      "Probar un sitio nuevo",
+      [
+        "Ese local que siempre veis al pasar."
+      ],
+      "Descubrir juntos."
+    ],
+    [
+      "Hacerlo costumbre",
+      [
+        "El mismo día, cada semana."
+      ],
+      "La rutina une."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo cuidar tu energía a mitad de semana",
+  "hook": "La energía se gestiona, no solo se gasta.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Gestos sencillos para llegar al jueves con energía y buen humor.",
+  "points": [
+    [
+      "Duerme a la misma hora",
+      [
+        "El cuerpo agradece la rutina."
+      ],
+      "Descanso estable."
+    ],
+    [
+      "Bebe agua antes del café",
+      [
+        "Un vaso al despertar."
+      ],
+      "Empieza hidratado."
+    ],
+    [
+      "Muévete diez minutos",
+      [
+        "Escaleras, paseo, estiramientos."
+      ],
+      "Poco, pero cada día."
+    ],
+    [
+      "Come sin pantallas",
+      [
+        "Mira el plato, no el móvil."
+      ],
+      "Pausa de verdad."
+    ],
+    [
+      "Di que no a una cosa",
+      [
+        "Lo que no suma, puede esperar."
+      ],
+      "Protege tu tiempo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Hablar menos del móvil y más en persona",
+  "hook": "Las mejores conversaciones no caben en un chat.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué quedar en persona sigue siendo lo que más nos une, y cómo hacerlo más a menudo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Propón un día concreto",
+      [
+        "No un ya veremos."
+      ],
+      "Fecha y hora."
+    ],
+    [
+      "Elige un sitio cerca",
+      [
+        "Que a todos les venga bien."
+      ],
+      "Menos excusas."
+    ],
+    [
+      "Deja el móvil boca abajo",
+      [
+        "La charla lo nota."
+      ],
+      "Presencia real."
+    ],
+    [
+      "Escucha más que hablas",
+      [
+        "Pregunta y espera la respuesta."
+      ],
+      "Interés de verdad."
+    ],
+    [
+      "Repite pronto",
+      [
+        "Antes de que pase un mes."
+      ],
+      "La amistad se riega."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco hábitos para dormir mejor esta semana",
+  "hook": "Dormir bien empieza mucho antes de la cama.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños cambios para dormir mejor desde esta misma noche.",
+  "points": [
+    [
+      "Cena ligera y temprano",
+      [
+        "Dos horas antes de acostarte."
+      ],
+      "Digestión tranquila."
+    ],
+    [
+      "Luz baja por la noche",
+      [
+        "Una lámpara, no el techo."
+      ],
+      "Señal de descanso."
+    ],
+    [
+      "Pantallas fuera de la cama",
+      [
+        "El móvil a cargar lejos."
+      ],
+      "Cama para dormir."
+    ],
+    [
+      "Habitación fresca",
+      [
+        "Unos grados menos ayudan."
+      ],
+      "Ambiente que relaja."
+    ],
+    [
+      "Misma hora de despertar",
+      [
+        "También el fin de semana."
+      ],
+      "Ritmo constante."
+    ]
+  ]
+}
+
+sp {
+  "title": "Un buen sitio de barrio vale oro",
+  "hook": "Tu bar o cafetería de siempre también es parte de tu vida.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué los sitios de barrio importan, y cómo apoyarlos con gestos sencillos. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Conoces a quien te atiende",
+      [
+        "Y ellos saben cómo tomas el café."
+      ],
+      "Trato cercano."
+    ],
+    [
+      "Es punto de encuentro",
+      [
+        "Allí quedas sin pensarlo."
+      ],
+      "Lugar de siempre."
+    ],
+    [
+      "Recomiéndalo a un amigo",
+      [
+        "Un mensaje basta."
+      ],
+      "El boca a boca ayuda."
+    ],
+    [
+      "Ve en horas tranquilas",
+      [
+        "Mejor servicio, más calma."
+      ],
+      "Todos ganan."
+    ],
+    [
+      "Dilo cuando te guste",
+      [
+        "Un gracias se recuerda."
+      ],
+      "Cuida lo tuyo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo empezar algo nuevo sin miedo",
+  "hook": "Nadie empieza sabiendo hacerlo bien.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco ideas para dar el primer paso en algo nuevo, aunque dé vértigo.",
+  "points": [
+    [
+      "Hazlo pequeño",
+      [
+        "Diez minutos el primer día."
+      ],
+      "Fácil de empezar."
+    ],
+    [
+      "Acepta ser principiante",
+      [
+        "Equivocarse es parte del camino."
+      ],
+      "Se aprende haciendo."
+    ],
+    [
+      "Cuéntaselo a alguien",
+      [
+        "Un amigo que te pregunte."
+      ],
+      "Compromiso sano."
+    ],
+    [
+      "Mide el avance, no la perfección",
+      [
+        "Compárate con tu yo de ayer."
+      ],
+      "Tu propio ritmo."
+    ],
+    [
+      "Vuelve mañana",
+      [
+        "La constancia gana al talento."
+      ],
+      "Un día más."
+    ]
+  ]
+}
+
+sp {
+  "title": "Martes por la noche: cerrar bien el día",
+  "hook": "Cómo termina el día cambia cómo empieza el siguiente.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Una rutina corta para cerrar el martes en calma y dormir mejor.",
+  "points": [
+    [
+      "Ordena cinco minutos",
+      [
+        "La mesa, la cocina, la bolsa."
+      ],
+      "Mañana lo agradecerás."
+    ],
+    [
+      "Escribe lo de mañana",
+      [
+        "Tres cosas, no más."
+      ],
+      "Cabeza libre."
+    ],
+    [
+      "Llama a alguien querido",
+      [
+        "Una charla corta y de verdad."
+      ],
+      "Cierra con cariño."
+    ],
+    [
+      "Lee unas páginas",
+      [
+        "En papel, si puedes."
+      ],
+      "Calma antes de dormir."
+    ],
+    [
+      "Agradece algo del día",
+      [
+        "Por pequeño que sea."
+      ],
+      "Mirada amable."
+    ]
+  ]
+}

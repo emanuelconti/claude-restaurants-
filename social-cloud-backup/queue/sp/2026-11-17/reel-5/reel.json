@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-17",
+ "title": "Cinco hábitos para dormir mejor esta semana",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cinco hábitos para dormir mejor esta semana\n\nDormir bien empieza mucho antes de la cama.\n\nPequeños cambios para dormir mejor desde esta misma noche.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 108 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-01.jpg",
+   "match_error": 0.02,
+   "runner_up": 11.96
+  },
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "slide": "slide-02.jpg",
+   "match_error": 1.07,
+   "runner_up": 49.09
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-03.jpg",
+   "match_error": 0.41,
+   "runner_up": 23.62
+  },
+  {
+   "unsplash": "1496181133206-80ce9b88a853",
+   "slide": "slide-04.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.81
+  },
+  {
+   "unsplash": "1540555700478-4be289fbecef",
+   "slide": "slide-05.jpg",
+   "match_error": 0.54,
+   "runner_up": 28.99
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.36,
+   "runner_up": 22.41
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Cena ligera y temprano",
+  "Luz baja por la noche",
+  "Pantallas fuera de la cama",
+  "Habitación fresca",
+  "Misma hora de despertar",
+  "end card"
+ ]
+}
