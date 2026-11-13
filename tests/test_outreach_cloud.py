@@ -13,8 +13,8 @@ import outreach_cloud as o
 
 DAY=dt.date(2026,11,11)
 def entry():
-    body=('Bonjour, votre café accueille des rencontres dans le quartier. Je suis Emanuel, étudiant et fondateur de SocialPerks avec une petite équipe étudiante. Vos clients invitent leurs amis pendant vos heures calmes : vous choisissez le cadeau, puis validez chaque visite au comptoir. Le pilote dure 60 jours, sans carte ni passage payant automatique. Ça vous dirait de regarder ? https://www.socialperkses.com/start Et si ce n\'est pas pour vous, dites-le-moi simplement, je ne vous réécrirai pas. Emanuel')
-    q=dict(approved=True,id='a'*32,city='paris',country='fr',role='paris',reviewed_by='owner-authorized-editor',reviewed_at='2026-11-11',market_date=DAY.isoformat(),expires_date=DAY.isoformat(),recipient='hello@example.org',subject='Une idée pour votre café',body=body,variant='fr-visit-first',venue_type='cafe',language='fr',policy_sha256='b'*64,checker_sha256='c'*64,fact_url='https://example.org/',collaboration_url='https://example.org/contact',contact_url='https://example.org/contact',fact_excerpt='coffee and community',collaboration_excerpt='we welcome collaborations',opt_out="Et si ce n'est pas pour vous, dites-le-moi simplement, je ne vous réécrirai pas.",hypothesis='clarify real visits')
+    body=('Bonjour, votre café accueille des rencontres dans le quartier. Nous sommes SocialPerks, une petite équipe d\'étudiants. Vos clients invitent leurs amis pendant vos heures calmes : vous choisissez le cadeau, puis validez chaque visite au comptoir. Le pilote dure 60 jours, sans carte ni passage payant automatique. Ça vous dirait de regarder ? https://www.socialperkses.com/start Et si ce n\'est pas pour vous, dites-le-moi simplement, nous ne vous réécrirons pas. Emanuel Conti · Team SocialPerks · https://www.socialperkses.com')
+    q=dict(approved=True,id='a'*32,city='paris',country='fr',role='paris',reviewed_by='owner-authorized-editor',reviewed_at='2026-11-11',market_date=DAY.isoformat(),expires_date=DAY.isoformat(),recipient='hello@example.org',subject='Une idée pour votre café',body=body,variant='fr-visit-first',venue_type='cafe',language='fr',policy_sha256='b'*64,checker_sha256='c'*64,fact_url='https://example.org/',collaboration_url='https://example.org/contact',contact_url='https://example.org/contact',fact_excerpt='coffee and community',collaboration_excerpt='we welcome collaborations',opt_out="Et si ce n'est pas pour vous, dites-le-moi simplement, nous ne vous réécrirons pas.",hypothesis='clarify real visits')
     q['content_sha256']=o.digest(q['subject']+'\n'+q['body'])
     return q
 class Boundaries(TestCase):
@@ -61,6 +61,10 @@ class Boundaries(TestCase):
     def test_late_replay(self):
         q=entry();q['expires_date']='2026-11-12'
         with self.assertRaises(o.Hold):o.validate_entry(q,DAY)
+    def test_lone_student_signature_held(self):
+        q=entry();q['body']=q['body'].replace(' · Team SocialPerks','');q['content_sha256']=o.digest(q['subject']+'\n'+q['body'])
+        with self.assertRaises(o.Hold) as e:o.validate_entry(q,DAY)
+        self.assertEqual(str(e.exception),'team_signature_missing')
     def test_second_link(self):
         q=entry();q['body']+=' https://example.org'
         with self.assertRaises(o.Hold):o.validate_entry(q,DAY)

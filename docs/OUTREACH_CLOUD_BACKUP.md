@@ -13,3 +13,7 @@ Before send: approved label, reviewed content hash, current official exact-addre
 Learning reads full30-day venue threads and records sends/replies/no/later/question/auto and3-day silence in the shared private playbook. Small cohorts below20 are descriptive. Retire variants with2 refusals in the first20, or30 sends without a positive/question. Ambiguous language stays unclassified. This code does not fabricate sign-ups or rewrite reviewed copy; editorial changes remain genuinely reviewed, with one explicit hypothesis per batch. No promise of endless automatic optimisation or replenishment.
 
 Modes: `check` only reads; `import` creates private recipient-free drafts and approval labels; `send` obeys all market and history guards. Manual defaults to check. Ordinary runner logs contain fixed status codes only. No purchases, new permissions, product/billing changes, secret dumps or owner-reply automation.
+
+## Owner, 13 November 2026: every email speaks as the team
+
+Every email is written by the SocialPerks team ("we", "our student team"), never by one student alone, and ends with exactly: `Emanuel Conti · Team SocialPerks · https://www.socialperkses.com`. scripts/outreach_cloud.py holds any reviewed copy without that signature (`team_signature_missing`), so drafts reviewed before 13 November must be refreshed by the editor before they can go out. The sender name is "Emanuel Conti, Team SocialPerks". No "[TEST]" emails to info@socialperkses.com: forwarding already works.

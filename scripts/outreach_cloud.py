@@ -36,6 +36,7 @@ from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 SELF = 'socialperks.team@gmail.com'
+TEAM_SIGNATURE = 'Emanuel Conti \u00b7 Team SocialPerks \u00b7 https://www.socialperkses.com'
 ZONE = ZoneInfo('Europe/Paris')
 POLICY_DRAFT = 'SocialPerks private cloud outreach policy'
 PREFIX = 'SocialPerks approved venue queue '
@@ -203,7 +204,10 @@ def validate_entry(q, today):
     require(isinstance(body, str) and 60 <= len(body.split()) <= 110, 'body_word_limit')
     require(subject and '\r' not in subject and '\n' not in subject and len(subject) <= 130, 'subject_invalid')
     require('\u2014' not in body + subject, 'em_dash_not_allowed')
-    require(re.findall(r'https?://[^\s<>]+', body) == ['https://www.socialperkses.com/start'], 'signup_link_invalid')
+    # Owner, 13 November 2026: every email speaks as the team ("we", "our student team"), never as one
+    # student alone, and ends with this exact signature. The site link in it is the only extra link allowed.
+    require(body.rstrip().endswith(TEAM_SIGNATURE), 'team_signature_missing')
+    require(re.findall(r'https?://[^\s<>]+', body) == ['https://www.socialperkses.com/start', 'https://www.socialperkses.com'], 'signup_link_invalid')
     require(isinstance(q.get('variant'), str) and re.fullmatch('[a-z0-9-]{3,35}', q['variant']), 'variant_invalid')
     require(q.get('venue_type') in ('hotel', 'restaurant', 'cafe', 'cocktail-bar', 'bar', 'tattoo', 'gym', 'salon', 'barber'), 'venue_type_invalid')
     require(q.get('language') in ('fr', 'es', 'pt-BR', 'en', 'it', 'de', 'pt', 'nl'), 'language_invalid')
@@ -419,7 +423,7 @@ def send_one(store, item, credential, smtp_factory=smtplib.SMTP_SSL):
     q = item['entry']
     require(not store.contacted(q['recipient']), 'already_contacted')
     message = EmailMessage()
-    message['From'], message['To'] = f'Emanuel Conti <{SELF}>', q['recipient']
+    message['From'], message['To'] = f'Emanuel Conti, Team SocialPerks <{SELF}>', q['recipient']
     message['Subject'] = q['subject']
     message['Date'] = format_datetime(dt.datetime.now(dt.timezone.utc))
     message['Message-ID'] = f'<sp-venue-{q["id"]}@socialperkses.com>'
