@@ -91,8 +91,10 @@ def message_hoodies(products: list) -> list:
     messages = ("enjoy the little things", "peace starts with us", "be kind", "do what makes you happy")
     return [product for product in products
             if product.get("images") and "hoodie" in product.get("title", "").lower()
-            and any(message in product["title"].lower() for message in messages)
-            and product.get("handle") != "be-kind-rainbow-hoodie"]  # 12 Nov 2026: always blank on Facebook (owner); out until the domain is verified in Meta
+            and any(message in product["title"].lower() for message in messages)]
+    # 13 Nov 2026: Be Kind Rainbow Hoodie back in (owner: domain verified in Meta Business, product Eligible).
+    # Facebook read and served its card image correctly on 13 November; a blank card would come from Meta's
+    # external image cache for link cards (external-*.fbcdn.net), not the domain.
 
 
 def product_card(image_bytes: bytes, title: str, description: str) -> bytes:
