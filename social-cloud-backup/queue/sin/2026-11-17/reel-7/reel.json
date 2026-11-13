@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-17",
+ "title": "Where early founders find their first paying customers",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Where early founders find their first paying customers\n\nYour first customers come from people you can actually reach.\n\nPractical places to look for the first ten users or customers of an early startup. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 24 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1493857671505-72967e2e2760",
+   "slide": "slide-01.jpg",
+   "match_error": 0.22,
+   "runner_up": 44.24
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-02.jpg",
+   "match_error": 0.74,
+   "runner_up": 40.64
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-03.jpg",
+   "match_error": 1.31,
+   "runner_up": 36.22
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-04.jpg",
+   "match_error": 1.67,
+   "runner_up": 39.78
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-05.jpg",
+   "match_error": 0.85,
+   "runner_up": 37.75
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-06.jpg",
+   "match_error": 1.08,
+   "runner_up": 36.02
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Your own network",
+  "Communities where they gather",
+  "Direct, personal messages",
+  "Partners who already serve them",
+  "Do things that do not scale",
+  "end card"
+ ]
+}

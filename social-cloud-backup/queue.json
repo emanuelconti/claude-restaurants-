@@ -8531,5 +8531,189 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 13 November 2026"
+  },
+  {
+    "id": "sin-2026-11-17-1",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 1,
+    "title": "How to run a customer interview that teaches you something",
+    "folder": "queue/sin/2026-11-17/carousel-1",
+    "sha256": {
+      "carousel.json": "8ca4d33ac58f1a929ee743086856ac764956e8b05ca119360399694e3f7a214a",
+      "slide-01.jpg": "3ea6eafcbef79697bd98ef4c7cea91e54d4c936b89261c9b506f43b23d4209da",
+      "slide-02.jpg": "09017a2e90c5bf72651fe49842132802414416c8843360a6ae2f2360e55d9a98",
+      "slide-03.jpg": "7cb93ffbafa63b7c6c4455efc2f55a0c99b7709df71ea89f90f1538c6172a99e",
+      "slide-04.jpg": "66fc4d1c794a097aaf22e852bdfbb80ae1b83162cdfb12496cacf00a3c97ee0f",
+      "slide-05.jpg": "735d0a957a66cd75cfd4149421baf483a09e85bc53be3e6bfd125f6c2444a0e0",
+      "slide-06.jpg": "69cbb5dfc3b839390fdb403818ab69a7ee3d1274aefd2404b22d15fc4868f392",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "7f97c4662413b0c4ec3f7a7d4888e0b47696b7215366b2e49f194a48e32cb721",
+      "reel.json": "935d42989096c7e5ae2d053bd36c412ab7ad6da77721f3259cb48467af950c9c",
+      "cover.jpg": "d589fd5b563cafa1d8a6bd7e1fca880dd8b1ba76dfe53cd215c8af0d68299c6f"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-17-2",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 2,
+    "title": "What to put in a one page pitch summary",
+    "folder": "queue/sin/2026-11-17/carousel-2",
+    "sha256": {
+      "carousel.json": "13fa5292844828fdfe820126d9811b32386ca2d7049d069e4fb334c90bf7c5f4",
+      "slide-01.jpg": "33117c23d577a9e38dd3bb22a22ecfc5287a699417bc2f39534d44b40a399b30",
+      "slide-02.jpg": "7c82b1f17b3c7b3f883038af6ee84c554d225705a1ef23e86f7cdd404ef1bdf6",
+      "slide-03.jpg": "7f128277977cfd01efbe39993c59372671f74559970bd32d7ff18b956aa92bef",
+      "slide-04.jpg": "94e1acd6ada1c32df1eb02a95dc9a87993c7d07c79f4ce1539ddad187abb26ef",
+      "slide-05.jpg": "10a855fae23eb4ce35ff8ecc2026def970141ee5c0481b352d1b41edcd88bd72",
+      "slide-06.jpg": "3ce8fc19a4ee5da34804cdabba4ac56ee3c6fb0d7bc1a03d6bc80760f4b39ab6",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026"
+  },
+  {
+    "id": "sin-2026-11-17-3",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 3,
+    "title": "How founders can protect their focus this week",
+    "folder": "queue/sin/2026-11-17/carousel-3",
+    "sha256": {
+      "carousel.json": "b4a2efe3ec286b4e832adcba817d5ed2612ee4cc50d3fda65d4108965010a141",
+      "slide-01.jpg": "505289ffe71b864448a0bbd6868006d710321c0a821e1f6b9579a07ca4055f44",
+      "slide-02.jpg": "51850bddd4015013e210f7faf01ceeb737a3e50e0f92b45e9c7fccb818441471",
+      "slide-03.jpg": "077b83a1491583a91c7dc1bdf608a62e953dba18fa8a0c56dc8371f81f39b1f4",
+      "slide-04.jpg": "6fcf6d8d8ab7fed2361a9321cd1cd814d5786a3bac530c0c1a65cda3b93dea64",
+      "slide-05.jpg": "8034d1952035c6e8337a6853555035b2a73d4a17028e40146307d16ad4c1542d",
+      "slide-06.jpg": "841a189c6e46644261ab7d38d9249cd2aa4721cc37011a0004b82cd911bfe8a6",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "8f7269a5f84783eff0d8734c1665effea358442c3de8eab052df76bfd184576a",
+      "reel.json": "bfa17aae09eea47201a1e57c2608aee472b1764ffb693832c2bd7830e296abd2",
+      "cover.jpg": "30f4c3fbec67ef08376a0fed69be1c0462a080c4ac5ce63e02d31c6a2a6aea8c"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-17-4",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 4,
+    "title": "Questions to ask before you choose a co-founder",
+    "folder": "queue/sin/2026-11-17/carousel-4",
+    "sha256": {
+      "carousel.json": "e258fa02709034e4461b50e8ddc21c3c5cd265ec61aecd79d350b56be3008d2f",
+      "slide-01.jpg": "fbd16bda927080b3da26784df09b150ccd2f34b27cba10bb209b05d22cae2189",
+      "slide-02.jpg": "f523e2f87d5e8a94ca8930b47acc79a0f61ee4461c5bee30451df927e149e1c4",
+      "slide-03.jpg": "9df94de283d5812597532553073ddff3205e28795de14c0784a3ed4864d6180d",
+      "slide-04.jpg": "5b56bd6746911d70d20870f636fe23dc39393dba22eb7290c14cd6eca89b0e97",
+      "slide-05.jpg": "d7b58db0fd6f94db48d16e9946e9fdad670ec4ec130796cb69d8b95c7701750d",
+      "slide-06.jpg": "9e4227e0d36a213e6c1e0f5e332476cbe546126f6cba33c23810e17741fe5f1e",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026"
+  },
+  {
+    "id": "sin-2026-11-17-5",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 5,
+    "title": "Simple metrics an early startup should track",
+    "folder": "queue/sin/2026-11-17/carousel-5",
+    "sha256": {
+      "carousel.json": "5d6c138ffd7d838fde3958b8263460c80222d973aac120302d7ac458275b9467",
+      "slide-01.jpg": "a780c3753c0fae79f6ba08ef63aece805baeb1a47990537802eeef0ea04855cb",
+      "slide-02.jpg": "5b86ea62605f56cca9ff8651212d1d889adea88793f43b2b77ac0d0ae7e2b4b0",
+      "slide-03.jpg": "589ce7d16d26b42f7bd9797e98c79d61234ce5761182efaf1764154cdeb90386",
+      "slide-04.jpg": "a28e17d5cdeddc4b07f62aadbf509005e335812a7aaf32707bada10a085e47fb",
+      "slide-05.jpg": "9e19a97b4d76ac9a54ecb49f38485b592437de3b24400d18878bb41392c1ee58",
+      "slide-06.jpg": "06bf8aeccc436d0f0f5ddbd31ba149b482f55d3ea83d669a407e97b5e011b2e2",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "aa0996eca7832feb942f9b7f717f352af7cda6e98acfb854de5a9cfc9eb6cea3",
+      "reel.json": "874ae60a319221a2c7079471d7d5439dddd7cf8d74cb6d1aa053d4e3b5c2a556",
+      "cover.jpg": "ed3eea65fec18c436b6eb69271851f9b810a6860bbf234033ec30380aed5f4d8"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-17-6",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 6,
+    "title": "How to prepare for a first meeting with an investor",
+    "folder": "queue/sin/2026-11-17/carousel-6",
+    "sha256": {
+      "carousel.json": "7823c934c17982f4c9bdd6fe661268f50b20a5f10c180a40d8a294c739d7c6d8",
+      "slide-01.jpg": "0bcb6d39d90078973f22c0f539e70adf0cd29dbb204ddc0d55374640ce9f25b0",
+      "slide-02.jpg": "0cb54dbda677e4ccfc6fc0357ed6439e26149663cff870f25984e7e90f1697dc",
+      "slide-03.jpg": "5e10cd1e362ac692601b94238f0dfd489d2a7f73d459c80faab1af404782e2a2",
+      "slide-04.jpg": "b6c3ba42e6d0e43ce0814ab037da1b3d131d9e49fe2ca0b8c9519d75dae68821",
+      "slide-05.jpg": "e17371f7aeb5ee0378f798939b84bd475e6a14045baf8276cf12eda13b25d781",
+      "slide-06.jpg": "f3e136926d765a3b7a478288edf7e7a9f72f56f885c7c1cff058b5af59045038",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026"
+  },
+  {
+    "id": "sin-2026-11-17-7",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 7,
+    "title": "Where early founders find their first paying customers",
+    "folder": "queue/sin/2026-11-17/carousel-7",
+    "sha256": {
+      "carousel.json": "b2e988030f9f3ad37f2f5d1efcff7125f8fe50b37fa16f9e0b435e1abd58302d",
+      "slide-01.jpg": "f7b73764304c70bb31c2f114fa3e18d6326a4a27b579b8b6dbb843ef94701043",
+      "slide-02.jpg": "ea4c143982726679e161746ff365d0d6d1ef681efcb66f9a1602d7d37b2c28d7",
+      "slide-03.jpg": "7ca5902d145d588e2ed9d9264074e9d24ed3e649377be9e1d7b552b0b30e00d1",
+      "slide-04.jpg": "15eac1463c3d6fcb8b5efd320560f6fb55bc0584e541bb668c0f6d94f240c9e2",
+      "slide-05.jpg": "d0cac435f4184302263886b6d64fce3ea22d51e84a836275f503d9fa6c664305",
+      "slide-06.jpg": "f989c8533d84b30a7b5f907a6bc795af277391b2280e598206b3dddf4eceb46a",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "c8b629a93506cd90c0840829611b86e8cc927dfbb5df4cab610065d7b9f53a47",
+      "reel.json": "f06b978a759beb7fb2a107bce8eb655b62bde2d7e3d4354f4103a81b04da6a2c",
+      "cover.jpg": "9286f54b02d9abccadc9bd062693e295a314f12e31251ebcf3216d9778ef968b"
+    },
+    "reel_qa": "Contact sheet inspected 13 November 2026 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-17-8",
+    "brand": "sin",
+    "date": "2026-11-17",
+    "slot": 8,
+    "title": "How to end a founder day without carrying it home",
+    "folder": "queue/sin/2026-11-17/carousel-8",
+    "sha256": {
+      "carousel.json": "118ab1db47387dd2af30cf9a6f79545c4355b129f9715cdef367e37e3f12587e",
+      "slide-01.jpg": "137157901cc3725a4d757be47fee23f8d0b0b497c170dae2dd06d6ad2ca22476",
+      "slide-02.jpg": "16ee652c37d6a8aa13f3002c34a7ae8052ffb88fbcb84f5e83ffc7be79ac74de",
+      "slide-03.jpg": "a8a9acb5310da963abc1910d403c1c441ba9285121c12f6fc66ceae5a3199286",
+      "slide-04.jpg": "760b6c7b36328a76c844577911f2b86efa86b03a0eed13c84ed876ffe36a508f",
+      "slide-05.jpg": "d8564bf9dc5a7dbe1b977d185ff73695528b60de2806defaff91b7055c29ba8d",
+      "slide-06.jpg": "aaf4be26aece17690ca91131cab5915445c0ef290eda6a380c90482b774b9c50",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 13 November 2026"
   }
 ]

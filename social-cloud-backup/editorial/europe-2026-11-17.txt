@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to run a customer interview that teaches you something",
+  "hook": "Good interviews ask about the past, not opinions about the future.",
+  "photos": "work",
+  "caption": "A simple way to run early customer interviews that give you facts, not polite compliments. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask about the last time",
+      [
+        "When did this problem last happen to you?"
+      ],
+      "Real stories, real data."
+    ],
+    [
+      "Do not pitch",
+      [
+        "Keep your idea out of the first twenty minutes."
+      ],
+      "Listen first."
+    ],
+    [
+      "Ask what they tried",
+      [
+        "Workarounds show how much it hurts."
+      ],
+      "Effort reveals value."
+    ],
+    [
+      "Write it down right away",
+      [
+        "Notes fade within an hour."
+      ],
+      "Capture while fresh."
+    ],
+    [
+      "Ask for one more contact",
+      [
+        "Who else has this problem?"
+      ],
+      "One call leads to the next."
+    ]
+  ]
+}
+
+sin {
+  "title": "What to put in a one page pitch summary",
+  "hook": "Many investors read one page before they read a deck.",
+  "photos": "work",
+  "caption": "The sections a one page summary should cover so a busy reader understands you in two minutes. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "One line on what you do",
+      [
+        "Plain words, no buzzwords."
+      ],
+      "Clarity first."
+    ],
+    [
+      "The problem and who has it",
+      [
+        "Be specific about the customer."
+      ],
+      "Name the pain."
+    ],
+    [
+      "Traction so far",
+      [
+        "Users, pilots, revenue or letters of intent."
+      ],
+      "Facts beat promises."
+    ],
+    [
+      "The team",
+      [
+        "Why you are the people to build it."
+      ],
+      "Show the fit."
+    ],
+    [
+      "What you are raising and why",
+      [
+        "Amount, use and the next milestone."
+      ],
+      "Make the ask clear."
+    ]
+  ]
+}
+
+sin {
+  "title": "How founders can protect their focus this week",
+  "hook": "Your calendar shows your real priorities.",
+  "photos": "work",
+  "caption": "Small rules that keep a founder's week on the work that moves the company. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Pick three outcomes",
+      [
+        "Not tasks. Results you want by Friday."
+      ],
+      "Aim the week."
+    ],
+    [
+      "Block deep work first",
+      [
+        "Mornings for building, afternoons for calls."
+      ],
+      "Guard the best hours."
+    ],
+    [
+      "Batch messages",
+      [
+        "Two or three times a day is enough."
+      ],
+      "Fewer interruptions."
+    ],
+    [
+      "Say no to most events",
+      [
+        "Go to the ones with your customers in the room."
+      ],
+      "Choose your rooms."
+    ],
+    [
+      "Review on Friday",
+      [
+        "What moved, what did not and why."
+      ],
+      "Learn every week."
+    ]
+  ]
+}
+
+sin {
+  "title": "Questions to ask before you choose a co-founder",
+  "hook": "A co-founder is a long relationship. Talk early about the hard parts.",
+  "photos": "work",
+  "caption": "Conversations to have before you commit to building a company with someone. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Why this, why now",
+      [
+        "Make sure the motivation is shared."
+      ],
+      "Same reasons, fewer fights."
+    ],
+    [
+      "Who decides what",
+      [
+        "Agree on roles and final calls."
+      ],
+      "Clarity avoids conflict."
+    ],
+    [
+      "How much time and money",
+      [
+        "Full time, savings, salary expectations."
+      ],
+      "Be honest early."
+    ],
+    [
+      "What if it fails",
+      [
+        "Talk about stopping before you start."
+      ],
+      "Plan the exit too."
+    ],
+    [
+      "How do you disagree",
+      [
+        "Try a small project together first."
+      ],
+      "Test the partnership."
+    ]
+  ]
+}
+
+sin {
+  "title": "Simple metrics an early startup should track",
+  "hook": "Track a few numbers well rather than many badly.",
+  "photos": "work",
+  "caption": "A short list of numbers that help early founders see if things are really moving. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Active users or customers",
+      [
+        "People who used it this week."
+      ],
+      "Usage over sign ups."
+    ],
+    [
+      "Retention",
+      [
+        "How many come back after a month."
+      ],
+      "The truest signal."
+    ],
+    [
+      "Revenue or commitments",
+      [
+        "Even small amounts count."
+      ],
+      "Money is evidence."
+    ],
+    [
+      "Burn and runway",
+      [
+        "Monthly spend and months left."
+      ],
+      "Know your deadline."
+    ],
+    [
+      "One leading indicator",
+      [
+        "Demos booked, pilots started, replies."
+      ],
+      "See the future early."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare for a first meeting with an investor",
+  "hook": "Preparation shows respect and makes the meeting useful.",
+  "photos": "work",
+  "caption": "Practical steps before a first conversation with an angel or a fund. Every investor works differently. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Research their portfolio",
+      [
+        "Do they invest at your stage and sector?"
+      ],
+      "Fit before pitch."
+    ],
+    [
+      "Know your numbers by heart",
+      [
+        "Users, revenue, burn, runway."
+      ],
+      "Answer without slides."
+    ],
+    [
+      "Prepare a short story",
+      [
+        "Problem, insight, progress, ask."
+      ],
+      "Two minutes, clear."
+    ],
+    [
+      "List likely questions",
+      [
+        "And answer them honestly."
+      ],
+      "No surprises."
+    ],
+    [
+      "Ask your own questions",
+      [
+        "How they help and how they decide."
+      ],
+      "It is two way."
+    ]
+  ]
+}
+
+sin {
+  "title": "Where early founders find their first paying customers",
+  "hook": "Your first customers come from people you can actually reach.",
+  "photos": "work",
+  "caption": "Practical places to look for the first ten users or customers of an early startup. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Your own network",
+      [
+        "Former colleagues, classmates, friends of friends."
+      ],
+      "Start close."
+    ],
+    [
+      "Communities where they gather",
+      [
+        "Forums, groups, local associations."
+      ],
+      "Go where they are."
+    ],
+    [
+      "Direct, personal messages",
+      [
+        "Short, specific and about them."
+      ],
+      "Personal beats mass."
+    ],
+    [
+      "Partners who already serve them",
+      [
+        "Someone they trust can introduce you."
+      ],
+      "Borrow trust."
+    ],
+    [
+      "Do things that do not scale",
+      [
+        "Visit, call and onboard by hand."
+      ],
+      "Learn while you sell."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to end a founder day without carrying it home",
+  "hook": "Closing the day well helps you start the next one clear.",
+  "photos": "work",
+  "caption": "A short routine to end a demanding founder day and rest properly. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write tomorrow's first task",
+      [
+        "One clear thing to start with."
+      ],
+      "Easy start tomorrow."
+    ],
+    [
+      "Note one win",
+      [
+        "Even a small step counts."
+      ],
+      "See your progress."
+    ],
+    [
+      "Close open loops",
+      [
+        "Reply or schedule, then let go."
+      ],
+      "Clear the head."
+    ],
+    [
+      "Step away from screens",
+      [
+        "A walk, a meal, a call home."
+      ],
+      "Real rest."
+    ],
+    [
+      "Sleep at a steady hour",
+      [
+        "Your judgement depends on it."
+      ],
+      "Rest is part of the job."
+    ]
+  ]
+}

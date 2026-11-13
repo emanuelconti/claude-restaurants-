@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-17",
+ "title": "How founders can protect their focus this week",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How founders can protect their focus this week\n\nYour calendar shows your real priorities.\n\nSmall rules that keep a founder's week on the work that moves the company. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 19 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-01.jpg",
+   "match_error": 0.15,
+   "runner_up": 15.05
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-03.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-04.jpg",
+   "match_error": 0.22,
+   "runner_up": 30.7
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-05.jpg",
+   "match_error": 1.19,
+   "runner_up": 36.7
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Pick three outcomes",
+  "Block deep work first",
+  "Batch messages",
+  "Say no to most events",
+  "Review on Friday",
+  "end card"
+ ]
+}
