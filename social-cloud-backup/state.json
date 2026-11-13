@@ -200,7 +200,7 @@
   "gms-2026-11-07-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1434571988830596",
   "gms-2026-11-07-5:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfbkRLvlibf",
   "gms-2026-11-07-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/qfYUVtwI4qI",
-  "gms-2026-11-07-5:facebook": "confirmed remotely: https://www.facebook.com/reel/2502814316880592/",
+  "gms-2026-11-07-5:facebook": "confirmed remotely: /reel/2502814316880592/",
   "gms-2026-11-07-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/7yGWwMntUWM",
   "gms-2026-11-07-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1434719625482499",
   "gms-2026-11-07-1:ig": "confirmed remotely: 5 ways to make a Saturday morning feel like yours",
@@ -381,5 +381,7 @@
   "gms-2026-11-13-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1073606635709170/",
   "gms-2026-11-13-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Dfrnro5FbhY",
   "gms-2026-11-13-7:facebook": "not published: verified absent from the Page posts, videos, Reels and scheduled posts at 15:11 UTC on 13 November (Claude, owner-authorized); not resent",
-  "gms-2026-11-13-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228788668/"
+  "gms-2026-11-13-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228788668/",
+  "gms-2026-11-13-1:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Friday plans for friends who are always busy | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/sLDoAhXJGB4",
+  "gms-2026-11-13-8:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1441458428141952"
 }
