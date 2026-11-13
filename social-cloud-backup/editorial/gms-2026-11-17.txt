@@ -1,0 +1,479 @@
+{
+  "title": "Tuesday reminders for a kinder week",
+  "hook": "Be as kind to yourself as you are to your friends.",
+  "photos": "life",
+  "points": [
+    [
+      "Start slower than you think",
+      [
+        "Ten quiet minutes before the phone."
+      ],
+      "A calm start helps."
+    ],
+    [
+      "Drink water before kopi",
+      [
+        "Your body will thank you by noon."
+      ],
+      "Small care counts."
+    ],
+    [
+      "Reply to one old message",
+      [
+        "The friend you meant to text."
+      ],
+      "Close a loop."
+    ],
+    [
+      "Take the stairs once",
+      [
+        "A little movement lifts the mood."
+      ],
+      "Move a bit."
+    ],
+    [
+      "Praise one thing you did",
+      [
+        "Out loud, even if it is small."
+      ],
+      "You did well."
+    ]
+  ],
+  "caption": "Be as kind to yourself as you are to your friends. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #TuesdayMotivation #SelfKindness #SGLife",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "How to plan a cosy movie night with friends",
+  "hook": "The best nights in need no big budget.",
+  "photos": "life",
+  "points": [
+    [
+      "Pick the film together",
+      [
+        "A short shortlist in the group chat."
+      ],
+      "Everyone feels heard."
+    ],
+    [
+      "Everyone brings one snack",
+      [
+        "Kueh, chips or fruit."
+      ],
+      "Share the effort."
+    ],
+    [
+      "Dress for comfort",
+      [
+        "Your softest hoodie is the dress code."
+      ],
+      "Cosy wins."
+    ],
+    [
+      "Phones in a basket",
+      [
+        "Watch together, not apart."
+      ],
+      "Be present."
+    ],
+    [
+      "Talk about it after",
+      [
+        "The best part is the chat."
+      ],
+      "Stay a little longer."
+    ]
+  ],
+  "caption": "The best nights in need no big budget. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #MovieNight #Friendship #SGFriends",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Words that help a friend before an exam",
+  "hook": "A short message can calm a busy mind.",
+  "photos": "life",
+  "points": [
+    [
+      "You have prepared for this",
+      [
+        "Remind them of the work they did."
+      ],
+      "Trust the effort."
+    ],
+    [
+      "One question at a time",
+      [
+        "Breathe and take it slowly."
+      ],
+      "Steady pace."
+    ],
+    [
+      "I am proud of you already",
+      [
+        "Whatever the result."
+      ],
+      "Pride is not grades."
+    ],
+    [
+      "Eat something before",
+      [
+        "A real meal helps focus."
+      ],
+      "Fuel the brain."
+    ],
+    [
+      "Let us celebrate after",
+      [
+        "Something to look forward to."
+      ],
+      "A plan helps."
+    ]
+  ],
+  "caption": "A short message can calm a busy mind. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #ExamSeason #Encouragement #Friendship",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
+
+{
+  "title": "Small habits that make you a better listener",
+  "hook": "Listening well is a gift anyone can give.",
+  "photos": "life",
+  "points": [
+    [
+      "Put the phone away",
+      [
+        "Face down is not enough."
+      ],
+      "Full attention."
+    ],
+    [
+      "Ask one more question",
+      [
+        "What happened next?"
+      ],
+      "Show you care."
+    ],
+    [
+      "Do not rush to fix",
+      [
+        "Sometimes people just want to be heard."
+      ],
+      "Hear first."
+    ],
+    [
+      "Repeat what you heard",
+      [
+        "So they know you understood."
+      ],
+      "Simple and kind."
+    ],
+    [
+      "Remember and follow up",
+      [
+        "Ask about it next week."
+      ],
+      "They will notice."
+    ]
+  ],
+  "caption": "Listening well is a gift anyone can give. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Friendship #Listening #Kindness",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg"
+  ]
+}
+
+{
+  "title": "A simple lunch break reset",
+  "hook": "Your afternoon starts at lunch.",
+  "photos": "life",
+  "points": [
+    [
+      "Leave your desk",
+      [
+        "Even ten minutes away helps."
+      ],
+      "Change the scene."
+    ],
+    [
+      "Eat slowly",
+      [
+        "Taste the food, not the inbox."
+      ],
+      "Real pause."
+    ],
+    [
+      "Walk in the shade",
+      [
+        "A short loop around the block."
+      ],
+      "Fresh air."
+    ],
+    [
+      "Chat with someone new",
+      [
+        "The colleague you never talk to."
+      ],
+      "New connections."
+    ],
+    [
+      "Return with one goal",
+      [
+        "Decide the next task before you sit."
+      ],
+      "Clear afternoon."
+    ]
+  ],
+  "caption": "Your afternoon starts at lunch. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGLunch #WorkLife #Wellbeing",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Gift ideas for a friend who just moved",
+  "hook": "A new home feels warmer with a thoughtful gift.",
+  "photos": "life",
+  "points": [
+    [
+      "Something soft to wear",
+      [
+        "For the first nights among boxes."
+      ],
+      "Comfort first."
+    ],
+    [
+      "A note for the fridge",
+      [
+        "Your handwriting in their new kitchen."
+      ],
+      "Personal touch."
+    ],
+    [
+      "A plant that forgives",
+      [
+        "Easy care for a busy start."
+      ],
+      "Life in the room."
+    ],
+    [
+      "Snacks for unpacking day",
+      [
+        "Fuel for a long day."
+      ],
+      "Practical love."
+    ],
+    [
+      "Your help for an afternoon",
+      [
+        "Time is the best gift."
+      ],
+      "Show up."
+    ]
+  ],
+  "caption": "A new home feels warmer with a thoughtful gift. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #NewHome #SGGifts #ThoughtfulGifts",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "How to make new friends as an adult",
+  "hook": "Friendship takes time, and that is normal.",
+  "photos": "life",
+  "points": [
+    [
+      "Show up to the same place",
+      [
+        "A class, a run club, a cafe."
+      ],
+      "Familiar faces."
+    ],
+    [
+      "Say yes more often",
+      [
+        "Even when you feel tired."
+      ],
+      "Chances come from yes."
+    ],
+    [
+      "Make the first invite",
+      [
+        "Most people are waiting to be asked."
+      ],
+      "Be brave."
+    ],
+    [
+      "Share something real",
+      [
+        "A little honesty builds trust."
+      ],
+      "Open up slowly."
+    ],
+    [
+      "Be patient",
+      [
+        "Closeness grows over months."
+      ],
+      "Give it time."
+    ]
+  ],
+  "caption": "Friendship takes time, and that is normal. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Friendship #SGLife #MakingFriends",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Evening thoughts to end a busy Tuesday",
+  "hook": "You did more today than you think.",
+  "photos": "life",
+  "points": [
+    [
+      "Name three good moments",
+      [
+        "Small ones count the most."
+      ],
+      "Notice the good."
+    ],
+    [
+      "Let go of one worry",
+      [
+        "Write it down and close the book."
+      ],
+      "Lighter mind."
+    ],
+    [
+      "Text someone thank you",
+      [
+        "For something they did this week."
+      ],
+      "End with warmth."
+    ],
+    [
+      "Change into something cosy",
+      [
+        "Your favourite hoodie, your quiet time."
+      ],
+      "Comfort counts."
+    ],
+    [
+      "Sleep a little earlier",
+      [
+        "Tomorrow you will thank tonight."
+      ],
+      "Rest well."
+    ]
+  ],
+  "caption": "You did more today than you think. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #EveningRoutine #SelfCare #Singapore",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
