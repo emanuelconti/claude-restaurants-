@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-14T10:18:56+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-14T15:19:44+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -401,7 +401,8 @@
   "gms-2026-11-14-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/AcZR62JXWNc",
   "gms-2026-11-14-6:facebook": "confirmed remotely: https://www.facebook.com/reel/3411634192377841/",
   "gms-2026-11-14-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/eblI2GAhGx8",
-  "gms-2026-11-14-7:facebook": "held: publication attempt started at 2026-11-14T12:47:02+00:00; reconcile remotely before retry",
+  "gms-2026-11-14-7:facebook": "not published: absent from the remote history 2.5 hours after the attempt (automatic check); not resent",
   "gms-2026-11-14-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/e-9J9LtrlbQ",
-  "gms-2026-11-14-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228869721/"
+  "gms-2026-11-14-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228869721/",
+  "gms-2026-11-14-8:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1442588761362252"
 }
