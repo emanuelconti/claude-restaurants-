@@ -186,7 +186,7 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - Editing rows needs the Google Sheets connector, which is not connected yet. Until then, rows go into the Gmail draft "SocialPerks outreach playbook".
 
 ## Investor outreach (owner, 14 November 2026)
-- Daily routine trig_INVESTITORI ("INVESTITORI SocialPerks"), weekdays at 12:13 Madrid, in this session. ONLY this routine contacts investors; the other session does not duplicate it.
+- Daily routine trig_012mZ4VAbd5acSBTuFdK1tRk ("INVESTITORI SocialPerks"), weekdays at 12:13 Madrid, in this session. ONLY this routine contacts investors; the other session does not duplicate it.
 - It sends 6 new contacts a day to angels and pre-seed/seed funds that fit. Each email is very human and honest about the stage: MVP live, venues on free pilots, pre-revenue, seed of €1.5M in spring 2027. It asks only for 20 minutes of honest feedback, and sends the deck only on request.
 - Addresses: only emails an investor or fund publishes to receive pitches.
 - Replies: Ema answers; the routine drafts the answer and logs objections. One follow-up after 5-6 days.
