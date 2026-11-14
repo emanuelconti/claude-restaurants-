@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-21",
+ "title": "Weekend reading for founders: how to choose",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Weekend reading for founders: how to choose\n\nRead what helps the problem you have this month.\n\nHow to pick books and articles that help this month, not someday. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 807 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 29.53
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-02.jpg",
+   "match_error": 0.41,
+   "runner_up": 23.62
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-03.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-04.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-05.jpg",
+   "match_error": 0.56,
+   "runner_up": 38.47
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-06.jpg",
+   "match_error": 1.31,
+   "runner_up": 36.22
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Start from your problem",
+  "Prefer practitioners",
+  "Read one, apply one",
+  "Take short notes",
+  "Share with your team",
+  "end card"
+ ]
+}

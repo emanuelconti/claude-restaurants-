@@ -11290,5 +11290,189 @@
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-21-1",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 1,
+    "title": "Weekend reading for founders: how to choose",
+    "folder": "queue/sin/2026-11-21/carousel-1",
+    "sha256": {
+      "carousel.json": "c2cb43bdf7b0a167214d1395fb4c3ece351fe7c14e70b41d5bc5088dd216616d",
+      "slide-01.jpg": "219c57d82622ba0e4334bf4937de9bb2b3d7763b24823d13d2206ba8c2811d9a",
+      "slide-02.jpg": "9ed652327de64c30c69b59d32ae529e594a020fe00976be342993b362f62b853",
+      "slide-03.jpg": "cdefba2e4ebffa70457d8b41fd5cc80d2e1ed3116bf1c0a6f97d069ba58114d5",
+      "slide-04.jpg": "d5469ce3214a0dab2b67292fc697376db28b0c991f50dd52b7439972e494d92b",
+      "slide-05.jpg": "2f8b94c61b72639e273ca611531726d6d7c348402af67af6476b2d4426684eb1",
+      "slide-06.jpg": "c56395b35be8e7565559533713618dcbdc76ef99fdc035ec4e1e6df9015cdcc4",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "b82b52727176e0164a2a48ef4558ddca77de9eb5fbb8946a3b83522f7c22edb7",
+      "reel.json": "f520b2967b02057192118a40471021694fa606a95cdd13fb6b2e0d8af6358e34",
+      "cover.jpg": "ae3296497e7cff7d890a1ba2910d895d3438b8f4a6ebb11814505615d26c4e84"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-21-2",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 2,
+    "title": "How to plan a quiet Saturday as a founder",
+    "folder": "queue/sin/2026-11-21/carousel-2",
+    "sha256": {
+      "carousel.json": "9ba1892dca1fc2517616e7626cfb69bfa9c4fe235684d72b421aec395267b6f5",
+      "slide-01.jpg": "8139bf97b1d384b3a3da9f1fd4f53584180d21996cea78e3aa1b38beed7e49e4",
+      "slide-02.jpg": "8f40e40ea6a7deb914727023c25a889e0554ea4050cc1e5d0cb6602d2cd5469a",
+      "slide-03.jpg": "810eb979fb2b3ff0df474c9362e0733b42fee19bff5cda135fe3bded83eba572",
+      "slide-04.jpg": "a47e00398cf36a71770224316d0fb37653f7ce7c2e6f5703c6a72b411fafb334",
+      "slide-05.jpg": "fd449506788e6cf119c3b4a6afb21774058bc92dc6d5292f51244a03131b56c0",
+      "slide-06.jpg": "6e38aea171eae1fbe906b4a7ccd4267543d72332643b3a5982fa0733e0f557e0",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-21-3",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 3,
+    "title": "How to set goals for next quarter",
+    "folder": "queue/sin/2026-11-21/carousel-3",
+    "sha256": {
+      "carousel.json": "cf876c03ea2d16ccba00a31be0318ee96a4cbdceb6256b47c47e51df85b6177f",
+      "slide-01.jpg": "e3ace8023e0630bad9203ae496c6642248e6f5590fadbc3b47f9af7da5ac4eca",
+      "slide-02.jpg": "30187ba90072899a66c488c32c10f5b17bde7e04d7179e7cc4f89214d50c25f6",
+      "slide-03.jpg": "290b5483158b1c405b1e2715a51b5980d0d73ebf0465d730822a7e94fbeacf3c",
+      "slide-04.jpg": "59e16c8dd695102093800619ce69ae8062dd686a0032fe5d36124894eb988a54",
+      "slide-05.jpg": "847bf7509633d7142a5aa3ac28e2cca5f579b4d233cee9bbf0215b71e4f9142e",
+      "slide-06.jpg": "20c962a4c8b7e175adf35a06f74eab836d97fd4113d755428048f5fa89cb8559",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "a0fae4e554013f6cefb26093e5e2c3aa6c0cef62ec409c26863a655d150324c1",
+      "reel.json": "a55a57270e34dd0a6766c247603afe6aa3a2926b082ca64940e39af97c217e3c",
+      "cover.jpg": "5e782ac1ba8d415d895273a32ee4a9b2453453921b85d50e514e22f8bdcedf6c"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-21-4",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 4,
+    "title": "How to choose your first market in Europe",
+    "folder": "queue/sin/2026-11-21/carousel-4",
+    "sha256": {
+      "carousel.json": "e3a179be4d0d3e9f0bcc28ab5febabd0f6600d8c3ab6d69e9fd514a4f2b35538",
+      "slide-01.jpg": "d990e452e1f2229cbf11a7a5cdccff6ffa07437ead2b90ba8f2850f2a3992e1f",
+      "slide-02.jpg": "4ba94b920c3a9c21b42b13450814f8fba07fbd744d3c7cff20a937a0a5dc7b73",
+      "slide-03.jpg": "8f5ca101a20781fd95336454bbe55e94e579c58826dea4b0915cb57d65852096",
+      "slide-04.jpg": "f1732562649c6a282b818d18e1a9bbe7f8a8de64a699f8f9d563dc49a0d6a963",
+      "slide-05.jpg": "b671dad482c17b8e503d41d74e620e991222c6bcc9bdd4222f3cc218ec9646fa",
+      "slide-06.jpg": "74f08a3a043a1f8d6bba4a95f42a139b29910a0344218c545d78d2c6c0f89078",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-21-5",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 5,
+    "title": "Small habits that make founders better writers",
+    "folder": "queue/sin/2026-11-21/carousel-5",
+    "sha256": {
+      "carousel.json": "d5b08e7e161061b90c93fadbcfafaf0aa93384223508efb67d02220f62237ab0",
+      "slide-01.jpg": "bb70d8da7c9fe55d443e40b7cafff19f9dee76ce38055893a50bb8248ac957ea",
+      "slide-02.jpg": "1f31382732807e40e677bcc46bbee941c2fecbc6a87004cc239bc9c675c6b15a",
+      "slide-03.jpg": "bc27d20c634dfdd5e0e62f598be7ae3102cf3146742e71850782f6f54d4fe4f5",
+      "slide-04.jpg": "098b9deb6b927bcf67c36645fd2fd92bf517cca8865c281574943858f129fe83",
+      "slide-05.jpg": "b618eb08a9433ca28ba508b7707625730f2bf6b285e18160995685462ae622e9",
+      "slide-06.jpg": "a14e9962b4393749e8e54b592f27dac56a43863de3f592d735fc28d0cee12bc1",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "3f20a489b5a0adf24a18902f4b78acf37c7284312d32f1fe952367ede997265a",
+      "reel.json": "ce09aa158d1da578b73ca08c1f196eac758596d7fa79581f487be1871efa8465",
+      "cover.jpg": "25e3400e22c87e50acfc03ce03ba098003ca64350b3a6303b58a74e3a103f9ea"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-21-6",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 6,
+    "title": "How to ask for an introduction the right way",
+    "folder": "queue/sin/2026-11-21/carousel-6",
+    "sha256": {
+      "carousel.json": "6ed731f31114f51fcbdefc1bb1e72c32647e4a30a4ec3ba939982fb21d596374",
+      "slide-01.jpg": "7715c88ecba2021a0cce374909b1ea150bac6464c556b062f496360ba6fc23d6",
+      "slide-02.jpg": "1816b4d7617f570c51badf1dcee1bac53a324cc339fdcfa6a92df4ee5da56a9e",
+      "slide-03.jpg": "40214bfb8d2b5df97e37f1de94b9c1a1213fdd8ea1025d29cf350e9f2890a78f",
+      "slide-04.jpg": "bdf6ef4d266737c0f0e6fab456af90b4b31d573879da4dd5dcd39d73c7551a6d",
+      "slide-05.jpg": "298b8c10ca31d184f433d8936250efac9b82bd10cad8e535fcae9d5b832ddda2",
+      "slide-06.jpg": "8d53c8624ca771c96376692be4f6d56251082a8387c6564a656b0f72b7bfd9a3",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-21-7",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 7,
+    "title": "How to recover energy after a long week",
+    "folder": "queue/sin/2026-11-21/carousel-7",
+    "sha256": {
+      "carousel.json": "68b7ce8e2fdb7c26ed3b3b9d140bcc5fa84ae88edca4fa6b7b70126ccac59f7d",
+      "slide-01.jpg": "802a7f1f2d245f012415b0ae7b76992400263e801881eb7c5d68b3422f10a108",
+      "slide-02.jpg": "35f2d198576530b70cd166b82462794152895eea1bc1e64746925c2b861716be",
+      "slide-03.jpg": "e92679dbbbeadf6df25676c14d1cc2e0b64d718b8f1c1b170425462b31e72e2c",
+      "slide-04.jpg": "0aecad8289e2bb92f70badadbb8171a0b2df222ee7deba980d00b5796df3681c",
+      "slide-05.jpg": "386913ca81504555025568e818337cb74b287c4f224a0d972b594291d9aae7ae",
+      "slide-06.jpg": "7d931a7f1fc9e303fbb311df0ccc192fd1b2f99f260c3c8db1687d36272a6dcc",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "b996eafb55e19b8cd299671ddc6dd4162eaca3a62eebe7aa211302d5d52c9561",
+      "reel.json": "8abfe976c02a50966f4d0668631dc93397aadb897783e1b6c87ddd3674a7f918",
+      "cover.jpg": "2db95f2e3eb9d2022d995608db7e9c71785fc28008dadf5a29b6b0325e782472"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-21-8",
+    "brand": "sin",
+    "date": "2026-11-21",
+    "slot": 8,
+    "title": "A ten minute plan for a calm Monday",
+    "folder": "queue/sin/2026-11-21/carousel-8",
+    "sha256": {
+      "carousel.json": "ab0fc0e75a047f5e8677e62a256ff9ec18f3591ab9d428c544266fc61ccddf7f",
+      "slide-01.jpg": "bcb3db422ca167022cab72becd8eec52597ef0ea5e8e37518b6526b140da5937",
+      "slide-02.jpg": "21622c9d067a4b5c324c9debc88b13fac3ed9c1720b64c16c0f3a949c273ba98",
+      "slide-03.jpg": "89ea3c4aed38d4e3597f35a9d66414f2fb42c5916de1c1fe41f6590d2f351901",
+      "slide-04.jpg": "08c3c967ec57ada4cca0814d5ef476a9bb8cc93e206063ece4bc157c3120c489",
+      "slide-05.jpg": "ca1a9ea3c8373f425f6a633313b02010fabe8ad7af440470e97d372a1eeb2057",
+      "slide-06.jpg": "172095156b153141ed1401432bdd7b3c40a01c90084a5689c5d199709a8231d7",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
   }
 ]

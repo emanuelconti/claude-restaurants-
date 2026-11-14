@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "Weekend reading for founders: how to choose",
+  "hook": "Read what helps the problem you have this month.",
+  "photos": "work",
+  "caption": "How to pick books and articles that help this month, not someday. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start from your problem",
+      [
+        "Hiring, sales or product."
+      ],
+      "Read with purpose."
+    ],
+    [
+      "Prefer practitioners",
+      [
+        "People who built something."
+      ],
+      "Real lessons."
+    ],
+    [
+      "Read one, apply one",
+      [
+        "One idea to try on Monday."
+      ],
+      "Use it."
+    ],
+    [
+      "Take short notes",
+      [
+        "Three lines per chapter."
+      ],
+      "Remember more."
+    ],
+    [
+      "Share with your team",
+      [
+        "Pass on what worked."
+      ],
+      "Learn together."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to plan a quiet Saturday as a founder",
+  "hook": "A slow day is often where the clearest ideas come from.",
+  "photos": "work",
+  "caption": "Ideas for a Saturday that actually restores your energy. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Sleep without an alarm",
+      [
+        "Your brain catches up."
+      ],
+      "Fresh mind."
+    ],
+    [
+      "Go outside",
+      [
+        "A long walk or a ride."
+      ],
+      "New perspective."
+    ],
+    [
+      "Meet a friend",
+      [
+        "No startup talk for an hour."
+      ],
+      "Real rest."
+    ],
+    [
+      "Keep one hour to think",
+      [
+        "Paper, not a laptop."
+      ],
+      "Big picture."
+    ],
+    [
+      "Say no to email",
+      [
+        "It will be there on Monday."
+      ],
+      "Protect the day."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to set goals for next quarter",
+  "hook": "Three clear goals beat ten vague ones.",
+  "photos": "work",
+  "caption": "A simple way for small teams to set quarterly goals they can actually track. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Look back first",
+      [
+        "What worked last quarter."
+      ],
+      "Learn from data."
+    ],
+    [
+      "Choose three outcomes",
+      [
+        "Measurable and ambitious."
+      ],
+      "Focus."
+    ],
+    [
+      "Give each an owner",
+      [
+        "One name per goal."
+      ],
+      "Clear accountability."
+    ],
+    [
+      "Set a monthly check",
+      [
+        "Same day each month."
+      ],
+      "Stay on track."
+    ],
+    [
+      "Keep them visible",
+      [
+        "On the page you open every day."
+      ],
+      "Keep them alive."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to choose your first market in Europe",
+  "hook": "Win one market well before trying many.",
+  "photos": "work",
+  "caption": "Questions to answer before choosing where to launch first in Europe. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start where you have access",
+      [
+        "Language, network and customers."
+      ],
+      "Unfair advantage."
+    ],
+    [
+      "Check the rules",
+      [
+        "Licences, data and tax basics."
+      ],
+      "Avoid surprises."
+    ],
+    [
+      "Look at competition",
+      [
+        "Who already serves these customers."
+      ],
+      "Find your gap."
+    ],
+    [
+      "Test with a few customers",
+      [
+        "Before hiring locally."
+      ],
+      "Cheap proof."
+    ],
+    [
+      "Decide what success means",
+      [
+        "A number and a deadline."
+      ],
+      "Clear go or stop."
+    ]
+  ]
+}
+
+sin {
+  "title": "Small habits that make founders better writers",
+  "hook": "Clear writing is clear thinking.",
+  "photos": "work",
+  "caption": "Writing habits that make updates, emails and decks easier to read. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write the point first",
+      [
+        "Then the details."
+      ],
+      "Respect the reader."
+    ],
+    [
+      "Use short sentences",
+      [
+        "One idea each."
+      ],
+      "Easy to follow."
+    ],
+    [
+      "Cut what is not needed",
+      [
+        "Then read it again."
+      ],
+      "Sharper."
+    ],
+    [
+      "Read it out loud",
+      [
+        "You hear what is unclear."
+      ],
+      "Natural tone."
+    ],
+    [
+      "Write a little every day",
+      [
+        "Notes, updates and ideas."
+      ],
+      "Practice compounds."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to ask for an introduction the right way",
+  "hook": "A good intro request makes it easy to say yes.",
+  "photos": "work",
+  "caption": "How to ask for warm introductions without putting your contact in a hard spot. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask someone who knows them",
+      [
+        "A real connection, not a name on a list."
+      ],
+      "Warm path."
+    ],
+    [
+      "Explain why that person",
+      [
+        "One line on the fit."
+      ],
+      "Show you did homework."
+    ],
+    [
+      "Write a forwardable note",
+      [
+        "Short and about the other person."
+      ],
+      "Easy to pass on."
+    ],
+    [
+      "Make it easy to say no",
+      [
+        "No pressure on your contact."
+      ],
+      "Keep trust."
+    ],
+    [
+      "Report back",
+      [
+        "Tell them how it went."
+      ],
+      "Close the loop."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to recover energy after a long week",
+  "hook": "Recovery is a skill, and it can be planned.",
+  "photos": "work",
+  "caption": "Simple ways to come back to Monday with real energy. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Sleep in once",
+      [
+        "One morning without an alarm."
+      ],
+      "Catch up."
+    ],
+    [
+      "Get outside",
+      [
+        "Daylight and fresh air."
+      ],
+      "Reset."
+    ],
+    [
+      "Eat a proper meal",
+      [
+        "Sit down, no screen."
+      ],
+      "Fuel."
+    ],
+    [
+      "Move for fun",
+      [
+        "Bike, swim or walk."
+      ],
+      "Lift your mood."
+    ],
+    [
+      "Do one thing for you",
+      [
+        "A hobby, a book or a call."
+      ],
+      "Feel human."
+    ]
+  ]
+}
+
+sin {
+  "title": "A ten minute plan for a calm Monday",
+  "hook": "Ten minutes today can save an hour on Monday.",
+  "photos": "work",
+  "caption": "A short weekend routine so the week starts clear, then back to rest. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write three priorities",
+      [
+        "For the week, not the day."
+      ],
+      "Direction."
+    ],
+    [
+      "Check the calendar",
+      [
+        "Spot conflicts early."
+      ],
+      "No surprises."
+    ],
+    [
+      "Prepare the first task",
+      [
+        "Open the file, note the step."
+      ],
+      "Quick start."
+    ],
+    [
+      "Clear the desk",
+      [
+        "A clean space for Monday."
+      ],
+      "Fresh feeling."
+    ],
+    [
+      "Then close the plan",
+      [
+        "Back to your weekend."
+      ],
+      "Real rest."
+    ]
+  ]
+}
