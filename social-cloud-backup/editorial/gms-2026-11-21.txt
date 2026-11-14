@@ -1,0 +1,479 @@
+{
+  "title": "Saturday morning ideas for a good day",
+  "hook": "A slow Saturday morning sets the tone.",
+  "photos": "life",
+  "points": [
+    [
+      "Wake up without an alarm",
+      [
+        "Let your body decide."
+      ],
+      "Rested."
+    ],
+    [
+      "Breakfast at a kopitiam",
+      [
+        "Kaya toast and soft-boiled eggs."
+      ],
+      "Classic."
+    ],
+    [
+      "A walk in a park",
+      [
+        "MacRitchie or the Botanic Gardens."
+      ],
+      "Green time."
+    ],
+    [
+      "Call your family",
+      [
+        "A weekend hello."
+      ],
+      "Warmth."
+    ],
+    [
+      "Plan nothing until noon",
+      [
+        "Leave space to breathe."
+      ],
+      "Freedom."
+    ]
+  ],
+  "caption": "A slow Saturday morning sets the tone. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SaturdayMorning #SGLife #Weekend",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "Weekend outings with friends that cost little",
+  "hook": "Good memories do not need big budgets.",
+  "photos": "life",
+  "points": [
+    [
+      "Picnic at East Coast",
+      [
+        "Bring snacks and a mat."
+      ],
+      "Sea breeze."
+    ],
+    [
+      "Cycle a park connector",
+      [
+        "Rent bikes for a few dollars."
+      ],
+      "Active fun."
+    ],
+    [
+      "Explore a new neighbourhood",
+      [
+        "Joo Chiat or Tiong Bahru."
+      ],
+      "New sights."
+    ],
+    [
+      "Visit a free museum",
+      [
+        "Check what is open this week."
+      ],
+      "Learn together."
+    ],
+    [
+      "Sunset at a viewpoint",
+      [
+        "Bring a drink and talk."
+      ],
+      "Perfect end."
+    ]
+  ],
+  "caption": "Good memories do not need big budgets. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Weekend #SGFriends #Budget",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Messages to send a friend you miss",
+  "hook": "One message can restart a friendship.",
+  "photos": "life",
+  "points": [
+    [
+      "I saw this and thought of you",
+      [
+        "Share a photo or a song."
+      ],
+      "Easy start."
+    ],
+    [
+      "How are you, really?",
+      [
+        "And mean it."
+      ],
+      "Real interest."
+    ],
+    [
+      "Let us catch up soon",
+      [
+        "Suggest a day."
+      ],
+      "Make it happen."
+    ],
+    [
+      "I am grateful for you",
+      [
+        "Say it while you can."
+      ],
+      "Honest warmth."
+    ],
+    [
+      "Remember when...",
+      [
+        "A happy memory together."
+      ],
+      "Shared joy."
+    ]
+  ],
+  "caption": "One message can restart a friendship. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Friendship #MissYou #SGFriends",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
+
+{
+  "title": "How to be a good host this weekend",
+  "hook": "Good hosting is about how guests feel.",
+  "photos": "life",
+  "points": [
+    [
+      "Welcome everyone warmly",
+      [
+        "At the door, by name."
+      ],
+      "Feel wanted."
+    ],
+    [
+      "Keep the food simple",
+      [
+        "Snacks and one main dish."
+      ],
+      "Less stress."
+    ],
+    [
+      "Introduce people",
+      [
+        "Help them find common ground."
+      ],
+      "Easy talk."
+    ],
+    [
+      "Have drinks ready",
+      [
+        "Water and something special."
+      ],
+      "Thoughtful."
+    ],
+    [
+      "Thank them for coming",
+      [
+        "As they leave."
+      ],
+      "Warm goodbye."
+    ]
+  ],
+  "caption": "Good hosting is about how guests feel. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Hosting #Weekend #SGFriends",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg"
+  ]
+}
+
+{
+  "title": "Weekend lunch ideas for the family",
+  "hook": "A shared weekend lunch is family time well spent.",
+  "photos": "life",
+  "points": [
+    [
+      "Dim sum together",
+      [
+        "Many small plates to share."
+      ],
+      "Everyone happy."
+    ],
+    [
+      "Cook a family recipe",
+      [
+        "Ask someone to teach you."
+      ],
+      "Keep traditions."
+    ],
+    [
+      "Lunch by the sea",
+      [
+        "East Coast or Sentosa."
+      ],
+      "Fresh air."
+    ],
+    [
+      "Let the kids choose",
+      [
+        "Their pick this week."
+      ],
+      "Fun for all."
+    ],
+    [
+      "Slow down at the table",
+      [
+        "No rush, no phones."
+      ],
+      "Be together."
+    ]
+  ],
+  "caption": "A shared weekend lunch is family time well spent. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGLunch #FamilyTime #Weekend",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Gift ideas for a friend's birthday this weekend",
+  "hook": "A thoughtful gift shows you know them.",
+  "photos": "life",
+  "points": [
+    [
+      "A message hoodie",
+      [
+        "Words that match who they are."
+      ],
+      "Personal."
+    ],
+    [
+      "A photo book",
+      [
+        "Your best moments together."
+      ],
+      "Memories."
+    ],
+    [
+      "Tickets to something fun",
+      [
+        "A show or a class."
+      ],
+      "Experience."
+    ],
+    [
+      "Their favourite cake",
+      [
+        "From the bakery they love."
+      ],
+      "Sweet."
+    ],
+    [
+      "A heartfelt card",
+      [
+        "Write what they mean to you."
+      ],
+      "Lasts forever."
+    ]
+  ],
+  "caption": "A thoughtful gift shows you know them. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #BirthdayGift #GiftIdeas #SGGifts",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "Simple ways to feel less lonely",
+  "hook": "Feeling lonely is common, and small steps help.",
+  "photos": "life",
+  "points": [
+    [
+      "Reach out first",
+      [
+        "Others may be waiting too."
+      ],
+      "Brave step."
+    ],
+    [
+      "Go where people are",
+      [
+        "A café, a library, a class."
+      ],
+      "Be around others."
+    ],
+    [
+      "Help someone",
+      [
+        "Volunteering connects people."
+      ],
+      "Purpose."
+    ],
+    [
+      "Call family",
+      [
+        "Even a short call."
+      ],
+      "Belonging."
+    ],
+    [
+      "Be kind to yourself",
+      [
+        "Loneliness is not your fault."
+      ],
+      "Gentle."
+    ]
+  ],
+  "caption": "Feeling lonely is common, and small steps help. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #MentalHealth #Kindness #Singapore",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Saturday evening ideas to recharge",
+  "hook": "Recharge tonight for a calm Sunday.",
+  "photos": "life",
+  "points": [
+    [
+      "Watch the sunset",
+      [
+        "From a window or a park."
+      ],
+      "Pause."
+    ],
+    [
+      "Cook with someone",
+      [
+        "A simple meal together."
+      ],
+      "Shared time."
+    ],
+    [
+      "Play a board game",
+      [
+        "Old school fun."
+      ],
+      "Laughs."
+    ],
+    [
+      "Journal for ten minutes",
+      [
+        "What made this week good?"
+      ],
+      "Reflect."
+    ],
+    [
+      "Have an early night",
+      [
+        "Sunday will thank you."
+      ],
+      "Rest."
+    ]
+  ],
+  "caption": "Recharge tonight for a calm Sunday. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Weekend #SelfCare #Singapore",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
