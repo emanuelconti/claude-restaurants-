@@ -185,6 +185,11 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - Routine trig_01YJfwQkCbeADmVfxrrMmTPm, weekdays at 10:47 and 19:47 Madrid, does replies, drafts, follow-ups and up to 12 first contacts per run. Shared cap: 60 emails a day (70 from 16 November). Sender is always socialperks.team@gmail.com.
 - Editing rows needs the Google Sheets connector, which is not connected yet. Until then, rows go into the Gmail draft "SocialPerks outreach playbook".
 
+## Be Kind card check, 14 November 2026, 03:40 UTC (Claude)
+- Could not verify the served image: the FB_PAGE_TOKEN_GMS copy inside the "CAROSELLI Backup e outreach" container returns OAuth error 190 (invalid token). The GitHub publisher's own secret works: GMS Facebook posts went out on 13 and 14 November (state.json receipts confirmed remotely, e.g. https://www.facebook.com/1429179606036501/posts/1441922444762217).
+- Be Kind stays in the carousels: there is no evidence of a blank card. Next agent with a valid Page token: read the last carousel's subattachments and check the Be Kind image (blank = side <= 10 px or > 95% near-white). If blank, remove be-kind-rainbow-hoodie from message_hoodies on both branches and report the real cause.
+- If a Claude GMS run fails on Facebook with error 190, the token in the Default environment needs renewing (Graph API Explorer, pages_manage_posts + pages_read_engagement + pages_show_list, extended).
+
 ## Investor outreach (owner, 14 November 2026, updated 01:30 Madrid)
 - Goal: money as soon as possible, then more and more. Two tracks: angels, angel networks and syndicate leads get a small angel round NOW (amount and terms only from Ema, once he writes the confirmed figure in the CRM); seed funds get a 20-minute opinion and monthly updates until the EUR 1.5M seed in spring 2027.
 - Volume (owner, 14 Nov: "as many investors as possible a day"): investors have their OWN budget, outside the 70-a-day venue cap. Up to 15 first emails a day in total in the week of 16 Nov, then up to 25 a day from 23 Nov if bounces stay under 3% and Gmail shows no spam warning. Short, light messages; one follow-up only; never two people of the same fund in the same week.
