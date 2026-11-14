@@ -9157,5 +9157,191 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-19-1",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 1,
+    "title": "Jueves: el día perfecto para cerrar pendientes",
+    "folder": "queue/sp/2026-11-19/carousel-1",
+    "sha256": {
+      "carousel.json": "b15dc95d90b66d472e9240bf1d4b51bb49f019db39d7221fcf2292187c33fbac",
+      "slide-01.jpg": "e16d7035b10e9ed57f86c5ba9f646c61c19ffcc3f31da253204384001d09f522",
+      "slide-02.jpg": "1f3d42d5ee71573ea5a667ce30d7261e7d5e867837c633d6342b14d63f73751e",
+      "slide-03.jpg": "577a932a23a428a558ee546b00656029e1b9d7726eb1e65ea5896e408dd528a8",
+      "slide-04.jpg": "27c9b368469bc1d6efa3f0c56f7aa18a8685d442e64dce27cb6f45978f8e74ac",
+      "slide-05.jpg": "09661af9b24792915e3b11fb3f07ead3ddd3803cf2e575f7d06ef6eacbfc0de9",
+      "slide-06.jpg": "b566b721bd639dabb7679b329524fd8946b671ddc1f280191808ec419314a3bc",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "42ccc80314923ca168bce493bccb57b6b56482c8e1f512a343ba651a505aa88c",
+      "reel.json": "2753fb7f8fb91d8d302c9f4afe3c3c8452409e3fa48420dc39aa0fd27a598339",
+      "cover.jpg": "6f037aa7fec3c9c71a42e84f276267bea63fa509c68792b66d4388c36cb14d06"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.5 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-19-2",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 2,
+    "title": "Ideas para una cena de jueves con amigos",
+    "folder": "queue/sp/2026-11-19/carousel-2",
+    "sha256": {
+      "carousel.json": "de5200d32a392a299a4d0779e22240d8312ea17c6ae23484f52d93eddd5ac711",
+      "slide-01.jpg": "f4afcc29e151ae589b91f81f56d0c78ea7f73078dd45c54c7392203ea61dc37b",
+      "slide-02.jpg": "df73feef201de7d01aac0c4e391084ad13df81786e9daab115741c689fd93b5f",
+      "slide-03.jpg": "a78dbb521a4c4d4cc1f1136e995143b20961101b00ac9c2fc8141bee80ce18db",
+      "slide-04.jpg": "35b300f132ddadbf0b207eb3c2424c7e9fa68af0e402a19478ecace58e330295",
+      "slide-05.jpg": "0daf519f73beecbc9cd6d3c62191748a8c9cd82b9a332dc88371980a91c20a66",
+      "slide-06.jpg": "63f4944b5ec8c786215ea2019243d802415e59c9df33d3e8c0246a1baae1a088",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-19-3",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 3,
+    "title": "Cinco minutos al día que cambian tu semana",
+    "folder": "queue/sp/2026-11-19/carousel-3",
+    "sha256": {
+      "carousel.json": "8467908a44f4edf94626b2e7178ea8f1fd2f5666bce2abc98f3b6ec967c1d1d6",
+      "slide-01.jpg": "2ed45cb6858fb838f01f1e0cf92d23e4d8542c1dbebd8cf0f719ffcd372101e2",
+      "slide-02.jpg": "8cc1de47ee58a47d1f7aba5c75c6b0b5214a37e6783012654df7b1ea5bf92c5b",
+      "slide-03.jpg": "85f966c2ecb6e03d2661b78e95e9b0cd76e4706e3d3553734ee0f21eda2f6fbf",
+      "slide-04.jpg": "a5cc789a0717be0c1a6783d45f555cf530dffc5076659ad46bb437dd7ce03952",
+      "slide-05.jpg": "dee2532f090bb8e949e4253e1af1ea8541596650f0fdea5e74e5126b5a15cb5a",
+      "slide-06.jpg": "ab7bc7358e1fc9c44241add821f7d6fd1ebaed8ea35d489f6ff7a7c103921b39",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "955bf17c7fe70aa1b563e62f834cf15aed9946d9512e217cc11280ae4d6bc6a3",
+      "reel.json": "aec227081b39e7f44f4bf699abf028d542f7f3ca9fc9e46445ec5ba0be6214db",
+      "cover.jpg": "255d66e78f86972ce5ad82c8b07cbc61082968434809f0c0612a74a2b42829a3"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-19-4",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 4,
+    "title": "Cómo ser mejor compañero de trabajo",
+    "folder": "queue/sp/2026-11-19/carousel-4",
+    "sha256": {
+      "carousel.json": "022081590a496c58922b8d492ecf1a5f988ec7c03ac96d83c9ef8dd7f28a0af6",
+      "slide-01.jpg": "a0f9e286d6a65ab0cbadc4231a8a34b7736b859dd236b2257759735b74c52919",
+      "slide-02.jpg": "d4db287954ca41c0a66b8c2e1538cc18d2f400fe83727f4bd6ee6964836ae45f",
+      "slide-03.jpg": "7fb920ca3936bae82ca65ccffaa1c1f4cce1575f6ed3939374254a0a6634336a",
+      "slide-04.jpg": "9b76a9a5ec6f20ebe4fc92de72898fdc30647ca0f2ff572ea1229e699c79eb08",
+      "slide-05.jpg": "39668e3d629731686bfbb66937d959c2d751cd7dbdcdb8c7c104ec0b6c7f929a",
+      "slide-06.jpg": "70ce0e8ab432eec1cf3e8bbfec38297310f612d6fee14d13227a89c51d966e4e",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-19-5",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 5,
+    "title": "Hábitos de jueves para llegar con energía al viernes",
+    "folder": "queue/sp/2026-11-19/carousel-5",
+    "sha256": {
+      "carousel.json": "5a8dfa461e1c9718b5ffbbd5a51a8d44519a4de420bb13d6c44d4e9611b4a069",
+      "slide-01.jpg": "1a5d3e49c232ab7fcc054e12f626b56c1451f3c65f006eb4f94a2a8c834c0a61",
+      "slide-02.jpg": "da42b7c8b2a31fe1c029e0e361b18d92f75f8b1e07de25d6e1eb83e179b0a14d",
+      "slide-03.jpg": "f7a0f049e6a6c9f91027936b34fa2a0955df89346deaa45362f6e98528a5b821",
+      "slide-04.jpg": "2b21e0eeb01a0b8579f2d0f41ce86d6ca026f4b71a8018245cb78401ba4d0ac4",
+      "slide-05.jpg": "399ef872c5d87503525b3b2be3ba4b557eed889780c28b3eb0d6b0f0d62a0aea",
+      "slide-06.jpg": "c434f2f6adfb215d05effc6b92f734aba336d0dca90a3a5c07df5ed71a1aa29e",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "dcd7b00e29f4c29948a030fbc2aa24956e97db8f9a8cc42d595dfbafb701f21a",
+      "reel.json": "155174829096030512f005f1d49a18841aab53723ce12baae8f83aac55e22ba0",
+      "cover.jpg": "7a65ca02cc0624bca0a3e7c7e2fc3f79ee9bb3fd9068d88513efa7810c1e2511"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-19-6",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 6,
+    "title": "Por qué volver a los sitios de siempre",
+    "folder": "queue/sp/2026-11-19/carousel-6",
+    "sha256": {
+      "carousel.json": "bf426a422bee5cb630b9661e7a8d18918d0eadfb141d2047caab01d34815b073",
+      "slide-01.jpg": "4053d41fd2cc26e595f35ff22b78d5487492f70007f2b4dc9a4ce97f07fe6a96",
+      "slide-02.jpg": "0f4606cc19cfec68165e3e5d133dbc617140be4a99f75a288b6330ba290cfabc",
+      "slide-03.jpg": "d384f4bcbfb6c7d332dd4943e26486a7a90a4acc1ef99124b76069060e8e2ab5",
+      "slide-04.jpg": "8b6b2ce27d00bf08c787dfd836a197cc80d9dff6f0c09c5903a2e163f472301b",
+      "slide-05.jpg": "b6025d495a26b7d0bc00131912bddb9adadc9a858d7d2c6375db53296bd21d48",
+      "slide-06.jpg": "961b7fdb58c95533c018d0ba602fbb0ff31afb1559e57718d4d494fa1426af61",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-19-7",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 7,
+    "title": "Cómo mantener la motivación cuando cuesta",
+    "folder": "queue/sp/2026-11-19/carousel-7",
+    "sha256": {
+      "carousel.json": "0cf790da03db2a8c9905c4e130b35eff0bd54d2611f96ee641b3c1ac331d637e",
+      "slide-01.jpg": "e4beb6a51e16df6bc87871114b18265066dc2854f37e1e5c9a63644f6615e214",
+      "slide-02.jpg": "9bc0b96d4386ac547bad8a68debbe824891540e27c1df7b3af02cd966691db86",
+      "slide-03.jpg": "3a84b85a37ff56f33d86082a5cde429d2ab95e190c6f6cd4decfaf2ce23a5f36",
+      "slide-04.jpg": "c18dde9269bdcf81036fd7acd8ac22ca7e9dee4d0a349944a5a36f811f2673a6",
+      "slide-05.jpg": "8c3ec8c0e47cfe791eac161cf492c441a9a0bf5a5435c8dc7ef106759457ecea",
+      "slide-06.jpg": "1395b18236c110cb3f8daf8acd9ebeacf56a13c877894f17414894401366322d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "e9899b74e047742207cbfec9a7308d9467d5897e4b96aa8653984a0d0c10cc30",
+      "reel.json": "2852f2d75622de532e26f9d1695bb781bab4a1ae0e4ae3331def111b8b5e036a",
+      "cover.jpg": "88b9a59fa5d10ea9da3a2b034b2da84136dd067f0dba40f4cb5a14db3d91f6b1"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.6 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-19-8",
+    "brand": "sp",
+    "date": "2026-11-19",
+    "slot": 8,
+    "title": "Jueves noche: cosas que agradecer",
+    "folder": "queue/sp/2026-11-19/carousel-8",
+    "sha256": {
+      "carousel.json": "07759f2aec0a765ff7165211a1a6de63f67d7cb9c92c893464c1e70bed1d7352",
+      "slide-01.jpg": "11b2b8b7dad217fa69abdaaede6144276bc72fb4e1d6603a06956ba376299f3f",
+      "slide-02.jpg": "3a5c75ff7dce48f63800e5cd1adb9f9140c5b3a5d5cf1cf53a39394f61ffad4e",
+      "slide-03.jpg": "8ce1cdb36b82ec96b65c23277c8e5f0da9990b3d212394bb0fde3dc88e195369",
+      "slide-04.jpg": "97607e8e72126095a43cf3c43139a01cd666969a123356a1cc042f066201fdfa",
+      "slide-05.jpg": "9a3c8e8fc72baeae7568d95ccff5cc6d006b2b542b6fce6a487c123c77412b60",
+      "slide-06.jpg": "2a3b0d1b7206603cb32ebf53e160b20cca7bb88230386d2742e9bb84e565ef40",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
   }
 ]

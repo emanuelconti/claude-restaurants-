@@ -1,0 +1,423 @@
+sp {
+  "title": "Jueves: el día perfecto para cerrar pendientes",
+  "hook": "Casi es viernes: aprovecha el impulso.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo usar el jueves para llegar al viernes con la cabeza ligera.",
+  "points": [
+    [
+      "Haz una lista corta",
+      [
+        "Solo lo que debe salir esta semana."
+      ],
+      "Claridad."
+    ],
+    [
+      "Empieza por lo que pesa",
+      [
+        "La tarea que llevas días evitando."
+      ],
+      "Alivio."
+    ],
+    [
+      "Responde lo pendiente",
+      [
+        "Correos y mensajes, en un solo bloque."
+      ],
+      "Bandeja ligera."
+    ],
+    [
+      "Agenda lo que no cabe",
+      [
+        "Ponle fecha y suéltalo."
+      ],
+      "Mente libre."
+    ],
+    [
+      "Celebra lo cerrado",
+      [
+        "Tacha y respira."
+      ],
+      "Bien hecho."
+    ]
+  ]
+}
+
+sp {
+  "title": "Ideas para una cena de jueves con amigos",
+  "hook": "No hace falta esperar al fin de semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Cenar entre semana con amigos es más fácil de lo que parece. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Probad un sitio nuevo",
+      [
+        "Ese que siempre veis al pasar."
+      ],
+      "Descubrir juntos."
+    ],
+    [
+      "Pizza para compartir",
+      [
+        "Una grande y varias porciones."
+      ],
+      "Fácil y rico."
+    ],
+    [
+      "Un brindis por el jueves",
+      [
+        "Porque casi lo habéis logrado."
+      ],
+      "Ánimo extra."
+    ],
+    [
+      "Reservad temprano",
+      [
+        "Mesa tranquila a las ocho."
+      ],
+      "Sin esperas."
+    ],
+    [
+      "Todo al centro",
+      [
+        "Cada uno prueba de todo."
+      ],
+      "Más charla."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco minutos al día que cambian tu semana",
+  "hook": "Cinco minutos bien usados valen más que una hora perdida.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Microhábitos de cinco minutos que, sumados, cambian cómo te sientes.",
+  "points": [
+    [
+      "Respira al despertar",
+      [
+        "Antes de mirar el móvil."
+      ],
+      "Calma."
+    ],
+    [
+      "Escribe tres prioridades",
+      [
+        "Lo demás, después."
+      ],
+      "Foco."
+    ],
+    [
+      "Camina un poco",
+      [
+        "Al bajar del metro o a mediodía."
+      ],
+      "Energía."
+    ],
+    [
+      "Bebe agua",
+      [
+        "Un vaso cada vez que te levantes."
+      ],
+      "Cuerpo despierto."
+    ],
+    [
+      "Mira hacia fuera",
+      [
+        "Un minuto de cielo y luz."
+      ],
+      "Perspectiva."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo ser mejor compañero de trabajo",
+  "hook": "Un buen compañero hace mejor cualquier día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Gestos sencillos que mejoran el día a día en cualquier equipo.",
+  "points": [
+    [
+      "Saluda de verdad",
+      [
+        "Mirando a los ojos y sin prisa."
+      ],
+      "Empieza bien."
+    ],
+    [
+      "Ofrece ayuda",
+      [
+        "Antes de que te la pidan."
+      ],
+      "Equipo."
+    ],
+    [
+      "Comparte un café",
+      [
+        "Diez minutos para hablar de otra cosa."
+      ],
+      "Conexión."
+    ],
+    [
+      "Reconoce el trabajo ajeno",
+      [
+        "Un gracias concreto y a tiempo."
+      ],
+      "Motiva."
+    ],
+    [
+      "Planead algo fuera",
+      [
+        "Unas tapas un jueves."
+      ],
+      "Equipo unido."
+    ]
+  ]
+}
+
+sp {
+  "title": "Hábitos de jueves para llegar con energía al viernes",
+  "hook": "El viernes empieza a prepararse hoy.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco gestos para que el viernes te encuentre con ganas.",
+  "points": [
+    [
+      "Desayuna bien",
+      [
+        "Algo que te sostenga hasta mediodía."
+      ],
+      "Energía estable."
+    ],
+    [
+      "Hidrátate",
+      [
+        "Agua a mano todo el día."
+      ],
+      "Menos cansancio."
+    ],
+    [
+      "Muévete a mediodía",
+      [
+        "Un paseo corto después de comer."
+      ],
+      "Despeja."
+    ],
+    [
+      "Acuéstate antes",
+      [
+        "Media hora antes de lo normal."
+      ],
+      "Viernes fresco."
+    ],
+    [
+      "Date un respiro",
+      [
+        "Una ducha larga o un baño."
+      ],
+      "Recarga."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué volver a los sitios de siempre",
+  "hook": "Los sitios conocidos también nos cuidan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Lo que ganamos al volver a los locales de siempre, y lo que ganan ellos. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Te reciben por tu nombre",
+      [
+        "Y eso cambia el día."
+      ],
+      "Cercanía."
+    ],
+    [
+      "Sabes lo que vas a pedir",
+      [
+        "Y nunca falla."
+      ],
+      "Confianza."
+    ],
+    [
+      "Encuentras a tu gente",
+      [
+        "El barrio se reúne ahí."
+      ],
+      "Comunidad."
+    ],
+    [
+      "Tu mesa de siempre",
+      [
+        "La luz, la vista, el rincón."
+      ],
+      "Tu sitio."
+    ],
+    [
+      "Apoyas a tu barrio",
+      [
+        "Cada visita lo mantiene vivo."
+      ],
+      "Suma local."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo mantener la motivación cuando cuesta",
+  "hook": "La motivación va y viene; los hábitos se quedan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para seguir adelante en los días en que cuesta más.",
+  "points": [
+    [
+      "Recuerda tu porqué",
+      [
+        "Escríbelo donde lo veas cada día."
+      ],
+      "Tu brújula."
+    ],
+    [
+      "Metas pequeñas",
+      [
+        "Un paso que puedas dar hoy."
+      ],
+      "Avance real."
+    ],
+    [
+      "Sé paciente",
+      [
+        "Los cambios tardan en verse."
+      ],
+      "Constancia."
+    ],
+    [
+      "Registra tus avances",
+      [
+        "Una línea al día."
+      ],
+      "Ves el camino."
+    ],
+    [
+      "Disfruta el proceso",
+      [
+        "No solo la meta."
+      ],
+      "Así dura."
+    ]
+  ]
+}
+
+sp {
+  "title": "Jueves noche: cosas que agradecer",
+  "hook": "Agradecer cambia cómo termina el día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un pequeño repaso de gratitud antes de dormir.",
+  "points": [
+    [
+      "Algo que salió bien",
+      [
+        "Por pequeño que sea."
+      ],
+      "Cuenta."
+    ],
+    [
+      "Alguien que te ayudó",
+      [
+        "Dale las gracias mañana."
+      ],
+      "Vínculo."
+    ],
+    [
+      "Algo que aprendiste",
+      [
+        "Un dato, una idea o un error."
+      ],
+      "Creces."
+    ],
+    [
+      "Un momento rico",
+      [
+        "Un café, una comida, una risa."
+      ],
+      "Disfrútalo."
+    ],
+    [
+      "Tu propio esfuerzo",
+      [
+        "También mereces las gracias."
+      ],
+      "Bien hecho."
+    ]
+  ]
+}

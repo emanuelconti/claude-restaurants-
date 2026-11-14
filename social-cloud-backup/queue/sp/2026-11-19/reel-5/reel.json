@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-19",
+ "title": "Hábitos de jueves para llegar con energía al viernes",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Hábitos de jueves para llegar con energía al viernes\n\nEl viernes empieza a prepararse hoy.\n\nCinco gestos para que el viernes te encuentre con ganas.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 785 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg",
+   "match_error": 1.82,
+   "runner_up": 48.58
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-03.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-05.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1540555700478-4be289fbecef",
+   "slide": "slide-06.jpg",
+   "match_error": 0.54,
+   "runner_up": 28.99
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Desayuna bien",
+  "Hidrátate",
+  "Muévete a mediodía",
+  "Acuéstate antes",
+  "Date un respiro",
+  "end card"
+ ]
+}

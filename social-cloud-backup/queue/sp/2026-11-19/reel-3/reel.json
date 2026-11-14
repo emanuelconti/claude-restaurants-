@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-19",
+ "title": "Cinco minutos al día que cambian tu semana",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cinco minutos al día que cambian tu semana\n\nCinco minutos bien usados valen más que una hora perdida.\n\nMicrohábitos de cinco minutos que, sumados, cambian cómo te sientes.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 608 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-01.jpg",
+   "match_error": 0.02,
+   "runner_up": 11.96
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-02.jpg",
+   "match_error": 0.22,
+   "runner_up": 30.7
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-03.jpg",
+   "match_error": 0.47,
+   "runner_up": 20.49
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-05.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Respira al despertar",
+  "Escribe tres prioridades",
+  "Camina un poco",
+  "Bebe agua",
+  "Mira hacia fuera",
+  "end card"
+ ]
+}

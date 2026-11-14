@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-19",
+ "title": "Jueves: el día perfecto para cerrar pendientes",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Jueves: el día perfecto para cerrar pendientes\n\nCasi es viernes: aprovecha el impulso.\n\nCómo usar el jueves para llegar al viernes con la cabeza ligera.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 755 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-01.jpg",
+   "match_error": 0.15,
+   "runner_up": 41.7
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-02.jpg",
+   "match_error": 0.44,
+   "runner_up": 40.07
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-03.jpg",
+   "match_error": 0.85,
+   "runner_up": 37.75
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-04.jpg",
+   "match_error": 0.92,
+   "runner_up": 42.67
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-05.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-06.jpg",
+   "match_error": 0.24,
+   "runner_up": 29.64
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Haz una lista corta",
+  "Empieza por lo que pesa",
+  "Responde lo pendiente",
+  "Agenda lo que no cabe",
+  "Celebra lo cerrado",
+  "end card"
+ ]
+}
