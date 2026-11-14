@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to write a clear product update for investors",
+  "hook": "A short monthly update keeps investors close without meetings.",
+  "photos": "work",
+  "caption": "A simple monthly update format that investors actually read. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Lead with the headline",
+      [
+        "One line on the month."
+      ],
+      "Best news first."
+    ],
+    [
+      "Share key numbers",
+      [
+        "The same three each month."
+      ],
+      "Easy to compare."
+    ],
+    [
+      "Say what went wrong",
+      [
+        "Briefly, with what you learned."
+      ],
+      "Builds trust."
+    ],
+    [
+      "Make one ask",
+      [
+        "An intro, a hire or advice."
+      ],
+      "Give them a job."
+    ],
+    [
+      "Send it on the same day",
+      [
+        "Every month, without fail."
+      ],
+      "Habit shows discipline."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to test demand before you build",
+  "hook": "Cheap tests can save months of building the wrong thing.",
+  "photos": "work",
+  "caption": "Five low-cost ways to see if people want it before you write the code. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write a simple landing page",
+      [
+        "One promise and a sign-up button."
+      ],
+      "Measure interest."
+    ],
+    [
+      "Talk to twenty people",
+      [
+        "Ask about their current solution."
+      ],
+      "Real context."
+    ],
+    [
+      "Offer a pre-order",
+      [
+        "See who is willing to pay."
+      ],
+      "Strongest signal."
+    ],
+    [
+      "Run a manual version",
+      [
+        "Do the service by hand first."
+      ],
+      "Learn the workflow."
+    ],
+    [
+      "Set a clear bar",
+      [
+        "Decide the number that means go."
+      ],
+      "Avoid wishful thinking."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to run a short weekly team meeting",
+  "hook": "Thirty focused minutes can align a whole week.",
+  "photos": "work",
+  "caption": "A weekly meeting format small teams can keep for years. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Same time each week",
+      [
+        "People plan around it."
+      ],
+      "Predictable."
+    ],
+    [
+      "Wins first",
+      [
+        "Two minutes on what went well."
+      ],
+      "Good energy."
+    ],
+    [
+      "Blockers next",
+      [
+        "What stops each person."
+      ],
+      "Solve together."
+    ],
+    [
+      "Agree three priorities",
+      [
+        "For the whole team."
+      ],
+      "Shared focus."
+    ],
+    [
+      "End on time",
+      [
+        "Respect the calendar."
+      ],
+      "Trust grows."
+    ]
+  ]
+}
+
+sin {
+  "title": "What to ask a startup lawyer early",
+  "hook": "A short early conversation can prevent expensive fixes later.",
+  "photos": "work",
+  "caption": "Topics worth raising with a lawyer in the first months of a company. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Company structure",
+      [
+        "Which entity fits your plans."
+      ],
+      "Right from the start."
+    ],
+    [
+      "Founder agreements",
+      [
+        "Equity, vesting and roles in writing."
+      ],
+      "Clear deal."
+    ],
+    [
+      "Intellectual property",
+      [
+        "Make sure the company owns the code."
+      ],
+      "Protect the core."
+    ],
+    [
+      "Customer contracts",
+      [
+        "A simple template you can reuse."
+      ],
+      "Save time."
+    ],
+    [
+      "Fundraising documents",
+      [
+        "What a typical first round needs."
+      ],
+      "Be prepared."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to write a job post that attracts builders",
+  "hook": "Good candidates look for clear work, not buzzwords.",
+  "photos": "work",
+  "caption": "How to write a job post that the right early hires want to answer. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Describe the mission",
+      [
+        "Why the company exists, in one line."
+      ],
+      "Give meaning."
+    ],
+    [
+      "Show the real work",
+      [
+        "What they will do in month one."
+      ],
+      "Be concrete."
+    ],
+    [
+      "Be honest about stage",
+      [
+        "Early means messy and fast."
+      ],
+      "Right fit."
+    ],
+    [
+      "State the range",
+      [
+        "Salary and equity, openly."
+      ],
+      "Saves time."
+    ],
+    [
+      "Make applying simple",
+      [
+        "A short form and a reply date."
+      ],
+      "Respect their time."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to use a pitch event well",
+  "hook": "The pitch is five minutes; the event lasts all evening.",
+  "photos": "work",
+  "caption": "How to get real value from a pitch night beyond your five minutes on stage. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Research who attends",
+      [
+        "Pick five people to meet."
+      ],
+      "Go with a plan."
+    ],
+    [
+      "Practise a short intro",
+      [
+        "Thirty seconds, plain words."
+      ],
+      "Easy to remember."
+    ],
+    [
+      "Listen to other pitches",
+      [
+        "Note what lands with the room."
+      ],
+      "Learn fast."
+    ],
+    [
+      "Ask for one next step",
+      [
+        "A call, an intro or a demo."
+      ],
+      "Clear follow-up."
+    ],
+    [
+      "Follow up within a day",
+      [
+        "A short, personal message."
+      ],
+      "Stay memorable."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to stay calm before a big pitch",
+  "hook": "Calm comes from preparation and a few simple habits.",
+  "photos": "work",
+  "caption": "Simple habits for the hour before an important pitch. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Prepare the first minute",
+      [
+        "Know it by heart."
+      ],
+      "Strong start."
+    ],
+    [
+      "Arrive early",
+      [
+        "Check the room and the screen."
+      ],
+      "No surprises."
+    ],
+    [
+      "Breathe slowly",
+      [
+        "Four seconds in, six out."
+      ],
+      "Calm body."
+    ],
+    [
+      "Drink some water",
+      [
+        "A dry mouth is common."
+      ],
+      "Easy fix."
+    ],
+    [
+      "Remember your why",
+      [
+        "You built this for a reason."
+      ],
+      "Speak from it."
+    ]
+  ]
+}
+
+sin {
+  "title": "How founders can sleep better in busy weeks",
+  "hook": "Good decisions need rested founders.",
+  "photos": "work",
+  "caption": "Small routines that protect sleep when the week is full. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Set a stop time",
+      [
+        "No work after a fixed hour."
+      ],
+      "Clear boundary."
+    ],
+    [
+      "Write tomorrow's first task",
+      [
+        "Then close the laptop."
+      ],
+      "Mind at rest."
+    ],
+    [
+      "Screens away",
+      [
+        "Thirty minutes before bed."
+      ],
+      "Easier sleep."
+    ],
+    [
+      "A short wind-down",
+      [
+        "Reading or a slow walk."
+      ],
+      "Calm routine."
+    ],
+    [
+      "Same wake-up time",
+      [
+        "Even after a late night."
+      ],
+      "Steady rhythm."
+    ]
+  ]
+}

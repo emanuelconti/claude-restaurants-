@@ -10157,5 +10157,189 @@
       "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sin-2026-11-19-1",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 1,
+    "title": "How to write a clear product update for investors",
+    "folder": "queue/sin/2026-11-19/carousel-1",
+    "sha256": {
+      "carousel.json": "306c75fad7df968b8537c3f25741663e158ba1a2f2c76357b67778b6aefd06e4",
+      "slide-01.jpg": "c86c8acef2b45975526077c4ab5430f371f0dee68af6b981b015af244dc416fd",
+      "slide-02.jpg": "368d06880ddc0602c8c821597398587ec6766de48acd094190a7f53b20453e53",
+      "slide-03.jpg": "f9115021c3febb76ca885d40fcbad185b7ebfd0365aa2e563f12520f750e19b2",
+      "slide-04.jpg": "678152f47ea90b0a3a55297550af0a2ce37b2bf23c91877721cfb53b66219b27",
+      "slide-05.jpg": "3f057fd727a985c07f4e07db6f9a0c97949db283671573d73905f02abf179027",
+      "slide-06.jpg": "ffb4124b5cfacefabc8953f06aa38d251d8b8a5a0a687d42f3295416c0ec3af3",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "95e4528df1e31fb81805f019c38978965e3a3002a9d31511295505090c159475",
+      "reel.json": "a16d2e146705baa4b37c0ece1772160ccf39e40e0789aa693402baa0bd8e763e",
+      "cover.jpg": "8488aea058d61b75903f36e35a8db8facd66135adf1c745e16205c1a0be2e568"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-19-2",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 2,
+    "title": "How to test demand before you build",
+    "folder": "queue/sin/2026-11-19/carousel-2",
+    "sha256": {
+      "carousel.json": "1bf8f3703b25e766299f463ac0394787671a6996f391bbf90bc59a3455c337a1",
+      "slide-01.jpg": "a1269aed1d17a52e05f3542866dc8d7bdc613c84d646d8c5b97de3f61fadd57a",
+      "slide-02.jpg": "f1027afa963a4ab18c849f319fc77f341c31120eab61ed8cdc629f09cfd383cd",
+      "slide-03.jpg": "22c513c26df76c97e8696feb317e1794567af0d0402018d6dbaa0772e9c3f5dd",
+      "slide-04.jpg": "d57e05ca2bc6f76cd906db68c31763e6552ed2e96370e9eddd12575d5d0ea565",
+      "slide-05.jpg": "b0889d29ff7558db422f4fe859417e648cbd40eb1f74372760ad02de2de12c63",
+      "slide-06.jpg": "d4f000d976df12da855d7dc7da332995295896bc8605498fde9c61eb4de2f2fb",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-19-3",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 3,
+    "title": "How to run a short weekly team meeting",
+    "folder": "queue/sin/2026-11-19/carousel-3",
+    "sha256": {
+      "carousel.json": "8acd56310be2a6f33c7f093a42002aaa6dde129197b8fae2a49be6b595252a06",
+      "slide-01.jpg": "6decd69411e08def61a1a71a76175fddf7c58d2ba2d4fde5ffce9026abec12dd",
+      "slide-02.jpg": "a0b1a4511e0f545002b5ddfe2e43dac061e315fd131900a236e13b128b653dc5",
+      "slide-03.jpg": "1a573533ba4f8290a629ee428cf3b5f6d24ba4267447d91073eab815bf71a8ac",
+      "slide-04.jpg": "51f942290de82e469a789075c8d63dc47b02b1901249ab653f33d0d63235b1d8",
+      "slide-05.jpg": "1a53ea9c617c2b37e922275d514bf36433ea4d21d2dc0302698619256640e2c3",
+      "slide-06.jpg": "ecc205a6c26b82e3a05db8f8af7883aba6a0e9c3ecf5b12deee51de842880709",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "0de6c6247e20db544542a5e4167ee9702ed4ccbc57cc7775d81de38f37ba51f5",
+      "reel.json": "9db2a40913054baae777227a673e8c8de936fa35690f234ee06378fb97421a06",
+      "cover.jpg": "aaa32d5a2f17f29b4cde83b784d9d55e76577812986ccebf4eeb36e4f23befbf"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-19-4",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 4,
+    "title": "What to ask a startup lawyer early",
+    "folder": "queue/sin/2026-11-19/carousel-4",
+    "sha256": {
+      "carousel.json": "fed4946565d8e5d785f26c1d25ec160efa4222214787054bcefe211a3c6d4deb",
+      "slide-01.jpg": "a6f31a6f22b3f411197b4d7cbd31741f7a194f76ed8717fce6bf38350513bc26",
+      "slide-02.jpg": "bc4dd27fcb8b0a9a1ebaa5dc9c1ea9175e4233e2f14fc298b1b730a1f98ee3a9",
+      "slide-03.jpg": "c21f9590eba7ebd742b03feb09669872977565cf3828d7b4edf62a45f49b3a71",
+      "slide-04.jpg": "e9c780e6887beb05ef5cd34a7ac4e12d5917a522e711c368108de6c09a1467a8",
+      "slide-05.jpg": "c4e41ffd77611e1f5c7616b150e43c580b985fa3af3552556723f8e16533c489",
+      "slide-06.jpg": "a0fdc18311a9b6f493542d44cbe9b679373cc9c191cde4a09166551a8160d73c",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-19-5",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 5,
+    "title": "How to write a job post that attracts builders",
+    "folder": "queue/sin/2026-11-19/carousel-5",
+    "sha256": {
+      "carousel.json": "ef136b00a6dfb942c9b63c68e33c5d46f4173191b0b998af01cda26fc328c04b",
+      "slide-01.jpg": "20d8a9a1e0d59f18b7ebb790468703c9e57e4958ae416a5912e0d9a75764334e",
+      "slide-02.jpg": "cb1e509cdf75ac07a57c3c31c2caf7867dbf15610e82326352f63f123729990a",
+      "slide-03.jpg": "b2e6622b9327c45d2ff01388a7bbdca8a6e445e1803599dddcd1fc66e033c729",
+      "slide-04.jpg": "fea245419de0e7bc0c41dbe2e2479c11a62c941fefb694438c1f5f11c16df29c",
+      "slide-05.jpg": "bb524c1054ed7d76b28fe5b8fabffbf2217f2158ee73fa6a3ef355e76692d34c",
+      "slide-06.jpg": "a5a34701ea79976929b1ba2e57c61d83ef1e719e628030f0c95f8bbb7a44338e",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "f7e4e1972df9d3e0fed541f4b6704223bbe55d56a5db6fd7bf5df49c34198417",
+      "reel.json": "114be3e227bcfeb66e36f620796d7a0fc26787d38408c009d0ca2e14e4718b16",
+      "cover.jpg": "7ae6eeb46586c990c45e961d8ae31aa7c74ad3fa6b8baf9ceccdd2416fc21f46"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-19-6",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 6,
+    "title": "How to use a pitch event well",
+    "folder": "queue/sin/2026-11-19/carousel-6",
+    "sha256": {
+      "carousel.json": "b4f8f6e07458f10d11d4c03aed5abcf896f7478772061e31de2eda2d0bdc7220",
+      "slide-01.jpg": "7b206e65b2d5090b0fc2992e1f6bf453dd505994c405a86a1e9c16bb45290e8f",
+      "slide-02.jpg": "564f2d3515ec2da574a9d3076016d05305a8490924117d010d4e78f11717aed4",
+      "slide-03.jpg": "061b50133c407f76aec83514c91d2f0f133538f76c751898fc36f879cea0bee0",
+      "slide-04.jpg": "11a7f9a33f861cf2f0b326c1ee874ca3715ee80e60e9bee6838328c1050b7e0e",
+      "slide-05.jpg": "a7b22232054c54b50e05d7c4a2ec21f8c60de21228e6deddf64e39533a0e782c",
+      "slide-06.jpg": "1c9a7ea1a6f102f5184f3f6821cf3fc8f2e7108b04585bde3269ef219bd85c13",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-19-7",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 7,
+    "title": "How to stay calm before a big pitch",
+    "folder": "queue/sin/2026-11-19/carousel-7",
+    "sha256": {
+      "carousel.json": "61340ec3d80e2d16a13fadefc79d2915c6eb4467a97f0de613978e7c8dd67cad",
+      "slide-01.jpg": "5104a087002faa72d62bd8d51f803eee4ff9311497076bf73f3339241a28026a",
+      "slide-02.jpg": "a1ed2fa57771318de5f13218c882270de9865558f332ce16968648a7c1e4020b",
+      "slide-03.jpg": "e2c3bede28898ffb8d9559f76cdb1474deaf983cab6bf16bacde72f5fee00aa9",
+      "slide-04.jpg": "844f74e154ed4b3bb8d22a6a4b4617e2e78ffb232e82cb685a8604a20f6ea75d",
+      "slide-05.jpg": "68720448beefddccc492c74f809c6d56d630115f8aafe14c3e7356717e4cdf4e",
+      "slide-06.jpg": "5972cbdf5088d55a0c840b2329a80c98fffc3752a0727fdc84ffacc1455ca2f9",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "45213c79b204e5eae1b798f1fa8eebb7c2160e11690971828ab9ee8a4ded1ea0",
+      "reel.json": "bcfe81a1ff4472f18419630a47acb2d6378e20675426314ffce0109cd8ac2e35",
+      "cover.jpg": "9fc1a64c4b94e9491e8d2931bf48d0818313a5a471cea1de31cd9d2dac9c9976"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-19-8",
+    "brand": "sin",
+    "date": "2026-11-19",
+    "slot": 8,
+    "title": "How founders can sleep better in busy weeks",
+    "folder": "queue/sin/2026-11-19/carousel-8",
+    "sha256": {
+      "carousel.json": "d24bdcebb879202657abf10e0eb9253111000dbeb083f00009a6fef7e710241f",
+      "slide-01.jpg": "2739573495b849c0c6e3c6a36ddfb0f13bc34d581de8cf6e3d9d99d3f5760c65",
+      "slide-02.jpg": "e68a91dfcdf53b60a2a340719a957fcf35435f621d30fb587969b190542562f1",
+      "slide-03.jpg": "2d407bf8d5e1336dc67fb8de7502f0825051c6c49a99f835cb3b59752a64188a",
+      "slide-04.jpg": "a46f5779253b18d14e56df0fb62b7eab4dd65ab1ff485cc5ee38af262ac1e7f4",
+      "slide-05.jpg": "e0de56e61a62a4650c9a506698043c25d3a4912fb75e856e25baa6ff71bfdd47",
+      "slide-06.jpg": "97aa6c0241eed0c8f856790e62a3c51c5503c818a596540904173e7365c05568",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
   }
 ]
