@@ -1,0 +1,423 @@
+sp {
+  "title": "Miércoles: mitad de semana, mitad del camino",
+  "hook": "Lo que llevas hecho ya cuenta.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco gestos para recuperar el impulso a mitad de semana.",
+  "points": [
+    [
+      "Mira lo que ya hiciste",
+      [
+        "Lunes y martes también cuentan."
+      ],
+      "Reconócelo."
+    ],
+    [
+      "Elige lo que queda",
+      [
+        "Tres cosas para el resto de la semana."
+      ],
+      "Menos, mejor."
+    ],
+    [
+      "Ordena tu mesa",
+      [
+        "Cinco minutos y la cabeza respira."
+      ],
+      "Espacio claro."
+    ],
+    [
+      "Sal a por aire",
+      [
+        "Un paseo corto a media mañana."
+      ],
+      "Vuelves con ideas."
+    ],
+    [
+      "Escribe el plan del jueves",
+      [
+        "Antes de cerrar el día."
+      ],
+      "Mañana empiezas ya."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de miércoles que rompen la rutina",
+  "hook": "La mitad de la semana también se celebra.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas sencillas para quedar un miércoles y llegar al viernes con mejor ánimo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Tapas al salir del trabajo",
+      [
+        "Dos o tres platos para compartir."
+      ],
+      "Sin horarios largos."
+    ],
+    [
+      "Un café a media tarde",
+      [
+        "Con quien tengas más cerca."
+      ],
+      "Pausa compartida."
+    ],
+    [
+      "Brindar por algo pequeño",
+      [
+        "Un logro de la semana, aunque sea mínimo."
+      ],
+      "Todo suma."
+    ],
+    [
+      "Cena con vistas",
+      [
+        "Una terraza tranquila entre semana."
+      ],
+      "Sin colas."
+    ],
+    [
+      "Una copa en el bar del barrio",
+      [
+        "El de siempre, con la gente de siempre."
+      ],
+      "Sitio conocido."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo concentrarte cuando todo te distrae",
+  "hook": "La atención es como un músculo: se entrena.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Trucos sencillos para recuperar la concentración en un día lleno de ruido.",
+  "points": [
+    [
+      "Un solo objetivo por bloque",
+      [
+        "Veinticinco minutos, una tarea."
+      ],
+      "Foco simple."
+    ],
+    [
+      "Pantalla limpia",
+      [
+        "Cierra las pestañas que no usas."
+      ],
+      "Menos ruido."
+    ],
+    [
+      "Agua y pausa",
+      [
+        "Levántate cada hora."
+      ],
+      "El cuerpo ayuda."
+    ],
+    [
+      "Respira antes de empezar",
+      [
+        "Tres respiraciones lentas."
+      ],
+      "Cabeza en calma."
+    ],
+    [
+      "Planifica el día anterior",
+      [
+        "Sabrás por dónde empezar."
+      ],
+      "Arranque rápido."
+    ]
+  ]
+}
+
+sp {
+  "title": "Amigos de siempre: cómo no perder el contacto",
+  "hook": "La amistad no necesita mucho, solo constancia.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Pequeñas costumbres para que las amistades de siempre sigan cerca. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un mensaje sin motivo",
+      [
+        "Solo para decir que piensas en ellos."
+      ],
+      "Llega lejos."
+    ],
+    [
+      "Una cena fija al mes",
+      [
+        "El primer jueves, siempre en la misma mesa."
+      ],
+      "Fácil de recordar."
+    ],
+    [
+      "Celebra sus logros",
+      [
+        "Un brindis por lo que les sale bien."
+      ],
+      "Alegría compartida."
+    ],
+    [
+      "Un café cuando hay prisa",
+      [
+        "Veinte minutos también cuentan."
+      ],
+      "Mejor que nada."
+    ],
+    [
+      "Comparte la mesa",
+      [
+        "Platos al centro y conversación larga."
+      ],
+      "Así se cuida."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños hábitos para una mente más tranquila",
+  "hook": "La calma también se practica.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco hábitos fáciles para vivir el día con más calma.",
+  "points": [
+    [
+      "Empieza sin móvil",
+      [
+        "Los primeros diez minutos son tuyos."
+      ],
+      "Mañana serena."
+    ],
+    [
+      "Camina entre árboles",
+      [
+        "Un parque cerca también vale."
+      ],
+      "La naturaleza calma."
+    ],
+    [
+      "Escribe lo que te preocupa",
+      [
+        "Fuera de la cabeza, sobre el papel."
+      ],
+      "Más ligero."
+    ],
+    [
+      "Desayuna despacio",
+      [
+        "Sentado y sin prisas."
+      ],
+      "Buen comienzo."
+    ],
+    [
+      "Mira el cielo un minuto",
+      [
+        "Al amanecer o al atardecer."
+      ],
+      "Perspectiva."
+    ]
+  ]
+}
+
+sp {
+  "title": "Lo que hace especial a la cafetería de tu barrio",
+  "hook": "Hay sitios que se vuelven parte de tu día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué la cafetería de la esquina es mucho más que un café. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Saben cómo te gusta el café",
+      [
+        "Sin tener que pedirlo."
+      ],
+      "Te conocen."
+    ],
+    [
+      "Siempre hay alguien conocido",
+      [
+        "Un saludo, una charla corta."
+      ],
+      "Barrio vivo."
+    ],
+    [
+      "Café hecho con cuidado",
+      [
+        "Grano bien elegido y tiempo."
+      ],
+      "Se nota."
+    ],
+    [
+      "El croissant de la mañana",
+      [
+        "Recién hecho, todavía caliente."
+      ],
+      "Pequeño lujo."
+    ],
+    [
+      "Un rincón junto a la ventana",
+      [
+        "Para leer o simplemente mirar."
+      ],
+      "Tu sitio."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo superar el miedo a equivocarte",
+  "hook": "Equivocarse es parte de aprender.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para atreverte a probar cosas nuevas sin que el miedo decida por ti.",
+  "points": [
+    [
+      "Prueba en pequeño",
+      [
+        "Un primer intento sin presión."
+      ],
+      "Riesgo mínimo."
+    ],
+    [
+      "Apunta lo que aprendes",
+      [
+        "Cada error deja una lección."
+      ],
+      "Nada se pierde."
+    ],
+    [
+      "Da el siguiente paso",
+      [
+        "Aunque no lo tengas todo claro."
+      ],
+      "Avanzar enseña."
+    ],
+    [
+      "Pide opinión",
+      [
+        "Alguien de confianza ve lo que tú no."
+      ],
+      "Otra mirada."
+    ],
+    [
+      "Recuerda por qué empezaste",
+      [
+        "Tu motivo pesa más que el miedo."
+      ],
+      "Sigue."
+    ]
+  ]
+}
+
+sp {
+  "title": "Miércoles por la noche: cómo desconectar",
+  "hook": "La noche también es para ti.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un pequeño ritual para soltar el día y dormir mejor.",
+  "points": [
+    [
+      "Apaga las notificaciones",
+      [
+        "A partir de las nueve."
+      ],
+      "Silencio útil."
+    ],
+    [
+      "Prepara una infusión",
+      [
+        "Algo caliente y sin cafeína."
+      ],
+      "Ritual de calma."
+    ],
+    [
+      "Lee unas páginas",
+      [
+        "Papel, no pantalla."
+      ],
+      "Mente despacio."
+    ],
+    [
+      "Una ducha caliente",
+      [
+        "El cuerpo se relaja solo."
+      ],
+      "Descanso listo."
+    ],
+    [
+      "Respira y suelta el día",
+      [
+        "Lo pendiente puede esperar."
+      ],
+      "Mañana sigues."
+    ]
+  ]
+}

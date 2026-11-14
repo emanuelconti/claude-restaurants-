@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-18",
+ "title": "Miércoles: mitad de semana, mitad del camino",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Miércoles: mitad de semana, mitad del camino\n\nLo que llevas hecho ya cuenta.\n\nCinco gestos para recuperar el impulso a mitad de semana.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 899 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 31.34
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-03.jpg",
+   "match_error": 0.69,
+   "runner_up": 36.4
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.44,
+   "runner_up": 40.07
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-05.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-06.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Mira lo que ya hiciste",
+  "Elige lo que queda",
+  "Ordena tu mesa",
+  "Sal a por aire",
+  "Escribe el plan del jueves",
+  "end card"
+ ]
+}

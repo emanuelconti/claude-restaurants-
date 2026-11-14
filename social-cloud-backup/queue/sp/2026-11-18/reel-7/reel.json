@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-18",
+ "title": "Cómo superar el miedo a equivocarte",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo superar el miedo a equivocarte\n\nEquivocarse es parte de aprender.\n\nIdeas para atreverte a probar cosas nuevas sin que el miedo decida por ti.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 608 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-02.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-03.jpg",
+   "match_error": 0.47,
+   "runner_up": 20.49
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-05.jpg",
+   "match_error": 0.62,
+   "runner_up": 55.34
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-06.jpg",
+   "match_error": 0.26,
+   "runner_up": 29.81
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Prueba en pequeño",
+  "Apunta lo que aprendes",
+  "Da el siguiente paso",
+  "Pide opinión",
+  "Recuerda por qué empezaste",
+  "end card"
+ ]
+}

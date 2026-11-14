@@ -8970,5 +8970,192 @@
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
     "video_qa": "Seven-slide Short (slow zoom, cross-fades), one decoded frame per slide visually inspected against the reviewed slides, 13 November 2026",
     "audio_qa": "Original synthesized warm track from carousel_reel.py music(), AAC decoded and non-silent"
+  },
+  {
+    "id": "sp-2026-11-18-1",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 1,
+    "title": "Miércoles: mitad de semana, mitad del camino",
+    "folder": "queue/sp/2026-11-18/carousel-1",
+    "sha256": {
+      "carousel.json": "941584ba24509d487072eb01059314a2c9d8da5411b501331e357cc806abf573",
+      "slide-01.jpg": "92cbadc5079fbd74ed1b3adf28bd602858e2d45fa00a77b3b7ce38716bf011c2",
+      "slide-02.jpg": "363f452126e1c731fb9635adfdc13e06ed8431344d4295e67e2189e2820e08fb",
+      "slide-03.jpg": "d488a1fd1d915a6f12fd47de9294e77fde1ed997034df9265ff4ee78f0e8eaa3",
+      "slide-04.jpg": "772bffabef34d324937b3122f31dced5ac05b2bb6a9df2429d2ad30d361dbab9",
+      "slide-05.jpg": "4fbc8e7a973b9a5979da1512c49f1afc93ed9b58e120f7a867346501aff90786",
+      "slide-06.jpg": "b71072d82ee414ceeeb6c093b89b64695a936a2badafc71591cbf6cacc13cbe0",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "77545a052d8efef947ef8ec087535cb10e1553421c4bdcca8acd934024650879",
+      "reel.json": "7b944b729f66b24a457235ce4caa78b3fb5ac27271f899fe2f2074bf1ec512a9",
+      "cover.jpg": "429c6e5cce39df5fba3fb9f320ba3b3b380cac294fa1a9f7a205d86185feb61d"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.5 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-18-2",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 2,
+    "title": "Planes de miércoles que rompen la rutina",
+    "folder": "queue/sp/2026-11-18/carousel-2",
+    "sha256": {
+      "carousel.json": "cb86566f3379b30b395ef87846af55335157caceb893cad3e371722d4675e73f",
+      "slide-01.jpg": "6079d19477547ed9e67d7388f431a2dc8f6bf135d6753def2af6fdd0bf26014e",
+      "slide-02.jpg": "0520e6ee0a7c0fca6a5437ab0aed7b8682faa7724d2f156de985fb5459560c72",
+      "slide-03.jpg": "2145508d0ff0bfd956f0a6a81fd6a1056e6b066ad63f602d395610eb75131dd4",
+      "slide-04.jpg": "92584e22aa7cb9af0967a9433191ec8fa8240397d6ff60058973bde403188815",
+      "slide-05.jpg": "4f91d7b64a884ad75fe07fa573b7a6ff468fa2567f235a20be0fd1ba70d839bf",
+      "slide-06.jpg": "8c37789b88d68d7b6905c69e15a57fe7dcb70e62380cd95b4f90e60993c1d9b8",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-18-3",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 3,
+    "title": "Cómo concentrarte cuando todo te distrae",
+    "folder": "queue/sp/2026-11-18/carousel-3",
+    "sha256": {
+      "carousel.json": "31fdf367cffa3d00699ffbb3889674cb7c40f8c9f83a0b034f4fa5904306fb27",
+      "slide-01.jpg": "9fceb3c02ab36ecacd10f76c83611a548e328e36d4e8ac501b12cc1d4dfeba59",
+      "slide-02.jpg": "afa5b883daf1e1127ebc257501848c416c7640d22a3ede21faffd143f5259ed4",
+      "slide-03.jpg": "f75de3b7d12265e3a594ff9f3d48071fc4c05ad7fefe35b48e7ce4db8c39f685",
+      "slide-04.jpg": "387a3f030d0df9157ae953015863ebc4da86e8d4d89dc253a6cee5b914a33797",
+      "slide-05.jpg": "cedd65c19ee64f312964596b34ecd73fb6126e8d5398d0befafe20b25bd5ca3f",
+      "slide-06.jpg": "07f246e65004ef1d9b845aebc4eea3812d940296213f474e076ca4b7a2a7d113",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "fc2bca4c87828f36704c70753d3dd06d48412ed2a32686ada9dab408e395c29f",
+      "reel.json": "e6a4c2ed89f2c7befe904d3091dc1f9429aaad4c2b2b912ef2985e22ef747f7c",
+      "cover.jpg": "b29f40097c2248614ad092d9ea15a1e9e907f5612cf34eb15051c8a6e178c8e3"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.3 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-18-4",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 4,
+    "title": "Amigos de siempre: cómo no perder el contacto",
+    "folder": "queue/sp/2026-11-18/carousel-4",
+    "sha256": {
+      "carousel.json": "6922b4b320ca32c3b8fef39adc5fbaddb6fa4e8be7c4ddc390baa422e1d8096c",
+      "slide-01.jpg": "f4bdf8b28202f8235c292812b2afd3ad2a1dcb63c302ff1881e9a31e83b5777d",
+      "slide-02.jpg": "896aeb7b61ba5b9280491c04f68daaa614c315d4c0a0bb2b40d17234e9058b78",
+      "slide-03.jpg": "3d894324c1128451f8dddc4d7225ec647ff4f6a7c575077e28345765dbc54646",
+      "slide-04.jpg": "ab0d645e54ccc71f2102e4f32dc9f039d46293ba62f4f43cbd27c3a3cbe07e41",
+      "slide-05.jpg": "f559eb08e759bb14440a1c359b3ad6c75cce528cbb3512d605e69221398012fc",
+      "slide-06.jpg": "0b9160cd245d306ea4311d321c95226666f1061266112d278a53861ad62ec9fc",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-18-5",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 5,
+    "title": "Pequeños hábitos para una mente más tranquila",
+    "folder": "queue/sp/2026-11-18/carousel-5",
+    "sha256": {
+      "carousel.json": "7c4f8979359bb7219eed647c0bd926d7b55ecc42db2a386ab0394cc82d53e5df",
+      "slide-01.jpg": "ec367db70634d0e566448c6c07c5606a3b3904577bbf8e5f65a950385be8f10f",
+      "slide-02.jpg": "ba1fa69109aa3740d1f366b72a5b683e6791b1240205bc453489cd550afd6d0b",
+      "slide-03.jpg": "2689646ce1d1bc77e6bf05369669de688b59e01851e285c088d7cae3d93ceaa4",
+      "slide-04.jpg": "83319417712695575f367aef54409a8bbb3776a67ea46c8e8ccf206596bd5e12",
+      "slide-05.jpg": "92f2dedf927adaa6f1119e863996aa854cd85127ba13a73d7a7ae1681216252a",
+      "slide-06.jpg": "4a136792a4b405cfe5bef6e02120d1183eb4fb8270cb3ea82722d0157dfdf4a6",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "fea76bd683bf6392031f3af9563adaf4936aed9c0d1561c5fb22e1c350cb9cab",
+      "reel.json": "ed888faf5d194e9a2fbd14b692262f0f5f5de94fb00226f6d0582747b1fa1216",
+      "cover.jpg": "0fd602ea6d14b32155a26f65bfe31031eb4b2bb947a93c22ba4a6c1d62455726"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.9 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-18-6",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 6,
+    "title": "Lo que hace especial a la cafetería de tu barrio",
+    "folder": "queue/sp/2026-11-18/carousel-6",
+    "sha256": {
+      "carousel.json": "9276c8a014f274a2f840641777c03e4d6e48969838082d24bca6614d738958b3",
+      "slide-01.jpg": "d5543081edea13e84119bc6fb0c370ad27083aeada756d597c21dbd979e9202f",
+      "slide-02.jpg": "8aebf21d1349478621fba2dea97f6b43b25d4157bceb8f0fd13f21b9758db4f7",
+      "slide-03.jpg": "1804bab28112e2bff69d9ae3bfa7ceb1f8bb2987cd13e86e950c06f839c906c8",
+      "slide-04.jpg": "b72ca69902e82280b16e717a4ce73f06a49c8b98083046b4028b5b027cb1d678",
+      "slide-05.jpg": "dd3f6f8fcb8d8da9488576c5bf2faa11c157ce4e1e094fa3cc76023f6faeb3fa",
+      "slide-06.jpg": "ff23162f8b0ed38475c520b2151204b7bf4be784b127dcd545b8948b82205f65",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-18-7",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 7,
+    "title": "Cómo superar el miedo a equivocarte",
+    "folder": "queue/sp/2026-11-18/carousel-7",
+    "sha256": {
+      "carousel.json": "3d45b29e389121ef48b621f9e9a9337f166d88c8e16081b1c6c045b78050560c",
+      "slide-01.jpg": "61e53ea8d2906d73663024e3d992c74a379f29ca9bd40328c4e94c46ea0ae45e",
+      "slide-02.jpg": "6fa26fafc45a864697ae24d23e75d534edeac3500f74d1226b7e517d6da1ea5f",
+      "slide-03.jpg": "74f136264484f5823f7996afdeb84ee912fa20c5b64173d655b6202e25b645a7",
+      "slide-04.jpg": "50dbea2fb33894fbce72005025a608890e8ea21350f87d7f98ecd1f2e6ed6234",
+      "slide-05.jpg": "8e869a7ab794bad8ad1b0710640f4f639f7373e753045b41b3cb335ac47c0a4b",
+      "slide-06.jpg": "100baccc6c2dbc62a3ef00ec78bb76ea8fc743da498039f8f26ade265b1ee7ce",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "12d671df44617ca08430812ab35f54187ab38edd7bef388fe91aa7e28621d6b2",
+      "reel.json": "b29eb23dd3a0f3d6873d754febf59b6d78dcb531b18572e0abc49ed2b152918b",
+      "cover.jpg": "9976e4971d0c77b8d7a822e01edd1e5c7721df856337fa221eb90424496edadc"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-18-8",
+    "brand": "sp",
+    "date": "2026-11-18",
+    "slot": 8,
+    "title": "Miércoles por la noche: cómo desconectar",
+    "folder": "queue/sp/2026-11-18/carousel-8",
+    "sha256": {
+      "carousel.json": "54e334132b230ee112516561644215f20d4581ebe485b44d4cd00ca91c2eed5b",
+      "slide-01.jpg": "8b05629d9e944bcb434ad45b857300bc348e8a039384d6a1262dd7fc5067964f",
+      "slide-02.jpg": "567e3b3d9f0c70fcd1e6aff5a0b30643c96d2972ff63788c5c65e30aca0f2e92",
+      "slide-03.jpg": "039c3e7428f39794b76a0629d83c92a777dda4fd53170ec02eb1bb6ed003d8fe",
+      "slide-04.jpg": "d91bf8d741fb5fbaa7f278ca0a13946a06459c64fe73ed3458e57a8a6ecd8584",
+      "slide-05.jpg": "6ddb715d807e58716140d0d968eea4c4ccca70d10578a69b566f26148ca66414",
+      "slide-06.jpg": "fe255ec84f19acb4d25103e776fbba4e5a6fdfdad66679e18268cbf32d936a20",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
   }
 ]
