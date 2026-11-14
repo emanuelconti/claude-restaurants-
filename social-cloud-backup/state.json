@@ -399,5 +399,7 @@
   "gms-2026-11-14-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1442183071402821",
   "gms-2026-11-14-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228852290/",
   "gms-2026-11-14-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/AcZR62JXWNc",
-  "gms-2026-11-14-6:facebook": "confirmed remotely: https://www.facebook.com/reel/3411634192377841/"
+  "gms-2026-11-14-6:facebook": "confirmed remotely: https://www.facebook.com/reel/3411634192377841/",
+  "gms-2026-11-14-7:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Saturday evening in, done right | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/eblI2GAhGx8",
+  "gms-2026-11-14-7:facebook": "held: publication attempt started at 2026-11-14T12:47:02+00:00; reconcile remotely before retry"
 }
