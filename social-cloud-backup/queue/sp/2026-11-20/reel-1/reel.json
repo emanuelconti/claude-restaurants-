@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-20",
+ "title": "Viernes: cierra la semana con orgullo",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Viernes: cierra la semana con orgullo\n\nLo que hiciste esta semana merece un momento.\n\nUn cierre de semana sencillo para empezar el fin de semana con la cabeza libre.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 186 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-03.jpg",
+   "match_error": 0.8,
+   "runner_up": 40.75
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-04.jpg",
+   "match_error": 0.16,
+   "runner_up": 24.02
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-05.jpg",
+   "match_error": 0.24,
+   "runner_up": 29.64
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-06.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Repasa tu semana",
+  "Deja la mesa ordenada",
+  "Apunta lo pendiente",
+  "Celebra un logro",
+  "Desconecta a tu hora",
+  "end card"
+ ]
+}

@@ -9343,5 +9343,192 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-20-1",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 1,
+    "title": "Viernes: cierra la semana con orgullo",
+    "folder": "queue/sp/2026-11-20/carousel-1",
+    "sha256": {
+      "carousel.json": "16557b444c82d3fca6ecee7cb60928e0bfab39c0241fee5cb58589a15e0fc811",
+      "slide-01.jpg": "f221d694640df11e864e38044245a98e3ce2a95e95c0390e422e03153392a2b7",
+      "slide-02.jpg": "ce0c7f23a3bd02ae5af1c8fde7e5b4ad6d72fa5b1256aa14969832f32db5b406",
+      "slide-03.jpg": "ed453de4190963a4e7b3870497221023a4de5d4cb641e6b689e674a662cea8f7",
+      "slide-04.jpg": "d6c274f08d96a2b93056396f2a88fa98c74be3ad41fbdab5b7624fd589c691a2",
+      "slide-05.jpg": "3df514cf938bc805d4d1a2b4bf90109c718d603ec85e7a79a450b1aaa64b9afe",
+      "slide-06.jpg": "e10e8e19e65303d095e5026d911ffb5da6d01bdb899b55169100cab88b8384ae",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "3f1fa07991e232e803e530c6453ab833e4dc08707cead512f5cb7add30807f93",
+      "reel.json": "593a1612b0799fd3d2ec28c867eab5ae8ce9df43514eac18e2784e2b55fb23b3",
+      "cover.jpg": "5737adcb97b24b9475da40e75a04cff862c0593c2fd8f32db5382e578c7f0a22"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.4 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-20-2",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 2,
+    "title": "Planes de viernes noche con amigos",
+    "folder": "queue/sp/2026-11-20/carousel-2",
+    "sha256": {
+      "carousel.json": "e7454ccaa79c03e855a348735a1129e8749b1a1424fb0f796216c161d0fe320a",
+      "slide-01.jpg": "2fbcdcd936d04280507db7464c326063ba52fab2439f8ec372acb939eaa88e42",
+      "slide-02.jpg": "517ed91ad0cc4c859337007be5ad325d85d163309226fa21553cb29209d83344",
+      "slide-03.jpg": "dc037bd29bc7f7ec160115d21f32d3a539c6e83f8f86320beb7e9f0e6ec2ef62",
+      "slide-04.jpg": "39394ae8e4747f203a31c6b550e0550af2abfd40a1e7e532187d49d1818008b0",
+      "slide-05.jpg": "691d0130ec8d3447e2856a32359124ab6f3636be65edc21c7bfd9d091decc472",
+      "slide-06.jpg": "5d706195a0c59b379858a971903c1711f6432e848062ee9073789c6aea2e0bb2",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-20-3",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 3,
+    "title": "Cómo descansar de verdad el fin de semana",
+    "folder": "queue/sp/2026-11-20/carousel-3",
+    "sha256": {
+      "carousel.json": "61e5c504b9059b6acb0f6d39f2cdece0379447dc552d82ee4890d56729e0ef11",
+      "slide-01.jpg": "d1fd711fdf5d5082919e2bb4c49410491df0eefb1fcb5599fc986dbf643cd748",
+      "slide-02.jpg": "cd7ccc13d28b25a420f6b476f69e9067993b74899642c27510b8f4b2c4399f4b",
+      "slide-03.jpg": "edfbde46f0e1686cfaafb73a4109c9ecbb6ff5274763092322e91095d0dbe329",
+      "slide-04.jpg": "dd1a750b3894fa3fb491702e6101205e3e1ee2e5337b4f8fd6def8725ad32302",
+      "slide-05.jpg": "f3d7cf46100544988d1735d268b6b6514801d4f2e593778216240fc0fef199fb",
+      "slide-06.jpg": "541e22af8ade578eaf664ffed4e461e04597ac600f7133e213f094a81ef001cf",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "e071c37eb26001b8bdbf986d9fb8a5b1a20f9d62b9bdd753ebffac3c12c4994d",
+      "reel.json": "26bf6fdb605048032275141d7fc83d56ea96020574201561f5a5b5d6c9ab0e63",
+      "cover.jpg": "0a5bef05cc19a51830393df485654ef1ce7ed43d469446d8831ebd4e0e31b941"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-20-4",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 4,
+    "title": "Cómo hacer nuevos amigos de adulto",
+    "folder": "queue/sp/2026-11-20/carousel-4",
+    "sha256": {
+      "carousel.json": "e245705a2100db6c3c7344bfbc143fecc56fbc2711ac59992ac6456a76f58d99",
+      "slide-01.jpg": "b57024cc36efd842d13a5bf9a4be51cc4b9701daf0baca05aa2320bcd0f8fcec",
+      "slide-02.jpg": "695bb069e4d4ba3bc47f54b6547b0532b3904099fe8df2ccef24919158e894d8",
+      "slide-03.jpg": "7fde64da29749389f767e8460381e67462a3186bcfe228866197bec7fdef4fcb",
+      "slide-04.jpg": "9a24fcfbc820560c08ba53bf6abf8c6aa991ef0c53b4d7b21d47201513506a85",
+      "slide-05.jpg": "227fe8f79a14bcf7ee5b23e2bd7759f757ac94c0574496f5b3a3a1de5cc1cde3",
+      "slide-06.jpg": "486a3fa68317a2febcacdb3b5a40f2b1f14c270a2bcc00805e900021541de748",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-20-5",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 5,
+    "title": "Pequeños placeres de un viernes",
+    "folder": "queue/sp/2026-11-20/carousel-5",
+    "sha256": {
+      "carousel.json": "9dc43cb1121081013857748349350dcb1462abdc737f3751f60bd1e8b9c62996",
+      "slide-01.jpg": "f16eaa6b97916326d25ab0ed892a368be5e195ef140a7d824a8e0da525897f36",
+      "slide-02.jpg": "0d228190f8ac30f0bd09ee489b379dff415d26f02a75c8ea90061fca74f42d5c",
+      "slide-03.jpg": "ec25527fa3760258e10b1ed253174c07a67185527aa369b2908511a2ca169e4b",
+      "slide-04.jpg": "2c63b8d32fa8f021f182f7de62332fa17f9d72587b5a4afd56bc0b86a058e0df",
+      "slide-05.jpg": "74ca8dc363cc91ef4bcb4bb4275a5cdf3d36264b5628731867769d79b68546d9",
+      "slide-06.jpg": "853ac63112c9d22ac9ba7ca6fcfcd36fa5459c68597296da5c8de301093d3744",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "a6a96aa8bf69f46e250fb47c65270a007874a0bd16dd65896d06625d6357ecca",
+      "reel.json": "92a7b31e05cad5aba2456386ab1c7026522be7f5acfbf0365060c1d932ca0380",
+      "cover.jpg": "b5f176901dceea822d1e50ae866c84735365c3431a955fcdb04962779e526974"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.5 dB peak 0.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-20-6",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 6,
+    "title": "Apoyar lo local: pequeños gestos que cuentan",
+    "folder": "queue/sp/2026-11-20/carousel-6",
+    "sha256": {
+      "carousel.json": "078076d44dd1fc548c990f4334b62366018bc0ee0a00ffefb5095069000caa82",
+      "slide-01.jpg": "2dd327b132e689a20a9b62196c23361521dcd10f9ece5213121007aa4af313ae",
+      "slide-02.jpg": "360607b108e1c0ced3a7a5f3adef278eac4e5e8f7abead4653bce335f50937e4",
+      "slide-03.jpg": "5c43a2949d59f7c4a2bf7377b5cee47f7944be25403bf3ebc44c362f7865d0a0",
+      "slide-04.jpg": "d6f1bf434a598707d4f11acecb03e3528186b98775d9dd4e5ef286deef1d99ed",
+      "slide-05.jpg": "921ad01d21cab1ccd2160a65f032086248d633d433b70ae962b2e1c9958975bf",
+      "slide-06.jpg": "e1e61dae24a0f1dc1a156f3ac6344f7ad5f3637a3e5bc70b3351df67b9411e0f",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-20-7",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 7,
+    "title": "Cómo cuidar tu autoestima",
+    "folder": "queue/sp/2026-11-20/carousel-7",
+    "sha256": {
+      "carousel.json": "87ebdbab1e971e217d30581b658fe28a32e391bea309dc89b40988e60437c6a8",
+      "slide-01.jpg": "f3a87ecf0cd9a8026a6c396d513ba813d340fa39b693570737f11493280b56a0",
+      "slide-02.jpg": "7596a27a3cf032424b6e0c3a90d32b161e894def5db4cbb23a045dd745ac7779",
+      "slide-03.jpg": "3e2a631ea8a4cfc53f27202cd093faecdd159b7542ce522fb68aab79ac2fa772",
+      "slide-04.jpg": "bb13fdbbc6a9b605285f1948f8e5405e83440e7c1d69cb0f0449a6a8d8619d35",
+      "slide-05.jpg": "522d4b0c1f3de2a5540a38be526a3e63fef751f8e4f6c7e2b5c334e397ea4682",
+      "slide-06.jpg": "0c975701227c6b58f528f6428b559e2bd08d604e83cb923c6270da8fb1aba2b8",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "68fd337a9efa0c2715c6283fd90d5039d8de7f2a4753343e279aa67835397e2b",
+      "reel.json": "5acca4c0ec96483e25aa4c932d7d740b3858d18e02ee7fee2a25048ed56e1a21",
+      "cover.jpg": "ad1274efc6a86bd9a2cbc0c7c4b0b381b173d452cd4b7e372c51516efa1e15be"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -0.9 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-20-8",
+    "brand": "sp",
+    "date": "2026-11-20",
+    "slot": 8,
+    "title": "Viernes noche en casa: ideas para disfrutar",
+    "folder": "queue/sp/2026-11-20/carousel-8",
+    "sha256": {
+      "carousel.json": "b8c878bd35a245165fc18ae1464e5e6c82cde8d5da97647cda22fe53368ed8c2",
+      "slide-01.jpg": "48841ad862cfe385948b565e8d92ba068319dcc6d08f8a366f85e81e5f291db7",
+      "slide-02.jpg": "b4160ccb679c956b0c61eea10d43f8da23ac5c54d9a956c35945bf21a06a9324",
+      "slide-03.jpg": "683ffd23484100bf57a96d16260003e078cd4cdf7b3771c826618f9fbec3cb06",
+      "slide-04.jpg": "51f8156547056b2072184c9a98ebed1b3265155221f7af88c537105ab1d5c774",
+      "slide-05.jpg": "dbe846f40afb2ad93a18015a533ed9ae33cc8002240ca0e4c32179921410204f",
+      "slide-06.jpg": "dce6f6dd11827f7f822d9aa588bd037d7cee293e2fd2ed4d744abad6be4755a3",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
   }
 ]

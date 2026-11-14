@@ -1,0 +1,423 @@
+sp {
+  "title": "Viernes: cierra la semana con orgullo",
+  "hook": "Lo que hiciste esta semana merece un momento.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un cierre de semana sencillo para empezar el fin de semana con la cabeza libre.",
+  "points": [
+    [
+      "Repasa tu semana",
+      [
+        "Tres cosas que salieron bien."
+      ],
+      "Reconócelo."
+    ],
+    [
+      "Deja la mesa ordenada",
+      [
+        "El lunes lo agradecerás."
+      ],
+      "Vuelta fácil."
+    ],
+    [
+      "Apunta lo pendiente",
+      [
+        "En la agenda, no en la cabeza."
+      ],
+      "Fin de semana libre."
+    ],
+    [
+      "Celebra un logro",
+      [
+        "Aunque nadie más lo vea."
+      ],
+      "Es tuyo."
+    ],
+    [
+      "Desconecta a tu hora",
+      [
+        "El trabajo también descansa."
+      ],
+      "Límite sano."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de viernes noche con amigos",
+  "hook": "El viernes se celebra mejor en compañía.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Cinco planes para empezar el fin de semana con tu gente. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Brindad por la semana",
+      [
+        "Por lo bueno y por lo que costó."
+      ],
+      "Os lo merecéis."
+    ],
+    [
+      "Pizza y risas",
+      [
+        "Sencillo y para todos."
+      ],
+      "Plan seguro."
+    ],
+    [
+      "Terraza al atardecer",
+      [
+        "Si el tiempo acompaña."
+      ],
+      "Vistas y charla."
+    ],
+    [
+      "Tapas para compartir",
+      [
+        "Pedid al centro."
+      ],
+      "Más variedad."
+    ],
+    [
+      "Cena larga sin prisa",
+      [
+        "Mañana no madrugas."
+      ],
+      "Disfrutad."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo descansar de verdad el fin de semana",
+  "hook": "Descansar es hacer lo que te recarga.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para que el fin de semana te devuelva la energía de verdad.",
+  "points": [
+    [
+      "Duerme sin alarma",
+      [
+        "Una mañana, al menos."
+      ],
+      "Recupera."
+    ],
+    [
+      "Sal a la naturaleza",
+      [
+        "Un parque, la montaña o el mar."
+      ],
+      "Aire nuevo."
+    ],
+    [
+      "Muévete por gusto",
+      [
+        "Una vuelta en bici sin rumbo."
+      ],
+      "Disfruta."
+    ],
+    [
+      "Un rato sin pantallas",
+      [
+        "Una tarde sin móvil."
+      ],
+      "Mente libre."
+    ],
+    [
+      "Haz algo con las manos",
+      [
+        "Cocinar, ordenar o dibujar."
+      ],
+      "Desconecta."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo hacer nuevos amigos de adulto",
+  "hook": "Se puede: solo pide un poco de iniciativa.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Hacer amigos después de los treinta es posible, y empieza por gestos pequeños. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Repite los mismos sitios",
+      [
+        "Las caras se vuelven conocidas."
+      ],
+      "Así empieza."
+    ],
+    [
+      "Apúntate a algo",
+      [
+        "Un club, una clase, un grupo de bici."
+      ],
+      "Intereses comunes."
+    ],
+    [
+      "Propón un café",
+      [
+        "Directo y sin presión."
+      ],
+      "Paso sencillo."
+    ],
+    [
+      "Invita a comer",
+      [
+        "Una mesa compartida une rápido."
+      ],
+      "Confianza."
+    ],
+    [
+      "Celebrad lo que os une",
+      [
+        "Un brindis la semana siguiente."
+      ],
+      "Se consolida."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños placeres de un viernes",
+  "hook": "Los mejores planes a veces son los más sencillos.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco placeres pequeños para disfrutar el viernes sin complicarte.",
+  "points": [
+    [
+      "Un café con calma",
+      [
+        "Sentado, sin mirar el reloj."
+      ],
+      "Empieza bien."
+    ],
+    [
+      "Desayuno especial",
+      [
+        "Algo que no comes entre semana."
+      ],
+      "Capricho."
+    ],
+    [
+      "Cocinar algo rico",
+      [
+        "Una receta que te apetezca."
+      ],
+      "Disfruta."
+    ],
+    [
+      "Un baño largo",
+      [
+        "Toallas limpias y música suave."
+      ],
+      "Relax."
+    ],
+    [
+      "Ver el atardecer",
+      [
+        "Desde una ventana o un mirador."
+      ],
+      "Pausa."
+    ]
+  ]
+}
+
+sp {
+  "title": "Apoyar lo local: pequeños gestos que cuentan",
+  "hook": "Tu barrio vive de los gestos de cada día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Gestos sencillos para que los negocios de tu barrio sigan abiertos muchos años. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Desayuna en el barrio",
+      [
+        "La cafetería de la esquina."
+      ],
+      "Cerca y bueno."
+    ],
+    [
+      "Recomienda en voz alta",
+      [
+        "A amigos y vecinos."
+      ],
+      "Boca a boca."
+    ],
+    [
+      "Celebra en un local",
+      [
+        "Cumpleaños y cenas, aquí."
+      ],
+      "Suma."
+    ],
+    [
+      "Compra en tiendas pequeñas",
+      [
+        "Café, pan o flores."
+      ],
+      "Barrio vivo."
+    ],
+    [
+      "Deja una buena reseña",
+      [
+        "Dos líneas ayudan mucho."
+      ],
+      "Gracias real."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo cuidar tu autoestima",
+  "hook": "Hablarte bien también es un hábito.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Hábitos sencillos para tratarte con el mismo cariño que das a los demás.",
+  "points": [
+    [
+      "Háblate con amabilidad",
+      [
+        "Como le hablarías a un amigo."
+      ],
+      "Trato justo."
+    ],
+    [
+      "Anota tus logros",
+      [
+        "Una lista que crece cada semana."
+      ],
+      "Pruebas reales."
+    ],
+    [
+      "Cuida tu cuerpo",
+      [
+        "Dormir, comer y moverte."
+      ],
+      "Base firme."
+    ],
+    [
+      "Rodéate de gente que suma",
+      [
+        "Quien te anima, cerca."
+      ],
+      "Buen entorno."
+    ],
+    [
+      "Celebra quién eres",
+      [
+        "No solo lo que haces."
+      ],
+      "Vales."
+    ]
+  ]
+}
+
+sp {
+  "title": "Viernes noche en casa: ideas para disfrutar",
+  "hook": "Quedarse en casa también puede ser un planazo.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Planes caseros para un viernes tranquilo y bonito.",
+  "points": [
+    [
+      "Cocina algo especial",
+      [
+        "Esa receta que nunca tienes tiempo de hacer."
+      ],
+      "Sabor."
+    ],
+    [
+      "Pizza casera",
+      [
+        "Masa, tomate y lo que haya."
+      ],
+      "Fácil."
+    ],
+    [
+      "Una infusión y una peli",
+      [
+        "La que llevas semanas guardando."
+      ],
+      "Cine en casa."
+    ],
+    [
+      "Un libro nuevo",
+      [
+        "Las primeras páginas, sin prisa."
+      ],
+      "Otra historia."
+    ],
+    [
+      "Llama a alguien",
+      [
+        "Una charla larga, sin mirar la hora."
+      ],
+      "Cercanía."
+    ]
+  ]
+}
