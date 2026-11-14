@@ -4,7 +4,7 @@
     "sp": {
       "timezone": "Europe/Madrid",
       "market_date": "2026-11-14",
-      "days_covered_including_today": 5,
+      "days_covered_including_today": 7,
       "coverage": [
         {
           "date": "2026-11-14",
@@ -28,11 +28,11 @@
         },
         {
           "date": "2026-11-19",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-20",
-          "approved_items": 0
+          "approved_items": 8
         }
       ],
       "paused_channels": []
@@ -40,7 +40,7 @@
     "sin": {
       "timezone": "Europe/Paris",
       "market_date": "2026-11-14",
-      "days_covered_including_today": 4,
+      "days_covered_including_today": 7,
       "coverage": [
         {
           "date": "2026-11-14",
@@ -60,15 +60,15 @@
         },
         {
           "date": "2026-11-18",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-19",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-20",
-          "approved_items": 0
+          "approved_items": 8
         }
       ],
       "paused_channels": []
@@ -76,7 +76,7 @@
     "gms": {
       "timezone": "Asia/Singapore",
       "market_date": "2026-11-14",
-      "days_covered_including_today": 4,
+      "days_covered_including_today": 7,
       "coverage": [
         {
           "date": "2026-11-14",
@@ -96,15 +96,15 @@
         },
         {
           "date": "2026-11-18",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-19",
-          "approved_items": 0
+          "approved_items": 8
         },
         {
           "date": "2026-11-20",
-          "approved_items": 0
+          "approved_items": 8
         }
       ],
       "paused_channels": []
