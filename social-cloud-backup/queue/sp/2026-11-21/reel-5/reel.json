@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-21",
+ "title": "Pequeños retos para este fin de semana",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Pequeños retos para este fin de semana\n\nUn reto pequeño puede alegrarte el fin de semana.\n\nCinco retos sencillos para que el fin de semana tenga algo nuevo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 376 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-01.jpg",
+   "match_error": 0.12,
+   "runner_up": 11.3
+  },
+  {
+   "unsplash": "1528712306091-ed0763094c98",
+   "slide": "slide-02.jpg",
+   "match_error": 1.18,
+   "runner_up": 51.01
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-03.jpg",
+   "match_error": 0.24,
+   "runner_up": 33.75
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 1.75,
+   "runner_up": 31.24
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-05.jpg",
+   "match_error": 0.61,
+   "runner_up": 31.22
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Cocina algo nuevo",
+  "Lee veinte páginas",
+  "Camina un sendero nuevo",
+  "Escribe a un amigo lejano",
+  "Mira el amanecer",
+  "end card"
+ ]
+}

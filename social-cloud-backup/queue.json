@@ -9969,5 +9969,193 @@
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
     "video_qa": "Seven-slide Short (slow zoom, cross-fades), one decoded frame per slide visually inspected against the reviewed slides, 14 November 2026",
     "audio_qa": "Original synthesized warm track from carousel_reel.py music(), AAC decoded and non-silent"
+  },
+  {
+    "id": "sp-2026-11-21-1",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 1,
+    "title": "Lo que de verdad recarga un sábado",
+    "folder": "queue/sp/2026-11-21/carousel-1",
+    "sha256": {
+      "carousel.json": "517c5155572f032b86f2f2c59a63e80c5b0c98a5427193845a884652ed3f1a60",
+      "slide-01.jpg": "e4764ab6d639c63c83d5ddcbfda4470680c164d5976bd8d29297ee79c1c29f58",
+      "slide-02.jpg": "b4659fecb3d48c16d9798acb209f05e32358cca8cb653fe3f8732488fd1254ac",
+      "slide-03.jpg": "af981d8ce62c328d632d25dca3a023e27b8e2f5ff490e9e8d1769c331113db47",
+      "slide-04.jpg": "c28428dfd0c4789ec243b7a8e37ac4224e17820ca9a188361065d2055c710202",
+      "slide-05.jpg": "610b4f5363abb52cd60556ae6154a6f102f55570ac2d490e22347672a8fb6b3b",
+      "slide-06.jpg": "a1264cc418ee15efb09f66d3ca000854fc4878d4756b9e8c918be9c89b604db6",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "7515b3c1e086a6eea31630284d4bfc5d2b2cdd932667c93a0b6d14d7682aa487",
+      "reel.json": "354dccb9150595fb21bbb4e1f9e268954ad2dbe2285f18d676c8f743cbd35810",
+      "cover.jpg": "4f2aee352e5ae969a3e8fef4f7bcecd6dcc4801bc1c0a1a59a5f6d17e8679895"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.9 dB peak -0.7 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-21-2",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 2,
+    "title": "Brunch con amigos: cómo hacerlo perfecto",
+    "folder": "queue/sp/2026-11-21/carousel-2",
+    "sha256": {
+      "carousel.json": "278b8e05e5ae040b2590193aed56c13219d4df4e7fac1a1dc572d27b1199e8f7",
+      "slide-01.jpg": "13d27409f64b8d8a1f0a0569361525e7cf840cb5ed6bff497560a0e4986f69ef",
+      "slide-02.jpg": "89ca7c7137def126571cb725f7f50f21c787fb40a9dd75742164433ecbe1770a",
+      "slide-03.jpg": "a11f8645ce208bebe16022437c8232146290cabf4e0884e3c88f2cdd0fb6d6cc",
+      "slide-04.jpg": "e7f864de467bd3c30bf347bdc7188e3d56985927315349180e710bb749622d55",
+      "slide-05.jpg": "3a15442fadc58b57372350cffb2ba3a931b92984845dbed7a63f19ac42394404",
+      "slide-06.jpg": "3badd431b17d9099812741a51a7afb879ace0bf7dd3e97394bf422867cc68dce",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-21-3",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 3,
+    "title": "Cómo aprovechar el sábado sin agotarte",
+    "folder": "queue/sp/2026-11-21/carousel-3",
+    "sha256": {
+      "carousel.json": "401c746d54341c7f3883d59b70d264ae1e86698fbdcc222b9568f5437139a21c",
+      "slide-01.jpg": "82c8b8bf5e6976198d3a831ce750079ff1f97777c313aa9b4c1fb81e26fc0dd2",
+      "slide-02.jpg": "c0d4f427feb770f2c8cc22569f68641fa57c4f5470735b5edbc9a8e95690dd86",
+      "slide-03.jpg": "e3c6afa0647618308710a8a9d32776c95fa4f230931e04d6a1b0c9e8f3d2530d",
+      "slide-04.jpg": "da27e847de85dc1310cccab5de6676453e5ed01d6dc8129a488fcca84c69de8c",
+      "slide-05.jpg": "6b34c19a3d755b47bdbeab1bd1b78100c219494d3f141a800da2e9d7a1eae292",
+      "slide-06.jpg": "a907d2fc3e5780d678f9cd2046692635f265489e938354164d88f653aea9958e",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "97af6464aa98b1a01889c720fc341cda08da4b4ea38174eda36fbb86ea4572fa",
+      "reel.json": "dc23d2990e1f01955401c21cbc5fcae347ad5a64ce03bd70ba59e5bc4d6f15ae",
+      "cover.jpg": "d29670241423554afda17b2e690fe41e1c7c36a7e40409ff7dbcdd74d136f5dd"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-21-4",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 4,
+    "title": "Quedadas en grupo: cinco claves para que salgan bien",
+    "folder": "queue/sp/2026-11-21/carousel-4",
+    "sha256": {
+      "carousel.json": "54d4adf61cd2e9db572f8b333067cca9c42796204565cd4a6e29a3bf5a067f7a",
+      "slide-01.jpg": "15ab0713b7179bfeb7659fbcc382f653f8867f0f9cca026d4d95b41fc56cf4f4",
+      "slide-02.jpg": "71ff6ed8a4ba6232dd87f2d5f1c7232ce0cc0579596103b0d7907392c4d6d53d",
+      "slide-03.jpg": "fb31851e42b7d1e3a014fedb53bd547f2d8b879e49e86d00751dd89c923c9fb3",
+      "slide-04.jpg": "b1441d00c7393752274c766d2fbaca0d6ad4d2538af94ea94bc447bcc93c1b2d",
+      "slide-05.jpg": "b04ed7c2aaa26cda69d98ca5029c133959d1518c658105e6c11b40bfec2cb0a4",
+      "slide-06.jpg": "7742021e5ed80b1227b3812f1a08e39ea9838605fa41d6cc60dc5226669648cf",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-21-5",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 5,
+    "title": "Pequeños retos para este fin de semana",
+    "folder": "queue/sp/2026-11-21/carousel-5",
+    "sha256": {
+      "carousel.json": "c45d5e245d1dee932798c6aa830b344ee5020527a0346acc6699a3fa9feff6d9",
+      "slide-01.jpg": "a59ee9ba4c686d06e1a4b204fb819bf00cb682a42c2975798daab08aa7044ac4",
+      "slide-02.jpg": "1fe71d54448b95996a5354c4ef0ac146dd1bc86cd77821f72c64d55d28186612",
+      "slide-03.jpg": "f98026eec65f23123be4ef55f65e481096a5ea25ccb50082561e830143006d01",
+      "slide-04.jpg": "00d6f371e379e67222ce12e0b74f9fe16d35f44dd84927cacd41bbf99931e663",
+      "slide-05.jpg": "de9b73d4d612b4a21772e41924aa733a900d6d9a501ea0add09de32b5058d9b6",
+      "slide-06.jpg": "eb1910df934b07f7df36f1065b68d8c788a3d6b9592b164fe663c475949d420f",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "a8fd5fa40354f099c3b89a2ad1b259cca9cdf917498740c5adf57920a312d8ea",
+      "reel.json": "1df102e65fffa91634607294569dc276f5e415cfba37b8aa1f7bfce8b0600ac2",
+      "cover.jpg": "add9d011bf8f942f952549a41a04a61fdd7052db5cca185deb746a20bca15465"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.4 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-21-6",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 6,
+    "title": "El encanto del sábado en tu barrio",
+    "folder": "queue/sp/2026-11-21/carousel-6",
+    "sha256": {
+      "carousel.json": "d0469e4d0927e65ebb2279ead3d22827fff647bce1b4f227cf0f679a8213b92d",
+      "slide-01.jpg": "2bcdfdf6bb6d29f8c3d86f2f310069059a24bf4285420755259b1880c56c4b60",
+      "slide-02.jpg": "73c69229691b5db78f76d91fe666f8dd2d7c61430665d0e37dc10adccd15f050",
+      "slide-03.jpg": "fd720d6ade849d678cb06e181fb6d526e511fa0ed29431fbd5cf42e7890a662b",
+      "slide-04.jpg": "f1b23ca5c7900eb6500448bc205648c03ac9bd09b41a48164515199211e32a9c",
+      "slide-05.jpg": "6b005dc87e8b60642f37f2561d53ad5181f464e58c540d02e8d80d5c3c0480f6",
+      "slide-06.jpg": "d6f8f8a22ada8e0a51c6809c15dac20ef13caa3090994f4e146320040f8dd8f1",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sp-2026-11-21-7",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 7,
+    "title": "Cómo decir que no sin sentirte mal",
+    "folder": "queue/sp/2026-11-21/carousel-7",
+    "sha256": {
+      "carousel.json": "94d077afca2037f9b4eaf1d1f4257607a7439f4397ad2159c83ad85226e3b65c",
+      "slide-01.jpg": "3680874bb78a085d8243222b792e54ffae0ac09ae4d06b1d8fc58ab0302ddc3a",
+      "slide-02.jpg": "4eb6c64e5985325fb2bf9ee157af5dcbe77969136cfcb0e10f2abbf9c56fa120",
+      "slide-03.jpg": "8336c4c397b0207b4ea6bd07510f2e11534f1af9348f55e947076db1e4d4a13b",
+      "slide-04.jpg": "e818149cb2e538b581e22037698c8a7c0cc9b8f5e6a9fac8b05f533b5912b336",
+      "slide-05.jpg": "edb82ce4d07e15a166395386d0125e8a64142f5fcf73350634f85cca089e21e0",
+      "slide-06.jpg": "0fa895d53d2bb70712ffbd00d810620b89159067ad7d66c2bd5f94270f4993df",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "983f46a133a76016a18e45fac8e33cd5405610262e35792f5c7b6f99cfa04f95",
+      "reel.json": "e59a4196dd799cf7970e0d135c73d0274a4d6eb92c818abc3e3bc258199aca65",
+      "cover.jpg": "611c42d562c3d4947cdee08b18cd171e5bece9a369f8e7e77ad187160b28dc0d"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.0 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-21-8",
+    "brand": "sp",
+    "date": "2026-11-21",
+    "slot": 8,
+    "title": "Cena para dos: un plan sencillo para el sábado",
+    "folder": "queue/sp/2026-11-21/carousel-8",
+    "sha256": {
+      "carousel.json": "a6213a0b9080095024fb9dc54b4b7815f009e50a1e166bfa9a88dc7ad8780f50",
+      "slide-01.jpg": "31577580a9197d538d013f97dbf3fa1703e0a82b59621eeeb7f184288d78d45b",
+      "slide-02.jpg": "70aabb8c09145f6e9dac75becc5b06e74cbbaa3fdbb7f40081dec657314d0bcd",
+      "slide-03.jpg": "fb0377263c89f7dc67843e61fe2bae485f39a2d746135020e79566fce2c562ea",
+      "slide-04.jpg": "c10cd64da0372ba58f368fa17abaedb6d6c7cd48506559a4ab9bc838d64c4460",
+      "slide-05.jpg": "6d6002cf27d7226ee50f2c12f25eec179b6410d85d4bd98e4caba2431a15c54b",
+      "slide-06.jpg": "2ac48fcc9a99b282b4970cf1bdbacc9a9bd7da792dfca5637d2c442c0c280a6e",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
   }
 ]

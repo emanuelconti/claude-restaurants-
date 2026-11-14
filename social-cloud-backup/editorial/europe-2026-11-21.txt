@@ -1,0 +1,423 @@
+sp {
+  "title": "Lo que de verdad recarga un sábado",
+  "hook": "No todo descanso recarga igual.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco ideas para que el sábado te deje con más energía, no con menos.",
+  "points": [
+    [
+      "Desayuno sin prisa",
+      [
+        "Sentado y con calma."
+      ],
+      "Sábado de verdad."
+    ],
+    [
+      "Un paseo en bici",
+      [
+        "Sin rumbo fijo."
+      ],
+      "Aire y movimiento."
+    ],
+    [
+      "Naturaleza cerca",
+      [
+        "Un parque o un sendero."
+      ],
+      "Recarga."
+    ],
+    [
+      "Brunch con alguien",
+      [
+        "Platos para compartir."
+      ],
+      "Compañía."
+    ],
+    [
+      "Un rato para ti",
+      [
+        "Sin plan ni pantalla."
+      ],
+      "Paz."
+    ]
+  ]
+}
+
+sp {
+  "title": "Brunch con amigos: cómo hacerlo perfecto",
+  "hook": "El brunch del sábado se disfruta más en compañía.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Claves sencillas para un brunch de sábado que apetezca repetir. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Reservad pronto",
+      [
+        "Los sitios buenos se llenan."
+      ],
+      "Mesa asegurada."
+    ],
+    [
+      "Pedid para compartir",
+      [
+        "Dulce y salado al centro."
+      ],
+      "Probad de todo."
+    ],
+    [
+      "Café de especialidad",
+      [
+        "El que mejor huela."
+      ],
+      "Merece la pena."
+    ],
+    [
+      "Sin prisa por levantarse",
+      [
+        "La sobremesa es parte del plan."
+      ],
+      "Disfrutad."
+    ],
+    [
+      "Repetid el próximo sábado",
+      [
+        "Una tradición entre amigos."
+      ],
+      "Costumbre bonita."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo aprovechar el sábado sin agotarte",
+  "hook": "Un buen sábado mezcla plan y descanso.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un sábado equilibrado: algo de plan, algo de calma.",
+  "points": [
+    [
+      "No madrugues demasiado",
+      [
+        "Duerme lo que necesites."
+      ],
+      "Recarga."
+    ],
+    [
+      "Elige un plan principal",
+      [
+        "Uno, no cinco."
+      ],
+      "Menos estrés."
+    ],
+    [
+      "Muévete un poco",
+      [
+        "Una vuelta por el barrio."
+      ],
+      "Energía."
+    ],
+    [
+      "Cuídate un rato",
+      [
+        "Un baño, una crema, música."
+      ],
+      "Mimos."
+    ],
+    [
+      "Deja huecos libres",
+      [
+        "Tiempo sin plan."
+      ],
+      "Respira."
+    ]
+  ]
+}
+
+sp {
+  "title": "Quedadas en grupo: cinco claves para que salgan bien",
+  "hook": "Cuantos más, mejor, si se organiza bien.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Cómo organizar una quedada grande sin que nadie se estrese. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un organizador",
+      [
+        "Alguien decide y los demás siguen."
+      ],
+      "Menos lío."
+    ],
+    [
+      "Sitio con mesa grande",
+      [
+        "Llama y reserva antes."
+      ],
+      "Todos juntos."
+    ],
+    [
+      "Platos para compartir",
+      [
+        "Cada uno prueba de todo."
+      ],
+      "Más fácil."
+    ],
+    [
+      "Pizza para los indecisos",
+      [
+        "Siempre gusta a todos."
+      ],
+      "Plan seguro."
+    ],
+    [
+      "Un brindis por el grupo",
+      [
+        "Por los que vinieron."
+      ],
+      "Recuerdo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños retos para este fin de semana",
+  "hook": "Un reto pequeño puede alegrarte el fin de semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco retos sencillos para que el fin de semana tenga algo nuevo.",
+  "points": [
+    [
+      "Cocina algo nuevo",
+      [
+        "Una receta que nunca has probado."
+      ],
+      "Aprende."
+    ],
+    [
+      "Lee veinte páginas",
+      [
+        "De un libro que te guste."
+      ],
+      "Mente activa."
+    ],
+    [
+      "Camina un sendero nuevo",
+      [
+        "Uno que no conozcas."
+      ],
+      "Explora."
+    ],
+    [
+      "Escribe a un amigo lejano",
+      [
+        "Un mensaje largo y sincero."
+      ],
+      "Reconecta."
+    ],
+    [
+      "Mira el amanecer",
+      [
+        "Una vez, aunque cueste madrugar."
+      ],
+      "Vale la pena."
+    ]
+  ]
+}
+
+sp {
+  "title": "El encanto del sábado en tu barrio",
+  "hook": "El sábado, el barrio tiene otro ritmo.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué los sábados son el mejor día para disfrutar de los sitios de tu barrio. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Café en la barra",
+      [
+        "Charla corta con quien atiende."
+      ],
+      "Barrio cercano."
+    ],
+    [
+      "Producto fresco",
+      [
+        "Grano, pan, fruta del día."
+      ],
+      "Calidad."
+    ],
+    [
+      "Tu café favorito",
+      [
+        "El que te preparan sin preguntar."
+      ],
+      "Costumbre."
+    ],
+    [
+      "Algo dulce para llevar",
+      [
+        "Para compartir en casa."
+      ],
+      "Detalle."
+    ],
+    [
+      "Comida al mediodía",
+      [
+        "Un sitio pequeño y bueno."
+      ],
+      "Plan sencillo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo decir que no sin sentirte mal",
+  "hook": "Decir que no a veces es decirte que sí.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para poner límites con respeto y sin culpa.",
+  "points": [
+    [
+      "Tómate un momento",
+      [
+        "No respondas al instante."
+      ],
+      "Piénsalo."
+    ],
+    [
+      "Sé claro y breve",
+      [
+        "Sin dar mil explicaciones."
+      ],
+      "Respeto."
+    ],
+    [
+      "Ofrece otra opción",
+      [
+        "Si puedes, propón algo distinto."
+      ],
+      "Puente."
+    ],
+    [
+      "Protege tu tiempo",
+      [
+        "Tu agenda también importa."
+      ],
+      "Límite sano."
+    ],
+    [
+      "Siéntete bien",
+      [
+        "Cuidarte no es egoísmo."
+      ],
+      "Equilibrio."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cena para dos: un plan sencillo para el sábado",
+  "hook": "Una cena sencilla puede ser el mejor plan de la semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para una cena tranquila de sábado con alguien especial. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige un sitio tranquilo",
+      [
+        "Donde se pueda hablar."
+      ],
+      "Conversación."
+    ],
+    [
+      "Un brindis",
+      [
+        "Por la semana que termina."
+      ],
+      "Celebrad."
+    ],
+    [
+      "Con vistas, si se puede",
+      [
+        "Cerca del mar o de un mirador."
+      ],
+      "Ambiente."
+    ],
+    [
+      "Comparte el plato",
+      [
+        "Probad uno del otro."
+      ],
+      "Complicidad."
+    ],
+    [
+      "Postre y café",
+      [
+        "El final más largo."
+      ],
+      "Sin prisa."
+    ]
+  ]
+}

@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-21",
+ "title": "Cómo decir que no sin sentirte mal",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo decir que no sin sentirte mal\n\nDecir que no a veces es decirte que sí.\n\nIdeas para poner límites con respeto y sin culpa.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 751 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 49.39
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-02.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-03.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-04.jpg",
+   "match_error": 0.62,
+   "runner_up": 55.34
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-05.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-06.jpg",
+   "match_error": 0.24,
+   "runner_up": 29.64
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Tómate un momento",
+  "Sé claro y breve",
+  "Ofrece otra opción",
+  "Protege tu tiempo",
+  "Siéntete bien",
+  "end card"
+ ]
+}

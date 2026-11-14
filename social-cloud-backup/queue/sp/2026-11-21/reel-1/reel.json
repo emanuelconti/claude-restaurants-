@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-21",
+ "title": "Lo que de verdad recarga un sábado",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Lo que de verdad recarga un sábado\n\nNo todo descanso recarga igual.\n\nCinco ideas para que el sábado te deje con más energía, no con menos.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 21 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg",
+   "match_error": 1.82,
+   "runner_up": 48.58
+  },
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-03.jpg",
+   "match_error": 0.53,
+   "runner_up": 45.43
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1621523133136-cea844f32bdf",
+   "slide": "slide-05.jpg",
+   "match_error": 0.8,
+   "runner_up": 49.22
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-06.jpg",
+   "match_error": 0.22,
+   "runner_up": 30.7
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Desayuno sin prisa",
+  "Un paseo en bici",
+  "Naturaleza cerca",
+  "Brunch con alguien",
+  "Un rato para ti",
+  "end card"
+ ]
+}

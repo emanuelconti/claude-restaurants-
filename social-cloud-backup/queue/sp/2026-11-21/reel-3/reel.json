@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-21",
+ "title": "Cómo aprovechar el sábado sin agotarte",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Cómo aprovechar el sábado sin agotarte\n\nUn buen sábado mezcla plan y descanso.\n\nUn sábado equilibrado: algo de plan, algo de calma.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 554 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.53,
+   "runner_up": 47.02
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1529422643029-d4585747aaf2",
+   "slide": "slide-04.jpg",
+   "match_error": 0.31,
+   "runner_up": 27.12
+  },
+  {
+   "unsplash": "1540555700478-4be289fbecef",
+   "slide": "slide-05.jpg",
+   "match_error": 0.54,
+   "runner_up": 28.99
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-06.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  }
+ ],
+ "scenes": [
+  "hook",
+  "No madrugues demasiado",
+  "Elige un plan principal",
+  "Muévete un poco",
+  "Cuídate un rato",
+  "Deja huecos libres",
+  "end card"
+ ]
+}
