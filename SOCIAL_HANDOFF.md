@@ -185,10 +185,21 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - Routine trig_01YJfwQkCbeADmVfxrrMmTPm, weekdays at 10:47 and 19:47 Madrid, does replies, drafts, follow-ups and up to 12 first contacts per run. Shared cap: 60 emails a day (70 from 16 November). Sender is always socialperks.team@gmail.com.
 - Editing rows needs the Google Sheets connector, which is not connected yet. Until then, rows go into the Gmail draft "SocialPerks outreach playbook".
 
-## Investor outreach (owner, 14 November 2026)
-- Daily routine trig_012mZ4VAbd5acSBTuFdK1tRk ("INVESTITORI SocialPerks"), weekdays at 12:13 Madrid, in this session. ONLY this routine contacts investors; the other session does not duplicate it.
-- It sends 6 new contacts a day to angels and pre-seed/seed funds that fit. Each email is very human and honest about the stage: MVP live, venues on free pilots, pre-revenue, seed of €1.5M in spring 2027. It asks only for 20 minutes of honest feedback, and sends the deck only on request.
-- Addresses: only emails an investor or fund publishes to receive pitches.
-- Replies: Ema answers; the routine drafts the answer and logs objections. One follow-up after 5-6 days.
-- Every Monday it optimises, and suggests deck changes from the objections it received.
-- Facts: CRM tab "Pitch e deck", drawn from the deck, business plan and financial plan in Drive folder 1PfFM6wNdWZyfyZY6PNJxd2WvKAgQOnk8. Register: CRM tab "Investitori".
+## Investor outreach (owner, 14 November 2026, updated 01:30 Madrid)
+- Goal: money as soon as possible, then more and more. Two tracks: angels, angel networks and syndicate leads get a small angel round NOW (amount and terms only from Ema, once he writes the confirmed figure in the CRM); seed funds get a 20-minute opinion and monthly updates until the EUR 1.5M seed in spring 2027.
+- Two runs on the same Gmail (socialperks.team@gmail.com), never more: the MORNING run (Claude session "Caroselli: SP · GM,Sn e outreach", playbook in Google Docs) sends up to 5 first emails; the MIDDAY run trig_012mZ4VAbd5acSBTuFdK1tRk (12:13 Madrid, this session) tops up to 10 a day in total. If one run did not send, the other sends up to 10.
+- Before every send: search Gmail in:anywhere (name, address, fund domain) and the CRM tab "Investitori"; if found, skip. Log every send at once. Shared labels investors/contattato + investors/v-<angle>.
+- All rules live in the CRM tab "Pitch e deck" (id 1R-KALiXND1lMNIND2lHClwDym-pNx2qIJE8Ce2G7KOM): facts, five angles, team roles (Emanuel is THE founder; Luis, Juan and Pedro, also legal advisor, are ambassadors), 100% contact verification, the anti-AI voice test, strategic people first (syndicate leads, angel networks, scouts), self-optimisation thresholds. If the Docs playbook disagrees, the CRM wins.
+- Replies: Claude never answers investors; Ema does. Drafts in the thread; on a positive reply the draft always asks "who else should see this?".
+
+## Who does what, so nobody tramples anybody (owner, 14 November 2026)
+- Investors: only the two runs above. Venues and organisations: the MARKETING MANAGER routine (this session) and RESERVES 1-4 ("SocialPerks emiconti" session), under the shared cap of 70 emails a day. Social: the Claude routines plus the GitHub publisher, which cover each other.
+- Codex: never sends emails and never changes routines. It works on code and content only, after a git pull, and never force-pushes.
+- Every Claude or Codex agent checks Gmail, the CRM or this file before acting, and writes here what it changed.
+
+## Outreach heartbeat (read by Codex and every Claude)
+- A watchdog in the "SocialPerks emiconti" session checks every weekday at 18:37 Madrid that investor and venue emails went out that day, and updates the line below.
+- If NO investor email went out today, it runs one careful investor round itself (max 5, same CRM rules).
+- If neither investors nor venues got an email for 2 working days, it writes "ALERT" below and tells Ema in one line.
+- CODEX: at the start of every task, read the line below. If it says ALERT, or its date is more than 3 working days old (meaning the watchdog stopped too), tell Ema first thing: "outreach fermo: controlla le routine Claude (limite di utilizzo o connettori)".
+- Last heartbeat: 2026-11-14, routines set up, first investor round Monday 16/11.
