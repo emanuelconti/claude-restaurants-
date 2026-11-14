@@ -402,6 +402,6 @@
   "gms-2026-11-14-6:facebook": "confirmed remotely: https://www.facebook.com/reel/3411634192377841/",
   "gms-2026-11-14-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/eblI2GAhGx8",
   "gms-2026-11-14-7:facebook": "held: publication attempt started at 2026-11-14T12:47:02+00:00; reconcile remotely before retry",
-  "gms-2026-11-14-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Words to keep for the hard days | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/e-9J9LtrlbQ",
-  "gms-2026-11-14-3:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Gift ideas for the friend who always shows up', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 17 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821228869721/"
+  "gms-2026-11-14-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/e-9J9LtrlbQ",
+  "gms-2026-11-14-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228869721/"
 }
