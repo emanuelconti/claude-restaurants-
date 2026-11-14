@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to write a problem statement customers recognise",
+  "hook": "If customers do not nod, the problem is not clear yet.",
+  "photos": "work",
+  "caption": "A short method to describe the problem so customers recognise themselves in it. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with who",
+      [
+        "A specific person in a specific moment."
+      ],
+      "Name the customer."
+    ],
+    [
+      "Describe the pain",
+      [
+        "What it costs them in time or money."
+      ],
+      "Make it concrete."
+    ],
+    [
+      "Leave the solution out",
+      [
+        "Problem first, product later."
+      ],
+      "Stay neutral."
+    ],
+    [
+      "Test it out loud",
+      [
+        "Read it to five possible customers."
+      ],
+      "Watch for nods."
+    ],
+    [
+      "Cut it to two lines",
+      [
+        "Short enough to remember."
+      ],
+      "Easy to repeat."
+    ]
+  ]
+}
+
+sin {
+  "title": "What a strong traction slide shows",
+  "hook": "Traction is proof that someone besides you cares.",
+  "photos": "work",
+  "caption": "The elements that make a traction slide easy to believe. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "One clear chart",
+      [
+        "Growth over time, labelled simply."
+      ],
+      "Easy to read."
+    ],
+    [
+      "Real numbers",
+      [
+        "Users, revenue or pilots, with dates."
+      ],
+      "Be precise."
+    ],
+    [
+      "Retention, not just sign-ups",
+      [
+        "Who came back after a month."
+      ],
+      "Shows real value."
+    ],
+    [
+      "Customer quotes",
+      [
+        "One or two short, real lines."
+      ],
+      "Human proof."
+    ],
+    [
+      "What comes next",
+      [
+        "The milestone this round unlocks."
+      ],
+      "Point forward."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to say no to good ideas",
+  "hook": "Focus means saying no to good things that are not for now.",
+  "photos": "work",
+  "caption": "A simple filter to keep the team on the few things that matter this quarter. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write your one goal",
+      [
+        "For this quarter, on one line."
+      ],
+      "Your filter."
+    ],
+    [
+      "Check every idea against it",
+      [
+        "Does it move the goal?"
+      ],
+      "Yes or not now."
+    ],
+    [
+      "Keep a later list",
+      [
+        "Good ideas wait there."
+      ],
+      "Nothing is lost."
+    ],
+    [
+      "Explain the trade-off",
+      [
+        "Tell the team what you skip and why."
+      ],
+      "Shared focus."
+    ],
+    [
+      "Review monthly",
+      [
+        "Some later ideas become now."
+      ],
+      "Stay flexible."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to find a mentor who actually helps",
+  "hook": "The best mentors have solved the problem you face now.",
+  "photos": "work",
+  "caption": "How to find and keep mentors whose advice fits your stage. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Know what you need",
+      [
+        "One skill or one decision."
+      ],
+      "Be specific."
+    ],
+    [
+      "Look one step ahead",
+      [
+        "Founders who did it recently."
+      ],
+      "Fresh experience."
+    ],
+    [
+      "Ask for one conversation",
+      [
+        "Twenty minutes, one clear question."
+      ],
+      "Easy yes."
+    ],
+    [
+      "Follow up with results",
+      [
+        "Tell them what you did with the advice."
+      ],
+      "Builds trust."
+    ],
+    [
+      "Give something back",
+      [
+        "An intro, a resource, a thank you."
+      ],
+      "Make it mutual."
+    ]
+  ]
+}
+
+sin {
+  "title": "Signs your startup is ready to hire",
+  "hook": "Hire when the work is clear, not only when you are busy.",
+  "photos": "work",
+  "caption": "Five signals that a first or next hire will help rather than add noise. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "The same task repeats",
+      [
+        "Every week, in the same way."
+      ],
+      "Clear role."
+    ],
+    [
+      "You can describe the job",
+      [
+        "Outcomes for the first ninety days."
+      ],
+      "Ready to brief."
+    ],
+    [
+      "Cash covers a year",
+      [
+        "Salary plus runway after hiring."
+      ],
+      "Safe margin."
+    ],
+    [
+      "Someone can onboard them",
+      [
+        "Time to teach, not just hand over."
+      ],
+      "Set them up."
+    ],
+    [
+      "Customers feel the gap",
+      [
+        "Slower replies or missed follow-ups."
+      ],
+      "Real need."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare your data room early",
+  "hook": "A tidy data room saves weeks when an investor says yes.",
+  "photos": "work",
+  "caption": "What to keep in a simple data room long before you need it. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Company documents",
+      [
+        "Incorporation, cap table, key contracts."
+      ],
+      "The basics."
+    ],
+    [
+      "Financials",
+      [
+        "Accounts and a simple model."
+      ],
+      "Numbers in one place."
+    ],
+    [
+      "Product and traction",
+      [
+        "Metrics with clear dates."
+      ],
+      "Show progress."
+    ],
+    [
+      "Team and equity",
+      [
+        "Who owns what, and vesting."
+      ],
+      "No surprises."
+    ],
+    [
+      "Keep it updated",
+      [
+        "Fifteen minutes each month."
+      ],
+      "Always ready."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to keep going after a rejection",
+  "hook": "A no is information, not a verdict.",
+  "photos": "work",
+  "caption": "A practical way to turn an investor or customer no into the next step. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Take a short pause",
+      [
+        "An evening off, not a week."
+      ],
+      "Reset."
+    ],
+    [
+      "Ask for the reason",
+      [
+        "Politely, in one line."
+      ],
+      "Learn something."
+    ],
+    [
+      "Look for a pattern",
+      [
+        "Three similar answers say a lot."
+      ],
+      "Find the signal."
+    ],
+    [
+      "Adjust one thing",
+      [
+        "The pitch, the target or the timing."
+      ],
+      "Small change."
+    ],
+    [
+      "Send the next email",
+      [
+        "Momentum beats waiting."
+      ],
+      "Keep moving."
+    ]
+  ]
+}
+
+sin {
+  "title": "A Wednesday check on your runway",
+  "hook": "Knowing your runway removes a lot of hidden stress.",
+  "photos": "work",
+  "caption": "Five steps to know exactly how many months you have, and when to act. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Update cash in bank",
+      [
+        "Today's real number."
+      ],
+      "Start from facts."
+    ],
+    [
+      "Check monthly burn",
+      [
+        "Average of the last three months."
+      ],
+      "Honest view."
+    ],
+    [
+      "Turn it into a date",
+      [
+        "Months left, written as a date."
+      ],
+      "Make it visible."
+    ],
+    [
+      "Mark the decision date",
+      [
+        "When you must raise or cut."
+      ],
+      "Plan ahead."
+    ],
+    [
+      "Share it with co-founders",
+      [
+        "Same numbers, same plan."
+      ],
+      "Aligned team."
+    ]
+  ]
+}

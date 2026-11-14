@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-18",
+ "title": "How to keep going after a rejection",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to keep going after a rejection\n\nA no is information, not a verdict.\n\nA practical way to turn an investor or customer no into the next step. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 472 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 31.34
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-02.jpg",
+   "match_error": 0.22,
+   "runner_up": 30.7
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-03.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-04.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-05.jpg",
+   "match_error": 0.44,
+   "runner_up": 40.07
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-06.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Take a short pause",
+  "Ask for the reason",
+  "Look for a pattern",
+  "Adjust one thing",
+  "Send the next email",
+  "end card"
+ ]
+}

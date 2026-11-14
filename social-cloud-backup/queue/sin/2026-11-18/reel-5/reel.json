@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-18",
+ "title": "Signs your startup is ready to hire",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Signs your startup is ready to hire\n\nHire when the work is clear, not only when you are busy.\n\nFive signals that a first or next hire will help rather than add noise. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 378 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-01.jpg",
+   "match_error": 0.24,
+   "runner_up": 50.04
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-02.jpg",
+   "match_error": 0.85,
+   "runner_up": 37.75
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-04.jpg",
+   "match_error": 0.33,
+   "runner_up": 47.06
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "slide": "slide-05.jpg",
+   "match_error": 0.76,
+   "runner_up": 36.01
+  },
+  {
+   "unsplash": "1516321318423-f06f85e504b3",
+   "slide": "slide-06.jpg",
+   "match_error": 0.9,
+   "runner_up": 37.59
+  }
+ ],
+ "scenes": [
+  "hook",
+  "The same task repeats",
+  "You can describe the job",
+  "Cash covers a year",
+  "Someone can onboard them",
+  "Customers feel the gap",
+  "end card"
+ ]
+}

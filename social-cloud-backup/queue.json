@@ -9530,5 +9530,189 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+  },
+  {
+    "id": "sin-2026-11-18-1",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 1,
+    "title": "How to write a problem statement customers recognise",
+    "folder": "queue/sin/2026-11-18/carousel-1",
+    "sha256": {
+      "carousel.json": "844b8f3c6957c39ee456ce1e3d6f7de44cf506a8aed6403d8d76cf56eaab89be",
+      "slide-01.jpg": "6f211340402e346782d1c9c581bcede756ca253fac5c1d2f725719c0e8d73153",
+      "slide-02.jpg": "f59c9fc13e407fd5326e0d2e91eaea162d31332f53c63ba3eaa7831d8199214f",
+      "slide-03.jpg": "c29542293655e140f26e6861f4e9225f8dabaae986852860ffa615e2c1ae4fb1",
+      "slide-04.jpg": "4e8cf9053b1fd43ffd90447449e2a8ceb4d62167eac5e7941ef33980e4fa6b70",
+      "slide-05.jpg": "325fa388a7dbd1dca63676cee6bb679066063a473cf7eeeed0e833fbc54a615c",
+      "slide-06.jpg": "90d2c80b18fefa4455c4f5d9bf2e602f910e6b523d39eaa16ef4701c919ea148",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "1c3d419f05a7aacd822b5e07d0dbdaa84e181ba21a01e9781ad088cce94ccbde",
+      "reel.json": "910c239337b34f3b6eb1b28f33bc1e8025ffab5b416f0e5e8caaaa3c77d95a12",
+      "cover.jpg": "30f2cbc6c587c5359af2bef4e1013f5a94dafcf0a4fbda4d79d0e016bc2814d7"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-18-2",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 2,
+    "title": "What a strong traction slide shows",
+    "folder": "queue/sin/2026-11-18/carousel-2",
+    "sha256": {
+      "carousel.json": "cd2f30ad818ca33cd0ae4fe0f29ad48e097aa034b9430288b43abf934ca4efd1",
+      "slide-01.jpg": "eb92378c747f114fae6737309a584169dd6dd43302cede64d55413209d411ef4",
+      "slide-02.jpg": "57284d0a144cd379acfca22510c2b67ac1db4d46e22644763e3681c069829565",
+      "slide-03.jpg": "e247ff0d9789914e302196b9d8454f7f49ae6a594d3750fef919d34d46e78da5",
+      "slide-04.jpg": "f28f4e98edc4dcac37e5f935b243f0727bce28da213a8e960413cf899a814a4c",
+      "slide-05.jpg": "759c48d0e2cc30ee3ea552faaa7186d3d17438a227b4b3b610041b7533005b78",
+      "slide-06.jpg": "913f31959a384584b6bab59108c4487bdc7404a4679c83d384fcf46de895befb",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-18-3",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 3,
+    "title": "How to say no to good ideas",
+    "folder": "queue/sin/2026-11-18/carousel-3",
+    "sha256": {
+      "carousel.json": "3b980e6302633d568d455ed0451ca699e4d0880abed95807b831a11a7fab00f5",
+      "slide-01.jpg": "b3a928274bc416776e58ed0b4a86c86b70898a8c71ae44162dba4b01c9b3de57",
+      "slide-02.jpg": "2d40bc19326b709438506aeb9d67871232b69076de4bcaa5ffafc85e0cfe5d0e",
+      "slide-03.jpg": "8f790f480fe704f0918e4faa67f8b88e72687b180cd8b9ffe0c10e85457c3c78",
+      "slide-04.jpg": "33bbc833a89f4907f07fe30e67b431f4c50fd46525612b05604c8aaab1a75f05",
+      "slide-05.jpg": "2a3dd134984a7a40d4daa832627e2f204e4882d0ecb441adc1aeb83af6ccdea6",
+      "slide-06.jpg": "4cb9afed9d989371c1657431213ea2711d1dce1d9809e797f5c3e24f89913503",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "f2de51827f7bf08ae069ae3fd38efbc1300cf19b6f10a6a7349e8e28c4dc5d75",
+      "reel.json": "7db54e53f1e59a093f81fe3edd8d09204c294c11776ecac0c69f4191ba53265a",
+      "cover.jpg": "88a064f5525f9c504c836af3df6e87523a8e4d464e8b2a4ecf9aa65e5ac5f97a"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-18-4",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 4,
+    "title": "How to find a mentor who actually helps",
+    "folder": "queue/sin/2026-11-18/carousel-4",
+    "sha256": {
+      "carousel.json": "3e5b6c355c99ed2bdd56ecba7fe358fbc4b701a20c7e734c70a3661d5c342c29",
+      "slide-01.jpg": "f0471d19510dc859ba321e0ec688ce582a9f5db690e8df9faaad3a415f79d12b",
+      "slide-02.jpg": "6ce1ce90b2289dbc2c02fa0c31f99c9a53f6699235fab32971e9969c4917e9c5",
+      "slide-03.jpg": "5fb42eae2ee8a32521acd2ffea90fa07468d3d2adaac29bbdfafc4f7c681cf12",
+      "slide-04.jpg": "aa19e8156b35bdd8488f51797ace094d4ffa198cc55d236d2a2b82e1aa3bf2f0",
+      "slide-05.jpg": "07e8f0bbc5af19b12436062922439fae0094d9021d10dcd63376e6741ccbcd08",
+      "slide-06.jpg": "c8ed85fb32cca6381d48bc200d987ebcbcf00f48c3dd367c1bd3836f00e5019e",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-18-5",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 5,
+    "title": "Signs your startup is ready to hire",
+    "folder": "queue/sin/2026-11-18/carousel-5",
+    "sha256": {
+      "carousel.json": "eca7b574043425e5bfb773a27a408deed36d414f8aace0051aba610a20bac73f",
+      "slide-01.jpg": "082c30d4d63a8613f96547c6c4f2287eacbf3d524eea9b9d0eb901422cad8b09",
+      "slide-02.jpg": "e2532314feb3b6ad9467b74b01cc023ad50c3d7adc811e00bd77cbfda1137c7d",
+      "slide-03.jpg": "7612144953b43730cac8c2c39da32f5f7cb00124e462e1fe0c42e2750771e410",
+      "slide-04.jpg": "88807ca4a48a40d36c2ef984e3af46090ba6390aa0dc1e727e332ab11de0f087",
+      "slide-05.jpg": "72cdda7203bd095975302eb4cd9bf8d9f79259b1b9c25b8f30c9a236d51a073f",
+      "slide-06.jpg": "8cc406745928d08eddd7945a195abd089f182e51c4f1b05a83fa3014abd93a21",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "173ad42688753026e6ba236a3da3153746582a2422dcac7b2bbc0e49e5a65f7b",
+      "reel.json": "e762dac5021439583b8f2b448430b3c833f9cfb05ffeff5124e8bab7105223ec",
+      "cover.jpg": "fe697ee12f6319301953eb48876690c0b6f87d390498959a98b069c457aa7430"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-18-6",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 6,
+    "title": "How to prepare your data room early",
+    "folder": "queue/sin/2026-11-18/carousel-6",
+    "sha256": {
+      "carousel.json": "38b85cf07da10b4077d2406b2b89a1ad582e09efc715af95f1a91a045082f4b2",
+      "slide-01.jpg": "89d4f3d38b7d1d0c6e7cab7188fb725d074210993f3a6cea9cdd84d79a9a5da8",
+      "slide-02.jpg": "b0ce9254ab76bc95efbec1f8725ac30974a28b7de1804226aa0bc6d0ecdf1b72",
+      "slide-03.jpg": "bdd4dd525f817d5d2f67d24e6192a34161a4ce401d59710e56d80c345df7459c",
+      "slide-04.jpg": "6eed0a26f8ef53c9dcf9e326b8e233c029dc81e2346a74e847e2470dfa37c08b",
+      "slide-05.jpg": "79a551b4e8a2e26259741bb41de9780a82180001e6d95c05bc453740c3891177",
+      "slide-06.jpg": "d1001b96497b1418041eaf227e04d419567545efffccd68ba7810b5f8663081c",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-18-7",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 7,
+    "title": "How to keep going after a rejection",
+    "folder": "queue/sin/2026-11-18/carousel-7",
+    "sha256": {
+      "carousel.json": "4a457fe9d94a1a74aff0020d880af0f0925a76072493866634a4ceb40bb8bb91",
+      "slide-01.jpg": "face15d9f64f743b8b2f7af95b9204450ade97ec211948414d7d89d6ea8865c2",
+      "slide-02.jpg": "469c4fa5796f277a57a123c672e9d3a125952473270d1a09a322c2a124e1640c",
+      "slide-03.jpg": "80116bc74f7b348857413300b86f8b9406a16468df4914658a2a33dd7e5c99d3",
+      "slide-04.jpg": "8b3d37adce829612901dc6e2ab67496f023723e6e7d793c8f8b11bfb95674d07",
+      "slide-05.jpg": "aee9eb116af0b8dd14bdee21c49276b0efea0d90faf35542e4b6f020788a6dbb",
+      "slide-06.jpg": "4c67fc62a8738ae6909bb402195da4a535419c4767025041d078dc757cab3caf",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "568a1d3fe1f7d26c2f05de66a2f85e6310fce6a2ad35b443802a250a4acb70b5",
+      "reel.json": "2bffe7df7b8710ea37c2b37dd06cd743cf0434c1c84ccfdc6074098af6a64568",
+      "cover.jpg": "4b49733307752c0b1a47e6c29767c3c9ada7e23311d767b56a8b2c45fe1220bd"
+    },
+    "reel_qa": "Contact sheet inspected 14 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-18-8",
+    "brand": "sin",
+    "date": "2026-11-18",
+    "slot": 8,
+    "title": "A Wednesday check on your runway",
+    "folder": "queue/sin/2026-11-18/carousel-8",
+    "sha256": {
+      "carousel.json": "ac1bf257559e0a0dc84859855761d0782264f1fbfa77f8ecd408f6e12970cd63",
+      "slide-01.jpg": "f997fca3fcf758c5933e2836ca3ab4b1782708f2c1d90c361499ea5909ac4fe6",
+      "slide-02.jpg": "f5df9324ba3826d060a2834a4d4ed77696f98dd30fb57e0439d017e3ed2adc69",
+      "slide-03.jpg": "854d4ae15aacddf1c5254a65c24c80edde63a08ecbbf00cd0d40bc080a53b623",
+      "slide-04.jpg": "4faa59599bda0635b367918a04405a980d86265b6faca24a493eaf2decc6a1c2",
+      "slide-05.jpg": "0a91cc04c4658eead4a1727eafff2df6825f67b0fc6c692fa4161c91cc65d2e7",
+      "slide-06.jpg": "573e63b1fad9cc65e090ca1647c3fe747ea1ccf0ee2bb213bb6d3ab38568bbd9",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
   }
 ]
