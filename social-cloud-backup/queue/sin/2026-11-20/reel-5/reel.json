@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-20",
+ "title": "How to keep your startup costs lean",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to keep your startup costs lean\n\nEvery euro saved is more time to find what works.\n\nSimple habits to keep spending under control in the early months. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 437 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 40.1
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-02.jpg",
+   "match_error": 0.77,
+   "runner_up": 47.7
+  },
+  {
+   "unsplash": "1541807084-5c52b6b3adef",
+   "slide": "slide-03.jpg",
+   "match_error": 1.51,
+   "runner_up": 45.02
+  },
+  {
+   "unsplash": "1520607162513-77705c0f0d4a",
+   "slide": "slide-04.jpg",
+   "match_error": 0.56,
+   "runner_up": 60.17
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-05.jpg",
+   "match_error": 1.48,
+   "runner_up": 56.81
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-06.jpg",
+   "match_error": 0.16,
+   "runner_up": 24.02
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Review subscriptions monthly",
+  "Buy only what you need now",
+  "Use free tiers first",
+  "Negotiate annual deals",
+  "Track burn weekly",
+  "end card"
+ ]
+}

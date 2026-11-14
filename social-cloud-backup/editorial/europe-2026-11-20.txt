@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "A Friday review for founders",
+  "hook": "Twenty minutes on Friday makes Monday easier.",
+  "photos": "work",
+  "caption": "A short end-of-week review that keeps the company moving. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "What moved this week",
+      [
+        "Three results, not tasks."
+      ],
+      "See progress."
+    ],
+    [
+      "What got stuck",
+      [
+        "And the reason why."
+      ],
+      "Spot blockers."
+    ],
+    [
+      "Numbers check",
+      [
+        "The same few metrics."
+      ],
+      "Stay grounded."
+    ],
+    [
+      "Thank someone",
+      [
+        "A customer, a mentor or a teammate."
+      ],
+      "Good habit."
+    ],
+    [
+      "Set Monday's first task",
+      [
+        "Written down tonight."
+      ],
+      "Easy start."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to explain your market size honestly",
+  "hook": "A believable number beats a huge one.",
+  "photos": "work",
+  "caption": "A bottom-up way to size your market that investors can follow. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start from customers",
+      [
+        "Who exactly could buy it."
+      ],
+      "Bottom up."
+    ],
+    [
+      "Count them",
+      [
+        "Use public data you can cite."
+      ],
+      "Real sources."
+    ],
+    [
+      "Multiply by price",
+      [
+        "What one customer pays per year."
+      ],
+      "Simple maths."
+    ],
+    [
+      "Show your first slice",
+      [
+        "The market you can reach now."
+      ],
+      "Credible start."
+    ],
+    [
+      "Explain the path",
+      [
+        "How you expand from there."
+      ],
+      "Room to grow."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to delegate without losing quality",
+  "hook": "Delegating is teaching, not just handing over.",
+  "photos": "work",
+  "caption": "How founders can hand over work and still get the result they need. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Describe the result",
+      [
+        "What good looks like."
+      ],
+      "Clear target."
+    ],
+    [
+      "Share an example",
+      [
+        "One you did yourself."
+      ],
+      "Show the bar."
+    ],
+    [
+      "Agree a check-in",
+      [
+        "Midway, not only at the end."
+      ],
+      "Catch issues early."
+    ],
+    [
+      "Let them choose how",
+      [
+        "Own the outcome, not the steps."
+      ],
+      "Builds ownership."
+    ],
+    [
+      "Give feedback quickly",
+      [
+        "Specific and kind."
+      ],
+      "They improve fast."
+    ]
+  ]
+}
+
+sin {
+  "title": "Questions investors often ask early founders",
+  "hook": "Preparing answers helps you think, not just pitch.",
+  "photos": "work",
+  "caption": "Common early questions worth answering for yourself before any meeting. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Why now",
+      [
+        "What changed that makes this possible."
+      ],
+      "Timing matters."
+    ],
+    [
+      "Why you",
+      [
+        "What you know that others do not."
+      ],
+      "Founder fit."
+    ],
+    [
+      "How you get customers",
+      [
+        "The channel that works today."
+      ],
+      "Show a path."
+    ],
+    [
+      "What the money is for",
+      [
+        "Specific milestones."
+      ],
+      "Clear plan."
+    ],
+    [
+      "What could go wrong",
+      [
+        "And how you would respond."
+      ],
+      "Shows judgement."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to keep your startup costs lean",
+  "hook": "Every euro saved is more time to find what works.",
+  "photos": "work",
+  "caption": "Simple habits to keep spending under control in the early months. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Review subscriptions monthly",
+      [
+        "Cancel what nobody uses."
+      ],
+      "Easy savings."
+    ],
+    [
+      "Buy only what you need now",
+      [
+        "Not for the team you might have."
+      ],
+      "Stay light."
+    ],
+    [
+      "Use free tiers first",
+      [
+        "Upgrade when it really hurts."
+      ],
+      "Pay later."
+    ],
+    [
+      "Negotiate annual deals",
+      [
+        "Only for tools you rely on."
+      ],
+      "Better price."
+    ],
+    [
+      "Track burn weekly",
+      [
+        "A quick look every Friday."
+      ],
+      "No surprises."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to build a simple sales pipeline",
+  "hook": "A pipeline turns hope into a list you can work.",
+  "photos": "work",
+  "caption": "A lightweight pipeline any early team can run in a spreadsheet. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "List every lead",
+      [
+        "Name, company, last contact."
+      ],
+      "One place."
+    ],
+    [
+      "Define clear stages",
+      [
+        "Contacted, call, proposal, closed."
+      ],
+      "Shared language."
+    ],
+    [
+      "Set the next step",
+      [
+        "Every lead has a date."
+      ],
+      "Nothing forgotten."
+    ],
+    [
+      "Review weekly",
+      [
+        "Thirty minutes on Fridays."
+      ],
+      "Keep it alive."
+    ],
+    [
+      "Learn from losses",
+      [
+        "Ask why deals did not close."
+      ],
+      "Get better."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to switch off on a Friday evening",
+  "hook": "Rest is part of the work, not a break from it.",
+  "photos": "work",
+  "caption": "Five ways to end the week and actually rest. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Close your loops",
+      [
+        "Reply or schedule, then stop."
+      ],
+      "Clean finish."
+    ],
+    [
+      "Put the laptop away",
+      [
+        "Out of sight until Monday."
+      ],
+      "Clear signal."
+    ],
+    [
+      "Move your body",
+      [
+        "A walk, a run or a ride."
+      ],
+      "Shift gear."
+    ],
+    [
+      "See people",
+      [
+        "Friends who do not talk shop."
+      ],
+      "Fresh air."
+    ],
+    [
+      "Plan nothing for Saturday morning",
+      [
+        "Leave space to rest."
+      ],
+      "Recharge."
+    ]
+  ]
+}
+
+sin {
+  "title": "What a founder learns from a hard week",
+  "hook": "Hard weeks teach things easy weeks cannot.",
+  "photos": "work",
+  "caption": "Five questions to turn a difficult week into lessons for the next one. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "What you can control",
+      [
+        "And what you cannot."
+      ],
+      "Clear view."
+    ],
+    [
+      "Who helped",
+      [
+        "People to thank and keep close."
+      ],
+      "Support matters."
+    ],
+    [
+      "What to change",
+      [
+        "One process to fix next week."
+      ],
+      "Real lesson."
+    ],
+    [
+      "What went right anyway",
+      [
+        "There is always something."
+      ],
+      "Balance."
+    ],
+    [
+      "How you recovered",
+      [
+        "Your own playbook for next time."
+      ],
+      "Resilience."
+    ]
+  ]
+}
