@@ -1,0 +1,423 @@
+sp {
+  "title": "Domingo sin prisas: permiso para parar",
+  "hook": "El domingo también sirve para no hacer nada.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cinco ideas para un domingo tranquilo que te deje con energía para la semana.",
+  "points": [
+    [
+      "Desayuna en la cama",
+      [
+        "O en la mesa, pero sin reloj."
+      ],
+      "Empieza lento."
+    ],
+    [
+      "Sal a caminar",
+      [
+        "Un parque, un sendero, la playa."
+      ],
+      "Aire fresco."
+    ],
+    [
+      "Ordena un rincón",
+      [
+        "Solo uno, no toda la casa."
+      ],
+      "Calma visual."
+    ],
+    [
+      "Prepara algo caliente",
+      [
+        "Un té, una sopa, un café."
+      ],
+      "Pequeño ritual."
+    ],
+    [
+      "Mira el atardecer",
+      [
+        "Desde donde puedas."
+      ],
+      "Cierra el día."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de domingo con amigos",
+  "hook": "Los domingos saben mejor en buena compañía.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas sencillas para un domingo con tu gente, sin complicarse. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Brunch largo",
+      [
+        "Platos al centro y sin prisa."
+      ],
+      "Clásico seguro."
+    ],
+    [
+      "Comida en casa de alguien",
+      [
+        "Cada uno trae algo."
+      ],
+      "Fácil y rico."
+    ],
+    [
+      "Café de media tarde",
+      [
+        "En tu sitio de siempre."
+      ],
+      "Charla tranquila."
+    ],
+    [
+      "Paseo con merienda",
+      [
+        "Algo dulce al final."
+      ],
+      "Plan sencillo."
+    ],
+    [
+      "Cena temprana",
+      [
+        "Para descansar antes del lunes."
+      ],
+      "Buen cierre."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo preparar el lunes en diez minutos",
+  "hook": "Diez minutos el domingo valen una mañana tranquila.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Una rutina corta para empezar la semana con la cabeza clara.",
+  "points": [
+    [
+      "Mira la agenda",
+      [
+        "Detecta lo importante de la semana."
+      ],
+      "Sin sorpresas."
+    ],
+    [
+      "Elige tres prioridades",
+      [
+        "No más."
+      ],
+      "Foco."
+    ],
+    [
+      "Prepara la primera tarea",
+      [
+        "Deja abierto lo que harás primero."
+      ],
+      "Arranque rápido."
+    ],
+    [
+      "Ordena la mesa",
+      [
+        "Un espacio limpio para el lunes."
+      ],
+      "Calma."
+    ],
+    [
+      "Y desconecta",
+      [
+        "Vuelve a tu domingo."
+      ],
+      "Descanso real."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué la comida del domingo une tanto",
+  "hook": "La mesa del domingo es casi un ritual.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Lo que tiene la comida del domingo que hace que queramos repetirla. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Se come sin prisa",
+      [
+        "La sobremesa es parte del plan."
+      ],
+      "Tiempo juntos."
+    ],
+    [
+      "Todos aportan algo",
+      [
+        "Un plato, un postre, una idea."
+      ],
+      "Equipo."
+    ],
+    [
+      "Se comparte todo",
+      [
+        "Platos al centro."
+      ],
+      "Más charla."
+    ],
+    [
+      "Hay brindis",
+      [
+        "Por la semana que termina."
+      ],
+      "Celebrar."
+    ],
+    [
+      "Se repite cada semana",
+      [
+        "Y se vuelve tradición."
+      ],
+      "Costumbre bonita."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños hábitos para una semana mejor",
+  "hook": "Lo que haces el domingo se nota el lunes.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Gestos sencillos de domingo que mejoran toda la semana.",
+  "points": [
+    [
+      "Acuéstate a tu hora",
+      [
+        "Sin alargar la noche."
+      ],
+      "Lunes fresco."
+    ],
+    [
+      "Prepara la comida",
+      [
+        "Algo listo para el lunes."
+      ],
+      "Menos estrés."
+    ],
+    [
+      "Un baño relajante",
+      [
+        "Para soltar el fin de semana."
+      ],
+      "Recarga."
+    ],
+    [
+      "Respira cinco minutos",
+      [
+        "Antes de dormir."
+      ],
+      "Mente en calma."
+    ],
+    [
+      "Muévete un poco",
+      [
+        "Un paseo corto por la tarde."
+      ],
+      "Energía."
+    ]
+  ]
+}
+
+sp {
+  "title": "Tu cafetería favorita también descansa contigo",
+  "hook": "Los domingos tienen su propio ritmo en el barrio.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué el café del domingo en tu barrio sabe distinto. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Mesas sin prisa",
+      [
+        "Nadie mira el reloj."
+      ],
+      "Calma."
+    ],
+    [
+      "Caras conocidas",
+      [
+        "Los de siempre, más relajados."
+      ],
+      "Barrio."
+    ],
+    [
+      "Un croissant especial",
+      [
+        "El capricho de la semana."
+      ],
+      "Pequeño lujo."
+    ],
+    [
+      "Café con calma",
+      [
+        "Hecho despacio y con cariño."
+      ],
+      "Se nota."
+    ],
+    [
+      "Un buen rincón",
+      [
+        "Para leer o charlar."
+      ],
+      "Tu sitio."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo cerrar la semana con gratitud",
+  "hook": "Agradecer también es un buen plan de domingo.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un pequeño repaso de la semana para empezar la siguiente con buen ánimo.",
+  "points": [
+    [
+      "Algo que salió bien",
+      [
+        "Escríbelo, aunque sea pequeño."
+      ],
+      "Cuenta."
+    ],
+    [
+      "Alguien que te ayudó",
+      [
+        "Dale las gracias mañana."
+      ],
+      "Vínculo."
+    ],
+    [
+      "Algo que aprendiste",
+      [
+        "Una idea o un error."
+      ],
+      "Creces."
+    ],
+    [
+      "Un momento bonito",
+      [
+        "Un café, una risa, un paseo."
+      ],
+      "Disfrútalo."
+    ],
+    [
+      "Tu propio esfuerzo",
+      [
+        "También merece reconocimiento."
+      ],
+      "Bien hecho."
+    ]
+  ]
+}
+
+sp {
+  "title": "Domingo por la noche: preparar la calma",
+  "hook": "Una buena noche de domingo hace un buen lunes.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un ritual de domingo por la noche para dormir bien y empezar con calma.",
+  "points": [
+    [
+      "Apaga el trabajo",
+      [
+        "Nada de correos hasta mañana."
+      ],
+      "Límite sano."
+    ],
+    [
+      "Cena ligera",
+      [
+        "Algo sencillo y temprano."
+      ],
+      "Mejor descanso."
+    ],
+    [
+      "Prepara la ropa",
+      [
+        "Una decisión menos por la mañana."
+      ],
+      "Ventaja."
+    ],
+    [
+      "Lee unas páginas",
+      [
+        "Papel, no pantalla."
+      ],
+      "Mente despacio."
+    ],
+    [
+      "Duerme a tu hora",
+      [
+        "El lunes te lo agradecerá."
+      ],
+      "Descanso."
+    ]
+  ]
+}

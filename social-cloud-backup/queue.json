@@ -11474,5 +11474,192 @@
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, 14 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sp-2026-11-22-1",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 1,
+    "title": "Domingo sin prisas: permiso para parar",
+    "folder": "queue/sp/2026-11-22/carousel-1",
+    "sha256": {
+      "carousel.json": "2ef4515c5f51f5f210a1cc96eedccf41683675242cc351319a78ed8813af48d6",
+      "slide-01.jpg": "ec173dd7336236194724231577a1de90e784a8d57df00c655da8139ffad685e1",
+      "slide-02.jpg": "55c654816051c7c026e413630528e150cc0f72103a3acb0e89818ed9bab850a1",
+      "slide-03.jpg": "2ba630fa80cd562333932c889f911d34c3fde3020a901a3b602e60c4581e66bf",
+      "slide-04.jpg": "c86ed23e359635641de9423bde17f36845c5aff32be310b8bc14e2a96e21dfde",
+      "slide-05.jpg": "48867c186271e6694873ef49b2e7c559423f2a5b26823082c45ecf9eeb6ee747",
+      "slide-06.jpg": "8b2d597acb32c70c0976c5eea6c5c9c887359c69f1679b1fabcf6f04ade42a09",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "bc040ea671c53da8ad0d1105a5f0e1a281f2a70646188b231bd1283f3695f5aa",
+      "reel.json": "4b4e1433f08d9bbc2cee3d9f959f54abf00eb9cc39515f30a9ad3547f16f03b2",
+      "cover.jpg": "b704b2f084abe2742a7fe7a5a5037df54a800606552d85e1a77d356460100c3e"
+    },
+    "reel_qa": "Contact sheet inspected 15 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-22-2",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 2,
+    "title": "Planes de domingo con amigos",
+    "folder": "queue/sp/2026-11-22/carousel-2",
+    "sha256": {
+      "carousel.json": "477d4fe12eacac46120f06ac94c8409647d8bf6452b129efc40227bc4942e9c8",
+      "slide-01.jpg": "a4056a8eb4322970c0c57ed1410b339ca50b1d6677c736b4311e9ad4cbc354aa",
+      "slide-02.jpg": "e720fbc033c00a88a017d64b6010198a11f2af2566fc407bc03d210821e05ecc",
+      "slide-03.jpg": "9fae4e0446c892ad20842b0d06235d02e658c2986d9722896ce0884be7fea70d",
+      "slide-04.jpg": "85b1ee8f8b42f223e7aa0fc14564f18acf90888154fb93ab25bb0e8b6db80a9d",
+      "slide-05.jpg": "697af32b6cb541d82328c9fd66c18c5731156c93f4660860c4f7daeb581738bb",
+      "slide-06.jpg": "0ef817989ee222928e6c460dc0f452f1fb347ae3a40ee831eb2146e0a21dd509",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026"
+  },
+  {
+    "id": "sp-2026-11-22-3",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 3,
+    "title": "Cómo preparar el lunes en diez minutos",
+    "folder": "queue/sp/2026-11-22/carousel-3",
+    "sha256": {
+      "carousel.json": "8e651b71e39311b389e3ed995cae898d8eeabd97d92d5856e4e99a147b764ef6",
+      "slide-01.jpg": "1b18b33d69544cc6a9c8f02f70ea9cd78d657941c222f305e9958983b2968823",
+      "slide-02.jpg": "3ccc2b389ea9517e3ff8f04558c2ae6d4d6790804714089c24f96ac276f64001",
+      "slide-03.jpg": "69152b75f5b1553967f762d66eb0aaf2e354f3f23f14fa6d2e2a30fd4cad0180",
+      "slide-04.jpg": "b4568b74e2eff36af3dc4a4ee049e7311ca8295aa7012dd23bf31f88ab22cf58",
+      "slide-05.jpg": "15f1be65822c1228859b688e765fad1d04683296426e11013c042ff49acc63b5",
+      "slide-06.jpg": "f1a9135b4961b79f747988d8ebabecc78ce37e780057349df4c6aabe561e708b",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "ea12e06c6ba82c002faf206909e069a0147eb0dd72bdbcb9ba27ffd2c5312bb1",
+      "reel.json": "5d7be656ebe8ed603652135b1dc0b5f0734dae6b829cf9269f396ebab7b7f953",
+      "cover.jpg": "f7a3743d0322c40b914284c831c801dc4cb5cb27dad14505a4f9569322ac53b2"
+    },
+    "reel_qa": "Contact sheet inspected 15 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.9 dB peak -0.7 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-22-4",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 4,
+    "title": "Por qué la comida del domingo une tanto",
+    "folder": "queue/sp/2026-11-22/carousel-4",
+    "sha256": {
+      "carousel.json": "ca8432796b600bea2914acc725ea500ab67a2bff73be9b37e15b842024460272",
+      "slide-01.jpg": "a8ff289a1b85a0e899962d64887f6b8940462f838402f961e56363e9638fcef4",
+      "slide-02.jpg": "d40dd622e9441c8cfd22d646edd300c76e00ce1b5a8fff51b2a806661e591a2c",
+      "slide-03.jpg": "b8ba790611e7fb681a4ebdb7bfac0ec47d4df9066ec00d7cabe74f12f9c6ce85",
+      "slide-04.jpg": "571174038fd19e7cd82d0da591fbee3560679197b1a205719a73867e27734baa",
+      "slide-05.jpg": "b0620a89d376654b97485424b1d0d3853597ce3ebf37c14c623fc8a9c4f35f6a",
+      "slide-06.jpg": "8ebed3b6505ce5c559a3e9a53008f7e4af161c668a63f58aabccb62bac66da44",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026"
+  },
+  {
+    "id": "sp-2026-11-22-5",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 5,
+    "title": "Pequeños hábitos para una semana mejor",
+    "folder": "queue/sp/2026-11-22/carousel-5",
+    "sha256": {
+      "carousel.json": "0cb98347106a10b89cce867d5ce25a5212334278742844e92e7535f01a798970",
+      "slide-01.jpg": "614d4f66de126e9e6f216fcffe1873e4a92783227b887fab5b978f716641f038",
+      "slide-02.jpg": "a6d1039521eec294ac2012573854871fe0087e73c8928c3061a628b7115572f6",
+      "slide-03.jpg": "1aede0f5d200433881446943210f72a8fa2f524ea6daa01ed662ff6f114269d9",
+      "slide-04.jpg": "6127f9d155776696f259d8becc29c9c73cd2df13ef884f1ae20ffbb79b8705b1",
+      "slide-05.jpg": "5a389ecaea65825cfb019ae42f9c11308becd77c50cd743d847da00c6a1c5d91",
+      "slide-06.jpg": "1ae0b9474b96eb83eacad4b12da2b0c77a67f1f3447d501ce16d701baaa9b470",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "ef0d448ce57ab9ca70baa96c77f3f628392c99d8c905d3e49118cc7d59c5fb67",
+      "reel.json": "3e1744da39fd7c6c1145e8d9bacca1cb839e5fb1fcad65f77691f5ee95c1beea",
+      "cover.jpg": "9a9bdd0fdd37ede5504db72434ef4e829b5097271ae710b8212c1acb124c435d"
+    },
+    "reel_qa": "Contact sheet inspected 15 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.4 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-22-6",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 6,
+    "title": "Tu cafetería favorita también descansa contigo",
+    "folder": "queue/sp/2026-11-22/carousel-6",
+    "sha256": {
+      "carousel.json": "6866e1b4086106ff14934abac10951c62d22c1ea528ad6422adc14141a6d067d",
+      "slide-01.jpg": "02e9b1ce75aff72b104f5a59f8cb9104697ede75b9b983d08d50628e87830326",
+      "slide-02.jpg": "ed1f468427e78e8aaa42a670de4a042af28077c1d43fb08349b345dce2ed70a9",
+      "slide-03.jpg": "fc65a610ec3742bfda29e179235e49703c2f4c4c4420bcecabe5c46e37a42881",
+      "slide-04.jpg": "a78927fe9a650dcb0a62e3e52837f6025008331547b7f9ab5224db3fe0464f70",
+      "slide-05.jpg": "04e3367ac179b54c949dbe83815ed39cf11b087361f9ca1d4d3c799af5866f77",
+      "slide-06.jpg": "6bb92ec0dd9badc254950b8944394765211878390715847776c5a8b39c4a0ea4",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026"
+  },
+  {
+    "id": "sp-2026-11-22-7",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 7,
+    "title": "Cómo cerrar la semana con gratitud",
+    "folder": "queue/sp/2026-11-22/carousel-7",
+    "sha256": {
+      "carousel.json": "e8798777cd5e8cb99b25e7d3d4b4e57179ed38e832e21c072781853d1c312121",
+      "slide-01.jpg": "c82c699189a7b14337e8de9c1b6ae3aaefa16491c6d136f9ce03c53c3d8b06cf",
+      "slide-02.jpg": "81a6f257d7d3025ee7cef1bd1432b5e01747dc458ffaca30284de082f5045353",
+      "slide-03.jpg": "8ce1cdb36b82ec96b65c23277c8e5f0da9990b3d212394bb0fde3dc88e195369",
+      "slide-04.jpg": "b831a21f83776ffa2f79a76f199e0a2cb5ea27533f74dee5e9ba54bb05f566d7",
+      "slide-05.jpg": "c45d0ce2d432a85e0ac86c9986abf1bfd766a6bc9f6357815c7edbb8235e09b7",
+      "slide-06.jpg": "c90b94688af19cc72030e8aa31b1219b52917c7359fff615304b459d25f579a5",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "ae5f5578e539e784638a0bbf19c3df3e20cbe519c7381e2b0bd0a62645c6cd7d",
+      "reel.json": "14d29302195b2178883e4643733d4984d5195d63498e256a89e43fa003d3444e",
+      "cover.jpg": "b46b0fcef8d6b972bff3262b024ee06e569e053ffce4bfaca66f482df7381b26"
+    },
+    "reel_qa": "Contact sheet inspected 15 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.5 dB peak -1.1 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-22-8",
+    "brand": "sp",
+    "date": "2026-11-22",
+    "slot": 8,
+    "title": "Domingo por la noche: preparar la calma",
+    "folder": "queue/sp/2026-11-22/carousel-8",
+    "sha256": {
+      "carousel.json": "29ffb4765239034649b7c3a38e0615867d529170d982a6a3035655f83e621833",
+      "slide-01.jpg": "437c09e36d1f6723d2333b9de7983997a76501c0402d0371804e65279f57fcde",
+      "slide-02.jpg": "1041f6271b8cb7f6ded1d4b5e2fbff2fed5375dfbee36ac4eb695832cc3b3d8a",
+      "slide-03.jpg": "d4277b75dbe69091bd43bb26cf7b7d0a57089f040ad7de98c29822206e417778",
+      "slide-04.jpg": "b32b439abc6ff6b35996893df9f9dc6fb5ad386185cee6977f175eb7f0056c51",
+      "slide-05.jpg": "23e43a65220baa5ef77a3094d737ce16ec2d237ccbc4ef8af5995528d7573a93",
+      "slide-06.jpg": "a98b952f91ca901a740ae30fdd15efc175bf27cdaebc7066c6311ea4ebcb01af",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 15 November 2026"
   }
 ]
