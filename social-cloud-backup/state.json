@@ -418,5 +418,7 @@
   "gms-2026-11-15-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228937259/",
   "gms-2026-11-15-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1443318411289287",
   "gms-2026-11-15-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/U-_LjjK4V3Y",
-  "gms-2026-11-15-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1480380183966604/"
+  "gms-2026-11-15-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1480380183966604/",
+  "gms-2026-11-15-7:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Write a note to someone who helped you this year | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/dasob4Qt3g0",
+  "gms-2026-11-15-7:facebook": "held: publication attempt started at 2026-11-15T12:23:07+00:00; reconcile remotely before retry"
 }
