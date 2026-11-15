@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "A Sunday hour to plan your founder week",
+  "hook": "One quiet hour on Sunday can shape the whole week.",
+  "photos": "work",
+  "caption": "A short Sunday routine to start the week with clear priorities. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Review last week",
+      [
+        "Three wins, one lesson."
+      ],
+      "Learn first."
+    ],
+    [
+      "Pick three outcomes",
+      [
+        "Results, not tasks."
+      ],
+      "Aim the week."
+    ],
+    [
+      "Block deep work",
+      [
+        "Put it in the calendar now."
+      ],
+      "Protect it."
+    ],
+    [
+      "List key meetings",
+      [
+        "Prepare the important ones."
+      ],
+      "No surprises."
+    ],
+    [
+      "Close the laptop",
+      [
+        "Then enjoy the rest of Sunday."
+      ],
+      "Real rest."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to write a clear weekly goal",
+  "hook": "A good goal tells you what done looks like.",
+  "photos": "work",
+  "caption": "How to turn a vague intention into a goal the team can act on. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with the outcome",
+      [
+        "What will be different by Friday."
+      ],
+      "Clear target."
+    ],
+    [
+      "Make it measurable",
+      [
+        "A number or a yes or no."
+      ],
+      "Easy to check."
+    ],
+    [
+      "Keep it small",
+      [
+        "Something one week can hold."
+      ],
+      "Realistic."
+    ],
+    [
+      "Name an owner",
+      [
+        "One person, not everyone."
+      ],
+      "Accountability."
+    ],
+    [
+      "Share it Monday",
+      [
+        "With the whole team."
+      ],
+      "Aligned."
+    ]
+  ]
+}
+
+sin {
+  "title": "Rest is part of building a company",
+  "hook": "Tired founders make expensive decisions.",
+  "photos": "work",
+  "caption": "Why rest belongs in the plan, and simple ways to protect it. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Sleep is strategy",
+      [
+        "Decisions improve with rest."
+      ],
+      "Think clearly."
+    ],
+    [
+      "Take one day off",
+      [
+        "Fully offline, every week."
+      ],
+      "Recharge."
+    ],
+    [
+      "Move your body",
+      [
+        "A walk or a ride."
+      ],
+      "Clear the head."
+    ],
+    [
+      "See friends",
+      [
+        "People outside startups."
+      ],
+      "Perspective."
+    ],
+    [
+      "Plan your breaks",
+      [
+        "Put them in the calendar."
+      ],
+      "Make it real."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare for a customer call",
+  "hook": "Ten minutes of preparation changes the whole call.",
+  "photos": "work",
+  "caption": "A simple checklist before every customer conversation. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Know who they are",
+      [
+        "Role, company and context."
+      ],
+      "Show respect."
+    ],
+    [
+      "Set one goal",
+      [
+        "What you want to learn."
+      ],
+      "Focus."
+    ],
+    [
+      "Write three questions",
+      [
+        "About their real problem."
+      ],
+      "Better answers."
+    ],
+    [
+      "Listen more",
+      [
+        "Talk less than a third."
+      ],
+      "Learn more."
+    ],
+    [
+      "Send a short recap",
+      [
+        "Within a day."
+      ],
+      "Build trust."
+    ]
+  ]
+}
+
+sin {
+  "title": "Simple ways to track cash each week",
+  "hook": "Knowing your cash removes hidden stress.",
+  "photos": "work",
+  "caption": "A weekly habit to keep the numbers clear without a finance team. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Check the bank balance",
+      [
+        "Same day each week."
+      ],
+      "Start from facts."
+    ],
+    [
+      "Note big payments",
+      [
+        "In and out."
+      ],
+      "No surprises."
+    ],
+    [
+      "Update the runway",
+      [
+        "Months left, as a date."
+      ],
+      "Plan ahead."
+    ],
+    [
+      "Flag anything unusual",
+      [
+        "And ask why."
+      ],
+      "Stay alert."
+    ],
+    [
+      "Share with co-founders",
+      [
+        "Same numbers for all."
+      ],
+      "Aligned."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to ask for feedback on your pitch",
+  "hook": "The best feedback comes from specific questions.",
+  "photos": "work",
+  "caption": "How to get useful feedback on a pitch instead of polite praise. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask people who know",
+      [
+        "Founders and operators."
+      ],
+      "Real insight."
+    ],
+    [
+      "Give them context",
+      [
+        "Who you are pitching to."
+      ],
+      "Relevant advice."
+    ],
+    [
+      "Ask one thing at a time",
+      [
+        "Was the problem clear?"
+      ],
+      "Specific answers."
+    ],
+    [
+      "Do not defend",
+      [
+        "Just take notes."
+      ],
+      "Learn more."
+    ],
+    [
+      "Thank and update",
+      [
+        "Show what you changed."
+      ],
+      "Build relationships."
+    ]
+  ]
+}
+
+sin {
+  "title": "What to do when a week goes wrong",
+  "hook": "A hard week is information, not failure.",
+  "photos": "work",
+  "caption": "Steps to reset after a week that did not go to plan. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write what happened",
+      [
+        "Facts, not feelings."
+      ],
+      "Clear view."
+    ],
+    [
+      "Find one cause",
+      [
+        "The main one."
+      ],
+      "Focus."
+    ],
+    [
+      "Fix one thing",
+      [
+        "A process or a habit."
+      ],
+      "Real change."
+    ],
+    [
+      "Talk to someone",
+      [
+        "A co-founder or mentor."
+      ],
+      "Support."
+    ],
+    [
+      "Start fresh Monday",
+      [
+        "With a clear first task."
+      ],
+      "Move on."
+    ]
+  ]
+}
+
+sin {
+  "title": "A calm Sunday evening for founders",
+  "hook": "How you end Sunday shapes how you start Monday.",
+  "photos": "work",
+  "caption": "A gentle Sunday evening routine to sleep well before a busy week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Stop work early",
+      [
+        "No email after dinner."
+      ],
+      "Clear boundary."
+    ],
+    [
+      "Prepare one thing",
+      [
+        "The first task for Monday."
+      ],
+      "Easy start."
+    ],
+    [
+      "Do something calm",
+      [
+        "Read, walk or cook."
+      ],
+      "Slow down."
+    ],
+    [
+      "Screens away",
+      [
+        "An hour before bed."
+      ],
+      "Better sleep."
+    ],
+    [
+      "Go to bed on time",
+      [
+        "Monday will thank you."
+      ],
+      "Rested."
+    ]
+  ]
+}

@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-22",
+ "title": "Rest is part of building a company",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Rest is part of building a company\n\nTired founders make expensive decisions.\n\nWhy rest belongs in the plan, and simple ways to protect it. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 212 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 49.39
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.53,
+   "runner_up": 45.43
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-05.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-06.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Sleep is strategy",
+  "Take one day off",
+  "Move your body",
+  "See friends",
+  "Plan your breaks",
+  "end card"
+ ]
+}
