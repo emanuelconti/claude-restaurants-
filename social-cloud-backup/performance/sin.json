@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "Set next week's founder priorities",
+      "stamp": "2026-11-15T21:32:30+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfxpWugBvZ7/"
+    },
+    {
+      "title": "Funding is a long ride. Keep pedalling.",
+      "stamp": "2026-11-15T13:57:09+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfw1Rz6F2R5/"
+    },
+    {
+      "title": "6 things nobody sees when you build a startup",
+      "stamp": "2026-11-15T13:55:18+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfw1EVpF57V/"
+    },
+    {
+      "title": "Your Monday funding list: 5 jobs to do before 10am",
+      "stamp": "2026-11-15T13:53:56+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfw06cMF1ps/"
+    },
+    {
+      "title": "Zoom out: 5 questions to ask your startup before December",
+      "stamp": "2026-11-15T13:52:42+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Dfw0xy1F9Un/"
+    },
+    {
+      "title": "Stop waiting to feel ready to raise",
+      "stamp": "2026-11-15T07:58:44+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfwMQ2Tl3fN/"
+    },
+    {
+      "title": "How to get startup funding: 6 steps before you apply",
+      "stamp": "2026-11-15T07:57:26+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfwMHV8lOHG/"
+    },
+    {
+      "title": "A 30-minute Sunday plan for founders",
+      "stamp": "2026-11-15T07:56:03+01:00",
+      "local_hour": 7,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfwL9HYFywk/"
+    },
+    {
       "title": "Saturday night, laptop open? Read this first",
       "stamp": "2026-11-14T19:50:08+01:00",
       "local_hour": 19,
@@ -340,84 +404,20 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfiOQDpjXpx/"
-    },
-    {
-      "title": "5 things to put beside a runway estimate",
-      "stamp": "2026-11-09T20:58:16+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfiIqY7gQ3z/"
-    },
-    {
-      "title": "5 questions before you quote an investor's feedback",
-      "stamp": "2026-11-09T18:45:04+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfh5dKXlOA_/"
-    },
-    {
-      "title": "5 small systems for a calmer founder inbox",
-      "stamp": "2026-11-09T16:28:50+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfhp1dUnHDv/"
-    },
-    {
-      "title": "5 ways to describe a pilot without overselling it",
-      "stamp": "2026-11-09T14:46:44+01:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfheMHinDOI/"
-    },
-    {
-      "title": "5 checks before a grant deadline enters your calendar",
-      "stamp": "2026-11-09T12:56:25+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfhRh_UCtF6/"
-    },
-    {
-      "title": "5 things that do not belong in a traction headline",
-      "stamp": "2026-11-09T10:33:27+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 1,
-      "url": "https://www.instagram.com/p/DfhBMtKl8Ca/"
-    },
-    {
-      "title": "5 questions to answer before a founder meeting starts",
-      "stamp": "2026-11-09T08:57:49+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfg2NztgJLu/"
-    },
-    {
-      "title": "5 things to clarify in a warm investor introduction",
-      "stamp": "2026-11-08T21:46:48+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DffpeDjGCkJ/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-15",
+  "market_date": "2026-11-16",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 8,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 6,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 9,
@@ -426,23 +426,23 @@
     },
     {
       "local_hour": 10,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 12,
       "posts": 3,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 13,
-      "posts": 4,
+      "local_hour": 12,
+      "posts": 2,
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 13,
+      "posts": 7,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 14,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 15,
@@ -451,28 +451,28 @@
     },
     {
       "local_hour": 16,
+      "posts": 2,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 18,
       "posts": 3,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 18,
+      "local_hour": 19,
+      "posts": 2,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 20,
       "posts": 4,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 19,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 20,
-      "posts": 5,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 21,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 22,
