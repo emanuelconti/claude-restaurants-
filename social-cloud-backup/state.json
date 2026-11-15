@@ -420,5 +420,7 @@
   "gms-2026-11-15-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/U-_LjjK4V3Y",
   "gms-2026-11-15-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1480380183966604/",
   "gms-2026-11-15-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/dasob4Qt3g0",
-  "gms-2026-11-15-7:facebook": "held: publication attempt started at 2026-11-15T12:23:07+00:00; reconcile remotely before retry"
+  "gms-2026-11-15-7:facebook": "held: publication attempt started at 2026-11-15T12:23:07+00:00; reconcile remotely before retry",
+  "gms-2026-11-15-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Get ready for a gentle Monday | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/UhRwGyQwVi0",
+  "gms-2026-11-15-3:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Thoughtful gifts under fifty dollars', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 20 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821228957493/"
 }
