@@ -450,8 +450,13 @@
   "gms-2026-11-16-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1831319648082628/",
   "sp-2026-11-16-2:ig": "confirmed remotely: Cinco ideas para que el tiempo te rinda",
   "sin-2026-11-16-3:ig": "confirmed remotely: Monday pipeline check for founders",
-  "gms-2026-11-16-7:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/DfzaSGvCtDR/",
-  "gms-2026-11-16-1:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DfzaWuKkcK5",
-  "gms-2026-11-16-7:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Reasons to say thank you more often | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/mW22BkvH5xY",
-  "gms-2026-11-16-7:facebook": "held: publication attempt started at 2026-11-16T12:59:47+00:00; reconcile remotely before retry"
+  "gms-2026-11-16-7:ig": "confirmed remotely: Reasons to say thank you more often",
+  "gms-2026-11-16-1:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfzaWuKkcK5",
+  "gms-2026-11-16-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/mW22BkvH5xY",
+  "gms-2026-11-16-7:facebook": "held: publication attempt started at 2026-11-16T12:59:47+00:00; reconcile remotely before retry",
+  "sp-2026-11-16-3:ig": "success: account: @socialperks.es\npublished: https://www.instagram.com/reel/DfzgLQBDSp9/",
+  "sin-2026-11-16-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfzgVfGGzBP/",
+  "gms-2026-11-16-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DfzgbL1ESEs/",
+  "gms-2026-11-16-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'End your Monday on a kind note | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/66VQfJH6NVo",
+  "gms-2026-11-16-3:pinterest": "held: publication attempt started at 2026-11-16T13:52:56+00:00; reconcile remotely before retry"
 }
