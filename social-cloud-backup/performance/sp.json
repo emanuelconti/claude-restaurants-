@@ -6,6 +6,70 @@
   "timezone": "Europe/Madrid",
   "posts": [
     {
+      "title": "Cierra el lunes con calma",
+      "stamp": "2026-11-16T23:28:26+01:00",
+      "local_hour": 23,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df0bc79GrZw/"
+    },
+    {
+      "title": "Planes de lunes por la tarde que suman",
+      "stamp": "2026-11-16T20:54:26+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df0Jystiays/"
+    },
+    {
+      "title": "Mensajes para animar a alguien este lunes",
+      "stamp": "2026-11-16T19:58:11+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df0DZeeCQHE/"
+    },
+    {
+      "title": "Comida de lunes con compa\u00f1eros",
+      "stamp": "2026-11-16T19:06:52+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Dfz9fAzDcti/"
+    },
+    {
+      "title": "C\u00f3mo no llevarte el trabajo a casa",
+      "stamp": "2026-11-16T17:27:36+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfzyKJijfI6/"
+    },
+    {
+      "title": "Pausa de caf\u00e9: cinco minutos que cuentan",
+      "stamp": "2026-11-16T14:50:46+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfzgLQBDSp9/"
+    },
+    {
+      "title": "Cinco ideas para que el tiempo te rinda",
+      "stamp": "2026-11-16T12:12:00+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DfzOCkXEvJL/"
+    },
+    {
+      "title": "Lunes: una sola prioridad para hoy",
+      "stamp": "2026-11-16T10:11:45+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DfzAO_VinAs/"
+    },
+    {
       "title": "Tu mejor anuncio ya ha pedido un caf\u00e9 hoy",
       "stamp": "2026-11-15T13:53:22+01:00",
       "local_hour": 13,
@@ -340,84 +404,25 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfmYaKJGvte/"
-    },
-    {
-      "title": "Un caf\u00e9 antes de volver a estudiar",
-      "stamp": "2026-11-11T10:09:19+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfmH_hoiTYD/"
-    },
-    {
-      "title": "Del buen servicio a la recomendaci\u00f3n",
-      "stamp": "2026-11-10T23:00:13+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfk7dF7j_Ob/"
-    },
-    {
-      "title": "La quedada que incluye a quien acaba de llegar",
-      "stamp": "2026-11-10T20:50:04+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfkshLPigKS/"
-    },
-    {
-      "title": "Horas tranquilas, experiencias bien pensadas",
-      "stamp": "2026-11-10T19:14:29+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfkhoEdFKnn/"
-    },
-    {
-      "title": "Qu\u00e9 hace que quieras volver a un hotel",
-      "stamp": "2026-11-10T18:25:13+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfkb83lCTDE/"
-    },
-    {
-      "title": "Un bar tranquilo tambi\u00e9n puede ser el plan",
-      "stamp": "2026-11-10T17:30:34+01:00",
-      "local_hour": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfkVvCgl1hE/"
-    },
-    {
-      "title": "Un martes de tapas con amigos",
-      "stamp": "2026-11-10T15:36:55+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfkIr0hGOn9/"
-    },
-    {
-      "title": "La mesa donde caben todos",
-      "stamp": "2026-11-10T13:14:12+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfj4Y1SH_aF/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-16",
+  "market_date": "2026-11-17",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 10,
-      "median_public_interactions": 0.0
+      "posts": 13,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 8,
+      "posts": 2,
+      "median_public_interactions": 0.5
     },
     {
       "local_hour": 10,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 12,
@@ -426,33 +431,28 @@
     },
     {
       "local_hour": 13,
-      "posts": 9,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 15,
-      "posts": 2,
+      "posts": 12,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 17,
+      "local_hour": 15,
       "posts": 1,
       "median_public_interactions": 0
     },
     {
       "local_hour": 18,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
@@ -466,8 +466,8 @@
     },
     {
       "local_hour": 23,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     }
   ],
   "timing_status": "editor review required before changing schedule"
