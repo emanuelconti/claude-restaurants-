@@ -378,7 +378,7 @@
   "gms-2026-11-13-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228769120/",
   "gms-2026-11-13-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1441108708176924",
   "gms-2026-11-13-6:ig": "confirmed remotely: Reconnect with a friend you drifted from",
-  "gms-2026-11-13-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1073606635709170/",
+  "gms-2026-11-13-6:facebook": "confirmed remotely: /reel/1073606635709170/",
   "gms-2026-11-13-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Dfrnro5FbhY",
   "gms-2026-11-13-7:facebook": "not published: verified absent from the Page posts, videos, Reels and scheduled posts at 15:11 UTC on 13 November (Claude, owner-authorized); not resent",
   "gms-2026-11-13-3:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228788668/",
@@ -478,5 +478,5 @@
   "gms-2026-11-17-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1445073547780440",
   "gms-2026-11-17-5:ig": "confirmed remotely: A simple lunch break reset",
   "gms-2026-11-17-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/AdNZk_nOO6I",
-  "gms-2026-11-17-5:facebook": "success: published: https://www.facebook.com/reel/2319319855577432/"
+  "gms-2026-11-17-5:facebook": "confirmed remotely: https://www.facebook.com/reel/2319319855577432/"
 }
