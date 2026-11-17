@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "How to end a founder day without carrying it home",
+      "stamp": "2026-11-17T22:08:54+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df23J1cDCtV/"
+    },
+    {
+      "title": "Where early founders find their first paying customers",
+      "stamp": "2026-11-17T20:32:43+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df2sGytSENY/"
+    },
+    {
+      "title": "How to prepare for a first meeting with an investor",
+      "stamp": "2026-11-17T19:44:48+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df2mp1Mk3Kq/"
+    },
+    {
+      "title": "Simple metrics an early startup should track",
+      "stamp": "2026-11-17T16:41:12+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df2Rmq4I-cR/"
+    },
+    {
+      "title": "Questions to ask before you choose a co-founder",
+      "stamp": "2026-11-17T14:37:55+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df2DiN7F-mf/"
+    },
+    {
+      "title": "How founders can protect their focus this week",
+      "stamp": "2026-11-17T13:02:00+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df14hjXBGL2/"
+    },
+    {
+      "title": "What to put in a one page pitch summary",
+      "stamp": "2026-11-17T10:35:44+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df1n00BD9Q9/"
+    },
+    {
+      "title": "How to run a customer interview that teaches you something",
+      "stamp": "2026-11-17T09:46:40+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df1iK7Rxx3b/"
+    },
+    {
       "title": "Common mistakes in grant applications",
       "stamp": "2026-11-16T21:46:28+01:00",
       "local_hour": 21,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfniM9Roa-F/"
-    },
-    {
-      "title": "Equity is not a shortcut around clear roles",
-      "stamp": "2026-11-11T21:03:06+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfnSzZACxyz/"
-    },
-    {
-      "title": "Make the next product test smaller",
-      "stamp": "2026-11-11T20:14:36+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfnNTBhFIrv/"
-    },
-    {
-      "title": "A pilot partner is not a testimonial yet",
-      "stamp": "2026-11-11T19:25:14+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfnHnTWxH2q/"
-    },
-    {
-      "title": "Your runway needs a slower-collection scenario",
-      "stamp": "2026-11-11T18:36:34+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfnCEuymJhP/"
-    },
-    {
-      "title": "An application checklist before you press submit",
-      "stamp": "2026-11-11T12:33:10+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfmYc2SBT2S/"
-    },
-    {
-      "title": "What investors mean by repeatability",
-      "stamp": "2026-11-11T10:56:51+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfmNdycjVp-/"
-    },
-    {
-      "title": "Before you add a new market to the deck",
-      "stamp": "2026-11-11T08:49:31+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfl-3BZB4aq/"
-    },
-    {
-      "title": "A useful end-of-day founder note",
-      "stamp": "2026-11-10T21:38:01+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfkyC-ll8Uy/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-17",
+  "market_date": "2026-11-18",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -416,23 +416,38 @@
     },
     {
       "local_hour": 8,
-      "posts": 6,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 9,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 10,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 11,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 12,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
-      "posts": 10,
-      "median_public_interactions": 0.0
+      "posts": 11,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 14,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 15,
@@ -441,13 +456,13 @@
     },
     {
       "local_hour": 16,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 18,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
@@ -461,8 +476,8 @@
     },
     {
       "local_hour": 21,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 22,

@@ -6,6 +6,70 @@
   "timezone": "Europe/Madrid",
   "posts": [
     {
+      "title": "Martes por la noche: cerrar bien el d\u00eda",
+      "stamp": "2026-11-17T22:56:49+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df28oN7mFn1/"
+    },
+    {
+      "title": "C\u00f3mo empezar algo nuevo sin miedo",
+      "stamp": "2026-11-17T21:20:39+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df2xjWJjo3I/"
+    },
+    {
+      "title": "Un buen sitio de barrio vale oro",
+      "stamp": "2026-11-17T19:43:39+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df2mhhfE98R/"
+    },
+    {
+      "title": "Cinco h\u00e1bitos para dormir mejor esta semana",
+      "stamp": "2026-11-17T18:55:02+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df2g7ZKkkRd/"
+    },
+    {
+      "title": "Hablar menos del m\u00f3vil y m\u00e1s en persona",
+      "stamp": "2026-11-17T17:29:27+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df2XK_VCToC/"
+    },
+    {
+      "title": "C\u00f3mo cuidar tu energ\u00eda a mitad de semana",
+      "stamp": "2026-11-17T15:28:14+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df2JOE-ER9H/"
+    },
+    {
+      "title": "Cinco planes de martes para quedar con amigos",
+      "stamp": "2026-11-17T12:13:30+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df1zAlNkyh9/"
+    },
+    {
+      "title": "Martes: peque\u00f1os avances que cuentan",
+      "stamp": "2026-11-17T10:34:38+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df1nqwtFBJN/"
+    },
+    {
       "title": "Cierra el lunes con calma",
       "stamp": "2026-11-16T23:28:26+01:00",
       "local_hour": 23,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/DfpOQALDrKY/"
-    },
-    {
-      "title": "Peque\u00f1as victorias que cuentan aunque nadie las vea",
-      "stamp": "2026-11-12T12:09:27+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfo6k04FxKN/"
-    },
-    {
-      "title": "Empieza antes de sentirte listo",
-      "stamp": "2026-11-12T10:31:35+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfovUwbgsqj/"
-    },
-    {
-      "title": "El primer plan con gente de otra facultad",
-      "stamp": "2026-11-11T23:16:22+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfniDlzCJpv/"
-    },
-    {
-      "title": "Invitar sin poner en riesgo el margen",
-      "stamp": "2026-11-11T21:02:11+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfnSvr_ozCv/"
-    },
-    {
-      "title": "Un sitio de barrio que acaba siendo vuestro",
-      "stamp": "2026-11-11T20:13:07+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfnNEvWgnBQ/"
-    },
-    {
-      "title": "La quedada no depende del alcohol",
-      "stamp": "2026-11-11T19:24:08+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfnHhsjkc2L/"
-    },
-    {
-      "title": "La terraza tambi\u00e9n sirve para ponerse al d\u00eda",
-      "stamp": "2026-11-11T18:35:12+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfnB4yjEtiP/"
-    },
-    {
-      "title": "Compartir platos sin compartir obligaciones",
-      "stamp": "2026-11-11T12:32:24+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfmYaKJGvte/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-17",
+  "market_date": "2026-11-18",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -426,8 +426,8 @@
     },
     {
       "local_hour": 12,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
@@ -435,19 +435,29 @@
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 14,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 15,
       "posts": 1,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 18,
-      "posts": 3,
+      "local_hour": 17,
+      "posts": 1,
       "median_public_interactions": 0
     },
     {
+      "local_hour": 18,
+      "posts": 2,
+      "median_public_interactions": 0.0
+    },
+    {
       "local_hour": 19,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 20,
@@ -456,8 +466,8 @@
     },
     {
       "local_hour": 21,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 22,
