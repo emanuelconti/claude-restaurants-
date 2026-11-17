@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-17T01:47:12+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-17T03:34:00+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -472,7 +472,8 @@
   "gms-2026-11-17-1:ig": "confirmed remotely: Tuesday reminders for a kinder week",
   "gms-2026-11-17-1:youtube": "confirmed remotely: https://www.youtube.com/shorts/Lv07O_hpCxE",
   "gms-2026-11-17-1:facebook": "confirmed remotely: https://www.facebook.com/reel/1790171622205196/",
-  "gms-2026-11-17-2:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df039q8jbWF/",
-  "gms-2026-11-17-2:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'How to plan a cosy movie night with friends | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/n7te4wzIpiQ",
-  "gms-2026-11-17-2:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'How to plan a cosy movie night with friends', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 24 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821229079440/"
+  "gms-2026-11-17-2:ig": "confirmed remotely: How to plan a cosy movie night with friends",
+  "gms-2026-11-17-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/n7te4wzIpiQ",
+  "gms-2026-11-17-2:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229079440/",
+  "gms-2026-11-17-2:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1445073547780440"
 }
