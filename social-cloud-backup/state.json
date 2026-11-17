@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-17T04:49:44+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-17T06:31:19+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -478,5 +478,8 @@
   "gms-2026-11-17-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1445073547780440",
   "gms-2026-11-17-5:ig": "confirmed remotely: A simple lunch break reset",
   "gms-2026-11-17-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/AdNZk_nOO6I",
-  "gms-2026-11-17-5:facebook": "confirmed remotely: https://www.facebook.com/reel/2319319855577432/"
+  "gms-2026-11-17-5:facebook": "confirmed remotely: https://www.facebook.com/reel/2319319855577432/",
+  "gms-2026-11-17-4:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df1Solzl_2F/",
+  "gms-2026-11-17-4:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Small habits that make you a better listener | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/vP2VLctAbwo",
+  "gms-2026-11-17-4:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1445179227769872"
 }
