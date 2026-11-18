@@ -148,15 +148,24 @@ class RunBoundaries(TestCase):
         self.now=dt.datetime(2026,11,11,11,5,tzinfo=dt.timezone.utc)
     def tearDown(self):
         self.sources.stop();self.learning.stop();self.send.stop();self.quiet.__exit__(None,None,None)
+    def test_empty_inventory_is_a_blocked_run(self):
+        self.store.queue.return_value=[]
+        with self.assertRaisesRegex(o.Hold,'reviewed_inventory_empty'):
+            o.run('send',self.store,'fake',self.now)
+        self.smtp.assert_not_called()
     def test_valid_delivery(self):
         o.run('send',self.store,'fake',self.now)
         self.smtp.assert_called_once()
     def test_expired_never_replayed(self):
         self.item['entry']['market_date']='2026-11-10'
-        o.run('send',self.store,'fake',self.now);self.smtp.assert_not_called()
+        with self.assertRaisesRegex(o.Hold,'reviewed_inventory_empty'):
+            o.run('send',self.store,'fake',self.now)
+        self.smtp.assert_not_called()
     def test_no_approval_label(self):
         self.item['labels']=''
-        o.run('send',self.store,'fake',self.now);self.smtp.assert_not_called()
+        with self.assertRaisesRegex(o.Hold,'reviewed_inventory_empty'):
+            o.run('send',self.store,'fake',self.now)
+        self.smtp.assert_not_called()
     def test_shared_cap(self):
         self.store.sent_today.return_value=[{'msg':EmailMessage(),'labels':''}]*60
         o.run('send',self.store,'fake',self.now);self.smtp.assert_not_called()
