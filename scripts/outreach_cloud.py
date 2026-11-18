@@ -598,6 +598,9 @@ def run(mode, store, credential, now):
     candidates = [item for item in queue if item['entry']['market_date'] == today.isoformat()
                   and item['entry']['role'] in allowed_roles and APPROVED in item['labels']
                   and INFLIGHT not in item['labels'] and REVIEW not in item['labels']]
+    # An empty eligible queue is a blocked recovery, not a successful delivery.
+    if allowed_roles and not candidates and len(sent) < 60:
+        require(False, 'reviewed_inventory_empty')
     # Each cloud role contributes at most five actual first contacts/day.
     counts = {role: sum(i['msg'].get('X-SocialPerks-Role') == role for i in sent) for role in roles}
     candidates.sort(key=lambda i: (roles.index(i['entry']['role']), i['entry']['id']))
