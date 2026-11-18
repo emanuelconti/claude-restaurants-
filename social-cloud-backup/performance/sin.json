@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A Wednesday check on your runway",
+      "stamp": "2026-11-18T21:49:01+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df5ZqrTl5d7/"
+    },
+    {
+      "title": "How to keep going after a rejection",
+      "stamp": "2026-11-18T21:00:50+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df5UHckCHLb/"
+    },
+    {
+      "title": "How to prepare your data room early",
+      "stamp": "2026-11-18T19:25:01+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df5JLP6DvVB/"
+    },
+    {
+      "title": "Signs your startup is ready to hire",
+      "stamp": "2026-11-18T16:28:19+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df407gdBTtj/"
+    },
+    {
+      "title": "How to find a mentor who actually helps",
+      "stamp": "2026-11-18T15:01:05+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df4q_DwFjyy/"
+    },
+    {
+      "title": "How to say no to good ideas",
+      "stamp": "2026-11-18T12:37:19+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df4afD5qPTb/"
+    },
+    {
+      "title": "What a strong traction slide shows",
+      "stamp": "2026-11-18T10:59:47+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df4PXy_lcEC/"
+    },
+    {
+      "title": "How to write a problem statement customers recognise",
+      "stamp": "2026-11-18T09:23:14+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df4ESdIgoeJ/"
+    },
+    {
       "title": "How to end a founder day without carrying it home",
       "stamp": "2026-11-17T22:08:54+01:00",
       "local_hour": 22,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/Dfp-6w1FwLN/"
-    },
-    {
-      "title": "What to do the week after a rejection",
-      "stamp": "2026-11-12T20:31:56+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfp0CbAMolR/"
-    },
-    {
-      "title": "Customer interviews that help your application",
-      "stamp": "2026-11-12T18:55:11+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfppANjl4M1/"
-    },
-    {
-      "title": "Before you ask for an intro, prepare this",
-      "stamp": "2026-11-12T16:41:32+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfpZq1khvya/"
-    },
-    {
-      "title": "Signs your pitch deck is doing too much",
-      "stamp": "2026-11-12T15:02:39+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfpOY5bFyUz/"
-    },
-    {
-      "title": "Write a one-line description people remember",
-      "stamp": "2026-11-12T12:57:00+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfo_-IbhKcy/"
-    },
-    {
-      "title": "Grant or equity: questions to ask first",
-      "stamp": "2026-11-12T10:32:41+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfovfk4F3iJ/"
-    },
-    {
-      "title": "Know these numbers before an investor call",
-      "stamp": "2026-11-12T08:55:02+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfokS3eNmjE/"
-    },
-    {
-      "title": "Finish today with a cleaner evidence folder",
-      "stamp": "2026-11-11T23:17:14+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfniM9Roa-F/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-18",
+  "market_date": "2026-11-19",
   "mature_hour_summary": [
     {
       "local_hour": 7,
@@ -416,13 +416,13 @@
     },
     {
       "local_hour": 8,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 9,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 10,
@@ -435,24 +435,14 @@
       "median_public_interactions": 0
     },
     {
-      "local_hour": 12,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 13,
-      "posts": 11,
-      "median_public_interactions": 0
+      "posts": 12,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 15,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 16,
@@ -460,14 +450,9 @@
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 18,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 19,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
@@ -481,13 +466,8 @@
     },
     {
       "local_hour": 22,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 23,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     }
   ],
   "timing_status": "editor review required before changing schedule"
