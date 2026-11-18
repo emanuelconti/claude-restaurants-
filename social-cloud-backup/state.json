@@ -399,7 +399,7 @@
   "gms-2026-11-14-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1442183071402821",
   "gms-2026-11-14-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228852290/",
   "gms-2026-11-14-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/AcZR62JXWNc",
-  "gms-2026-11-14-6:facebook": "confirmed remotely: https://www.facebook.com/reel/3411634192377841/",
+  "gms-2026-11-14-6:facebook": "confirmed remotely: /reel/3411634192377841/",
   "gms-2026-11-14-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/eblI2GAhGx8",
   "gms-2026-11-14-7:facebook": "not published: absent from the remote history 2.5 hours after the attempt (automatic check); not resent",
   "gms-2026-11-14-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/e-9J9LtrlbQ",
@@ -520,8 +520,9 @@
   "gms-2026-11-18-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/0e1SxkUC3IE",
   "gms-2026-11-18-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1445971034357358",
   "gms-2026-11-18-2:pinterest": "not published: absent from the remote history 2.4 hours after the attempt (automatic check); not resent",
-  "gms-2026-11-18-5:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/Df3rHEzGneY/",
-  "gms-2026-11-18-5:youtube": "success: plan: 1 Short, 1080x1920, 12.6 s, title 'Make your lunch hour a real break | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/3rHnZcpnO1w",
-  "gms-2026-11-18-5:facebook": "success: published: https://www.facebook.com/reel/4612531942360923/",
-  "gms-2026-11-18-4:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Habits of people who stay close to old friends', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 25 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821229160688/"
+  "gms-2026-11-18-5:ig": "confirmed remotely: Make your lunch hour a real break",
+  "gms-2026-11-18-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/3rHnZcpnO1w",
+  "gms-2026-11-18-5:facebook": "confirmed remotely: https://www.facebook.com/reel/4612531942360923/",
+  "gms-2026-11-18-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229160688/",
+  "gms-2026-11-18-4:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df3w1mNIARP/"
 }
