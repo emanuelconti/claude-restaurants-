@@ -8,7 +8,7 @@ on:
         options: [check, import, send]
         default: check
   schedule:
-    - cron: '5 11,16 * * 1-5'
+    - cron: '23 10-17 * * 1-5'
 permissions:
   contents: read
 concurrency:
@@ -29,4 +29,18 @@ jobs:
         env:
           SOCIALPERKS_GMAIL_APP_PASSWORD: ${{ secrets.SOCIALPERKS_GMAIL_APP_PASSWORD }}
           OUTREACH_MODE: ${{ github.event_name == 'schedule' && 'send' || inputs.mode }}
-        run: python3 scripts/outreach_cloud.py --mode "$OUTREACH_MODE"
+        run: |
+          set -o pipefail
+          python3 scripts/outreach_cloud.py --mode "$OUTREACH_MODE" | tee "$RUNNER_TEMP/outreach-status.log"
+      - name: Publish actual delivery status
+        if: always()
+        shell: bash
+        run: |
+          status_file="$RUNNER_TEMP/outreach-status.log"
+          if [ -f "$status_file" ]; then
+            rg '^OUTREACH' "$status_file" >> "$GITHUB_STEP_SUMMARY" || true
+            if rg -q '^OUTREACH=outside_market_hours
+ "$status_file"; then
+              echo "::warning::No emails sent: runner started outside the permitted market window."
+            fi
+          fi
