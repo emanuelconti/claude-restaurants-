@@ -38,9 +38,8 @@ jobs:
         run: |
           status_file="$RUNNER_TEMP/outreach-status.log"
           if [ -f "$status_file" ]; then
-            rg '^OUTREACH' "$status_file" >> "$GITHUB_STEP_SUMMARY" || true
-            if rg -q '^OUTREACH=outside_market_hours
- "$status_file"; then
+            grep '^OUTREACH' "$status_file" >> "$GITHUB_STEP_SUMMARY" || true
+            if grep -q '^OUTREACH=outside_market_hours$' "$status_file"; then
               echo "::warning::No emails sent: runner started outside the permitted market window."
             fi
           fi
