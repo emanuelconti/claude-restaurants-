@@ -396,7 +396,7 @@ class Gmail:
 def primary_worked(sent, role):
     for item in sent:
         message = item['msg']
-        if not is_first_contact(message) or message.get('X-SocialPerks-Queue-ID'):
+        if not is_first_contact(message) or backup_message(item):
             continue
         if 'outreach/venue' not in item['labels']:
             continue
@@ -404,6 +404,36 @@ def primary_worked(sent, role):
         if (role == 'paris') == (country == 'fr'):
             return True
     return False
+
+
+def has_label(item, label):
+    """Match an entire IMAP label, not a similarly named sender or city."""
+    return re.search(r'(?<![\w/\-])' + re.escape(label) + r'(?=$|[\s"\)])', item['labels']) is not None
+
+
+def backup_message(item):
+    return bool(item['msg'].get('X-SocialPerks-Queue-ID') or has_label(item, 'outreach/sender-codex'))
+
+
+def sent_city(item):
+    header = item['msg'].get('X-SocialPerks-City')
+    labels = [city for city in CITIES if has_label(item, 'outreach/city-' + city)]
+    if header:
+        return header if header in CITIES and (not labels or labels == [header]) else None
+    return labels[0] if len(labels) == 1 else None
+
+
+def backup_role_count(sent, role):
+    count = 0
+    for item in sent:
+        if not is_first_contact(item['msg']) or not backup_message(item):
+            continue
+        city = sent_city(item)
+        known = item['msg'].get('X-SocialPerks-Role') or (CITIES[city][1] if city else None)
+        # An unclassified own send consumes both role ceilings conservatively.
+        if known not in ('paris', 'ambassador') or known == role:
+            count += 1
+    return count
 
 
 def check_sources(q, policy_bytes, checker_bytes):
@@ -459,7 +489,7 @@ def confirm_receipts(store, item, receipts):
     for receipt in receipts:
         require(q['recipient'].casefold() in addresses(receipt['msg']), 'receipt_recipient_mismatch')
         require(str(receipt['msg'].get('Message-ID', '')) == f'<sp-venue-{q["id"]}@socialperkses.com>', 'receipt_identity_mismatch')
-        store.label(receipt, add=('outreach/venue', 'outreach/t-' + q['venue_type'], 'outreach/c-' + q['country'], 'outreach/v-' + q['variant']))
+        store.label(receipt, add=('outreach/venue', 'outreach/t-' + q['venue_type'], 'outreach/c-' + q['country'], 'outreach/v-' + q['variant'], 'outreach/city-' + q['city'], 'outreach/sender-codex'))
 
 
 def within_city_cap(sent, q):
@@ -467,9 +497,9 @@ def within_city_cap(sent, q):
         return True
     # Include primary messages; an unclassified European venue send holds the role.
     european = [i for i in sent if any('outreach/c-' + c in i['labels'] for c in EUROPE)]
-    if any(not i['msg'].get('X-SocialPerks-City') for i in european):
+    if any(not sent_city(i) or not has_label(i, 'outreach/c-' + CITIES[sent_city(i)][0]) for i in european):
         return False
-    return len(european) < 14 and sum(i['msg'].get('X-SocialPerks-City') == q['city'] for i in european) < 2
+    return len(european) < 14 and sum(sent_city(i) == q['city'] for i in european) < 2
 
 
 def reply_kind(message):
@@ -578,7 +608,10 @@ def run(mode, store, credential, now):
         print('OUTREACH_APPROVED_DRAFTS=' + str(len(live)))
         require(live, 'reviewed_inventory_empty')
         return 'read_only_queue_verified'
-    roles = roles_at(now)
+    # Explicit owner dispatch can recover Paris during business hours immediately.
+    # Scheduled runs always use `send`, retaining their existing market windows.
+    local = now.astimezone(ZONE)
+    roles = (['paris'] if local.weekday() < 5 and 9 <= local.hour < 19 else []) if mode == 'send-now' else roles_at(now)
     if not roles:
         return 'outside_market_hours'
     cohorts, retired = learn(store, today, write=True)
@@ -602,7 +635,7 @@ def run(mode, store, credential, now):
     if allowed_roles and not candidates and len(sent) < 60:
         require(False, 'reviewed_inventory_empty')
     # Each cloud role contributes at most five actual first contacts/day.
-    counts = {role: sum(i['msg'].get('X-SocialPerks-Role') == role for i in sent) for role in roles}
+    counts = {role: backup_role_count(sent, role) for role in roles}
     candidates.sort(key=lambda i: (roles.index(i['entry']['role']), i['entry']['id']))
     sent_count = 0
     for item in candidates:
@@ -613,7 +646,7 @@ def run(mode, store, credential, now):
         current = store.sent_today(today)
         if not within_city_cap(current, q):
             continue
-        if len(current) >= 60 or primary_worked(current, q['role']) or counts.get(q['role'], 0) >= 5 or sent_count >= 5:
+        if len(current) >= 60 or primary_worked(current, q['role']) or max(counts.get(q['role'], 0), backup_role_count(current, q['role'])) >= 5 or sent_count >= 5:
             continue
         if store.contacted(q['recipient']) or store.suppressed(q['recipient'], today):
             store.label(item, add=(REVIEW,))
@@ -640,7 +673,7 @@ def run(mode, store, credential, now):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices=('check', 'import', 'send'), default='check')
+    parser.add_argument('--mode', choices=('check', 'import', 'send', 'send-now'), default='check')
     args = parser.parse_args()
     try:
         credential = password()

@@ -111,6 +111,27 @@ class Boundaries(TestCase):
         self.assertFalse(o.within_city_cap([{'msg':EmailMessage(),'labels':'outreach/c-es'}],q))
     def test_primary_skip(self):
         self.assertTrue(o.primary_worked([{'msg':EmailMessage(),'labels':'outreach/venue outreach/c-fr'}],'paris'))
+    def test_own_manual_send_does_not_impersonate_primary_but_counts(self):
+        item={'msg':EmailMessage(),'labels':'outreach/venue outreach/c-fr outreach/city-paris outreach/sender-codex'}
+        self.assertFalse(o.primary_worked([item],'paris'))
+        self.assertEqual(o.backup_role_count([item],'paris'),1)
+        self.assertEqual(o.backup_role_count([item],'ambassador'),0)
+    def test_lookalike_sender_label_still_holds_for_primary(self):
+        item={'msg':EmailMessage(),'labels':'outreach/venue outreach/c-fr outreach/sender-codex-other'}
+        self.assertTrue(o.primary_worked([item],'paris'))
+    def test_manual_city_labels_respect_european_city_cap(self):
+        q=entry();q.update(city='tilburg',country='nl',role='ambassador')
+        item={'msg':EmailMessage(),'labels':'(outreach/venue "outreach/c-nl" "outreach/city-tilburg" "outreach/sender-codex")'}
+        self.assertTrue(o.within_city_cap([item],q))
+        self.assertFalse(o.within_city_cap([item,item],q))
+    def test_conflicting_city_classification_holds(self):
+        q=entry();q.update(city='madrid',country='es',role='ambassador')
+        item={'msg':EmailMessage(),'labels':'outreach/c-es outreach/city-madrid outreach/city-barcelona'}
+        self.assertFalse(o.within_city_cap([item],q))
+    def test_unknown_own_send_conservatively_counts_both_caps(self):
+        item={'msg':EmailMessage(),'labels':'outreach/sender-codex'}
+        self.assertEqual(o.backup_role_count([item],'paris'),1)
+        self.assertEqual(o.backup_role_count([item],'ambassador'),1)
     def test_reply_not_primary(self):
         m=EmailMessage();m['In-Reply-To']='<id>'
         self.assertFalse(o.primary_worked([{'msg':m,'labels':'outreach/venue outreach/c-fr'}],'paris'))
@@ -156,6 +177,24 @@ class RunBoundaries(TestCase):
     def test_valid_delivery(self):
         o.run('send',self.store,'fake',self.now)
         self.smtp.assert_called_once()
+    def test_explicit_owner_recovery_during_paris_business_hours(self):
+        early=self.now-dt.timedelta(hours=1)
+        self.assertEqual(o.run('send',self.store,'fake',early),'outside_market_hours')
+        self.smtp.assert_not_called()
+        o.run('send-now',self.store,'fake',early)
+        self.smtp.assert_called_once()
+    def test_owner_recovery_never_bypasses_primary(self):
+        self.store.sent_today.return_value=[{'msg':EmailMessage(),'labels':'outreach/venue outreach/c-fr'}]
+        o.run('send-now',self.store,'fake',self.now-dt.timedelta(hours=1))
+        self.smtp.assert_not_called()
+    def test_owner_recovery_never_runs_at_night(self):
+        self.assertEqual(o.run('send-now',self.store,'fake',self.now.replace(hour=2)),'outside_market_hours')
+        self.smtp.assert_not_called()
+    def test_manual_sends_consume_daily_backup_budget(self):
+        item={'msg':EmailMessage(),'labels':'outreach/venue outreach/c-fr outreach/city-paris outreach/sender-codex'}
+        self.store.sent_today.return_value=[item]*5
+        o.run('send',self.store,'fake',self.now)
+        self.smtp.assert_not_called()
     def test_expired_never_replayed(self):
         self.item['entry']['market_date']='2026-11-10'
         with self.assertRaisesRegex(o.Hold,'reviewed_inventory_empty'):
