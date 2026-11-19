@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "How founders can sleep better in busy weeks",
+      "stamp": "2026-11-19T21:58:08+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df7_gmNjNTI/"
+    },
+    {
+      "title": "How to stay calm before a big pitch",
+      "stamp": "2026-11-19T21:09:51+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df758kXp1Or/"
+    },
+    {
+      "title": "How to use a pitch event well",
+      "stamp": "2026-11-19T19:29:43+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df7uhqPDC0A/"
+    },
+    {
+      "title": "How to write a job post that attracts builders",
+      "stamp": "2026-11-19T16:31:58+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df7aIyXos-8/"
+    },
+    {
+      "title": "What to ask a startup lawyer early",
+      "stamp": "2026-11-19T14:31:10+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df7MWr-l_aY/"
+    },
+    {
+      "title": "How to run a short weekly team meeting",
+      "stamp": "2026-11-19T12:54:05+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df7BNMCztgZ/"
+    },
+    {
+      "title": "How to test demand before you build",
+      "stamp": "2026-11-19T11:58:30+01:00",
+      "local_hour": 11,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df664uuIYv8/"
+    },
+    {
+      "title": "How to write a clear product update for investors",
+      "stamp": "2026-11-19T10:13:43+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df6u2XgikE1/"
+    },
+    {
       "title": "A Wednesday check on your runway",
       "stamp": "2026-11-18T21:49:01+01:00",
       "local_hour": 21,
@@ -340,79 +404,15 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfsfSBcFzHM/"
-    },
-    {
-      "title": "Five questions for a founder Friday review",
-      "stamp": "2026-11-13T20:38:55+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfsZoYkh2wy/"
-    },
-    {
-      "title": "What a funding reviewer wants to see in five minutes",
-      "stamp": "2026-11-13T13:59:01+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfrr5zxFOId/"
-    },
-    {
-      "title": "For the founder who had a quiet week",
-      "stamp": "2026-11-13T13:57:33+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrrvGMl7--/"
-    },
-    {
-      "title": "Year-end funding check: 6 things to sort before December",
-      "stamp": "2026-11-13T13:56:09+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrrlLplM06/"
-    },
-    {
-      "title": "Signs your startup is ready for public funding",
-      "stamp": "2026-11-13T07:54:43+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrCNoKFD0r/"
-    },
-    {
-      "title": "Grants, loans or equity: what each one costs you",
-      "stamp": "2026-11-13T07:53:24+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrCEU2mLYX/"
-    },
-    {
-      "title": "Close the week before Friday dinner",
-      "stamp": "2026-11-13T07:52:08+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrB7OFl9Fk/"
-    },
-    {
-      "title": "Keep a weekly founder log",
-      "stamp": "2026-11-12T22:06:43+01:00",
-      "local_hour": 22,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfp-6w1FwLN/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-19",
+  "market_date": "2026-11-20",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 7,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 8,
@@ -421,13 +421,13 @@
     },
     {
       "local_hour": 9,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 10,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 11,
@@ -435,9 +435,14 @@
       "median_public_interactions": 0
     },
     {
+      "local_hour": 12,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 13,
-      "posts": 12,
-      "median_public_interactions": 0.0
+      "posts": 9,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 14,
@@ -445,30 +450,36 @@
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 15,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 16,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 19,
+      "posts": 4,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 20,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 19,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 20,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 21,
-      "posts": 3,
+      "posts": 5,
       "median_public_interactions": 0
     },
     {
       "local_hour": 22,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     }
   ],
+  "view_cohorts": [],
   "timing_status": "editor review required before changing schedule"
 }
