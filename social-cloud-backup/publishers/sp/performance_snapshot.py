@@ -60,8 +60,7 @@ if brand=='gms':
   tt=os.environ['THREADS_TOKEN_GMS'];me=T.call('GET','me',tt,{'fields':'id,username'})
   if me.get('username')!='goodmessage_studio':raise RuntimeError('Threads identity mismatch')
   threads=T.call('GET',str(me['id'])+'/threads',tt,{'fields':'id,text,timestamp,permalink','limit':20}).get('data',[])
-  threadrows=[]
-insights_available=True;insights=True
+  threadrows=[];insights=True
   for post in threads:
    counters={}
    if insights:
