@@ -52,7 +52,7 @@ CITIES = {
     'goettingen': ('de', 'ambassador'), 'vienna': ('at', 'ambassador'),
     'tilburg': ('nl', 'ambassador'), 'delft': ('nl', 'ambassador'),
 }
-GENERIC = {'info', 'contact', 'hello', 'bonjour', 'hola', 'ola', 'oi', 'comercial', 'commercial',
+GENERIC = {'info', 'contact', 'contato', 'hello', 'bonjour', 'hola', 'ola', 'oi', 'comercial', 'commercial',
            'marketing', 'bienvenue', 'digital', 'influence', 'partnerships', 'partenariat', 'partenariats', 'parcerias', 'colaboraciones',
            'comunicacion', 'presse', 'press', 'media', 'business', 'events', 'evenements', 'eventos'}
 REFUSAL = re.compile(r'\b(unsubscribe|stop|désinscrire|desinscribir|baja|non merci|no thanks|n[aã]o|not interested|pas intéress|kein interesse|nee|no)\b', re.I)

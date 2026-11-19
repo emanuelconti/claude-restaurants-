@@ -49,6 +49,9 @@ class Boundaries(TestCase):
     def test_personal_address(self):
         q=entry();q['recipient']='alice@example.org'
         with self.assertRaises(o.Hold):o.validate_entry(q,DAY)
+    def test_portuguese_generic_contact_address(self):
+        q=entry();q['recipient']='contato@example.org'
+        self.assertEqual(o.validate_entry(q,DAY)['recipient'],'contato@example.org')
     def test_unapproved_city(self):
         q=entry();q['city']='dallas'
         with self.assertRaises(o.Hold):o.validate_entry(q,DAY)
