@@ -241,4 +241,80 @@ class RunBoundaries(TestCase):
         with self.assertRaisesRegex(o.Hold,'policy_snapshot_requires_refresh'):
             o.run('send',self.store,'fake',self.now+dt.timedelta(days=8))
         self.smtp.assert_not_called()
+class LearningEvidence(TestCase):
+    def message(self, body='', day=8, sender='hello@example.org', auto=False, bounce=False):
+        message=EmailMessage()
+        message['From']=sender
+        message['Date']=o.format_datetime(dt.datetime(2026,11,day,12,tzinfo=dt.timezone.utc))
+        if auto:
+            message['Auto-Submitted']='auto-replied'
+        if bounce:
+            message.set_type('multipart/report')
+            report=EmailMessage();report.set_type('message/delivery-status');message.attach(report)
+        else:
+            message.set_content(body)
+        return {'msg':message,'labels':''}
+    def study(self, replies, count=1, write=False):
+        store=MagicMock();sent=[]
+        for index in range(count):
+            item=self.message('outreach',day=4,sender=o.SELF)
+            item['msg']['To']='hello@example.org'
+            item['msg']['X-SocialPerks-Variant']='test-variant'
+            item['labels']=f'outreach/venue X-GM-THRID {index+1}'
+            sent.append(item)
+        store.items.side_effect=lambda folder, query: sent if folder=='Sent' else replies
+        cohorts,retired=o.learn(store,DAY,write=write)
+        return next(iter(cohorts.values())),retired,store
+    def test_delivery_report_is_not_autoresponder_or_interest(self):
+        bounced=self.message(auto=True,bounce=True)
+        self.assertEqual(o.reply_kind(bounced['msg']),'bounce')
+        group,retired,_=self.study([bounced],count=30)
+        self.assertEqual(group['bounce'],30)
+        self.assertEqual(group['auto'],0)
+        self.assertEqual(group['yes'],0)
+        self.assertNotIn('test-variant',retired)
+    def test_later_autoresponder_does_not_erase_human_interest(self):
+        human=self.message('Yes, interested.',day=8)
+        auto=self.message('No office today.',day=9,auto=True)
+        group,_,store=self.study([human,auto],write=True)
+        self.assertEqual(group['yes'],1)
+        self.assertEqual(group['auto'],0)
+        store.label.assert_called_once_with(human,add=('outreach/r-yes',))
+    def test_unordered_thread_selects_latest_human_reply(self):
+        earlier=self.message('Yes, interested.',day=8)
+        later=self.message('No thanks.',day=9)
+        group,_,store=self.study([later,earlier],write=True)
+        self.assertEqual(group['no'],1)
+        self.assertEqual(group['yes'],0)
+        store.label.assert_called_once_with(later,add=('outreach/r-no',))
+    def test_questions_are_engagement_not_interest_or_conversion(self):
+        group,retired,_=self.study([self.message('How does this work?')],count=30)
+        self.assertEqual(group['question'],30)
+        self.assertEqual(group['yes'],0)
+        self.assertNotIn('test-variant',retired)
+        self.assertNotIn('conversions',group)
+    def test_explicit_interest_with_question_retains_interest(self):
+        self.assertEqual(o.reply_kind(self.message('Yes, interested. What next?')['msg']),'yes')
+    def test_only_autoresponders_do_not_count_as_engagement(self):
+        group,retired,_=self.study([self.message('Yes, received?',auto=True)],count=30)
+        self.assertEqual(group['auto'],30)
+        self.assertEqual(group['yes']+group['question'],0)
+        self.assertIn('test-variant',retired)
+    def test_latest_bounce_remains_visible_without_erasing_human(self):
+        group,_,store=self.study([self.message('Yes',day=8),self.message(day=9,bounce=True)],write=True)
+        self.assertEqual(group['yes'],1)
+        self.assertEqual(group['bounce'],1)
+        self.assertEqual(store.label.call_count,1)
+    def test_early_refusals_are_chronological_not_imap_order(self):
+        sent=[];responses={}
+        for index in range(25):
+            item=self.message('outreach',day=1+index//3,sender=o.SELF)
+            item['msg']['X-SocialPerks-Variant']='test-variant'
+            item['labels']=f'outreach/venue X-GM-THRID {index+1}'
+            sent.append(item)
+            responses[f'X-GM-THRID {index+1}']=[self.message('No thanks.' if index<2 else 'Yes')]
+        store=MagicMock()
+        store.items.side_effect=lambda folder,query: list(reversed(sent)) if folder=='Sent' else responses[query]
+        _,retired=o.learn(store,DAY)
+        self.assertIn('test-variant',retired)
 if __name__=='__main__':main()

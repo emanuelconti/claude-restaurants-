@@ -503,7 +503,9 @@ def within_city_cap(sent, q):
 
 
 def reply_kind(message):
-    if message.get('Auto-Submitted', 'no') != 'no' or message.get('X-Autoreply') or message.get('X-Autorespond'):
+    if any(part.get_content_type() == 'message/delivery-status' for part in message.walk()):
+        return 'bounce'
+    if message.get('Auto-Submitted', 'no').casefold() != 'no' or message.get('X-Autoreply') or message.get('X-Autorespond'):
         return 'auto'
     # Quoted history contains our own opt-out. Never classify that as a refusal.
     body = re.split(r'(?m)^>|^On .+wrote:|^Le .+écrit :|^From:|^De :', text(message))[0]
@@ -511,17 +513,26 @@ def reply_kind(message):
         return 'later'
     if REFUSAL.search(body):
         return 'no'
-    if '?' in body:
-        return 'question'
     if POSITIVE.search(body):
         return 'yes'
+    if '?' in body:
+        return 'question'
     return 'unclassified'
+
+
+def message_time(message):
+    # Never rely on IMAP result ordering when selecting the latest human reply.
+    try:
+        value = parsedate_to_datetime(str(message.get('Date', '')))
+        return value.replace(tzinfo=value.tzinfo or dt.timezone.utc).astimezone(dt.timezone.utc)
+    except (ValueError, TypeError, OverflowError):
+        return dt.datetime.min.replace(tzinfo=dt.timezone.utc)
 
 
 def learn(store, today, write=False):
     since = (today - dt.timedelta(days=30)).strftime('%d-%b-%Y')
     cohorts, visited, retired, totals = {}, set(), set(), {}
-    for item in store.items('Sent', f'SINCE {quoted(since)}'):
+    for item in sorted(store.items('Sent', f'SINCE {quoted(since)}'), key=lambda item: message_time(item['msg'])):
         if 'outreach/venue' not in item['labels'] or not is_first_contact(item['msg']):
             continue
         match = re.search(r'X-GM-THRID (\d+)', item['labels'])
@@ -539,27 +550,41 @@ def learn(store, today, write=False):
             match = re.search(r'outreach/' + label + r'-([a-zA-Z0-9-]+)', item['labels'])
             return known or (match[1] if match else 'unknown')
         key = '|'.join((str(variant), dimension('Language','language'), dimension('Country','c'), dimension('Venue-Type','t')))
-        group = cohorts.setdefault(key, dict(sends=0, yes=0, question=0, no=0, later=0, auto=0, unclassified=0, silence_3d=0))
-        total = totals.setdefault(variant, dict(sends=0, early_no=0, positive=0))
+        group = cohorts.setdefault(key, dict(sends=0, yes=0, question=0, no=0, later=0, auto=0, bounce=0, unclassified=0, silence_3d=0))
+        total = totals.setdefault(variant, dict(sends=0, non_bounced_attempts=0, early_no=0, interest=0, questions=0))
         group['sends'] += 1
         total['sends'] += 1
         incoming = [m for m in store.items('All', 'X-GM-THRID ' + thread_id)
                     if SELF not in addresses(m['msg'], ('From',))]
-        if incoming:
-            kind = reply_kind(incoming[-1]['msg'])
+        classified = [(m, reply_kind(m['msg'])) for m in incoming]
+        humans = [(m, kind) for m, kind in classified if kind not in ('auto', 'bounce')]
+        bounced = any(kind == 'bounce' for _, kind in classified)
+        if bounced:
+            group['bounce'] += 1
+        else:
+            total['non_bounced_attempts'] += 1
+        if humans:
+            selected, kind = max(humans, key=lambda pair: message_time(pair[0]['msg']))
             group[kind] += 1
             if kind == 'no' and total['sends'] <= 20:
                 total['early_no'] += 1
-            if kind in ('yes', 'question'):
-                total['positive'] += 1
+            if kind == 'yes':
+                total['interest'] += 1
+            if kind == 'question':
+                total['questions'] += 1
             if write and kind != 'unclassified':
                 label = 'outreach/later' if kind == 'later' else 'outreach/r-' + kind
-                for reply in store.items('All', 'X-GM-THRID ' + thread_id):
-                    store.label(reply, add=(label,))
-        elif (today - message_day(item['msg'])).days >= 3:
+                # Label the human evidence only. A later autoresponder or DSN
+                # must not acquire a positive-reply label from this thread.
+                store.label(selected, add=(label,))
+        elif any(kind == 'auto' for _, kind in classified):
+            group['auto'] += 1
+        elif not bounced and (today - message_day(item['msg'])).days >= 3:
             group['silence_3d'] += 1
     for variant, group in totals.items():
-        if group['early_no'] >= 2 or (group['sends'] >= 30 and group['positive'] == 0):
+        # Questions are engagement, not explicit interest or conversions.
+        # Delivery failures cannot establish whether a copy variant works.
+        if group['early_no'] >= 2 or (group['non_bounced_attempts'] >= 30 and group['interest'] == 0 and group['questions'] == 0):
             retired.add(variant)
     return cohorts, retired
 
@@ -668,7 +693,7 @@ def run(mode, store, credential, now):
                 f'{reconciled_count} earlier sent receipts reconciled without sending again. '
                 'No follow-up. Sign-ups not checked; no conversion claim. '
                 'Hypothesis: ' + hypothesis + '\nObserved reply cohorts (not sign-ups): ' + json.dumps(cohorts, ensure_ascii=False) +
-                '\nGroups below20 sends are descriptive only. No automatic copy rewrite or causal claim. Retired variants: ' +
+                '\nQuestions are engagement, yes is heuristic explicit interest; neither proves registration or payment. Bounce and automatic replies are separate. Groups below20 sends are descriptive only. No automatic copy rewrite or causal claim. Retired variants: ' +
                 ', '.join(sorted(retired)) + '\n' + marker)
         store.append_learning(playbook, note)
     return 'completed_guarded_venue_pass'
