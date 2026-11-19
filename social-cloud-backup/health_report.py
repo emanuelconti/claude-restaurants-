@@ -25,7 +25,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
  old=json.loads(path.read_text()) if path.exists() else {}
  paused=any(k.startswith('platform_block:'+brand+':') and v for k,v in platform_state.items())
  if paused:print(f'Public metrics for {brand} retained while a platform restriction requires verification; no extra API probes.')
- if not paused and (old.get('market_date')!=key or old.get('schema_version')!=2):
+ if not paused and (old.get('market_date')!=key or old.get('schema_version')!=3):
   result=subprocess.run([sys.executable,str(R/'run.py'),brand,'performance_snapshot.py',brand,variable,handle,str(zone)],capture_output=True,text=True)
   if result.returncode:
    print(f'Public results unavailable for {brand}; publication remains independent.')
@@ -37,10 +37,18 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
      age=(now-dt.datetime.fromisoformat(post['stamp'])).total_seconds()/3600
      if 24<=age<=168 and post['likes'] is not None and post['comments'] is not None:groups[post['local_hour']].append(post['likes']+post['comments'])
     snapshot['mature_hour_summary']=[{'local_hour':h,'posts':len(xs),'median_public_interactions':median(xs)} for h,xs in sorted(groups.items())]
+    view_groups=defaultdict(list)
+    for post in snapshot['posts']:
+     age=(now-dt.datetime.fromisoformat(post['stamp'])).total_seconds()/3600
+     if 24<=age<=168 and post.get('views') is not None:
+      view_groups[(post.get('format','unknown'),'24-72h' if age<72 else '72h-7d')].append(post)
+    snapshot['view_cohorts']=[{'format':fmt,'age':age,'posts':len(xs),'median_views':median(p['views'] for p in xs),'status':'insufficient comparable samples' if len(xs)<10 else 'review content and qualified inquiries before scaling'} for (fmt,age),xs in sorted(view_groups.items())]
     snapshot['timing_status']='insufficient comparable samples' if sum(len(v) for v in groups.values())<30 else 'editor review required before changing schedule'
     path.write_text(json.dumps(snapshot,indent=2)+'\n')
     lines=[f'# {brand}: daily measured results',f'Market date: {key}. Timezone: {zone}.',snapshot['limits'],f"Observed posts: {len(snapshot['posts'])}.",f"Timing: {snapshot['timing_status']}."]
     for row in snapshot['mature_hour_summary']:lines.append(f"Hour {row['local_hour']:02d}:00: n={row['posts']}, median public likes+comments={row['median_public_interactions']} (posts 24h to 7d old).")
+    for cohort in snapshot['view_cohorts']:lines.append(f"{cohort['format']} {cohort['age']}: n={cohort['posts']}, median views={cohort['median_views']}; {cohort['status']}.")
+    lines.append('Instagram views, reach, saves and shares remain null when unavailable. Do not compare Reel views with static-post views or treat missing permission as zero performance.')
     for channel,entry in snapshot.get('channels',{}).items():lines.append(f"{channel}: {entry['availability']}; observed posts={len(entry.get('posts',[]))}. Per-post public counters are in the JSON snapshot; missing counters are not zero.")
     lines.append('Primary editor adapts future reviewed themes, captions and local windows from this evidence. Do not infer purchase conversion, causality or demographic targeting from these counters.')
     (R/'performance'/f'{brand}.md').write_text('\n'.join(lines)+'\n')
