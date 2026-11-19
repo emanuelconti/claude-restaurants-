@@ -25,7 +25,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
  old=json.loads(path.read_text()) if path.exists() else {}
  paused=any(k.startswith('platform_block:'+brand+':') and v for k,v in platform_state.items())
  if paused:print(f'Public metrics for {brand} retained while a platform restriction requires verification; no extra API probes.')
- if not paused and (old.get('market_date')!=key or old.get('schema_version')!=3):
+ if not paused and (old.get('market_date')!=key or old.get('schema_version')!=(3 if brand=='sp' else 2)):
   result=subprocess.run([sys.executable,str(R/'run.py'),brand,'performance_snapshot.py',brand,variable,handle,str(zone)],capture_output=True,text=True)
   if result.returncode:
    print(f'Public results unavailable for {brand}; publication remains independent.')
