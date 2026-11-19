@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-19T03:00:39+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-19T04:39:21+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -564,5 +564,8 @@
   "gms-2026-11-19-2:ig": "confirmed remotely: Ideas for a home dinner with friends",
   "gms-2026-11-19-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/oqiqhGORFig",
   "gms-2026-11-19-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1446986034255858",
-  "gms-2026-11-19-2:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229230823/"
+  "gms-2026-11-19-2:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229230823/",
+  "gms-2026-11-19-5:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/Df6PWjDDfQ_/",
+  "gms-2026-11-19-5:youtube": "success: plan: 1 Short, 1080x1920, 12.6 s, title 'Lunch with colleagues you do not know well | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/Pd-S5DLM6Qs",
+  "gms-2026-11-19-5:facebook": "success: published: https://www.facebook.com/reel/1411662087403727/"
 }
