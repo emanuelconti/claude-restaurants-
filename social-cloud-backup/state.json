@@ -418,7 +418,7 @@
   "gms-2026-11-15-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821228937259/",
   "gms-2026-11-15-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1443318411289287",
   "gms-2026-11-15-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/U-_LjjK4V3Y",
-  "gms-2026-11-15-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1480380183966604/",
+  "gms-2026-11-15-6:facebook": "confirmed remotely: /reel/1480380183966604/",
   "gms-2026-11-15-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/dasob4Qt3g0",
   "gms-2026-11-15-7:facebook": "not published: absent from the remote history 2.4 hours after the attempt (automatic check); not resent",
   "gms-2026-11-15-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/UhRwGyQwVi0",
@@ -565,7 +565,7 @@
   "gms-2026-11-19-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/oqiqhGORFig",
   "gms-2026-11-19-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1446986034255858",
   "gms-2026-11-19-2:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229230823/",
-  "gms-2026-11-19-5:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/Df6PWjDDfQ_/",
-  "gms-2026-11-19-5:youtube": "success: plan: 1 Short, 1080x1920, 12.6 s, title 'Lunch with colleagues you do not know well | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/Pd-S5DLM6Qs",
-  "gms-2026-11-19-5:facebook": "success: published: https://www.facebook.com/reel/1411662087403727/"
+  "gms-2026-11-19-5:ig": "confirmed remotely: Lunch with colleagues you do not know well",
+  "gms-2026-11-19-5:youtube": "confirmed remotely: https://www.youtube.com/shorts/Pd-S5DLM6Qs",
+  "gms-2026-11-19-5:facebook": "confirmed remotely: https://www.facebook.com/reel/1411662087403727/"
 }
