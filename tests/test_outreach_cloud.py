@@ -229,6 +229,13 @@ class RunBoundaries(TestCase):
     def test_readonly_check(self):
         o.run('check',self.store,'fake',self.now)
         self.smtp.assert_not_called();self.store.label.assert_not_called();self.store.append_learning.assert_not_called()
+    def test_bounce_blocks_readonly_clearance_before_source_checks(self):
+        self.store.no_bounce_today.side_effect=o.Hold('bounce_requires_owner_review')
+        with patch.object(o,'check_sources') as sources:
+            with self.assertRaisesRegex(o.Hold,'bounce_requires_owner_review'):
+                o.run('check',self.store,'fake',self.now)
+            sources.assert_not_called()
+        self.smtp.assert_not_called()
     def test_expired_snapshot(self):
         self.store.policy.side_effect=o.Hold('policy_snapshot_requires_refresh')
         with self.assertRaisesRegex(o.Hold,'policy_snapshot_requires_refresh'):

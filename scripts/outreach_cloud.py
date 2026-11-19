@@ -598,6 +598,9 @@ def run(mode, store, credential, now):
         store.label(source, add=('\\Trash',))
         return 'imported_private_reviewed_drafts'
     policy_bytes = store.policy(today)
+    # A valid queue is not evidence that sending is safe. Check today's
+    # delivery failures before slow source fetches and reply-cohort analysis.
+    store.no_bounce_today(today)
     checker_bytes = Path('scripts/outreach/verify_address.py').read_bytes()
     for item in queue:
         if item['entry']['market_date'] >= today.isoformat():
