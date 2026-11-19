@@ -9330,19 +9330,16 @@
     "brand": "sp",
     "date": "2026-11-19",
     "slot": 8,
-    "title": "Jueves noche: cosas que agradecer",
-    "folder": "queue/sp/2026-11-19/carousel-8",
+    "title": "Tu próximo cliente puede venir con uno de siempre.",
+    "folder": "queue/sp/2026-11-19/carousel-8-acquisition",
     "sha256": {
-      "carousel.json": "07759f2aec0a765ff7165211a1a6de63f67d7cb9c92c893464c1e70bed1d7352",
-      "slide-01.jpg": "11b2b8b7dad217fa69abdaaede6144276bc72fb4e1d6603a06956ba376299f3f",
-      "slide-02.jpg": "3a5c75ff7dce48f63800e5cd1adb9f9140c5b3a5d5cf1cf53a39394f61ffad4e",
-      "slide-03.jpg": "8ce1cdb36b82ec96b65c23277c8e5f0da9990b3d212394bb0fde3dc88e195369",
-      "slide-04.jpg": "97607e8e72126095a43cf3c43139a01cd666969a123356a1cc042f066201fdfa",
-      "slide-05.jpg": "9a3c8e8fc72baeae7568d95ccff5cc6d006b2b542b6fce6a487c123c77412b60",
-      "slide-06.jpg": "2a3b0d1b7206603cb32ebf53e160b20cca7bb88230386d2742e9bb84e565ef40",
-      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+      "carousel.json": "4eeaad916e806bedfea3bf4d159db20f5330121bf8ac662af258c17f85c63245",
+      "slide-01.jpg": "545809f841c15d9316661e11fefc01d699f2dd743e93cc41ea1975bd6ff21355",
+      "slide-02.jpg": "645d18e8e450a4f1fb2dcddf8636aeb0319cf1f0aea14ca24b5afdc3493f1363",
+      "slide-03.jpg": "9e4d63df9f5ea97277f2d394dddd2d9b7e6f7b553e224f486d9e4cdcea1ad571",
+      "slide-04.jpg": "c48a615fe995769f87b326127d7ad6471d5c18ac5e2be917c13e9db6174b244d"
     },
-    "qa": "Every slide of the eight carousels visually inspected on contact sheets, photos matched to each point, 14 November 2026"
+    "qa": "All four final 1080x1350 JPGs individually visually inspected 19 November 2026. Native editorial layout, existing brand mark, real stock coffee photo, no invented team or results. Owner requested acquisition post."
   },
   {
     "id": "sp-2026-11-20-1",
