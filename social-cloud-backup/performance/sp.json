@@ -1,11 +1,123 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "channels": {},
   "brand": "sp",
   "account": "socialperks.es",
   "timezone": "Europe/Madrid",
   "posts": [
     {
+      "media_id": "17981738831917292",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo mantener la motivaci\u00f3n cuando cuesta",
+      "stamp": "2026-11-19T21:09:02+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df752Z5jmY_/"
+    },
+    {
+      "media_id": "18081391076572640",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Por qu\u00e9 volver a los sitios de siempre",
+      "stamp": "2026-11-19T19:28:49+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df7ubASjQth/"
+    },
+    {
+      "media_id": "17895685671653828",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "H\u00e1bitos de jueves para llegar con energ\u00eda al viernes",
+      "stamp": "2026-11-19T18:41:12+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df7o7cjjaay/"
+    },
+    {
+      "media_id": "18111204221362845",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo ser mejor compa\u00f1ero de trabajo",
+      "stamp": "2026-11-19T17:19:34+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df7foaFGnsX/"
+    },
+    {
+      "media_id": "17938074057407416",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Cinco minutos al d\u00eda que cambian tu semana",
+      "stamp": "2026-11-19T14:56:32+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df7POQRmZm-/"
+    },
+    {
+      "media_id": "18058123406804751",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Ideas para una cena de jueves con amigos",
+      "stamp": "2026-11-19T11:57:34+01:00",
+      "local_hour": 11,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df66x8doRzW/"
+    },
+    {
+      "media_id": "18135506722793182",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Jueves: el d\u00eda perfecto para cerrar pendientes",
+      "stamp": "2026-11-19T10:12:50+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df6uwMYHCk3/"
+    },
+    {
+      "media_id": "18198240832406505",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Mi\u00e9rcoles por la noche: c\u00f3mo desconectar",
       "stamp": "2026-11-18T23:20:49+01:00",
       "local_hour": 23,
@@ -14,6 +126,13 @@
       "url": "https://www.instagram.com/p/Df5kK8wCfbM/"
     },
     {
+      "media_id": "18003355974035177",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "C\u00f3mo superar el miedo a equivocarte",
       "stamp": "2026-11-18T20:59:55+01:00",
       "local_hour": 20,
@@ -22,6 +141,13 @@
       "url": "https://www.instagram.com/reel/Df5UBeyEk00/"
     },
     {
+      "media_id": "18132792548509453",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Lo que hace especial a la cafeter\u00eda de tu barrio",
       "stamp": "2026-11-18T19:23:43+01:00",
       "local_hour": 19,
@@ -30,6 +156,13 @@
       "url": "https://www.instagram.com/p/Df5JCorl1YQ/"
     },
     {
+      "media_id": "17962323900254869",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Peque\u00f1os h\u00e1bitos para una mente m\u00e1s tranquila",
       "stamp": "2026-11-18T18:35:52+01:00",
       "local_hour": 18,
@@ -38,6 +171,13 @@
       "url": "https://www.instagram.com/reel/Df5DhnNgPfs/"
     },
     {
+      "media_id": "17874157686647815",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Amigos de siempre: c\u00f3mo no perder el contacto",
       "stamp": "2026-11-18T17:16:38+01:00",
       "local_hour": 17,
@@ -46,6 +186,13 @@
       "url": "https://www.instagram.com/p/Df46fifGsxV/"
     },
     {
+      "media_id": "18648887326024548",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "C\u00f3mo concentrarte cuando todo te distrae",
       "stamp": "2026-11-18T14:59:39+01:00",
       "local_hour": 14,
@@ -54,6 +201,13 @@
       "url": "https://www.instagram.com/reel/Df4qx7rgeM-/"
     },
     {
+      "media_id": "18149133586598586",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Planes de mi\u00e9rcoles que rompen la rutina",
       "stamp": "2026-11-18T12:35:52+01:00",
       "local_hour": 12,
@@ -62,6 +216,13 @@
       "url": "https://www.instagram.com/p/Df4aXcfHfWS/"
     },
     {
+      "media_id": "18134535823827217",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Mi\u00e9rcoles: mitad de semana, mitad del camino",
       "stamp": "2026-11-18T10:11:46+01:00",
       "local_hour": 10,
@@ -70,6 +231,13 @@
       "url": "https://www.instagram.com/reel/Df4J1qaFe9E/"
     },
     {
+      "media_id": "18063795500804808",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Martes por la noche: cerrar bien el d\u00eda",
       "stamp": "2026-11-17T22:56:49+01:00",
       "local_hour": 22,
@@ -78,6 +246,13 @@
       "url": "https://www.instagram.com/p/Df28oN7mFn1/"
     },
     {
+      "media_id": "18198914800398337",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "C\u00f3mo empezar algo nuevo sin miedo",
       "stamp": "2026-11-17T21:20:39+01:00",
       "local_hour": 21,
@@ -86,6 +261,13 @@
       "url": "https://www.instagram.com/reel/Df2xjWJjo3I/"
     },
     {
+      "media_id": "18647802193019768",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Un buen sitio de barrio vale oro",
       "stamp": "2026-11-17T19:43:39+01:00",
       "local_hour": 19,
@@ -94,6 +276,13 @@
       "url": "https://www.instagram.com/p/Df2mhhfE98R/"
     },
     {
+      "media_id": "18132285316699503",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cinco h\u00e1bitos para dormir mejor esta semana",
       "stamp": "2026-11-17T18:55:02+01:00",
       "local_hour": 18,
@@ -102,6 +291,13 @@
       "url": "https://www.instagram.com/reel/Df2g7ZKkkRd/"
     },
     {
+      "media_id": "18116050274138367",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Hablar menos del m\u00f3vil y m\u00e1s en persona",
       "stamp": "2026-11-17T17:29:27+01:00",
       "local_hour": 17,
@@ -110,6 +306,13 @@
       "url": "https://www.instagram.com/p/Df2XK_VCToC/"
     },
     {
+      "media_id": "18119502508821260",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "C\u00f3mo cuidar tu energ\u00eda a mitad de semana",
       "stamp": "2026-11-17T15:28:14+01:00",
       "local_hour": 15,
@@ -118,6 +321,13 @@
       "url": "https://www.instagram.com/reel/Df2JOE-ER9H/"
     },
     {
+      "media_id": "17896617585616303",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cinco planes de martes para quedar con amigos",
       "stamp": "2026-11-17T12:13:30+01:00",
       "local_hour": 12,
@@ -126,6 +336,13 @@
       "url": "https://www.instagram.com/p/Df1zAlNkyh9/"
     },
     {
+      "media_id": "18121860964990628",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Martes: peque\u00f1os avances que cuentan",
       "stamp": "2026-11-17T10:34:38+01:00",
       "local_hour": 10,
@@ -134,6 +351,13 @@
       "url": "https://www.instagram.com/reel/Df1nqwtFBJN/"
     },
     {
+      "media_id": "18119359298039627",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cierra el lunes con calma",
       "stamp": "2026-11-16T23:28:26+01:00",
       "local_hour": 23,
@@ -142,6 +366,13 @@
       "url": "https://www.instagram.com/p/Df0bc79GrZw/"
     },
     {
+      "media_id": "17912975877591726",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Planes de lunes por la tarde que suman",
       "stamp": "2026-11-16T20:54:26+01:00",
       "local_hour": 20,
@@ -150,6 +381,13 @@
       "url": "https://www.instagram.com/reel/Df0Jystiays/"
     },
     {
+      "media_id": "17936206386413262",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Mensajes para animar a alguien este lunes",
       "stamp": "2026-11-16T19:58:11+01:00",
       "local_hour": 19,
@@ -158,6 +396,13 @@
       "url": "https://www.instagram.com/p/Df0DZeeCQHE/"
     },
     {
+      "media_id": "18502664737100342",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Comida de lunes con compa\u00f1eros",
       "stamp": "2026-11-16T19:06:52+01:00",
       "local_hour": 19,
@@ -166,6 +411,13 @@
       "url": "https://www.instagram.com/reel/Dfz9fAzDcti/"
     },
     {
+      "media_id": "18114724676136765",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "C\u00f3mo no llevarte el trabajo a casa",
       "stamp": "2026-11-16T17:27:36+01:00",
       "local_hour": 17,
@@ -174,6 +426,13 @@
       "url": "https://www.instagram.com/p/DfzyKJijfI6/"
     },
     {
+      "media_id": "17909287248598103",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Pausa de caf\u00e9: cinco minutos que cuentan",
       "stamp": "2026-11-16T14:50:46+01:00",
       "local_hour": 14,
@@ -182,6 +441,13 @@
       "url": "https://www.instagram.com/reel/DfzgLQBDSp9/"
     },
     {
+      "media_id": "18142493953618982",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cinco ideas para que el tiempo te rinda",
       "stamp": "2026-11-16T12:12:00+01:00",
       "local_hour": 12,
@@ -190,6 +456,13 @@
       "url": "https://www.instagram.com/p/DfzOCkXEvJL/"
     },
     {
+      "media_id": "18097806188165806",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Lunes: una sola prioridad para hoy",
       "stamp": "2026-11-16T10:11:45+01:00",
       "local_hour": 10,
@@ -198,6 +471,13 @@
       "url": "https://www.instagram.com/reel/DfzAO_VinAs/"
     },
     {
+      "media_id": "18117220864858540",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Tu mejor anuncio ya ha pedido un caf\u00e9 hoy",
       "stamp": "2026-11-15T13:53:22+01:00",
       "local_hour": 13,
@@ -206,6 +486,13 @@
       "url": "https://www.instagram.com/reel/Dfw0z8ymXR5/"
     },
     {
+      "media_id": "17904084345673388",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Lo que tus cuentas no dicen de tu local",
       "stamp": "2026-11-15T13:52:01+01:00",
       "local_hour": 13,
@@ -214,6 +501,13 @@
       "url": "https://www.instagram.com/p/Dfw0sb6F2VW/"
     },
     {
+      "media_id": "18129863410803153",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Domingo en Barcelona: cuando tu barra se llena de vida",
       "stamp": "2026-11-15T13:50:38+01:00",
       "local_hour": 13,
@@ -222,6 +516,13 @@
       "url": "https://www.instagram.com/p/Dfw0iislBYt/"
     },
     {
+      "media_id": "18117298037035753",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Para quien abre su gimnasio cuando a\u00fan es de noche",
       "stamp": "2026-11-15T13:49:18+01:00",
       "local_hour": 13,
@@ -230,6 +531,13 @@
       "url": "https://www.instagram.com/p/Dfw0Y0hF9z4/"
     },
     {
+      "media_id": "18381065554208656",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Lo que tu cliente recuerda no es el precio",
       "stamp": "2026-11-15T08:03:18+01:00",
       "local_hour": 8,
@@ -238,6 +546,13 @@
       "url": "https://www.instagram.com/reel/DfwMvhajEk0/"
     },
     {
+      "media_id": "17922776160241056",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cuando cae la tarde, tu local se enciende",
       "stamp": "2026-11-15T08:01:47+01:00",
       "local_hour": 8,
@@ -246,6 +561,13 @@
       "url": "https://www.instagram.com/reel/DfwMkc3iiBk/"
     },
     {
+      "media_id": "18036098468913388",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "5 maneras de que tus habituales traigan a un amigo",
       "stamp": "2026-11-15T07:54:36+01:00",
       "local_hour": 7,
@@ -254,6 +576,13 @@
       "url": "https://www.instagram.com/p/DfwLzCLlDN_/"
     },
     {
+      "media_id": "17874405621645393",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Cosas que solo entiende quien tiene un centro de masajes",
       "stamp": "2026-11-15T07:53:05+01:00",
       "local_hour": 7,
@@ -262,6 +591,13 @@
       "url": "https://www.instagram.com/p/DfwLn56FJ8X/"
     },
     {
+      "media_id": "18441856177176931",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Si hoy tu local descansa, descansa t\u00fa tambi\u00e9n",
       "stamp": "2026-11-15T07:51:44+01:00",
       "local_hour": 7,
@@ -270,6 +606,13 @@
       "url": "https://www.instagram.com/p/DfwLd0rl7zv/"
     },
     {
+      "media_id": "18036193820905897",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "S\u00e1bado noche: tu local ya ha ganado",
       "stamp": "2026-11-14T19:47:28+01:00",
       "local_hour": 19,
@@ -278,6 +621,13 @@
       "url": "https://www.instagram.com/reel/Dfu4icsAMEb/"
     },
     {
+      "media_id": "17896452636433873",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Nadie te aplaude, pero tu barrio te necesita",
       "stamp": "2026-11-14T13:53:05+01:00",
       "local_hour": 13,
@@ -286,6 +636,13 @@
       "url": "https://www.instagram.com/reel/DfuP-1EiEZ9/"
     },
     {
+      "media_id": "18134094619754383",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Para quien hoy no ha parado ni para comer",
       "stamp": "2026-11-14T13:50:26+01:00",
       "local_hour": 13,
@@ -294,6 +651,13 @@
       "url": "https://www.instagram.com/p/DfuPuLKlVRM/"
     },
     {
+      "media_id": "18134027356795498",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "6 gestos que convierten a un cliente nuevo en habitual",
       "stamp": "2026-11-14T13:49:11+01:00",
       "local_hour": 13,
@@ -302,6 +666,13 @@
       "url": "https://www.instagram.com/p/DfuPlJVFG3k/"
     },
     {
+      "media_id": "18124008145946310",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "S\u00e1bado a mediod\u00eda: lo que pasa cuando tu local se llena",
       "stamp": "2026-11-14T13:47:41+01:00",
       "local_hour": 13,
@@ -310,6 +681,13 @@
       "url": "https://www.instagram.com/p/DfuPaEpFIkB/"
     },
     {
+      "media_id": "18118240883031225",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Tus clientes de siempre valen m\u00e1s que cualquier anuncio",
       "stamp": "2026-11-14T07:55:19+01:00",
       "local_hour": 7,
@@ -318,6 +696,13 @@
       "url": "https://www.instagram.com/reel/DftnCXVDgD8/"
     },
     {
+      "media_id": "17953460289345444",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Si hoy abres tu local con sue\u00f1o, lee esto",
       "stamp": "2026-11-14T07:53:49+01:00",
       "local_hour": 7,
@@ -326,6 +711,13 @@
       "url": "https://www.instagram.com/reel/Dftm3fXFW4u/"
     },
     {
+      "media_id": "18117436577162349",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Se\u00f1ales de que tu local ya es el sitio favorito de alguien",
       "stamp": "2026-11-14T07:51:23+01:00",
       "local_hour": 7,
@@ -334,6 +726,13 @@
       "url": "https://www.instagram.com/p/DftmoeAFwlY/"
     },
     {
+      "media_id": "18111040430263539",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "Black Friday sin descuentos: 5 ideas para tu local",
       "stamp": "2026-11-14T07:49:45+01:00",
       "local_hour": 7,
@@ -342,77 +741,28 @@
       "url": "https://www.instagram.com/p/DftmcfHlhqv/"
     },
     {
+      "media_id": "18101695421550435",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
       "title": "S\u00e1bado en tu local: lo que nadie ve antes de abrir",
       "stamp": "2026-11-14T07:48:03+01:00",
       "local_hour": 7,
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DftmP6BD-MZ/"
-    },
-    {
-      "title": "Tu mejor anuncio no cuesta nada",
-      "stamp": "2026-11-13T13:56:45+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfrrmgsAhGg/"
-    },
-    {
-      "title": "La hora floja no es tiempo perdido",
-      "stamp": "2026-11-13T13:54:13+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrrWltFzVe/"
-    },
-    {
-      "title": "Cenas de Navidad: 6 ideas para que tu local sea el elegido",
-      "stamp": "2026-11-13T13:51:40+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrrEBRFxzB/"
-    },
-    {
-      "title": "Para quien ha abierto hoy sin ganas",
-      "stamp": "2026-11-13T13:49:58+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfrq30CF-jP/"
-    },
-    {
-      "title": "Nadie ve las horas que le dedicas a tu local",
-      "stamp": "2026-11-13T07:57:58+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfrCi8PE5MT/"
-    },
-    {
-      "title": "Tu mejor anuncio ya est\u00e1 sentado en tu cafeter\u00eda",
-      "stamp": "2026-11-13T07:56:41+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfrCZe_gKRJ/"
-    },
-    {
-      "title": "Es viernes: lo que hiciste esta semana cuenta",
-      "stamp": "2026-11-13T07:51:59+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfrB59hgEWg/"
     }
   ],
-  "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
+  "limits": "Instagram views, reach, saves and shares requested for SocialPerks when granted; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.",
   "market_date": "2026-11-19",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 11,
-      "median_public_interactions": 0
+      "posts": 8,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 8,
@@ -421,23 +771,23 @@
     },
     {
       "local_hour": 10,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 12,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
-      "posts": 12,
+      "posts": 8,
       "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 15,
@@ -446,23 +796,23 @@
     },
     {
       "local_hour": 17,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 18,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 18,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 19,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 21,
@@ -480,5 +830,6 @@
       "median_public_interactions": 0
     }
   ],
+  "view_cohorts": [],
   "timing_status": "editor review required before changing schedule"
 }
