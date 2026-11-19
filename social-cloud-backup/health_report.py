@@ -25,7 +25,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
  old=json.loads(path.read_text()) if path.exists() else {}
  paused=any(k.startswith('platform_block:'+brand+':') and v for k,v in platform_state.items())
  if paused:print(f'Public metrics for {brand} retained while a platform restriction requires verification; no extra API probes.')
- if not paused and (old.get('market_date')!=key or old.get('schema_version')!=(3 if brand=='sp' else 2)):
+ if not paused and (old.get('market_date')!=key or old.get('schema_version')!=(4 if brand=='sp' else 2)):
   result=subprocess.run([sys.executable,str(R/'run.py'),brand,'performance_snapshot.py',brand,variable,handle,str(zone)],capture_output=True,text=True)
   if result.returncode:
    print(f'Public results unavailable for {brand}; publication remains independent.')
@@ -47,6 +47,7 @@ for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),(
     path.write_text(json.dumps(snapshot,indent=2)+'\n')
     lines=[f'# {brand}: daily measured results',f'Market date: {key}. Timezone: {zone}.',snapshot['limits'],f"Observed posts: {len(snapshot['posts'])}.",f"Timing: {snapshot['timing_status']}."]
     for row in snapshot['mature_hour_summary']:lines.append(f"Hour {row['local_hour']:02d}:00: n={row['posts']}, median public likes+comments={row['median_public_interactions']} (posts 24h to 7d old).")
+    if snapshot.get('insights_error'):lines.append('Instagram insights unavailable: '+snapshot['insights_error'])
     for cohort in snapshot['view_cohorts']:lines.append(f"{cohort['format']} {cohort['age']}: n={cohort['posts']}, median views={cohort['median_views']}; {cohort['status']}.")
     lines.append('Instagram views, reach, saves and shares remain null when unavailable. Do not compare Reel views with static-post views or treat missing permission as zero performance.')
     for channel,entry in snapshot.get('channels',{}).items():lines.append(f"{channel}: {entry['availability']}; observed posts={len(entry.get('posts',[]))}. Per-post public counters are in the JSON snapshot; missing counters are not zero.")

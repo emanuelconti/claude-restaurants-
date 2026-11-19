@@ -16,17 +16,19 @@ if handle!=expected:raise SystemExit('Account mismatch')
 posts=IG.call('GET',str(user)+'/media',token,{'fields':'caption,timestamp,like_count,comments_count,permalink,media_type,media_product_type','limit':50}).get('data',[])
 rows=[]
 insights_available=True
+insights_error=None
 for p in posts:
  if not p.get('timestamp'):continue
  stamp=dt.datetime.fromisoformat(p['timestamp'].replace('Z','+00:00')).astimezone(ZoneInfo(zone))
  counters={}
  if brand=='sp' and insights_available:
   try:
-   data=IG.call('GET',str(p['id'])+'/insights',token,{'metric':'views,reach,saved,shares'}).get('data',[])
+   data=IG.call('GET',str(p['id'])+'/insights',token,{'metric':'views'}).get('data',[])
    for item in data:
     value=(item.get('values') or [{}])[0].get('value',item.get('total_value',{}).get('value'))
     if isinstance(value,(int,float)) and not isinstance(value,bool):counters[item['name']]=value
-  except Exception:
+  except Exception as error:
+   insights_error=str(error).replace(token,"[redacted]")[:300]
    insights_available=False
  rows.append({'media_id':p.get('id'),'format':p.get('media_product_type') or p.get('media_type'),'views':counters.get('views'),'reach':counters.get('reach'),'saves':counters.get('saved'),'shares':counters.get('shares'),'insights_status':'available' if counters else 'unavailable','title':(p.get('caption') or '').split('\n')[0],'stamp':stamp.isoformat(),'local_hour':stamp.hour,'likes':p.get('like_count'),'comments':p.get('comments_count'),'url':p.get('permalink')})
 
@@ -72,4 +74,4 @@ if brand=='gms':
   channels['threads']={'availability':'available' if insights else 'history available; engagement not available with current grant','posts':threadrows}
  except Exception as error:channels['threads']={'availability':'unavailable with current grant','reason':type(error).__name__}
 
-print(json.dumps({'schema_version':3,'channels':channels,'brand':brand,'account':handle,'timezone':zone,'posts':rows,'limits':'Instagram views, reach, saves and shares requested for SocialPerks when granted; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.'}))
+print(json.dumps({'schema_version':4,'insights_error':insights_error,'channels':channels,'brand':brand,'account':handle,'timezone':zone,'posts':rows,'limits':'Instagram views requested separately for SocialPerks when granted; other insight counters remain unavailable unless collected; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.'}))
