@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-20T14:17:05.624079+00:00",
+  "account": "socialperks.es",
+  "host": "graph.facebook.com",
+  "checks": {
+    "v21.0": {
+      "identity": "verified",
+      "permissions": [
+        {
+          "permission": "instagram_basic",
+          "status": "granted"
+        }
+      ],
+      "error": "GET 18014588538005702/insights: (#10) Application does not have permission for this action"
+    },
+    "v27.0": {
+      "identity": "verified",
+      "permissions": [
+        {
+          "permission": "instagram_basic",
+          "status": "granted"
+        }
+      ],
+      "error": "GET 18014588538005702/insights: (#10) Application does not have permission for this action"
+    }
+  }
+}
