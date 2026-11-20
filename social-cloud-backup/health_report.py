@@ -18,6 +18,17 @@ manifest=json.loads((R/'queue.json').read_text())
 state_path=R/'state.json'
 platform_state=json.loads(state_path.read_text()) if state_path.exists() else {}
 (R/'performance').mkdir(exist_ok=True)
+# Explicit check only; scheduled publishers never repeatedly probe denied grants.
+event_path=os.environ.get('GITHUB_EVENT_PATH')
+event=json.loads(Path(event_path).read_text()) if event_path else {}
+diagnostic=R/'performance'/'sp-access-diagnostic.json'
+sp_paused=any(k.startswith('platform_block:sp:') and v for k,v in platform_state.items())
+if event.get('inputs',{}).get('mode')=='check' and event.get('inputs',{}).get('brand')=='sp' and not diagnostic.exists() and not sp_paused:
+ result=subprocess.run([sys.executable,str(R/'run.py'),'sp','insights_access_check.py'],capture_output=True,text=True)
+ if result.returncode==0:
+  try:diagnostic.write_text(json.dumps(json.loads(result.stdout),indent=2)+'\n')
+  except ValueError:print('Insights diagnosis returned no usable result.')
+ else:print('Insights diagnosis unavailable; publishing unchanged.')
 health={'day_utc':now.date().isoformat(),'brands':{}}
 for brand,variable,handle in [('sp','INSTAGRAM_ACCESS_TOKEN','socialperks.es'),('sin','INSTAGRAM_TOKEN_SINCRONIA','sincronia.live'),('gms','INSTAGRAM_TOKEN_SOWLD','goodmessage_studio')]:
  zone=timezone_for(brand);day=now.astimezone(zone).date();key=day.isoformat()
