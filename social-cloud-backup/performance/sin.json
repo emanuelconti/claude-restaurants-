@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "What a founder learns from a hard week",
+      "stamp": "2026-11-20T21:41:16+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df-iXxuFwI6/"
+    },
+    {
+      "title": "How to switch off on a Friday evening",
+      "stamp": "2026-11-20T20:52:43+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df-cwcuShqi/"
+    },
+    {
+      "title": "How to build a simple sales pipeline",
+      "stamp": "2026-11-20T19:12:06+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df-RTSVF8Xv/"
+    },
+    {
+      "title": "How to keep your startup costs lean",
+      "stamp": "2026-11-20T17:03:39+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df-CkAFRW7O/"
+    },
+    {
+      "title": "Questions investors often ask early founders",
+      "stamp": "2026-11-20T14:46:24+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df9y5fnDbT4/"
+    },
+    {
+      "title": "How to delegate without losing quality",
+      "stamp": "2026-11-20T13:08:58+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df9nszyo2DC/"
+    },
+    {
+      "title": "How to explain your market size honestly",
+      "stamp": "2026-11-20T10:41:43+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df9W49HFx-V/"
+    },
+    {
+      "title": "A Friday review for founders",
+      "stamp": "2026-11-20T09:02:35+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df9Lg2lBAuK/"
+    },
+    {
       "title": "How founders can sleep better in busy weeks",
       "stamp": "2026-11-19T21:58:08+01:00",
       "local_hour": 21,
@@ -340,84 +404,15 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/DfuQl5MFCnV/"
-    },
-    {
-      "title": "You are not behind. A Saturday note for tired founders",
-      "stamp": "2026-11-14T13:56:38+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfuQboTl-jN/"
-    },
-    {
-      "title": "How to talk about traction when your numbers are still small",
-      "stamp": "2026-11-14T13:55:13+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfuQQSKFPtg/"
-    },
-    {
-      "title": "5 myths about non-dilutive funding founders still believe",
-      "stamp": "2026-11-14T08:07:25+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DftodYmlwwH/"
-    },
-    {
-      "title": "Your funding folder: 6 files to have ready before January",
-      "stamp": "2026-11-14T08:05:58+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DftoTQuFx50/"
-    },
-    {
-      "title": "A founder's Saturday: rest is part of the plan",
-      "stamp": "2026-11-14T08:03:48+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DftoDSIn34l/"
-    },
-    {
-      "title": "Investors slow down in Q4. Use the quiet to get funding-ready",
-      "stamp": "2026-11-14T08:01:00+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dftnu8SFtK7/"
-    },
-    {
-      "title": "If you got a no this week, read this",
-      "stamp": "2026-11-14T07:58:51+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DftnfCvlBEz/"
-    },
-    {
-      "title": "Milestones that make the next round easier",
-      "stamp": "2026-11-13T21:27:58+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfsfSBcFzHM/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-20",
+  "market_date": "2026-11-21",
   "mature_hour_summary": [
     {
       "local_hour": 7,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 8,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 9,
@@ -426,28 +421,28 @@
     },
     {
       "local_hour": 10,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 11,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 11,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 12,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 13,
-      "posts": 9,
+      "posts": 7,
       "median_public_interactions": 0
     },
     {
       "local_hour": 14,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 15,
@@ -456,13 +451,13 @@
     },
     {
       "local_hour": 16,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 19,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
@@ -471,8 +466,8 @@
     },
     {
       "local_hour": 21,
-      "posts": 5,
-      "median_public_interactions": 0
+      "posts": 6,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 22,
