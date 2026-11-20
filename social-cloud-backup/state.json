@@ -630,9 +630,11 @@
   "gms-2026-11-20-7:ig": "confirmed remotely: Signs of a friendship worth keeping",
   "gms-2026-11-20-1:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Df9tUVAkXia",
   "gms-2026-11-20-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/fouemfwTXw8",
-  "gms-2026-11-20-7:facebook": "held: publication attempt started at 2026-11-20T12:57:57+00:00; reconcile remotely before retry",
-  "sin-2026-11-20-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df9y5fnDbT4/",
-  "gms-2026-11-20-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df9zAAajafc/",
-  "gms-2026-11-20-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Friday night slow-down routine | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/HarQ5D3pHcs",
-  "gms-2026-11-20-3:pinterest": "held: publication attempt started at 2026-11-20T13:47:34+00:00; reconcile remotely before retry"
+  "gms-2026-11-20-7:facebook": "not published: absent from the remote history 3.1 hours after the attempt (automatic check); not resent",
+  "sin-2026-11-20-4:ig": "confirmed remotely: Questions investors often ask early founders",
+  "gms-2026-11-20-8:ig": "confirmed remotely: Friday night slow-down routine",
+  "gms-2026-11-20-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/HarQ5D3pHcs",
+  "gms-2026-11-20-3:pinterest": "not published: absent from the remote history 2.3 hours after the attempt (automatic check); not resent",
+  "sp-2026-11-20-3:ig": "success: account: @socialperks.es\npublished: https://www.instagram.com/reel/Df-CZfYEh5V/",
+  "sin-2026-11-20-5:ig": "success: account: @sincronia.live\npublished: https://www.instagram.com/reel/Df-CkAFRW7O/"
 }
