@@ -12287,5 +12287,189 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026"
+  },
+  {
+    "id": "sin-2026-11-23-1",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 1,
+    "title": "How to start a founder week with focus",
+    "folder": "queue/sin/2026-11-23/carousel-1",
+    "sha256": {
+      "carousel.json": "255e2407d3cb9e3d6141fc8ef095ce0bbeaa7c124031c72f57ba38e595d869d6",
+      "slide-01.jpg": "3dddf4c49d25eca95f0e47d2b6c31ffed0454a82ee2c6dd1bd7d15ee1ccf6c12",
+      "slide-02.jpg": "0a00e0cced276afcff89ecc982285082b1b05ed6570f655b1e4d68eb1256c21c",
+      "slide-03.jpg": "7915b4282dba090e6fd785baad1367e1380f40e17eb11b0be12df2bd76514c53",
+      "slide-04.jpg": "3a462e9b39732ad5c07eb861a03fc0a0bd1854ba3a3b5c931baf18b74b792514",
+      "slide-05.jpg": "38ee7a61a81ff52f827d09f0044ea0d1c6e5e866d9b8655fdcbfa40256f50387",
+      "slide-06.jpg": "fa4f0f3a12d2f64f1ff90157b74564afebf896e65493a0bb3577f951b2cf2ee7",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "e3768711988e824ba19ae7305a1b0a8eb7271681d5d27af269356fa35d6def4f",
+      "reel.json": "813bf8263706a96cd99dd1b52d15e69656c73032bc535d998866f010f474f558",
+      "cover.jpg": "20a46386d5bf3ef423cff4ac33d5fff0b1484ed664866151164676abb981148b"
+    },
+    "reel_qa": "Contact sheet inspected 20 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-23-2",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 2,
+    "title": "How to run a short Monday team meeting",
+    "folder": "queue/sin/2026-11-23/carousel-2",
+    "sha256": {
+      "carousel.json": "e4d28945de8fa530761553ed0253c9277b25612ef76fe370b9e6e7c8c44f18fa",
+      "slide-01.jpg": "55008d0cb579867eb2b2d346f88c5f39d5ce6b5236321cc91565b14fd665e098",
+      "slide-02.jpg": "4fdeb34cf37065fd91ab8b3b92da24b13d1e33c383eba6be1f494d8fee79ab0d",
+      "slide-03.jpg": "c33225066b2f49e83c3fc0a49c7da0370986ef774c144af41d98ad333a326e86",
+      "slide-04.jpg": "90cf4aa75e02d4b788d0756f0fdbfa8275f5bf2373018e6eb35677d09209bdae",
+      "slide-05.jpg": "2ead9a90e85a52e941dcfc8e051187a1be413c2506b1e103342424493dbea4f3",
+      "slide-06.jpg": "777c40944a0f8f66fcc5a5cf4e9479eb42e2d4340936c3c4a46a1f9a7d3d2321",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-23-3",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 3,
+    "title": "Why focus means saying no to good ideas",
+    "folder": "queue/sin/2026-11-23/carousel-3",
+    "sha256": {
+      "carousel.json": "211d7c4df4f048903776dcbedccc2b2b3ac9630f80c7f896a5ad01e7d9eef3c2",
+      "slide-01.jpg": "df74b91d574f92d7fd8bfb3f148278188bf956462d7958a138276cee41f53432",
+      "slide-02.jpg": "cc89e5bd54af92b5da9caed4e123d17a172e86cc548e65f1d9028cd5363b1661",
+      "slide-03.jpg": "543b38107764e488b3103284caea97b2b7d453538b63dc6b307877d3e561efd7",
+      "slide-04.jpg": "dfd0b758a62392a9d6cb6e03e0f7b9aee1e1c052fbef0852b2262691b580dc04",
+      "slide-05.jpg": "8f94457688b2b9fe030b305a869583a3c5600aa9b7314bbf23c798e5ffd54b2a",
+      "slide-06.jpg": "5d1c96a6db1f23b3641eaf588de61dfe07e710c750b2dbef006e821b248593d2",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "0c8a4809855bfb6fd340bec28782902e6820123d6f260783d01488f1ffc76458",
+      "reel.json": "96c88f0b1a4933a4134bb4a54ca9a72c3d2b60d84f42c39e533d69f9a013a860",
+      "cover.jpg": "d7e4157613d4458cfec7b253bc698625e24bbbf7037a39a279d7b67db22c0d7e"
+    },
+    "reel_qa": "Contact sheet inspected 20 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-23-4",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 4,
+    "title": "How to learn from your first customers",
+    "folder": "queue/sin/2026-11-23/carousel-4",
+    "sha256": {
+      "carousel.json": "ac10bd547ea3b380e8fcd6450b70ac448a12a16c8a24e77b398a9b16a67b2e47",
+      "slide-01.jpg": "6ea9501f090c4d9da87a98e0b122dfaf12c4ad90ffaf4cb0a901e2dcee16b3fb",
+      "slide-02.jpg": "46a08e1c38fcdd7dccbcd4dc7b307e00827b9cea522b60cc4a47da0c65200c46",
+      "slide-03.jpg": "6dcbe4658655851afbca118168555ae3dcdfbd81f7b7fe9d6ebfdf891b24de80",
+      "slide-04.jpg": "6c44743c72d49e642cbbd4e4aaa4bac1cc06ed3e43837941ee16ac024ff9571b",
+      "slide-05.jpg": "62d31f4b7dcfa16f527059c30ffdf461ebbe250515861690d478b66579bd1569",
+      "slide-06.jpg": "9fcd3cb2c2ada206b82a670ae9cde196e0088803c86e6853afd3ea17bf1886f2",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-23-5",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 5,
+    "title": "Simple habits for founder energy",
+    "folder": "queue/sin/2026-11-23/carousel-5",
+    "sha256": {
+      "carousel.json": "7ef57bdb693c09dde1ad5df3c34f7fcd948c47b231479fc2a2e03c26d7673081",
+      "slide-01.jpg": "eab41674f162f79432854e09ae8c174749b7e6707211c6badb2ff13ad798c7bb",
+      "slide-02.jpg": "ee4857ef8e9c69152661d234f3ae466ee08f7808e2967757173dcdc536b23cba",
+      "slide-03.jpg": "b06b06c2efe9480c3f118afde686dfc94f974845d3c67d013e8bce2affd45d18",
+      "slide-04.jpg": "d56b347d0cc4b0bb96c20855d567a0b515423338a266957d0f88bc9ff860cf96",
+      "slide-05.jpg": "8b86ee88dc05aaa6979ba05828e65e239380ce74b3a097f8a65b1db80f8e4d93",
+      "slide-06.jpg": "9875423172d735c7f4728d0f4a7c25f5ee961ace15b766bacb65389a9b3b987f",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "f3acb8ef8b9a587cf9429a68cbe610de485bd2beea30f3d37c9699342f9d8280",
+      "reel.json": "887e562c3dfea46366633913f8fcff1a6dc41a8fea80a33c53790973dfb913c6",
+      "cover.jpg": "9aff5d6a8e36ea33f2ba4ff0615a8308a639de8952c4dd7663e43207ab2ea45a"
+    },
+    "reel_qa": "Contact sheet inspected 20 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-23-6",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 6,
+    "title": "How to write a clear investor update",
+    "folder": "queue/sin/2026-11-23/carousel-6",
+    "sha256": {
+      "carousel.json": "a9db2e7ecb3327bafc9c08d9c476ed0080d869692de91bec39910b900145121e",
+      "slide-01.jpg": "ff2ef18ee42433f10356f2cd489d8ea1d356716caf6d95f49dbaa94535b833aa",
+      "slide-02.jpg": "e268353e2fe0aab80cff80a69f27354088c17a7326537c668af7bb1c48f4d093",
+      "slide-03.jpg": "ff936014d250708f1a8ea6a4ce00ce679746b9623f0b086f1b46e52e4a41be5f",
+      "slide-04.jpg": "f3208341287bafe4278fa93e5fcf4e88da4518185e3a12203a1f219292e10571",
+      "slide-05.jpg": "e2dc9ec8c73bdd38b96151a637a0f85cab8e6eecf0cc57b4d67dc60914675d20",
+      "slide-06.jpg": "b97b14d80ab99c06f7b5cfe740de6fdca21927dbc81da033c0f6898949c3f560",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-23-7",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 7,
+    "title": "How to handle a slow sales week",
+    "folder": "queue/sin/2026-11-23/carousel-7",
+    "sha256": {
+      "carousel.json": "2b53f22775f93f377e78d4a1ef8cac8f6c5ec04142045eed4eb7ca79d27b0e62",
+      "slide-01.jpg": "172853f66ca611b8a503fdc91d23a86aa77c79efeaa6135449002dc3b1564b2b",
+      "slide-02.jpg": "305b6040e9034bdfd8915228a4af42b5d54e985494fe201b22e2a587a9b28fea",
+      "slide-03.jpg": "fe54c3409ffc11754dfe1d142934025d4f3e7364201522c5a5724e30f7b4af92",
+      "slide-04.jpg": "fb3b6ca0003b2b916feed35e358db65d7cca46b5be98b58b6eba6bbd05679b23",
+      "slide-05.jpg": "133972fbe9f3b30622f221f104a477e9426bbcb3bf89bb7a2d5a34e8ceba665a",
+      "slide-06.jpg": "e64efc2ce7c37ac46766cad234c466de635bdfe043503c104f4748fbe3695380",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "6fc93e4546145f43e39656fbb637862d79800aa65e8c478a1d4f48e02802dee4",
+      "reel.json": "23079f8d2af4979802e265218fdba3a2e4e01ea7a595ac4d1e968158f786b0f2",
+      "cover.jpg": "987da6dd44bb5e7f963b8c86c1a664b6b5bbec7077af4e10bb5363bfe53b9caa"
+    },
+    "reel_qa": "Contact sheet inspected 20 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-23-8",
+    "brand": "sin",
+    "date": "2026-11-23",
+    "slot": 8,
+    "title": "A calm Monday evening for founders",
+    "folder": "queue/sin/2026-11-23/carousel-8",
+    "sha256": {
+      "carousel.json": "2b3a43261ba83ce5ef12b2733bf250fb68061620a43aba8748deb3474797c941",
+      "slide-01.jpg": "88fb574641500be072207dcc40924dea495626ba30574fc4f4de4d284a85426a",
+      "slide-02.jpg": "e248b846e1a3cbbd38d1f0c51b459ada32118cf4d8e3d280742e60ea2d141c08",
+      "slide-03.jpg": "fc8d8a365c64f78953c4d3a26cfccfc8bdbbfe7258641360c2af404aa5c56004",
+      "slide-04.jpg": "3538ccf0a134ebe67f58c70a781353dc5cae229e1a60d5422b118a8b4f31a123",
+      "slide-05.jpg": "e41bbac5e0424555b5d629e6b5e7a9e61aae4a18f1be9fe85d6c4ce27c78dfcb",
+      "slide-06.jpg": "1190101547e60da5863a9e6acdfac1073a7255da340e617921a4580144fb1ee2",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 20 November 2026; founder preparation, general guidance only"
   }
 ]

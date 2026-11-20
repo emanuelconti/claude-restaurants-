@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-23",
+ "title": "Simple habits for founder energy",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Simple habits for founder energy\n\nA tired founder is a slow company.\n\nSmall daily habits that keep your energy steady through the week. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 425 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-01.jpg",
+   "match_error": 0.17,
+   "runner_up": 19.93
+  },
+  {
+   "unsplash": "1563013544-824ae1b704d3",
+   "slide": "slide-02.jpg",
+   "match_error": 0.3,
+   "runner_up": 29.85
+  },
+  {
+   "unsplash": "1541807084-5c52b6b3adef",
+   "slide": "slide-03.jpg",
+   "match_error": 0.19,
+   "runner_up": 44.49
+  },
+  {
+   "unsplash": "1488190211105-8b0e65b80b4e",
+   "slide": "slide-04.jpg",
+   "match_error": 0.44,
+   "runner_up": 40.07
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-05.jpg",
+   "match_error": 0.16,
+   "runner_up": 24.02
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-06.jpg",
+   "match_error": 0.62,
+   "runner_up": 55.34
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Sleep at a fixed time",
+  "Move every day",
+  "Eat real lunch",
+  "Take one real pause",
+  "Stop at a set hour",
+  "end card"
+ ]
+}
