@@ -627,8 +627,12 @@
   "gms-2026-11-20-6:facebook": "confirmed remotely: https://www.facebook.com/reel/2172308660341686/",
   "sp-2026-11-20-2:ig": "confirmed remotely: Planes de viernes noche con amigos",
   "sin-2026-11-20-3:ig": "confirmed remotely: How to delegate without losing quality",
-  "gms-2026-11-20-7:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/Df9tPQcmQzi/",
-  "gms-2026-11-20-1:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/Df9tUVAkXia",
-  "gms-2026-11-20-7:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Signs of a friendship worth keeping | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/fouemfwTXw8",
-  "gms-2026-11-20-7:facebook": "held: publication attempt started at 2026-11-20T12:57:57+00:00; reconcile remotely before retry"
+  "gms-2026-11-20-7:ig": "confirmed remotely: Signs of a friendship worth keeping",
+  "gms-2026-11-20-1:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/Df9tUVAkXia",
+  "gms-2026-11-20-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/fouemfwTXw8",
+  "gms-2026-11-20-7:facebook": "held: publication attempt started at 2026-11-20T12:57:57+00:00; reconcile remotely before retry",
+  "sin-2026-11-20-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df9y5fnDbT4/",
+  "gms-2026-11-20-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/Df9zAAajafc/",
+  "gms-2026-11-20-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Friday night slow-down routine | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/HarQ5D3pHcs",
+  "gms-2026-11-20-3:pinterest": "held: publication attempt started at 2026-11-20T13:47:34+00:00; reconcile remotely before retry"
 }
