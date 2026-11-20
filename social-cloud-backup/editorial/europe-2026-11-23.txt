@@ -1,0 +1,423 @@
+sp {
+  "title": "Lunes con calma: empieza sin correr",
+  "hook": "El lunes no tiene que empezar a toda velocidad.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para arrancar la semana con calma y sin agobios.",
+  "points": [
+    [
+      "Despierta diez minutos antes",
+      [
+        "Para no empezar corriendo."
+      ],
+      "Margen."
+    ],
+    [
+      "Desayuna sentado",
+      [
+        "Aunque sea algo sencillo."
+      ],
+      "Buen inicio."
+    ],
+    [
+      "Mira tu día una vez",
+      [
+        "Solo lo importante."
+      ],
+      "Claridad."
+    ],
+    [
+      "Empieza por lo fácil",
+      [
+        "Una tarea pequeña primero."
+      ],
+      "Impulso."
+    ],
+    [
+      "Sonríe a alguien",
+      [
+        "En casa, en el bus, en el trabajo."
+      ],
+      "Contagia."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes entre semana con amigos",
+  "hook": "No hace falta esperar al viernes para verse.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Planes sencillos para ver a tus amigos entre semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un café después del trabajo",
+      [
+        "Media hora basta."
+      ],
+      "Rápido y bonito."
+    ],
+    [
+      "Cena temprana",
+      [
+        "Algo ligero y a casa pronto."
+      ],
+      "Sin trasnochar."
+    ],
+    [
+      "Paseo al atardecer",
+      [
+        "Caminar y hablar."
+      ],
+      "Gratis."
+    ],
+    [
+      "Probad un sitio nuevo",
+      [
+        "Del barrio, sin reservar."
+      ],
+      "Pequeña aventura."
+    ],
+    [
+      "Repetidlo cada semana",
+      [
+        "El mismo día, la misma hora."
+      ],
+      "Tradición."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo organizar tu semana en un papel",
+  "hook": "Una hoja bien usada ordena toda la semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Un método sencillo para planificar la semana en cinco minutos.",
+  "points": [
+    [
+      "Escribe tres metas",
+      [
+        "Solo tres, las de verdad."
+      ],
+      "Foco."
+    ],
+    [
+      "Reparte por días",
+      [
+        "Una cosa importante al día."
+      ],
+      "Ritmo."
+    ],
+    [
+      "Deja huecos libres",
+      [
+        "Siempre surge algo."
+      ],
+      "Flexibilidad."
+    ],
+    [
+      "Marca lo que haces",
+      [
+        "Tachar también motiva."
+      ],
+      "Progreso."
+    ],
+    [
+      "Revisa el viernes",
+      [
+        "Qué salió y qué no."
+      ],
+      "Aprendes."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué comer con compañeros mejora el día",
+  "hook": "Una comida compartida cambia la tarde.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Lo que ganas cuando comes con otros en lugar de frente a la pantalla. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Desconectas de verdad",
+      [
+        "Lejos del ordenador."
+      ],
+      "Pausa real."
+    ],
+    [
+      "Conoces mejor a tu equipo",
+      [
+        "Hablas de otras cosas."
+      ],
+      "Confianza."
+    ],
+    [
+      "Comes más despacio",
+      [
+        "Sin prisas ni pantallas."
+      ],
+      "Te sienta mejor."
+    ],
+    [
+      "Te ríes un rato",
+      [
+        "Y la tarde pesa menos."
+      ],
+      "Energía."
+    ],
+    [
+      "Descubres sitios nuevos",
+      [
+        "Cada uno propone uno."
+      ],
+      "Variedad."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco hábitos de lunes que funcionan",
+  "hook": "Los buenos lunes se construyen con costumbres pequeñas.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Hábitos fáciles para que el lunes deje de pesar.",
+  "points": [
+    [
+      "Prepara la noche antes",
+      [
+        "Ropa y bolsa listas."
+      ],
+      "Menos estrés."
+    ],
+    [
+      "Agua al despertar",
+      [
+        "Antes del café."
+      ],
+      "Te activa."
+    ],
+    [
+      "Muévete un poco",
+      [
+        "Escaleras o un paseo corto."
+      ],
+      "Cuerpo despierto."
+    ],
+    [
+      "Una tarea difícil temprano",
+      [
+        "Cuando tienes más energía."
+      ],
+      "Gran alivio."
+    ],
+    [
+      "Cierra a tu hora",
+      [
+        "El lunes también termina."
+      ],
+      "Equilibrio."
+    ]
+  ]
+}
+
+sp {
+  "title": "El café del lunes en tu barrio",
+  "hook": "El primer café de la semana merece un buen sitio.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué empezar la semana en tu cafetería de siempre sienta tan bien. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Te conocen",
+      [
+        "Saben cómo lo quieres."
+      ],
+      "Te sientes en casa."
+    ],
+    [
+      "Cinco minutos para ti",
+      [
+        "Antes de que empiece todo."
+      ],
+      "Calma."
+    ],
+    [
+      "Un saludo amable",
+      [
+        "Empieza bien el día."
+      ],
+      "Buen ánimo."
+    ],
+    [
+      "Apoyas el barrio",
+      [
+        "Tu café hace barrio."
+      ],
+      "Comunidad."
+    ],
+    [
+      "Invita a un amigo",
+      [
+        "El lunes compartido pesa menos."
+      ],
+      "Mejor juntos."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeñas victorias del lunes",
+  "hook": "Un lunes también se puede ganar.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños logros que hacen que el lunes cuente.",
+  "points": [
+    [
+      "Llegar a tiempo",
+      [
+        "Sin carreras."
+      ],
+      "Buen comienzo."
+    ],
+    [
+      "Terminar una tarea",
+      [
+        "Aunque sea pequeña."
+      ],
+      "Avance."
+    ],
+    [
+      "Comer bien",
+      [
+        "Algo que te cuide."
+      ],
+      "Energía."
+    ],
+    [
+      "Llamar a alguien",
+      [
+        "Un mensaje pendiente."
+      ],
+      "Vínculo."
+    ],
+    [
+      "Acostarte temprano",
+      [
+        "Mañana lo agradecerás."
+      ],
+      "Descanso."
+    ]
+  ]
+}
+
+sp {
+  "title": "Lunes por la noche: desconectar bien",
+  "hook": "Una buena noche de lunes marca el resto de la semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para cerrar el primer día de la semana con calma.",
+  "points": [
+    [
+      "Deja el móvil lejos",
+      [
+        "Una hora antes de dormir."
+      ],
+      "Mente tranquila."
+    ],
+    [
+      "Cena sin pantallas",
+      [
+        "Con calma y con tu gente."
+      ],
+      "Momento real."
+    ],
+    [
+      "Una ducha caliente",
+      [
+        "Para soltar el día."
+      ],
+      "Relaja."
+    ],
+    [
+      "Escribe una línea",
+      [
+        "Algo bueno de hoy."
+      ],
+      "Gratitud."
+    ],
+    [
+      "Luz baja y a dormir",
+      [
+        "Tu cuerpo lo nota."
+      ],
+      "Buen sueño."
+    ]
+  ]
+}

@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-23",
+ "title": "Lunes con calma: empieza sin correr",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Lunes con calma: empieza sin correr\n\nEl lunes no tiene que empezar a toda velocidad.\n\nIdeas para arrancar la semana con calma y sin agobios.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 181 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 49.39
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg",
+   "match_error": 1.76,
+   "runner_up": 48.55
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-04.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-05.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-06.jpg",
+   "match_error": 0.22,
+   "runner_up": 55.75
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Despierta diez minutos antes",
+  "Desayuna sentado",
+  "Mira tu día una vez",
+  "Empieza por lo fácil",
+  "Sonríe a alguien",
+  "end card"
+ ]
+}
