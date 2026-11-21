@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-24",
+ "title": "How to plan a simple product test",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to plan a simple product test\n\nA small test beats a long debate.\n\nHow to check an idea with real users in a week. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 771 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg",
+   "match_error": 0.18,
+   "runner_up": 30.05
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg",
+   "match_error": 0.96,
+   "runner_up": 30.96
+  },
+  {
+   "unsplash": "1521017432531-fbd92d768814",
+   "slide": "slide-04.jpg",
+   "match_error": 0.78,
+   "runner_up": 37.34
+  },
+  {
+   "unsplash": "1485965120184-e220f721d03e",
+   "slide": "slide-05.jpg",
+   "match_error": 0.53,
+   "runner_up": 45.43
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-06.jpg",
+   "match_error": 0.24,
+   "runner_up": 33.75
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Write the guess",
+  "Pick a small group",
+  "Decide the signal",
+  "Run it for a week",
+  "Decide and move on",
+  "end card"
+ ]
+}

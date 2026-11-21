@@ -12914,5 +12914,189 @@
       "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026"
+  },
+  {
+    "id": "sin-2026-11-24-1",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 1,
+    "title": "How to protect your Tuesday for deep work",
+    "folder": "queue/sin/2026-11-24/carousel-1",
+    "sha256": {
+      "carousel.json": "6729cdb0f1ffe163c23416e3095b546400300bc0ee5e9ac1cf32da364f0ea104",
+      "slide-01.jpg": "169aca2ca5eb96f1780445f71d53af122ef2eac3fc5125670a7ffa8146328a3b",
+      "slide-02.jpg": "2ed8ef2674b48b3bb68a7f20bfcdec7bfef5f9ee68576cc788027a1372bcbb35",
+      "slide-03.jpg": "11e571d7152224ca73389d950c2178fe855c4b573b1fc431a899c8a34da8009d",
+      "slide-04.jpg": "d50062977d14df910810191ff19c91841399798def0a301cffad861b105daaf4",
+      "slide-05.jpg": "02b79956326f22af8c6becd79b0d097a7188667a54e4005be8a5670851f5bbb6",
+      "slide-06.jpg": "c24da5bcabcfc163e8ecbed25e8e384a3d28557d852b2f29cc3fe0f76255535a",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "3ef147fb36ad9734b33e3782ecb10392ffde57b78747007a19dc72193932cd9e",
+      "reel.json": "8698fb447d7e86e8820b9be8c57710b432d45f9171a6bbf0156becd8fa0586b3",
+      "cover.jpg": "dd15f97080b672588c235b448fe9e365cc4e525355bc46657a3077b9bae96e93"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-24-2",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 2,
+    "title": "How to prepare for a first customer call",
+    "folder": "queue/sin/2026-11-24/carousel-2",
+    "sha256": {
+      "carousel.json": "7cf5a01e41229cf0d99ce670ac5b7c9f72522a3ae451939f339b0c5d344f7a34",
+      "slide-01.jpg": "34bd892c429b676fb48eaafb91a327f5e4021d313d5743ccd91a10296252c0dd",
+      "slide-02.jpg": "147ce919be86555891b04502d1053fe6064833f517055584fc1914c56bafd382",
+      "slide-03.jpg": "e8661e8d1fcf1c9624cd9a91c938ae3be5b0719964ffc0ba60d604dfb90d8a8d",
+      "slide-04.jpg": "c3f3904b26a34fdd828ef26cbdeab1dc48a4ccc589c60e8225d359ea34ce7d50",
+      "slide-05.jpg": "cd1cf80191cef198c34a4e8dd422efbe1895f46e9ad32d38ecd6b0a3b9bcf37c",
+      "slide-06.jpg": "b7a707f6008e63b4687bffd96686788a832bd65a394e4fd1abda4e5409ff5eca",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-24-3",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 3,
+    "title": "Why small teams should write things down",
+    "folder": "queue/sin/2026-11-24/carousel-3",
+    "sha256": {
+      "carousel.json": "185e786fa5e1709d24aa0805060dde61ceb7408b5a0b1cd19fbb224a23e12c2f",
+      "slide-01.jpg": "a1a115b2278c894bf81ec60ba191be9de7d14e792d2ec14c4157b23fe9c46da3",
+      "slide-02.jpg": "ede9f54934695d36ef74aef90c3a794836365506114bf03cc1e269dd4d7e1817",
+      "slide-03.jpg": "6549593c026df30139b1b706b6ee8cc518ba546004d9e51d05184326f5175f8f",
+      "slide-04.jpg": "94387b46e15587bcbaaaf0c93ed8a321f7fba373f800d73c9aeae1c334bd63d2",
+      "slide-05.jpg": "323c85332f3f1fa7c83ff2379b0970750333dcc358cac995e4ed6dbb5b0103ab",
+      "slide-06.jpg": "9a059956617d59809eaa697378a4542bbf25ed87ce29829238a269f2013e083e",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "167d277c0279b11451ebf8c26d5b29d64ee6738a410b7630be4b0786e252bcf5",
+      "reel.json": "8006117568167034145bd820dbff1a833083b7bd3e3507db59b001acfab204c0",
+      "cover.jpg": "34cb231cbc00e6401a8597e318dff39f2c1a00ad5b74add48969f7d53f7bad58"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-24-4",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 4,
+    "title": "How to choose your first metric",
+    "folder": "queue/sin/2026-11-24/carousel-4",
+    "sha256": {
+      "carousel.json": "8df853fd9d822c935731cf335980705325cb387685c1a5ca5129e94b73ff1d73",
+      "slide-01.jpg": "a69572737b3b6d23ba0cbf312a84fc731571d269c5e0b76240e6d0dc48d81d59",
+      "slide-02.jpg": "d06db2c6385c2872cb18cdc59e2f2e952acbab91e6a412fa30df31c81419ae69",
+      "slide-03.jpg": "c5a53e318a50a792564cd9d897a579a20084529fadb3964b64416d4b13a970a7",
+      "slide-04.jpg": "d1d3c56e092b25cbfb47760d87844eff734f310349ca838452f770e00d3d686d",
+      "slide-05.jpg": "aaf50a0f6fdd8a2e83420ca7ab0920ada69681b420555935ddedc15c6c585b31",
+      "slide-06.jpg": "f0936d811511ba007626cb868e9eb67bb0f76ee80ba10e86e730553bba090a6d",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-24-5",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 5,
+    "title": "How to give feedback in a small team",
+    "folder": "queue/sin/2026-11-24/carousel-5",
+    "sha256": {
+      "carousel.json": "24789265ff654405574b40b0ba973ab6464ce38cf9f5dcc4ed19f5a1b899bfe6",
+      "slide-01.jpg": "f0964f5d25bfaf6cc841029ac20b9cd98e0324aceea44bdeaf29dcfbea66d517",
+      "slide-02.jpg": "70587fcfcbbc82da0aaf7c695b7a9e737967e60e632ded250a8dc988f9486096",
+      "slide-03.jpg": "dd55b3e50502f73a00e01a4f21ece17cb53cc18b36d5398afe72543d0f5fd5e8",
+      "slide-04.jpg": "746e94bfa64e990012abf79a34dc5d9730271966736bd94ed890a6e3713e69e2",
+      "slide-05.jpg": "5decb37d676eecadc2fee4c936ef783db316a30e7b525ff46dd3112801a2932a",
+      "slide-06.jpg": "ffea8abeefa87a276c49b6a6ec03391615c7183a12d2206919519e5d353ecb3d",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "ed3f35b291283aea99b6e0d3192aeb0e6cae7a3235d69cf2a912d19bbe81f1ef",
+      "reel.json": "999917346d3b12fb8662c1f7809584ef2d4ba133c6a2048cbf427a4e608e6f69",
+      "cover.jpg": "4147cd294526d67b8b0cbca7bf10272d55234e7b50c3311a4fb2cf72243e3310"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-24-6",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 6,
+    "title": "How to use advisors well",
+    "folder": "queue/sin/2026-11-24/carousel-6",
+    "sha256": {
+      "carousel.json": "b8ce364e33c07273944a9dff887ccf96bfb8d58a97c42ccafc124af128cfbfb7",
+      "slide-01.jpg": "425120ee37c42161a9ea432a0a52776613f79a4642d76ca2b85e283c9d3fec08",
+      "slide-02.jpg": "9fb7f536520ccb4773a108883e110cdae93bcbbb907a6d78d2d98a1aab5586e7",
+      "slide-03.jpg": "187934e4b2e3afbf76759bcf9c22e2f77de1985f759a17444f369f4937191892",
+      "slide-04.jpg": "51811398451d9c3316e32fa66991539eb35bc281611645969f4fd182f3383a5f",
+      "slide-05.jpg": "b403176bd5778e4dc007b52e68f870c51e61f5b8057f790c523de71320e0f0f7",
+      "slide-06.jpg": "226421c4c24918b24c69970d89d957caf5e1eed3f9183bc4daa273faa1db084d",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-24-7",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 7,
+    "title": "How to plan a simple product test",
+    "folder": "queue/sin/2026-11-24/carousel-7",
+    "sha256": {
+      "carousel.json": "a0d42b6626bebc733ad62f99b4fd9a620615bec240340b1cf226d70715d16766",
+      "slide-01.jpg": "1929987cc4009c91c1430786f5d396806c3c7d04730f7f7856b9bba267bdc08b",
+      "slide-02.jpg": "baea78a4ae33553213906cb3f4b9bf6b99e5eb174ae85ee7fb576ecf3bd865ef",
+      "slide-03.jpg": "56bbf77d2ffc7b392cd505c47c61dd0d597fd071491f2a77a60ce7c0474a2aae",
+      "slide-04.jpg": "ff7c0eaedcc18a7e9c7807613091882d3aa2d7098838217bf4353f533c248c01",
+      "slide-05.jpg": "cc220e7a7d46cfbe340cb3717673a4c24b325e1e4d9e0fd9d8c61d9702e2dc95",
+      "slide-06.jpg": "c38f02ccdc941063140e8a104c1d9d7b50204c478d999b9f32d650cf4cd5893c",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "49e38e34bd974035d8cbcc7776ade06fb4cbb8b133778e8370e42fa67c4cc7f7",
+      "reel.json": "9928e1c90e71ad3ad48e0c132b2f939596e049e4309012acaaec2a0f7ab1b653",
+      "cover.jpg": "1c72a9348cad1da4ce2f7cfd1a455abe830132b51499779f0aac2a10f38f9c17"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-24-8",
+    "brand": "sin",
+    "date": "2026-11-24",
+    "slot": 8,
+    "title": "A short Tuesday review for founders",
+    "folder": "queue/sin/2026-11-24/carousel-8",
+    "sha256": {
+      "carousel.json": "6ec4f411d177f65816146ee41a3074a34a173b162cae57a62cc35ce9452cc843",
+      "slide-01.jpg": "821b3560a7fa1e692d32a58ac98b478f3607ed7d658d501d8dac7202b21aff58",
+      "slide-02.jpg": "fe6116e780b867d2e10dacaf0e1891edf8c28422e87521a64f2694347789a466",
+      "slide-03.jpg": "c60c196ec1258ab53556a287aa5484c33cc3d9d751dfec16ecd443f23fa9d429",
+      "slide-04.jpg": "f90d34ad39db1a6013cebaaaf5a2bd964605398c795284c9680f14acb2dc972c",
+      "slide-05.jpg": "2cd6add9e89bf8e684319e3be6bb76ed901817d0ee3a3bbef1ba939426ed46df",
+      "slide-06.jpg": "730a60231fe0e63d9590c10eca0aa2f79121c5d1be4fff924c9275189b68f4ba",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026; founder preparation, general guidance only"
   }
 ]

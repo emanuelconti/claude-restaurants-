@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to protect your Tuesday for deep work",
+  "hook": "Tuesday is often the most productive day of the week.",
+  "photos": "work",
+  "caption": "How to keep one day mostly free of meetings for real progress. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Block the morning",
+      [
+        "Three hours, no calls."
+      ],
+      "Space."
+    ],
+    [
+      "Tell the team",
+      [
+        "Ask them to batch questions."
+      ],
+      "Respect."
+    ],
+    [
+      "Pick one outcome",
+      [
+        "Not a list."
+      ],
+      "Focus."
+    ],
+    [
+      "Close chat apps",
+      [
+        "Open them at lunch."
+      ],
+      "Silence."
+    ],
+    [
+      "Review at five",
+      [
+        "What moved forward."
+      ],
+      "Proof."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare for a first customer call",
+  "hook": "A good first call is mostly preparation.",
+  "photos": "work",
+  "caption": "Simple steps to get the most from a first conversation with a customer. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Read about them",
+      [
+        "Ten minutes is enough."
+      ],
+      "Context."
+    ],
+    [
+      "Write three questions",
+      [
+        "About their problem."
+      ],
+      "Direction."
+    ],
+    [
+      "Listen more than you talk",
+      [
+        "Aim for one third."
+      ],
+      "Insight."
+    ],
+    [
+      "Ask for a next step",
+      [
+        "A date, a trial, an intro."
+      ],
+      "Progress."
+    ],
+    [
+      "Send a short recap",
+      [
+        "The same day."
+      ],
+      "Trust."
+    ]
+  ]
+}
+
+sin {
+  "title": "Why small teams should write things down",
+  "hook": "Writing saves a small team from repeating itself.",
+  "photos": "work",
+  "caption": "How a few short documents make an early team faster. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "One page per decision",
+      [
+        "What and why."
+      ],
+      "Memory."
+    ],
+    [
+      "A shared weekly note",
+      [
+        "Goals and blockers."
+      ],
+      "Alignment."
+    ],
+    [
+      "A simple onboarding doc",
+      [
+        "For the next hire."
+      ],
+      "Speed."
+    ],
+    [
+      "Keep it short",
+      [
+        "Nobody reads long pages."
+      ],
+      "Clarity."
+    ],
+    [
+      "Update, do not rewrite",
+      [
+        "Small edits often."
+      ],
+      "Habit."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to choose your first metric",
+  "hook": "One clear number beats ten dashboards.",
+  "photos": "work",
+  "caption": "How to pick the one metric that tells you if the product works. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start from the promise",
+      [
+        "What do customers get."
+      ],
+      "Value."
+    ],
+    [
+      "Find the action",
+      [
+        "That shows they got it."
+      ],
+      "Signal."
+    ],
+    [
+      "Count it weekly",
+      [
+        "Same day, same way."
+      ],
+      "Trend."
+    ],
+    [
+      "Share it with the team",
+      [
+        "Every Monday."
+      ],
+      "Focus."
+    ],
+    [
+      "Change it when you grow",
+      [
+        "Stages change."
+      ],
+      "Honest."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to give feedback in a small team",
+  "hook": "Kind and clear feedback keeps a team close.",
+  "photos": "work",
+  "caption": "A simple way to give feedback that helps instead of hurts. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Do it soon",
+      [
+        "Not weeks later."
+      ],
+      "Relevant."
+    ],
+    [
+      "Talk about the work",
+      [
+        "Not the person."
+      ],
+      "Safe."
+    ],
+    [
+      "Give one example",
+      [
+        "Concrete beats general."
+      ],
+      "Clear."
+    ],
+    [
+      "Ask their view",
+      [
+        "Listen first."
+      ],
+      "Fair."
+    ],
+    [
+      "Agree a next step",
+      [
+        "Small and specific."
+      ],
+      "Growth."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to use advisors well",
+  "hook": "Good advice is wasted without a good question.",
+  "photos": "work",
+  "caption": "How early founders can get real value from advisors and mentors. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Bring one question",
+      [
+        "Not a status report."
+      ],
+      "Focus."
+    ],
+    [
+      "Share the numbers",
+      [
+        "Even the bad ones."
+      ],
+      "Honesty."
+    ],
+    [
+      "Ask who they know",
+      [
+        "An intro can change a month."
+      ],
+      "Network."
+    ],
+    [
+      "Follow up with results",
+      [
+        "Show what you did."
+      ],
+      "Respect."
+    ],
+    [
+      "Keep it regular",
+      [
+        "Short and often."
+      ],
+      "Rhythm."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to plan a simple product test",
+  "hook": "A small test beats a long debate.",
+  "photos": "work",
+  "caption": "How to check an idea with real users in a week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write the guess",
+      [
+        "One sentence."
+      ],
+      "Clear."
+    ],
+    [
+      "Pick a small group",
+      [
+        "Ten users is fine."
+      ],
+      "Fast."
+    ],
+    [
+      "Decide the signal",
+      [
+        "What counts as yes."
+      ],
+      "Honest."
+    ],
+    [
+      "Run it for a week",
+      [
+        "No changes midway."
+      ],
+      "Clean."
+    ],
+    [
+      "Decide and move on",
+      [
+        "Keep, change or drop."
+      ],
+      "Momentum."
+    ]
+  ]
+}
+
+sin {
+  "title": "A short Tuesday review for founders",
+  "hook": "Ten minutes on Tuesday evening keeps the week on track.",
+  "photos": "work",
+  "caption": "A quick mid-week check to stay focused on what matters. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Look at the week's goal",
+      [
+        "Still the right one."
+      ],
+      "Direction."
+    ],
+    [
+      "Check what moved",
+      [
+        "Be honest."
+      ],
+      "Truth."
+    ],
+    [
+      "Drop one task",
+      [
+        "Something that can wait."
+      ],
+      "Space."
+    ],
+    [
+      "Ask for one piece of help",
+      [
+        "Today, not Friday."
+      ],
+      "Speed."
+    ],
+    [
+      "Plan Wednesday's first hour",
+      [
+        "Before you close the laptop."
+      ],
+      "Ready."
+    ]
+  ]
+}
