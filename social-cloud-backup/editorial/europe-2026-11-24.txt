@@ -1,0 +1,423 @@
+sp {
+  "title": "Martes: el día perfecto para un plan pequeño",
+  "hook": "El martes también merece algo bonito.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas sencillas para que el martes no sea un día más.",
+  "points": [
+    [
+      "Un café con alguien",
+      [
+        "Quince minutos bastan."
+      ],
+      "Te cambia el día."
+    ],
+    [
+      "Prueba algo nuevo",
+      [
+        "Un plato, una calle, un sitio."
+      ],
+      "Pequeña sorpresa."
+    ],
+    [
+      "Sal a la hora",
+      [
+        "Sin quedarte de más."
+      ],
+      "Tarde libre."
+    ],
+    [
+      "Llama a tu madre",
+      [
+        "O a quien hace tiempo no oyes."
+      ],
+      "Cercanía."
+    ],
+    [
+      "Acuéstate pronto",
+      [
+        "Mañana lo notarás."
+      ],
+      "Energía."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo convertir una tarde normal en un buen recuerdo",
+  "hook": "Los mejores recuerdos casi nunca se planean.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Pequeños gestos que hacen especial una tarde cualquiera. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Di que sí a un plan",
+      [
+        "Aunque sea improvisado."
+      ],
+      "Abres la puerta."
+    ],
+    [
+      "Deja el móvil en el bolsillo",
+      [
+        "Mira a tu gente."
+      ],
+      "Presencia."
+    ],
+    [
+      "Haz una foto, solo una",
+      [
+        "Y luego disfruta."
+      ],
+      "Recuerdo."
+    ],
+    [
+      "Invita tú",
+      [
+        "Un café, una caña."
+      ],
+      "Generosidad."
+    ],
+    [
+      "Repítelo pronto",
+      [
+        "Lo bueno se repite."
+      ],
+      "Costumbre."
+    ]
+  ]
+}
+
+sp {
+  "title": "Señales de que necesitas una pausa",
+  "hook": "El cansancio avisa antes de pararte.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo reconocer que te toca parar un poco esta semana.",
+  "points": [
+    [
+      "Todo te molesta",
+      [
+        "Hasta lo pequeño."
+      ],
+      "Señal clara."
+    ],
+    [
+      "Duermes mal",
+      [
+        "Aunque estés cansado."
+      ],
+      "Escúchalo."
+    ],
+    [
+      "No disfrutas lo de siempre",
+      [
+        "Tus planes favoritos aburren."
+      ],
+      "Alerta."
+    ],
+    [
+      "Te cuesta concentrarte",
+      [
+        "Lees tres veces lo mismo."
+      ],
+      "Mente saturada."
+    ],
+    [
+      "Te olvidas de comer",
+      [
+        "O comes de pie."
+      ],
+      "Para un rato."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué los amigos del barrio importan",
+  "hook": "Tener amigos cerca cambia tu día a día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Lo que ganas cuando tus amigos viven a dos calles. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Planes sin organizar",
+      [
+        "Un mensaje y bajáis."
+      ],
+      "Fácil."
+    ],
+    [
+      "Te ayudan rápido",
+      [
+        "Una llave, un favor."
+      ],
+      "Red."
+    ],
+    [
+      "Conocéis los mismos sitios",
+      [
+        "Y los mismos camareros."
+      ],
+      "Hogar."
+    ],
+    [
+      "Os veis más a menudo",
+      [
+        "Sin grandes esfuerzos."
+      ],
+      "Vínculo."
+    ],
+    [
+      "El barrio se siente tuyo",
+      [
+        "Por su gente."
+      ],
+      "Pertenencia."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco ideas para una cena entre semana",
+  "hook": "Cenar con amigos un martes sienta genial.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Planes de cena fáciles para mitad de semana.",
+  "points": [
+    [
+      "Cena temprana",
+      [
+        "Y a casa a buena hora."
+      ],
+      "Sin trasnochar."
+    ],
+    [
+      "Cada uno trae algo",
+      [
+        "En casa de alguien."
+      ],
+      "Sencillo."
+    ],
+    [
+      "El sitio de siempre",
+      [
+        "Donde ya os conocen."
+      ],
+      "Cómodo."
+    ],
+    [
+      "Un menú del día",
+      [
+        "Por la noche también existe."
+      ],
+      "Barato."
+    ],
+    [
+      "Cerrad con un paseo",
+      [
+        "Bajad la cena andando."
+      ],
+      "Charla extra."
+    ]
+  ]
+}
+
+sp {
+  "title": "Lo que hace especial a tu bar de confianza",
+  "hook": "Tu bar de siempre es más que un bar.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué volvemos una y otra vez al mismo sitio. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Te saludan por tu nombre",
+      [
+        "Y saben lo que pides."
+      ],
+      "Te sientes en casa."
+    ],
+    [
+      "Siempre hay sitio",
+      [
+        "O te lo hacen."
+      ],
+      "Cuidado."
+    ],
+    [
+      "Conoces a otros clientes",
+      [
+        "Caras de siempre."
+      ],
+      "Comunidad."
+    ],
+    [
+      "Llevas a tus amigos",
+      [
+        "Y se quedan."
+      ],
+      "Orgullo."
+    ],
+    [
+      "Te guardan un detalle",
+      [
+        "Una tapa, una sonrisa."
+      ],
+      "Fidelidad."
+    ]
+  ]
+}
+
+sp {
+  "title": "Pequeños hábitos para dormir mejor",
+  "hook": "Dormir bien empieza horas antes de la cama.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Costumbres fáciles para descansar mejor entre semana.",
+  "points": [
+    [
+      "Misma hora cada día",
+      [
+        "También el fin de semana."
+      ],
+      "Ritmo."
+    ],
+    [
+      "Café solo por la mañana",
+      [
+        "Después del mediodía, no."
+      ],
+      "Sueño tranquilo."
+    ],
+    [
+      "Cena ligera",
+      [
+        "Y no muy tarde."
+      ],
+      "Cuerpo en calma."
+    ],
+    [
+      "Habitación fresca",
+      [
+        "Y a oscuras."
+      ],
+      "Mejor descanso."
+    ],
+    [
+      "Un libro en papel",
+      [
+        "En lugar del móvil."
+      ],
+      "Mente lenta."
+    ]
+  ]
+}
+
+sp {
+  "title": "Martes por la noche: un plan tranquilo",
+  "hook": "Un plan suave a mitad de semana recarga mucho.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para disfrutar el martes por la noche sin cansarte. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Una serie con alguien",
+      [
+        "Un capítulo, no cinco."
+      ],
+      "Compañía."
+    ],
+    [
+      "Cocinar algo rico",
+      [
+        "Con música de fondo."
+      ],
+      "Disfrute."
+    ],
+    [
+      "Paseo después de cenar",
+      [
+        "Veinte minutos."
+      ],
+      "Aire fresco."
+    ],
+    [
+      "Llamada larga a un amigo",
+      [
+        "Sin prisa."
+      ],
+      "Conexión."
+    ],
+    [
+      "A la cama sin culpa",
+      [
+        "Pronto y a gusto."
+      ],
+      "Descanso."
+    ]
+  ]
+}

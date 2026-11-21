@@ -12726,5 +12726,193 @@
     "audience": "English-speaking women aged 18-38 in Singapore; friendship, thoughtful gifting and real message hoodies",
     "video_qa": "Seven-slide Short (slow zoom, cross-fades), one decoded frame per slide visually inspected against the reviewed slides, 20 November 2026",
     "audio_qa": "Original synthesized warm track from carousel_reel.py music(), AAC decoded and non-silent"
+  },
+  {
+    "id": "sp-2026-11-24-1",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 1,
+    "title": "Martes: el día perfecto para un plan pequeño",
+    "folder": "queue/sp/2026-11-24/carousel-1",
+    "sha256": {
+      "carousel.json": "0d64123a8ad12b50c03e4a2c735db83c1d32920aed49d608e7d477b546abf82a",
+      "slide-01.jpg": "5101d6d04d21e28d236981ab1e909c2ed11b3836b1f2d6bac753668c2bac0e38",
+      "slide-02.jpg": "229ee9c5e3d572fc7a094cd9356c176244b19a07f289d71132c7161962d6f7dc",
+      "slide-03.jpg": "6806aa41deb035325e1ff1bcc9e9c83fc36038343d523dc5553538b9a844d899",
+      "slide-04.jpg": "dbe86863c676857cad2c1c51bfefb41180b24319d32e1f281578e5c199ca7da6",
+      "slide-05.jpg": "d4eb483c54c3e8c79bc12be721c72e0b8b842512e71d0837fab025af9f809d75",
+      "slide-06.jpg": "2b9d37c8aff42ba641128153197393577129c282820812d00e6f3d6827902ebd",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "708bc6fd023da69470671cbd95caece0add6094cb1727117a57f87691a88d302",
+      "reel.json": "11697361b297ee42dda6b59276cdf6641ab86a7305a470c0eb4ce1ffd8a506a2",
+      "cover.jpg": "4410b32a65a57ac2ccf78556a9335459807c60b5e149d5a02d7448aee51b8c41"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.8 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-24-2",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 2,
+    "title": "Cómo convertir una tarde normal en un buen recuerdo",
+    "folder": "queue/sp/2026-11-24/carousel-2",
+    "sha256": {
+      "carousel.json": "a7270afcec89aec1308b530cf4e030f997c3c386cb734b150d60293cbdc7f8af",
+      "slide-01.jpg": "72fa9d35f6c3a215c7d1cbfce1ed5710113edfdc5ff903d9a8b6b80887eed8ea",
+      "slide-02.jpg": "98c35e7f379a9da56daac7d4e5bfc31c7426a299f7fe89f7b60437467ab991a9",
+      "slide-03.jpg": "942b56935afadbe91c76b2a7f916ce67be34a845eb3c1bc5662ecf36697e9811",
+      "slide-04.jpg": "7fb29eb0017ceb393e32c34ccf4e2f87a923fc296097c9469608810d268a579a",
+      "slide-05.jpg": "a167f0b3766090642647d0e403aa081553f1fbd0de1ac5b63f1db87eebd80b9f",
+      "slide-06.jpg": "d471a4ef83fe988d6a60b11fed3421f399e4ed0be6104f36d49c823befc6ed9e",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026"
+  },
+  {
+    "id": "sp-2026-11-24-3",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 3,
+    "title": "Señales de que necesitas una pausa",
+    "folder": "queue/sp/2026-11-24/carousel-3",
+    "sha256": {
+      "carousel.json": "45656c6e9fb368f857eb54d48fb6eb56d58ad64c2c010e375d97dfb20c62c7c8",
+      "slide-01.jpg": "212b95a000a8eb49671b2d6daaff6bd1a10494941c4ec0352d6894aa9dba4dba",
+      "slide-02.jpg": "326ab777408597606db53b61b8c0b2481bfc7e2f265d274e89e0fda59754dedc",
+      "slide-03.jpg": "afe6bbac8235fec0166b50591f85ac9742e47187a8e7785e0bb736c6289ec352",
+      "slide-04.jpg": "e3e2a740391fef8e4c79a9790b31398d5831edf1ad0623fdfb5820f77d423986",
+      "slide-05.jpg": "b5b99704f86cf7f2ec0ce7141a81bfbf89ec35eb264135cb6d22b81eb829e52c",
+      "slide-06.jpg": "6194f1c9ca5f113ac50fbe4a22d500281acb382a98926ad460a602c86884a9bb",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "784a4d6aa90626cd8ff33935a0676e2782cb6ab20a5596a75697a34597fcd935",
+      "reel.json": "0cf04956959f4772e3b1f6e7d3d8e19559244777d3046a992f3cccbbfbb98474",
+      "cover.jpg": "69bdbe13288bf7a1259c03865b83992ee40aae27a3b09f83d6aff2a8f0e25a6b"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.3 dB peak -1.0 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-24-4",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 4,
+    "title": "Por qué los amigos del barrio importan",
+    "folder": "queue/sp/2026-11-24/carousel-4",
+    "sha256": {
+      "carousel.json": "ecb8f79368f386ba65743bbc82d3d3d9f3aa37633863625e7315384efb68e0f6",
+      "slide-01.jpg": "d8c6343c5698808f2bf41c9707e3a286f7b0d134f103c2ed086cea004d7f1e0c",
+      "slide-02.jpg": "915e5ed92471a0ddb2fab9ff9b0bddcdb03519e00d5d0ce6a9b4306d9850c7cc",
+      "slide-03.jpg": "145fffcc54ad63e5499d93cd789fabb4e9956f7ceb943338a764e3468e4cd127",
+      "slide-04.jpg": "adc54806632c72fc2aaf105910999d0755f0804c61d528ddf0fe67459d048f1c",
+      "slide-05.jpg": "76c23ecf7126cf3dc3e7bf3b2b2f47554722e22a4d8f5717b13bde79712c61ab",
+      "slide-06.jpg": "682ec32fa7ba0142c97e1ae8e70cb92c2ce3e6d81953e9b5de0bda349ad9b182",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026"
+  },
+  {
+    "id": "sp-2026-11-24-5",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 5,
+    "title": "Cinco ideas para una cena entre semana",
+    "folder": "queue/sp/2026-11-24/carousel-5",
+    "sha256": {
+      "carousel.json": "7904b438ac01b9e5c7ea4809fecc2efb07c0dc781bc8325e08ded96d072f844f",
+      "slide-01.jpg": "d603fddfd10a92deb09f73c71be78332581a4b85e26149d4b265b34985d675ae",
+      "slide-02.jpg": "91bd0cf1f1e972859ea0e434c1c9da08a818724ffde68f79c1ca4193a90d5ff9",
+      "slide-03.jpg": "5b705cb78dc152b33cba82c6231c7ca517fc1ba898a9416fc5f1e296f3297e77",
+      "slide-04.jpg": "44898700f2485b9b2cb849f1380912dbef19977539fa17f154dd8fedc290eff1",
+      "slide-05.jpg": "4eec82355dbe878acad8691a79256e3df9e8cd7c40877b0a2181de59d18b2a93",
+      "slide-06.jpg": "22c038e0b4f4331bfe2fd6f55c6c8c0cfb556d1c6e8bdf900477be8ef0e35e67",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "c960ad922116ef012cda9f146b53af3be7976f5c515eeb86be712e7c78d98453",
+      "reel.json": "57f65b3e5a18f73efbe731770a87fbfcedde2e9c51c319666ab612cb4f4c439e",
+      "cover.jpg": "6378f2b77aefb2d2e9c924506347cdadcd1a26de3125a7ca76dfe66babe065cf"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -11.6 dB peak -0.6 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-24-6",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 6,
+    "title": "Lo que hace especial a tu bar de confianza",
+    "folder": "queue/sp/2026-11-24/carousel-6",
+    "sha256": {
+      "carousel.json": "5791564beb68db7b906830ab55b4325c7cefacddfe4f2c2ad382414705828166",
+      "slide-01.jpg": "365100323df8fa57fcd2673f13f1e423e681487a093889bf191e1f55a2cde4e4",
+      "slide-02.jpg": "d9ee8807cde13eab0a78306f1dc7c538959afec7df0aad836ef64fe63f6ff52b",
+      "slide-03.jpg": "3e68fe911fe4be4f2b9a85fa6debcb1ef1cec6e168c65bb43fb8d7533a1b04e3",
+      "slide-04.jpg": "20a3f969d72bdebbd54887e8c4f0ce4bfaf7aba8ea1f42d2ba436441740bad93",
+      "slide-05.jpg": "74c21119987c47f9ae32a15bcdfa3e9ebd28bc4e9a9a6004f7cc51e8e8724817",
+      "slide-06.jpg": "8a4327c584e0e7e18bd305192f069a9e8225f5262406c56394ed9c9fd4b9de3d",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026"
+  },
+  {
+    "id": "sp-2026-11-24-7",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 7,
+    "title": "Pequeños hábitos para dormir mejor",
+    "folder": "queue/sp/2026-11-24/carousel-7",
+    "sha256": {
+      "carousel.json": "f6c6c73055da11810e02c3ce8f7b1ab69c7c4eae38fe3b9abdb003d0882259f0",
+      "slide-01.jpg": "7971dbb7ffb3a70d6fa04cdea10dde5b33321aa40c5d306612dba5fa55a25e97",
+      "slide-02.jpg": "e50e31b584fe348153bc67a880c349d29ea2181e1764ae76bcb911dbf19436ef",
+      "slide-03.jpg": "91d535a1ae9b43305523d998d0e106401e339806bb1eb65833a80c66840494d2",
+      "slide-04.jpg": "d0b365da4e637e3c816a26a82f61bbca52155e304428b56b64d90f4f191c5547",
+      "slide-05.jpg": "4782e0c41a5378c3459fbce4402acd923b5eda32c732e0ea4580a2812d8f0842",
+      "slide-06.jpg": "00f1b33c1e2227e9f521a369a5fb73b269e60811a9ec46d17715854a5aa15e6d",
+      "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "b3671915a3cbafeebc957a5c4d6d9f811b4570e7d35f215ec5e6e70cedef2f99",
+      "reel.json": "bfcba8550b534fccf092f963bcccdec27c0899131de4520149d79d72e171d67d",
+      "cover.jpg": "0f8e19d62ec6bf9ab7fb7b7b6c0510c5d01db3804ae75e489a24d1695dd33134"
+    },
+    "reel_qa": "Contact sheet inspected 21 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.9 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sp-2026-11-24-8",
+    "brand": "sp",
+    "date": "2026-11-24",
+    "slot": 8,
+    "title": "Martes por la noche: un plan tranquilo",
+    "folder": "queue/sp/2026-11-24/carousel-8",
+    "sha256": {
+      "carousel.json": "389e98379fbf696f9b0796b682849ece2802a5b77293f954f25eccdc30da11a5",
+      "slide-01.jpg": "2b8b6f107acabd3d232141570107ebde2130ab3409219d1cf0cce23fd2887190",
+      "slide-02.jpg": "a1bb20b25388e0d52c26cc2b1a615b7a547b4f930a64fa5a13fc6f77bb098514",
+      "slide-03.jpg": "dd331fdbd15dac46a2c4ab2642d736456d758f195485d023ad3f3ff232aae67c",
+      "slide-04.jpg": "cb43d4d78938d59b3a6cfb436b152e0af6740654bbf44fb980be1b5fdb11180d",
+      "slide-05.jpg": "904940df731bb0d0b916da063b373c5e5d976c46736f7eefec18b2521b69c812",
+      "slide-06.jpg": "14d1273a5298fbd18c0ef3364a9cfcfdb553c38793dcee1978822b2b02ef475a",
+      "slide-07.jpg": "5866b8d4cb896e61ce2c51845344ecf99977f87ffeb50859d2c44ad416676110",
+      "slide-08.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 21 November 2026"
   }
 ]
