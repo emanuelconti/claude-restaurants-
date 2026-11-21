@@ -674,8 +674,9 @@
   "gms-2026-11-21-1:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DgAPv4gG5Q5",
   "gms-2026-11-21-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/cBVmaoCRbdg",
   "gms-2026-11-21-7:facebook": "held: publication attempt started at 2026-11-21T12:37:13+00:00; reconcile remotely before retry",
-  "sin-2026-11-21-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgAVZQRF6Me/",
-  "gms-2026-11-21-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgAVfiZmMM0/",
-  "gms-2026-11-21-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Saturday evening ideas to recharge | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/9f0TpgJheao",
-  "gms-2026-11-21-3:pinterest": "held: publication attempt started at 2026-11-21T13:27:31+00:00; reconcile remotely before retry"
+  "sin-2026-11-21-4:ig": "confirmed remotely: How to choose your first market in Europe",
+  "gms-2026-11-21-8:ig": "confirmed remotely: Saturday evening ideas to recharge",
+  "gms-2026-11-21-8:youtube": "confirmed remotely: https://www.youtube.com/shorts/9f0TpgJheao",
+  "gms-2026-11-21-3:pinterest": "held: publication attempt started at 2026-11-21T13:27:31+00:00; reconcile remotely before retry",
+  "sp-2026-11-21-3:ig": "success: account: @socialperks.es\npublished: https://www.instagram.com/reel/DgAbR9YjZel/"
 }
