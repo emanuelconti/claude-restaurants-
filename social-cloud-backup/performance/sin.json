@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A ten minute plan for a calm Monday",
+      "stamp": "2026-11-21T21:38:16+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgBG0e0DM8-/"
+    },
+    {
+      "title": "How to recover energy after a long week",
+      "stamp": "2026-11-21T20:41:41+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgBAT_dBBj_/"
+    },
+    {
+      "title": "How to ask for an introduction the right way",
+      "stamp": "2026-11-21T19:04:50+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgA1QrXF54B/"
+    },
+    {
+      "title": "Small habits that make founders better writers",
+      "stamp": "2026-11-21T16:29:38+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgAjeM7O2rH/"
+    },
+    {
+      "title": "How to choose your first market in Europe",
+      "stamp": "2026-11-21T14:26:20+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgAVZQRF6Me/"
+    },
+    {
+      "title": "How to set goals for next quarter",
+      "stamp": "2026-11-21T12:47:53+01:00",
+      "local_hour": 12,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgAKFiHBGcb/"
+    },
+    {
+      "title": "How to plan a quiet Saturday as a founder",
+      "stamp": "2026-11-21T10:37:10+01:00",
+      "local_hour": 10,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/Df_7Ku4DyDU/"
+    },
+    {
+      "title": "Weekend reading for founders: how to choose",
+      "stamp": "2026-11-21T08:53:45+01:00",
+      "local_hour": 8,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df_vSxqh48Q/"
+    },
+    {
       "title": "What a founder learns from a hard week",
       "stamp": "2026-11-20T21:41:16+01:00",
       "local_hour": 21,
@@ -340,89 +404,20 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/Dfw1Rz6F2R5/"
-    },
-    {
-      "title": "6 things nobody sees when you build a startup",
-      "stamp": "2026-11-15T13:55:18+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfw1EVpF57V/"
-    },
-    {
-      "title": "Your Monday funding list: 5 jobs to do before 10am",
-      "stamp": "2026-11-15T13:53:56+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfw06cMF1ps/"
-    },
-    {
-      "title": "Zoom out: 5 questions to ask your startup before December",
-      "stamp": "2026-11-15T13:52:42+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfw0xy1F9Un/"
-    },
-    {
-      "title": "Stop waiting to feel ready to raise",
-      "stamp": "2026-11-15T07:58:44+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwMQ2Tl3fN/"
-    },
-    {
-      "title": "How to get startup funding: 6 steps before you apply",
-      "stamp": "2026-11-15T07:57:26+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwMHV8lOHG/"
-    },
-    {
-      "title": "A 30-minute Sunday plan for founders",
-      "stamp": "2026-11-15T07:56:03+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwL9HYFywk/"
-    },
-    {
-      "title": "Saturday night, laptop open? Read this first",
-      "stamp": "2026-11-14T19:50:08+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfu44tgFCf7/"
-    },
-    {
-      "title": "Grant deadline in a month? A 4-week plan that works",
-      "stamp": "2026-11-14T13:58:02+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfuQl5MFCnV/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-21",
+  "market_date": "2026-11-22",
   "mature_hour_summary": [
     {
-      "local_hour": 7,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
       "local_hour": 9,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 10,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 11,
@@ -436,13 +431,13 @@
     },
     {
       "local_hour": 13,
-      "posts": 7,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 15,
@@ -455,19 +450,24 @@
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 17,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 19,
       "posts": 5,
       "median_public_interactions": 0
     },
     {
       "local_hour": 20,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
-      "posts": 6,
-      "median_public_interactions": 0.0
+      "posts": 7,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 22,

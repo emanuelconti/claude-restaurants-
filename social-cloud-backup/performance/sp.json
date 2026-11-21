@@ -1,11 +1,116 @@
 {
   "schema_version": 4,
-  "insights_error": "GET 18028939541923592/insights: (#10) Application does not have permission for this action",
+  "insights_error": "GET 18392987944224531/insights: (#10) Application does not have permission for this action",
   "channels": {},
   "brand": "sp",
   "account": "socialperks.es",
   "timezone": "Europe/Madrid",
   "posts": [
+    {
+      "media_id": "18392987944224531",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Cena para dos: un plan sencillo para el s\u00e1bado",
+      "stamp": "2026-11-21T22:28:46+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgBMmZilylq/"
+    },
+    {
+      "media_id": "18139366147655518",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo decir que no sin sentirte mal",
+      "stamp": "2026-11-21T21:37:07+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgBGpSvgmq_/"
+    },
+    {
+      "media_id": "18158172172546850",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Peque\u00f1os retos para este fin de semana",
+      "stamp": "2026-11-21T18:14:16+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgAvcVZD3ou/"
+    },
+    {
+      "media_id": "18127399013292647",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Quedadas en grupo: cinco claves para que salgan bien",
+      "stamp": "2026-11-21T17:19:09+01:00",
+      "local_hour": 17,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgApLIvDBSM/"
+    },
+    {
+      "media_id": "17920007643545120",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo aprovechar el s\u00e1bado sin agotarte",
+      "stamp": "2026-11-21T15:18:00+01:00",
+      "local_hour": 15,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgAbR9YjZel/"
+    },
+    {
+      "media_id": "18032624216692453",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Brunch con amigos: c\u00f3mo hacerlo perfecto",
+      "stamp": "2026-11-21T12:16:16+01:00",
+      "local_hour": 12,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgAGgZNDo7k/"
+    },
+    {
+      "media_id": "18233194138334741",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Lo que de verdad recarga un s\u00e1bado",
+      "stamp": "2026-11-21T10:35:57+01:00",
+      "local_hour": 10,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/Df_6-bzghRu/"
+    },
     {
       "media_id": "18028939541923592",
       "format": "FEED",
@@ -17,7 +122,7 @@
       "title": "Viernes noche en casa: ideas para disfrutar",
       "stamp": "2026-11-20T23:20:38+01:00",
       "local_hour": 23,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df-tvbqF8Td/"
     },
@@ -32,7 +137,7 @@
       "title": "C\u00f3mo cuidar tu autoestima",
       "stamp": "2026-11-20T20:51:30+01:00",
       "local_hour": 20,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df-coc9ijRm/"
     },
@@ -47,7 +152,7 @@
       "title": "Apoyar lo local: peque\u00f1os gestos que cuentan",
       "stamp": "2026-11-20T19:11:26+01:00",
       "local_hour": 19,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df-ROTql5EW/"
     },
@@ -62,7 +167,7 @@
       "title": "Peque\u00f1os placeres de un viernes",
       "stamp": "2026-11-20T18:22:45+01:00",
       "local_hour": 18,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df-LnSbkjMX/"
     },
@@ -77,7 +182,7 @@
       "title": "C\u00f3mo hacer nuevos amigos de adulto",
       "stamp": "2026-11-20T18:09:09+01:00",
       "local_hour": 18,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df-KF_dFx6k/"
     },
@@ -92,7 +197,7 @@
       "title": "C\u00f3mo descansar de verdad el fin de semana",
       "stamp": "2026-11-20T17:02:13+01:00",
       "local_hour": 17,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df-CZfYEh5V/"
     },
@@ -107,7 +212,7 @@
       "title": "Planes de viernes noche con amigos",
       "stamp": "2026-11-20T12:20:23+01:00",
       "local_hour": 12,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df9iLa1lx2s/"
     },
@@ -122,7 +227,7 @@
       "title": "Viernes: cierra la semana con orgullo",
       "stamp": "2026-11-20T09:53:21+01:00",
       "local_hour": 9,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df9RUbqEsIT/"
     },
@@ -137,7 +242,7 @@
       "title": "Jueves noche: cosas que agradecer",
       "stamp": "2026-11-19T23:26:44+01:00",
       "local_hour": 23,
-      "likes": 0,
+      "likes": 1,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df8JpNojGmh/"
     },
@@ -650,125 +755,15 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/Dfw0iislBYt/"
-    },
-    {
-      "media_id": "18117298037035753",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Para quien abre su gimnasio cuando a\u00fan es de noche",
-      "stamp": "2026-11-15T13:49:18+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfw0Y0hF9z4/"
-    },
-    {
-      "media_id": "18381065554208656",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Lo que tu cliente recuerda no es el precio",
-      "stamp": "2026-11-15T08:03:18+01:00",
-      "local_hour": 8,
-      "likes": 1,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfwMvhajEk0/"
-    },
-    {
-      "media_id": "17922776160241056",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Cuando cae la tarde, tu local se enciende",
-      "stamp": "2026-11-15T08:01:47+01:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfwMkc3iiBk/"
-    },
-    {
-      "media_id": "18036098468913388",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "5 maneras de que tus habituales traigan a un amigo",
-      "stamp": "2026-11-15T07:54:36+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwLzCLlDN_/"
-    },
-    {
-      "media_id": "17874405621645393",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Cosas que solo entiende quien tiene un centro de masajes",
-      "stamp": "2026-11-15T07:53:05+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwLn56FJ8X/"
-    },
-    {
-      "media_id": "18441856177176931",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Si hoy tu local descansa, descansa t\u00fa tambi\u00e9n",
-      "stamp": "2026-11-15T07:51:44+01:00",
-      "local_hour": 7,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfwLd0rl7zv/"
-    },
-    {
-      "media_id": "18036193820905897",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "S\u00e1bado noche: tu local ya ha ganado",
-      "stamp": "2026-11-14T19:47:28+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfu4icsAMEb/"
     }
   ],
   "limits": "Instagram views requested separately for SocialPerks when granted; other insight counters remain unavailable unless collected; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.",
-  "market_date": "2026-11-21",
+  "market_date": "2026-11-22",
   "mature_hour_summary": [
     {
-      "local_hour": 7,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 8,
-      "posts": 2,
-      "median_public_interactions": 0.5
+      "local_hour": 9,
+      "posts": 1,
+      "median_public_interactions": 1
     },
     {
       "local_hour": 10,
@@ -782,13 +777,13 @@
     },
     {
       "local_hour": 12,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 13,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 14,
@@ -802,12 +797,12 @@
     },
     {
       "local_hour": 17,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 18,
-      "posts": 3,
+      "posts": 5,
       "median_public_interactions": 0
     },
     {
@@ -817,8 +812,8 @@
     },
     {
       "local_hour": 20,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
@@ -832,8 +827,8 @@
     },
     {
       "local_hour": 23,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.5
     }
   ],
   "view_cohorts": [],
