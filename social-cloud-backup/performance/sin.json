@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A calm Sunday evening for founders",
+      "stamp": "2026-11-22T21:50:54+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgDtDiZCa7D/"
+    },
+    {
+      "title": "What to do when a week goes wrong",
+      "stamp": "2026-11-22T21:01:05+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgDnUu0NnFM/"
+    },
+    {
+      "title": "How to ask for feedback on your pitch",
+      "stamp": "2026-11-22T18:33:01+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgDWaowF7ZO/"
+    },
+    {
+      "title": "Simple ways to track cash each week",
+      "stamp": "2026-11-22T16:31:38+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgDIfYMy_0g/"
+    },
+    {
+      "title": "How to prepare for a customer call",
+      "stamp": "2026-11-22T15:15:05+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgC_w8kl0gj/"
+    },
+    {
+      "title": "Rest is part of building a company",
+      "stamp": "2026-11-22T12:42:38+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgCuRz9oycJ/"
+    },
+    {
+      "title": "How to write a clear weekly goal",
+      "stamp": "2026-11-22T11:02:01+01:00",
+      "local_hour": 11,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgCizUiEhab/"
+    },
+    {
+      "title": "A Sunday hour to plan your founder week",
+      "stamp": "2026-11-22T08:29:52+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgCRWsPhBmR/"
+    },
+    {
       "title": "A ten minute plan for a calm Monday",
       "stamp": "2026-11-21T21:38:16+01:00",
       "local_hour": 21,
@@ -340,98 +404,39 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df0J5a-A224/"
-    },
-    {
-      "title": "How to handle a hard question in a pitch",
-      "stamp": "2026-11-16T19:07:47+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfz9n6aF_ql/"
-    },
-    {
-      "title": "Price your product before it feels finished",
-      "stamp": "2026-11-16T16:36:47+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfzsTb5yuBn/"
-    },
-    {
-      "title": "Find your local startup ecosystem",
-      "stamp": "2026-11-16T14:51:49+01:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfzgVfGGzBP/"
-    },
-    {
-      "title": "Monday pipeline check for founders",
-      "stamp": "2026-11-16T13:04:42+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfzUCUXBALF/"
-    },
-    {
-      "title": "Write a cold email an investor will read",
-      "stamp": "2026-11-16T11:18:34+01:00",
-      "local_hour": 11,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfzH7xOl9eh/"
-    },
-    {
-      "title": "How to present your team on one slide",
-      "stamp": "2026-11-16T09:21:12+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Dfy6daCqDfG/"
-    },
-    {
-      "title": "Set next week's founder priorities",
-      "stamp": "2026-11-15T21:32:30+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfxpWugBvZ7/"
-    },
-    {
-      "title": "Funding is a long ride. Keep pedalling.",
-      "stamp": "2026-11-15T13:57:09+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Dfw1Rz6F2R5/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-22",
+  "market_date": "2026-11-23",
   "mature_hour_summary": [
     {
+      "local_hour": 8,
+      "posts": 1,
+      "median_public_interactions": 1
+    },
+    {
       "local_hour": 9,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 10,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 11,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 12,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
-      "posts": 4,
+      "posts": 2,
       "median_public_interactions": 0.0
     },
     {
@@ -461,8 +466,8 @@
     },
     {
       "local_hour": 20,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 21,
