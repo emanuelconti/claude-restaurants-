@@ -209,3 +209,10 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - If neither investors nor venues got an email for 2 working days, it writes "ALERT" below and tells Ema in one line.
 - CODEX: at the start of every task, read the line below. If it says ALERT, or its date is more than 3 working days old (meaning the watchdog stopped too), tell Ema first thing: "outreach fermo: controlla le routine Claude (limite di utilizzo o connettori)".
 - Last heartbeat: 2026-11-14, routines set up, first investor round Monday 16/11.
+
+## THREADS GMS: the post is the ideas, and a photo from 30 November (owner, 22 November 2026)
+
+Every Claude and Codex, this wins over the older Threads lines above (limits unchanged):
+- The owner saw the profile showing only carousel titles ("Saturday morning ideas for a good day"). Fixed in a1f3ae9 on codex/social-cloud-backup: the post is the carousel's hook plus its ideas as short sentences (`threads_text`), e.g. "A slow Saturday morning sets the tone. Wake up without an alarm. Breakfast at a kopitiam. A walk in a park. Plan nothing until noon." Never the title alone.
+- Photos, with optimisation (c03c904): until 29 November text only; from 30 November (`PHOTO_FROM`) the days alternate text / ONE photo (the carousel cover, from the pinned GitHub URL). When each kind has 5 posts, the kind with more views per post wins (`pick_mode`, Threads insights). Never slides, never a link or hashtag.
+- Still: one post a day, 20 hours apart, stop on any spam/restricted/limit signal. If photo posts get flagged, move `PHOTO_FROM` later and tell the owner. Rules also in SOCIAL_MARKET_RULES.md on codex/social-cloud-backup; tests in test_threads_rule.py.
