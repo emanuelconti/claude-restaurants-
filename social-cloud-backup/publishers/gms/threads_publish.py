@@ -43,6 +43,12 @@ API = "https://graph.threads.net/v1.0"
 THREADS_RESUME = "2026-11-16"
 MAX_PER_DAY = 1
 MIN_GAP = 20 * 60  # minutes
+# Owner, 22 November 2026: "aggiungi le foto, con ottimizzazione". After a clean week of text posts, from
+# PHOTO_FROM the daily post can carry ONE photo, the carousel's cover (still 1 post a day, no link, no hashtag).
+# Optimisation: the days alternate text / photo until each kind has MIN_EACH posts since PHOTO_FROM, then the
+# kind with more views per post (Threads insights) wins; without insights the days keep alternating.
+PHOTO_FROM = "2026-11-30"
+MIN_EACH = 5
 STOP_WORDS = ("blocked", "limit", "spam", "restricted", "temporarily", "too soon")
 SINGAPORE = ZoneInfo("Asia/Singapore")
 
@@ -147,11 +153,45 @@ def threads_text(meta: dict, date: str = "") -> str:
     return re.sub(r"\s*#\w+", "", text).strip()
 
 
+def pick_mode(date: str, history: list | None = None) -> str:
+    """'TEXT' or 'IMAGE' for the post of this date. history: [(media_type, views)] of posts since PHOTO_FROM."""
+    if not date or date < PHOTO_FROM:
+        return "TEXT"
+    history = history or []
+    views = {kind: [v for k, v in history if k == kind and v is not None] for kind in ("TEXT", "IMAGE")}
+    if all(len(v) >= MIN_EACH for v in views.values()):
+        text_avg = sum(views["TEXT"]) / len(views["TEXT"])
+        image_avg = sum(views["IMAGE"]) / len(views["IMAGE"])
+        return "IMAGE" if image_avg > text_avg else "TEXT"
+    day = dt.date.fromisoformat(date).toordinal() - dt.date.fromisoformat(PHOTO_FROM).toordinal()
+    return "IMAGE" if day % 2 == 0 else "TEXT"
+
+
+def history_since(user: str, token: str) -> list:
+    """(media_type, views) of the profile's posts since PHOTO_FROM; views None when insights are not readable."""
+    out = []
+    try:
+        posts = call("GET", f"{user}/threads", token, {"fields": "id,media_type,timestamp", "limit": 50}).get("data", [])
+    except RuntimeError:
+        return out
+    for p in posts:
+        if (p.get("timestamp") or "")[:10] < PHOTO_FROM or p.get("media_type") not in ("TEXT_POST", "IMAGE"):
+            continue
+        try:
+            data = call("GET", f"{p['id']}/insights", token, {"metric": "views"}).get("data", [])
+            v = data[0]["values"][0]["value"] if data and data[0].get("values") else data[0].get("total_value", {}).get("value")
+        except (RuntimeError, KeyError, IndexError, TypeError):
+            v = None
+        out.append(("IMAGE" if p["media_type"] == "IMAGE" else "TEXT", v))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--date")
     ap.add_argument("--slot", type=int, default=1)
     ap.add_argument("--out", default=os.path.join(HERE, "out"))
+    ap.add_argument("--base-url", default=None, help="public folder URL of the carousel (photo days use its cover)")
     ap.add_argument("--check-token", action="store_true")
     ap.add_argument("--dry-run", action="store_true", help="every check, nothing published")
     args = ap.parse_args()
@@ -200,8 +240,20 @@ def main():
             G.check_cross_channel()
         except G.Stop as stop:
             sys.exit(str(stop))
-        # Text only (owner, 13 November): no slides, no images, no link.
-        post = call("POST", f"{user}/threads", token, {"media_type": "TEXT", "text": text})
+        # Text only until PHOTO_FROM (owner, 13 November); then text or ONE photo, the cover (owner, 22 November).
+        # Never slides, never a link.
+        mode = pick_mode(args.date, history_since(user, token))
+        params = {"media_type": "TEXT", "text": text}
+        if mode == "IMAGE":
+            cover = os.path.join(folder, (meta.get("slides") or ["slide-01.jpg"])[0])
+            try:
+                url = (args.base_url.rstrip("/") + "/" + os.path.basename(cover)) if args.base_url else IG.upload_temporary(cover)
+                IG.check_public(url)
+                params = {"media_type": "IMAGE", "image_url": url, "text": text}
+            except Exception as error:  # the host failing never stops the post: it goes out as text
+                print(f"photo host failed ({type(error).__name__}), posting text only")
+                mode = "TEXT"
+        post = call("POST", f"{user}/threads", token, params)
         wait_ready(post["id"], token)
         media = call("POST", f"{user}/threads_publish", token, {"creation_id": post["id"]})
         link = call("GET", media["id"], token, {"fields": "permalink"}).get("permalink")
@@ -209,7 +261,7 @@ def main():
         sys.exit(str(stop))
     except RuntimeError as error:
         sys.exit(f"Threads: {error}")
-    json.dump({"media_id": media["id"], "permalink": link}, open(os.path.join(folder, "published-threads.json"), "w"), indent=1)
+    json.dump({"media_id": media["id"], "permalink": link, "mode": mode}, open(os.path.join(folder, "published-threads.json"), "w"), indent=1)
     print(f"published: {link}")
 
 

@@ -38,6 +38,17 @@ class ThreadsRule(unittest.TestCase):
         no_points = dict(meta, points=None)
         self.assertEqual(T.threads_text(no_points), 'A slow Saturday morning sets the tone.')
 
+    def test_photo_experiment(self):
+        self.assertEqual(T.pick_mode('2026-11-29'), 'TEXT')
+        self.assertEqual(T.pick_mode(T.PHOTO_FROM), 'IMAGE')
+        self.assertEqual(T.pick_mode('2026-12-01'), 'TEXT')
+        self.assertEqual(T.pick_mode('2026-12-02'), 'IMAGE')
+        many = [('TEXT', 100)] * 5 + [('IMAGE', 300)] * 5
+        self.assertEqual(T.pick_mode('2026-12-01', many), 'IMAGE')
+        few_text = [('TEXT', 500)] * 5 + [('IMAGE', 100)] * 5
+        self.assertEqual(T.pick_mode('2026-12-02', few_text), 'TEXT')
+        self.assertEqual(T.pick_mode('2026-12-02', [('IMAGE', None)] * 9), 'IMAGE')  # no insights: alternate
+
     def test_text_only_no_slides(self):
         src = open(T.__file__, encoding='utf-8').read()
         self.assertIn('"media_type": "TEXT"', src)

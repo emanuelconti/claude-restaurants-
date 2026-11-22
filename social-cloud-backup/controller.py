@@ -172,7 +172,7 @@ def process_channel(b,channel):
   elif channel=='pinterest':
    script='pinterest_publish.py';args+=['--slot',str(item['slot']),'--publish']
   else:
-   script='threads_publish.py';args+=['--slot',str(item['slot'])]
+   script='threads_publish.py';args+=['--slot',str(item['slot']),'--base-url',asset_base]
   rc,out=run(b,script,*args)
   if channel=='facebook':
    for marker in ('cards_withdrawn:','cards_unavailable:'):
