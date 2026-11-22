@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-25",
+ "title": "Planes de miércoles por la tarde",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Planes de miércoles por la tarde\n\nUn miércoles con plan se hace corto.\n\nIdeas fáciles para la tarde de mitad de semana.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 497 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-01.jpg",
+   "match_error": 0.19,
+   "runner_up": 33.75
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-02.jpg",
+   "match_error": 1.79,
+   "runner_up": 60.09
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-03.jpg",
+   "match_error": 1.82,
+   "runner_up": 48.58
+  },
+  {
+   "unsplash": "1528712306091-ed0763094c98",
+   "slide": "slide-04.jpg",
+   "match_error": 1.18,
+   "runner_up": 51.28
+  },
+  {
+   "unsplash": "1540555700478-4be289fbecef",
+   "slide": "slide-05.jpg",
+   "match_error": 0.64,
+   "runner_up": 29.68
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.36,
+   "runner_up": 22.41
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Un café con un compañero",
+  "Clase de algo nuevo",
+  "Paseo por otro barrio",
+  "Tapa en tu sitio de siempre",
+  "Cena con quien quieras",
+  "end card"
+ ]
+}

@@ -1,0 +1,423 @@
+sp {
+  "title": "Miércoles: mitad de semana, mitad de camino",
+  "hook": "El miércoles es buen día para tomar aire.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para que la mitad de la semana no se haga cuesta arriba.",
+  "points": [
+    [
+      "Mira lo que ya hiciste",
+      [
+        "Dos días bien aprovechados."
+      ],
+      "Orgullo."
+    ],
+    [
+      "Sal a comer fuera",
+      [
+        "Cambiar de aire ayuda."
+      ],
+      "Respiro."
+    ],
+    [
+      "Llama a un amigo",
+      [
+        "Solo para charlar."
+      ],
+      "Ánimo."
+    ],
+    [
+      "Quita una tarea",
+      [
+        "No todo es urgente."
+      ],
+      "Alivio."
+    ],
+    [
+      "Plan pequeño esta noche",
+      [
+        "Algo que te apetezca."
+      ],
+      "Ilusión."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo quedar más con tus amigos",
+  "hook": "Ver a los amigos no debería depender de la suerte.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Trucos sencillos para veros más sin complicaros. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Fijad un día fijo",
+      [
+        "El mismo cada semana."
+      ],
+      "Costumbre."
+    ],
+    [
+      "Planes cortos",
+      [
+        "Una hora también vale."
+      ],
+      "Fácil."
+    ],
+    [
+      "Cerca de casa",
+      [
+        "Sin viajes largos."
+      ],
+      "Sin excusas."
+    ],
+    [
+      "Turnaos para elegir",
+      [
+        "Cada vez uno."
+      ],
+      "Variedad."
+    ],
+    [
+      "Proponlo tú",
+      [
+        "Alguien tiene que empezar."
+      ],
+      "Iniciativa."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cinco formas de desconectar del trabajo",
+  "hook": "Desconectar también se aprende.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Hábitos para que el trabajo no te siga a casa.",
+  "points": [
+    [
+      "Cierra con una lista",
+      [
+        "Lo de mañana, apuntado."
+      ],
+      "Mente libre."
+    ],
+    [
+      "Cambia de ropa",
+      [
+        "Al llegar a casa."
+      ],
+      "Otro modo."
+    ],
+    [
+      "Silencia el correo",
+      [
+        "Hasta mañana."
+      ],
+      "Tranquilidad."
+    ],
+    [
+      "Muévete un poco",
+      [
+        "Un paseo corto."
+      ],
+      "Descarga."
+    ],
+    [
+      "Haz algo con las manos",
+      [
+        "Cocinar, dibujar, ordenar."
+      ],
+      "Presente."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué compartir mesa nos hace bien",
+  "hook": "Comer juntos es mucho más que comer.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Lo que ganamos cuando nos sentamos a la mesa con otros. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Hablamos más",
+      [
+        "Sin pantallas de por medio."
+      ],
+      "Conexión."
+    ],
+    [
+      "Comemos más despacio",
+      [
+        "Y mejor."
+      ],
+      "Salud."
+    ],
+    [
+      "Nos reímos",
+      [
+        "La risa se contagia."
+      ],
+      "Alegría."
+    ],
+    [
+      "Probamos cosas nuevas",
+      [
+        "Del plato del otro."
+      ],
+      "Curiosidad."
+    ],
+    [
+      "Creamos recuerdos",
+      [
+        "Las mejores historias."
+      ],
+      "Vínculo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de miércoles por la tarde",
+  "hook": "Un miércoles con plan se hace corto.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas fáciles para la tarde de mitad de semana.",
+  "points": [
+    [
+      "Un café con un compañero",
+      [
+        "Al salir del trabajo."
+      ],
+      "Cercanía."
+    ],
+    [
+      "Clase de algo nuevo",
+      [
+        "Baile, cerámica, idiomas."
+      ],
+      "Aprender."
+    ],
+    [
+      "Paseo por otro barrio",
+      [
+        "Calles que no conoces."
+      ],
+      "Descubrir."
+    ],
+    [
+      "Tapa en tu sitio de siempre",
+      [
+        "Te reciben con una sonrisa."
+      ],
+      "Hogar."
+    ],
+    [
+      "Cena con quien quieras",
+      [
+        "Sin motivo especial."
+      ],
+      "Disfrutar."
+    ]
+  ]
+}
+
+sp {
+  "title": "Lo que hace volver a un cliente",
+  "hook": "Volvemos donde nos tratan bien.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué repetimos en los sitios que nos gustan. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Recuerdan tu nombre",
+      [
+        "Pequeño gesto, gran efecto."
+      ],
+      "Te sientes visto."
+    ],
+    [
+      "La calidad no cambia",
+      [
+        "Siempre igual de bueno."
+      ],
+      "Confianza."
+    ],
+    [
+      "Un detalle inesperado",
+      [
+        "Una tapa, un postre."
+      ],
+      "Sorpresa."
+    ],
+    [
+      "Buen ambiente",
+      [
+        "Te sientes a gusto."
+      ],
+      "Comodidad."
+    ],
+    [
+      "Traes a tus amigos",
+      [
+        "Y también vuelven."
+      ],
+      "Comunidad."
+    ]
+  ]
+}
+
+sp {
+  "title": "Hábitos para una mañana con energía",
+  "hook": "Cómo empiezas la mañana marca el día.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños hábitos para empezar el día con más energía.",
+  "points": [
+    [
+      "Luz natural",
+      [
+        "Abre la ventana al despertar."
+      ],
+      "Despierta."
+    ],
+    [
+      "Agua primero",
+      [
+        "Antes del café."
+      ],
+      "Activa."
+    ],
+    [
+      "Desayuno de verdad",
+      [
+        "Sentado y sin prisa."
+      ],
+      "Combustible."
+    ],
+    [
+      "Tres minutos de estiramientos",
+      [
+        "Cuello y espalda."
+      ],
+      "Cuerpo listo."
+    ],
+    [
+      "Una meta para hoy",
+      [
+        "Solo una."
+      ],
+      "Foco."
+    ]
+  ]
+}
+
+sp {
+  "title": "Miércoles por la noche: recarga para el finde",
+  "hook": "Una buena noche de miércoles te deja listo para el resto.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas sencillas para cuidarte un poco a mitad de semana.",
+  "points": [
+    [
+      "Cena tranquila",
+      [
+        "Con algo que te guste."
+      ],
+      "Mimo."
+    ],
+    [
+      "Una charla larga",
+      [
+        "Con alguien de confianza."
+      ],
+      "Compañía."
+    ],
+    [
+      "Prepara mañana",
+      [
+        "Ropa y bolsa listas."
+      ],
+      "Calma."
+    ],
+    [
+      "Lee un rato",
+      [
+        "En papel."
+      ],
+      "Desconexión."
+    ],
+    [
+      "Dormir temprano",
+      [
+        "Sin culpa."
+      ],
+      "Recarga."
+    ]
+  ]
+}
