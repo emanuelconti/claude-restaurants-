@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to use Wednesday to fix what slipped",
+  "hook": "Midweek is the best time to correct course.",
+  "photos": "work",
+  "caption": "A short midweek routine to catch what slipped before Friday. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "List what slipped",
+      [
+        "Be honest, no blame."
+      ],
+      "Clarity."
+    ],
+    [
+      "Pick the one that matters",
+      [
+        "Only one."
+      ],
+      "Focus."
+    ],
+    [
+      "Ask for help today",
+      [
+        "Not on Friday."
+      ],
+      "Speed."
+    ],
+    [
+      "Move one meeting",
+      [
+        "Free a block."
+      ],
+      "Space."
+    ],
+    [
+      "Tell the team",
+      [
+        "Short update."
+      ],
+      "Aligned."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to write a clear product update",
+  "hook": "A good update makes customers feel heard.",
+  "photos": "work",
+  "caption": "How to tell customers what changed in a few clear lines. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with their problem",
+      [
+        "Not your feature."
+      ],
+      "Relevant."
+    ],
+    [
+      "Say what changed",
+      [
+        "One sentence."
+      ],
+      "Clear."
+    ],
+    [
+      "Show it",
+      [
+        "A screenshot or GIF."
+      ],
+      "Visible."
+    ],
+    [
+      "Thank who asked",
+      [
+        "By name if you can."
+      ],
+      "Warm."
+    ],
+    [
+      "Invite feedback",
+      [
+        "One question."
+      ],
+      "Loop."
+    ]
+  ]
+}
+
+sin {
+  "title": "Why early teams should talk to users weekly",
+  "hook": "Weekly conversations keep the product honest.",
+  "photos": "work",
+  "caption": "Why a small team should speak to users every single week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Problems change",
+      [
+        "Keep up with them."
+      ],
+      "Fresh."
+    ],
+    [
+      "You hear their words",
+      [
+        "Use them in your copy."
+      ],
+      "Better messages."
+    ],
+    [
+      "You catch churn early",
+      [
+        "Before they leave."
+      ],
+      "Retention."
+    ],
+    [
+      "The team stays close",
+      [
+        "To real people."
+      ],
+      "Empathy."
+    ],
+    [
+      "Ideas come from them",
+      [
+        "Not only from you."
+      ],
+      "Better roadmap."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to run a simple weekly sales review",
+  "hook": "A weekly review keeps sales from drifting.",
+  "photos": "work",
+  "caption": "A fifteen minute format to review sales with your team. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Look at new leads",
+      [
+        "Where they came from."
+      ],
+      "Sources."
+    ],
+    [
+      "Check open deals",
+      [
+        "What is stuck."
+      ],
+      "Pipeline."
+    ],
+    [
+      "Celebrate one win",
+      [
+        "Even a small one."
+      ],
+      "Morale."
+    ],
+    [
+      "Learn from one loss",
+      [
+        "What to change."
+      ],
+      "Lesson."
+    ],
+    [
+      "Set next week's focus",
+      [
+        "One channel."
+      ],
+      "Direction."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to keep a small team motivated",
+  "hook": "Motivation grows from progress you can see.",
+  "photos": "work",
+  "caption": "Simple ways to keep an early team energised. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Make progress visible",
+      [
+        "A shared board."
+      ],
+      "Momentum."
+    ],
+    [
+      "Celebrate small wins",
+      [
+        "Every week."
+      ],
+      "Energy."
+    ],
+    [
+      "Share customer stories",
+      [
+        "Real people helped."
+      ],
+      "Purpose."
+    ],
+    [
+      "Give real ownership",
+      [
+        "Not just tasks."
+      ],
+      "Trust."
+    ],
+    [
+      "Protect rest",
+      [
+        "No late night pings."
+      ],
+      "Sustainable."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to prepare a short pitch",
+  "hook": "A short pitch opens more doors than a long deck.",
+  "photos": "work",
+  "caption": "How to explain your startup clearly in under a minute. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with the problem",
+      [
+        "Who has it."
+      ],
+      "Hook."
+    ],
+    [
+      "Say what you do",
+      [
+        "One sentence."
+      ],
+      "Clear."
+    ],
+    [
+      "Show one proof",
+      [
+        "A user, a number, a quote."
+      ],
+      "Credible."
+    ],
+    [
+      "Say what you need",
+      [
+        "Intro, advice, funding."
+      ],
+      "Ask."
+    ],
+    [
+      "Practise out loud",
+      [
+        "Ten times."
+      ],
+      "Confident."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to say no to a customer request",
+  "hook": "Not every request belongs in your product.",
+  "photos": "work",
+  "caption": "How to decline a feature request and keep the customer happy. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Thank them",
+      [
+        "They cared enough to ask."
+      ],
+      "Respect."
+    ],
+    [
+      "Ask about the need",
+      [
+        "Behind the request."
+      ],
+      "Insight."
+    ],
+    [
+      "Explain your focus",
+      [
+        "Briefly."
+      ],
+      "Honest."
+    ],
+    [
+      "Offer an alternative",
+      [
+        "If you have one."
+      ],
+      "Helpful."
+    ],
+    [
+      "Keep the door open",
+      [
+        "Things change."
+      ],
+      "Relationship."
+    ]
+  ]
+}
+
+sin {
+  "title": "A midweek check on your own energy",
+  "hook": "Founders run on energy, not only on time.",
+  "photos": "work",
+  "caption": "A quick midweek check to keep your energy steady. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "How did you sleep",
+      [
+        "Be honest."
+      ],
+      "Baseline."
+    ],
+    [
+      "When did you last move",
+      [
+        "Today counts."
+      ],
+      "Body."
+    ],
+    [
+      "Who did you talk to",
+      [
+        "Outside work."
+      ],
+      "Balance."
+    ],
+    [
+      "What drained you",
+      [
+        "Name it."
+      ],
+      "Awareness."
+    ],
+    [
+      "Plan one easy evening",
+      [
+        "This week."
+      ],
+      "Recharge."
+    ]
+  ]
+}

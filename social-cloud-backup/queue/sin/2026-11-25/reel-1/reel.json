@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-25",
+ "title": "How to use Wednesday to fix what slipped",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "How to use Wednesday to fix what slipped\n\nMidweek is the best time to correct course.\n\nA short midweek routine to catch what slipped before Friday. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "publishers/gms/reel.py soft_beat() original warm beat, seed 634 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-01.jpg",
+   "match_error": 0.15,
+   "runner_up": 15.05
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 19.2
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 33.74
+  },
+  {
+   "unsplash": "1541807084-5c52b6b3adef",
+   "slide": "slide-04.jpg",
+   "match_error": 0.19,
+   "runner_up": 44.49
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-05.jpg",
+   "match_error": 0.61,
+   "runner_up": 33.0
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-06.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  }
+ ],
+ "scenes": [
+  "hook",
+  "List what slipped",
+  "Pick the one that matters",
+  "Ask for help today",
+  "Move one meeting",
+  "Tell the team",
+  "end card"
+ ]
+}
