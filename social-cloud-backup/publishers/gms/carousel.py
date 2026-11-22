@@ -322,7 +322,8 @@ def render(date: dt.date, out: str, cache: str, slot: int = 1, topic: dict | Non
         name = f"slide-{i:02d}.jpg"
         im.save(os.path.join(folder, name), "JPEG", quality=90, optimize=True, progressive=True)
         names.append(name)
-    meta = dict(date=car["date"], slot=slot, title=car["title"], slides=names, caption=car["caption"])
+    meta = dict(date=car["date"], slot=slot, title=car["title"], slides=names, caption=car["caption"],
+                points=car["points"])  # Threads posts the ideas, not the title (owner, 22 November)
     with open(os.path.join(folder, "carousel.json"), "w", encoding="utf-8") as fh:
         json.dump(meta, fh, ensure_ascii=False, indent=1)
     return dict(meta, folder=folder)

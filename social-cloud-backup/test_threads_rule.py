@@ -23,6 +23,21 @@ class ThreadsRule(unittest.TestCase):
         self.assertNotIn('http', text)
         self.assertNotIn('#', text)
 
+    def test_post_is_the_ideas_not_the_title(self):
+        meta = {'title': 'Saturday morning ideas for a good day',
+                'caption': 'Saturday morning ideas for a good day\n\nA slow Saturday morning sets the tone.\n\n'
+                           'Discover hoodies at https://goodmessagestudio.com/.\n\nSave it.\n\n#GoodMessageStudio',
+                'points': [['Wake up without an alarm', ['x'], 'y'], ['Breakfast at a kopitiam', ['x'], 'y'],
+                           ['A walk in a park', ['x'], 'y'], ['Call your family', ['x'], 'y'],
+                           ['Plan nothing until noon', ['x'], 'y']]}
+        text = T.threads_text(meta)
+        self.assertEqual(text, 'A slow Saturday morning sets the tone. Wake up without an alarm. '
+                               'Breakfast at a kopitiam. A walk in a park. Plan nothing until noon.')
+        self.assertNotIn('Saturday morning ideas', text)
+        self.assertLessEqual(len(text), 280)
+        no_points = dict(meta, points=None)
+        self.assertEqual(T.threads_text(no_points), 'A slow Saturday morning sets the tone.')
+
     def test_text_only_no_slides(self):
         src = open(T.__file__, encoding='utf-8').read()
         self.assertIn('"media_type": "TEXT"', src)

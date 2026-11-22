@@ -100,6 +100,53 @@ def short_caption(caption: str) -> str:
     return text if len(text) <= 280 else text[:277].rsplit(" ", 1)[0] + "..."
 
 
+def editorial_topic(date: str, title: str) -> dict | None:
+    """The written topic of that day's carousel (editorial/gms-<date>.txt holds one JSON object per slot)."""
+    try:
+        raw = open(os.path.join(HERE, "..", "..", "editorial", f"gms-{date}.txt"), encoding="utf-8").read()
+    except OSError:
+        return None
+    dec, i = json.JSONDecoder(), 0
+    while i < len(raw):
+        while i < len(raw) and raw[i].isspace():
+            i += 1
+        if i >= len(raw):
+            break
+        try:
+            obj, i = dec.raw_decode(raw, i)
+        except ValueError:
+            return None
+        if isinstance(obj, dict) and obj.get("title") == title:
+            return obj
+    return None
+
+
+def threads_text(meta: dict, date: str = "") -> str:
+    """The post itself, not the carousel's title (owner, 22 November: the profile showed only titles).
+
+    The hook, then the carousel's ideas as short sentences, e.g. "A slow Saturday morning sets the tone.
+    Wake up without an alarm. Breakfast at a kopitiam. A walk in a park. Plan nothing until noon."
+    Still 1 post a day, text only, no link, no hashtags, no shop line, at most 280 characters.
+    """
+    topic = {"points": meta["points"]} if meta.get("points") else (editorial_topic(date, meta.get("title", "")) or {})
+    parts = [p.strip() for p in meta.get("caption", "").split("\n\n") if p.strip()]
+    hook = (topic.get("hook") or "").strip()
+    if not hook and len(parts) > 1 and parts[0] == (meta.get("title") or "").strip():
+        hook = parts[1]
+    heads = [p[0].strip().rstrip(".!") for p in (topic.get("points") or [])
+             if isinstance(p, (list, tuple)) and p and isinstance(p[0], str) and p[0].strip()]
+    if not hook or "http" in hook or hook.startswith("#"):
+        return short_caption(meta.get("caption", ""))
+    picks = heads[:3] + ([heads[-1]] if len(heads) > 3 else [])
+    text = hook if hook.endswith((".", "!", "?")) else hook + "."
+    for head in picks:
+        line = f"{head}."
+        if "http" in line or "goodmessagestudio" in line.lower() or len(text) + 1 + len(line) > 280:
+            break
+        text += " " + line
+    return re.sub(r"\s*#\w+", "", text).strip()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--date")
@@ -122,7 +169,7 @@ def main():
             ap.error("--date is needed to publish")
         folder = os.path.join(args.out, args.date, f"carousel-{args.slot}")
         meta = json.load(open(os.path.join(folder, "carousel.json"), encoding="utf-8"))
-        text = short_caption(meta["caption"])
+        text = threads_text(meta, args.date)
         first = text.split("\n", 1)[0].strip()
         done = next((p for p in posts if (p.get("text") or "").strip().startswith(first)), None)
         if done:
