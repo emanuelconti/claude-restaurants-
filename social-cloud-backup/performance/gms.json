@@ -6,6 +6,41 @@
       "reason": "RuntimeError",
       "posts": [
         {
+          "title": "Monday night routine to rest well",
+          "stamp": "2026-11-23T15:43:28+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1451752790445849"
+        },
+        {
+          "title": "Thoughtful gifts to start someone's week",
+          "stamp": "2026-11-23T11:02:12+0000",
+          "url": "https://www.facebook.com/reel/1707604457635221/"
+        },
+        {
+          "title": "Words to cheer up a friend on Monday",
+          "stamp": "2026-11-23T07:35:52+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1451354810485647"
+        },
+        {
+          "title": "Small ways to make a workday lighter",
+          "stamp": "2026-11-23T06:30:47+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1451312620489866"
+        },
+        {
+          "title": "Easy weekday lunch ideas in Singapore",
+          "stamp": "2026-11-23T04:51:16+0000",
+          "url": "https://www.facebook.com/reel/1462086102014309/"
+        },
+        {
+          "title": "After work plans with friends in Singapore",
+          "stamp": "2026-11-23T02:50:18+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1451165573837904"
+        },
+        {
+          "title": "Monday reminders for a kind week",
+          "stamp": "2026-11-23T00:37:15+0000",
+          "url": "https://www.facebook.com/reel/1134530399424718/"
+        },
+        {
           "title": "Sunday night routine for a fresh start",
           "stamp": "2026-11-22T15:03:50+0000",
           "url": "https://www.facebook.com/1429179606036501/posts/1450669973887464"
@@ -94,47 +129,84 @@
           "title": "Friday lunch ideas to end the week well",
           "stamp": "2026-11-20T04:42:59+0000",
           "url": "https://www.facebook.com/reel/1564861738795749/"
-        },
-        {
-          "title": "Fun Friday night plans in Singapore",
-          "stamp": "2026-11-20T02:18:18+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1447958054158656"
-        },
-        {
-          "title": "Friday reminders before the weekend",
-          "stamp": "2026-11-20T00:40:42+0000",
-          "url": "https://www.facebook.com/reel/2011372593155382/"
-        },
-        {
-          "title": "Thursday night thoughts to slow down",
-          "stamp": "2026-11-19T14:44:18+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1447488394205622"
-        },
-        {
-          "title": "Gift ideas for a friend who loves coffee",
-          "stamp": "2026-11-19T11:00:21+0000",
-          "url": "https://www.facebook.com/reel/1460573912135784/"
-        },
-        {
-          "title": "What to say when a friend shares good news",
-          "stamp": "2026-11-19T07:23:17+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1447157290905399"
-        },
-        {
-          "title": "Small kindnesses that brighten someone's day",
-          "stamp": "2026-11-19T06:20:13+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1447117797576015"
-        },
-        {
-          "title": "Lunch with colleagues you do not know well",
-          "stamp": "2026-11-19T04:39:16+0000",
-          "url": "https://www.facebook.com/reel/1411662087403727/"
         }
       ]
     },
     "youtube": {
       "availability": "available",
       "posts": [
+        {
+          "title": "Monday night routine to rest well | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T13:58:45Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/_zvpGH4n3RE"
+        },
+        {
+          "title": "How to keep in touch with old friends | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T13:06:47Z",
+          "visibility": "public",
+          "views": "5",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/qeprVyPzbfc"
+        },
+        {
+          "title": "Thoughtful gifts to start someone's week | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T11:02:01Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/jAUyyE40bJI"
+        },
+        {
+          "title": "Words to cheer up a friend on Monday | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T07:21:28Z",
+          "visibility": "public",
+          "views": "3",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/HQ7bFpi6adA"
+        },
+        {
+          "title": "Small ways to make a workday lighter | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T06:30:53Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/s0feETCZu2Y"
+        },
+        {
+          "title": "Easy weekday lunch ideas in Singapore | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T04:51:08Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/h40pc4TkgCg"
+        },
+        {
+          "title": "After work plans with friends in Singapore | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T02:50:23Z",
+          "visibility": "public",
+          "views": "4",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/CTizDrQYZLQ"
+        },
+        {
+          "title": "Monday reminders for a kind week | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-23T00:37:03Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/WGQjwIelmA8"
+        },
         {
           "title": "Sunday night routine for a fresh start | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T13:22:26Z",
@@ -157,7 +229,7 @@
           "title": "Thoughtful gifts for a friend who works too hard | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T10:53:30Z",
           "visibility": "public",
-          "views": "4",
+          "views": "5",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/B3z4N6-utgQ"
@@ -166,7 +238,7 @@
           "title": "Words that help a friend before a new week | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T07:31:11Z",
           "visibility": "public",
-          "views": "14",
+          "views": "15",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/dLFbDx2Stgs"
@@ -184,7 +256,7 @@
           "title": "Sunday lunch ideas for the whole family | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T04:22:08Z",
           "visibility": "public",
-          "views": "4",
+          "views": "6",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/hGoQV4yh8r4"
@@ -193,7 +265,7 @@
           "title": "Sunday brunch ideas with friends in Singapore | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T02:19:33Z",
           "visibility": "public",
-          "views": "1",
+          "views": "2",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/t1yxdeN6HfM"
@@ -202,7 +274,7 @@
           "title": "Sunday reminders for a gentle week ahead | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-22T00:22:48Z",
           "visibility": "public",
-          "views": "1",
+          "views": "0",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/ApB9QgeCilE"
@@ -220,7 +292,7 @@
           "title": "Simple ways to feel less lonely | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-21T12:37:23Z",
           "visibility": "public",
-          "views": "4",
+          "views": "3",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/cBVmaoCRbdg"
@@ -238,7 +310,7 @@
           "title": "Messages to send a friend you miss | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-21T07:55:09Z",
           "visibility": "public",
-          "views": "26",
+          "views": "33",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/CFTB473WZqs"
@@ -247,7 +319,7 @@
           "title": "How to be a good host this weekend | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-21T06:57:24Z",
           "visibility": "public",
-          "views": "2",
+          "views": "0",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/rhR1HhVPTSc"
@@ -265,7 +337,7 @@
           "title": "Weekend outings with friends that cost little | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-21T02:36:34Z",
           "visibility": "public",
-          "views": "3",
+          "views": "4",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/6DTBmaKFW8U"
@@ -310,7 +382,7 @@
           "title": "How to cheer up a friend after a long week | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-20T08:04:00Z",
           "visibility": "public",
-          "views": "9",
+          "views": "11",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/930-64yxxNg"
@@ -332,84 +404,23 @@
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/6dJUvbXyX3M"
-        },
-        {
-          "title": "Fun Friday night plans in Singapore | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-20T02:18:26Z",
-          "visibility": "public",
-          "views": "1",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/6-LQojeWjpQ"
-        },
-        {
-          "title": "Friday reminders before the weekend | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-20T00:40:41Z",
-          "visibility": "public",
-          "views": "0",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/SHRsa1CN7eY"
-        },
-        {
-          "title": "Thursday night thoughts to slow down | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T13:32:38Z",
-          "visibility": "public",
-          "views": "0",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/Z3b-uu6LdS0"
-        },
-        {
-          "title": "How to keep a friendship going when life gets busy | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T12:42:46Z",
-          "visibility": "public",
-          "views": "1",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/VYwoCYLoW-o"
-        },
-        {
-          "title": "Gift ideas for a friend who loves coffee | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T11:00:12Z",
-          "visibility": "public",
-          "views": "63",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/mD5IWtk2xNs"
-        },
-        {
-          "title": "What to say when a friend shares good news | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T07:23:23Z",
-          "visibility": "public",
-          "views": "4",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/Exze0ZPqztk"
-        },
-        {
-          "title": "Small kindnesses that brighten someone's day | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T06:20:11Z",
-          "visibility": "public",
-          "views": "2",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/uoGgvUeSjS4"
-        },
-        {
-          "title": "Lunch with colleagues you do not know well | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-19T04:39:05Z",
-          "visibility": "public",
-          "views": "2",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/Pd-S5DLM6Qs"
         }
       ]
     },
     "threads": {
       "availability": "available",
       "posts": [
+        {
+          "title": "Start the week gently and kindly. Be patient with yourself. Smile at a colleague. Drink water often. Text a friend tonight.",
+          "stamp": "2026-11-23T13:06:18+0000",
+          "url": "https://www.threads.com/@goodmessage_studio/post/DgFcsfyG1ln",
+          "public_interactions": {
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0
+          }
+        },
         {
           "title": "Start the new week with kindness to yourself. Rest without guilt. Plan one nice thing. Call someone you love. Sleep early.",
           "stamp": "2026-11-22T12:32:12+0000",
@@ -618,17 +629,6 @@
             "reposts": 0,
             "quotes": 0
           }
-        },
-        {
-          "title": "5 details that make a small gift personal",
-          "stamp": "2026-11-06T06:41:30+0000",
-          "url": "https://www.threads.com/@goodmessage_studio/post/DfY_IvBEXW3",
-          "public_interactions": {
-            "likes": 0,
-            "replies": 0,
-            "reposts": 0,
-            "quotes": 0
-          }
         }
       ]
     }
@@ -637,6 +637,70 @@
   "account": "goodmessage_studio",
   "timezone": "Asia/Singapore",
   "posts": [
+    {
+      "title": "Monday night routine to rest well",
+      "stamp": "2026-11-23T21:58:19+08:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgFipKyDeir/"
+    },
+    {
+      "title": "How to keep in touch with old friends",
+      "stamp": "2026-11-23T21:06:01+08:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgFcnW2Dmdt/"
+    },
+    {
+      "title": "Thoughtful gifts to start someone's week",
+      "stamp": "2026-11-23T19:01:20+08:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgFOWc-kexw/"
+    },
+    {
+      "title": "Words to cheer up a friend on Monday",
+      "stamp": "2026-11-23T15:20:47+08:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgE1JtGjQfu/"
+    },
+    {
+      "title": "Small ways to make a workday lighter",
+      "stamp": "2026-11-23T14:30:23+08:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgEvYqfl0Pc/"
+    },
+    {
+      "title": "Easy weekday lunch ideas in Singapore",
+      "stamp": "2026-11-23T12:50:37+08:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgEj7RhEmYD/"
+    },
+    {
+      "title": "After work plans with friends in Singapore",
+      "stamp": "2026-11-23T10:49:56+08:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgEWJt9F-cu/"
+    },
+    {
+      "title": "Monday reminders for a kind week",
+      "stamp": "2026-11-23T08:36:31+08:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgEG2LkjhzU/"
+    },
     {
       "title": "Sunday night routine for a fresh start",
       "stamp": "2026-11-22T21:21:48+08:00",
@@ -972,84 +1036,20 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df1tV6ECANa/"
-    },
-    {
-      "title": "Words that help a friend before an exam",
-      "stamp": "2026-11-17T15:22:31+08:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df1Yk3Al9Wc/"
-    },
-    {
-      "title": "Small habits that make you a better listener",
-      "stamp": "2026-11-17T14:30:33+08:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df1Solzl_2F/"
-    },
-    {
-      "title": "A simple lunch break reset",
-      "stamp": "2026-11-17T12:24:03+08:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df1EHkkAAcn/"
-    },
-    {
-      "title": "How to plan a cosy movie night with friends",
-      "stamp": "2026-11-17T10:37:34+08:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df039q8jbWF/"
-    },
-    {
-      "title": "Tuesday reminders for a kinder week",
-      "stamp": "2026-11-17T09:46:22+08:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df0yEoxEoFZ/"
-    },
-    {
-      "title": "End your Monday on a kind note",
-      "stamp": "2026-11-16T21:52:35+08:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DfzgbL1ESEs/"
-    },
-    {
-      "title": "Reasons to say thank you more often",
-      "stamp": "2026-11-16T20:59:18+08:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfzaSGvCtDR/"
-    },
-    {
-      "title": "Evening habits that help you sleep better",
-      "stamp": "2026-11-16T18:19:17+08:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DfzH-fVgL3u/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-23",
+  "market_date": "2026-11-24",
   "mature_hour_summary": [
     {
       "local_hour": 8,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 4,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 9,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 10,
