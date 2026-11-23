@@ -1,0 +1,479 @@
+{
+  "title": "Thursday ideas to cheer up your team",
+  "hook": "A small gesture can lift the whole office.",
+  "photos": "life",
+  "points": [
+    [
+      "Bring kueh to share",
+      [
+        "A sweet surprise."
+      ],
+      "Joy."
+    ],
+    [
+      "Write a thank you note",
+      [
+        "For one colleague."
+      ],
+      "Seen."
+    ],
+    [
+      "Lunch together",
+      [
+        "Away from desks."
+      ],
+      "Bond."
+    ],
+    [
+      "Share a funny moment",
+      [
+        "Laughter helps."
+      ],
+      "Light."
+    ],
+    [
+      "Leave on time together",
+      [
+        "Good habit."
+      ],
+      "Balance."
+    ]
+  ],
+  "caption": "A small gesture can lift the whole office. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #WorkLife #Kindness #SGLife",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "Cosy places to catch up with friends",
+  "hook": "The best talks happen in cosy corners.",
+  "photos": "life",
+  "points": [
+    [
+      "A quiet café",
+      [
+        "With soft chairs."
+      ],
+      "Calm."
+    ],
+    [
+      "A hawker on a cool night",
+      [
+        "Simple and warm."
+      ],
+      "Classic."
+    ],
+    [
+      "A park bench",
+      [
+        "With takeaway drinks."
+      ],
+      "Fresh."
+    ],
+    [
+      "Someone's home",
+      [
+        "Slippers on."
+      ],
+      "Cosy."
+    ],
+    [
+      "A dessert place",
+      [
+        "Something sweet to share."
+      ],
+      "Sweet."
+    ]
+  ],
+  "caption": "The best talks happen in cosy corners. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGFriends #Cosy #Singapore",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Kind words for a friend going through a lot",
+  "hook": "Some days need extra gentleness.",
+  "photos": "life",
+  "points": [
+    [
+      "I am proud of you",
+      [
+        "Say it plainly."
+      ],
+      "Support."
+    ],
+    [
+      "Take your time",
+      [
+        "No rush."
+      ],
+      "Patience."
+    ],
+    [
+      "You are not alone",
+      [
+        "Simple truth."
+      ],
+      "Comfort."
+    ],
+    [
+      "Call me anytime",
+      [
+        "And mean it."
+      ],
+      "Presence."
+    ],
+    [
+      "Rest is allowed",
+      [
+        "Gentle reminder."
+      ],
+      "Care."
+    ]
+  ],
+  "caption": "Some days need extra gentleness. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Kindness #Friendship #SGFriends",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
+
+{
+  "title": "How to have a slow, kind evening",
+  "hook": "A slow evening is a gift to yourself.",
+  "photos": "life",
+  "points": [
+    [
+      "Put on your softest hoodie",
+      [
+        "Comfort first."
+      ],
+      "Cosy."
+    ],
+    [
+      "Cook something simple",
+      [
+        "Or tapao your favourite."
+      ],
+      "Easy."
+    ],
+    [
+      "Call someone you love",
+      [
+        "Just to talk."
+      ],
+      "Warm."
+    ],
+    [
+      "A short walk",
+      [
+        "Night air."
+      ],
+      "Calm."
+    ],
+    [
+      "Early bedtime",
+      [
+        "No guilt."
+      ],
+      "Rest."
+    ]
+  ],
+  "caption": "A slow evening is a gift to yourself. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SelfCare #SlowLiving #Singapore",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg"
+  ]
+}
+
+{
+  "title": "Weeknight supper ideas with friends",
+  "hook": "Late supper with friends is a Singapore classic.",
+  "photos": "life",
+  "points": [
+    [
+      "Prata after dinner",
+      [
+        "Crispy and warm."
+      ],
+      "Classic."
+    ],
+    [
+      "Bak kut teh",
+      [
+        "Comfort in a bowl."
+      ],
+      "Warm."
+    ],
+    [
+      "Dessert stall",
+      [
+        "Tau suan or ice kachang."
+      ],
+      "Sweet."
+    ],
+    [
+      "Satay by the sea",
+      [
+        "Breezy nights."
+      ],
+      "Fun."
+    ],
+    [
+      "Share everything",
+      [
+        "More dishes, more fun."
+      ],
+      "Together."
+    ]
+  ],
+  "caption": "Late supper with friends is a Singapore classic. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Supper #SGFood #SGFriends",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Gifts that feel personal",
+  "hook": "Personal gifts are the ones people keep.",
+  "photos": "life",
+  "points": [
+    [
+      "A hoodie with their words",
+      [
+        "A message they love."
+      ],
+      "Personal."
+    ],
+    [
+      "A framed photo",
+      [
+        "A shared moment."
+      ],
+      "Memory."
+    ],
+    [
+      "A playlist",
+      [
+        "Songs that remind you of them."
+      ],
+      "Thoughtful."
+    ],
+    [
+      "Their favourite snack",
+      [
+        "With a note."
+      ],
+      "Sweet."
+    ],
+    [
+      "A day out",
+      [
+        "Planned by you."
+      ],
+      "Time."
+    ]
+  ],
+  "caption": "Personal gifts are the ones people keep. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #GiftIdeas #Personal #SGGifts",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "How to reconnect with a friend",
+  "hook": "It is never too late to say hi.",
+  "photos": "life",
+  "points": [
+    [
+      "Send a simple hello",
+      [
+        "No pressure."
+      ],
+      "Easy."
+    ],
+    [
+      "Mention a memory",
+      [
+        "Something you shared."
+      ],
+      "Warm."
+    ],
+    [
+      "Suggest a short meet",
+      [
+        "Kopi is enough."
+      ],
+      "Light."
+    ],
+    [
+      "Listen more",
+      [
+        "Catch up properly."
+      ],
+      "Care."
+    ],
+    [
+      "Keep in touch after",
+      [
+        "A small habit."
+      ],
+      "Lasting."
+    ]
+  ],
+  "caption": "It is never too late to say hi. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Friendship #Reconnect #SGFriends",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Thursday night routine before the weekend",
+  "hook": "Rest well tonight and Friday will be easier.",
+  "photos": "life",
+  "points": [
+    [
+      "Tidy your bag",
+      [
+        "Ready for tomorrow."
+      ],
+      "Calm."
+    ],
+    [
+      "Comfy hoodie on",
+      [
+        "Instant cosy."
+      ],
+      "Relax."
+    ],
+    [
+      "Light dinner",
+      [
+        "Early if you can."
+      ],
+      "Easy."
+    ],
+    [
+      "Plan one weekend joy",
+      [
+        "Something to look forward to."
+      ],
+      "Smile."
+    ],
+    [
+      "Sleep a bit earlier",
+      [
+        "You deserve it."
+      ],
+      "Rest."
+    ]
+  ],
+  "caption": "Rest well tonight and Friday will be easier. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #EveningRoutine #SelfCare #SGLife",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
