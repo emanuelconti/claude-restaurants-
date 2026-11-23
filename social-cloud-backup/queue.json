@@ -14165,5 +14165,189 @@
       "slide-07.jpg": "ccfb4fd34dcd84cd95a13cf7604a9a7096742b7c2145dbaab3036f11df4c32f3"
     },
     "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026"
+  },
+  {
+    "id": "sin-2026-11-26-1",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 1,
+    "title": "How to finish the week strong on Thursday",
+    "folder": "queue/sin/2026-11-26/carousel-1",
+    "sha256": {
+      "carousel.json": "40dde38898b785a03c3a6313d7914c5c6cec77c6caa3335f477abc7e0438f997",
+      "slide-01.jpg": "adc2180587cfe61355c362ea3dc918dcceac9beee9632a5a02d3fc22767d8636",
+      "slide-02.jpg": "737755e7c3a7112b8b4120fe167bbf86dc3aaf15f5d9314ec5704c4375a59094",
+      "slide-03.jpg": "7243408c9bb159c376bb2b7291eb76d47ee42dea260d34885c50e61d4f5215f7",
+      "slide-04.jpg": "8b8d515fc7717f9645366c39f637699ab90ee858ea19799d2aa3dcb3a86c2ba9",
+      "slide-05.jpg": "2a7c0b689a89dd1247c29fa99d369099159e1ed0870a2f967b84282c0ab4f21f",
+      "slide-06.jpg": "50ec255ad6dabde98f51d3a7f0c05300915fab230a374e4f8637ae8b7a358833",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "c5042997fe2edb42f3efaed4aa0726ffd1f148b78a3a209cec955c2f1036e565",
+      "reel.json": "5ab0038c41f3b7a554dbc5b291efd351fffa67e3b4db6a4580a989ed87fcc1d7",
+      "cover.jpg": "e609fa2d964dda7e6bb36b49d1bda72f7af9b131b2c8a96ceb0cf9dded793cbd"
+    },
+    "reel_qa": "Contact sheet inspected 23 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-26-2",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 2,
+    "title": "How to ask customers for a testimonial",
+    "folder": "queue/sin/2026-11-26/carousel-2",
+    "sha256": {
+      "carousel.json": "6d7258de2305ac56f3e6f768ad8769da2646d7050a198ac8e6cab86315106c40",
+      "slide-01.jpg": "6a43fedd5cffd33a765540100fe67d0fce97a1a70a16993a9010ea4bbb06cc5a",
+      "slide-02.jpg": "04a45816fa493a8f719da4813b964584a9b7d63c841e223078869f72efcd7b46",
+      "slide-03.jpg": "45aa7c2058978216b03deca90a86754c42f82dac0c57de7b9f8b9646906a2d1c",
+      "slide-04.jpg": "70fe9a1e33b5ebb11ece2402ebc9ee4abfba4af3a88d2767419b974e5aee76e4",
+      "slide-05.jpg": "4a3e2738904dc7c57952f6c3a9fccf97c430005e4cdd70d313862cccf38936eb",
+      "slide-06.jpg": "b253390bf882af7cafbc7c3f61be0882bb98c4c19b0d16a501732a89cd415599",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-26-3",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 3,
+    "title": "Why founders should track their time",
+    "folder": "queue/sin/2026-11-26/carousel-3",
+    "sha256": {
+      "carousel.json": "63981b85a3113e6c8a19557a4201f3090ed6cb5bd002f30860544f47a99d0a1a",
+      "slide-01.jpg": "fbe94bb6aff0f2e870e4d644a927f20fc5bb66aa74aa39521e4b2b410a481d96",
+      "slide-02.jpg": "0117ab06a7005f5b7c716a56b44913459175638dfc011214c00739ea776f6227",
+      "slide-03.jpg": "e7008737a9866a4b16c4e6d64ad8e357e90401434f04e319b623a291727ded51",
+      "slide-04.jpg": "bead7e52b01474a0c0378ae6fb7b8fed84486ee0c20a93c0b5b6125c968116f4",
+      "slide-05.jpg": "804fe78bca203854c46e287e2a90f9da51e3fdcc3d314e13bef3a0cba6316be7",
+      "slide-06.jpg": "7b55e3eadd1daa4596d10d0d5a0ca8f9f20dd8ae4da888ecfadff20368ba274a",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "adb643882c3f01fe46d036ed9a04408289f3397f0b71257b493f215a869262b5",
+      "reel.json": "27eb1b8ac11672e78b3824235ae93ca2cb38933a8e45e864858185421f6982c7",
+      "cover.jpg": "9a3d23f1636f051514db72a5bd9073ab728caadb5e4a00f79ecf78ea15f4dca3"
+    },
+    "reel_qa": "Contact sheet inspected 23 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-26-4",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 4,
+    "title": "How to plan a simple launch",
+    "folder": "queue/sin/2026-11-26/carousel-4",
+    "sha256": {
+      "carousel.json": "540b3b7892306b713064cf6c45b9e5483ffedc39f154eeadae27d3d3f57e5b3d",
+      "slide-01.jpg": "597dae07724242771a086e935ea8f6aed2faaced831465d88301377e0d792551",
+      "slide-02.jpg": "80a9a71941aba6935ab85919b8732abcac2d8fc6c54e610eff875cf483c15503",
+      "slide-03.jpg": "dc9ede5744f04778eac94a4780afc14cf44147c38d1d6a1895c3e19dbc88650e",
+      "slide-04.jpg": "91ce0c08f6aefbc248dbef68f87e48a71677c6393fa9e84fd281ad3100435897",
+      "slide-05.jpg": "649da82a7b7ab874ec00a0103943726ffe83c15da7b59da55f5613246b5a89c3",
+      "slide-06.jpg": "432d22279e94f8913decbc2e72d61f6923cf0aca37d46d708258925c3fddc4a9",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-26-5",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 5,
+    "title": "How to handle stress as a founder",
+    "folder": "queue/sin/2026-11-26/carousel-5",
+    "sha256": {
+      "carousel.json": "4b7543adcbcdf09546aa8bad493ca7ebfdd84bc6e0ad9b4143223bb477a1286c",
+      "slide-01.jpg": "218a33724c6de75b4ee97086fc6dad12c128bbcdf44ac6374abf663b566489e1",
+      "slide-02.jpg": "70e61a9e1b1424b39411aa983593d94248ffe8a1b952cc46dbb0961dfcfbcd9f",
+      "slide-03.jpg": "5470e61f6513ba54998a8fee56558b278ac75a6b5dc7dd662df4899edc5e9b89",
+      "slide-04.jpg": "0db4e30a10d8f75eb168df244b7c304134504dc3d6fb20c80ed567a047d24b63",
+      "slide-05.jpg": "c512a74ad6593a25424a08a61a62a4a52a6cdb3c66a3677483b96f6771b7cff3",
+      "slide-06.jpg": "c0c6639f5019560f0bffc81f40e5ec10e014537cddb0b8d95e3538fd0bf01e47",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "dcbd07c6045ef6c30fd2d6df0847cdba21d5658ed0c6d1f553f2b98746d63752",
+      "reel.json": "917da305fa95103c89b163d17a6e8af38878575165ab3df2d66e82d645c98826",
+      "cover.jpg": "735f85c602229235c0a0cc18d4b3cbdb538487c4e08e3adeff4c1bc2c25246c8"
+    },
+    "reel_qa": "Contact sheet inspected 23 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-26-6",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 6,
+    "title": "How to build a simple referral habit",
+    "folder": "queue/sin/2026-11-26/carousel-6",
+    "sha256": {
+      "carousel.json": "6730c2808c7628e34a13ab161c7d5cb5bc51c561d258da71fcc5c2fccc83c113",
+      "slide-01.jpg": "7a01fd33194fbc75c1d732c46cd108812a93d1a2d2b39d8f7212aff54792b638",
+      "slide-02.jpg": "2042077ce7a21bbc24d53b5cf62dd1b6392b146e18516d5ec0b0462f81842f2f",
+      "slide-03.jpg": "4217f91998240d6d46dd64678e54a0e796e7527f1d6955bb0d4801d440f89aab",
+      "slide-04.jpg": "d6b2deb02e711771845d4dbf12665e603e53b2ad8c02d1726bba4835f30bc9ad",
+      "slide-05.jpg": "7770c7c166d3fd4a6cb2f9499d966118a739559c0c818adfa2aaee10232ab62a",
+      "slide-06.jpg": "084233b2af3886ad38f1b1f954bdcc3d02fbed97abf9f36adea80db47f5c8603",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only"
+  },
+  {
+    "id": "sin-2026-11-26-7",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 7,
+    "title": "How to keep meetings short",
+    "folder": "queue/sin/2026-11-26/carousel-7",
+    "sha256": {
+      "carousel.json": "0f53b16d2dc98ce2a55a7cf466a72d01b37ab317e7ac0eb4a8835cb1a623959a",
+      "slide-01.jpg": "363de9e32ba6916825b1662d9c467b6a24ad5c81be22d90c0a38e21f15d5d618",
+      "slide-02.jpg": "4b1df79e513025969f31be0a2887540b59c91f5033fb8d6a815114e5d3c1da98",
+      "slide-03.jpg": "f6b793cd7a3722b042fd99dcbdf997ce6a5e7884e5e1cdaa6e4282a699425111",
+      "slide-04.jpg": "1d8dff99aae5aebea121c44b863f743f0c28c6a78765422976a5d0c5d2085777",
+      "slide-05.jpg": "7805985b099d3e12096919682c88d35e2ae85a3630e6883dfe20a67dbac36ae9",
+      "slide-06.jpg": "d68cf275c7222cce4eb262271c862025e8d90f68787efff26cbe1124ad6c21e3",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "d70f4a400d98988390968d40f17888fcc262a9b22a98ee5a046c26fb1b815dd5",
+      "reel.json": "e41d3bb187de180ad2bcd9145dbc19af1815710f2f352d9b252d22117c9ec6ff",
+      "cover.jpg": "4aa5ad207d0e35b543b7a67cbc350b4eba4d50cca3bc3a4a98de6e5210f977f0"
+    },
+    "reel_qa": "Contact sheet inspected 23 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/gms/reel.py soft_beat() original warm beat), decoded AAC mean -21.4 dB peak -7.4 dB; 6 scene photos, all identical to the reviewed slides"
+  },
+  {
+    "id": "sin-2026-11-26-8",
+    "brand": "sin",
+    "date": "2026-11-26",
+    "slot": 8,
+    "title": "A Thursday evening routine for founders",
+    "folder": "queue/sin/2026-11-26/carousel-8",
+    "sha256": {
+      "carousel.json": "2168b74e37ca284eff039331d8000f46658da1517158329aa07c120f0013eaa4",
+      "slide-01.jpg": "ed4a89d4e463866cba1244430b18ccb5014a62379a8b17678776a77250756aa1",
+      "slide-02.jpg": "6aade787727747f6aca7a4d806364daddf581114c3f2ff5535b3824ae2dbeb08",
+      "slide-03.jpg": "4ff6a11ffc7409a091c1bc1df3088c892bb375f1b74210684c1156cd45f4aed9",
+      "slide-04.jpg": "6e8e318ed43cedcfddaaf93803ae3e95531852541b58f4e2da47efe2ce56ac23",
+      "slide-05.jpg": "911c44dc45079cadc82703eb7c5e29ffebc3fc7e29e7c934f0671bf83f366c82",
+      "slide-06.jpg": "32e4ced39d8dc9b604813ccac8c614a651a735095b0c3c6ef169fa1033255deb",
+      "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
+    },
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 23 November 2026; founder preparation, general guidance only"
   }
 ]

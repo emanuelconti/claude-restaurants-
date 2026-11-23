@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to finish the week strong on Thursday",
+  "hook": "Thursday decides how the week ends.",
+  "photos": "work",
+  "caption": "How to use Thursday to close the most important work before Friday. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Review the week's goal",
+      [
+        "Still on track."
+      ],
+      "Focus."
+    ],
+    [
+      "Close one open loop",
+      [
+        "Today."
+      ],
+      "Relief."
+    ],
+    [
+      "Chase pending replies",
+      [
+        "Politely."
+      ],
+      "Progress."
+    ],
+    [
+      "Plan Friday's review",
+      [
+        "Thirty minutes."
+      ],
+      "Ready."
+    ],
+    [
+      "Leave on time",
+      [
+        "Energy for tomorrow."
+      ],
+      "Balance."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to ask customers for a testimonial",
+  "hook": "A real quote beats any claim.",
+  "photos": "work",
+  "caption": "Simple steps to get honest testimonials from early customers. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask after a good moment",
+      [
+        "When they just got value."
+      ],
+      "Timing."
+    ],
+    [
+      "Make it easy",
+      [
+        "Offer two questions."
+      ],
+      "Simple."
+    ],
+    [
+      "Use their words",
+      [
+        "Do not polish too much."
+      ],
+      "Real."
+    ],
+    [
+      "Ask permission",
+      [
+        "For name and photo."
+      ],
+      "Respect."
+    ],
+    [
+      "Thank them publicly",
+      [
+        "If they agree."
+      ],
+      "Goodwill."
+    ]
+  ]
+}
+
+sin {
+  "title": "Why founders should track their time",
+  "hook": "Where your hours go shows your real priorities.",
+  "photos": "work",
+  "caption": "How a week of time tracking can change how you work. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Track one normal week",
+      [
+        "Roughly is enough."
+      ],
+      "Truth."
+    ],
+    [
+      "Group by type",
+      [
+        "Sales, product, admin."
+      ],
+      "Pattern."
+    ],
+    [
+      "Compare with priorities",
+      [
+        "Does it match."
+      ],
+      "Gap."
+    ],
+    [
+      "Cut or delegate one thing",
+      [
+        "Start small."
+      ],
+      "Space."
+    ],
+    [
+      "Repeat each quarter",
+      [
+        "Habits drift."
+      ],
+      "Check."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to plan a simple launch",
+  "hook": "A small launch done well beats a big one done late.",
+  "photos": "work",
+  "caption": "How to plan a focused launch for a new feature or product. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Pick one audience",
+      [
+        "Who needs it most."
+      ],
+      "Focus."
+    ],
+    [
+      "Write one message",
+      [
+        "Clear and short."
+      ],
+      "Clarity."
+    ],
+    [
+      "Choose two channels",
+      [
+        "Where they already are."
+      ],
+      "Reach."
+    ],
+    [
+      "Set a date",
+      [
+        "And keep it."
+      ],
+      "Commitment."
+    ],
+    [
+      "Measure one result",
+      [
+        "Sign ups or replies."
+      ],
+      "Learning."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to handle stress as a founder",
+  "hook": "Stress is normal, staying stuck is not.",
+  "photos": "work",
+  "caption": "Practical ways to manage founder stress during busy weeks. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Name the worry",
+      [
+        "Write it down."
+      ],
+      "Clarity."
+    ],
+    [
+      "Separate control",
+      [
+        "What you can change."
+      ],
+      "Focus."
+    ],
+    [
+      "Talk to someone",
+      [
+        "A peer or friend."
+      ],
+      "Support."
+    ],
+    [
+      "Move your body",
+      [
+        "Even ten minutes."
+      ],
+      "Release."
+    ],
+    [
+      "Sleep first",
+      [
+        "Problems look smaller."
+      ],
+      "Perspective."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to build a simple referral habit",
+  "hook": "Happy customers often bring the next ones.",
+  "photos": "work",
+  "caption": "How to ask for referrals in a natural way. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ask at the right moment",
+      [
+        "After a win."
+      ],
+      "Timing."
+    ],
+    [
+      "Be specific",
+      [
+        "Who would benefit."
+      ],
+      "Easy."
+    ],
+    [
+      "Make sharing simple",
+      [
+        "A link or a line."
+      ],
+      "Low effort."
+    ],
+    [
+      "Thank every referral",
+      [
+        "Every time."
+      ],
+      "Gratitude."
+    ],
+    [
+      "Close the loop",
+      [
+        "Tell them what happened."
+      ],
+      "Trust."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to keep meetings short",
+  "hook": "Short meetings respect everyone's time.",
+  "photos": "work",
+  "caption": "Simple rules to make team meetings shorter and more useful. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Send the goal first",
+      [
+        "One line."
+      ],
+      "Purpose."
+    ],
+    [
+      "Invite fewer people",
+      [
+        "Only who decides."
+      ],
+      "Speed."
+    ],
+    [
+      "Start on time",
+      [
+        "Always."
+      ],
+      "Respect."
+    ],
+    [
+      "End with owners",
+      [
+        "Who does what."
+      ],
+      "Action."
+    ],
+    [
+      "Cancel when possible",
+      [
+        "Async works too."
+      ],
+      "Time saved."
+    ]
+  ]
+}
+
+sin {
+  "title": "A Thursday evening routine for founders",
+  "hook": "A calm Thursday night keeps Friday sharp.",
+  "photos": "work",
+  "caption": "A short evening routine to end Thursday well. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write three wins",
+      [
+        "From this week."
+      ],
+      "Perspective."
+    ],
+    [
+      "Note open questions",
+      [
+        "For Friday."
+      ],
+      "Clear mind."
+    ],
+    [
+      "Close the laptop",
+      [
+        "At a set time."
+      ],
+      "Boundary."
+    ],
+    [
+      "Do something fun",
+      [
+        "Not work."
+      ],
+      "Recharge."
+    ],
+    [
+      "Sleep well",
+      [
+        "Decisions need rest."
+      ],
+      "Sharp."
+    ]
+  ]
+}
