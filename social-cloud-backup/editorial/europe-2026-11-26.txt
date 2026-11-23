@@ -1,0 +1,423 @@
+sp {
+  "title": "Jueves: casi viernes, todavía jueves",
+  "hook": "El jueves tiene su propio encanto.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para disfrutar el jueves sin esperar al fin de semana.",
+  "points": [
+    [
+      "Termina algo pendiente",
+      [
+        "Antes del viernes."
+      ],
+      "Alivio."
+    ],
+    [
+      "Queda después del trabajo",
+      [
+        "El jueves es el nuevo viernes."
+      ],
+      "Plan."
+    ],
+    [
+      "Prueba un sitio del barrio",
+      [
+        "Uno que nunca entraste."
+      ],
+      "Descubrir."
+    ],
+    [
+      "Llama a quien echas de menos",
+      [
+        "Un rato de charla."
+      ],
+      "Cercanía."
+    ],
+    [
+      "Acuéstate con calma",
+      [
+        "Mañana aún toca."
+      ],
+      "Equilibrio."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo ser un buen anfitrión en casa",
+  "hook": "Recibir bien no depende de tener mucho.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Detalles sencillos para que tus amigos se sientan en casa. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Recíbelos en la puerta",
+      [
+        "Con una sonrisa."
+      ],
+      "Bienvenida."
+    ],
+    [
+      "Algo de picar listo",
+      [
+        "Aunque sea sencillo."
+      ],
+      "Detalle."
+    ],
+    [
+      "Música suave",
+      [
+        "Que acompañe."
+      ],
+      "Ambiente."
+    ],
+    [
+      "Presenta a la gente",
+      [
+        "Que nadie quede solo."
+      ],
+      "Conexión."
+    ],
+    [
+      "Despide con cariño",
+      [
+        "Gracias por venir."
+      ],
+      "Recuerdo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Señales de un buen sitio para comer",
+  "hook": "Hay cosas que se notan nada más entrar.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo reconocer un buen sitio antes de mirar la carta.",
+  "points": [
+    [
+      "Lleno de gente del barrio",
+      [
+        "No solo turistas."
+      ],
+      "Confianza."
+    ],
+    [
+      "Carta corta",
+      [
+        "Pocas cosas bien hechas."
+      ],
+      "Calidad."
+    ],
+    [
+      "Te saludan al entrar",
+      [
+        "Aunque no te conozcan."
+      ],
+      "Trato."
+    ],
+    [
+      "Huele bien",
+      [
+        "Desde la puerta."
+      ],
+      "Promesa."
+    ],
+    [
+      "La gente repite",
+      [
+        "Y trae amigos."
+      ],
+      "Prueba."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué los pequeños detalles se recuerdan",
+  "hook": "Lo pequeño es lo que más se queda.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Por qué un gesto pequeño puede cambiar cómo recordamos un sitio o a una persona.",
+  "points": [
+    [
+      "Un nombre recordado",
+      [
+        "Te sientes importante."
+      ],
+      "Visto."
+    ],
+    [
+      "Una nota escrita a mano",
+      [
+        "Se guarda años."
+      ],
+      "Cariño."
+    ],
+    [
+      "Un café invitado",
+      [
+        "Sin pedirlo."
+      ],
+      "Sorpresa."
+    ],
+    [
+      "Una pregunta sincera",
+      [
+        "Cómo estás de verdad."
+      ],
+      "Interés."
+    ],
+    [
+      "Un gracias a tiempo",
+      [
+        "Cambia el día."
+      ],
+      "Gratitud."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes para el jueves por la tarde",
+  "hook": "Un buen plan de jueves alegra toda la semana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Planes sencillos para la tarde del jueves.",
+  "points": [
+    [
+      "Afterwork con compañeros",
+      [
+        "Una caña y a casa."
+      ],
+      "Equipo."
+    ],
+    [
+      "Clase o taller",
+      [
+        "Algo nuevo que aprender."
+      ],
+      "Curiosidad."
+    ],
+    [
+      "Mercado del barrio",
+      [
+        "Compra para el finde."
+      ],
+      "Vida local."
+    ],
+    [
+      "Cena en tu sitio favorito",
+      [
+        "Donde ya te conocen."
+      ],
+      "Hogar."
+    ],
+    [
+      "Cine entre semana",
+      [
+        "Menos gente."
+      ],
+      "Tranquilo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo invitar a un amigo a un sitio nuevo",
+  "hook": "Descubrir un sitio juntos tiene algo especial.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Ideas para animar a tus amigos a probar un lugar nuevo contigo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Cuéntales qué te gustó",
+      [
+        "Un plato, el ambiente."
+      ],
+      "Ganas."
+    ],
+    [
+      "Propón un día concreto",
+      [
+        "No un algún día."
+      ],
+      "Plan real."
+    ],
+    [
+      "Ve tú primero",
+      [
+        "Así recomiendas mejor."
+      ],
+      "Confianza."
+    ],
+    [
+      "Invita la primera ronda",
+      [
+        "Un pequeño empujón."
+      ],
+      "Generosidad."
+    ],
+    [
+      "Si gusta, repetid",
+      [
+        "Con más gente."
+      ],
+      "Costumbre."
+    ]
+  ]
+}
+
+sp {
+  "title": "Hábitos para cuidar tus amistades",
+  "hook": "Las amistades también se cuidan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Pequeños hábitos para mantener cerca a la gente que quieres.",
+  "points": [
+    [
+      "Escribe sin motivo",
+      [
+        "Solo para saludar."
+      ],
+      "Presencia."
+    ],
+    [
+      "Recuerda lo importante",
+      [
+        "Cumpleaños y fechas."
+      ],
+      "Cuidado."
+    ],
+    [
+      "Escucha más",
+      [
+        "Y pregunta."
+      ],
+      "Interés."
+    ],
+    [
+      "Celebra sus logros",
+      [
+        "Como si fueran tuyos."
+      ],
+      "Alegría."
+    ],
+    [
+      "Haz planes fijos",
+      [
+        "Una vez al mes."
+      ],
+      "Constancia."
+    ]
+  ]
+}
+
+sp {
+  "title": "Jueves por la noche: cerrar la semana con calma",
+  "hook": "Un jueves tranquilo prepara un buen viernes.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para terminar el jueves descansado.",
+  "points": [
+    [
+      "Cena sencilla",
+      [
+        "Algo que te guste."
+      ],
+      "Mimo."
+    ],
+    [
+      "Ordena un rincón",
+      [
+        "Cinco minutos."
+      ],
+      "Calma."
+    ],
+    [
+      "Prepara el viernes",
+      [
+        "Lo que llevarás."
+      ],
+      "Tranquilidad."
+    ],
+    [
+      "Un rato sin pantallas",
+      [
+        "Antes de dormir."
+      ],
+      "Descanso."
+    ],
+    [
+      "Piensa en el finde",
+      [
+        "Un plan bonito."
+      ],
+      "Ilusión."
+    ]
+  ]
+}

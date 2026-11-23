@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-26",
+ "title": "Hábitos para cuidar tus amistades",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Hábitos para cuidar tus amistades\n\nLas amistades también se cuidan.\n\nPequeños hábitos para mantener cerca a la gente que quieres.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 108 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-01.jpg",
+   "match_error": 0.16,
+   "runner_up": 31.34
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-02.jpg",
+   "match_error": 0.63,
+   "runner_up": 43.39
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg",
+   "match_error": 1.75,
+   "runner_up": 31.24
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-04.jpg",
+   "match_error": 0.69,
+   "runner_up": 36.4
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-05.jpg",
+   "match_error": 0.24,
+   "runner_up": 33.75
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-06.jpg",
+   "match_error": 1.18,
+   "runner_up": 21.97
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Escribe sin motivo",
+  "Recuerda lo importante",
+  "Escucha más",
+  "Celebra sus logros",
+  "Haz planes fijos",
+  "end card"
+ ]
+}
