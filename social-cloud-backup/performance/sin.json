@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A calm Monday evening for founders",
+      "stamp": "2026-11-23T22:32:27+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgGWm-tnHeC/"
+    },
+    {
+      "title": "How to handle a slow sales week",
+      "stamp": "2026-11-23T20:24:56+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgGH_GPOOWU/"
+    },
+    {
+      "title": "How to write a clear investor update",
+      "stamp": "2026-11-23T18:25:27+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgF6WFTF0YU/"
+    },
+    {
+      "title": "Simple habits for founder energy",
+      "stamp": "2026-11-23T16:42:59+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgFulRMB1u_/"
+    },
+    {
+      "title": "How to learn from your first customers",
+      "stamp": "2026-11-23T14:57:28+01:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgFijDkljM5/"
+    },
+    {
+      "title": "Why focus means saying no to good ideas",
+      "stamp": "2026-11-23T13:06:35+01:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgFV0LHKM7n/"
+    },
+    {
+      "title": "How to run a short Monday team meeting",
+      "stamp": "2026-11-23T11:10:24+01:00",
+      "local_hour": 11,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgFIj6ViVes/"
+    },
+    {
+      "title": "How to start a founder week with focus",
+      "stamp": "2026-11-23T09:25:35+01:00",
+      "local_hour": 9,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgE8hk-Bpgz/"
+    },
+    {
       "title": "A calm Sunday evening for founders",
       "stamp": "2026-11-22T21:50:54+01:00",
       "local_hour": 21,
@@ -340,114 +404,50 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df2sGytSENY/"
-    },
-    {
-      "title": "How to prepare for a first meeting with an investor",
-      "stamp": "2026-11-17T19:44:48+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df2mp1Mk3Kq/"
-    },
-    {
-      "title": "Simple metrics an early startup should track",
-      "stamp": "2026-11-17T16:41:12+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df2Rmq4I-cR/"
-    },
-    {
-      "title": "Questions to ask before you choose a co-founder",
-      "stamp": "2026-11-17T14:37:55+01:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df2DiN7F-mf/"
-    },
-    {
-      "title": "How founders can protect their focus this week",
-      "stamp": "2026-11-17T13:02:00+01:00",
-      "local_hour": 13,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df14hjXBGL2/"
-    },
-    {
-      "title": "What to put in a one page pitch summary",
-      "stamp": "2026-11-17T10:35:44+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df1n00BD9Q9/"
-    },
-    {
-      "title": "How to run a customer interview that teaches you something",
-      "stamp": "2026-11-17T09:46:40+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df1iK7Rxx3b/"
-    },
-    {
-      "title": "Common mistakes in grant applications",
-      "stamp": "2026-11-16T21:46:28+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df0PyEUkoDX/"
-    },
-    {
-      "title": "Start the week with one clear goal",
-      "stamp": "2026-11-16T20:55:19+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df0J5a-A224/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-23",
+  "market_date": "2026-11-24",
   "mature_hour_summary": [
     {
       "local_hour": 8,
-      "posts": 1,
-      "median_public_interactions": 1
+      "posts": 2,
+      "median_public_interactions": 0.5
     },
     {
       "local_hour": 9,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 10,
-      "posts": 5,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 11,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 12,
-      "posts": 3,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 13,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 14,
+      "local_hour": 10,
       "posts": 4,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 15,
+      "local_hour": 11,
+      "posts": 2,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 12,
+      "posts": 4,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 13,
       "posts": 1,
       "median_public_interactions": 0
+    },
+    {
+      "local_hour": 14,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 15,
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 16,
@@ -460,19 +460,24 @@
       "median_public_interactions": 0
     },
     {
-      "local_hour": 19,
-      "posts": 5,
+      "local_hour": 18,
+      "posts": 1,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 20,
+      "local_hour": 19,
       "posts": 4,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 21,
-      "posts": 7,
+      "local_hour": 20,
+      "posts": 3,
       "median_public_interactions": 0
+    },
+    {
+      "local_hour": 21,
+      "posts": 8,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 22,
