@@ -216,3 +216,11 @@ Every Claude and Codex, this wins over the older Threads lines above (limits unc
 - The owner saw the profile showing only carousel titles ("Saturday morning ideas for a good day"). Fixed in a1f3ae9 on codex/social-cloud-backup: the post is the carousel's hook plus its ideas as short sentences (`threads_text`), e.g. "A slow Saturday morning sets the tone. Wake up without an alarm. Breakfast at a kopitiam. A walk in a park. Plan nothing until noon." Never the title alone.
 - Photos, with optimisation (c03c904): until 29 November text only; from 30 November (`PHOTO_FROM`) the days alternate text / ONE photo (the carousel cover, from the pinned GitHub URL). When each kind has 5 posts, the kind with more views per post wins (`pick_mode`, Threads insights). Never slides, never a link or hashtag.
 - Still: one post a day, 20 hours apart, stop on any spam/restricted/limit signal. If photo posts get flagged, move `PHOTO_FROM` later and tell the owner. Rules also in SOCIAL_MARKET_RULES.md on codex/social-cloud-backup; tests in test_threads_rule.py.
+
+## SENDER RULE (owner, 23 November 2026): every outreach routine, every Claude and Codex
+
+1. Outreach (venues, investors, partners) goes out ONLY from socialperks.team@gmail.com. Never from info@socialperkses.com: it sends through Resend (smtp.resend.com), which forbids cold outreach; a block would also stop the site's login and sign-up emails.
+2. Before every run check Gmail's default sender (last email in Sent, or a test draft). If it is info@, send nothing and write the owner one line.
+3. info@ only to reply to people who wrote to info@, or for single emails the owner sends by hand.
+4. Signature unchanged (as in the playbook).
+5. When in doubt, create a draft and do not send.
