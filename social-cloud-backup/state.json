@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-23T00:37:23+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-23T02:50:22+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -735,5 +735,9 @@
   "sp-2026-11-22-8:ig": "confirmed remotely: Domingo por la noche: preparar la calma",
   "gms-2026-11-23-1:ig": "confirmed remotely: Monday reminders for a kind week",
   "gms-2026-11-23-1:youtube": "confirmed remotely: https://www.youtube.com/shorts/WGQjwIelmA8",
-  "gms-2026-11-23-1:facebook": "confirmed remotely: https://www.facebook.com/reel/1134530399424718/"
+  "gms-2026-11-23-1:facebook": "confirmed remotely: https://www.facebook.com/reel/1134530399424718/",
+  "gms-2026-11-23-2:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgEWJt9F-cu/",
+  "gms-2026-11-23-2:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'After work plans with friends in Singapore | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/CTizDrQYZLQ",
+  "gms-2026-11-23-2:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1451165573837904",
+  "gms-2026-11-23-2:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'After work plans with friends in Singapore', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 25 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821229556338/"
 }
