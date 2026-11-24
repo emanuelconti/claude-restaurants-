@@ -6,6 +6,70 @@
   "timezone": "Europe/Paris",
   "posts": [
     {
+      "title": "A short Tuesday review for founders",
+      "stamp": "2026-11-24T22:34:51+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgI7r51iaYY/"
+    },
+    {
+      "title": "How to plan a simple product test",
+      "stamp": "2026-11-24T21:38:49+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgI1PFJt-HD/"
+    },
+    {
+      "title": "How to use advisors well",
+      "stamp": "2026-11-24T18:45:09+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgIhZKLl6LG/"
+    },
+    {
+      "title": "How to give feedback in a small team",
+      "stamp": "2026-11-24T16:58:21+01:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgIVIL-qttp/"
+    },
+    {
+      "title": "How to choose your first metric",
+      "stamp": "2026-11-24T15:12:33+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgIJEcImKzc/"
+    },
+    {
+      "title": "Why small teams should write things down",
+      "stamp": "2026-11-24T12:37:36+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgH3S1PNqPS/"
+    },
+    {
+      "title": "How to prepare for a first customer call",
+      "stamp": "2026-11-24T10:43:41+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgHqS8nmTM5/"
+    },
+    {
+      "title": "How to protect your Tuesday for deep work",
+      "stamp": "2026-11-24T08:58:53+01:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgHeRDaBZjR/"
+    },
+    {
       "title": "A calm Monday evening for founders",
       "stamp": "2026-11-23T22:32:27+01:00",
       "local_hour": 22,
@@ -340,74 +404,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df5UHckCHLb/"
-    },
-    {
-      "title": "How to prepare your data room early",
-      "stamp": "2026-11-18T19:25:01+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df5JLP6DvVB/"
-    },
-    {
-      "title": "Signs your startup is ready to hire",
-      "stamp": "2026-11-18T16:28:19+01:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df407gdBTtj/"
-    },
-    {
-      "title": "How to find a mentor who actually helps",
-      "stamp": "2026-11-18T15:01:05+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df4q_DwFjyy/"
-    },
-    {
-      "title": "How to say no to good ideas",
-      "stamp": "2026-11-18T12:37:19+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df4afD5qPTb/"
-    },
-    {
-      "title": "What a strong traction slide shows",
-      "stamp": "2026-11-18T10:59:47+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df4PXy_lcEC/"
-    },
-    {
-      "title": "How to write a problem statement customers recognise",
-      "stamp": "2026-11-18T09:23:14+01:00",
-      "local_hour": 9,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df4ESdIgoeJ/"
-    },
-    {
-      "title": "How to end a founder day without carrying it home",
-      "stamp": "2026-11-17T22:08:54+01:00",
-      "local_hour": 22,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df23J1cDCtV/"
-    },
-    {
-      "title": "Where early founders find their first paying customers",
-      "stamp": "2026-11-17T20:32:43+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df2sGytSENY/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-24",
+  "market_date": "2026-11-25",
   "mature_hour_summary": [
     {
       "local_hour": 8,
@@ -421,33 +421,33 @@
     },
     {
       "local_hour": 10,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 11,
-      "posts": 2,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 12,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 13,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 14,
       "posts": 3,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 15,
+      "local_hour": 11,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 12,
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 13,
       "posts": 2,
       "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 14,
+      "posts": 4,
+      "median_public_interactions": 0.0
+    },
+    {
+      "local_hour": 15,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 16,
@@ -461,13 +461,13 @@
     },
     {
       "local_hour": 18,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 19,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
