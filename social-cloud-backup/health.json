@@ -75,13 +75,9 @@
     },
     "gms": {
       "timezone": "Asia/Singapore",
-      "market_date": "2026-11-24",
-      "days_covered_including_today": 4,
+      "market_date": "2026-11-25",
+      "days_covered_including_today": 3,
       "coverage": [
-        {
-          "date": "2026-11-24",
-          "approved_items": 8
-        },
         {
           "date": "2026-11-25",
           "approved_items": 8
@@ -104,6 +100,10 @@
         },
         {
           "date": "2026-11-30",
+          "approved_items": 0
+        },
+        {
+          "date": "2026-12-01",
           "approved_items": 0
         }
       ],
