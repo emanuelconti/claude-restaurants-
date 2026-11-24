@@ -421,3 +421,371 @@ sp {
     ]
   ]
 }
+
+sin {
+  "title": "How to run a short Friday review",
+  "hook": "Thirty minutes on Friday makes Monday easier.",
+  "photos": "work",
+  "caption": "A simple weekly review format for founders and small teams. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "List the wins",
+      [
+        "Even small ones."
+      ],
+      "Momentum."
+    ],
+    [
+      "Name what slipped",
+      [
+        "No blame."
+      ],
+      "Honesty."
+    ],
+    [
+      "Check the numbers",
+      [
+        "Same three each week."
+      ],
+      "Trend."
+    ],
+    [
+      "Pick next week's focus",
+      [
+        "One goal."
+      ],
+      "Direction."
+    ],
+    [
+      "Close the laptop",
+      [
+        "Weekend starts."
+      ],
+      "Rest."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to celebrate small wins with your team",
+  "hook": "Small wins keep a team going.",
+  "photos": "work",
+  "caption": "Simple ways to recognise progress in an early-stage team. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Share them on Friday",
+      [
+        "In one message."
+      ],
+      "Visible."
+    ],
+    [
+      "Name who did it",
+      [
+        "Be specific."
+      ],
+      "Seen."
+    ],
+    [
+      "Link it to the goal",
+      [
+        "Why it matters."
+      ],
+      "Purpose."
+    ],
+    [
+      "Keep it short",
+      [
+        "No long speeches."
+      ],
+      "Light."
+    ],
+    [
+      "Do it every week",
+      [
+        "Habit beats events."
+      ],
+      "Culture."
+    ]
+  ]
+}
+
+sin {
+  "title": "Why founders need a real weekend",
+  "hook": "Rest is part of the work.",
+  "photos": "work",
+  "caption": "Why switching off at the weekend makes you a better founder. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Ideas need space",
+      [
+        "They come when you rest."
+      ],
+      "Creativity."
+    ],
+    [
+      "Decisions get clearer",
+      [
+        "After sleep."
+      ],
+      "Judgement."
+    ],
+    [
+      "Your team copies you",
+      [
+        "Show balance."
+      ],
+      "Culture."
+    ],
+    [
+      "Burnout costs months",
+      [
+        "Prevent it."
+      ],
+      "Sustainability."
+    ],
+    [
+      "Life outside matters",
+      [
+        "Friends and family."
+      ],
+      "Perspective."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to write a weekly update for your team",
+  "hook": "A short weekly update keeps everyone aligned.",
+  "photos": "work",
+  "caption": "A simple format for a Friday update your team will actually read. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Start with one headline",
+      [
+        "The week in a line."
+      ],
+      "Clear."
+    ],
+    [
+      "Three numbers",
+      [
+        "The ones that matter."
+      ],
+      "Focus."
+    ],
+    [
+      "One win, one problem",
+      [
+        "Honest."
+      ],
+      "Trust."
+    ],
+    [
+      "Next week's priority",
+      [
+        "One thing."
+      ],
+      "Direction."
+    ],
+    [
+      "Thank someone",
+      [
+        "By name."
+      ],
+      "Warmth."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to plan your next week on Friday",
+  "hook": "Planning on Friday gives you a calm Monday.",
+  "photos": "work",
+  "caption": "How to set up next week before you leave on Friday. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Look at the calendar",
+      [
+        "Spot the busy days."
+      ],
+      "Awareness."
+    ],
+    [
+      "Block deep work",
+      [
+        "Two mornings."
+      ],
+      "Focus."
+    ],
+    [
+      "Pick three outcomes",
+      [
+        "Not tasks."
+      ],
+      "Clarity."
+    ],
+    [
+      "Prepare Monday's first hour",
+      [
+        "Know where to start."
+      ],
+      "Ready."
+    ],
+    [
+      "Leave a note for yourself",
+      [
+        "On the desk."
+      ],
+      "Calm."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to learn from a hard week",
+  "hook": "Hard weeks teach the most.",
+  "photos": "work",
+  "caption": "How to turn a tough week into useful lessons. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Write what happened",
+      [
+        "Facts only."
+      ],
+      "Clarity."
+    ],
+    [
+      "Find the cause",
+      [
+        "Not the blame."
+      ],
+      "Understanding."
+    ],
+    [
+      "Choose one change",
+      [
+        "Small and doable."
+      ],
+      "Action."
+    ],
+    [
+      "Share the lesson",
+      [
+        "With the team."
+      ],
+      "Growth."
+    ],
+    [
+      "Let it go",
+      [
+        "Start fresh Monday."
+      ],
+      "Peace."
+    ]
+  ]
+}
+
+sin {
+  "title": "How to keep in touch with your network",
+  "hook": "A warm network is built in small moments.",
+  "photos": "work",
+  "caption": "Simple habits to stay in touch with mentors, peers and early fans. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Send one note a week",
+      [
+        "To someone who helped."
+      ],
+      "Gratitude."
+    ],
+    [
+      "Share a real update",
+      [
+        "Short and honest."
+      ],
+      "Trust."
+    ],
+    [
+      "Offer help first",
+      [
+        "An intro or a tip."
+      ],
+      "Generosity."
+    ],
+    [
+      "Remember details",
+      [
+        "Their news."
+      ],
+      "Care."
+    ],
+    [
+      "Meet in person",
+      [
+        "When you can."
+      ],
+      "Connection."
+    ]
+  ]
+}
+
+sin {
+  "title": "A Friday evening reset for founders",
+  "hook": "How you end Friday shapes your weekend.",
+  "photos": "work",
+  "caption": "A short routine to switch off on Friday evening. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia",
+  "cta": false,
+  "points": [
+    [
+      "Close every tab",
+      [
+        "Clean slate."
+      ],
+      "Clear."
+    ],
+    [
+      "Write tomorrow off",
+      [
+        "No work plans."
+      ],
+      "Freedom."
+    ],
+    [
+      "Call a friend",
+      [
+        "Not about work."
+      ],
+      "Balance."
+    ],
+    [
+      "Move your body",
+      [
+        "A walk or a run."
+      ],
+      "Release."
+    ],
+    [
+      "Plan something fun",
+      [
+        "For Saturday."
+      ],
+      "Joy."
+    ]
+  ]
+}
