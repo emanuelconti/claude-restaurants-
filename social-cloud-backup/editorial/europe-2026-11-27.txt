@@ -1,0 +1,423 @@
+sp {
+  "title": "Viernes: empieza el finde con buen pie",
+  "hook": "El viernes tiene algo especial desde la mañana.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para que el viernes sea el mejor día de la semana.",
+  "points": [
+    [
+      "Cierra la semana ordenada",
+      [
+        "Lo pendiente, apuntado."
+      ],
+      "Mente libre."
+    ],
+    [
+      "Comida con compañeros",
+      [
+        "Para celebrar la semana."
+      ],
+      "Equipo."
+    ],
+    [
+      "Sal un poco antes",
+      [
+        "Si puedes."
+      ],
+      "Regalo."
+    ],
+    [
+      "Llama a tus amigos",
+      [
+        "¿Qué hacemos hoy?"
+      ],
+      "Plan."
+    ],
+    [
+      "Deja el portátil en el trabajo",
+      [
+        "El finde es tuyo."
+      ],
+      "Desconexión."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo organizar una quedada con amigos",
+  "hook": "Las mejores quedadas son las sencillas.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Pasos fáciles para juntar a tus amigos sin dramas de grupo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Propón día y hora",
+      [
+        "Nada de cuándo os va bien."
+      ],
+      "Concreto."
+    ],
+    [
+      "Elige un sitio cerca",
+      [
+        "Para todos."
+      ],
+      "Fácil."
+    ],
+    [
+      "Reserva si sois muchos",
+      [
+        "Evita esperas."
+      ],
+      "Tranquilo."
+    ],
+    [
+      "Avisa al grupo una vez",
+      [
+        "Sin cadenas eternas."
+      ],
+      "Claro."
+    ],
+    [
+      "Disfruta sin móvil",
+      [
+        "Mira a tu gente."
+      ],
+      "Presencia."
+    ]
+  ]
+}
+
+sp {
+  "title": "Lo que hace bueno un viernes por la noche",
+  "hook": "Un buen viernes no necesita grandes planes.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Lo que de verdad convierte un viernes en un buen recuerdo.",
+  "points": [
+    [
+      "Buena compañía",
+      [
+        "Lo primero."
+      ],
+      "Base."
+    ],
+    [
+      "Un sitio donde estés a gusto",
+      [
+        "Sin agobios."
+      ],
+      "Comodidad."
+    ],
+    [
+      "Comida rica",
+      [
+        "Para compartir."
+      ],
+      "Disfrute."
+    ],
+    [
+      "Risas",
+      [
+        "Muchas."
+      ],
+      "Alegría."
+    ],
+    [
+      "Volver a casa contento",
+      [
+        "Sin pasarse."
+      ],
+      "Equilibrio."
+    ]
+  ]
+}
+
+sp {
+  "title": "Por qué volvemos a nuestros sitios favoritos",
+  "hook": "Volver a un sitio es una forma de decir gracias.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Las razones por las que repetimos en los lugares que nos gustan. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Nos sentimos en casa",
+      [
+        "Sabemos dónde sentarnos."
+      ],
+      "Confianza."
+    ],
+    [
+      "Nos tratan con cariño",
+      [
+        "Y se nota."
+      ],
+      "Cuidado."
+    ],
+    [
+      "Sabemos lo que pedir",
+      [
+        "Nunca falla."
+      ],
+      "Seguridad."
+    ],
+    [
+      "Hay buenos recuerdos",
+      [
+        "Con gente querida."
+      ],
+      "Vínculo."
+    ],
+    [
+      "Llevamos a otros",
+      [
+        "Para compartirlo."
+      ],
+      "Orgullo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Planes de viernes que no fallan",
+  "hook": "Algunos planes siempre salen bien.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas sencillas para un viernes por la tarde o noche.",
+  "points": [
+    [
+      "Cañas al salir del trabajo",
+      [
+        "Con compañeros."
+      ],
+      "Clásico."
+    ],
+    [
+      "Cena en tu sitio de confianza",
+      [
+        "Donde te conocen."
+      ],
+      "Seguro."
+    ],
+    [
+      "Concierto pequeño",
+      [
+        "Música en directo cerca."
+      ],
+      "Energía."
+    ],
+    [
+      "Noche de juegos en casa",
+      [
+        "Con amigos."
+      ],
+      "Risas."
+    ],
+    [
+      "Paseo nocturno",
+      [
+        "Por tu barrio."
+      ],
+      "Calma."
+    ]
+  ]
+}
+
+sp {
+  "title": "Cómo convertir a un amigo en cliente fiel de tu sitio favorito",
+  "hook": "Recomendar un sitio es un pequeño regalo.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Amigos #VidaLocal #FinDeSemana",
+  "caption": "Por qué compartir tus sitios favoritos con amigos hace bien a todos. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Llévalo una vez",
+      [
+        "La primera vez contigo."
+      ],
+      "Confianza."
+    ],
+    [
+      "Preséntale al equipo",
+      [
+        "Que le conozcan."
+      ],
+      "Bienvenida."
+    ],
+    [
+      "Recomienda tu plato",
+      [
+        "El que nunca falla."
+      ],
+      "Acierto."
+    ],
+    [
+      "Deja que vuelva solo",
+      [
+        "Ya sabe el camino."
+      ],
+      "Costumbre."
+    ],
+    [
+      "Celebradlo juntos",
+      [
+        "Ahora es vuestro sitio."
+      ],
+      "Vínculo."
+    ]
+  ]
+}
+
+sp {
+  "title": "Hábitos para descansar de verdad el finde",
+  "hook": "El finde también sirve para recargar.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Cómo descansar el fin de semana sin perder el tiempo libre.",
+  "points": [
+    [
+      "Duerme un poco más",
+      [
+        "Sin pasarte."
+      ],
+      "Recarga."
+    ],
+    [
+      "Sal a la calle",
+      [
+        "Luz y aire."
+      ],
+      "Ánimo."
+    ],
+    [
+      "Ve a quien quieres",
+      [
+        "En persona."
+      ],
+      "Conexión."
+    ],
+    [
+      "Haz algo distinto",
+      [
+        "Rompe la rutina."
+      ],
+      "Frescura."
+    ],
+    [
+      "Prepara el lunes el domingo",
+      [
+        "Solo diez minutos."
+      ],
+      "Calma."
+    ]
+  ]
+}
+
+sp {
+  "title": "Viernes por la noche: cerrar la semana con alegría",
+  "hook": "El viernes por la noche es para celebrar lo vivido.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+  "caption": "Ideas para terminar la semana con buen sabor de boca.",
+  "points": [
+    [
+      "Brinda por la semana",
+      [
+        "Por lo bueno."
+      ],
+      "Gratitud."
+    ],
+    [
+      "Cena con quien quieras",
+      [
+        "Sin prisa."
+      ],
+      "Disfrute."
+    ],
+    [
+      "Baila un poco",
+      [
+        "Aunque sea en casa."
+      ],
+      "Alegría."
+    ],
+    [
+      "Desconecta del trabajo",
+      [
+        "Hasta el lunes."
+      ],
+      "Libertad."
+    ],
+    [
+      "Duerme sin alarma",
+      [
+        "Te lo has ganado."
+      ],
+      "Descanso."
+    ]
+  ]
+}

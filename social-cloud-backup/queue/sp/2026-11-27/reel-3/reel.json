@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-27",
+ "title": "Lo que hace bueno un viernes por la noche",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.0,
+ "caption": "Lo que hace bueno un viernes por la noche\n\nUn buen viernes no necesita grandes planes.\n\nLo que de verdad convierte un viernes en un buen recuerdo.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Motivacion #Habitos #VidaReal #Bienestar",
+ "music": "publishers/sp/daily.py music() original dembow/latin beat, seed 144 (original, rights-cleared, generated in code)",
+ "photos": [
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-01.jpg",
+   "match_error": 0.14,
+   "runner_up": 43.38
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg",
+   "match_error": 0.23,
+   "runner_up": 45.2
+  },
+  {
+   "unsplash": "1496181133206-80ce9b88a853",
+   "slide": "slide-03.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.81
+  },
+  {
+   "unsplash": "1610701596007-11502861dcfa",
+   "slide": "slide-04.jpg",
+   "match_error": 0.27,
+   "runner_up": 23.4
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-05.jpg",
+   "match_error": 0.22,
+   "runner_up": 30.7
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-06.jpg",
+   "match_error": 0.56,
+   "runner_up": 24.84
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Buena compañía",
+  "Un sitio donde estés a gusto",
+  "Comida rica",
+  "Risas",
+  "Volver a casa contento",
+  "end card"
+ ]
+}
