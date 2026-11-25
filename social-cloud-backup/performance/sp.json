@@ -1,11 +1,131 @@
 {
   "schema_version": 4,
-  "insights_error": "GET 17979527208177070/insights: (#10) Application does not have permission for this action",
+  "insights_error": "GET 18112317272527601/insights: (#10) Application does not have permission for this action",
   "channels": {},
   "brand": "sp",
   "account": "socialperks.es",
   "timezone": "Europe/Madrid",
   "posts": [
+    {
+      "media_id": "18112317272527601",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Mi\u00e9rcoles por la noche: recarga para el finde",
+      "stamp": "2026-11-25T22:55:53+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgLi4aBFMM7/"
+    },
+    {
+      "media_id": "18345506806277221",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "H\u00e1bitos para una ma\u00f1ana con energ\u00eda",
+      "stamp": "2026-11-25T22:02:18+01:00",
+      "local_hour": 22,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgLcuiMhpw2/"
+    },
+    {
+      "media_id": "18112567346573277",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Lo que hace volver a un cliente",
+      "stamp": "2026-11-25T21:11:27+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgLW7s-E2EO/"
+    },
+    {
+      "media_id": "18323325505303859",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Planes de mi\u00e9rcoles por la tarde",
+      "stamp": "2026-11-25T20:03:42+01:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgLPI_ko0_z/"
+    },
+    {
+      "media_id": "18039701981854866",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Por qu\u00e9 compartir mesa nos hace bien",
+      "stamp": "2026-11-25T19:58:10+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgLOi_7F-jN/"
+    },
+    {
+      "media_id": "18134467387828955",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Cinco formas de desconectar del trabajo",
+      "stamp": "2026-11-25T15:24:25+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgKvLhtyuMH/"
+    },
+    {
+      "media_id": "18106246769042460",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo quedar m\u00e1s con tus amigos",
+      "stamp": "2026-11-25T12:08:14+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgKYxULF3x2/"
+    },
+    {
+      "media_id": "18162037036506096",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Mi\u00e9rcoles: mitad de semana, mitad de camino",
+      "stamp": "2026-11-25T10:22:49+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgKMqe6BMzi/"
+    },
     {
       "media_id": "17979527208177070",
       "format": "FEED",
@@ -635,160 +755,45 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/p/Df7ubASjQth/"
-    },
-    {
-      "media_id": "17895685671653828",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "H\u00e1bitos de jueves para llegar con energ\u00eda al viernes",
-      "stamp": "2026-11-19T18:41:12+01:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df7o7cjjaay/"
-    },
-    {
-      "media_id": "18111204221362845",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "C\u00f3mo ser mejor compa\u00f1ero de trabajo",
-      "stamp": "2026-11-19T17:19:34+01:00",
-      "local_hour": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df7foaFGnsX/"
-    },
-    {
-      "media_id": "17938074057407416",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Cinco minutos al d\u00eda que cambian tu semana",
-      "stamp": "2026-11-19T14:56:32+01:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df7POQRmZm-/"
-    },
-    {
-      "media_id": "18058123406804751",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Ideas para una cena de jueves con amigos",
-      "stamp": "2026-11-19T11:57:34+01:00",
-      "local_hour": 11,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df66x8doRzW/"
-    },
-    {
-      "media_id": "18135506722793182",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Jueves: el d\u00eda perfecto para cerrar pendientes",
-      "stamp": "2026-11-19T10:12:50+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df6uwMYHCk3/"
-    },
-    {
-      "media_id": "18198240832406505",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Mi\u00e9rcoles por la noche: c\u00f3mo desconectar",
-      "stamp": "2026-11-18T23:20:49+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df5kK8wCfbM/"
-    },
-    {
-      "media_id": "18003355974035177",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "C\u00f3mo superar el miedo a equivocarte",
-      "stamp": "2026-11-18T20:59:55+01:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df5UBeyEk00/"
-    },
-    {
-      "media_id": "18132792548509453",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Lo que hace especial a la cafeter\u00eda de tu barrio",
-      "stamp": "2026-11-18T19:23:43+01:00",
-      "local_hour": 19,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df5JCorl1YQ/"
     }
   ],
   "limits": "Instagram views requested separately for SocialPerks when granted; other insight counters remain unavailable unless collected; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.",
-  "market_date": "2026-11-25",
+  "market_date": "2026-11-26",
   "mature_hour_summary": [
     {
       "local_hour": 9,
-      "posts": 1,
-      "median_public_interactions": 0
-    },
-    {
-      "local_hour": 10,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 11,
       "posts": 2,
       "median_public_interactions": 0.0
     },
     {
-      "local_hour": 12,
+      "local_hour": 10,
       "posts": 3,
       "median_public_interactions": 0
     },
     {
-      "local_hour": 14,
-      "posts": 2,
+      "local_hour": 11,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 12,
+      "posts": 4,
       "median_public_interactions": 0.0
     },
     {
+      "local_hour": 14,
+      "posts": 1,
+      "median_public_interactions": 0
+    },
+    {
       "local_hour": 15,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
+    },
+    {
+      "local_hour": 16,
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 17,
@@ -797,8 +802,8 @@
     },
     {
       "local_hour": 18,
-      "posts": 6,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
@@ -807,13 +812,13 @@
     },
     {
       "local_hour": 20,
-      "posts": 2,
-      "median_public_interactions": 0.0
+      "posts": 1,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 21,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 22,
