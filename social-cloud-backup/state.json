@@ -890,8 +890,12 @@
   "gms-2026-11-26-6:youtube": "confirmed remotely: https://www.youtube.com/shorts/11jswsdnX0A",
   "gms-2026-11-26-6:facebook": "confirmed remotely: https://www.facebook.com/reel/1683188873203557/",
   "sin-2026-11-26-3:ig": "confirmed remotely: Why founders should track their time",
-  "gms-2026-11-26-7:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/DgNIzi1BnlE/",
+  "gms-2026-11-26-7:ig": "confirmed remotely: How to reconnect with a friend",
   "gms-2026-11-26-1:threads": "success: published: https://www.threads.com/@goodmessage_studio/post/DgNI4FWEbit",
-  "gms-2026-11-26-7:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'How to reconnect with a friend | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/L2_mJ6q5p6M",
-  "gms-2026-11-26-7:facebook": "held: publication attempt started at 2026-11-26T12:47:21+00:00; reconcile remotely before retry"
+  "gms-2026-11-26-7:youtube": "confirmed remotely: https://www.youtube.com/shorts/L2_mJ6q5p6M",
+  "gms-2026-11-26-7:facebook": "held: publication attempt started at 2026-11-26T12:47:21+00:00; reconcile remotely before retry",
+  "sin-2026-11-26-4:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgNOrDIDZCj/",
+  "gms-2026-11-26-8:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgNOyfbl0lC/",
+  "gms-2026-11-26-8:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Thursday night routine before the weekend | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/3HZQI_yG5Ys",
+  "gms-2026-11-26-3:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'Kind words for a friend going through a lot', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 25 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821229819804/"
 }
