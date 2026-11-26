@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-25T15:15:14+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-26T00:34:21+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -864,5 +864,8 @@
   "sin-2026-11-25-7:ig": "confirmed remotely: How to say no to a customer request",
   "sp-2026-11-25-7:ig": "confirmed remotely: H\u00e1bitos para una ma\u00f1ana con energ\u00eda",
   "sin-2026-11-25-8:ig": "confirmed remotely: A midweek check on your own energy",
-  "sp-2026-11-25-8:ig": "confirmed remotely: Mi\u00e9rcoles por la noche: recarga para el finde"
+  "sp-2026-11-25-8:ig": "confirmed remotely: Mi\u00e9rcoles por la noche: recarga para el finde",
+  "gms-2026-11-26-1:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/DgL05wGi4GA/",
+  "gms-2026-11-26-1:youtube": "held: publication attempt started at 2026-11-26T00:33:41+00:00; reconcile remotely before retry",
+  "gms-2026-11-26-1:facebook": "success: published: https://www.facebook.com/reel/1686279996359022/"
 }
