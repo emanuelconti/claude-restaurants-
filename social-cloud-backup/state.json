@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-26T08:05:23+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-26T11:04:58+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -884,5 +884,9 @@
   "gms-2026-11-26-3:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1454549596832835",
   "gms-2026-11-26-4:pinterest": "confirmed remotely: https://www.pinterest.com/pin/1103733821229804891/",
   "sp-2026-11-26-1:ig": "confirmed remotely: Jueves: casi viernes, todav\u00eda jueves",
-  "sin-2026-11-26-2:ig": "success: account: @sincronia.live\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgM2xg7Evxv/"
+  "sin-2026-11-26-2:ig": "confirmed remotely: How to ask customers for a testimonial",
+  "sp-2026-11-26-2:ig": "success: account: @socialperks.es\n8 slides are public (base-url)\npublished: https://www.instagram.com/p/DgM85rdEoZF/",
+  "gms-2026-11-26-6:ig": "success: account: @goodmessage_studio\npublished: https://www.instagram.com/reel/DgM9DhqB8WV/",
+  "gms-2026-11-26-6:youtube": "success: plan: 1 Short, 1080x1920, 18.0 s, title 'Gifts that feel personal | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/11jswsdnX0A",
+  "gms-2026-11-26-6:facebook": "success: published: https://www.facebook.com/reel/1683188873203557/"
 }
