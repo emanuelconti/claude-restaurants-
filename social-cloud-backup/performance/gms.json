@@ -6,6 +6,41 @@
       "reason": "RuntimeError",
       "posts": [
         {
+          "title": "Thursday night routine before the weekend",
+          "stamp": "2026-11-26T15:21:52+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1454915880129540"
+        },
+        {
+          "title": "Gifts that feel personal",
+          "stamp": "2026-11-26T11:04:54+0000",
+          "url": "https://www.facebook.com/reel/1683188873203557/"
+        },
+        {
+          "title": "Kind words for a friend going through a lot",
+          "stamp": "2026-11-26T08:05:19+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1454549596832835"
+        },
+        {
+          "title": "How to have a slow, kind evening",
+          "stamp": "2026-11-26T06:23:05+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1454474700173658"
+        },
+        {
+          "title": "Weeknight supper ideas with friends",
+          "stamp": "2026-11-26T05:05:19+0000",
+          "url": "https://www.facebook.com/reel/1594517429147020/"
+        },
+        {
+          "title": "Cosy places to catch up with friends",
+          "stamp": "2026-11-26T03:21:51+0000",
+          "url": "https://www.facebook.com/1429179606036501/posts/1454349023519559"
+        },
+        {
+          "title": "Thursday ideas to cheer up your team",
+          "stamp": "2026-11-26T00:34:15+0000",
+          "url": "https://www.facebook.com/reel/1686279996359022/"
+        },
+        {
           "title": "Wednesday evening wind down",
           "stamp": "2026-11-25T15:15:09+0000",
           "url": "https://www.facebook.com/1429179606036501/posts/1453845676903227"
@@ -94,47 +129,84 @@
           "title": "Small ways to make a workday lighter",
           "stamp": "2026-11-23T06:30:47+0000",
           "url": "https://www.facebook.com/1429179606036501/posts/1451312620489866"
-        },
-        {
-          "title": "Easy weekday lunch ideas in Singapore",
-          "stamp": "2026-11-23T04:51:16+0000",
-          "url": "https://www.facebook.com/reel/1462086102014309/"
-        },
-        {
-          "title": "After work plans with friends in Singapore",
-          "stamp": "2026-11-23T02:50:18+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1451165573837904"
-        },
-        {
-          "title": "Monday reminders for a kind week",
-          "stamp": "2026-11-23T00:37:15+0000",
-          "url": "https://www.facebook.com/reel/1134530399424718/"
-        },
-        {
-          "title": "Sunday night routine for a fresh start",
-          "stamp": "2026-11-22T15:03:50+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1450669973887464"
-        },
-        {
-          "title": "Thoughtful gifts for a friend who works too hard",
-          "stamp": "2026-11-22T10:53:40+0000",
-          "url": "https://www.facebook.com/reel/2875741399488127/"
-        },
-        {
-          "title": "Words that help a friend before a new week",
-          "stamp": "2026-11-22T08:21:04+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1450342307253564"
-        },
-        {
-          "title": "Small habits for a calmer week",
-          "stamp": "2026-11-22T06:47:13+0000",
-          "url": "https://www.facebook.com/1429179606036501/posts/1450279370593191"
         }
       ]
     },
     "youtube": {
       "availability": "available",
       "posts": [
+        {
+          "title": "Thursday night routine before the weekend | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T13:39:22Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/3HZQI_yG5Ys"
+        },
+        {
+          "title": "How to reconnect with a friend | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T12:47:36Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/L2_mJ6q5p6M"
+        },
+        {
+          "title": "Gifts that feel personal | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T11:04:45Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/11jswsdnX0A"
+        },
+        {
+          "title": "Kind words for a friend going through a lot | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T08:05:28Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/s_0l9cC2IbM"
+        },
+        {
+          "title": "How to have a slow, kind evening | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T06:23:04Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/9WqpK08N5gc"
+        },
+        {
+          "title": "Weeknight supper ideas with friends | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T05:05:01Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/YljFgo_NvBU"
+        },
+        {
+          "title": "Cosy places to catch up with friends | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T03:22:01Z",
+          "visibility": "public",
+          "views": "0",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/DaWatiwGKWU"
+        },
+        {
+          "title": "Thursday ideas to cheer up your team | goodmessagestudio.com #Shorts",
+          "stamp": "2026-11-26T00:34:06Z",
+          "visibility": "public",
+          "views": "1",
+          "likes": "0",
+          "comments": "0",
+          "url": "https://www.youtube.com/shorts/U1a_OQnd6QA"
+        },
         {
           "title": "Wednesday evening wind down | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-25T13:32:58Z",
@@ -157,7 +229,7 @@
           "title": "Gifts for a friend who needs a lift | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-25T11:09:48Z",
           "visibility": "public",
-          "views": "34",
+          "views": "35",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/UzLtg_Cdg9o"
@@ -238,7 +310,7 @@
           "title": "Little messages that make a friend smile | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-24T08:00:16Z",
           "visibility": "public",
-          "views": "25",
+          "views": "39",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/SQjYw4qaTPk"
@@ -292,7 +364,7 @@
           "title": "How to keep in touch with old friends | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-23T13:06:47Z",
           "visibility": "public",
-          "views": "8",
+          "views": "9",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/qeprVyPzbfc"
@@ -319,7 +391,7 @@
           "title": "Small ways to make a workday lighter | goodmessagestudio.com #Shorts",
           "stamp": "2026-11-23T06:30:53Z",
           "visibility": "public",
-          "views": "0",
+          "views": "2",
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/s0feETCZu2Y"
@@ -332,84 +404,23 @@
           "likes": "0",
           "comments": "0",
           "url": "https://www.youtube.com/shorts/h40pc4TkgCg"
-        },
-        {
-          "title": "After work plans with friends in Singapore | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-23T02:50:23Z",
-          "visibility": "public",
-          "views": "4",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/CTizDrQYZLQ"
-        },
-        {
-          "title": "Monday reminders for a kind week | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-23T00:37:03Z",
-          "visibility": "public",
-          "views": "0",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/WGQjwIelmA8"
-        },
-        {
-          "title": "Sunday night routine for a fresh start | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T13:22:26Z",
-          "visibility": "public",
-          "views": "2",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/NHaeqZoioxg"
-        },
-        {
-          "title": "How to stay close to friends when weeks are busy | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T12:32:44Z",
-          "visibility": "public",
-          "views": "1",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/fH1xCrnrZU8"
-        },
-        {
-          "title": "Thoughtful gifts for a friend who works too hard | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T10:53:30Z",
-          "visibility": "public",
-          "views": "7",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/B3z4N6-utgQ"
-        },
-        {
-          "title": "Words that help a friend before a new week | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T07:31:11Z",
-          "visibility": "public",
-          "views": "17",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/dLFbDx2Stgs"
-        },
-        {
-          "title": "Small habits for a calmer week | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T06:47:23Z",
-          "visibility": "public",
-          "views": "5",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/kk8FMgrpWM8"
-        },
-        {
-          "title": "Sunday lunch ideas for the whole family | goodmessagestudio.com #Shorts",
-          "stamp": "2026-11-22T04:22:08Z",
-          "visibility": "public",
-          "views": "6",
-          "likes": "0",
-          "comments": "0",
-          "url": "https://www.youtube.com/shorts/hGoQV4yh8r4"
         }
       ]
     },
     "threads": {
       "availability": "available",
       "posts": [
+        {
+          "title": "A small gesture can lift the whole office. Bring kueh to share. Write a thank you note. Lunch together. Leave on time together.",
+          "stamp": "2026-11-26T12:47:07+0000",
+          "url": "https://www.threads.com/@goodmessage_studio/post/DgNI4FWEbit",
+          "public_interactions": {
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0
+          }
+        },
         {
           "title": "Wednesday is a good day for a kind surprise. Send a voice note. Drop off a snack. Share a song. Plan Friday dinner.",
           "stamp": "2026-11-25T12:52:35+0000",
@@ -618,17 +629,6 @@
             "reposts": 0,
             "quotes": 0
           }
-        },
-        {
-          "title": "5 ways to make a Saturday morning feel like yours",
-          "stamp": "2026-11-07T02:50:08+0000",
-          "url": "https://www.threads.com/@goodmessage_studio/post/DfbJc-dEWeN",
-          "public_interactions": {
-            "likes": 0,
-            "replies": 0,
-            "reposts": 0,
-            "quotes": 0
-          }
         }
       ]
     }
@@ -637,6 +637,70 @@
   "account": "goodmessage_studio",
   "timezone": "Asia/Singapore",
   "posts": [
+    {
+      "title": "Thursday night routine before the weekend",
+      "stamp": "2026-11-26T21:38:45+08:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgNOyfbl0lC/"
+    },
+    {
+      "title": "How to reconnect with a friend",
+      "stamp": "2026-11-26T20:46:47+08:00",
+      "local_hour": 20,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgNIzi1BnlE/"
+    },
+    {
+      "title": "Gifts that feel personal",
+      "stamp": "2026-11-26T19:04:06+08:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgM9DhqB8WV/"
+    },
+    {
+      "title": "Kind words for a friend going through a lot",
+      "stamp": "2026-11-26T16:04:57+08:00",
+      "local_hour": 16,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgMolaCl36f/"
+    },
+    {
+      "title": "How to have a slow, kind evening",
+      "stamp": "2026-11-26T14:22:27+08:00",
+      "local_hour": 14,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgMc2f2oHZY/"
+    },
+    {
+      "title": "Weeknight supper ideas with friends",
+      "stamp": "2026-11-26T13:04:30+08:00",
+      "local_hour": 13,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgMT5G7KVJN/"
+    },
+    {
+      "title": "Cosy places to catch up with friends",
+      "stamp": "2026-11-26T11:21:24+08:00",
+      "local_hour": 11,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgMIImHjQ4W/"
+    },
+    {
+      "title": "Thursday ideas to cheer up your team",
+      "stamp": "2026-11-26T08:33:31+08:00",
+      "local_hour": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgL05wGi4GA/"
+    },
     {
       "title": "Wednesday evening wind down",
       "stamp": "2026-11-25T21:32:16+08:00",
@@ -972,74 +1036,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/Df9tPQcmQzi/"
-    },
-    {
-      "title": "Gift ideas for a friend who needs a break",
-      "stamp": "2026-11-20T18:31:17+08:00",
-      "local_hour": 18,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df9cit3EZKC/"
-    },
-    {
-      "title": "How to cheer up a friend after a long week",
-      "stamp": "2026-11-20T16:03:25+08:00",
-      "local_hour": 16,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df9LpABl7sz/"
-    },
-    {
-      "title": "Ways to show appreciation to your team",
-      "stamp": "2026-11-20T14:21:34+08:00",
-      "local_hour": 14,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df8__GqlLSp/"
-    },
-    {
-      "title": "Friday lunch ideas to end the week well",
-      "stamp": "2026-11-20T12:42:13+08:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df80lOnjrlj/"
-    },
-    {
-      "title": "Fun Friday night plans in Singapore",
-      "stamp": "2026-11-20T10:17:50+08:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df8kF3aF_XJ/"
-    },
-    {
-      "title": "Friday reminders before the weekend",
-      "stamp": "2026-11-20T08:40:03+08:00",
-      "local_hour": 8,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df8Y3pEEreJ/"
-    },
-    {
-      "title": "Thursday night thoughts to slow down",
-      "stamp": "2026-11-19T21:32:02+08:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df7MczzF9G0/"
-    },
-    {
-      "title": "How to keep a friendship going when life gets busy",
-      "stamp": "2026-11-19T20:41:42+08:00",
-      "local_hour": 20,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df7Gp0qjNSv/"
     }
   ],
   "limits": "Public likes/comments only; no reach, saves, demographics, sales or conversion claimed.",
-  "market_date": "2026-11-26",
+  "market_date": "2026-11-27",
   "mature_hour_summary": [
     {
       "local_hour": 8,
@@ -1053,13 +1053,13 @@
     },
     {
       "local_hour": 12,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 13,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 14,
@@ -1068,23 +1068,18 @@
     },
     {
       "local_hour": 15,
-      "posts": 4,
-      "median_public_interactions": 0.0
-    },
-    {
-      "local_hour": 16,
-      "posts": 1,
+      "posts": 5,
       "median_public_interactions": 0
     },
     {
       "local_hour": 18,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 19,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 20,
