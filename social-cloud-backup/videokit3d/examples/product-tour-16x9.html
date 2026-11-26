@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0b0a1a; font-family: Inter, Arial, sans-serif; }
+  #gl { position: absolute; inset: 0; }
+  .a { position: absolute; will-change: transform, opacity; visibility: hidden; }
+  .cap { left: 0; right: 0; text-align: center; font-weight: 800; letter-spacing: -0.045em; }
+  .eye { font-size: 24px; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; color: #3a2be0; }
+  .ttl { font-size: 80px; font-weight: 800; letter-spacing: -0.045em; line-height: 1.0; color: #111318; }
+  .chip { padding: 16px 28px; border-radius: 999px; background: #fff; font-size: 28px; font-weight: 700; color: #111318; box-shadow: 0 30px 60px -30px rgba(20,16,60,.45); white-space: nowrap; }
+  .chip b { color: #1e7a4c; } .chip i { font-style: normal; color: #3a2be0; }
+  .dchip { padding: 16px 28px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25); font-size: 28px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .phone { width: 420px; height: 873px; border-radius: 64px; overflow: hidden; box-shadow: 0 60px 120px -40px rgba(20,16,60,.55); }
+  .phone img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .tile { overflow: hidden; border-radius: 0; }
+  .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .tag { position: absolute; left: 22px; top: 22px; padding: 10px 18px; border-radius: 999px; font-size: 22px; font-weight: 800; letter-spacing: .06em; color: #fff; white-space: nowrap; }
+  .tname { position: absolute; left: 24px; bottom: 20px; font-size: 34px; font-weight: 800; color: #fff; letter-spacing: -0.02em; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+  .card { background: #fff; border-radius: 34px; box-shadow: 0 40px 80px -40px rgba(20,16,60,.45); padding: 40px; box-sizing: border-box; }
+  .card .n { font-size: 112px; font-weight: 800; letter-spacing: -0.06em; line-height: 1; color: #3a2be0; }
+  .card .t { margin-top: 18px; font-size: 30px; font-weight: 700; color: #111318; line-height: 1.2; }
+  .lv { width: 300px; height: 300px; border-radius: 34px; background: #fff; box-shadow: 0 40px 80px -40px rgba(20,16,60,.45); padding: 36px; box-sizing: border-box; }
+  .lv .n { font-size: 120px; font-weight: 800; letter-spacing: -0.06em; line-height: 1; color: #111318; }
+  .lv .dots { display: flex; gap: 8px; margin-top: 18px; } .lv .dots i { width: 14px; height: 14px; border-radius: 50%; background: #e3e4ec; }
+  .lv .dots i.f { background: #3a2be0; }
+  .lv .name { margin-top: 26px; font-size: 34px; font-weight: 700; color: #111318; } .lv .unit { font-size: 20px; color: #6b7280; margin-top: 4px; }
+  .lv.on { background: #3a2be0; } .lv.on .n, .lv.on .name { color: #fff; } .lv.on .unit { color: rgba(255,255,255,.75); } .lv.on .dots i.f { background: #fff; }
+  .tier { display: flex; align-items: center; gap: 24px; font-size: 30px; font-weight: 700; color: #111318; }
+  .tier span { display: block; height: 22px; border-radius: 11px; background: #3a2be0; }
+  #cursor { position: absolute; width: 44px; height: 44px; z-index: 50; }
+  #ripple { position: absolute; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; background: rgba(58,43,224,.28); border: 3px solid rgba(58,43,224,.6); z-index: 49; }
+  #site img { width: 1920px; height: 1080px; display: block; border-radius: 18px; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1920" height="1080"></canvas>
+
+<!-- HOOK: six empty places, hard cuts, then the wall -->
+<div id="wall" class="a" style="inset:0"></div>
+<div class="a cap" id="hk1" style="top:390px;font-size:150px;color:#fff;line-height:.95">Every empty hour</div>
+<div class="a cap" id="hk2" style="top:390px;font-size:150px;color:#fff;line-height:.95">is money gone<br>forever.</div>
+<div class="a cap" id="hk3" style="top:430px;font-size:120px;color:#fff">Ads can't fill it.</div>
+<div class="a cap" id="hk4" style="top:430px;font-size:120px;color:#b9b2ff">Your customers can.</div>
+
+<!-- LOGO -->
+<div class="a" id="logo" style="left:0;right:0;top:420px;display:flex;align-items:center;justify-content:center;gap:24px"><img src="assets/logo.png" style="width:110px;height:110px"><span style="font-size:110px;font-weight:800;letter-spacing:-0.05em;color:#fff">SocialPerks</span></div>
+<div class="a cap" id="lg2" style="top:580px;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:rgba(255,255,255,.9)">The referral engine for real-world places.</div>
+<div class="a cap" id="lg3" style="top:650px;font-size:30px;font-weight:700;letter-spacing:0.22em;color:#9d95ff">RUN BY AN AI AGENT</div>
+
+<!-- 01 the agent, on the 3D week -->
+<div class="a eye" id="e1" style="left:120px;top:110px;color:#9d95ff">01 · The AI agent</div>
+<div class="a ttl" id="t1a" style="left:120px;top:160px;color:#fff">Finds your empty hours.</div>
+<div class="a ttl" id="t1b" style="left:120px;top:160px;color:#fff">Sets a gift you can afford.</div>
+<div class="a dchip" id="c1" style="left:120px;top:900px">A coffee · a free hour · a welcome drink · within your budget</div>
+
+<!-- 02 and 03 phones -->
+<div class="a phone" id="ph"><img id="phA" src="assets/link-home.png"><img id="phB" src="assets/link-whatsapp.png"></div>
+<div class="a eye" id="e2" style="left:960px;top:150px">02 · The link</div>
+<div class="a ttl" id="t2" style="left:960px;top:200px;width:860px">Every customer gets a personal link.</div>
+<div class="a chip" id="c2a" style="left:960px;top:560px">WhatsApp · Messages · Telegram · Stories</div>
+<div class="a chip" id="c2b" style="left:960px;top:660px">No app to download.</div>
+<div class="a eye" id="e3" style="left:960px;top:150px">03 · The visit</div>
+<div class="a ttl" id="t3" style="left:960px;top:200px;width:860px">A new customer walks in. Verified at the counter.</div>
+<div class="a chip" id="c3a" style="left:960px;top:620px"><b>✓</b> 6-character code · QR · NFC</div>
+<div class="a chip" id="c3b" style="left:960px;top:720px">Regulars never count as new.</div>
+
+<!-- 04 it runs itself -->
+<div class="a" id="ag" style="left:300px;top:110px;width:420px;height:852px;border-radius:44px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(20,16,60,.55)"><img src="assets/agent.png" style="width:100%;height:100%;object-fit:cover"></div>
+<div class="a eye" id="e4" style="left:960px;top:150px">04 · Then it runs itself</div>
+<div class="a ttl" id="t4" style="left:960px;top:200px;width:860px">The agent plans every week for you.</div>
+<div class="a chip" id="k1" style="left:960px;top:560px">Spots the next empty hour</div>
+<div class="a chip" id="k2" style="left:960px;top:660px">Invites the right customers</div>
+<div class="a chip" id="k3" style="left:960px;top:760px">Counts every new visit</div>
+<!-- 05 ambassadors -->
+<div class="a eye cap" id="e5" style="top:150px">05 · Ambassadors</div>
+<div class="a ttl cap" id="t5" style="top:200px">Customers who bring customers level up.</div>
+<div class="a lv" id="lv0" style="left:250px;top:430px"><div class="n">1</div><div class="dots"></div><div class="name">Fan</div><div class="unit">new customer</div></div>
+<div class="a lv" id="lv1" style="left:620px;top:430px"><div class="n">3</div><div class="dots"></div><div class="name">Host</div><div class="unit">new customers</div></div>
+<div class="a lv" id="lv2" style="left:990px;top:430px"><div class="n">5</div><div class="dots"></div><div class="name">Ambassador</div><div class="unit">new customers</div></div>
+<div class="a lv" id="lv3" style="left:1360px;top:430px"><div class="n">10</div><div class="dots"></div><div class="name">Icon</div><div class="unit">new customers</div></div>
+<div class="a cap" id="t5b" style="top:800px;font-size:34px;font-weight:700;letter-spacing:-0.01em;color:#4b5563">Followers never count. Real visits do.</div>
+
+<!-- 06 a Story on the spot -->
+<div class="a phone" id="ps"><img src="assets/link-story.png"></div>
+<div class="a eye" id="e6" style="left:960px;top:150px">06 · On the spot</div>
+<div class="a ttl" id="t6" style="left:960px;top:200px;width:860px">Post a Story. Get a gift right away.</div>
+<div class="a" id="tiers" style="left:960px;top:560px">
+  <div style="font-size:24px;font-weight:700;color:#4b5563;margin-bottom:18px">The gift grows with real followers</div>
+  <div class="tier"><span style="width:90px;opacity:.4"></span>up to 1,000</div>
+  <div class="tier" style="margin-top:14px"><span style="width:170px;opacity:.7"></span>1,000 – 10,000</div>
+  <div class="tier" style="margin-top:14px"><span style="width:260px"></span>over 10,000</div>
+</div>
+<div class="a chip" id="c6" style="left:960px;top:860px"><b>✓</b> Fake followers filtered · code by DM</div>
+
+<!-- 07 every place -->
+<div class="a eye cap" id="e7" style="top:70px;color:#9d95ff">07 · Where we start</div>
+<div class="a ttl cap" id="t7" style="top:118px;left:200px;right:200px;color:#fff;font-size:58px">Sports, gyms and car parks first. Then every place with empty hours.</div>
+
+<!-- 08 live -->
+<div id="sitewrap" class="a" style="inset:0;perspective:2400px;visibility:visible"><div id="site" class="a" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 50%"><img src="assets/hero.png"></div></div>
+<div class="a chip" id="s1" style="left:1380px;top:300px">Live in <i>15 cities</i></div>
+<div class="a chip" id="s2" style="left:1380px;top:400px"><i>8</i> languages</div>
+<div class="a chip" id="s3" style="left:1380px;top:500px"><i>12</i> university ambassadors</div>
+<div class="a chip" id="s4" style="left:1380px;top:600px">Esade eWorks <i>2026</i></div>
+
+<!-- outro -->
+<div class="a" id="ologo" style="left:0;right:0;top:470px;display:flex;align-items:center;justify-content:center;gap:22px"><img src="assets/logo.png" style="width:92px;height:92px"><span style="font-size:88px;font-weight:800;letter-spacing:-0.05em;color:#fff">SocialPerks</span></div>
+<div class="a cap" id="o2" style="top:610px;font-size:44px;font-weight:600;letter-spacing:-0.02em;color:rgba(255,255,255,.92)">The new way places grow is here.</div>
+<div class="a cap" id="o3" style="top:690px;font-size:34px;font-weight:700;letter-spacing:0;color:#9d95ff">Join now · socialperkses.com</div>
+
+<div id="ripple" class="a"></div>
+<svg id="cursor" class="a" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L10 19z" fill="#111318" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+<script type="module">
+import * as THREE from "three";
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = (x) => { x = clamp(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const out = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const win = (t, a, b, c, d) => (t < a || t > d ? 0 : t < b ? ease((t - a) / (b - a)) : t > c ? 1 - ease((t - c) / (d - c)) : 1);
+const cut = (t, a, d) => (t >= a && t < d ? 1 : 0);
+const lerp = (a, b, k) => a + (b - a) * k;
+const $ = (id) => document.getElementById(id);
+const css = (el, o, y = 0, s = 1, extra = "") => { el.style.opacity = o; el.style.transform = `translateY(${y}px) scale(${s}) ${extra}`; el.style.visibility = o > 0.001 ? "visible" : "hidden"; };
+const splitWords = (el) => { if (el.dataset.split) return; el.dataset.split = 1;
+  const walk = (node) => [...node.childNodes].forEach((c) => { if (c.nodeType === 3) { const f = document.createDocumentFragment();
+    c.textContent.split(/(\s+)/).forEach((w) => { if (!w) return; if (/^\s+$/.test(w)) { f.appendChild(document.createTextNode(w)); return; }
+      const sp = document.createElement("span"); sp.className = "w"; sp.style.display = "inline-block"; sp.textContent = w; f.appendChild(sp); }); c.replaceWith(f); }
+    else if (c.nodeType === 1 && c.tagName !== "BR" && c.tagName !== "IMG") walk(c); });
+  walk(el); };
+const rise = (id, t, a, b, c, d, dist = 26) => {
+  const el = $(id); const o = win(t, a, b, c, d);
+  if (el.classList.contains("ttl") || el.classList.contains("cap")) {
+    splitWords(el); css(el, o > 0 ? Math.min(1, o * 3) : 0, 0, 1);
+    [...el.querySelectorAll(".w")].forEach((w, j) => { const k = out((t - a - j * 0.07) / 0.55);
+      w.style.opacity = k; w.style.transform = `translateY(${(1 - k) * 46}px) rotate(${(1 - k) * 4}deg)`; w.style.filter = `blur(${(1 - k) * 8}px)`; });
+    if (o < 1 && t > c) el.style.opacity = o;
+  } else css(el, o, lerp(dist, 0, out((t - a) / (b - a + 0.2))));
+};
+
+// ---- the wall of places (hook and "every place") ----
+const PLACES = [
+  ["h1.jpg", "Sports clubs", "TUE 13:00"], ["h2.jpg", "Gyms", "WED 15:00"], ["h5.jpg", "Car parks", "SUN 09:00"],
+  ["h3.jpg", "Restaurants", "MON 16:00"], ["h4.jpg", "Salons", "THU 11:00"], ["h6.jpg", "Hotels", "TUE 14:00"],
+];
+const wall = $("wall");
+const tiles = PLACES.map(([img, name, when], i) => {
+  const d = document.createElement("div"); d.className = "a tile";
+  d.innerHTML = `<img src="assets/${img}"><div class="shade" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(11,10,26,.62),rgba(11,10,26,.25))"></div><div class="tag" style="background:#ff3b5c">● EMPTY · ${when}</div><div class="tname">${name}</div>`;
+  wall.appendChild(d); return d;
+});
+
+// ---- three ----
+const renderer = new THREE.WebGLRenderer({ canvas: $("gl"), antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1920, 1080, false);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, 16 / 9, 0.1, 100);
+scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(4, 8, 6); scene.add(sun);
+const rim = new THREE.DirectionalLight(0x8b80ff, 0.9); rim.position.set(-6, 3, -4); scene.add(rim);
+const N = 9000;
+const pos = new Float32Array(N * 3), base = new Float32Array(N * 3), scat = new Float32Array(N * 3), col = new Float32Array(N * 3);
+const cA = new THREE.Color("#6c63ff"), cB = new THREE.Color("#e8458f"), cC = new THREE.Color("#ffffff");
+for (let i = 0; i < N; i++) {
+  const u = Math.random(), v = Math.random(); const th = 2 * Math.PI * u, ph = Math.acos(2 * v - 1);
+  const r = 1.55 + (Math.random() - 0.5) * 0.08 + (Math.random() < 0.08 ? Math.random() * 0.9 : 0);
+  base[i * 3] = r * Math.sin(ph) * Math.cos(th); base[i * 3 + 1] = r * Math.cos(ph); base[i * 3 + 2] = r * Math.sin(ph) * Math.sin(th);
+  scat[i * 3] = (Math.random() - 0.5) * 16; scat[i * 3 + 1] = (Math.random() - 0.5) * 9; scat[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  const c = cA.clone().lerp(cB, Math.random() * 0.6).lerp(cC, Math.random() < 0.15 ? 0.7 : 0);
+  col[i * 3] = c.r; col[i * 3 + 1] = c.g; col[i * 3 + 2] = c.b;
+}
+const og = new THREE.BufferGeometry();
+og.setAttribute("position", new THREE.BufferAttribute(pos, 3)); og.setAttribute("color", new THREE.BufferAttribute(col, 3));
+const sprite = (() => { const c = document.createElement("canvas"); c.width = c.height = 64; const g = c.getContext("2d"); const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(0.35, "rgba(255,255,255,.6)"); gr.addColorStop(1, "rgba(255,255,255,0)"); g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+const om = new THREE.PointsMaterial({ size: 0.06, map: sprite, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending });
+const orb = new THREE.Points(og, om); scene.add(orb);
+
+const grid = new THREE.Group(); scene.add(grid);
+const boxG = new THREE.BoxGeometry(0.42, 1, 0.42);
+const bars = [];
+for (let d = 0; d < 7; d++) for (let h = 0; h < 8; h++) {
+  let b = 0.15 + (h >= 5 ? 0.45 : 0) + (d >= 4 ? 0.35 : 0) + 0.25 * Math.sin(d * 1.7 + h * 0.9) ** 2;
+  if ((d === 1 && h < 4) || (d === 2 && (h === 1 || h === 2)) || (d === 0 && h === 2) || (d === 3 && h === 0)) b = 0.12;
+  b = clamp(b, 0.1, 1); const quiet = b < 0.2;
+  const mesh = new THREE.Mesh(boxG, new THREE.MeshStandardMaterial({ color: quiet ? 0xff4d6d : 0x3b3866, roughness: 0.5, transparent: true }));
+  mesh.position.set((d - 3) * 0.55, 0, (h - 3.5) * 0.55); grid.add(mesh);
+  let fill = null;
+  if (quiet) { fill = new THREE.Mesh(boxG, new THREE.MeshStandardMaterial({ color: 0x6c63ff, emissive: 0x3a2be0, emissiveIntensity: 0.6, roughness: 0.35, transparent: true })); fill.position.copy(mesh.position); grid.add(fill); }
+  bars.push({ mesh, fill, b, quiet, d, h });
+}
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(5.2, 5.2), new THREE.MeshStandardMaterial({ color: 0x14122b, roughness: 1, transparent: true }));
+floor.rotation.x = -Math.PI / 2; grid.add(floor);
+
+const DARK = new THREE.Color("#0b0a1a"), LIGHT = new THREE.Color("#f4f6fa");
+const counts = [1, 3, 5, 10];
+[0, 1, 2, 3].forEach((i) => { const dots = $("lv" + i).querySelector(".dots"); for (let k = 0; k < 10; k++) { const e = document.createElement("i"); if (k < counts[i]) e.className = "f"; dots.appendChild(e); } });
+
+// Timeline (s): hook 0–4.6 · ads/customers 4.6–8.2 · logo 8.2–12.8 · 01 agent 12.8–20.4 ·
+// 02 link 20.4–28.6 · 03 visit 28.6–35.6 · 04 model 35.6–41.8 · 05 levels 41.8–48.2 ·
+// 06 story 48.2–54.6 · 07 places 54.6–60.6 · 08 live 60.6–66.6 · outro 66.6–72
+const CUTS = [0, 1.1, 2.2, 3.3, 4.6, 6.3, 8.2, 12.8, 16.4, 20.4, 28.6, 35.6, 41.8, 48.2, 54.6, 60.6, 66.6, 72];
+document.body.style.transformOrigin = "50% 50%";
+window.render = (t) => {
+  // the camera: a slow push in every scene, a short punch on every cut
+  let ci = 0; while (ci < CUTS.length - 2 && t >= CUTS[ci + 1]) ci++;
+  const sa = CUTS[ci], sb = CUTS[ci + 1];
+  const push = 1 + 0.035 * clamp((t - sa) / (sb - sa));
+  const punch = 1 + 0.06 * Math.max(0, 1 - (t - sa) / 0.35) ** 2;
+  const drift = Math.sin(t * 0.6) * 6;
+  document.body.style.transform = `scale(${push * punch}) translate(${drift}px, ${Math.cos(t * 0.5) * 4}px)`;
+  const light = Math.max(win(t, 20.0, 20.8, 54.0, 54.8), win(t, 60.2, 61.0, 66.2, 67.0));
+  const bg = DARK.clone().lerp(LIGHT, light);
+  scene.background = bg; document.body.style.background = `#${bg.getHexString()}`;
+
+  // ---- HOOK: hard cuts on six empty places (0–3.3), then the wall (3.3–4.6)
+  const cutLen = 1.1;
+  tiles.forEach((el, i) => {
+    let show = 0, x = 0, y = 0, w = 1920, h = 1080, z = 1;
+    if (t < 3.3) { show = i < 3 ? cut(t, i * cutLen, (i + 1) * cutLen) : 0; z = 1.06 + (t - i * cutLen) * 0.08; }
+    else if (t < 4.6) { const k = ease((t - 3.3) / 0.6); show = i < 3 ? 1 - ease((t - 4.25) / 0.35) : 0;
+      x = lerp(0, 60 + i * 610, k); y = lerp(0, 330, k); w = lerp(1920, 580, k); h = lerp(1080, 420, k); }
+    else if (t >= 54.6 && t < 60.6) { // 07: the same places, now filling
+      const a = 55.0 + i * 0.12; const k = out((t - a) / 0.7); const col = i % 3, row = Math.floor(i / 3);
+      show = win(t, a, a + 0.5, 59.8, 60.6); x = 60 + col * 610; y = 300 + row * 385 + lerp(40, 0, k); w = 580; h = 360;
+    }
+    el.style.left = x + "px"; el.style.top = y + "px"; el.style.width = w + "px"; el.style.height = h + "px";
+    el.style.opacity = show; el.style.visibility = show > 0 ? "visible" : "hidden"; el.style.borderRadius = (t > 3.3 ? 24 : 0) + "px";
+    el.querySelector("img").style.transform = `scale(${z})`;
+    const tag = el.querySelector(".tag");
+    const later = i >= 3 && t > 54;
+    const filled = !later && t > 56.6 + i * 0.35;
+    tag.style.background = later ? "rgba(17,19,24,.75)" : filled ? "#16a34a" : "#ff3b5c";
+    tag.textContent = later ? "NEXT" : filled ? "✓ FILLED · NEW CUSTOMERS" : `● EMPTY · ${PLACES[i][2]}`;
+    el.querySelector("img").style.filter = later ? "grayscale(.85) brightness(.75)" : "none";
+    tag.style.opacity = t > 54 ? 1 : (t < 3.3 ? 0.75 + 0.25 * Math.sin(t * 14) : 1);
+    el.querySelector(".tname").style.opacity = t > 3.3 ? 1 : 0;
+    el.querySelector(".shade").style.opacity = t < 3.3 ? 1 : 0;
+  });
+  wall.style.visibility = "visible"; wall.style.opacity = 1;
+  // hook words, slammed on the cuts
+  const slam = (a) => 1 + 0.16 * Math.max(0, 1 - (t - a) / 0.22);
+  css($("hk1"), cut(t, 0.0, 1.65), 0, slam(0));
+  css($("hk2"), cut(t, 1.65, 3.3), 0, slam(1.65));
+  css($("hk3"), cut(t, 4.7, 6.3) * (1 - ease((t - 6.1) / 0.2)), 0, slam(4.7));
+  const shake = t >= 6.3 && t < 6.5 ? Math.sin(t * 160) * 10 * (1 - (t - 6.3) / 0.2) : 0;
+  css($("hk4"), win(t, 6.3, 6.31, 7.7, 8.2), shake, slam(6.3));
+
+  // ---- orb: gathers from scattered points 4.6–6.4, logo 8.2–12.8, bursts at 12.4; returns for the outro
+  const orbOn = Math.max(win(t, 4.6, 5.0, 12.4, 13.2), win(t, 66.6, 67.4, 99, 100));
+  orb.visible = orbOn > 0.001; om.opacity = orbOn;
+  const gather = t > 66 ? 1 : ease((t - 4.6) / 1.8);
+  const burst = t > 66 ? 1 : 1 + ease((t - 12.2) / 1.0) * 2.6;
+  const breathe = 1 + 0.04 * Math.sin(t * 2.2);
+  for (let i = 0; i < N; i++) {
+    const k = breathe * (1 + 0.06 * Math.sin(t * 1.7 + i * 0.013)) * burst;
+    pos[i * 3] = lerp(scat[i * 3], base[i * 3] * k, gather); pos[i * 3 + 1] = lerp(scat[i * 3 + 1], base[i * 3 + 1] * k, gather); pos[i * 3 + 2] = lerp(scat[i * 3 + 2], base[i * 3 + 2] * k, gather);
+  }
+  og.attributes.position.needsUpdate = true;
+  orb.rotation.y = t * 0.25; orb.rotation.x = 0.35 + t * 0.05;
+  const logoPhase = ease((t - 8.2) / 0.8);
+  if (t > 66) { orb.position.set(0, 1.35, 0); orb.scale.setScalar(0.34); }
+  else { orb.position.set(0, lerp(0, 1.45, logoPhase), 0); orb.scale.setScalar(lerp(1, 0.42, logoPhase)); }
+
+  // ---- 01: the week
+  const gridOn = win(t, 12.8, 13.6, 19.6, 20.4);
+  grid.visible = gridOn > 0.001;
+  bars.forEach(({ mesh, fill, b, quiet, d, h }) => {
+    const grow = out((t - 13.0 - (d + h) * 0.03) / 0.9);
+    const hgt = Math.max(0.02, b * 1.6 * grow);
+    mesh.scale.y = hgt; mesh.position.y = hgt / 2; mesh.material.opacity = gridOn;
+    if (quiet) {
+      mesh.material.emissive = new THREE.Color(0xff4d6d); mesh.material.emissiveIntensity = t < 16.4 ? 0.25 + 0.35 * (0.5 + 0.5 * Math.sin(t * 6)) : 0.1;
+      const f = ease((t - 16.6 - (d * 0.12 + h * 0.06)) / 0.9); const fh = Math.max(0.0001, 1.05 * f);
+      fill.scale.y = fh; fill.position.y = hgt + fh / 2; fill.material.opacity = gridOn; fill.visible = f > 0.001 && gridOn > 0.001;
+    }
+  });
+  floor.material.opacity = gridOn * 0.9;
+  if (t >= 12.6 && t < 20.6) { const ang = -0.75 + (t - 12.8) * 0.07; camera.position.set(Math.sin(ang) * 7.4 + 1.2, 5.3 - (t - 12.8) * 0.08, Math.cos(ang) * 7.4); camera.lookAt(0.9, 0.35, 0); }
+  else { camera.position.set(0, 0, 6.2); camera.lookAt(0, 0, 0); }
+  renderer.render(scene, camera);
+
+  css($("logo"), win(t, 8.6, 9.3, 12.0, 12.6), lerp(30, 0, out((t - 8.6) / 0.9)), lerp(0.94, 1, out((t - 8.6) / 0.9)));
+  rise("lg2", t, 9.2, 9.9, 12.0, 12.6);
+  rise("lg3", t, 9.8, 10.4, 12.0, 12.6, 16);
+  rise("e1", t, 13.6, 14.2, 19.6, 20.3, 14);
+  rise("t1a", t, 13.8, 14.5, 16.0, 16.4);
+  rise("t1b", t, 16.4, 17.0, 19.6, 20.3);
+  rise("c1", t, 17.4, 18.0, 19.6, 20.3);
+
+  // ---- 02/03: the phone
+  const phOn = win(t, 20.4, 21.3, 34.8, 35.6);
+  const sway = Math.sin(t * 0.9) * 3;
+  const ph = $("ph"); ph.style.left = "330px"; ph.style.top = `${lerp(170, 104, ease((t - 20.4) / 1.2))}px`;
+  css(ph, phOn, 0, lerp(0.92, 1, ease((t - 20.4) / 1.2)), `perspective(1600px) rotateY(${lerp(28, 8, ease((t - 20.4) / 1.4)) + sway}deg) rotateX(${4 - sway * 0.4}deg)`);
+  const seq = t < 24.0 ? ["link-home", "link-whatsapp", 23.2] : t < 30.6 ? ["link-whatsapp", "link-offer", 29.0] : ["link-offer", "link-code", 31.8];
+  if (!$("phA").src.endsWith(seq[0] + ".png")) $("phA").src = `assets/${seq[0]}.png`;
+  if (!$("phB").src.endsWith(seq[1] + ".png")) $("phB").src = `assets/${seq[1]}.png`;
+  const mix = ease((t - seq[2]) / 0.45); $("phB").style.opacity = mix; $("phB").style.transform = `translateX(${lerp(40, 0, mix)}px)`;
+  rise("e2", t, 21.0, 21.6, 27.8, 28.6, 14); rise("t2", t, 21.2, 21.9, 27.8, 28.6);
+  rise("c2a", t, 22.2, 22.8, 27.8, 28.6, 20); rise("c2b", t, 24.6, 25.2, 27.8, 28.6, 20);
+  rise("e3", t, 28.8, 29.4, 34.8, 35.6, 14); rise("t3", t, 29.0, 29.7, 34.8, 35.6);
+  css($("c3a"), win(t, 32.0, 32.5, 34.8, 35.6), lerp(20, 0, out((t - 32) / 0.5)), lerp(0.9, 1, out((t - 32) / 0.5)));
+  rise("c3b", t, 33.0, 33.6, 34.8, 35.6, 20);
+
+  // ---- 04 model
+  const agOn = win(t, 35.6, 36.4, 41.0, 41.8);
+  css($("ag"), agOn, lerp(80, 0, out((t - 35.6) / 1.0)), 1, `perspective(1600px) rotateY(${lerp(-30, 8, ease((t - 35.6) / 1.4)) + sway}deg)`);
+  rise("e4", t, 35.8, 36.4, 41.0, 41.8, 14); rise("t4", t, 36.0, 36.7, 41.0, 41.8);
+  ["k1", "k2", "k3"].forEach((id, i) => { const a = 37.4 + i * 0.6; css($(id), win(t, a, a + 0.5, 41.0, 41.8), lerp(30, 0, out((t - a) / 0.6)), lerp(0.88, 1, out((t - a) / 0.6))); });
+
+  // ---- 05 levels
+  rise("e5", t, 42.0, 42.6, 47.4, 48.2, 14); rise("t5", t, 42.2, 42.9, 47.4, 48.2);
+  [0, 1, 2, 3].forEach((i) => { const a = 42.8 + i * 0.35; const el = $("lv" + i); css(el, win(t, a, a + 0.6, 47.4, 48.2), lerp(60, 0, out((t - a) / 0.7))); el.classList.toggle("on", t > 44.4 + i * 0.55 && (i === 3 || t < 44.4 + (i + 1) * 0.55)); });
+  rise("t5b", t, 45.6, 46.2, 47.4, 48.2, 16);
+
+  // ---- 06 story
+  const psOn = win(t, 48.2, 49.0, 53.8, 54.6); const ps = $("ps");
+  ps.style.left = "330px"; ps.style.top = "104px";
+  css(ps, psOn, lerp(60, 0, ease((t - 48.2) / 1.0)), 1, `perspective(1600px) rotateY(${8 + sway}deg) rotateX(${4 - sway * 0.4}deg)`);
+  rise("e6", t, 48.6, 49.2, 53.8, 54.6, 14); rise("t6", t, 48.8, 49.5, 53.8, 54.6);
+  rise("tiers", t, 50.0, 50.7, 53.8, 54.6, 20); rise("c6", t, 51.6, 52.2, 53.8, 54.6, 20);
+
+  // ---- 07 places
+  rise("e7", t, 54.8, 55.3, 59.8, 60.6, 14); rise("t7", t, 55.0, 55.6, 59.8, 60.6);
+
+  // ---- 08 live: the real site, the cursor clicks, the facts
+  const land = ease((t - 60.6) / 1.6);
+  const siteOn = win(t, 60.6, 61.4, 65.8, 66.6);
+  const sc = lerp(0.74, 0.86, land);
+  css($("site"), siteOn, 0, sc, `translateX(${lerp(0, -170, land)}px) perspective(2400px) rotateX(${lerp(18, 0, land)}deg) rotateY(${lerp(-14, 0, land)}deg)`);
+  ["s1", "s2", "s3", "s4"].forEach((id, i) => { const a = 62.4 + i * 0.4; rise(id, t, a, a + 0.5, 65.8, 66.6, 20); });
+
+  // cursor: WhatsApp on the link page, then the site's CTA
+  const cur = $("cursor"), rip = $("ripple");
+  let cx = -100, cy = -100, co = 0, tap = -1;
+  if (t >= 21.8 && t < 24.0) { const k = ease((t - 21.8) / 1.0); cx = lerp(700, 330 + 72, k); cy = lerp(760, 104 + 495, k); co = win(t, 21.8, 22.1, 23.6, 24.0); tap = 22.95; }
+  else if (t >= 63.0 && t < 66.0) {
+    const tx = 960 - 170 + (408 + 119 - 960) * sc, ty = 540 + (690 + 28 - 540) * sc;
+    const k = ease((t - 63.0) / 1.0); cx = lerp(1300, tx, k); cy = lerp(950, ty, k); co = win(t, 63.0, 63.3, 65.6, 66.0); tap = 64.2;
+  }
+  cur.style.left = `${cx}px`; cur.style.top = `${cy}px`; cur.style.opacity = co; cur.style.visibility = co > 0 ? "visible" : "hidden";
+  const r = tap > 0 ? clamp((t - tap) / 0.5) : 1;
+  rip.style.left = `${cx + 6}px`; rip.style.top = `${cy + 6}px`; rip.style.opacity = r < 1 && t >= tap ? 1 - r : 0; rip.style.visibility = "visible"; rip.style.transform = `scale(${0.3 + r})`;
+
+  // ---- outro
+  rise("ologo", t, 67.4, 68.1, 99, 100, 24);
+  rise("o2", t, 67.9, 68.6, 99, 100, 20);
+  rise("o3", t, 68.5, 69.1, 99, 100, 16);
+  return true;
+};
+const imgs = [...document.images];
+Promise.all(imgs.map((im) => (im.complete ? 0 : new Promise((r) => (im.onload = im.onerror = r)))))
+  .then(() => Promise.all(["link-home", "link-whatsapp", "link-offer", "link-code"].map((n) => new Promise((r) => { const i = new Image(); i.onload = r; i.src = `assets/${n}.png`; }))))
+  .then(() => { window.render(0); window.ready = true; });
+</script>
+</body>
+</html>

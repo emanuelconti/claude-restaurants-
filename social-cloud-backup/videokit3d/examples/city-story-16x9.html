@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #05040d; font-family: Inter, Arial, sans-serif; }
+  #gl { position: absolute; inset: 0; }
+  .a { position: absolute; will-change: transform, opacity; visibility: hidden; }
+  .line { left: 0; right: 0; text-align: center; font-size: 76px; font-weight: 800; letter-spacing: -0.045em; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.6); }
+  .pill { padding: 10px 20px; border-radius: 999px; background: rgba(255,255,255,.94); color: #111318; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; transform-origin: 50% 100%; box-shadow: 0 12px 30px -12px rgba(0,0,0,.6); }
+  .badge { padding: 12px 22px; border-radius: 18px; background: #3a2be0; color: #fff; font-size: 26px; font-weight: 800; white-space: nowrap; box-shadow: 0 0 40px rgba(108,99,255,.8); }
+  .check { width: 46px; height: 46px; border-radius: 50%; background: #22c55e; color: #fff; display: grid; place-items: center; font-size: 28px; font-weight: 900; box-shadow: 0 0 30px rgba(34,197,94,.9); }
+  .phone { width: 300px; height: 624px; border-radius: 46px; overflow: hidden; box-shadow: 0 40px 100px -20px rgba(108,99,255,.55); }
+  .phone img { width: 100%; height: 100%; object-fit: cover; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1920" height="1080"></canvas>
+<div id="labels"></div>
+<div class="a line" id="L1" style="top:120px">Every place has empty hours.</div>
+<div class="a line" id="L2" style="top:120px">One customer shares a link.</div>
+<div class="a line" id="L3" style="top:120px">New customers walk in. Verified.</div>
+<div class="a line" id="L4" style="top:120px">Every customer becomes a channel.</div>
+<div class="a" id="logo" style="left:0;right:0;top:600px;display:flex;align-items:center;justify-content:center;gap:22px"><img src="assets/logo.png" style="width:96px;height:96px"><span style="font-size:96px;font-weight:800;letter-spacing:-0.05em;color:#fff">SocialPerks</span></div>
+<div class="a line" id="L5" style="top:735px;font-size:42px;font-weight:600;letter-spacing:-0.02em;color:rgba(255,255,255,.9)">The referral engine for real-world places.</div>
+<div class="a phone" id="p1" style="left:300px;top:228px"><img src="assets/link-home.png"></div>
+<div class="a phone" id="p2" style="left:810px;top:228px"><img src="assets/link-whatsapp.png"></div>
+<div class="a phone" id="p3" style="left:1320px;top:228px"><img src="assets/link-code.png"></div>
+<div class="a line" id="L6" style="top:90px;font-size:56px">Live in 15 cities. 8 languages.</div>
+<div class="a" id="end" style="left:0;right:0;top:430px;display:flex;flex-direction:column;align-items:center;gap:26px">
+  <div style="display:flex;align-items:center;gap:22px"><img src="assets/logo.png" style="width:110px;height:110px"><span style="font-size:110px;font-weight:800;letter-spacing:-0.05em;color:#fff">SocialPerks</span></div>
+  <div style="font-size:40px;font-weight:700;color:#b9b2ff">socialperkses.com</div>
+</div>
+
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+<script type="module">
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = (x) => { x = clamp(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const out = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const win = (t, a, b, c, d) => (t < a || t > d ? 0 : t < b ? ease((t - a) / (b - a)) : t > c ? 1 - ease((t - c) / (d - c)) : 1);
+const lerp = (a, b, k) => a + (b - a) * k;
+const $ = (id) => document.getElementById(id);
+const show = (el, o, y = 0, s = 1) => { el.style.opacity = o; el.style.transform = `translateY(${y}px) scale(${s})`; el.style.visibility = o > 0.001 ? "visible" : "hidden"; };
+// a seeded random, so every frame of every process builds the same city
+let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+
+const renderer = new THREE.WebGLRenderer({ canvas: $("gl"), antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(1920, 1080, false);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene();
+scene.background = new THREE.Color("#05040d");
+scene.fog = new THREE.FogExp2("#05040d", 0.018);
+const camera = new THREE.PerspectiveCamera(40, 16 / 9, 0.1, 400);
+scene.add(new THREE.HemisphereLight(0x6b6bff, 0x050410, 0.35));
+const moon = new THREE.DirectionalLight(0x9aa6ff, 0.55); moon.position.set(-30, 50, 20); scene.add(moon);
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(960, 540), 1.15, 0.55, 0.2);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+// ---- windows texture
+function windowsTex(lit) {
+  const c = document.createElement("canvas"); c.width = 64; c.height = 128; const g = c.getContext("2d");
+  g.fillStyle = "#000"; g.fillRect(0, 0, 64, 128);
+  for (let y = 6; y < 124; y += 12) for (let x = 6; x < 60; x += 12) { if (rnd() < lit) { g.fillStyle = rnd() < 0.5 ? "#ffd9a0" : "#cfd8ff"; g.fillRect(x, y, 7, 7); } }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+const dimWin = windowsTex(0.12), fullWin = windowsTex(0.95);
+
+// ---- ground and streets
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ color: 0x0a0916, roughness: 1 }));
+ground.rotation.x = -Math.PI / 2; scene.add(ground);
+const streetMat = new THREE.MeshBasicMaterial({ color: 0x1b1840 });
+for (let i = -8; i <= 8; i++) {
+  const a = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 120), streetMat); a.rotation.x = -Math.PI / 2; a.position.set(i * 6 - 3, 0.01, 0); scene.add(a);
+  const b = new THREE.Mesh(new THREE.PlaneGeometry(120, 0.5), streetMat); b.rotation.x = -Math.PI / 2; b.position.set(0, 0.01, i * 6 - 3); scene.add(b);
+}
+
+// ---- the city: background blocks
+const VENUES = [
+  { name: "Restaurant", cell: [0, 0], color: 0xff8a3d, h: 2.2 },
+  { name: "Padel club", cell: [2, -1], color: 0x3a8bff, h: 1.2, court: true },
+  { name: "Gym", cell: [-2, 1], color: 0xe8458f, h: 3.0 },
+  { name: "Café", cell: [1, 2], color: 0xffc14d, h: 1.8 },
+  { name: "Hotel", cell: [-1, -2], color: 0x8a7dff, h: 6.5 },
+  { name: "Car park", cell: [3, 2], color: 0x22d3ee, h: 1.6, park: true },
+  { name: "Salon", cell: [-3, -1], color: 0xf472b6, h: 2.0 },
+];
+const taken = new Set(VENUES.map((v) => v.cell.join(",")));
+const homes = [];
+const boxG = new THREE.BoxGeometry(1, 1, 1);
+for (let gx = -8; gx <= 8; gx++) for (let gz = -8; gz <= 8; gz++) {
+  if (taken.has(`${gx},${gz}`)) continue;
+  for (let k = 0; k < 4; k++) {
+    const h = 0.8 + rnd() ** 2 * (Math.abs(gx) + Math.abs(gz) < 6 ? 7 : 4);
+    const w = 1.6 + rnd() * 1.0;
+    const tex = dimWin.clone(); tex.needsUpdate = true; tex.repeat.set(w / 1.2, h / 1.5);
+    const m = new THREE.Mesh(boxG, new THREE.MeshStandardMaterial({ color: 0x14122a, roughness: 0.8, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.55 }));
+    m.scale.set(w, h, w); m.position.set(gx * 6 + (k % 2 ? 1.3 : -1.3), h / 2, gz * 6 + (k < 2 ? 1.3 : -1.3));
+    scene.add(m); homes.push(m);
+  }
+}
+
+// ---- the venues
+const venueObjs = VENUES.map((v) => {
+  const g = new THREE.Group(); g.position.set(v.cell[0] * 6, 0, v.cell[1] * 6); scene.add(g);
+  const tex = fullWin.clone(); tex.needsUpdate = true; tex.repeat.set(3, v.h / 1.2);
+  const mat = new THREE.MeshStandardMaterial({ color: 0x1a1733, roughness: 0.6, emissive: new THREE.Color(v.color), emissiveMap: tex, emissiveIntensity: 0.05 });
+  const body = new THREE.Mesh(boxG, mat); body.scale.set(4, v.h, 4); body.position.y = v.h / 2; g.add(body);
+  const roof = new THREE.Mesh(new THREE.BoxGeometry(4.2, 0.12, 4.2), new THREE.MeshBasicMaterial({ color: v.color })); roof.position.y = v.h + 0.06; g.add(roof);
+  if (v.court) { // a padel court in glass on the roof
+    const c = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 1.8), new THREE.MeshBasicMaterial({ color: 0x1f5fd6 })); c.rotation.x = -Math.PI / 2; c.position.y = v.h + 0.14; g.add(c);
+    const net = new THREE.Mesh(new THREE.PlaneGeometry(0.04, 0.35), new THREE.MeshBasicMaterial({ color: 0xffffff })); net.position.set(0, v.h + 0.3, 0); net.scale.set(1, 1, 1); g.add(net);
+  }
+  const cars = [];
+  if (v.park) for (let i = 0; i < 8; i++) { const car = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.35, 0.38), new THREE.MeshStandardMaterial({ color: [0xffffff, 0x3a2be0, 0xe8458f, 0x9aa0aa][i % 4], emissive: 0x222244 })); car.position.set(-1.4 + (i % 4) * 0.95, v.h + 0.3, i < 4 ? -0.8 : 0.8); car.visible = false; g.add(car); cars.push(car); }
+  const light = new THREE.PointLight(v.color, 0, 14, 1.6); light.position.y = v.h + 1.5; g.add(light);
+  const label = document.createElement("div"); label.className = "a pill"; label.textContent = v.name; $("labels").appendChild(label);
+  return { ...v, g, mat, light, label, cars, top: new THREE.Vector3(v.cell[0] * 6, v.h + 1.1, v.cell[1] * 6) };
+});
+
+// ---- people: glowing dots with trails
+const sprite = (() => { const c = document.createElement("canvas"); c.width = c.height = 64; const g = c.getContext("2d"); const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(0.3, "rgba(255,255,255,.7)"); gr.addColorStop(1, "rgba(255,255,255,0)"); g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+function dot(color, size = 1.2) { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); s.scale.setScalar(size); scene.add(s); return s; }
+
+// ---- beams (the links): arcs drawn in time
+function arc(from, to, height) {
+  const mid = from.clone().add(to).multiplyScalar(0.5); mid.y += height;
+  return new THREE.QuadraticBezierCurve3(from, mid, to);
+}
+const beamMat = (c) => new THREE.MeshBasicMaterial({ color: c, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
+function beam(curve, color) {
+  const geo = new THREE.TubeGeometry(curve, 80, 0.07, 6, false);
+  const m = new THREE.Mesh(geo, beamMat(color)); scene.add(m);
+  const head = dot(color, 1.4);
+  return { curve, m, geo, head, count: geo.index.count };
+}
+function drawBeam(b, k, alpha = 1) {
+  k = clamp(k); const segs = 80; const n = Math.floor(segs * k) * 6 * 6;
+  b.geo.setDrawRange(0, n); b.m.visible = k > 0 && alpha > 0; b.m.material.opacity = alpha;
+  b.head.visible = k > 0 && k < 1 && alpha > 0; if (b.head.visible) b.head.position.copy(b.curve.getPoint(k));
+}
+
+// the story's people
+const V = Object.fromEntries(venueObjs.map((v) => [v.name, v]));
+const rest = V["Restaurant"];
+const customer = dot(0x8b80ff, 1.6); customer.position.set(rest.g.position.x + 0.2, rest.h + 0.9, rest.g.position.z);
+const friendHomes = [homes[120], homes[305], homes[478]].filter(Boolean);
+const friendBeams = friendHomes.map((h) => beam(arc(customer.position.clone(), h.position.clone().setY(h.scale.y + 0.3), 6), 0xa79bff));
+const walkers = friendHomes.map(() => dot(0x7cf3c0, 1.3));
+const checks = friendHomes.map(() => { const d = document.createElement("div"); d.className = "a check"; d.textContent = "✓"; $("labels").appendChild(d); return d; });
+// the chain reaction: beams from many places to every venue
+const chain = [];
+for (let i = 0; i < 46; i++) {
+  const src = homes[Math.floor(rnd() * homes.length)]; const dst = venueObjs[i % venueObjs.length];
+  const from = src.position.clone().setY(src.scale.y + 0.2); const to = dst.top.clone();
+  chain.push({ b: beam(arc(from, to, 4 + rnd() * 6), [0xa79bff, 0xe8458f, 0x7cf3c0, 0xffc14d][i % 4]), start: 22.6 + rnd() * 7 });
+}
+const badge = document.createElement("div"); badge.className = "a badge"; $("labels").appendChild(badge);
+
+// the orb, made from the city's lights at the end
+const N = 7000;
+const opos = new Float32Array(N * 3), obase = new Float32Array(N * 3), ofrom = new Float32Array(N * 3), ocol = new Float32Array(N * 3);
+const cA = new THREE.Color("#6c63ff"), cB = new THREE.Color("#e8458f"), cC = new THREE.Color("#ffffff");
+for (let i = 0; i < N; i++) {
+  const u = rnd(), v = rnd(); const th = 2 * Math.PI * u, ph = Math.acos(2 * v - 1); const r = 3.2 + (rnd() - 0.5) * 0.15;
+  obase[i * 3] = r * Math.sin(ph) * Math.cos(th); obase[i * 3 + 1] = r * Math.cos(ph) + 14; obase[i * 3 + 2] = r * Math.sin(ph) * Math.sin(th);
+  ofrom[i * 3] = (rnd() - 0.5) * 90; ofrom[i * 3 + 1] = rnd() * 6; ofrom[i * 3 + 2] = (rnd() - 0.5) * 90;
+  const c = cA.clone().lerp(cB, rnd() * 0.6).lerp(cC, rnd() < 0.15 ? 0.7 : 0); ocol[i * 3] = c.r; ocol[i * 3 + 1] = c.g; ocol[i * 3 + 2] = c.b;
+}
+const og = new THREE.BufferGeometry(); og.setAttribute("position", new THREE.BufferAttribute(opos, 3)); og.setAttribute("color", new THREE.BufferAttribute(ocol, 3));
+const orb = new THREE.Points(og, new THREE.PointsMaterial({ fog: false, size: 0.14, map: sprite, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+scene.add(orb);
+
+// ---- camera path: [time, position, target]
+const KEYS = [
+  [0.0, [44, 40, 48], [0, 0, 0]],
+  [4.6, [16, 12, 18], [0, 1, 0]],
+  [6.5, [10, 8.5, 12], [0, 1.6, 0]],
+  [10.5, [13, 11, 15], [0, 2, 0]],
+  [16.5, [10, 7, 11], [0, 1.5, 0]],
+  [21.5, [8, 6.5, 9.5], [0, 2.6, 0]],
+  [24.0, [26, 24, 30], [0, 0, 0]],
+  [30.5, [44, 48, 50], [0, 0, 0]],
+  [33.5, [0, 18, 30], [0, 14, 0]],
+  [48, [0, 16, 22], [0, 14, 0]],
+];
+const P = KEYS.map((k) => new THREE.Vector3(...k[1])), T = KEYS.map((k) => new THREE.Vector3(...k[2]));
+function camAt(t) {
+  let i = 0; while (i < KEYS.length - 2 && t >= KEYS[i + 1][0]) i++;
+  const k = ease((t - KEYS[i][0]) / (KEYS[i + 1][0] - KEYS[i][0]));
+  camera.position.lerpVectors(P[i], P[i + 1], k); const tg = new THREE.Vector3().lerpVectors(T[i], T[i + 1], k);
+  camera.position.x += Math.sin(t * 0.35) * 0.6; camera.position.y += Math.cos(t * 0.3) * 0.3;
+  camera.lookAt(tg);
+}
+const proj = new THREE.Vector3();
+function place(el, v3, dy = 0) { proj.copy(v3).project(camera); el.style.left = `${(proj.x * 0.5 + 0.5) * 1920}px`; el.style.top = `${(-proj.y * 0.5 + 0.5) * 1080 + dy}px`; return proj.z < 1; }
+
+window.render = (t) => {
+  camAt(t);
+  // venues: dim at first, the restaurant lights with its customers, then all of them
+  venueObjs.forEach((v, i) => {
+    const restLit = v === rest ? clamp((t - 12.5) / 6) : 0;
+    const chainLit = clamp((t - 24 - i * 0.6) / 4);
+    const lit = Math.max(restLit * 0.8, chainLit);
+    v.mat.emissiveIntensity = 0.05 + 1.5 * lit; v.light.intensity = 9 * lit;
+    v.cars.forEach((c, j) => (c.visible = t > 26 + j * 0.45));
+    const vis = place(v.label, v.top, -10);
+    const o = win(t, 4.2 + i * 0.12, 5.0 + i * 0.12, 31.5, 32.5);
+    show(v.label, vis ? o : 0, 0, 0.9 + 0.1 * o);
+    v.label.style.transform += ` translate(-50%,-100%)`;
+  });
+  // the customer and the links
+  customer.visible = t > 6 && t < 33; customer.material.opacity = clamp((t - 6) / 0.6) * (0.75 + 0.25 * Math.sin(t * 6));
+  friendBeams.forEach((b, i) => drawBeam(b, (t - 7.2 - i * 0.35) / 1.4, t < 12.4 ? 1 : 1 - clamp((t - 12.4) / 1.0)));
+  friendHomes.forEach((h, i) => { h.material.emissiveIntensity = t > 8.6 + i * 0.35 ? 1.6 : 0.55; });
+  walkers.forEach((w, i) => {
+    const a = 11.2 + i * 1.2, d = 3.2; const k = ease((t - a) / d);
+    const from = friendHomes[i].position.clone().setY(0.3), to = rest.g.position.clone().setY(0.3);
+    const corner = new THREE.Vector3(from.x, 0.3, to.z);
+    const p = k < 0.5 ? from.clone().lerp(corner, k * 2) : corner.clone().lerp(to, (k - 0.5) * 2);
+    w.position.copy(p); w.visible = t > a && t < a + d + 0.2; w.material.opacity = 0.9;
+    const ck = checks[i]; const vis = place(ck, rest.top.clone().add(new THREE.Vector3((i - 1) * 1.4, 0.2, 0)), -20);
+    const o = win(t, a + d, a + d + 0.25, 19.5, 20.5); const pop = 1 + 0.4 * Math.max(0, 1 - (t - a - d) / 0.25);
+    show(ck, vis ? o : 0, 0, pop); ck.style.transform += " translate(-50%,-50%)";
+  });
+  // levels above the customer
+  const levels = ["Fan · 1", "Host · 3", "Ambassador · 5"];
+  const li = t < 19.6 ? 0 : t < 20.6 ? 1 : 2;
+  if (badge.textContent !== levels[li]) badge.textContent = levels[li];
+  const bvis = place(badge, customer.position.clone().add(new THREE.Vector3(0, 1.4 + clamp((t - 18.6) / 3) * 0.8, 0)));
+  const bo = win(t, 18.6, 19.1, 23.0, 23.8); const bpop = 1 + 0.25 * Math.max(0, 1 - ((t - 18.6) % 1) / 0.25);
+  show(badge, bvis ? bo : 0, 0, bpop); badge.style.transform += " translate(-50%,-100%)";
+  // chain reaction
+  chain.forEach(({ b, start }) => drawBeam(b, (t - start) / 1.6, 1 - clamp((t - 31) / 1.5)));
+  homes.forEach((h, i) => { if (!friendHomes.includes(h) && t > 24) h.material.emissiveIntensity = 0.55 + 0.6 * clamp((t - 24 - (i % 50) * 0.12) / 2); });
+  // the city's lights gather into the orb
+  const g = ease((t - 31.2) / 2.6);
+  orb.visible = t > 31; orb.material.opacity = clamp((t - 31) / 0.6);
+  orb.rotation.y = t * 0.3;
+  for (let i = 0; i < N; i++) {
+    const br = 1 + 0.04 * Math.sin(t * 2 + i * 0.01);
+    opos[i * 3] = lerp(ofrom[i * 3], obase[i * 3] * br, g); opos[i * 3 + 1] = lerp(ofrom[i * 3 + 1], (obase[i * 3 + 1] - 14) * br + 14, g); opos[i * 3 + 2] = lerp(ofrom[i * 3 + 2], obase[i * 3 + 2] * br, g);
+  }
+  og.attributes.position.needsUpdate = true;
+  scene.fog.density = t > 31 ? lerp(0.018, 0.08, clamp((t - 31) / 2)) : lerp(0.006, 0.018, clamp(t / 4.6));
+
+  composer.render();
+
+  // ---- words: one line per beat
+  const line = (id, a, b) => { const o = win(t, a, a + 0.5, b - 0.5, b); show($(id), o, lerp(30, 0, out((t - a) / 0.7)), 1); };
+  line("L1", 1.2, 5.6); line("L2", 7.0, 11.0); line("L3", 12.6, 17.6); line("L4", 24.4, 30.6);
+  show($("logo"), win(t, 34.0, 34.8, 38.6, 39.2), lerp(30, 0, out((t - 34) / 0.9)));
+  show($("L5"), win(t, 34.6, 35.3, 38.6, 39.2), lerp(20, 0, out((t - 34.6) / 0.8)));
+  // proof: three real screens fly in
+  ["p1", "p2", "p3"].forEach((id, i) => { const a = 39.4 + i * 0.35; const k = out((t - a) / 0.9);
+    const el = $(id); el.style.opacity = win(t, a, a + 0.5, 44.2, 44.8); el.style.visibility = el.style.opacity > 0 ? "visible" : "hidden";
+    el.style.transform = `perspective(1400px) translateY(${lerp(240, 0, k)}px) rotateX(${lerp(40, 0, k)}deg) rotateY(${(i - 1) * -10}deg)`; });
+  show($("L6"), win(t, 40.2, 40.8, 44.2, 44.8), lerp(20, 0, out((t - 40.2) / 0.7)));
+  show($("end"), win(t, 45.2, 46.0, 99, 100), lerp(30, 0, out((t - 45.2) / 0.9)));
+  // dim the 3D under the proof and the end
+  $("gl").style.opacity = 1 - 0.75 * win(t, 39.2, 39.8, 99, 100);
+  return true;
+};
+const imgs = [...document.images];
+Promise.all(imgs.map((im) => (im.complete ? 0 : new Promise((r) => (im.onload = im.onerror = r))))).then(() => { window.render(0); window.ready = true; });
+</script>
+</body>
+</html>

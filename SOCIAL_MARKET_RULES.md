@@ -2,6 +2,17 @@
 
 Owner correction: 3 November 2026. Read this before SOCIAL_HANDOFF.md, STYLE.md, any publishing routine or older chat instructions. This is shared across all three brand branches and applies to every Claude and Codex account. Never merge their audiences or calendars.
 
+## Owner, 26 November 2026: every Reel and video is made with videokit3d, and each one beats the last (all brands, mandatory)
+
+Read this before rendering any Reel or video for SocialPerks, Good Message Studio or Sincronia. It upgrades reelkit; reelkit's topics, slots, captions, approval and publishing stay as they are.
+
+- **Tool:** `social-cloud-backup/videokit3d/` (README there). One command installs everything into a cache (`bash social-cloud-backup/videokit3d/setup.sh /tmp/vk3`); nothing is installed by hand and nothing is paid. Three.js scenes in 3D with glow, real photos and real screenshots on top, frame-by-frame render with Playwright, music written in Python, ffmpeg for the MP4. Examples: a 3D city story (`city-story-16x9.html`) and a product tour on 3D phones (`product-tour-16x9.html`), from the SocialPerks launch video of 26 November.
+- **What "exceptional" means (owner):** a hook in the first second that makes a stranger stop and like it (a strong image or a surprising situation, never a logo or a slow fade); a story told by the pictures, not by text: at most one short line on screen at a time, 3-6 lines in a whole video; real 3D movement (camera flights, light, depth), never a static slide with words; cuts on the beat; a clear end with the brand and one call to action.
+- **Music:** only tones written in code (piano, pad, bass, soft kick, bells on the events). No noise sweeps or hiss, no third-party or library tracks.
+- **Every day better:** each new Reel changes at least one thing (hook, camera, scene, music) against the last ones and keeps what performed best (reach, watch time, saves, shares in `performance/`). Never publish the same scene twice.
+- **Check before approval:** extract 8-12 stills per video and look at them; any frame with unreadable text, a bad crop, a wrong-language sign in a photo or a repeated card is fixed before reelkit/approve.py.
+- **Facts:** never invented numbers, clients or results; SocialPerks content keeps its rules below (Spanish, life and friends first, the brand at the end).
+
 ## Owner correction, 6 November 2026: everyday life and motivation first (SocialPerks and GMS)
 
 This overrides every narrower topic rule below for SocialPerks and Good Message Studio, on carousels AND Reels. Nobody follows a page for "5 details to enjoy the bar without thinking about the photo": too specific, too niche, nobody cares.
