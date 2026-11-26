@@ -148,7 +148,7 @@
   "gms-2026-11-06-2:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYXt3vCQ7y",
   "gms-2026-11-06-2:youtube": "confirmed remotely: https://www.youtube.com/shorts/NhWu1Cnv330",
   "gms-2026-11-06-2:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1433373822283746",
-  "last_publish_utc:gms:facebook": "2026-11-26T06:23:11+00:00",
+  "last_publish_utc:gms:facebook": "2026-11-26T08:05:23+00:00",
   "gms-2026-11-06-3:ig": "confirmed remotely: 5 kind lines for a friend changing direction",
   "gms-2026-11-06-3:threads": "confirmed remotely: https://www.threads.com/@goodmessage_studio/post/DfYipEZjNz6",
   "gms-2026-11-06-3:youtube": "confirmed remotely: https://www.youtube.com/shorts/020RHRmK0mw",
@@ -877,5 +877,10 @@
   "gms-2026-11-26-5:facebook": "confirmed remotely: https://www.facebook.com/reel/1594517429147020/",
   "gms-2026-11-26-4:ig": "confirmed remotely: How to have a slow, kind evening",
   "gms-2026-11-26-4:youtube": "confirmed remotely: https://www.youtube.com/shorts/9WqpK08N5gc",
-  "gms-2026-11-26-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1454474700173658"
+  "gms-2026-11-26-4:facebook": "confirmed remotely: https://www.facebook.com/1429179606036501/posts/1454474700173658",
+  "sin-2026-11-26-1:ig": "success: account: @sincronia.live\npublished: https://www.instagram.com/reel/DgMoeROhTb7/",
+  "gms-2026-11-26-3:ig": "success: account: @goodmessage_studio\n7 slides are public (base-url)\npublished: https://www.instagram.com/p/DgMolaCl36f/",
+  "gms-2026-11-26-3:youtube": "success: plan: 1 Short, 1080x1920, 18.2 s, title 'Kind words for a friend going through a lot | goodmessagestudio.com #Shorts', privacy public\nchannel ok: [REDACTED], 10 recent uploads read\npublished (public): https://www.youtube.com/shorts/s_0l9cC2IbM",
+  "gms-2026-11-26-3:facebook": "success: published: https://www.facebook.com/1429179606036501/posts/1454549596832835",
+  "gms-2026-11-26-4:pinterest": "success: plan: 1 carousel Pin, 5 images, title 'How to have a slow, kind evening', link https://goodmessagestudio.com\naccount ok: lpstylehub, board found, 25 recent Pins read\npublished: https://www.pinterest.com/pin/1103733821229804891/"
 }
