@@ -1,11 +1,131 @@
 {
   "schema_version": 4,
-  "insights_error": "GET 17941689228124279/insights: (#10) Application does not have permission for this action",
+  "insights_error": "GET 18103244015081003/insights: (#10) Application does not have permission for this action",
   "channels": {},
   "brand": "sp",
   "account": "socialperks.es",
   "timezone": "Europe/Madrid",
   "posts": [
+    {
+      "media_id": "18103244015081003",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo convertir a un amigo en cliente fiel de tu sitio favorito",
+      "stamp": "2026-11-27T23:20:26+01:00",
+      "local_hour": 23,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgQvR_6jbpH/"
+    },
+    {
+      "media_id": "17920095645554727",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Planes de viernes que no fallan",
+      "stamp": "2026-11-27T21:37:20+01:00",
+      "local_hour": 21,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgQjdeES-5U/"
+    },
+    {
+      "media_id": "18233773174330635",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Por qu\u00e9 volvemos a nuestros sitios favoritos",
+      "stamp": "2026-11-27T19:30:29+01:00",
+      "local_hour": 19,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgQU-LyjzA0/"
+    },
+    {
+      "media_id": "17923717614240478",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Tus clientes llenan tus horas vac\u00edas",
+      "stamp": "2026-11-27T18:24:42+01:00",
+      "local_hour": 18,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgQNYiDKxSB/"
+    },
+    {
+      "media_id": "18019814993972870",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Link in Bio\ud83e\ude77\ud83e\udd0d",
+      "stamp": "2026-11-27T15:39:19+01:00",
+      "local_hour": 15,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgP5OP6M_iW/"
+    },
+    {
+      "media_id": "17883833286546839",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Word of mouth built every business you love.",
+      "stamp": "2026-11-27T12:23:31+01:00",
+      "local_hour": 12,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgPjwTPsK7l/"
+    },
+    {
+      "media_id": "18120202327814356",
+      "format": "FEED",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "C\u00f3mo organizar una quedada con amigos",
+      "stamp": "2026-11-27T12:08:18+01:00",
+      "local_hour": 12,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/p/DgPiXsplntm/"
+    },
+    {
+      "media_id": "18016472972763435",
+      "format": "REELS",
+      "views": null,
+      "reach": null,
+      "saves": null,
+      "shares": null,
+      "insights_status": "unavailable",
+      "title": "Viernes: empieza el finde con buen pie",
+      "stamp": "2026-11-27T10:23:07+01:00",
+      "local_hour": 10,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.instagram.com/reel/DgPWSq6tiOQ/"
+    },
     {
       "media_id": "17941689228124279",
       "format": "REELS",
@@ -635,130 +755,10 @@
       "likes": 0,
       "comments": 0,
       "url": "https://www.instagram.com/reel/DgCc6FsDJlG/"
-    },
-    {
-      "media_id": "18392987944224531",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Cena para dos: un plan sencillo para el s\u00e1bado",
-      "stamp": "2026-11-21T22:28:46+01:00",
-      "local_hour": 22,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DgBMmZilylq/"
-    },
-    {
-      "media_id": "18139366147655518",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "C\u00f3mo decir que no sin sentirte mal",
-      "stamp": "2026-11-21T21:37:07+01:00",
-      "local_hour": 21,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DgBGpSvgmq_/"
-    },
-    {
-      "media_id": "18158172172546850",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Peque\u00f1os retos para este fin de semana",
-      "stamp": "2026-11-21T18:14:16+01:00",
-      "local_hour": 18,
-      "likes": 1,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DgAvcVZD3ou/"
-    },
-    {
-      "media_id": "18127399013292647",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Quedadas en grupo: cinco claves para que salgan bien",
-      "stamp": "2026-11-21T17:19:09+01:00",
-      "local_hour": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DgApLIvDBSM/"
-    },
-    {
-      "media_id": "17920007643545120",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "C\u00f3mo aprovechar el s\u00e1bado sin agotarte",
-      "stamp": "2026-11-21T15:18:00+01:00",
-      "local_hour": 15,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/DgAbR9YjZel/"
-    },
-    {
-      "media_id": "18032624216692453",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Brunch con amigos: c\u00f3mo hacerlo perfecto",
-      "stamp": "2026-11-21T12:16:16+01:00",
-      "local_hour": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/DgAGgZNDo7k/"
-    },
-    {
-      "media_id": "18233194138334741",
-      "format": "REELS",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Lo que de verdad recarga un s\u00e1bado",
-      "stamp": "2026-11-21T10:35:57+01:00",
-      "local_hour": 10,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/reel/Df_6-bzghRu/"
-    },
-    {
-      "media_id": "18028939541923592",
-      "format": "FEED",
-      "views": null,
-      "reach": null,
-      "saves": null,
-      "shares": null,
-      "insights_status": "unavailable",
-      "title": "Viernes noche en casa: ideas para disfrutar",
-      "stamp": "2026-11-20T23:20:38+01:00",
-      "local_hour": 23,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://www.instagram.com/p/Df-tvbqF8Td/"
     }
   ],
   "limits": "Instagram views requested separately for SocialPerks when granted; other insight counters remain unavailable unless collected; null means unavailable, never zero. Views are not unique people, sales or conversions. Compare equal-age posts within the same format; no demographic inference.",
-  "market_date": "2026-11-27",
+  "market_date": "2026-11-28",
   "mature_hour_summary": [
     {
       "local_hour": 9,
@@ -792,13 +792,13 @@
     },
     {
       "local_hour": 16,
-      "posts": 1,
-      "median_public_interactions": 0
+      "posts": 2,
+      "median_public_interactions": 0.0
     },
     {
       "local_hour": 17,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 18,
@@ -807,8 +807,8 @@
     },
     {
       "local_hour": 19,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 5,
+      "median_public_interactions": 0
     },
     {
       "local_hour": 20,
@@ -822,13 +822,13 @@
     },
     {
       "local_hour": 22,
-      "posts": 3,
-      "median_public_interactions": 0
+      "posts": 5,
+      "median_public_interactions": 6
     },
     {
       "local_hour": 23,
-      "posts": 4,
-      "median_public_interactions": 0.0
+      "posts": 3,
+      "median_public_interactions": 0
     }
   ],
   "view_cohorts": [],
