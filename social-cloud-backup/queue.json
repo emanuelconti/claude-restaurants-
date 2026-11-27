@@ -16690,7 +16690,15 @@
       "slide-06.jpg": "fadca381fd6b818ed9f03ec3ed3acb18ff7dab48d752761f75c2993716ac17fd",
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
-    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only"
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-1",
+    "reel_sha256": {
+      "reel.mp4": "534d5952df41ed1850a3c0ab492548198a6f2307c6597fd727a54c31a765b15a",
+      "reel.json": "42e25fe8aa2b1dccf0883eb59a6dcfdb1171101cd2f0d20d6d084caabfbd5485",
+      "cover.jpg": "8b1d8683c9a9bcfbb228850cf19f99554678999292a85b135a2f50ff66897bb7"
+    },
+    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, one short line per scene, every panel is the photo of its reviewed slide, brand end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py sin style), decoded AAC mean -13.2 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sin-2026-11-30-2",
@@ -16728,7 +16736,15 @@
       "slide-06.jpg": "ddf84228866118a62152154fcced49f6947f67c3c2fac947900bfbeac90734ec",
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
-    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only"
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-3",
+    "reel_sha256": {
+      "reel.mp4": "4b0345c3d58f16140a8d88303029e6a8ac98fbdae27f46552f6878439590caff",
+      "reel.json": "31261f5bb383e1da94491e650c041cc1c71fd1c0e5624e6f0866449330cc659e",
+      "cover.jpg": "e625407a88787620cffd862f1c116c7cc91a0fe80da361714ee2b585276bc5f7"
+    },
+    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, one short line per scene, every panel is the photo of its reviewed slide, brand end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py sin style), decoded AAC mean -15.3 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sin-2026-11-30-4",
@@ -16766,7 +16782,15 @@
       "slide-06.jpg": "60a707c35250e968f43917cfb6d499f808fd24ff0f8d71159692d1e986c67701",
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
-    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only"
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-5",
+    "reel_sha256": {
+      "reel.mp4": "32c9a6d6bf947bb420d52232d9b2b44ec0f535bb59c97045579fc6f6950bf02f",
+      "reel.json": "04e0099711b93ff9cc682aec1b64c6fadf8f80a285a30911b102bb935262490b",
+      "cover.jpg": "ffa491f1eb34b95e0daa57750599845c02864e0e2a4327c1afd9b01095520a92"
+    },
+    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, one short line per scene, every panel is the photo of its reviewed slide, brand end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py sin style), decoded AAC mean -14.2 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sin-2026-11-30-6",
@@ -16804,7 +16828,15 @@
       "slide-06.jpg": "6f1f6de5a4c0ef106dac22b9eb787d4c8d09ae716fd1041026e1c3a61d28ef10",
       "slide-07.jpg": "dab3a7174095029fac89f40ebc2c8aba2f5da9e57e271250ff593deb0044ad66"
     },
-    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only"
+    "qa": "Every slide of the eight carousels visually inspected on contact sheets, 27 November 2026; founder preparation, general guidance only",
+    "kind": "reel",
+    "reel_dir": "reel-7",
+    "reel_sha256": {
+      "reel.mp4": "de9229553c9de2373f713ce05f4681991fca2da078ac6b0455e102447ff18e67",
+      "reel.json": "9fd71e0126b683131bf70762f5ea49a9f02c53902f2a24aa4a9e5f6b45c62a63",
+      "cover.jpg": "ef2bef57730e7bce39972efa78ce0be63fbe59ff21f8c02794acf9d55c2b2b27"
+    },
+    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, one short line per scene, every panel is the photo of its reviewed slide, brand end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py sin style), decoded AAC mean -13.4 dB peak 0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "sin-2026-11-30-8",
