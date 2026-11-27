@@ -16454,11 +16454,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "0b58ec83f739f4fef22b71fb4cc0271eb097e53b4ae2d6b42903fb8a61f1840d",
-      "reel.json": "dfea30a8eaa9f32e5429b10c45774b6389dc4e8f7e05d62a2389c36b6c3549ab",
-      "cover.jpg": "649d9a620d226639d2ef6c54d2c7d5f77a104a2ab84b0c2eab77965b4226dd20"
+      "reel.mp4": "b8314fcd8f2320cfcbb2989dad7d085fe90696c574e3e747e36777952a52a6a0",
+      "reel.json": "d75d967139939986f6fd2c228cb0551dc93ef4850628ee4e1a0268c5f7553f61",
+      "cover.jpg": "8f679eb01ca6bbeb7f3956b9413d31390f0ee80fabccb8df5f524e3f0199a324"
     },
-    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.5 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story3d-2 film inspected 27 November 2026 (12 stills): hook line readable from frame one over the lonely window, one line at a time, the real Enjoy The Little Things hoodie (cropped from reviewed slide-05) fully visible with no glow over the print, heart clear of the moon, end card Good Message Studio / Gift the message / goodmessagestudio.com; no foreign text or other brands; 19.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.6 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-29-8",
