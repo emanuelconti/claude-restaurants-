@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-29",
+ "title": "What to write in a monthly investor update",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "What to write in a monthly investor update\n\nA good update keeps doors open.\n\nA simple structure for monthly updates to investors, advisors and potential backers. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "videokit3d music3d.py sin style, seed 453 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#071c26', 'horizon': '#2f8f9a', 'ground': '#06141b', 'glow': '#9ff3e8', 'frame': '#effffd', 'particles': ['#b9fff4', '#ffe7b0', '#a8d8ff'], 'accent': '#c8955a', 'accentInk': '#ffffff'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1519389950473-47ba0277781c",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1510812431401-41d2bd2722f3",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Headline numbers",
+  "Wins of the month",
+  "Challenges honestly",
+  "Specific asks",
+  "Thank someone",
+  "end card"
+ ]
+}

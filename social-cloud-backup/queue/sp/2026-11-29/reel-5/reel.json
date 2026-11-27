@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-29",
+ "title": "Lo bueno de no tener planes el domingo",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Lo bueno de no tener planes el domingo\n\nNo tener planes también es un plan.\n\nPor qué un domingo sin agenda puede ser justo lo que necesitas.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Domingo #Descanso #VidaReal #Calma",
+ "music": "videokit3d music3d.py sp style, seed 512 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#120d33', 'horizon': '#a8506a', 'ground': '#0c0819', 'glow': '#ff9f62', 'frame': '#fff6ec', 'particles': ['#ffd29a', '#ff9fb0', '#b9a8ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout right",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1538688525198-9b88f6f53126",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1445116572660-236099ec97a0",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Te despiertas sin prisa",
+  "Improvisas",
+  "Descansas de verdad",
+  "Te encuentras contigo",
+  "Llegas al lunes con ganas",
+  "end card"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-29",
+ "title": "Cómo cargar pilas antes de una semana intensa",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Cómo cargar pilas antes de una semana intensa\n\nUna buena semana empieza el domingo.\n\nPequeños gestos para recuperar energía antes del lunes.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Energia #Habitos #Domingo #Bienestar",
+ "music": "videokit3d music3d.py sp style, seed 52 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#211638', 'horizon': '#b8613a', 'ground': '#140c18', 'glow': '#ffb870', 'frame': '#fffaf0', 'particles': ['#ffe2a8', '#ffc38a', '#fff1d6'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1528712306091-ed0763094c98",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Duerme una hora más",
+  "Camina por la naturaleza",
+  "Come algo casero",
+  "Habla con alguien querido",
+  "Apunta tres cosas",
+  "end card"
+ ]
+}
