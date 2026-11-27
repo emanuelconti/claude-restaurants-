@@ -14657,7 +14657,7 @@
     "brand": "sp",
     "date": "2026-11-27",
     "slot": 3,
-    "title": "Lo que hace bueno un viernes por la noche",
+    "title": "Tus clientes llenan tus horas vacías",
     "folder": "queue/sp/2026-11-27/carousel-3",
     "sha256": {
       "carousel.json": "d4024775ba8cef1c8edd0090e5de75c20dee790d1e705fd3cdd78d3867e3f6cd",
@@ -14673,11 +14673,11 @@
     "kind": "reel",
     "reel_dir": "reel-3",
     "reel_sha256": {
-      "reel.mp4": "b1c401bab606ea200f8aba5df63ae9e555398e4740965cc3c96db7f921550996",
-      "reel.json": "311ad749f0420145512fcd2dc4afac51c53b0b32beac1d790369c79fe67eba27",
-      "cover.jpg": "335df51b0c7fda3ea486e680ef0d26c25272a7680d47f100720e2c6e7f0a5ca8"
+      "reel.mp4": "2d84aa858bab645c18918932170fd123063d8c453f0172759714d0dd4f8529fc",
+      "reel.json": "71a0372a7e27c7c40b21de863f8a58f1a9038ce79ed0686a568575ceb319d6db",
+      "cover.jpg": "470fdda308edf66c214714cca46d255544dbe201c772418dd756c3060c6b993b"
     },
-    "reel_qa": "Contact sheet inspected 24 November 2026: text readable, every scene uses the photo of its reviewed slide, brand end card correct 18.0 s 1080x1920 30 fps; original music (publishers/sp/daily.py music() original dembow/latin beat), decoded AAC mean -10.7 dB peak -0.5 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Launch film v5 (Remotion + @remotion/three, real product screens), Spanish, cut 0-20 s + 26-36 s with 0.25 s crossfade; 13 frames and the 2-3 s splice inspected 27 November 2026; Cyrillic parking signs removed from the photo; 29.8 s 1080x1920 30 fps H.264; original score and sound design in code, decoded AAC mean -15.8 dB peak -5.4 dB (-14 LUFS master)"
   },
   {
     "id": "sp-2026-11-27-4",
