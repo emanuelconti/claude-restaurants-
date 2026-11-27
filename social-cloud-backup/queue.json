@@ -15638,11 +15638,11 @@
     "kind": "reel",
     "reel_dir": "reel-1",
     "reel_sha256": {
-      "reel.mp4": "0d717c55759d79a76af4dc1023330055f4494f9234d802cb5eb430e4b5180308",
-      "reel.json": "882dc7a12de0a41a68b509a8715e326941310d39451bca013fed9ded508d9753",
-      "cover.jpg": "ad5bd10e2738e2397d953dac0f0da98c9af61e8d0ecdd2b99c0c0ef1ad1e136a"
+      "reel.mp4": "75ab869a3096f28552d2c505c54fe858653499b71e62168ea9321516002ba2b3",
+      "reel.json": "00618eba77993f297ac4e3380ba9b010a0e0a7dbe2e3f5f7dbc51b403ef5ce80",
+      "cover.jpg": "ad7394cd1fbc014b22d01550c2a54822bb3e7a83889ee6fab18dbd583d83e374"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-28-2",
@@ -15794,11 +15794,11 @@
     "kind": "reel",
     "reel_dir": "reel-6",
     "reel_sha256": {
-      "reel.mp4": "883917867a535a06a29d28c807fa7f662315ea75b024684d0b83c61f78632703",
-      "reel.json": "8f3c167102e2a04003fc959b3221f2ffe28b6607517c4643f93f72f60c2b9d66",
-      "cover.jpg": "963808671d149c69d50badf67d7d111ea0963426b1b85801f1cef16a2abc1eb8"
+      "reel.mp4": "f45d7aadd2c2ff91841fad442eb5ac4fe92848309375e95e2980a97f55498e48",
+      "reel.json": "0f404176ac74d27a3d5cf69bc7a508ffe247dcb3f2b891544e4d76d23064284b",
+      "cover.jpg": "4b67115963bef43464cf54a89265b37800b17d4cc99f437698b531611e59297c"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-28-7",
@@ -15827,11 +15827,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "a9cae27a69e482d68f0a04d409068784c331aad2e63befe5ae8cb3934011cfd0",
-      "reel.json": "1a3a3ad6f7588b870e85877f3342f1ed8c3973e7ff1355c13de8b46e45be90b8",
-      "cover.jpg": "b6313b0d52a48702b4b6f95fce9cb20cc56d99b04512955cee4dab9b9ec8f6c5"
+      "reel.mp4": "4d45f1df6e9ecd7e100b626bde5a364571d48627a232db16edce6584eddbac26",
+      "reel.json": "450a4b012e7281f3f89159c4a4373497f263fdce01ffe825bd779b41036f3daf",
+      "cover.jpg": "7569a63c5aa133ae69775bca3815542038811cd1f1f1e6284e135c8d5a8a69b8"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-28-8",
@@ -16265,11 +16265,11 @@
     "kind": "reel",
     "reel_dir": "reel-1",
     "reel_sha256": {
-      "reel.mp4": "28f4c07b49d5b1043780b1108988c03c66f96a27179c6bf49bfef03d7972e466",
-      "reel.json": "345cd70497920af18c0f1fa169ffdd906b9e762eab9c48971b9b97bc043240e4",
-      "cover.jpg": "c586065fd87e2c8a7afef9ef0d982ea8ac6d4b2dae728708019855e3aaa9c265"
+      "reel.mp4": "97eea5f058afcc87e39aec29ed361a2efadaebb44e09ea54a84c3d7bc4876e33",
+      "reel.json": "470c25ec0404fb172d5f055393e338a9228b59c426d93818664655f1fd97c7fb",
+      "cover.jpg": "cf2569cd1432dfdfa8d46f132f2c67b65c8e133146c15364a1ba11481489a449"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-29-2",
@@ -16421,11 +16421,11 @@
     "kind": "reel",
     "reel_dir": "reel-6",
     "reel_sha256": {
-      "reel.mp4": "c8b13a4efc793f8f5a0bb53ac377309d3dd11edf255a5ae0aef0dde97fe0260f",
-      "reel.json": "5bd47421536bb664837ed1f725cdd727a951605163562f997037439c735ebc9c",
-      "cover.jpg": "bdbbb11df9d2ed794fc6c4fc63fbd4c15de6cd0ccc936ba836ff50cc764945a5"
+      "reel.mp4": "223e2dea579e20adf5527c27d99fe4901dd67b2a0e7a39bed5590e67681c9d2c",
+      "reel.json": "581c61a9eb62c109d53ffe51428739cc61353ae6d5c598ab0531614af272b19c",
+      "cover.jpg": "2bafc74b01ec052d4c467c0a3fae18f8b8963ea5bdea49643709c2d9de14bd61"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-29-7",
@@ -16454,11 +16454,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "a66f4bf528b5860b1820ba214e2e7b125a894ef609cb989c7d511cd75c8b5165",
-      "reel.json": "a30a8c6b41dbc2b4d21d345a3bd25cdb9147119f8b4bef15053bf9929cf493c2",
-      "cover.jpg": "53ec6caf1ab39adc566d5158ec5513aff81f5bba85c26def629708719e8585d7"
+      "reel.mp4": "0b58ec83f739f4fef22b71fb4cc0271eb097e53b4ae2d6b42903fb8a61f1840d",
+      "reel.json": "dfea30a8eaa9f32e5429b10c45774b6389dc4e8f7e05d62a2389c36b6c3549ab",
+      "cover.jpg": "649d9a620d226639d2ef6c54d2c7d5f77a104a2ab84b0c2eab77965b4226dd20"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.5 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.5 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-29-8",
@@ -16892,11 +16892,11 @@
     "kind": "reel",
     "reel_dir": "reel-1",
     "reel_sha256": {
-      "reel.mp4": "acce771dd5c11ad74f7bfe389100fa688e7e07218aa7dee7b65f99762be269ea",
-      "reel.json": "72663289340db3d8c172fe475a9fd668594018968149b44b26419b7136215c69",
-      "cover.jpg": "4dd73ac77be6586d47f741c3ca5037e8b18f0dfa229e57869bb1d83de46b0b8f"
+      "reel.mp4": "06d83498cb2448657a189a70420f656ae23a8995f930ffd848d5550c2146a869",
+      "reel.json": "32d8e48506d7a16a0b2cc5fd2f99d5436253748d4ac6ca00aa979d8adb6c27f7",
+      "cover.jpg": "17709e2b3a468995d445b3357130eddbc07fca10c6d216f24b722267959a951f"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.6 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.6 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-2",
@@ -17048,11 +17048,11 @@
     "kind": "reel",
     "reel_dir": "reel-6",
     "reel_sha256": {
-      "reel.mp4": "e112d8caa62dfa48e2855ffb9e9652731cf3a5b497fdfec69c487f82215d708c",
-      "reel.json": "e67f31e96f97a101fff679440183f157966da33565d0f128e4204c78f7076020",
-      "cover.jpg": "b09de0f5c4913ae70f3987205d5f31c4d0a2485aa069b5cd490f67cc35b03852"
+      "reel.mp4": "2f9223e404e75f93ec84f2e5902308df96a637625852610d25bc390f3e143c6b",
+      "reel.json": "fd50ed6024ea26faffb8c6dfb34c85de4c7d9da64fa01125ba49d4e574345430",
+      "cover.jpg": "e258e2e4857fa19ec6b491da5be619dec91ccffe940de6109a353e233c830dca"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-7",
@@ -17081,11 +17081,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "7c3367bcf71c89c916f07313baaebe6bc1cda5c6b1d820f71f58cb2a438d936c",
-      "reel.json": "10c4bab393ba8ce44c87407a7335d7824224b3d7815c258f33a47f01a26f6224",
-      "cover.jpg": "e5cc4c7313c77a8403d36e03863dbd0f5203ee726e843fec46f41e42ac65b7a0"
+      "reel.mp4": "399e7aaac2040cb8daa83795d61fadb1af34b5e99b7e4434cc75669f71ca181f",
+      "reel.json": "359a7804909b0ec427f76648c8a302a5ef80d83c84876972280dc3d6895ca019",
+      "cover.jpg": "515fb2d1c49fdfcbd6ad1702e228b2d4283b745be27761031e4f2216184e95f0"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.9 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.9 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-8",

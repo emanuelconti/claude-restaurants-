@@ -6,7 +6,10 @@
  "seconds": 18.6,
  "caption": "Kind things to tell yourself on a hard day\n\nHard days need soft words.\n\nHard days need soft words. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.\n\nSave it, and send it to someone who needs this message today.\n\n#GoodMessageStudio #Singapore #SelfLove #KindWords #MentalHealth",
  "music": "videokit3d music3d.py gms style, seed 91 (original, tones written in code, rights-cleared)",
- "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#33366e', 'horizon': '#b06f86', 'ground': '#211a2e', 'glow': '#ffd0dc', 'frame': '#ffffff', 'particles': ['#ffffff', '#ffd6e4', '#e8dcff'], 'accent': '#c81a5c', 'accentInk': '#ffffff'}, layout zigzag",
+ "engine": "videokit3d story3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#33366e', 'horizon': '#b06f86', 'ground': '#211a2e', 'glow': '#ffd0dc', 'frame': '#ffffff', 'particles': ['#ffffff', '#ffd6e4', '#e8dcff'], 'accent': '#c81a5c', 'accentInk': '#ffffff'}, layout zigzag",
+ "palette_name": "dawn",
+ "layout": "zigzag",
+ "learning": "explore: one in three Reels tries something new",
  "photos": [
   {
    "url": "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",

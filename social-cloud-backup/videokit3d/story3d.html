@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Tight; src: url(fonts/InterTight-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Body; src: url(fonts/Inter-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Serif; src: url(fonts/DMSerifDisplay-Regular.ttf); }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #05040d; }
+  #gl { position: absolute; inset: 0; }
+  .line { position: absolute; left: 70px; right: 70px; text-align: center; color: #fff; visibility: hidden; will-change: transform, opacity;
+          text-shadow: 0 6px 44px rgba(0,0,0,.65); line-height: 1.06; }
+  .serif { font-family: Serif, Georgia, serif; letter-spacing: -0.01em; }
+  .sans { font-family: Tight, Body, Arial, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+  .num { display: block; font-family: Body, Arial, sans-serif; font-weight: 700; font-size: 34px; letter-spacing: .18em; margin-bottom: 18px; }
+  #end { position: absolute; left: 0; right: 0; top: 720px; display: flex; flex-direction: column; align-items: center; gap: 30px; visibility: hidden; }
+  #end img { width: 260px; height: 260px; object-fit: contain; filter: drop-shadow(0 0 40px rgba(255,255,255,.35)); }
+  #ename { color: #fff; font-size: 92px; text-align: center; padding: 0 60px; }
+  #ecta { font-family: Body, Arial, sans-serif; font-weight: 700; font-size: 46px; padding: 18px 40px; border-radius: 999px; }
+  #esmall { font-family: Body, Arial, sans-serif; font-size: 34px; color: rgba(255,255,255,.8); }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="lines"></div>
+<div id="end"><img id="logo"><div id="ename"></div><div id="ecta"></div><div id="esmall"></div></div>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+<script type="module">
+// GMS story film (owner, 27 November 2026): "not panels, real 3D stories, exceptional".
+// A night city on the water. A lonely lit window (hook). A kind message leaves it as a comet of light,
+// crosses the bay and lands at a friend's window; the real message hoodie rises as a glowing card;
+// the city lights up window by window; its lights gather into a heart; brand end card.
+// Everything is a function of t; config from ?cfg= (written by reel3d.py).
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+const cfg = await (await fetch(new URLSearchParams(location.search).get("cfg"))).json();
+const W = 1080, H = 1920, P = cfg.palette, S = cfg.starts, END = S[6];
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = (x) => { x = clamp(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const out = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const win = (t, a, b, c, d) => (t < a || t > d ? 0 : t < b ? ease((t - a) / (b - a)) : t > c ? 1 - ease((t - c) / (d - c)) : 1);
+const lerp = (a, b, k) => a + (b - a) * k;
+const $ = (id) => document.getElementById(id);
+let seed = (cfg.seed >>> 0) || 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const col = (c) => new THREE.Color(c);
+
+const renderer = new THREE.WebGLRenderer({ canvas: $("gl"), antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H, false);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(col(P.ground), 0.012);
+const camera = new THREE.PerspectiveCamera(46, W / H, 0.1, 600);
+
+// sky dome
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(300, 32, 16), new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false, fog: false,
+  uniforms: { top: { value: col(P.top) }, hor: { value: col(P.horizon) }, glow: { value: col(P.glow) } },
+  vertexShader: "varying vec3 v; void main(){ v = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.); }",
+  fragmentShader: "uniform vec3 top,hor,glow; varying vec3 v; void main(){ float h = clamp(v.y,0.,1.); vec3 c = mix(hor, top, pow(h,0.45)); c += glow*0.25*exp(-abs(v.y)*14.); gl_FragColor = vec4(c,1.); }",
+})));
+// stars
+{ const n = 900, g = new THREE.BufferGeometry(), p = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) { const a = rnd() * Math.PI * 2, e = 0.08 + rnd() * 1.3; p[i * 3] = Math.cos(a) * Math.cos(e) * 250; p[i * 3 + 1] = Math.sin(e) * 250; p[i * 3 + 2] = Math.sin(a) * Math.cos(e) * 250; }
+  g.setAttribute("position", new THREE.BufferAttribute(p, 3));
+  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffffff, size: 0.9, fog: false, transparent: true, opacity: 0.7 }))); }
+
+scene.add(new THREE.HemisphereLight(col(P.horizon), col(P.ground), 0.5));
+const moon = new THREE.DirectionalLight(0xbfc8ff, 0.6); moon.position.set(-40, 60, -30); scene.add(moon);
+
+// glow sprite
+const sc = document.createElement("canvas"); sc.width = sc.height = 128;
+{ const x = sc.getContext("2d"), gr = x.createRadialGradient(64, 64, 0, 64, 64, 64);
+  gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(0.25, "rgba(255,255,255,.6)"); gr.addColorStop(1, "rgba(255,255,255,0)");
+  x.fillStyle = gr; x.fillRect(0, 0, 128, 128); }
+const sprite = new THREE.CanvasTexture(sc);
+const glowMat = (c, o = 1) => new THREE.SpriteMaterial({ map: sprite, color: col(c), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: o });
+
+// water: dark mirror with moving glints
+const water = new THREE.Mesh(new THREE.PlaneGeometry(800, 800), new THREE.MeshStandardMaterial({ color: col(P.ground), roughness: 0.18, metalness: 0.9 }));
+water.rotation.x = -Math.PI / 2; scene.add(water);
+
+// windows texture (per tower, lit fraction animated by emissiveIntensity)
+function windowsTex(seedTower) {
+  const c = document.createElement("canvas"); c.width = 64; c.height = 256; const x = c.getContext("2d");
+  x.fillStyle = "#000"; x.fillRect(0, 0, 64, 256);
+  const warm = ["#ffd9a0", "#ffe9c7", "#ffc6d6", "#fff3e0"];
+  for (let r = 0; r < 32; r++) for (let k = 0; k < 6; k++) if (rnd() < 0.55) { x.fillStyle = warm[(r + k + seedTower) % 4]; x.fillRect(4 + k * 10, 4 + r * 8, 6, 4); }
+  const t = new THREE.CanvasTexture(c); t.magFilter = THREE.NearestFilter; return t;
+}
+// towers on two shores of a bay
+const towers = [];
+function tower(x, z, w, h, d) {
+  const tex = windowsTex(towers.length);
+  const m = new THREE.MeshStandardMaterial({ color: col("#0d0b1c"), roughness: 0.6, metalness: 0.3, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.08 });
+  const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); mesh.position.set(x, h / 2, z); scene.add(mesh);
+  const o = { mesh, m, x, z, h, w, d, dist: Math.hypot(x, z) }; towers.push(o); return o;
+}
+for (let i = 0; i < 70; i++) { const a = rnd() * Math.PI * 2, r = 30 + rnd() * 70; const x = Math.cos(a) * r, z = Math.sin(a) * r - 40;
+  if (Math.abs(x) < 16 && z > -60) continue; tower(x, z, 3 + rnd() * 5, 6 + rnd() * rnd() * 46, 3 + rnd() * 5); }
+const home = tower(-14, 6, 5, 22, 5);       // the sender's tower (left shore)
+const friend = tower(15, -42, 6, 30, 6);    // the friend's tower (far shore)
+const homeWin = new THREE.Vector3(home.x + 2.6, 15, home.z + 2.6);
+const friendWin = new THREE.Vector3(friend.x - 3.1, 21, friend.z + 3.1);
+const homeGlow = new THREE.Sprite(glowMat(P.glow, 0)); homeGlow.position.copy(homeWin); homeGlow.scale.setScalar(5); scene.add(homeGlow);
+const friendGlow = new THREE.Sprite(glowMat(P.glow, 0)); friendGlow.position.copy(friendWin); friendGlow.scale.setScalar(8); scene.add(friendGlow);
+
+// the message: a comet of light along an arc
+const arc = new THREE.QuadraticBezierCurve3(homeWin, new THREE.Vector3(0, 46, -14), friendWin);
+const head = new THREE.Sprite(glowMat("#ffffff", 1)); head.scale.setScalar(3.2); scene.add(head);
+const TRAIL = 60; const trail = [...Array(TRAIL)].map((_, i) => { const s = new THREE.Sprite(glowMat(cfg.particles?.[i % 3] || P.glow, 0)); scene.add(s); return s; });
+const arcLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(arc.getPoints(120)), new THREE.LineBasicMaterial({ color: col(P.glow), transparent: true, opacity: 0, blending: THREE.AdditiveBlending }));
+scene.add(arcLine);
+
+// real photos as glowing framed cards near the friend's tower
+const loader = new THREE.TextureLoader();
+const tex = await Promise.all(cfg.photos.slice(0, 3).map((u) => loader.loadAsync(u)));
+tex.forEach((t) => (t.colorSpace = THREE.SRGBColorSpace));
+const cards = tex.map((t, i) => {
+  const g = new THREE.Group(); const a = t.image.width / t.image.height; const h = 12, w = h * a;
+  const frame = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.8, h + 0.8), new THREE.MeshBasicMaterial({ color: col(P.frame).multiplyScalar(0.8), transparent: true }));
+  const pic = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: t, transparent: true })); pic.position.z = 0.02;
+  const halo = new THREE.Sprite(glowMat(P.glow, 0.0)); halo.scale.set(w * 2.2, h * 2.0, 1); halo.position.z = -0.2;
+  g.add(halo, frame, pic); scene.add(g); return { g, frame, pic, halo };
+});
+
+// a heart made of the city's light
+const N = 1600, hg = new THREE.BufferGeometry(), hp = new Float32Array(N * 3), hfrom = new Float32Array(N * 3), hto = new Float32Array(N * 3), hc = new Float32Array(N * 3);
+const HC = new THREE.Vector3(0, 34, -40);
+for (let i = 0; i < N; i++) {
+  const tw = towers[i % towers.length]; hfrom[i * 3] = tw.x + (rnd() - 0.5) * tw.w; hfrom[i * 3 + 1] = rnd() * tw.h; hfrom[i * 3 + 2] = tw.z + (rnd() - 0.5) * tw.d;
+  const a = rnd() * Math.PI * 2, f = Math.sqrt(rnd());
+  const x = 16 * Math.pow(Math.sin(a), 3), y = 13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a);
+  hto[i * 3] = HC.x + x * 0.9 * f; hto[i * 3 + 1] = HC.y + y * 0.9 * f; hto[i * 3 + 2] = HC.z + (rnd() - 0.5) * 3;
+  const c = col((cfg.particles || [P.glow])[i % (cfg.particles || [P.glow]).length]); hc[i * 3] = c.r; hc[i * 3 + 1] = c.g; hc[i * 3 + 2] = c.b;
+}
+hg.setAttribute("position", new THREE.BufferAttribute(hp, 3)); hg.setAttribute("color", new THREE.BufferAttribute(hc, 3));
+const heart = new THREE.Points(hg, new THREE.PointsMaterial({ size: 1.1, map: sprite, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: false }));
+scene.add(heart);
+
+// post: bloom
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.9, 0.5, 0.72);
+composer.addPass(bloom); composer.addPass(new OutputPass());
+
+// camera keys on the story beats: [time, position, target]
+const v = (...a) => new THREE.Vector3(...a);
+const KEYS = [
+  [0, v(homeWin.x + 13, homeWin.y + 4, homeWin.z + 22), v(homeWin.x - 1, homeWin.y - 2, homeWin.z)],     // hook: close on a lonely window
+  [S[1], v(home.x + 22, 26, home.z + 40), v(0, 18, -16)],                                         // pull out: the message leaves
+  [S[2] + 0.6, v(friend.x - 20, 28, friend.z + 52), v(friend.x - 4, 22, friend.z + 10)],               // follow it across the bay
+  [S[3], v(friend.x - 8, 25, friend.z + 50), v(friend.x - 5, 23, friend.z + 14)],                 // the hoodie card
+  [S[4], v(-30, 40, 60), v(0, 12, -30)],                                                          // the city lights up
+  [S[5], v(0, 32, 40), HC.clone()],                                                               // the heart
+  [END + 3, v(0, 34, 22), HC.clone()],
+];
+function camAt(t) {
+  let i = 0; while (i < KEYS.length - 2 && t >= KEYS[i + 1][0]) i++;
+  const k = ease((t - KEYS[i][0]) / (KEYS[i + 1][0] - KEYS[i][0]));
+  camera.position.lerpVectors(KEYS[i][1], KEYS[i + 1][1], k);
+  const tg = new THREE.Vector3().lerpVectors(KEYS[i][2], KEYS[i + 1][2], k);
+  camera.position.x += Math.sin(t * 0.5) * 0.5 * cfg.orbit; camera.position.y += Math.cos(t * 0.4) * 0.3;
+  camera.lookAt(tg);
+}
+
+// words: hook then one point per beat
+const els = cfg.lines.map((l, i) => {
+  const d = document.createElement("div"); d.className = "line " + (cfg.serif ? "serif" : "sans");
+  d.style.top = (i === 0 ? cfg.hookTop : cfg.lineTop) + "px"; d.style.fontSize = (i === 0 ? cfg.hookSize : cfg.lineSize) + "px";
+  d.innerHTML = (l.num ? `<span class="num" style="color:${P.accent}">${l.num}</span>` : "") + l.text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  $("lines").appendChild(d); return d;
+});
+$("logo").src = cfg.end.logo; $("ename").textContent = cfg.end.name; $("ename").className = cfg.serif ? "serif" : "sans";
+$("ecta").textContent = cfg.end.cta; $("ecta").style.background = P.accent; $("ecta").style.color = P.accentInk; $("esmall").textContent = cfg.end.small;
+const show = (el, o, y = 0, s = 1) => { el.style.opacity = o; el.style.transform = `translateY(${y}px) scale(${s})`; el.style.visibility = o > 0.001 ? "visible" : "hidden"; };
+
+window.render = (t) => {
+  camAt(t);
+  // the lonely window breathes; the friend's window wakes when the message lands
+  const land = S[2] + 0.4;
+  homeGlow.material.opacity = 0.45 + 0.25 * Math.sin(t * 3); homeGlow.scale.setScalar(3 + 0.6 * Math.sin(t * 3));
+  friendGlow.material.opacity = 0.55 * clamp((t - land) / 0.4) * (1 - clamp((t - S[4]) / 1.5) * 0.5);
+  friendGlow.scale.setScalar(4 + 4 * Math.max(0, 1 - (t - land) / 0.8) * (t > land ? 1 : 0));
+  // comet
+  const k = clamp((t - (S[1] - 0.4)) / (land - S[1] + 0.4));
+  head.visible = t > S[1] - 0.4 && t < land + 0.1; head.position.copy(arc.getPoint(ease(k)));
+  trail.forEach((s, i) => { const kk = ease(clamp(k - i * 0.006)); s.position.copy(arc.getPoint(kk)); s.visible = head.visible && kk > 0;
+    s.material.opacity = (1 - i / TRAIL) * 0.8; s.scale.setScalar(2.2 * (1 - i / TRAIL) + 0.3); });
+  arcLine.material.opacity = 0.35 * win(t, S[1], S[1] + 0.6, S[3], S[3] + 1);
+  // city: windows wake in a wave from the friend's tower
+  towers.forEach((tw) => {
+    const d = Math.hypot(tw.x - friend.x, tw.z - friend.z);
+    const lit = tw === home ? 0.35 : tw === friend ? clamp((t - land) / 0.5) : clamp((t - S[4] - d * 0.03) / 0.8);
+    tw.m.emissiveIntensity = 0.06 + 1.3 * lit * (1 - 0.6 * clamp((t - S[5] - 0.5) / 1.5));
+  });
+  // cards: the real hoodie rises out of the friend's window, then two more drift in
+  cards.forEach((c, i) => {
+    const a = S[2] + 0.5 + i * (S[3] - S[2]) * 0.9, o = win(t, a, a + 0.6, S[5] - 0.3, S[5] + 0.4);
+    const base = new THREE.Vector3(friend.x - 4 - i * 9 + (i ? 4 : 0), 24 + i * 2.5, friend.z + 16 + i * 3);
+    c.g.position.copy(base).add(new THREE.Vector3(0, lerp(-10, 0, out((t - a) / 0.9)) + Math.sin(t * 1.4 + i) * 0.3, 0));
+    c.g.lookAt(camera.position); c.g.rotateY(Math.sin(t * 0.7 + i) * 0.08);
+    c.frame.material.opacity = c.pic.material.opacity = o; c.halo.material.opacity = 0.18 * o; c.g.visible = o > 0.001;
+    c.g.scale.setScalar(0.85 + 0.15 * out((t - a) / 0.8));
+  });
+  // heart from the city's lights
+  const g = ease((t - S[5]) / 1.8);
+  heart.visible = t > S[5] - 0.1; heart.material.opacity = clamp((t - S[5]) / 0.5) * (1 - 0.65 * clamp((t - END) / 0.8));
+  heart.rotation.y = Math.sin(t * 0.6) * 0.25;
+  const beat = 1 + 0.05 * Math.max(0, Math.sin(t * Math.PI * 2 / (cfg.beat * 2)));
+  for (let i = 0; i < N; i++) for (let j = 0; j < 3; j++) { const c = j === 1 ? HC.y : j === 0 ? HC.x : HC.z;
+    hp[i * 3 + j] = lerp(hfrom[i * 3 + j], c + (hto[i * 3 + j] - c) * beat, g); }
+  hg.attributes.position.needsUpdate = true;
+  bloom.strength = 0.9 + 0.25 * win(t, land - 0.1, land, land + 0.2, land + 0.8) + 0.4 * clamp((t - S[5]) / 1.5);
+  composer.render();
+  // words
+  els.forEach((el, i) => { const a = i === 0 ? -1 : S[i] + 0.15, b = i === 0 ? S[1] - 0.05 : (i < 5 ? S[i + 1] - 0.05 : END - 0.05);
+    const o = i === 0 ? (t < S[1] - 0.35 ? 1 : 1 - ease((t - S[1] + 0.35) / 0.3)) : win(t, a, a + 0.35, b - 0.3, b);
+    show(el, o, i === 0 ? 0 : lerp(34, 0, out((t - a) / 0.5))); });
+  $("gl").style.opacity = 1 - 0.55 * clamp((t - END) / 0.6);
+  show($("end"), clamp((t - END - 0.1) / 0.5), lerp(40, 0, out((t - END - 0.1) / 0.7)));
+  return true;
+};
+const imgs = [...document.images];
+Promise.all(imgs.map((im) => (im.complete ? 0 : new Promise((r) => (im.onload = im.onerror = r))))).then(() => { window.render(0); window.ready = true; });
+</script>
+</body>
+</html>

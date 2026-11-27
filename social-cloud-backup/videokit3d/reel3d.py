@@ -38,6 +38,8 @@ BRANDS = {
                 name='Good Message Studio', cta='goodmessagestudio.com', small='Link in bio'),
 }
 LAYOUTS = ['zigzag', 'left', 'zigzag', 'right']
+# Owner, 27 November 2026: GMS gets story films (story3d.html: night city, a message of light, the real hoodie, a heart of lights), not photo panels.
+STORY_BRANDS = {'gms'}
 
 
 def fetch(url, path):
@@ -122,15 +124,20 @@ def B_PALS(b):
 def prepare():
     """Copy the scene, the music and the brand fonts and marks into the videokit3d cache."""
     (VK / 'fonts').mkdir(parents=True, exist_ok=True); (VK / 'assets').mkdir(exist_ok=True)
-    for f in ('reel3d.html', 'music3d.py'):
+    for f in ('reel3d.html', 'story3d.html', 'music3d.py'):
         shutil.copy(HERE / f, VK / f)
     for f in (PUB / 'gms' / 'fonts').glob('*.ttf'):
         shutil.copy(f, VK / 'fonts' / f.name)
-    shutil.copy(PUB / 'sp' / 'assets' / 'mark.png', VK / 'assets' / 'sp-mark.png')
-    shutil.copy(PUB / 'gms' / 'assets' / 'gms-logo-1024.png', VK / 'assets' / 'gms-logo.png')
-    sys.path.insert(0, str(PUB / 'sin'))
-    import brand as SB
-    SB.mark(512).save(VK / 'assets' / 'sin-mark.png')
+    # Brand marks live with the brand publishers; a cache already holding them (copied by the editor) is fine.
+    for src, dst in ((PUB / 'sp' / 'assets' / 'mark.png', 'sp-mark.png'), (PUB / 'gms' / 'assets' / 'gms-logo-1024.png', 'gms-logo.png')):
+        if src.exists():
+            shutil.copy(src, VK / 'assets' / dst)
+    try:
+        sys.path.insert(0, str(PUB / 'sin'))
+        import brand as SB
+        SB.mark(512).save(VK / 'assets' / 'sin-mark.png')
+    except Exception as e:
+        print('sin mark skipped:', e)
     subprocess.Popen([sys.executable, '-m', 'http.server', '8765'], cwd=VK, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
@@ -165,7 +172,9 @@ def make(item_id):
                photos=[f'assets/{item_id}/{p.name}' for p in photos], lines=lines, serif=B['serif'],
                hookTop=250, hookSize=96 if long_hook else 116, lineTop=280, lineSize=104 if not B['serif'] else 110,
                starts=STARTS, seconds=SECONDS,
-               end=dict(logo=f'assets/{B["logo"]}', name=B['name'], cta=B['cta'], small=B['small']))
+               end=dict(logo=f'assets/{B["logo"]}', name=B['name'], cta=B['cta'], small=B['small']),
+               particles=pal['particles'], beat=BEAT)
+    scene = os.environ.get('VK_SCENE') or ('story3d.html' if b in STORY_BRANDS else 'reel3d.html')
     (VK / 'cfg').mkdir(exist_ok=True)
     (VK / 'cfg' / f'{item_id}.json').write_text(json.dumps(cfg, ensure_ascii=False))
     frames = VK / 'frames' / item_id
@@ -173,7 +182,7 @@ def make(item_id):
     total = round(SECONDS * FPS)
     procs = int(os.environ.get('VK_PROCS', '4'))
     step = (total + procs - 1) // procs
-    ps = [subprocess.Popen(['node', 'render.js', f'reel3d.html?cfg=cfg/{item_id}.json', str(SECONDS), '1080', '1920', str(a), str(min(a + step, total)), str(frames)], cwd=VK)
+    ps = [subprocess.Popen(['node', 'render.js', f'{scene}?cfg=cfg/{item_id}.json', str(SECONDS), '1080', '1920', str(a), str(min(a + step, total)), str(frames)], cwd=VK)
           for a in range(0, total, step)]
     if any(p.wait() for p in ps):
         raise SystemExit(f'{item_id}: frame render failed')
@@ -190,7 +199,7 @@ def make(item_id):
     meta = json.loads((ROOT / item['folder'] / 'carousel.json').read_text())
     reel = dict(date=item['date'], title=item['title'], video='reel.mp4', cover='cover.jpg', seconds=round(SECONDS, 2), caption=meta['caption'],
                 music=f'videokit3d music3d.py {b} style, seed {h % 997} (original, tones written in code, rights-cleared)',
-                engine=f'videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {pal}, layout {cfg["layout"]}',
+                engine=f'videokit3d {scene} (Three.js, bloom, frame-by-frame), palette {pal}, layout {cfg["layout"]}',
                 palette_name=pal_name, layout=cfg['layout'], learning=learn_note,
                 photos=sources, scenes=['hook'] + [p[0] for p in topic['points']] + ['end card'])
     (folder / 'reel.json').write_text(json.dumps(reel, ensure_ascii=False, indent=1))
