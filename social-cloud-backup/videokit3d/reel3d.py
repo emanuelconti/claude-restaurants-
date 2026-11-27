@@ -26,7 +26,7 @@ PALETTES = {
     'dusk':   dict(top='#120d33', horizon='#a8506a', ground='#0c0819', glow='#ff9f62', frame='#fff6ec', particles=['#ffd29a', '#ff9fb0', '#b9a8ff']),
     'night':  dict(top='#05070f', horizon='#24305e', ground='#04060c', glow='#7fb4ff', frame='#f1f4ff', particles=['#9fc3ff', '#ffe3a3', '#c7b2ff']),
     'golden': dict(top='#211638', horizon='#b8613a', ground='#140c18', glow='#ffb870', frame='#fffaf0', particles=['#ffe2a8', '#ffc38a', '#fff1d6']),
-    'dawn':   dict(top='#4a4f8f', horizon='#d98ea0', ground='#2a2238', glow='#ffd0dc', frame='#ffffff', particles=['#ffffff', '#ffd6e4', '#e8dcff']),
+    'dawn':   dict(top='#33366e', horizon='#b06f86', ground='#211a2e', glow='#ffd0dc', frame='#ffffff', particles=['#ffffff', '#ffd6e4', '#e8dcff']),
     'teal':   dict(top='#071c26', horizon='#2f8f9a', ground='#06141b', glow='#9ff3e8', frame='#effffd', particles=['#b9fff4', '#ffe7b0', '#a8d8ff']),
 }
 BRANDS = {
