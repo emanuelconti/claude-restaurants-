@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-28",
+ "title": "Sábado: el día de hacer lo que te apetece",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Sábado: el día de hacer lo que te apetece\n\nEl sábado no necesita agenda.\n\nIdeas sencillas para disfrutar el sábado sin listas ni prisas.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Sabado #FinDeSemana #VidaReal #Bienestar",
+ "music": "videokit3d music3d.py sp style, seed 973 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#211638', 'horizon': '#b8613a', 'ground': '#140c18', 'glow': '#ffb870', 'frame': '#fffaf0', 'particles': ['#ffe2a8', '#ffc38a', '#fff1d6'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1445116572660-236099ec97a0",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1466978913421-dad2ebd01d17",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1434030216411-0b793f4b4173",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Despierta sin alarma",
+  "Un café largo",
+  "Pasea por tu barrio",
+  "Come con alguien que quieres",
+  "Haz algo solo por gusto",
+  "end card"
+ ]
+}

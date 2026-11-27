@@ -1,0 +1,991 @@
+sp {
+  "title": "Lunes: empieza suave, termina fuerte",
+  "hook": "El lunes no tiene que ser cuesta arriba.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "life",
+    "restaurant",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Lunes #Motivacion #Habitos #VidaReal",
+  "caption": "Ideas sencillas para empezar la semana con energía y sin agobio.",
+  "points": [
+    [
+      "Un desayuno de verdad",
+      [
+        "Sentado, sin prisa."
+      ],
+      "Energía."
+    ],
+    [
+      "Una sola prioridad",
+      [
+        "La más importante."
+      ],
+      "Foco."
+    ],
+    [
+      "Sal a comer fuera",
+      [
+        "Aunque sea cerca."
+      ],
+      "Respiro."
+    ],
+    [
+      "Escribe a un amigo",
+      [
+        "Un mensaje basta."
+      ],
+      "Ánimo."
+    ],
+    [
+      "Celebra lo pequeño",
+      [
+        "Cada paso cuenta."
+      ],
+      "Orgullo."
+    ]
+  ],
+  "cover_photo_id": "1495474472287-4d71bcdd2085",
+  "photo_ids": [
+    "1495474472287-4d71bcdd2085",
+    "1641924675896-b6a5aaf64861",
+    "1484480974693-6ca0a78fb36b",
+    "1550966871-3ed3cdb5ed0c",
+    "1434030216411-0b793f4b4173",
+    "1499209974431-9dddcece7f88"
+  ]
+}
+
+sp {
+  "title": "Planes de lunes para no esperar al viernes",
+  "hook": "La semana también tiene sus ratos buenos.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "restaurant",
+    "city",
+    "restaurant",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #PlanesConAmigos #Lunes #VidaLocal #Amigos",
+  "caption": "Pequeños planes para disfrutar el lunes con tu gente. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Café de media mañana",
+      [
+        "Con un compañero."
+      ],
+      "Pausa."
+    ],
+    [
+      "Menú del día con amigos",
+      [
+        "Sencillo y rico."
+      ],
+      "Compañía."
+    ],
+    [
+      "Paseo después del trabajo",
+      [
+        "Para soltar el día."
+      ],
+      "Aire."
+    ],
+    [
+      "Una caña sin prisa",
+      [
+        "Solo una."
+      ],
+      "Charla."
+    ],
+    [
+      "Cena en casa con alguien",
+      [
+        "Cocinar juntos."
+      ],
+      "Risas."
+    ]
+  ],
+  "cover_photo_id": "1445116572660-236099ec97a0",
+  "photo_ids": [
+    "1445116572660-236099ec97a0",
+    "1509042239860-f550ce710b93",
+    "1466978913421-dad2ebd01d17",
+    "1511527661048-7fe73d85e9a4",
+    "1666282020483-6ebeb210b1c3",
+    "1528712306091-ed0763094c98"
+  ]
+}
+
+sp {
+  "title": "Cómo empezar diciembre con buen pie",
+  "hook": "Diciembre llega mañana. Prepárate con calma.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "restaurant",
+    "life",
+    "city"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Diciembre #Navidad #Habitos #Bienestar",
+  "caption": "Ideas para recibir diciembre sin estrés y con ganas.",
+  "points": [
+    [
+      "Mira tu calendario",
+      [
+        "Antes de que se llene."
+      ],
+      "Previsión."
+    ],
+    [
+      "Reserva tiempo para ti",
+      [
+        "También cuenta."
+      ],
+      "Cuidado."
+    ],
+    [
+      "Planea una cena de amigos",
+      [
+        "Antes de las fiestas."
+      ],
+      "Ilusión."
+    ],
+    [
+      "Haz una lista corta",
+      [
+        "Solo lo importante."
+      ],
+      "Orden."
+    ],
+    [
+      "Disfruta las luces",
+      [
+        "Las calles brillan."
+      ],
+      "Magia."
+    ]
+  ],
+  "cover_photo_id": "1516997121675-4c2d1684aa3e",
+  "photo_ids": [
+    "1516997121675-4c2d1684aa3e",
+    "1506784983877-45594efa4cbe",
+    "1506126613408-eca07ce68773",
+    "1517248135467-4c7edcad34c4",
+    "1484480974693-6ca0a78fb36b",
+    "1572116469696-31de0f17cc34"
+  ]
+}
+
+sp {
+  "title": "Cenas de Navidad con amigos: cómo organizarlas sin estrés",
+  "hook": "La mejor cena es la que se disfruta.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "restaurant",
+    "restaurant",
+    "life",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #CenaDeNavidad #Amigos #Restaurantes #Navidad",
+  "caption": "Trucos para organizar la cena de Navidad con amigos sin dramas. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Fija la fecha pronto",
+      [
+        "Diciembre se llena rápido."
+      ],
+      "Previsión."
+    ],
+    [
+      "Reserva con antelación",
+      [
+        "Los buenos sitios vuelan."
+      ],
+      "Tranquilo."
+    ],
+    [
+      "Menú cerrado",
+      [
+        "Más fácil para todos."
+      ],
+      "Sencillo."
+    ],
+    [
+      "Bote común",
+      [
+        "Cuentas claras."
+      ],
+      "Paz."
+    ],
+    [
+      "Brindis final",
+      [
+        "Por el año que se va."
+      ],
+      "Gratitud."
+    ]
+  ],
+  "cover_photo_id": "1659690402718-ea07d943fd42",
+  "photo_ids": [
+    "1659690402718-ea07d943fd42",
+    "1517842645767-c639042777db",
+    "1517248135467-4c7edcad34c4",
+    "1513104890138-7c749659a591",
+    "1563013544-824ae1b704d3",
+    "1510812431401-41d2bd2722f3"
+  ]
+}
+
+sp {
+  "title": "Señales de que vas por buen camino",
+  "hook": "A veces avanzas más de lo que crees.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "cafe",
+    "life",
+    "life",
+    "restaurant"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Motivacion #Progreso #VidaReal #Animo",
+  "caption": "Pequeñas señales de progreso que conviene mirar cuando dudas.",
+  "points": [
+    [
+      "Lo que antes costaba ya no",
+      [
+        "Has crecido."
+      ],
+      "Avance."
+    ],
+    [
+      "Te rodeas de buena gente",
+      [
+        "Eso dice mucho."
+      ],
+      "Compañía."
+    ],
+    [
+      "Dices que no más a menudo",
+      [
+        "Sabes lo que quieres."
+      ],
+      "Claridad."
+    ],
+    [
+      "Tienes rutinas que te cuidan",
+      [
+        "Aunque sean pequeñas."
+      ],
+      "Constancia."
+    ],
+    [
+      "Te ríes más",
+      [
+        "La mejor señal."
+      ],
+      "Alegría."
+    ]
+  ],
+  "cover_photo_id": "1499209974431-9dddcece7f88",
+  "photo_ids": [
+    "1499209974431-9dddcece7f88",
+    "1470252649378-9c29740c9fa8",
+    "1442975631115-c4f7b05b8a2c",
+    "1484480974693-6ca0a78fb36b",
+    "1495364141860-b0d03eccd065",
+    "1666282020483-6ebeb210b1c3"
+  ]
+}
+
+sp {
+  "title": "Por qué compartir tus sitios favoritos hace la ciudad mejor",
+  "hook": "Recomendar un sitio es un regalo para dos.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "restaurant",
+    "restaurant",
+    "city",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #SitiosFavoritos #Recomendaciones #VidaLocal #Amigos",
+  "caption": "Lo que pasa cuando llevas a tus amigos a los sitios que te gustan. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Tu amigo descubre algo nuevo",
+      [
+        "Y te lo agradece."
+      ],
+      "Regalo."
+    ],
+    [
+      "El sitio gana un cliente",
+      [
+        "Que llega con confianza."
+      ],
+      "Apoyo."
+    ],
+    [
+      "Tú sumas un buen recuerdo",
+      [
+        "Compartido."
+      ],
+      "Vínculo."
+    ],
+    [
+      "El barrio sigue vivo",
+      [
+        "Gracias a su gente."
+      ],
+      "Comunidad."
+    ],
+    [
+      "Y la próxima vez, otro",
+      [
+        "Así se hace ciudad."
+      ],
+      "Cadena."
+    ]
+  ],
+  "cover_photo_id": "1521017432531-fbd92d768814",
+  "photo_ids": [
+    "1521017432531-fbd92d768814",
+    "1445116572660-236099ec97a0",
+    "1517248135467-4c7edcad34c4",
+    "1659690402718-ea07d943fd42",
+    "1583422409516-2895a77efded",
+    "1510812431401-41d2bd2722f3"
+  ]
+}
+
+sp {
+  "title": "Cómo cuidar tu energía un lunes largo",
+  "hook": "Los lunes largos se llevan mejor con pausas.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "life",
+    "restaurant",
+    "cafe",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Energia #Lunes #Bienestar #Pausas",
+  "caption": "Pequeñas pausas que te ayudan a llegar al final del lunes con energía.",
+  "points": [
+    [
+      "Bebe algo caliente",
+      [
+        "Un té, una infusión."
+      ],
+      "Pausa."
+    ],
+    [
+      "Pausa cada hora",
+      [
+        "Levántate y estira."
+      ],
+      "Cuerpo."
+    ],
+    [
+      "Come sin pantalla",
+      [
+        "Solo comer."
+      ],
+      "Presencia."
+    ],
+    [
+      "Un café con calma",
+      [
+        "No a la carrera."
+      ],
+      "Disfrute."
+    ],
+    [
+      "Desconecta al llegar",
+      [
+        "Casa es casa."
+      ],
+      "Límite."
+    ]
+  ],
+  "cover_photo_id": "1610701596007-11502861dcfa",
+  "photo_ids": [
+    "1610701596007-11502861dcfa",
+    "1445116572660-236099ec97a0",
+    "1447752875215-b2761acb3c5d",
+    "1544982560-63ad67a35c23",
+    "1511920170033-f8396924c348",
+    "1538688525198-9b88f6f53126"
+  ]
+}
+
+sp {
+  "title": "Lo mejor del lunes: ver a tus amigos",
+  "hook": "Un plan con amigos arregla cualquier lunes.",
+  "photos": "life",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "cafe",
+    "cafe",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Amigos #Lunes #PlanesConAmigos #VidaLocal",
+  "caption": "Por qué quedar con amigos entre semana cambia cómo vives la semana. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Rompe la rutina",
+      [
+        "Un plan distinto."
+      ],
+      "Aire."
+    ],
+    [
+      "Te ríes de la semana",
+      [
+        "Compartida pesa menos."
+      ],
+      "Alivio."
+    ],
+    [
+      "Un sitio cerca de todos",
+      [
+        "Sin excusas."
+      ],
+      "Fácil."
+    ],
+    [
+      "Hora corta",
+      [
+        "Una hora vale."
+      ],
+      "Sencillo."
+    ],
+    [
+      "Vuelves a casa contento",
+      [
+        "Y con ganas."
+      ],
+      "Energía."
+    ]
+  ],
+  "cover_photo_id": "1666282020483-6ebeb210b1c3",
+  "photo_ids": [
+    "1666282020483-6ebeb210b1c3",
+    "1514933651103-005eec06c04b",
+    "1466978913421-dad2ebd01d17",
+    "1554118811-1e0d58224f24",
+    "1565252556328-92ee4a9a0983",
+    "1583422409516-2895a77efded"
+  ]
+}
+
+sin {
+  "title": "How to start the week with one clear priority",
+  "hook": "One clear priority beats ten urgent tasks.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "How founders can pick and protect a single priority for the week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "List everything",
+      [
+        "Get it out of your head."
+      ],
+      "Clarity."
+    ],
+    [
+      "Ask what moves the needle",
+      [
+        "Revenue, product, funding."
+      ],
+      "Impact."
+    ],
+    [
+      "Pick one",
+      [
+        "Only one."
+      ],
+      "Focus."
+    ],
+    [
+      "Block the first hours",
+      [
+        "Every morning."
+      ],
+      "Protect."
+    ],
+    [
+      "Review on Friday",
+      [
+        "Did it move."
+      ],
+      "Learning."
+    ]
+  ],
+  "cover_photo_id": "1484480974693-6ca0a78fb36b",
+  "photo_ids": [
+    "1484480974693-6ca0a78fb36b",
+    "1434030216411-0b793f4b4173",
+    "1486312338219-ce68d2c6f44d",
+    "1517842645767-c639042777db",
+    "1496181133206-80ce9b88a853",
+    "1506784983877-45594efa4cbe"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "December funding checklist for founders",
+  "hook": "December is quiet, which makes it useful.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "city",
+    "work"
+  ],
+  "cta": false,
+  "caption": "A short checklist to prepare grant and investor applications before the new year. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Update your deck",
+      [
+        "With this year's numbers."
+      ],
+      "Fresh."
+    ],
+    [
+      "Check upcoming calls",
+      [
+        "Deadlines in Q1."
+      ],
+      "Timing."
+    ],
+    [
+      "Collect your documents",
+      [
+        "Statutes, accounts, CVs."
+      ],
+      "Ready."
+    ],
+    [
+      "Warm up your network",
+      [
+        "A short update email."
+      ],
+      "Connection."
+    ],
+    [
+      "Plan January outreach",
+      [
+        "Who, when, how."
+      ],
+      "Momentum."
+    ]
+  ],
+  "cover_photo_id": "1499750310107-5fef28a66643",
+  "photo_ids": [
+    "1499750310107-5fef28a66643",
+    "1516321318423-f06f85e504b3",
+    "1506784983877-45594efa4cbe",
+    "1554224155-6726b3ff858f",
+    "1442975631115-c4f7b05b8a2c",
+    "1486312338219-ce68d2c6f44d"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How founders can say no without guilt",
+  "hook": "Every yes costs time you do not have.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "life",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "Simple ways for founders to decline requests politely and protect their focus. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Know your priorities",
+      [
+        "Then no is easy."
+      ],
+      "Clarity."
+    ],
+    [
+      "Thank them first",
+      [
+        "Kindness matters."
+      ],
+      "Respect."
+    ],
+    [
+      "Be short and honest",
+      [
+        "No long excuses."
+      ],
+      "Clear."
+    ],
+    [
+      "Offer an alternative",
+      [
+        "If you can."
+      ],
+      "Help."
+    ],
+    [
+      "Move on",
+      [
+        "No guilt needed."
+      ],
+      "Freedom."
+    ]
+  ],
+  "cover_photo_id": "1499209974431-9dddcece7f88",
+  "photo_ids": [
+    "1499209974431-9dddcece7f88",
+    "1506784983877-45594efa4cbe",
+    "1610701596007-11502861dcfa",
+    "1434030216411-0b793f4b4173",
+    "1488190211105-8b0e65b80b4e",
+    "1447752875215-b2761acb3c5d"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Signs your startup is ready for its first grant",
+  "hook": "Grants fit some stages better than others.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "Signals that your startup could be ready to apply for a first public grant. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "You have a clear innovation",
+      [
+        "Not just a business."
+      ],
+      "Fit."
+    ],
+    [
+      "You can describe the impact",
+      [
+        "Social, green, economic."
+      ],
+      "Purpose."
+    ],
+    [
+      "You have a small team",
+      [
+        "With the right skills."
+      ],
+      "Capacity."
+    ],
+    [
+      "You can co-finance",
+      [
+        "Many grants require it."
+      ],
+      "Reality."
+    ],
+    [
+      "You have time to write",
+      [
+        "Applications take weeks."
+      ],
+      "Commitment."
+    ]
+  ],
+  "cover_photo_id": "1541807084-5c52b6b3adef",
+  "photo_ids": [
+    "1541807084-5c52b6b3adef",
+    "1516321318423-f06f85e504b3",
+    "1470252649378-9c29740c9fa8",
+    "1519389950473-47ba0277781c",
+    "1554224155-6726b3ff858f",
+    "1434030216411-0b793f4b4173"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Small Monday wins that build momentum",
+  "hook": "Momentum starts with one small win.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "life",
+    "city"
+  ],
+  "cta": false,
+  "caption": "Quick wins founders can get on Monday to set the tone for the week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Clear your inbox to ten",
+      [
+        "Not zero."
+      ],
+      "Relief."
+    ],
+    [
+      "Send one follow up",
+      [
+        "To a lead or investor."
+      ],
+      "Progress."
+    ],
+    [
+      "Fix one small bug",
+      [
+        "Or one small process."
+      ],
+      "Done."
+    ],
+    [
+      "Thank a team member",
+      [
+        "By name."
+      ],
+      "Morale."
+    ],
+    [
+      "Walk at lunch",
+      [
+        "Outside."
+      ],
+      "Energy."
+    ]
+  ],
+  "cover_photo_id": "1495364141860-b0d03eccd065",
+  "photo_ids": [
+    "1495364141860-b0d03eccd065",
+    "1486312338219-ce68d2c6f44d",
+    "1541807084-5c52b6b3adef",
+    "1499750310107-5fef28a66643",
+    "1510812431401-41d2bd2722f3",
+    "1447752875215-b2761acb3c5d"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to choose the right investor for your stage",
+  "hook": "The right investor matches your stage, not just your sector.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "city",
+    "life"
+  ],
+  "cta": false,
+  "caption": "How founders can find investors who fit their stage and plans. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Check their typical cheque",
+      [
+        "Too big or too small."
+      ],
+      "Fit."
+    ],
+    [
+      "Look at their portfolio",
+      [
+        "Similar stage companies."
+      ],
+      "Match."
+    ],
+    [
+      "Read what they publish",
+      [
+        "Their thinking shows."
+      ],
+      "Insight."
+    ],
+    [
+      "Ask their founders",
+      [
+        "Off the record."
+      ],
+      "Truth."
+    ],
+    [
+      "Trust your gut",
+      [
+        "You will work together."
+      ],
+      "Chemistry."
+    ]
+  ],
+  "cover_photo_id": "1516321318423-f06f85e504b3",
+  "photo_ids": [
+    "1516321318423-f06f85e504b3",
+    "1541807084-5c52b6b3adef",
+    "1519389950473-47ba0277781c",
+    "1517842645767-c639042777db",
+    "1442975631115-c4f7b05b8a2c",
+    "1499209974431-9dddcece7f88"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "What to do when a month goes badly",
+  "hook": "Bad months happen to every company.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "A calm way for founders to respond when a month does not go to plan. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Name what happened",
+      [
+        "Without drama."
+      ],
+      "Facts."
+    ],
+    [
+      "Separate luck from choices",
+      [
+        "Learn from both."
+      ],
+      "Clarity."
+    ],
+    [
+      "Talk to your team",
+      [
+        "Openly."
+      ],
+      "Trust."
+    ],
+    [
+      "Pick one change",
+      [
+        "Not ten."
+      ],
+      "Focus."
+    ],
+    [
+      "Rest before you react",
+      [
+        "Sleep on it."
+      ],
+      "Calm."
+    ]
+  ],
+  "cover_photo_id": "1501139083538-0139583c060f",
+  "photo_ids": [
+    "1501139083538-0139583c060f",
+    "1554224155-6726b3ff858f",
+    "1517842645767-c639042777db",
+    "1519389950473-47ba0277781c",
+    "1484480974693-6ca0a78fb36b",
+    "1641924675896-b6a5aaf64861"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "End of November: a founder's review",
+  "hook": "November ends. What did it teach you?",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "life",
+    "life",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "A short end of month review for founders before December starts. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "What went well",
+      [
+        "Write three things."
+      ],
+      "Pride."
+    ],
+    [
+      "What drained you",
+      [
+        "Be honest."
+      ],
+      "Awareness."
+    ],
+    [
+      "Who helped you",
+      [
+        "Thank them."
+      ],
+      "Gratitude."
+    ],
+    [
+      "What to stop",
+      [
+        "Just one thing."
+      ],
+      "Focus."
+    ],
+    [
+      "December's one goal",
+      [
+        "Clear and small."
+      ],
+      "Direction."
+    ]
+  ],
+  "cover_photo_id": "1506784983877-45594efa4cbe",
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1434030216411-0b793f4b4173",
+    "1610701596007-11502861dcfa",
+    "1510812431401-41d2bd2722f3",
+    "1501139083538-0139583c060f",
+    "1470252649378-9c29740c9fa8"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}

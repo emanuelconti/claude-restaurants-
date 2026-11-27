@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-28",
+ "title": "Después del Black Friday: lo que de verdad vale la pena",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Después del Black Friday: lo que de verdad vale la pena\n\nLas mejores cosas no estaban en oferta.\n\nUn recordatorio para el fin de semana: lo que más vale no se compra.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #BlackFriday #VidaReal #Amigos #Bienestar",
+ "music": "videokit3d music3d.py sp style, seed 309 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#05070f', 'horizon': '#24305e', 'ground': '#04060c', 'glow': '#7fb4ff', 'frame': '#f1f4ff', 'particles': ['#9fc3ff', '#ffe3a3', '#c7b2ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout left",
+ "photos": [
+  {
+   "unsplash": "1499209974431-9dddcece7f88",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1659690402718-ea07d943fd42",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1509042239860-f550ce710b93",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1600028068383-ea11a7a101f3",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Tiempo con tu gente",
+  "Una buena conversación",
+  "Un paseo al sol",
+  "Una comida sin prisa",
+  "Dormir bien",
+  "end card"
+ ]
+}

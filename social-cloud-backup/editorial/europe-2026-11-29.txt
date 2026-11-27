@@ -1,0 +1,991 @@
+sp {
+  "title": "Domingo lento: permiso para no correr",
+  "hook": "El domingo también es para ir despacio.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "city",
+    "restaurant",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Domingo #SinPrisa #VidaReal #Bienestar",
+  "caption": "Ideas para un domingo tranquilo que te deje con ganas de empezar la semana.",
+  "points": [
+    [
+      "Desayuna sentado",
+      [
+        "Sin mirar el móvil."
+      ],
+      "Calma."
+    ],
+    [
+      "Sal a tomar el aire",
+      [
+        "Aunque sea un rato."
+      ],
+      "Respira."
+    ],
+    [
+      "Comida larga en familia",
+      [
+        "O con quien sea tu familia."
+      ],
+      "Hogar."
+    ],
+    [
+      "Una siesta corta",
+      [
+        "Veinte minutos bastan."
+      ],
+      "Recarga."
+    ],
+    [
+      "Prepara el lunes sin agobio",
+      [
+        "Solo lo justo."
+      ],
+      "Tranquilidad."
+    ]
+  ],
+  "cover_photo_id": "1442975631115-c4f7b05b8a2c",
+  "photo_ids": [
+    "1442975631115-c4f7b05b8a2c",
+    "1641924675896-b6a5aaf64861",
+    "1511527661048-7fe73d85e9a4",
+    "1659690402718-ea07d943fd42",
+    "1524758631624-e2822e304c36",
+    "1506784983877-45594efa4cbe"
+  ]
+}
+
+sp {
+  "title": "El vermut del domingo, una tradición que une",
+  "hook": "Hay costumbres que merece la pena cuidar.",
+  "photos": "life",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "cafe",
+    "life",
+    "restaurant"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Vermut #Domingo #Tradicion #PlanesConAmigos",
+  "caption": "Por qué el vermut del domingo sigue juntando a amigos y familias. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Mediodía y sin prisa",
+      [
+        "La hora perfecta."
+      ],
+      "Ritual."
+    ],
+    [
+      "Algo para picar",
+      [
+        "Aceitunas, patatas, anchoas."
+      ],
+      "Sencillo."
+    ],
+    [
+      "En el bar de siempre",
+      [
+        "Donde te conocen."
+      ],
+      "Confianza."
+    ],
+    [
+      "Con quien te apetece",
+      [
+        "Amigos, familia, vecinos."
+      ],
+      "Compañía."
+    ],
+    [
+      "Y luego a comer",
+      [
+        "El vermut abre el apetito."
+      ],
+      "Plan."
+    ]
+  ],
+  "cover_photo_id": "1666282020483-6ebeb210b1c3",
+  "photo_ids": [
+    "1666282020483-6ebeb210b1c3",
+    "1544982560-63ad67a35c23",
+    "1466978913421-dad2ebd01d17",
+    "1514933651103-005eec06c04b",
+    "1510812431401-41d2bd2722f3",
+    "1550966871-3ed3cdb5ed0c"
+  ]
+}
+
+sp {
+  "title": "Cómo cargar pilas antes de una semana intensa",
+  "hook": "Una buena semana empieza el domingo.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "restaurant",
+    "cafe",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Energia #Habitos #Domingo #Bienestar",
+  "caption": "Pequeños gestos para recuperar energía antes del lunes.",
+  "points": [
+    [
+      "Duerme una hora más",
+      [
+        "Tu cabeza lo agradece."
+      ],
+      "Descanso."
+    ],
+    [
+      "Camina por la naturaleza",
+      [
+        "Verde y silencio."
+      ],
+      "Calma."
+    ],
+    [
+      "Come algo casero",
+      [
+        "Que te siente bien."
+      ],
+      "Cuidado."
+    ],
+    [
+      "Habla con alguien querido",
+      [
+        "Sin prisa."
+      ],
+      "Ánimo."
+    ],
+    [
+      "Apunta tres cosas",
+      [
+        "Para el lunes, nada más."
+      ],
+      "Orden."
+    ]
+  ],
+  "cover_photo_id": "1470252649378-9c29740c9fa8",
+  "photo_ids": [
+    "1470252649378-9c29740c9fa8",
+    "1641924675896-b6a5aaf64861",
+    "1447752875215-b2761acb3c5d",
+    "1528712306091-ed0763094c98",
+    "1495474472287-4d71bcdd2085",
+    "1484480974693-6ca0a78fb36b"
+  ]
+}
+
+sp {
+  "title": "Ideas para una comida de domingo con amigos",
+  "hook": "Las comidas de domingo se alargan solas.",
+  "photos": "life",
+  "point_sets": [
+    "restaurant",
+    "restaurant",
+    "restaurant",
+    "cafe",
+    "cafe"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #ComidaConAmigos #Domingo #Sobremesa #VidaLocal",
+  "caption": "Ideas fáciles para juntar a tus amigos el domingo alrededor de una mesa. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige un sitio con mesa grande",
+      [
+        "Que quepáis todos."
+      ],
+      "Juntos."
+    ],
+    [
+      "Platos al centro",
+      [
+        "Para probar de todo."
+      ],
+      "Compartir."
+    ],
+    [
+      "Sin hora de irse",
+      [
+        "La sobremesa manda."
+      ],
+      "Calma."
+    ],
+    [
+      "Postre para todos",
+      [
+        "Aunque nadie tenga hambre."
+      ],
+      "Dulce."
+    ],
+    [
+      "Café para cerrar",
+      [
+        "El broche final."
+      ],
+      "Ritual."
+    ]
+  ],
+  "cover_photo_id": "1517248135467-4c7edcad34c4",
+  "photo_ids": [
+    "1517248135467-4c7edcad34c4",
+    "1559339352-11d035aa65de",
+    "1659690402718-ea07d943fd42",
+    "1466978913421-dad2ebd01d17",
+    "1565252556328-92ee4a9a0983",
+    "1511920170033-f8396924c348"
+  ]
+}
+
+sp {
+  "title": "Lo bueno de no tener planes el domingo",
+  "hook": "No tener planes también es un plan.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "city",
+    "life",
+    "life",
+    "cafe"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Domingo #Descanso #VidaReal #Calma",
+  "caption": "Por qué un domingo sin agenda puede ser justo lo que necesitas.",
+  "points": [
+    [
+      "Te despiertas sin prisa",
+      [
+        "Nadie te espera."
+      ],
+      "Libertad."
+    ],
+    [
+      "Improvisas",
+      [
+        "Lo que apetezca."
+      ],
+      "Sorpresa."
+    ],
+    [
+      "Descansas de verdad",
+      [
+        "Sin obligaciones."
+      ],
+      "Recarga."
+    ],
+    [
+      "Te encuentras contigo",
+      [
+        "Un rato a solas."
+      ],
+      "Claridad."
+    ],
+    [
+      "Llegas al lunes con ganas",
+      [
+        "Sin cansancio extra."
+      ],
+      "Energía."
+    ]
+  ],
+  "cover_photo_id": "1506126613408-eca07ce68773",
+  "photo_ids": [
+    "1506126613408-eca07ce68773",
+    "1641924675896-b6a5aaf64861",
+    "1583422409516-2895a77efded",
+    "1538688525198-9b88f6f53126",
+    "1499209974431-9dddcece7f88",
+    "1445116572660-236099ec97a0"
+  ]
+}
+
+sp {
+  "title": "Por qué volver al mismo sitio también es un plan",
+  "hook": "Lo conocido también puede ser especial.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "restaurant",
+    "restaurant",
+    "cafe",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #SitiosFavoritos #Amigos #VidaLocal #Barrio",
+  "caption": "Por qué nos gusta volver a nuestros sitios de siempre, y llevar a alguien nuevo. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Te reciben por tu nombre",
+      [
+        "Eso no tiene precio."
+      ],
+      "Cercanía."
+    ],
+    [
+      "Sabes qué pedir",
+      [
+        "Y nunca falla."
+      ],
+      "Seguro."
+    ],
+    [
+      "Tiene tus recuerdos",
+      [
+        "Cada mesa una historia."
+      ],
+      "Nostalgia."
+    ],
+    [
+      "Es tu refugio",
+      [
+        "Cuando el día pesa."
+      ],
+      "Calma."
+    ],
+    [
+      "Llevar a alguien nuevo",
+      [
+        "Y compartir tu sitio."
+      ],
+      "Regalo."
+    ]
+  ],
+  "cover_photo_id": "1521017432531-fbd92d768814",
+  "photo_ids": [
+    "1521017432531-fbd92d768814",
+    "1442975631115-c4f7b05b8a2c",
+    "1600028068383-ea11a7a101f3",
+    "1550966871-3ed3cdb5ed0c",
+    "1445116572660-236099ec97a0",
+    "1510812431401-41d2bd2722f3"
+  ]
+}
+
+sp {
+  "title": "Pequeños rituales para el domingo por la noche",
+  "hook": "Una buena noche de domingo hace un buen lunes.",
+  "photos": "life",
+  "point_sets": [
+    "restaurant",
+    "life",
+    "life",
+    "cafe",
+    "life"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Domingo #Rutina #Noche #Bienestar",
+  "caption": "Rituales sencillos para cerrar el fin de semana con calma.",
+  "points": [
+    [
+      "Cena ligera",
+      [
+        "Algo rico y sencillo."
+      ],
+      "Ligero."
+    ],
+    [
+      "Ordena un rincón",
+      [
+        "Solo uno."
+      ],
+      "Calma."
+    ],
+    [
+      "Prepara la ropa",
+      [
+        "Una decisión menos."
+      ],
+      "Fácil."
+    ],
+    [
+      "Una infusión caliente",
+      [
+        "Sin pantallas."
+      ],
+      "Pausa."
+    ],
+    [
+      "A la cama pronto",
+      [
+        "Tu yo del lunes lo agradece."
+      ],
+      "Descanso."
+    ]
+  ],
+  "cover_photo_id": "1538688525198-9b88f6f53126",
+  "photo_ids": [
+    "1538688525198-9b88f6f53126",
+    "1544982560-63ad67a35c23",
+    "1524758631624-e2822e304c36",
+    "1445205170230-053b83016050",
+    "1509042239860-f550ce710b93",
+    "1641924675896-b6a5aaf64861"
+  ]
+}
+
+sp {
+  "title": "Planes de domingo para hacer en tu barrio",
+  "hook": "Tu barrio tiene más planes de los que crees.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "city",
+    "restaurant",
+    "restaurant",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Barrio #Domingo #PlanesConAmigos #VidaLocal",
+  "caption": "Ideas para disfrutar el domingo sin salir de tu barrio. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Desayuno en la cafetería de la esquina",
+      [
+        "Esa que siempre ves."
+      ],
+      "Descubrir."
+    ],
+    [
+      "Paseo sin rumbo",
+      [
+        "Mira hacia arriba."
+      ],
+      "Curiosidad."
+    ],
+    [
+      "Vermut con los vecinos",
+      [
+        "Se conoce gente."
+      ],
+      "Comunidad."
+    ],
+    [
+      "Comida en un sitio nuevo",
+      [
+        "Aunque esté a dos calles."
+      ],
+      "Sorpresa."
+    ],
+    [
+      "Atardecer desde un mirador",
+      [
+        "Tu ciudad desde arriba."
+      ],
+      "Belleza."
+    ]
+  ],
+  "cover_photo_id": "1583422409516-2895a77efded",
+  "photo_ids": [
+    "1583422409516-2895a77efded",
+    "1565252556328-92ee4a9a0983",
+    "1511527661048-7fe73d85e9a4",
+    "1666282020483-6ebeb210b1c3",
+    "1513104890138-7c749659a591",
+    "1470252649378-9c29740c9fa8"
+  ]
+}
+
+sin {
+  "title": "How to plan your week as a founder on Sunday",
+  "hook": "Twenty minutes on Sunday can save hours on Monday.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "A short Sunday planning routine that keeps founders focused on what moves the company. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Look at last week first",
+      [
+        "What moved, what did not."
+      ],
+      "Facts."
+    ],
+    [
+      "Pick three outcomes",
+      [
+        "Not tasks, outcomes."
+      ],
+      "Focus."
+    ],
+    [
+      "Block time for deep work",
+      [
+        "Before meetings fill it."
+      ],
+      "Protect."
+    ],
+    [
+      "Plan one funding action",
+      [
+        "An email, a form, a call."
+      ],
+      "Momentum."
+    ],
+    [
+      "Leave space for life",
+      [
+        "Rest is part of the plan."
+      ],
+      "Balance."
+    ]
+  ],
+  "cover_photo_id": "1506784983877-45594efa4cbe",
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1488190211105-8b0e65b80b4e",
+    "1484480974693-6ca0a78fb36b",
+    "1541807084-5c52b6b3adef",
+    "1486312338219-ce68d2c6f44d",
+    "1499209974431-9dddcece7f88"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "What makes a grant application stand out",
+  "hook": "Reviewers read many applications. Make yours easy.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "Practical ways to make a grant application clear and convincing for reviewers. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Answer the exact question",
+      [
+        "Use their words."
+      ],
+      "Fit."
+    ],
+    [
+      "Show the impact clearly",
+      [
+        "Who benefits and how."
+      ],
+      "Purpose."
+    ],
+    [
+      "Give a realistic plan",
+      [
+        "With milestones."
+      ],
+      "Trust."
+    ],
+    [
+      "Explain your team",
+      [
+        "Why you can do it."
+      ],
+      "Credibility."
+    ],
+    [
+      "Proofread twice",
+      [
+        "Small errors cost points."
+      ],
+      "Care."
+    ]
+  ],
+  "cover_photo_id": "1554224155-6726b3ff858f",
+  "photo_ids": [
+    "1554224155-6726b3ff858f",
+    "1484480974693-6ca0a78fb36b",
+    "1470252649378-9c29740c9fa8",
+    "1506784983877-45594efa4cbe",
+    "1519389950473-47ba0277781c",
+    "1517842645767-c639042777db"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Sunday habits of calm founders",
+  "hook": "Calm founders protect their Sundays.",
+  "photos": "work",
+  "point_sets": [
+    "life",
+    "life",
+    "life",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "Simple Sunday habits that help founders recover and think clearly. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "A long walk",
+      [
+        "No podcast."
+      ],
+      "Space."
+    ],
+    [
+      "Cook something slow",
+      [
+        "Hands busy, mind free."
+      ],
+      "Calm."
+    ],
+    [
+      "See friends",
+      [
+        "Talk about anything but work."
+      ],
+      "Perspective."
+    ],
+    [
+      "Read for pleasure",
+      [
+        "Not for work."
+      ],
+      "Joy."
+    ],
+    [
+      "Early night",
+      [
+        "Monday starts tonight."
+      ],
+      "Rest."
+    ]
+  ],
+  "cover_photo_id": "1506126613408-eca07ce68773",
+  "photo_ids": [
+    "1506126613408-eca07ce68773",
+    "1447752875215-b2761acb3c5d",
+    "1528712306091-ed0763094c98",
+    "1510812431401-41d2bd2722f3",
+    "1517842645767-c639042777db",
+    "1641924675896-b6a5aaf64861"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to explain your startup to a stranger",
+  "hook": "If a stranger gets it, an investor will too.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "city"
+  ],
+  "cta": false,
+  "caption": "A simple way to describe your startup so anyone understands it in thirty seconds. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Start with the problem",
+      [
+        "One they recognise."
+      ],
+      "Hook."
+    ],
+    [
+      "Say who it is for",
+      [
+        "Be specific."
+      ],
+      "Clarity."
+    ],
+    [
+      "Show what changes",
+      [
+        "Before and after."
+      ],
+      "Value."
+    ],
+    [
+      "Skip the jargon",
+      [
+        "Plain words win."
+      ],
+      "Simple."
+    ],
+    [
+      "Ask what they heard",
+      [
+        "Then refine."
+      ],
+      "Test."
+    ]
+  ],
+  "cover_photo_id": "1442975631115-c4f7b05b8a2c",
+  "photo_ids": [
+    "1442975631115-c4f7b05b8a2c",
+    "1434030216411-0b793f4b4173",
+    "1516321318423-f06f85e504b3",
+    "1470252649378-9c29740c9fa8",
+    "1517842645767-c639042777db",
+    "1554118811-1e0d58224f24"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Five questions to ask before taking investor money",
+  "hook": "Not all money is good money.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "city",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "Questions founders should ask themselves and investors before accepting a term sheet. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "What do they expect",
+      [
+        "Growth, timeline, exit."
+      ],
+      "Alignment."
+    ],
+    [
+      "How do they help",
+      [
+        "Beyond the cheque."
+      ],
+      "Value."
+    ],
+    [
+      "What do founders say",
+      [
+        "Ask a few."
+      ],
+      "References."
+    ],
+    [
+      "What control do you give",
+      [
+        "Board, vetoes."
+      ],
+      "Ownership."
+    ],
+    [
+      "Does it fit your plan",
+      [
+        "Or change it."
+      ],
+      "Fit."
+    ]
+  ],
+  "cover_photo_id": "1519389950473-47ba0277781c",
+  "photo_ids": [
+    "1519389950473-47ba0277781c",
+    "1501139083538-0139583c060f",
+    "1516321318423-f06f85e504b3",
+    "1442975631115-c4f7b05b8a2c",
+    "1554224155-6726b3ff858f",
+    "1506784983877-45594efa4cbe"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to keep your energy across a long fundraise",
+  "hook": "Fundraising is a marathon, not a sprint.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "life",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "Ways to protect your energy and focus during a long fundraising process. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Set a weekly rhythm",
+      [
+        "Calls on fixed days."
+      ],
+      "Structure."
+    ],
+    [
+      "Keep the business running",
+      [
+        "Traction still matters."
+      ],
+      "Focus."
+    ],
+    [
+      "Celebrate small yeses",
+      [
+        "A second meeting counts."
+      ],
+      "Morale."
+    ],
+    [
+      "Learn from every no",
+      [
+        "Note the reason."
+      ],
+      "Growth."
+    ],
+    [
+      "Protect your sleep",
+      [
+        "Decisions need it."
+      ],
+      "Health."
+    ]
+  ],
+  "cover_photo_id": "1495364141860-b0d03eccd065",
+  "photo_ids": [
+    "1495364141860-b0d03eccd065",
+    "1506784983877-45594efa4cbe",
+    "1486312338219-ce68d2c6f44d",
+    "1499209974431-9dddcece7f88",
+    "1517842645767-c639042777db",
+    "1641924675896-b6a5aaf64861"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "What to write in a monthly investor update",
+  "hook": "A good update keeps doors open.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "A simple structure for monthly updates to investors, advisors and potential backers. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Headline numbers",
+      [
+        "Three, the same each month."
+      ],
+      "Consistency."
+    ],
+    [
+      "Wins of the month",
+      [
+        "Short and concrete."
+      ],
+      "Momentum."
+    ],
+    [
+      "Challenges honestly",
+      [
+        "Investors respect it."
+      ],
+      "Trust."
+    ],
+    [
+      "Specific asks",
+      [
+        "Intros, hires, advice."
+      ],
+      "Help."
+    ],
+    [
+      "Thank someone",
+      [
+        "By name."
+      ],
+      "Gratitude."
+    ]
+  ],
+  "cover_photo_id": "1486312338219-ce68d2c6f44d",
+  "photo_ids": [
+    "1486312338219-ce68d2c6f44d",
+    "1554224155-6726b3ff858f",
+    "1499209974431-9dddcece7f88",
+    "1517842645767-c639042777db",
+    "1519389950473-47ba0277781c",
+    "1510812431401-41d2bd2722f3"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to prepare a calm Monday as a founder",
+  "hook": "A calm Monday starts with a clear Sunday night.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "caption": "Small steps on Sunday evening so Monday starts with focus, not panic. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Write the first task",
+      [
+        "Clear and small."
+      ],
+      "Start."
+    ],
+    [
+      "Clear your desk",
+      [
+        "A fresh space."
+      ],
+      "Order."
+    ],
+    [
+      "Check the calendar",
+      [
+        "No surprises."
+      ],
+      "Ready."
+    ],
+    [
+      "Switch off screens early",
+      [
+        "Your brain needs it."
+      ],
+      "Rest."
+    ],
+    [
+      "Sleep on time",
+      [
+        "Energy is strategy."
+      ],
+      "Health."
+    ]
+  ],
+  "cover_photo_id": "1499750310107-5fef28a66643",
+  "photo_ids": [
+    "1499750310107-5fef28a66643",
+    "1484480974693-6ca0a78fb36b",
+    "1496181133206-80ce9b88a853",
+    "1506784983877-45594efa4cbe",
+    "1610701596007-11502861dcfa",
+    "1641924675896-b6a5aaf64861"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}

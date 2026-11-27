@@ -15,3 +15,11 @@ It installs three.js into the cache, links or installs Playwright, checks ffmpeg
 
 ## How a scene works
 The page defines `window.render(t)` that draws the instant t (seconds) and sets `window.ready = true`. Everything is a function of t, so any frame can be rendered by any process. Three.js for 3D (with UnrealBloomPass for glow), HTML on top for words and real screenshots, a seeded random so every process builds the same world.
+
+## Daily Reels in one command (27 November 2026)
+`reel3d.py` turns any reviewed queue item into a 3D Reel: the topic's own reviewed photos float as framed panels over a golden, moonlit or pastel sea, the camera flies from one to the next on the beat, one short line at a time (the title as the hook from frame one, then the five points), bloom, and a brand end card (SocialPerks, Sincronia, Good Message Studio). Palette, panel layout, camera orbit and music (`music3d.py`, tones only) change with every item, so no two Reels look the same.
+
+    bash social-cloud-backup/videokit3d/setup.sh /tmp/vk3
+    python social-cloud-backup/videokit3d/reel3d.py sp-2026-11-28-1 sin-2026-11-28-3 gms-2026-11-28-5
+
+Then inspect each contact sheet in /tmp/vk3/sheets and run reelkit/approve.py as before. About 3 minutes per Reel on 4 cores. Never change the photos away from the reviewed slides; GMS uses only real message-hoodie photos.

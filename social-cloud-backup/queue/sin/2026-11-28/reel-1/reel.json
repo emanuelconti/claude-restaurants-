@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-28",
+ "title": "How to use a Saturday morning as a founder",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "How to use a Saturday morning as a founder\n\nOne calm hour on Saturday can shape the week.\n\nA simple Saturday routine for founders: think, rest and plan without burning out. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "videokit3d music3d.py sin style, seed 87 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#071c26', 'horizon': '#2f8f9a', 'ground': '#06141b', 'glow': '#9ff3e8', 'frame': '#effffd', 'particles': ['#b9fff4', '#ffe7b0', '#a8d8ff'], 'accent': '#c8955a', 'accentInk': '#ffffff'}, layout right",
+ "photos": [
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1484480974693-6ca0a78fb36b",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1496181133206-80ce9b88a853",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Wake up without email",
+  "Walk before you plan",
+  "Write three priorities",
+  "Read one useful thing",
+  "Close the laptop by noon",
+  "end card"
+ ]
+}

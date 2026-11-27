@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Tight; src: url(fonts/InterTight-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Body; src: url(fonts/Inter-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Serif; src: url(fonts/DMSerifDisplay-Regular.ttf); }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  #gl { position: absolute; inset: 0; }
+  .line { position: absolute; left: 70px; right: 70px; text-align: center; color: #fff; visibility: hidden;
+          text-shadow: 0 6px 40px rgba(0,0,0,.55), 0 2px 8px rgba(0,0,0,.45); will-change: transform, opacity; }
+  .sans { font-family: Tight; font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; }
+  .serif { font-family: Serif; font-weight: 400; letter-spacing: -0.01em; line-height: 1.05; }
+  .num { display: block; font-family: Body; font-weight: 800; font-size: 48px; letter-spacing: .22em; margin-bottom: 18px; }
+  #shade { position: absolute; left: 0; right: 0; top: 0; height: 900px; background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.28) 45%, rgba(0,0,0,0)); }
+  #dim { position: absolute; inset: 0; background: rgba(0,0,0,.42); visibility: hidden; }
+  #end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; visibility: hidden; }
+  #end img { width: 280px; height: 280px; border-radius: 64px; box-shadow: 0 40px 90px -30px rgba(0,0,0,.6); }
+  #end .name { margin-top: 50px; color: #fff; font-size: 116px; text-shadow: 0 6px 40px rgba(0,0,0,.5); }
+  #end .cta { margin-top: 40px; padding: 28px 54px; border-radius: 999px; font-family: Body; font-weight: 800; font-size: 50px; }
+  #end .small { margin-top: 36px; color: rgba(255,255,255,.92); font-family: Body; font-weight: 600; font-size: 42px; text-shadow: 0 4px 20px rgba(0,0,0,.5); }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="shade"></div><div id="dim"></div><div id="lines"></div>
+<div id="end"><img id="logo"><div class="name" id="ename"></div><div class="cta" id="ecta"></div><div class="small" id="esmall"></div></div>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+<script type="module">
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+const cfg = await (await fetch(new URLSearchParams(location.search).get("cfg"))).json();
+const W = 1080, H = 1920;
+let seed = cfg.seed >>> 0;
+const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+const P = cfg.palette;  // sky top, horizon, ground, glow, particle colours
+const col = (c) => new THREE.Color(c);
+
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("gl"), antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H, false); renderer.setPixelRatio(1);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+const scene = new THREE.Scene();
+scene.fog = new THREE.Fog(col(P.horizon).lerp(col(P.ground), 0.35), 40, 190);
+const camera = new THREE.PerspectiveCamera(48, W / H, 0.1, 400);
+
+// sky dome: vertical gradient with a sun glow
+const sky = new THREE.Mesh(new THREE.SphereGeometry(300, 32, 16), new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false, fog: false,
+  uniforms: { top: { value: col(P.top) }, hor: { value: col(P.horizon) }, glow: { value: col(P.glow) }, sun: { value: new THREE.Vector3(cfg.sunX, 0.06, -1).normalize() } },
+  vertexShader: `varying vec3 vdir; void main(){ vdir = position; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `uniform vec3 top,hor,glow,sun; varying vec3 vdir;
+    void main(){ vec3 vd = normalize(vdir); float h = clamp(vd.y*1.6+0.08,0.,1.); vec3 c = mix(hor, top, pow(h,0.7));
+      float s = max(dot(vd, sun),0.); c += glow*(pow(s,60.)*2.4 + pow(s,8.)*0.22);
+      gl_FragColor = vec4(c,1.); }`
+}));
+scene.add(sky);
+
+// water: a dark plane with moving light streaks under the sun
+const water = new THREE.Mesh(new THREE.PlaneGeometry(600, 600, 1, 1), new THREE.ShaderMaterial({
+  fog: true,
+  uniforms: THREE.UniformsUtils.merge([THREE.UniformsLib.fog, { t: { value: 0 }, base: { value: col(P.ground) }, glow: { value: col(P.glow) }, hor: { value: col(P.horizon) }, sunX: { value: cfg.sunX } }]),
+  vertexShader: `varying vec3 wp; #include <fog_pars_vertex>
+    void main(){ vec4 w = modelMatrix*vec4(position,1.); wp = w.xyz; vec4 mvPosition = viewMatrix*w; gl_Position = projectionMatrix*mvPosition; #include <fog_vertex>
+ }`.replace(/#include/g, "\n#include"),
+  fragmentShader: `uniform float t; uniform vec3 base,glow,hor; uniform float sunX; varying vec3 wp; #include <fog_pars_fragment>
+    void main(){ float d = -wp.z; float lane = exp(-pow((wp.x - sunX*d*1.0)/(2.+d*0.18),2.));
+      float rip = sin(wp.z*1.7 + t*2.2 + sin(wp.x*0.6)*2.) * sin(wp.z*0.9 - t*1.3 + wp.x*0.35);
+      float spark = smoothstep(0.55, 1., rip) * lane;
+      vec3 c = base + glow*(spark*1.4 + lane*0.22) + hor*0.08*smoothstep(10.,90.,d);
+      gl_FragColor = vec4(c,1.); #include <fog_fragment>
+ }`.replace(/#include/g, "\n#include")
+}));
+water.rotation.x = -Math.PI / 2; water.position.y = -0.2;
+scene.add(water);
+
+// photo panels along a path into the distance
+const loader = new THREE.TextureLoader();
+const tex = await Promise.all(cfg.photos.map((u) => loader.loadAsync(u)));
+const panels = [];
+const N = cfg.photos.length;
+const side = cfg.layout === "zigzag" ? [1, -1] : cfg.layout === "left" ? [-1, -1] : [1, 1];
+for (let i = 0; i < N; i++) {
+  const t = tex[i]; t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
+  const aspect = t.image.width / t.image.height, target = 0.8;
+  if (aspect > target) { t.repeat.set(target / aspect, 1); t.offset.set((1 - target / aspect) / 2, 0); }
+  else { t.repeat.set(1, aspect / target); t.offset.set(0, (1 - aspect / target) / 2); }
+  const h = 3.6, w = h * target;
+  const g = new THREE.Group();
+  const frame = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.16, h + 0.16), new THREE.MeshBasicMaterial({ color: col(P.frame), fog: false, toneMapped: false }));
+  frame.position.z = -0.01;
+  const halo = new THREE.Mesh(new THREE.PlaneGeometry(w * 1.9, h * 1.6), new THREE.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    uniforms: { c: { value: col(P.glow) } },
+    vertexShader: `varying vec2 v; void main(){ v=uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+    fragmentShader: `uniform vec3 c; varying vec2 v; void main(){ vec2 d=(v-.5)*2.; float a = exp(-dot(d,d)*3.2)*0.16; gl_FragColor = vec4(c*a, a); }` }));
+  halo.position.z = -0.05;
+  const photo = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: t, fog: false, toneMapped: false }));
+  g.add(halo, frame, photo);
+  const s = i === 0 ? 0 : side[i % 2] * (1.6 + rnd() * 1.2);
+  g.position.set(s, 2.3 + rnd() * 0.8, -i * cfg.gap);
+  g.rotation.y = -s * 0.07; g.rotation.z = (rnd() - 0.5) * 0.05;
+  // reflection: the same photo flipped under the water, faint
+  const refl = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: t, transparent: true, opacity: 0.16, fog: true, depthWrite: false }));
+  refl.scale.y = -1; refl.position.set(0, -2 * g.position.y - 0.4, 0);
+  g.add(refl);
+  scene.add(g); panels.push(g);
+}
+
+// floating light particles
+const PN = 900, pos = new Float32Array(PN * 3), pc = new Float32Array(PN * 3), ph = new Float32Array(PN);
+const pcols = P.particles.map(col);
+for (let i = 0; i < PN; i++) {
+  pos[i * 3] = (rnd() - 0.5) * 40; pos[i * 3 + 1] = rnd() * 14 - 0.5; pos[i * 3 + 2] = 8 - rnd() * (N * cfg.gap + 40);
+  const c = pcols[i % pcols.length]; pc[i * 3] = c.r; pc[i * 3 + 1] = c.g; pc[i * 3 + 2] = c.b; ph[i] = rnd() * 6.28;
+}
+const pg = new THREE.BufferGeometry();
+pg.setAttribute("position", new THREE.BufferAttribute(pos, 3)); pg.setAttribute("color", new THREE.BufferAttribute(pc, 3)); pg.setAttribute("ph", new THREE.BufferAttribute(ph, 1));
+const pm = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true,
+  uniforms: { t: { value: 0 } },
+  vertexShader: `attribute float ph; varying vec3 vc; varying float a; uniform float t;
+    void main(){ vc = color; vec3 p = position; p.y += sin(t*0.6+ph)*0.35; p.x += cos(t*0.4+ph)*0.25;
+      vec4 mv = modelViewMatrix*vec4(p,1.); gl_PointSize = (26.+18.*sin(ph*3.))/-mv.z*14.; a = 0.55+0.45*sin(t*1.7+ph*2.); gl_Position = projectionMatrix*mv; }`,
+  fragmentShader: `varying vec3 vc; varying float a; void main(){ vec2 d = gl_PointCoord-.5; float r = exp(-dot(d,d)*18.); gl_FragColor = vec4(vc*r*a, r*a); }` });
+scene.add(new THREE.Points(pg, pm));
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), cfg.bloom, 0.5, 0.93));
+composer.addPass(new OutputPass());
+
+// text lines
+const box = document.getElementById("lines");
+const els = cfg.lines.map((l, i) => {
+  const d = document.createElement("div");
+  d.className = "line " + (cfg.serif ? "serif" : "sans");
+  d.style.top = (i === 0 ? cfg.hookTop : cfg.lineTop) + "px";
+  d.style.fontSize = (i === 0 ? cfg.hookSize : cfg.lineSize) + "px";
+  d.innerHTML = (l.num ? `<span class="num" style="color:${P.accent}">${l.num}</span>` : "") + l.text;
+  box.appendChild(d); return d;
+});
+const end = document.getElementById("end");
+document.getElementById("logo").src = cfg.end.logo;
+const en = document.getElementById("ename"); en.textContent = cfg.end.name; en.className = "name " + (cfg.serif ? "serif" : "sans");
+const ec = document.getElementById("ecta"); ec.textContent = cfg.end.cta; ec.style.background = P.accent; ec.style.color = P.accentInk;
+document.getElementById("esmall").textContent = cfg.end.small;
+
+const ease = (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const starts = cfg.starts;   // scene start times; last entry = end card start
+const TOTAL = cfg.seconds;
+function camFor(i, k) {   // camera in front of panel i, k = progress through its hold (0..1)
+  const p = panels[i].position;
+  const orbit = (i % 2 ? -1 : 1) * cfg.orbit * (k - 0.5);
+  const dist = 9.6 - 1.3 * k;
+  return { pos: new THREE.Vector3(p.x * 0.55 + Math.sin(orbit) * dist * 0.6, p.y + 1.9 - 0.3 * k, p.z + Math.cos(orbit) * dist), look: new THREE.Vector3(p.x, p.y + 1.15, p.z) };
+}
+window.render = (t) => {
+  water.material.uniforms.t.value = t; pm.uniforms.t.value = t;
+  const S = starts.length - 1;   // number of panel scenes
+  let i = S - 1; for (let s = 0; s < S; s++) if (t >= starts[s] && t < starts[s + 1]) { i = s; break; }
+  let pos, look;
+  if (t >= starts[S]) {   // end: rise up and back, the panels recede toward the sun
+    const k = ease(clamp((t - starts[S]) / 1.6));
+    const a = camFor(S - 1, 1);
+    pos = a.pos.clone().lerp(new THREE.Vector3(0, 9.5, panels[S - 1].position.z + 26), k);
+    look = a.look.clone().lerp(new THREE.Vector3(0, 2, panels[S - 1].position.z - 40), k);
+  } else {
+    const len = starts[i + 1] - starts[i];
+    const local = (t - starts[i]) / len;
+    const c = camFor(i, i === 0 ? 0.25 + 0.75 * local : local);
+    const tr = i === 0 ? 0 : 0.42 / len;   // whip from the previous panel
+    if (i > 0 && local < tr) {
+      const k = ease(local / tr), b = camFor(i - 1, 1);
+      pos = b.pos.clone().lerp(c.pos, k); pos.y += Math.sin(k * Math.PI) * 0.9;
+      look = b.look.clone().lerp(c.look, k);
+    } else { pos = c.pos; look = c.look; }
+    if (i === 0) {   // hook: a fast push in during the first half second
+      const k = ease(clamp(t / 0.6)); pos.z += (1 - k) * 3.2; pos.y += (1 - k) * 0.6;
+    }
+  }
+  camera.position.copy(pos); camera.lookAt(look);
+  panels.forEach((g, j) => { g.position.y += 0; g.children[2].material.opacity = 1; g.rotation.z = Math.sin(t * 0.5 + j) * 0.015; });
+  // text: one line at a time, on the beat
+  els.forEach((e, j) => {
+    const a = starts[j], b = starts[j + 1];
+    const on = t >= a && t < b - 0.08;
+    e.style.visibility = on ? "visible" : "hidden";
+    if (!on) return;
+    const k = j === 0 ? 1 : ease(clamp((t - a - 0.12) / 0.32));
+    const out = clamp((b - 0.08 - t) / 0.2);
+    e.style.opacity = Math.min(j === 0 ? 1 : k, out);
+    e.style.transform = `translateY(${(1 - k) * 60}px) scale(${j === 0 ? 1 + 0.06 * (1 - ease(clamp(t / 0.45))) : 1})`;
+  });
+  const ke = clamp((t - starts[S] - 0.5) / 0.6);
+  end.style.visibility = t >= starts[S] + 0.5 ? "visible" : "hidden";
+  const dm = document.getElementById("dim"); dm.style.visibility = t >= starts[S] + 0.3 ? "visible" : "hidden"; dm.style.opacity = ease(clamp((t - starts[S] - 0.3) / 0.6));
+  end.style.opacity = ease(ke); end.style.transform = `translateY(${(1 - ease(ke)) * 50}px)`;
+  composer.render();
+};
+await document.fonts.ready;
+window.render(0); window.ready = true;
+</script>
+</body>
+</html>

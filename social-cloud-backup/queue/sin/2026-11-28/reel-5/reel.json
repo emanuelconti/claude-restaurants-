@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-28",
+ "title": "How to rest without losing momentum",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "How to rest without losing momentum\n\nRest is part of the work, not a break from it.\n\nWays founders can recover over the weekend and still start Monday strong. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "videokit3d music3d.py sin style, seed 786 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#071c26', 'horizon': '#2f8f9a', 'ground': '#06141b', 'glow': '#9ff3e8', 'frame': '#effffd', 'particles': ['#b9fff4', '#ffe7b0', '#a8d8ff'], 'accent': '#c8955a', 'accentInk': '#ffffff'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1510812431401-41d2bd2722f3",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Plan your rest",
+  "Leave a note for Monday",
+  "Move your body",
+  "See people outside work",
+  "Sleep is strategy",
+  "end card"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-28",
+ "title": "Señales de que necesitas un sábado tranquilo",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Señales de que necesitas un sábado tranquilo\n\nA veces el mejor plan es no tener plan.\n\nCómo saber que te toca bajar el ritmo y darte un sábado de calma.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Descanso #Bienestar #Sabado #VidaReal",
+ "music": "videokit3d music3d.py sp style, seed 651 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#120d33', 'horizon': '#a8506a', 'ground': '#0c0819', 'glow': '#ff9f62', 'frame': '#fff6ec', 'particles': ['#ffd29a', '#ff9fb0', '#b9a8ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1524758631624-e2822e304c36",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Te cuesta decir que sí",
+  "Duermes y no descansas",
+  "Todo te parece urgente",
+  "Echas de menos tu casa",
+  "Te apetece silencio",
+  "end card"
+ ]
+}
