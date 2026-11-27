@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-30",
+ "title": "Small Monday wins that build momentum",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Small Monday wins that build momentum\n\nMomentum starts with one small win.\n\nQuick wins founders can get on Monday to set the tone for the week. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "videokit3d music3d.py sin style, seed 437 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#211638', 'horizon': '#b8613a', 'ground': '#140c18', 'glow': '#ffb870', 'frame': '#fffaf0', 'particles': ['#ffe2a8', '#ffc38a', '#fff1d6'], 'accent': '#c8955a', 'accentInk': '#ffffff'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1495364141860-b0d03eccd065",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1486312338219-ce68d2c6f44d",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1541807084-5c52b6b3adef",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1499750310107-5fef28a66643",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1510812431401-41d2bd2722f3",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1447752875215-b2761acb3c5d",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Clear your inbox to ten",
+  "Send one follow up",
+  "Fix one small bug",
+  "Thank a team member",
+  "Walk at lunch",
+  "end card"
+ ]
+}
