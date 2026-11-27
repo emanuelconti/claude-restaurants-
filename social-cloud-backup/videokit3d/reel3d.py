@@ -102,7 +102,7 @@ def learned(b, h):
         lay = r.get('layout') or next((l for l in set(LAYOUTS) if f"layout {l}" in r.get('engine', '')), None)
         m = sum(v) / len(v)
         if pal in B_PALS(b): by_pal.setdefault(pal, []).append(m)
-        if lay: by_lay.setdefault(lay, []).append(m)
+        if lay in LAYOUTS: by_lay.setdefault(lay, []).append(m)
     def best(d):
         ok = {k: sum(x) / len(x) for k, x in d.items() if len(x) >= 2}
         if sum(len(x) for x in d.values()) < 6 or not ok:
@@ -124,7 +124,7 @@ def B_PALS(b):
 def prepare():
     """Copy the scene, the music and the brand fonts and marks into the videokit3d cache."""
     (VK / 'fonts').mkdir(parents=True, exist_ok=True); (VK / 'assets').mkdir(exist_ok=True)
-    for f in ('reel3d.html', 'story3d.html', 'music3d.py'):
+    for f in ('reel3d.html', 'story3d.html', 'story3d-2.html', 'music3d.py'):
         shutil.copy(HERE / f, VK / f)
     for f in (PUB / 'gms' / 'fonts').glob('*.ttf'):
         shutil.copy(f, VK / 'fonts' / f.name)
@@ -214,9 +214,112 @@ def make(item_id):
     wav.unlink()
     print(item_id, 'ok', SECONDS, flush=True)
 
+# ---------- story3d-2: "a message across the bay", the week's new GMS film (27 November 2026) ----------
+# A night city on the bay, one lonely lit window (hook, frame one), a message of light crossing the water, the real
+# message hoodie rising from the sea as a glowing card, the city switching on, the lights flying into a heart, brand end.
+STORY_TIMES = dict(depart=2.6, arrive=5.6, rise=7.8, wave2=10.4, heart=12.6, end=15.6)   # on bars of 4 x 0.65 s
+STORY_SECONDS = 19.6
+STORY_PALETTES = {
+    'harbour': dict(top='#03050f', horizon='#1d2350', fog='#080b22', wall='#0d1226', warm='#ffc874', cool='#bcd6ff', pink='#ff8fb8', water='#03060f', moon='#dfe8ff', orb='#ffe0a8'),
+    'violet':  dict(top='#06030f', horizon='#3a1d55', fog='#120a26', wall='#140d26', warm='#ffd09a', cool='#d9c8ff', pink='#ff7fb0', water='#05030c', moon='#f1e6ff', orb='#ffd6e6'),
+    'teal':    dict(top='#020a10', horizon='#163f4f', fog='#071a22', wall='#0a1a22', warm='#ffd38a', cool='#aef3ea', pink='#ff9cc4', water='#020a0e', moon='#e3fbff', orb='#fff0c2'),
+}
+STORY_PICKS = [0, 0.5, 1.5, 3.5, 4.6, 6.3, 8.5, 9.8, 11.5, 13.8, 15.2, 17.5]
+
+
+def story_card(spec, item_id):
+    """--card <reviewed slide path, relative to social-cloud-backup>:x0,y0,x1,y1 -> cropped real product photo in the cache."""
+    path, _, box = spec.partition(':')
+    im = Image.open(ROOT / path).convert('RGB')
+    crop = [int(v) for v in box.split(',')] if box else [0, 0, im.width, im.height]
+    out = VK / 'assets' / item_id; out.mkdir(parents=True, exist_ok=True)
+    im.crop(crop).save(out / 'card.jpg', quality=95)
+    return out / 'card.jpg', dict(slide=path, crop=crop, product_photo=True)
+
+
+def story_lines(topic, message):
+    hook = topic['hook'] if len(topic.get('hook', '')) <= 40 else topic['title']
+    pts = [p[0] for p in topic['points']]
+    pick = [pts[i] for i in (0, 2, 3) if i < len(pts)]
+    T = STORY_TIMES
+    slots = [(0.0, T['depart'] - 0.1), (T['depart'] + 0.1, T['arrive'] - 0.5), (T['arrive'] - 0.3, T['rise'] - 0.1), (T['rise'] + 0.2, T['wave2'] - 0.1)]
+    lines = [dict(text=hook, a=0.0, b=slots[0][1], top=230, size=100 if len(hook) > 26 else 112)]
+    for (a, b), text in zip(slots[1:], pick):
+        lines.append(dict(text=text, a=a, b=b, top=240, size=104 if len(text) > 18 else 112))
+    lines.append(dict(text=message, a=T['heart'] + 0.4, b=T['end'] - 0.1, top=1440, size=108, msg=True))
+    return lines
+
+
+def make_story(item_id, card, message, cta='Gift the message'):
+    queue = json.loads((ROOT / 'queue.json').read_text())
+    item = next(x for x in queue if x['id'] == item_id)
+    b, slot = item['brand'], item['slot']
+    if b != 'gms':
+        raise SystemExit('story3d-2 is a Good Message Studio film')
+    B = BRANDS[b]
+    topic = topic_for(item)
+    h = int(hashlib.sha256(item_id.encode()).hexdigest()[:8], 16)
+    card_path, card_src = story_card(card, item_id)
+    pal_name = list(STORY_PALETTES)[h % len(STORY_PALETTES)]
+    pal = dict(STORY_PALETTES[pal_name], accent=B['accent'])
+    lines = story_lines(topic, message)
+    cfg = dict(seed=h, palette=pal, moonX=((h >> 4) % 60 - 30) / 100, farX=4 + (h >> 10) % 9, waveSpeed=14, bloom=0.55,
+               cardW=4.6, cardDist=11.5, heartScale=1.0, times=STORY_TIMES, card=f'assets/{item_id}/card.jpg', lines=lines,
+               end=dict(logo=f'assets/{B["logo"]}', name=B['name'], cta=cta, small=B['cta']))
+    (VK / 'cfg').mkdir(exist_ok=True)
+    (VK / 'cfg' / f'{item_id}.json').write_text(json.dumps(cfg, ensure_ascii=False))
+    frames = VK / 'frames' / item_id
+    shutil.rmtree(frames, ignore_errors=True)
+    total = round(STORY_SECONDS * FPS)
+    procs = int(os.environ.get('VK_PROCS', '4'))
+    step = (total + procs - 1) // procs
+    ps = [subprocess.Popen(['node', 'render.js', f'story3d-2.html?cfg=cfg/{item_id}.json', str(STORY_SECONDS), '1080', '1920', str(a), str(min(a + step, total)), str(frames)], cwd=VK)
+          for a in range(0, total, step)]
+    if any(p.wait() for p in ps):
+        raise SystemExit(f'{item_id}: frame render failed')
+    folder = ROOT / 'queue' / b / item['date'] / f'reel-{slot}'
+    folder.mkdir(parents=True, exist_ok=True)
+    wav = VK / 'frames' / f'{item_id}.wav'
+    subprocess.run([sys.executable, str(VK / 'music3d.py'), b, str(h % 997), str(STORY_SECONDS), str(BEAT), str(STORY_TIMES['end']), str(wav)], check=True)
+    mp4 = folder / 'reel.mp4'
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-i', str(frames / 'f%05d.jpg'), '-i', str(wav),
+                    '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
+                    '-g', '60', '-r', str(FPS), '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-t', f'{STORY_SECONDS:.3f}',
+                    '-movflags', '+faststart', str(mp4)], check=True)
+    Image.open(frames / 'f00015.jpg').convert('RGB').save(folder / 'cover.jpg', quality=92)
+    meta = json.loads((ROOT / item['folder'] / 'carousel.json').read_text())
+    reel = dict(date=item['date'], title=item['title'], video='reel.mp4', cover='cover.jpg', seconds=STORY_SECONDS, caption=meta['caption'],
+                music=f'videokit3d music3d.py {b} style, seed {h % 997} (original, tones written in code, rights-cleared)',
+                engine=f'videokit3d story3d-2.html (Three.js film-story: night bay city, lonely window, light message, hoodie card, city lights, heart; bloom, frame-by-frame), palette story2-{pal_name}',
+                scene='story3d-2', palette_name=f'story2-{pal_name}', layout='story3d-2', learning='story3d-2 scene, first run: compared against story3d and reel3d by views per Reel',
+                photos=[card_src], lines=[l['text'] for l in lines] + [B['name'], cta, B['cta']],
+                scenes=['hook: lonely lit window', 'message of light crosses the bay', 'far window lights up', 'real hoodie rises as a card', 'city lights up', 'lights become a heart', 'end card'])
+    (folder / 'reel.json').write_text(json.dumps(reel, ensure_ascii=False, indent=1))
+    picks = [min(round(x * FPS), total - 1) for x in STORY_PICKS]
+    sheet = Image.new('RGB', (270 * 6, 480 * 2), 'white')
+    for k, p in enumerate(picks):
+        sheet.paste(Image.open(frames / f'f{p:05d}.jpg').resize((270, 480)), ((k % 6) * 270, (k // 6) * 480))
+    (VK / 'sheets').mkdir(exist_ok=True)
+    sheet.save(VK / 'sheets' / f'{item_id}.jpg', quality=85)
+    shutil.rmtree(frames)
+    wav.unlink()
+    print(item_id, 'ok story3d-2', STORY_SECONDS, flush=True)
+
+
 
 if __name__ == '__main__':
+    import argparse, time
+    ap = argparse.ArgumentParser()
+    ap.add_argument('ids', nargs='+')
+    ap.add_argument('--scene', default='auto', choices=['auto', 'story3d-2'], help='auto: story3d for GMS, reel3d for the others (VK_SCENE overrides)')
+    ap.add_argument('--card', help='story3d-2: reviewed slide with the real hoodie, e.g. queue/gms/<date>/carousel-7/slide-05.jpg:0,490,1080,1350')
+    ap.add_argument('--message', help="story3d-2: the hoodie's message as the last line, e.g. 'Enjoy the little things.'")
+    ap.add_argument('--cta', default='Gift the message')
+    a = ap.parse_args()
     prepare()
-    import time; time.sleep(1)
-    for i in sys.argv[1:]:
-        make(i)
+    time.sleep(1)
+    for i in a.ids:
+        if a.scene == 'story3d-2':
+            make_story(i, a.card, a.message, a.cta)
+        else:
+            make(i)

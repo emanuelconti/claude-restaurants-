@@ -1,0 +1,5 @@
+# Good Message Studio: daily optimisation log
+
+One change per day, written by the GMS editor (session "Outreach GMS"). Numbers come from `performance/gms.json`; under 20 videos a group is only indicative. Never claim a video caused an order.
+
+- 2026-11-27 · Change: new Reel scene `story3d-2` "a message across the bay" (3D film-story: lonely lit window as the hook, a message of light crossing a night bay, the real Enjoy The Little Things hoodie rising as a glowing card, the city lighting up, a heart, end card "Gift the message"), first on gms-2026-11-29-7 "Ways to feel closer to friends who live far away" (29 Nov, 20:17 SGT); the other 28-30 Nov Reels use the first story3d film made the same day by the SocialPerks session. Why: the last 30 YouTube Shorts (23-26 Nov, slide/photo Reels) total 117 views, median 0, best 39 ("Little messages that make a friend smile") and 35 ("Gifts for a friend who needs a lift"): the title-over-photo hook does not stop people. Threads and Facebook give no view counts with the current access. Compare story3d-2, story3d and reel3d views per Reel after 48 h; indicative only (n=1).

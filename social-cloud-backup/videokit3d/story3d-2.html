@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- story3d-2 ("a message across the bay"): a 3D film-story for Good Message Studio (27 November 2026).
+     A night city on the bay. One lonely lit window (the hook, frame one). A message of light leaves it,
+     crosses the water and lights a window on the far shore. The real message hoodie rises from the sea as a
+     glowing card, the whole city switches on window by window, the lights fly up into a heart, brand end card.
+     Driven by cfg (reel3d.py --scene story3d-2): seed, card photo, lines with their own times, end card. -->
+<style>
+  @font-face { font-family: Tight; src: url(fonts/InterTight-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Body; src: url(fonts/Inter-latin.ttf); font-weight: 100 900; }
+  @font-face { font-family: Serif; src: url(fonts/DMSerifDisplay-Regular.ttf); }
+  @font-face { font-family: SerifI; src: url(fonts/DMSerifDisplay-Italic.ttf); }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  #gl { position: absolute; inset: 0; }
+  .line { position: absolute; left: 80px; right: 80px; text-align: center; color: #fff; visibility: hidden;
+          font-family: Serif; letter-spacing: -0.01em; line-height: 1.06;
+          text-shadow: 0 6px 40px rgba(0,0,0,.7), 0 2px 10px rgba(0,0,0,.55); }
+  .line.msg { font-family: SerifI; }
+  #shade { position: absolute; left: 0; right: 0; top: 0; height: 760px; background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.18) 55%, rgba(0,0,0,0)); }
+  #shadeb { position: absolute; left: 0; right: 0; bottom: 0; height: 700px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.42)); visibility: hidden; }
+  #dim { position: absolute; inset: 0; background: rgba(4,6,18,.55); visibility: hidden; }
+  #end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; visibility: hidden; }
+  #end img { width: 260px; height: 260px; border-radius: 60px; box-shadow: 0 40px 90px -30px rgba(0,0,0,.7); }
+  #end .name { margin-top: 48px; color: #fff; font-family: Serif; font-size: 104px; text-shadow: 0 6px 40px rgba(0,0,0,.6); }
+  #end .cta { margin-top: 44px; padding: 30px 60px; border-radius: 999px; font-family: Body; font-weight: 800; font-size: 54px; }
+  #end .small { margin-top: 36px; color: rgba(255,255,255,.95); font-family: Body; font-weight: 700; font-size: 46px; text-shadow: 0 4px 20px rgba(0,0,0,.6); }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="shade"></div><div id="shadeb"></div><div id="dim"></div><div id="lines"></div>
+<div id="end"><img id="logo"><div class="name" id="ename"></div><div class="cta" id="ecta"></div><div class="small" id="esmall"></div></div>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+<script type="module">
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+const cfg = await (await fetch(new URLSearchParams(location.search).get("cfg"))).json();
+const W = 1080, H = 1920;
+let seed = cfg.seed >>> 0;
+const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+const col = (c) => new THREE.Color(c);
+const P = cfg.palette;      // sky, horizon, wall, window colours, accent
+const T = cfg.times;        // story beats in seconds
+const ease = (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("gl"), antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H, false); renderer.setPixelRatio(1);
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(48, W / H, 0.1, 600);
+const FOG = col(P.fog);
+
+// ---------- sky with stars and a moon ----------
+const MOON = V(cfg.moonX, 0.42, -1).normalize();
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(400, 32, 16), new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false,
+  uniforms: { top: { value: col(P.top) }, hor: { value: col(P.horizon) }, moon: { value: MOON }, mc: { value: col(P.moon) } },
+  vertexShader: `varying vec3 v; void main(){ v = position; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `uniform vec3 top,hor,moon,mc; varying vec3 v;
+    void main(){ vec3 d = normalize(v); float h = clamp(d.y*1.5+0.04,0.,1.); vec3 c = mix(hor, top, pow(h,0.55));
+      float m = max(dot(d,moon),0.); c += mc*(smoothstep(0.9993,0.9996,m)*1.1 + pow(m,90.)*0.35 + pow(m,10.)*0.06);
+      gl_FragColor = vec4(c,1.); }` })));
+{
+  const n = 1400, p = new Float32Array(n * 3), s = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    const a = rnd() * Math.PI * 2, y = 0.06 + rnd() * 0.94, r = Math.sqrt(1 - y * y);
+    p[i * 3] = Math.cos(a) * r * 380; p[i * 3 + 1] = y * 380; p[i * 3 + 2] = Math.sin(a) * r * 380; s[i] = rnd();
+  }
+  const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(p, 3)); g.setAttribute("s", new THREE.BufferAttribute(s, 1));
+  window.stars = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { t: { value: 0 } },
+    vertexShader: `attribute float s; varying float a; uniform float t; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); gl_PointSize = 1.5+s*2.6; a = (0.35+0.65*s)*(0.7+0.3*sin(t*2.+s*40.)); gl_Position = projectionMatrix*mv; }`,
+    fragmentShader: `varying float a; void main(){ vec2 d = gl_PointCoord-.5; float r = exp(-dot(d,d)*14.); gl_FragColor = vec4(vec3(0.85,0.9,1.)*r*a, r*a); }` });
+  scene.add(new THREE.Points(g, window.stars));
+}
+
+// ---------- the city: instanced towers whose windows switch on in a wave ----------
+const HERO = V(-5.2, 9.0, -9.0);                 // the lonely window (front face of the hero tower)
+const FAR = V(cfg.farX, 12.6, -72.0);            // the window the message reaches across the bay
+const towers = [];
+function tower(x, z, w, d, h, shore) { towers.push({ x, z, w, d, h, shore }); }
+tower(HERO.x, HERO.z - 2.2, 4.4, 4.4, 22, 0);                                        // hero tower, window on its front face
+for (let i = 0; i < 46; i++) {                                                       // near shore, left and right of the camera
+  const left = i % 2 === 0, x = left ? -13 - rnd() * 40 : 13 + rnd() * 40, z = -4 - rnd() * 22;
+  if (Math.abs(x - HERO.x) < 5 && Math.abs(z - HERO.z) < 5) continue;
+  tower(x, z, 3 + rnd() * 5, 3 + rnd() * 5, 4 + rnd() * rnd() * 16, 0);
+}
+for (let i = 0; i < 120; i++) {                                                      // far shore skyline across the bay
+  const x = (rnd() - 0.5) * 150, z = -70 - rnd() * 34, near = Math.exp(-Math.pow(x / 40, 2));
+  tower(x, z, 3 + rnd() * 6, 3 + rnd() * 6, 5 + rnd() * (10 + 18 * near) + (rnd() < 0.08 ? 12 : 0), 1);
+}
+tower(FAR.x, FAR.z - 2.5, 5, 5, 26, 1);                                              // the tower that receives the light
+const N = towers.length;
+const box = new THREE.BoxGeometry(1, 1, 1); box.translate(0, 0.5, 0);
+const aSize = new Float32Array(N * 3), aWake = new Float32Array(N), aSeed = new Float32Array(N);
+const towerMat = new THREE.ShaderMaterial({
+  uniforms: { t: { value: 0 }, wall: { value: col(P.wall) }, warm: { value: col(P.warm) }, cool: { value: col(P.cool) }, pink: { value: col(P.pink) },
+              fog: { value: FOG }, hero: { value: HERO }, heroOn: { value: 1 } },
+  vertexShader: `attribute vec3 aSize; attribute float aWake, aSeed; varying vec3 lp, n, wp; varying float wake, sd;
+    void main(){ lp = position*aSize; n = normal; wake = aWake; sd = aSeed; vec4 w = modelMatrix*instanceMatrix*vec4(position*aSize,1.); wp = w.xyz;
+      gl_Position = projectionMatrix*viewMatrix*w; }`,
+  fragmentShader: `uniform float t, heroOn; uniform vec3 wall, warm, cool, pink, fog, hero; varying vec3 lp, n, wp; varying float wake, sd;
+    float h1(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+    void main(){
+      vec3 c = wall*(0.6+0.5*smoothstep(0.,30.,wp.y)) + vec3(0.025,0.03,0.06)*max(dot(n, normalize(vec3(0.4,0.5,0.8))),0.);
+      if (n.y < 0.5) {
+        vec2 f = abs(n.x) > 0.5 ? vec2(lp.z, lp.y) : vec2(lp.x, lp.y);
+        vec2 cell = vec2(1.1, 1.5); vec2 id = floor(f/cell); vec2 q = fract(f/cell);
+        float win = step(0.2,q.x)*step(q.x,0.8)*step(0.22,q.y)*step(q.y,0.78)*step(1.,id.y);
+        float h = h1(id + sd*91.7 + n.xz*13.);
+        float on = h < 0.025 ? 0.5 : 0.;                                  // a few sleepy windows before the wave
+        float at = wake + h*1.6;                                           // each window switches on a moment after its tower
+        on = max(on, smoothstep(at, at+0.25, t) * step(0.18, h1(id*1.7+sd)));
+        vec3 wc = mix(warm, cool, step(0.72, h)); wc = mix(wc, pink, step(0.93, h));
+        float aa = clamp(max(fwidth(f.x/cell.x), fwidth(f.y/cell.y))*2.-0.4, 0., 1.); win = mix(win, 0.3, aa);
+        c = mix(c, wc*(0.35+1.25*on), win*max(on,0.035));
+        // the lonely window is drawn on its own plane: keep the wall around it dark
+      }
+      float d = length(wp - cameraPosition);
+      c = mix(c, fog, clamp((d-30.)/170., 0., 0.85));
+      gl_FragColor = vec4(c,1.); }`
+});
+const city = new THREE.InstancedMesh(box, towerMat, N);
+const m4 = new THREE.Matrix4();
+towers.forEach((tw, i) => {
+  m4.makeTranslation(tw.x, -0.3, tw.z); city.setMatrixAt(i, m4);
+  aSize.set([tw.w, tw.h, tw.d], i * 3); aSeed[i] = rnd();
+  const from = tw.shore ? FAR : V(FAR.x * 0.3, 0, -30);
+  const dist = Math.hypot(tw.x - from.x, tw.z - from.z);
+  aWake[i] = tw.shore ? T.arrive + 0.15 + dist / cfg.waveSpeed : T.wave2 + dist / (cfg.waveSpeed * 1.3);
+});
+aWake[0] = T.wave2 + 0.6;   // hero tower joins the lit city near the end
+aWake[N - 1] = T.arrive;    // the receiving tower lights first
+box.setAttribute("aSize", new THREE.InstancedBufferAttribute(aSize, 3));
+box.setAttribute("aWake", new THREE.InstancedBufferAttribute(aWake, 1));
+box.setAttribute("aSeed", new THREE.InstancedBufferAttribute(aSeed, 1));
+city.frustumCulled = false;
+scene.add(city);
+
+// a lit window as its own glowing plane (warm gradient + a soft curtain), used for the hero and the far window
+function windowPane(pos, w, h, rotY = 0) {
+  const g = new THREE.Group();
+  const pane = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.ShaderMaterial({
+    toneMapped: false, transparent: true, uniforms: { on: { value: 1 }, c: { value: col(P.warm) } },
+    vertexShader: `varying vec2 v; void main(){ v = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+    fragmentShader: `uniform float on; uniform vec3 c; varying vec2 v;
+      void main(){ float curtain = smoothstep(0.16,0.12,v.x) + smoothstep(0.84,0.88,v.x); float bar = step(abs(v.x-0.5),0.012) + step(abs(v.y-0.55),0.012);
+        vec3 k = c*(1.2+0.9*v.y)*(1.-0.45*curtain)*(1.-0.75*clamp(bar,0.,1.));
+        gl_FragColor = vec4(k*on, 1.); }` }));
+  const halo = new THREE.Mesh(new THREE.PlaneGeometry(w * 5, h * 4), new THREE.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { on: { value: 1 }, c: { value: col(P.warm) } },
+    vertexShader: `varying vec2 v; void main(){ v = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+    fragmentShader: `uniform float on; uniform vec3 c; varying vec2 v; void main(){ vec2 d = (v-.5)*2.; float a = exp(-dot(d,d)*5.)*0.22*on; gl_FragColor = vec4(c*a, a); }` }));
+  halo.position.z = 0.02;
+  g.add(pane, halo); g.position.copy(pos); g.rotation.y = rotY; scene.add(g);
+  return { g, set(v) { pane.material.uniforms.on.value = v; halo.material.uniforms.on.value = v; } };
+}
+const heroWin = windowPane(V(HERO.x, HERO.y, HERO.z + 0.02), 1.15, 1.45);
+const farWin = windowPane(V(FAR.x, FAR.y, FAR.z + 0.03), 1.6, 2.0);
+
+// ---------- the bay: dark water with ripples that reflect the lit city, the orb and the card ----------
+const water = new THREE.Mesh(new THREE.PlaneGeometry(900, 900), new THREE.ShaderMaterial({
+  uniforms: { t: { value: 0 }, base: { value: col(P.water) }, warm: { value: col(P.warm) }, moonC: { value: col(P.moon) }, fog: { value: FOG },
+              lit: { value: 0 }, orb: { value: V(0, -99, 0) }, card: { value: V(0, -99, 0) }, moonX: { value: cfg.moonX } },
+  vertexShader: `varying vec3 wp; void main(){ vec4 w = modelMatrix*vec4(position,1.); wp = w.xyz; gl_Position = projectionMatrix*viewMatrix*w; }`,
+  fragmentShader: `uniform float t, lit, moonX; uniform vec3 base, warm, moonC, fog, orb, card; varying vec3 wp;
+    float h1(float x){ return fract(sin(x*127.1)*43758.5453); }
+    void main(){
+      float rip = sin(wp.z*1.9 + t*2.0 + sin(wp.x*0.7)*2.)*sin(wp.z*0.8 - t*1.2 + wp.x*0.4);
+      float sp = smoothstep(0.7, 1., rip)*0.7;
+      vec3 c = base;
+      // reflections of the far shore: vertical streaks below lit towers
+      float col = floor(wp.x/2.2); float onCol = step(0.35, h1(col)) * lit;
+      float band = smoothstep(-110., -66., wp.z) * smoothstep(-20., -60., wp.z);
+      c += warm * onCol * band * (0.1 + 0.8*sp) * 0.45;
+      // moon lane
+      vec3 toC = wp - cameraPosition; float lane = exp(-pow((wp.x - cameraPosition.x - moonX*(-toC.z)*1.1)/(1.5+(-toC.z)*0.12), 2.));
+      c += moonC * lane * (0.05 + 0.6*sp) * smoothstep(5., 40., -toC.z) * 0.6;
+      // the orb and the card light the water under them
+      float od = length(wp.xz - orb.xz); c += warm * exp(-od*od*0.02) * (0.15 + 0.8*sp) * clamp(1.6 - orb.y*0.05, 0., 1.);
+      float cd = length(wp.xz - card.xz); c += vec3(1.,0.8,0.88) * exp(-cd*cd*0.08) * (0.05 + 0.35*sp) * step(-5., card.y);
+      float d = length(toC); c = mix(c, fog, clamp((d-40.)/220., 0., 0.8));
+      gl_FragColor = vec4(c,1.); }`
+}));
+water.rotation.x = -Math.PI / 2; water.position.y = -0.3; scene.add(water);
+
+// ---------- the message of light: an orb with a trail ----------
+const orbPath = new THREE.CatmullRomCurve3([V(HERO.x, HERO.y, HERO.z + 0.4), V(HERO.x + 3, HERO.y + 6, HERO.z - 10), V((HERO.x + FAR.x) / 2, 21, (HERO.z + FAR.z) / 2), V(FAR.x - 2, FAR.y + 6, FAR.z + 10), V(FAR.x, FAR.y, FAR.z + 0.4)]);
+const TRAIL = 120;
+const tp = new Float32Array(TRAIL * 3), ta = new Float32Array(TRAIL);
+for (let i = 0; i < TRAIL; i++) ta[i] = i / TRAIL;
+const tg = new THREE.BufferGeometry(); tg.setAttribute("position", new THREE.BufferAttribute(tp, 3)); tg.setAttribute("k", new THREE.BufferAttribute(ta, 1));
+const trailMat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { c: { value: col(P.orb) }, on: { value: 0 } },
+  vertexShader: `attribute float k; varying float a; uniform float on; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); gl_PointSize = (12.+60.*(1.-k))/-mv.z*12.; a = pow(1.-k, 1.6)*on; gl_Position = projectionMatrix*mv; }`,
+  fragmentShader: `uniform vec3 c; varying float a; void main(){ vec2 d = gl_PointCoord-.5; float r = exp(-dot(d,d)*16.); gl_FragColor = vec4(c*r*a*1.6, r*a); }` });
+const trail = new THREE.Points(tg, trailMat); trail.frustumCulled = false; scene.add(trail);
+const orb = new THREE.Mesh(new THREE.SphereGeometry(0.34, 24, 16), new THREE.MeshBasicMaterial({ color: col(P.orb).multiplyScalar(2.2), toneMapped: false }));
+scene.add(orb);
+const orbAt = (t) => ease(clamp((t - T.depart) / (T.arrive - T.depart)));
+
+// ---------- the real message hoodie rises from the sea as a glowing card ----------
+const tex = await new THREE.TextureLoader().loadAsync(cfg.card);
+tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+const CW = cfg.cardW, CH = CW * tex.image.height / tex.image.width;
+const CARD = V(0, 5.6, -48);
+const card = new THREE.Group();
+function rounded(w, h, r) {
+  const s = new THREE.Shape(); s.moveTo(-w / 2 + r, -h / 2); s.lineTo(w / 2 - r, -h / 2); s.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r);
+  s.lineTo(w / 2, h / 2 - r); s.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2); s.lineTo(-w / 2 + r, h / 2); s.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r);
+  s.lineTo(-w / 2, -h / 2 + r); s.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2); return new THREE.ShapeGeometry(s, 8);
+}
+// the halo sits BEHIND the card and the card stays under the bloom threshold, so the print is never washed out
+const cardHalo = new THREE.Mesh(new THREE.PlaneGeometry(CW * 2.4, CH * 2.4), new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+  uniforms: { c: { value: col(P.pink) }, on: { value: 0 } },
+  vertexShader: `varying vec2 v; void main(){ v = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `uniform vec3 c; uniform float on; varying vec2 v; void main(){ vec2 d = (v-.5)*2.; float a = exp(-dot(d,d)*2.6)*0.5*on; gl_FragColor = vec4(c*a, a); }` }));
+cardHalo.position.z = -0.25;
+const border = new THREE.Mesh(rounded(CW + 0.24, CH + 0.24, 0.32), new THREE.MeshBasicMaterial({ color: col(P.pink).multiplyScalar(0.95), toneMapped: false }));
+border.position.z = -0.02;
+const face = new THREE.Mesh(rounded(CW, CH, 0.22), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false, color: new THREE.Color(0.88, 0.88, 0.88) }));
+{ // map the photo onto the rounded shape (ShapeGeometry uvs are in shape units)
+  const uv = face.geometry.attributes.uv, p = face.geometry.attributes.position;
+  for (let i = 0; i < uv.count; i++) uv.setXY(i, p.getX(i) / CW + 0.5, p.getY(i) / CH + 0.5);
+}
+card.add(cardHalo, border, face);
+card.position.set(CARD.x, -9, CARD.z); scene.add(card);
+const cardRef = new THREE.Mesh(new THREE.PlaneGeometry(CW, CH), new THREE.MeshBasicMaterial({ map: tex, transparent: true, opacity: 0.12, depthWrite: false }));
+cardRef.scale.y = -1; scene.add(cardRef);
+
+// ---------- lights that fly up into a heart ----------
+const HN = 700, hs = new Float32Array(HN * 3), he = new Float32Array(HN * 3), hc = new Float32Array(HN * 3), hd = new Float32Array(HN);
+const HEART = V(0, 50, -90), HS = cfg.heartScale;
+const hcols = [col(P.warm), col(P.pink), col(P.cool), col("#ffffff")];
+for (let i = 0; i < HN; i++) {
+  const tw = towers[Math.floor(rnd() * (N - 1)) + 1];
+  hs.set([tw.x + (rnd() - 0.5) * tw.w, 1 + rnd() * tw.h, tw.z + tw.d / 2], i * 3);
+  const a = rnd() * Math.PI * 2, fill = i % 3 === 0 ? Math.sqrt(rnd()) : 1;     // outline plus a soft fill
+  const x = 16 * Math.pow(Math.sin(a), 3), y = 13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a);
+  he.set([HEART.x + x * HS * fill, HEART.y + y * HS * fill, HEART.z + (rnd() - 0.5) * 2], i * 3);
+  const c = hcols[i % 4]; hc.set([c.r, c.g, c.b], i * 3); hd[i] = rnd();
+}
+const hg = new THREE.BufferGeometry();
+hg.setAttribute("position", new THREE.BufferAttribute(hs, 3)); hg.setAttribute("e", new THREE.BufferAttribute(he, 3));
+hg.setAttribute("color", new THREE.BufferAttribute(hc, 3)); hg.setAttribute("d", new THREE.BufferAttribute(hd, 1));
+const heartMat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true,
+  uniforms: { k: { value: 0 }, t: { value: 0 }, on: { value: 0 } },
+  vertexShader: `attribute vec3 e; attribute float d; uniform float k, t, on; varying vec3 vc; varying float a;
+    void main(){ float q = clamp((k - d*0.35)/0.65, 0., 1.); q = q<.5 ? 4.*q*q*q : 1.-pow(-2.*q+2.,3.)/2.;
+      vec3 p = mix(position, e, q); p.y += sin(q*3.14159)*8.*(0.5+d); p += vec3(sin(t*1.3+d*30.), cos(t*1.1+d*20.), 0.)*0.18*q;
+      vec4 mv = modelViewMatrix*vec4(p,1.); gl_PointSize = (40.+30.*d)/-mv.z*14.; vc = color; a = on*(0.65+0.35*sin(t*3.+d*50.)); gl_Position = projectionMatrix*mv; }`,
+  fragmentShader: `varying vec3 vc; varying float a; void main(){ vec2 d = gl_PointCoord-.5; float r = exp(-dot(d,d)*16.); gl_FragColor = vec4(vc*r*a*1.3, r*a); }` });
+const heart = new THREE.Points(hg, heartMat); heart.frustumCulled = false; scene.add(heart);
+
+// fireflies over the water, for depth
+{
+  const n = 500, p = new Float32Array(n * 3), ph = new Float32Array(n);
+  for (let i = 0; i < n; i++) { p.set([(rnd() - 0.5) * 70, 0.5 + rnd() * 16, 6 - rnd() * 100], i * 3); ph[i] = rnd() * 6.28; }
+  const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(p, 3)); g.setAttribute("ph", new THREE.BufferAttribute(ph, 1));
+  window.flies = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { t: { value: 0 }, c: { value: col(P.warm) } },
+    vertexShader: `attribute float ph; uniform float t; varying float a; void main(){ vec3 q = position; q.y += sin(t*0.7+ph)*0.4; q.x += cos(t*0.5+ph)*0.3;
+      vec4 mv = modelViewMatrix*vec4(q,1.); gl_PointSize = 14./-mv.z*14.; a = 0.25+0.25*sin(t*2.+ph*3.); gl_Position = projectionMatrix*mv; }`,
+    fragmentShader: `uniform vec3 c; varying float a; void main(){ vec2 d = gl_PointCoord-.5; float r = exp(-dot(d,d)*18.); gl_FragColor = vec4(c*r*a, r*a); }` });
+  const pts = new THREE.Points(g, window.flies); pts.frustumCulled = false; scene.add(pts);
+}
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), cfg.bloom, 0.55, 0.9));
+composer.addPass(new OutputPass());
+
+// ---------- camera: keyframes [time, position, target], smooth between ----------
+const camShots = [
+  [0.0, V(HERO.x + 0.9, HERO.y + 0.5, HERO.z + 7.6), V(HERO.x, HERO.y + 0.25, HERO.z)],     // hook: the lonely window
+  [T.depart - 0.2, V(HERO.x + 0.6, HERO.y + 0.4, HERO.z + 5.2), V(HERO.x, HERO.y + 0.2, HERO.z)],
+  [T.depart + 1.1, V(HERO.x + 13, HERO.y + 4, HERO.z + 11), V(HERO.x + 3, HERO.y + 6, HERO.z - 10)],
+  [T.arrive - 0.4, V(FAR.x - 6, FAR.y + 3.5, FAR.z + 26), V(FAR.x, FAR.y + 1, FAR.z)],
+  [T.arrive + 1.2, V(FAR.x - 3, FAR.y + 1.5, FAR.z + 16), V(FAR.x, FAR.y + 2, FAR.z)],
+  [T.rise - 0.1, V(CARD.x + 2.5, CARD.y + 0.6, CARD.z + 16), V(CARD.x, CARD.y, CARD.z)],
+  [T.rise + 1.6, V(CARD.x + 0.4, CARD.y + 0.4, CARD.z + cfg.cardDist), V(CARD.x, CARD.y + 0.1, CARD.z)],
+  [T.wave2 - 0.2, V(CARD.x - 0.4, CARD.y + 0.5, CARD.z + cfg.cardDist - 1.2), V(CARD.x, CARD.y + 0.1, CARD.z)],
+  [T.wave2 + 2.2, V(0, 22, 8), V(0, 10, -60)],
+  [T.heart + 2.2, V(0, 24, 18), V(HEART.x, HEART.y - 8, HEART.z)],
+  [T.end + 4.5, V(0, 23, 24), V(HEART.x, HEART.y - 8, HEART.z)],
+];
+function shotAt(t) {
+  let i = 0; while (i < camShots.length - 2 && t > camShots[i + 1][0]) i++;
+  const [ta, pa, la] = camShots[i], [tb, pb, lb] = camShots[i + 1];
+  const k = ease(clamp((t - ta) / (tb - ta)));
+  return [pa.clone().lerp(pb, k), la.clone().lerp(lb, k)];
+}
+
+// ---------- words: one line at a time ----------
+const lines = document.getElementById("lines");
+const els = cfg.lines.map((l) => {
+  const d = document.createElement("div"); d.className = "line" + (l.msg ? " msg" : "");
+  d.style.top = l.top + "px"; d.style.fontSize = l.size + "px"; d.textContent = l.text; lines.appendChild(d); return d;
+});
+const end = document.getElementById("end");
+document.getElementById("logo").src = cfg.end.logo;
+document.getElementById("ename").textContent = cfg.end.name;
+const ec = document.getElementById("ecta"); ec.textContent = cfg.end.cta; ec.style.background = P.accent; ec.style.color = "#fff";
+document.getElementById("esmall").textContent = cfg.end.small;
+const dim = document.getElementById("dim"), shadeb = document.getElementById("shadeb");
+
+window.render = (t) => {
+  towerMat.uniforms.t.value = t; water.material.uniforms.t.value = t; window.stars.uniforms.t.value = t; window.flies.uniforms.t.value = t; heartMat.uniforms.t.value = t;
+  // the lonely window breathes, then gives its light away
+  heroWin.set(0.9 + 0.1 * Math.sin(t * 3) - 0.35 * clamp((t - T.depart) / 0.6) + 0.45 * clamp((t - T.wave2 - 0.6) / 0.5));
+  farWin.set(clamp((t - T.arrive) / 0.25) * (1 + 0.6 * Math.exp(-(t - T.arrive) * 3) * (t > T.arrive)));
+  // orb and trail
+  const ko = orbAt(t), flying = t > T.depart - 0.1 && t < T.arrive + 0.15;
+  const op = orbPath.getPoint(ko); orb.position.copy(op); orb.visible = flying;
+  orb.scale.setScalar(1 + 0.25 * Math.sin(t * 9));
+  trailMat.uniforms.on.value = flying ? 1 : clamp(1 - (t - T.arrive - 0.15) / 0.4);
+  for (let i = 0; i < TRAIL; i++) { const q = orbPath.getPoint(orbAt(t - i * 0.012)); tp.set([q.x, q.y, q.z], i * 3); }
+  tg.attributes.position.needsUpdate = true;
+  water.material.uniforms.orb.value.copy(flying ? op : V(0, -99, 0));
+  // city wave: reflections follow the far shore lighting up
+  water.material.uniforms.lit.value = clamp((t - T.arrive) / (T.wave2 - T.arrive + 1.5));
+  // card rises from the sea with a soft overshoot, then floats
+  const kr = clamp((t - T.rise) / 1.5), up = kr < 1 ? easeOut(kr) * 1.04 - 0.04 * Math.sin(kr * Math.PI) : 1;
+  const cy = -9 + (CARD.y + 9) * up + Math.sin(t * 1.4) * 0.08 * (t > T.rise + 1.5);
+  card.position.y = cy; card.rotation.y = (1 - up) * 0.5 + Math.sin(t * 0.8) * 0.04; card.rotation.x = (1 - up) * -0.3;
+  card.visible = t > T.rise - 0.05;
+  cardHalo.material.uniforms.on.value = clamp((t - T.rise - 0.6) / 0.8);
+  cardRef.visible = card.visible; cardRef.position.set(card.position.x, -2 * 0.3 - cy - 0.4, card.position.z); cardRef.rotation.y = card.rotation.y;
+  cardRef.material.opacity = 0.12 * clamp(cy + 1);
+  water.material.uniforms.card.value.set(card.position.x, card.visible ? cy : -99, card.position.z);
+  // heart
+  heartMat.uniforms.k.value = clamp((t - T.heart) / 2.4); heartMat.uniforms.on.value = clamp((t - T.heart) / 0.5);
+  // camera with a fast push-in on the very first frames (hook) and a tiny handheld drift
+  let [pos, look] = shotAt(t);
+  const kh = ease(clamp(t / 0.7)); pos.z += (1 - kh) * 2.4; pos.y += (1 - kh) * 0.3;
+  pos.x += Math.sin(t * 0.9) * 0.08; pos.y += Math.sin(t * 1.3) * 0.06;
+  camera.position.copy(pos); camera.lookAt(look);
+  // words
+  cfg.lines.forEach((l, j) => {
+    const e = els[j], on = t >= l.a && t < l.b;
+    e.style.visibility = on ? "visible" : "hidden"; if (!on) return;
+    const k = j === 0 ? 1 : ease(clamp((t - l.a) / 0.35)), out = clamp((l.b - t) / 0.22);
+    e.style.opacity = Math.min(k, out);
+    e.style.transform = `translateY(${(1 - k) * 50}px) scale(${j === 0 ? 1 + 0.05 * (1 - ease(clamp(t / 0.5))) : 1})`;
+  });
+  shadeb.style.visibility = cfg.lines.some((l) => l.top > 1000 && t >= l.a && t < l.b) ? "visible" : "hidden";
+  const kd = ease(clamp((t - T.end) / 0.6)), ke = ease(clamp((t - T.end - 0.25) / 0.6));
+  dim.style.visibility = t >= T.end ? "visible" : "hidden"; dim.style.opacity = kd;
+  end.style.visibility = t >= T.end + 0.25 ? "visible" : "hidden"; end.style.opacity = ke; end.style.transform = `translateY(${(1 - ke) * 50}px)`;
+  composer.render();
+};
+await document.fonts.ready;
+window.render(0); window.ready = true;
+</script>
+</body>
+</html>
