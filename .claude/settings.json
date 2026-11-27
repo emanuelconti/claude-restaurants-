@@ -13,7 +13,23 @@
       "mcp__Gmail__list_labels",
       "mcp__Gmail__create_label",
       "mcp__github__create_or_update_file",
-      "mcp__github__get_file_contents"
-    ]
-  }
+      "mcp__github__get_file_contents",
+      "Bash",
+      "Edit",
+      "Write",
+      "Read",
+      "WebSearch",
+      "WebFetch",
+      "mcp__Gmail",
+      "mcp__github",
+      "mcp__Claude_Code_Remote",
+      "mcp__Google_Drive",
+      "mcp__Google_Calendar",
+      "mcp__Yelp",
+      "Artifact",
+      "PushNotification"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "skipDangerousModePermissionPrompt": true
 }
