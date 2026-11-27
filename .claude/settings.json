@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(python3 ig_publish.py:*)",
-      "Bash(python3 carousel.py:*)"
+      "Bash(python3 carousel.py:*)",
+      "mcp__Gmail__send_message",
+      "mcp__Gmail__label_thread",
+      "mcp__Gmail__label_message",
+      "mcp__Gmail__create_draft",
+      "mcp__Gmail__update_draft",
+      "mcp__Gmail__search_threads",
+      "mcp__Gmail__get_thread",
+      "mcp__Gmail__list_labels",
+      "mcp__Gmail__create_label",
+      "mcp__github__create_or_update_file",
+      "mcp__github__get_file_contents"
     ]
   }
 }
