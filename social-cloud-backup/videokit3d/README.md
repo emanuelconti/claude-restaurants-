@@ -23,3 +23,10 @@ The page defines `window.render(t)` that draws the instant t (seconds) and sets 
     python social-cloud-backup/videokit3d/reel3d.py sp-2026-11-28-1 sin-2026-11-28-3 gms-2026-11-28-5
 
 Then inspect each contact sheet in /tmp/vk3/sheets and run reelkit/approve.py as before. About 3 minutes per Reel on 4 cores. Never change the photos away from the reviewed slides; GMS uses only real message-hoodie photos.
+
+## Option B: Remotion + @remotion/three (React, best for product films)
+When the video shows the real product on phones (screens, taps, a code arriving), Remotion gives sharper type, real motion blur and beat-exact cuts. The SocialPerks launch film v5 is built this way; its sources are in the socialperks repo, `docs/marketing/video/remotion/` (`src/Launch.tsx`, `mix.py`).
+- Install in /tmp: `npm i remotion@4.0.242 @remotion/cli@4.0.242 @remotion/three@4.0.242 @react-three/fiber@8.17.10 @react-three/drei@9.117.3 three@0.170.0 react@18 react-dom@18`.
+- Render in the cloud container with `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --gl=swangle --timeout=240000 --concurrency=4`. No post-processing passes (DOF and bloom make a frame take 30 s); about 2.5 s per frame on 4 cores.
+- Mount a textured mesh only once its texture has loaded (otherwise it renders white). Inside a `<Sequence>`, frames are relative to the sequence start.
+- Reels for the queue: 1080x1920, 30 fps, 15-30 s (render a 30 fps composition, then cut with ffmpeg; `media_checks.check_video` enforces it), music at about -14 LUFS.
