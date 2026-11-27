@@ -208,7 +208,7 @@ Routine trig_014sPbmtYfnXmSnHXoaXsPAt runs every Monday at 10:37 Madrid, in the 
 - If NO investor email went out today, it runs one careful investor round itself (max 5, same CRM rules).
 - If neither investors nor venues got an email for 2 working days, it writes "ALERT" below and tells Ema in one line.
 - CODEX: at the start of every task, read the line below. If it says ALERT, or its date is more than 3 working days old (meaning the watchdog stopped too), tell Ema first thing: "outreach fermo: controlla le routine Claude (limite di utilizzo o connettori)".
-- Last heartbeat: 2026-11-14, routines set up, first investor round Monday 16/11.
+- Last heartbeat: 2026-11-27 18:41 Madrid, investors 0, venues 9, bounces 0
 
 ## THREADS GMS: the post is the ideas, and a photo from 30 November (owner, 22 November 2026)
 
