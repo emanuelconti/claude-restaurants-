@@ -245,7 +245,7 @@ def story_lines(topic, message):
     slots = [(0.0, T['depart'] - 0.1), (T['depart'] + 0.1, T['arrive'] - 0.5), (T['arrive'] - 0.3, T['rise'] - 0.1), (T['rise'] + 0.2, T['wave2'] - 0.1)]
     lines = [dict(text=hook, a=0.0, b=slots[0][1], top=230, size=100 if len(hook) > 26 else 112)]
     for (a, b), text in zip(slots[1:], pick):
-        lines.append(dict(text=text, a=a, b=b, top=240, size=104 if len(text) > 18 else 112))
+        lines.append(dict(text=text, a=a, b=b, top=240, size=94 if len(text) > 20 else 104 if len(text) > 16 else 112))
     lines.append(dict(text=message, a=T['heart'] + 0.4, b=T['end'] - 0.1, top=1440, size=108, msg=True))
     return lines
 
@@ -263,7 +263,8 @@ def make_story(item_id, card, message, cta='Gift the message'):
     pal_name = list(STORY_PALETTES)[h % len(STORY_PALETTES)]
     pal = dict(STORY_PALETTES[pal_name], accent=B['accent'])
     lines = story_lines(topic, message)
-    cfg = dict(seed=h, palette=pal, moonX=((h >> 4) % 60 - 30) / 100, farX=4 + (h >> 10) % 9, waveSpeed=14, bloom=0.55,
+    cfg = dict(seed=h, palette=pal, moonX=(1 if (h >> 4) & 1 else -1) * (0.45 + ((h >> 5) % 15) / 100),   # the moon stays to one side, never over the heart
+                farX=4 + (h >> 10) % 9, waveSpeed=14, bloom=0.55,
                cardW=4.6, cardDist=11.5, heartScale=1.0, times=STORY_TIMES, card=f'assets/{item_id}/card.jpg', lines=lines,
                end=dict(logo=f'assets/{B["logo"]}', name=B['name'], cta=cta, small=B['cta']))
     (VK / 'cfg').mkdir(exist_ok=True)
