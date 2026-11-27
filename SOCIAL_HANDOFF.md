@@ -139,3 +139,14 @@ Every Reel is now made with `social-cloud-backup/videokit3d/reel3d.py` on codex/
 ## Editors on two Claude accounts (owner, 9 November 2026)
 
 GitHub Actions (branch codex/social-cloud-backup) publishes every channel, Pinterest included. One Claude account runs the primary editor routine, the other (Safari) must run the backup editor routine. If you are on the Safari account, read "Two editors, one on each Claude account" at the top of SOCIAL_MARKET_RULES.md on codex/social-cloud-backup and create the backup routine described there if it does not exist yet.
+
+## 3D VIDEOS MADE WITH CODE, ON EVERY CHANNEL (owner, 27 November 2026) — overrides older video rules
+
+The owner: new videos must look like the latest Y Combinator launch videos (Boat, YC F26): ultra-modern, soft pastel 3D worlds, cinematic camera, few words. We have few photos, so we build the images ourselves with code.
+
+- **How:** `social-video/three3d/` (README there): a Three.js scene in one HTML file, rendered frame by frame with Playwright, ffmpeg. Free, no generator credits. Vertical 1080x1920, 8 to 15 seconds, captions large and short, the brand at the end. First scene: `socialperks-city.html` (padel court, café, tattoo studio, car park; a customer shares a link, new customers arrive, verified visit).
+- **Which brands:** SocialPerks (owners of padel/sports centres, gyms, tattoo studios, car parks, salons, hotels; restaurants last; "customers who bring new customers", never "friends") and Good Message Studio (gifts and kind messages, Singapore, soft pastel). Sincronia when the budget allows.
+- **Where:** every channel where the brand has an account, the same day: Instagram Reels, Facebook (Page Reels / video) and, as soon as they are enabled, YouTube Shorts and TikTok (Good Message Studio: `sowld-social/CHANNELS.md`; they stay OFF until the owner finishes the accounts and audits, so say what is missing instead of pretending they post).
+- **Rhythm:** at least one 3D video a day per brand, replacing a carousel, never adding to the volume (1 to 2 posts a day in all).
+- **Optimise every day** from likes, comments, shares and saves (`scripts/social/weekly_ig_report.py` logic, daily): keep the scene style, captions and hooks that get interactions, change one thing at a time, write the change in this file.
+- **Never** a real brand, person or venue we do not have rights to; no logos of others; only our own words and colours.
