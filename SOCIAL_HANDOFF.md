@@ -132,6 +132,10 @@ Every run: `python3 comments.py --token-env <account token> --list`, then answer
 - Search brings owners without followers: YouTube/Reel titles and captions use what owners search in Spanish ("cómo atraer clientes a mi bar", "marketing para restaurantes", "fidelizar clientes cafetería").
 - Test and copy: every day one new Reel hook style; PERFORMANCE.md keeps the winner, the next days use it more.
 
+## 3D Reels, every day (27 November 2026)
+
+Every Reel is now made with `social-cloud-backup/videokit3d/reel3d.py` on codex/social-cloud-backup (owner, 26 November: videokit3d for every Reel and video). It turns a reviewed queue item into an 18.6 s vertical 3D Reel: the topic's reviewed photos float as framed panels over a lit sea, the camera flies between them on the beat, one short line at a time, bloom, brand end card, original music from `music3d.py`. Palette, layout, camera and music change per item. See the README in that folder. The GMS lunch Reel (slot 5) goes in the `reel/` folder without `reel_dir`; the other GMS Reels (1, 6, 7) are approved together, or the publisher's tests fail.
+
 ## Editors on two Claude accounts (owner, 9 November 2026)
 
 GitHub Actions (branch codex/social-cloud-backup) publishes every channel, Pinterest included. One Claude account runs the primary editor routine, the other (Safari) must run the backup editor routine. If you are on the Safari account, read "Two editors, one on each Claude account" at the top of SOCIAL_MARKET_RULES.md on codex/social-cloud-backup and create the backup routine described there if it does not exist yet.
