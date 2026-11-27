@@ -65,6 +65,60 @@ def topic_for(item):
             return obj
 
 
+def learned(b, h):
+    """Owner, 27 November 2026: every Reel learns from the last ones. Views of published Reels (YouTube Shorts and
+    Instagram, from performance/<brand>.json) are matched by title to their reel.json; palette and layout with the
+    best mean views (at least 2 samples each, 6 in all, posts older than 48 h) are reused two times in three, the
+    third explores the hash choice. Returns (palette_name or None, layout or None, note)."""
+    import datetime as dt, glob
+    try:
+        perf = json.loads((ROOT / 'performance' / f'{b}.json').read_text())
+    except Exception:
+        return None, None, 'explore: no performance file'
+    cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=48)
+    views = {}
+    for ch in ('youtube', 'instagram', 'ig'):
+        for p in (perf.get('channels', {}).get(ch) or {}).get('posts', []):
+            v = p.get('views') if p.get('views') is not None else p.get('plays')
+            try:
+                v = float(v); t = dt.datetime.fromisoformat(p['stamp'].replace('Z', '+00:00').replace('+0000', '+00:00'))
+            except Exception:
+                continue
+            if t <= cutoff:
+                key = p.get('title', '').split(' | ')[0].strip().lower()
+                views.setdefault(key, []).append(v)
+    by_pal, by_lay = {}, {}
+    for f in glob.glob(str(ROOT / 'queue' / b / '*' / 'reel*' / 'reel.json')):
+        try:
+            r = json.loads(Path(f).read_text())
+        except Exception:
+            continue
+        v = views.get(r.get('title', '').strip().lower())
+        if not v:
+            continue
+        pal = r.get('palette_name') or next((n for n, d in PALETTES.items() if d['horizon'] in r.get('engine', '')), None)
+        lay = r.get('layout') or next((l for l in set(LAYOUTS) if f"layout {l}" in r.get('engine', '')), None)
+        m = sum(v) / len(v)
+        if pal in B_PALS(b): by_pal.setdefault(pal, []).append(m)
+        if lay: by_lay.setdefault(lay, []).append(m)
+    def best(d):
+        ok = {k: sum(x) / len(x) for k, x in d.items() if len(x) >= 2}
+        if sum(len(x) for x in d.values()) < 6 or not ok:
+            return None
+        k = max(ok, key=ok.get)
+        allm = [y for x in d.values() for y in x]
+        return k if ok[k] > sum(allm) / len(allm) else None
+    if h % 3 == 0:
+        return None, None, 'explore: one in three Reels tries something new'
+    bp, bl = best(by_pal), best(by_lay)
+    note = f'learned from {sum(len(x) for x in by_pal.values())} measured Reels: palette {bp or "no winner"}, layout {bl or "no winner"}'
+    return bp, bl, note
+
+
+def B_PALS(b):
+    return BRANDS[b]['palettes']
+
+
 def prepare():
     """Copy the scene, the music and the brand fonts and marks into the videokit3d cache."""
     (VK / 'fonts').mkdir(parents=True, exist_ok=True); (VK / 'assets').mkdir(exist_ok=True)
@@ -101,10 +155,12 @@ def make(item_id):
         for k, pid in enumerate(topic['photo_ids'][:6]):
             photos.append(fetch(f'https://images.unsplash.com/photo-{pid}?w=1400&q=85&auto=format&fit=crop', assets / f'p{k}.jpg'))
             sources.append(dict(unsplash=pid, slide=f'slide-0{k + 1}.jpg'))
-    pal = dict(PALETTES[B['palettes'][(slot // 2 + h) % len(B['palettes'])]], accent=B['accent'], accentInk=B['accentInk'])
+    lp, ll, learn_note = learned(b, h)
+    pal_name = lp or B['palettes'][(slot // 2 + h) % len(B['palettes'])]
+    pal = dict(PALETTES[pal_name], accent=B['accent'], accentInk=B['accentInk'])
     lines = [dict(text=topic['title'])] + [dict(text=p[0], num=f'0{k + 1}') for k, p in enumerate(topic['points'])]
     long_hook = len(topic['title']) > 34
-    cfg = dict(seed=h, palette=pal, sunX=((h >> 4) % 100 - 50) / 160, layout=LAYOUTS[(h >> 8) % 4], gap=13 + (h >> 12) % 5,
+    cfg = dict(seed=h, palette=pal, sunX=((h >> 4) % 100 - 50) / 160, layout=ll or LAYOUTS[(h >> 8) % 4], gap=13 + (h >> 12) % 5,
                orbit=0.35 + ((h >> 16) % 30) / 100, bloom=0.35 if b == 'gms' else 0.5,
                photos=[f'assets/{item_id}/{p.name}' for p in photos], lines=lines, serif=B['serif'],
                hookTop=250, hookSize=96 if long_hook else 116, lineTop=280, lineSize=104 if not B['serif'] else 110,
@@ -135,6 +191,7 @@ def make(item_id):
     reel = dict(date=item['date'], title=item['title'], video='reel.mp4', cover='cover.jpg', seconds=round(SECONDS, 2), caption=meta['caption'],
                 music=f'videokit3d music3d.py {b} style, seed {h % 997} (original, tones written in code, rights-cleared)',
                 engine=f'videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {pal}, layout {cfg["layout"]}',
+                palette_name=pal_name, layout=cfg['layout'], learning=learn_note,
                 photos=sources, scenes=['hook'] + [p[0] for p in topic['points']] + ['end card'])
     (folder / 'reel.json').write_text(json.dumps(reel, ensure_ascii=False, indent=1))
     picks = [0, 15, 45] + [round((STARTS[k] + 0.9) * FPS) for k in range(1, 6)] + [round((STARTS[k] + 2.2) * FPS) for k in (1, 3)] + [round((STARTS[6] + 0.4) * FPS), total - 5]

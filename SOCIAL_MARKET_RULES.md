@@ -13,6 +13,13 @@ Read this before rendering any Reel or video for SocialPerks, Good Message Studi
 - **Check before approval:** extract 8-12 stills per video and look at them; any frame with unreadable text, a bad crop, a wrong-language sign in a photo or a repeated card is fixed before reelkit/approve.py.
 - **Facts:** never invented numbers, clients or results; SocialPerks content keeps its rules below (Spanish, life and friends first, the brand at the end).
 
+## Owner, 27 November 2026: GMS videos on every channel, always 3D, always learning (all editors, Claude and Codex)
+
+- **Every GMS topic gets a videokit3d Reel** (`videokit3d/reel3d.py`), published by the controller on every connected GMS channel: Instagram Reels, Facebook Reels, YouTube Shorts; Threads and Pinterest keep their own rules. TikTok joins as soon as its credentials exist (publisher `publishers/gms/tiktok_publish.py` is ready; the owner connects the account). Never fall back to the old slide-zoom Shorts.
+- **Few photos is never a reason for a weak video:** build the scene in 3D (sea, city, room, light, particles) and use real GMS product photos from Shopify and the reviewed slides as framed panels; never invented products, prices, reviews or customers.
+- **Learning is automatic:** `reel3d.learned()` reads `performance/<brand>.json` (YouTube and Instagram views of Reels older than 48 h), matches them to each `reel.json` and reuses the palette and layout with the best mean views two times in three; the third explores. Every `reel.json` records `palette_name`, `layout` and `learning`. Editors also change one more thing per day (hook, camera, music, length) and note it in PERFORMANCE.md. Same mechanism for SocialPerks and Sincronia.
+- Same checks as before: 8-12 stills per Reel, `reelkit/approve.py`, tests and `controller.py --validate` green.
+
 ## Owner correction, 6 November 2026: everyday life and motivation first (SocialPerks and GMS)
 
 This overrides every narrower topic rule below for SocialPerks and Good Message Studio, on carousels AND Reels. Nobody follows a page for "5 details to enjoy the bar without thinking about the photo": too specific, too niche, nobody cares.
