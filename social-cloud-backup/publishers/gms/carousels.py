@@ -496,6 +496,8 @@ CAPTION_SAVE = "Save it, and send it to someone who needs this message today."
 CAPTION_SHARE = "Wear the message: goodmessagestudio.com (link in bio)."
 # Facebook and Threads make links in the text clickable, so there the shop line is a real link.
 CAPTION_SHARE_LINK = "Shop now: https://goodmessagestudio.com"
+# Owner, 28 November 2026: the shop ships to Australia too; every caption says so before the hashtags.
+SHIPS_LINE = "Ships to Singapore & Australia."
 HASHTAGS = "#goodmessagestudio #singapore #australia #sgfashion #ausfashion #giftideasforher #bekind #selflove #oversizedhoodie"
 
 # The last slide, only for topics with "cta": what Sowld actually does.
@@ -645,7 +647,7 @@ def carousel(date: _dt.date, slot: int = 1, topic: dict | None = None) -> dict:
     picks = _rotate_cover(date, slot, picks, pool, GMS_COVERS, COVERS_PER_DAY)
     # The title opens the caption, so the next runs can see what was already posted.
     cta = bool(topic.get("cta")) and CTA_ENABLED
-    tail = CAPTION_SHARE if cta else CAPTION_SAVE
+    tail = (CAPTION_SHARE if cta else CAPTION_SAVE) + "\n\n" + SHIPS_LINE
     caption = f"{topic['title']}\n\n{topic['hook']}\n\n{(topic['caption'].strip() + chr(10) + chr(10)) if topic.get('caption') else ''}{tail}\n\n{topic.get('hashtags') or HASHTAGS}"
     count = len(topic["points"])
     numbers = list(range(count, 0, -1)) if topic.get("countdown") else list(range(1, count + 1))

@@ -341,7 +341,7 @@ def render(date: dt.date, topic: dict, out: str, cache: str) -> dict:
     if proc.wait() != 0:
         sys.exit("ffmpeg failed: nothing written")
     frames[len(frames) // 8].save(os.path.join(folder, "cover.jpg"), quality=90)
-    caption = f"{topic['title']}\n\n{(topic.get('caption') or '').strip()}\n\n{C.CAPTION_SHARE}\n\n{topic.get('hashtags') or C.HASHTAGS}".replace("\n\n\n\n", "\n\n")
+    caption = f"{topic['title']}\n\n{(topic.get('caption') or '').strip()}\n\n{C.CAPTION_SHARE}\n\n{C.SHIPS_LINE}\n\n{topic.get('hashtags') or C.HASHTAGS}".replace("\n\n\n\n", "\n\n")
     meta = dict(date=date.isoformat(), title=topic["title"], video="reel.mp4", seconds=round(seconds, 1), caption=caption)
     json.dump(meta, open(os.path.join(folder, "reel.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return dict(meta, folder=folder)
