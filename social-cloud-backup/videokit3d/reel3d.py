@@ -9,7 +9,7 @@ to the next on the beat, one short line on screen at a time, bloom, and a brand 
 camera orbit and music change with every item. The topic (with its photo_ids or photo_urls) comes from the
 day's editorial file. Writes queue/<brand>/<date>/reel-<slot>/{reel.mp4, reel.json, cover.jpg} and a contact
 sheet in $VK3/sheets to inspect before reelkit/approve.py. About 3 minutes per Reel on 4 cores."""
-import hashlib, json, os, shutil, subprocess, sys, urllib.request
+import glob, hashlib, json, os, shutil, subprocess, sys, urllib.request
 from pathlib import Path
 from PIL import Image
 
@@ -151,7 +151,32 @@ def make(item_id):
     assets = VK / 'assets' / item_id
     assets.mkdir(parents=True, exist_ok=True)
     photos, sources = [], []
-    if b == 'gms':
+    scene = os.environ.get('VK_SCENE') or ('story3d.html' if b in STORY_BRANDS else 'reel3d.html')
+    if b == 'gms' and scene == 'story3d.html':
+        # Owner, 28 November 2026: never the same two pictures, products not everywhere.
+        # One real product per film, from the whole shop catalogue, never one used in the last 8 films.
+        cat = json.loads((HERE / 'gms_catalog.json').read_text())
+        recent, recent_products, metas = set(), [], []
+        for f in glob.glob(str(ROOT / 'queue' / 'gms' / '*' / 'reel*' / 'reel.json')):
+            try:
+                m = json.loads(Path(f).read_text())
+            except Exception:
+                continue
+            if m.get('date', '') < item['date'] and m.get('date', '') >= '2026-11-20' or (m.get('date') == item['date'] and f'reel-{slot}' not in f):
+                metas.append(m)
+        for m in sorted(metas, key=lambda m: m.get('date', ''))[-12:]:
+            for p in m.get('photos', []):
+                recent.add(p.get('url'))
+        for m in sorted(metas, key=lambda m: m.get('date', ''))[-3:]:
+            recent_products += [p.get('product') for p in m.get('photos', []) if p.get('product')]
+        group = cat['message'] if (h % 3 or not cat.get('everyday')) else cat['everyday']
+        skip = set(cat.get('too_bright', []))
+        pool = [(pr, u) for pr in group for u in pr['images'] if u not in recent and u not in skip and pr['title'] not in recent_products] \
+            or [(pr, u) for pr in group for u in pr['images'] if u not in skip and pr['title'] not in recent_products] \
+            or [(pr, u) for pr in group for u in pr['images'] if u not in skip]
+        prod, u = pool[(h >> 3) % len(pool)]
+        photos.append(fetch(u, assets / 'p0.jpg')); sources.append(dict(url=u, product_photo=True, product=prod['title'], product_url=prod['url']))
+    elif b == 'gms':
         urls = [u for u in topic['photo_urls']]
         hero = 'https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg'
         urls = [urls[(h + k) % len(urls)] for k in range(len(urls))]
@@ -174,7 +199,6 @@ def make(item_id):
                starts=STARTS, seconds=SECONDS,
                end=dict(logo=f'assets/{B["logo"]}', name=B['name'], cta=B['cta'], small=B['small']),
                particles=pal['particles'], beat=BEAT)
-    scene = os.environ.get('VK_SCENE') or ('story3d.html' if b in STORY_BRANDS else 'reel3d.html')
     (VK / 'cfg').mkdir(exist_ok=True)
     (VK / 'cfg' / f'{item_id}.json').write_text(json.dumps(cfg, ensure_ascii=False))
     frames = VK / 'frames' / item_id

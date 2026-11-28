@@ -13,6 +13,13 @@ Read this before rendering any Reel or video for SocialPerks, Good Message Studi
 - **Check before approval:** extract 8-12 stills per video and look at them; any frame with unreadable text, a bad crop, a wrong-language sign in a photo or a repeated card is fixed before reelkit/approve.py.
 - **Facts:** never invented numbers, clients or results; SocialPerks content keeps its rules below (Spanish, life and friends first, the brand at the end).
 
+## Owner, 28 November 2026: GMS for Singapore AND Australia, varied products, no paid ads
+
+- **Audience:** English-speaking women 18-38 in Singapore and Australia. Topics and captions must work in both: everyday life, friendship, kindness, gifting, motivation. Use local references (Singapore places, Australian seasons and places) only in posts made for that country, and alternate them. Reels cannot be targeted by country, so universal topics come first.
+- **Shipping:** the owner opened Australia on 28 November (see the Australia block of the other editor): captions end with "Ships to Singapore & Australia." and carry Singapore and Australian hashtags. Never AUD prices or delivery times that the shop does not show.
+- **No paid ads** on Pinterest, Google, Meta or TikTok: the owner cannot pay now. Growth comes from daily organic Reels, Shorts and posts.
+- **Products, varied and not everywhere:** each film shows one real message-hoodie photo, picked by `reel3d.py` from `videokit3d/gms_catalog.json`, never one used in the last 12 films and never the same product as the last 3. Only hero shots with the printed message (owner 1-2 November: never gm-city or gm-studio, supplier ads, the balaclava photo, the "19" print or the plain front). The product appears once, at the story's peak; the rest of the film is the story. Refresh the catalogue with the Shopify tools when new message designs arrive, and add only photos that pass these rules.
+
 ## Owner, 27 November 2026: GMS videos on every channel, always 3D, always learning (all editors, Claude and Codex)
 
 - **Every GMS topic gets a videokit3d Reel** (`videokit3d/reel3d.py`), published by the controller on every connected GMS channel: Instagram Reels, Facebook Reels, YouTube Shorts; Threads and Pinterest keep their own rules. TikTok joins as soon as its credentials exist (publisher `publishers/gms/tiktok_publish.py` is ready; the owner connects the account). Never fall back to the old slide-zoom Shorts.

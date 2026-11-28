@@ -16892,11 +16892,11 @@
     "kind": "reel",
     "reel_dir": "reel-1",
     "reel_sha256": {
-      "reel.mp4": "06d83498cb2448657a189a70420f656ae23a8995f930ffd848d5550c2146a869",
-      "reel.json": "1466072419209df049f1c5ec032b5c1be96c70f7272861ac87fef9c400c21653",
+      "reel.mp4": "ced139ae66bab8ab4505adc3ea179d6667f86e8bbebd2167f80bac0b10ff389f",
+      "reel.json": "49a6b9f36f53991d417711b71dcd3c41df43fda9478572cc374560f7b38fafe3",
       "cover.jpg": "17709e2b3a468995d445b3357130eddbc07fca10c6d216f24b722267959a951f"
     },
-    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.6 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.6 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-2",
@@ -17048,11 +17048,11 @@
     "kind": "reel",
     "reel_dir": "reel-6",
     "reel_sha256": {
-      "reel.mp4": "2f9223e404e75f93ec84f2e5902308df96a637625852610d25bc390f3e143c6b",
-      "reel.json": "f49c746e632686dd190f2199c4ffea61d2f92d415bd53a83c49612bca0a2af06",
+      "reel.mp4": "aa942f50457f91389778ebad7396d6b870d6a8e5ca63929d8b6a70786bba587f",
+      "reel.json": "42d005b78f21ed2dc0e0684fe168cb1408556182278df89c784eb19758bd2176",
       "cover.jpg": "e258e2e4857fa19ec6b491da5be619dec91ccffe940de6109a353e233c830dca"
     },
-    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.4 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-7",
@@ -17081,11 +17081,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "399e7aaac2040cb8daa83795d61fadb1af34b5e99b7e4434cc75669f71ca181f",
-      "reel.json": "6bc721e3a77922557c7eb29f254549dc73871179499f5a05e31d67b277a6ee73",
+      "reel.mp4": "846cf315eff883d573bcdcf8efd3c395d4e8098dd07eb420bedadf1a024066b7",
+      "reel.json": "5b92157b6254b06ed75e04a53605e069fd3453a6180207188ad99401ea30b509",
       "cover.jpg": "515fb2d1c49fdfcbd6ad1702e228b2d4283b745be27761031e4f2216184e95f0"
     },
-    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html: night city, a message of light, the real message hoodie, a heart of lights) inspected 27 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, no glare over the hoodie, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.9 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.9 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-11-30-8",
@@ -17519,11 +17519,11 @@
     "kind": "reel",
     "reel_dir": "reel-1",
     "reel_sha256": {
-      "reel.mp4": "daa5960a450f0ae652d796c75f396c53689ceda130f6deed6d7572b788c054e8",
-      "reel.json": "d85d106f71ec18c9912dd99e5dc34d2b82a058bba6bf6d7ffcf5bf15037466ba",
-      "cover.jpg": "85c8a12b21603214bdb97d920633728f424e6c2f46f7d2cca6d41d1eab9916dd"
+      "reel.mp4": "7155fbc04a5ecc403b3b700cb509447a7d5ac5db321fd7d361605fe4ff5f4338",
+      "reel.json": "3327fb1b7aa053db9015a907660a42094ab3c47c71ad7fa2cf01e9425a920e3e",
+      "cover.jpg": "f67b34ebe0357ea9361e3fe0e54a0bb38f154f82c9178f2941dfe40c0873dbb8"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 28 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-12-01-2",
@@ -17675,11 +17675,11 @@
     "kind": "reel",
     "reel_dir": "reel-6",
     "reel_sha256": {
-      "reel.mp4": "43390c454227e4fd98c8cf332ce4c3417b82fe8c3020049a6abac3c23ef030ec",
-      "reel.json": "4309b1bb6b4ff9473f280fa73a81ced58832054957fac2d80b866604247e82b7",
-      "cover.jpg": "ac36010ebb0c9fed9650c52316945f9c484dd0b4014b0edcf27a4f56eb7c6988"
+      "reel.mp4": "46aa5acd65d34ff718bf4d1f8a0d71efefbb958f9dea1d023628952123b66abd",
+      "reel.json": "122ab29af6d97b74b7bbed1502737fff8c2a738cd5747cc1577771fa13a3bd0a",
+      "cover.jpg": "1d830d587a103f2688166d2ec21011887f306e3f8f75c12826242c129990c323"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 28 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.9 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -13.9 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-12-01-7",
@@ -17708,11 +17708,11 @@
     "kind": "reel",
     "reel_dir": "reel-7",
     "reel_sha256": {
-      "reel.mp4": "6b67dcba92ca0603852322012b3e0e9b40970670226ef37578a43fbfe8bd8740",
-      "reel.json": "a7bf6f56ce2cd005a1e5a6d3277c8ffddea416611556b642e3ebc712a9ad1f72",
-      "cover.jpg": "b7333798a4402cce5340f2956a23461c202b433c23bccff2614cbc5323349411"
+      "reel.mp4": "8a7c0ef259abb978e6decbfd5387c60b7c3626e6efd38f478cd70b64b583d8a2",
+      "reel.json": "0788d7a2fd392d756b7a4ba2c5dfe47ea9682f1a8c26d426927c734169cdbd50",
+      "cover.jpg": "1bd3361279f4f4ca30e9f2689a3e90eef339272d0f5337008f5d7e30b1a5954e"
     },
-    "reel_qa": "Contact sheet of the videokit3d 3D Reel inspected 28 November 2026: hook readable from the first frame, real message-hoodie photos only, one short line per scene, shop end card correct; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 6 scene photos, all identical to the reviewed slides"
+    "reel_qa": "Contact sheet of the videokit3d story film (story3d.html) inspected 28 November 2026: one real message-hoodie hero shot per film from gms_catalog.json (no gm-city, gm-studio, supplier ads or plain fronts; no glare), product shown once at the peak, hook readable from the first frame, shop end card correct; caption with the Singapore & Australia line; 18.6 s 1080x1920 30 fps; original music (videokit3d music3d.py gms style), decoded AAC mean -12.8 dB peak -0.0 dB; 1 scene photos, all identical to the reviewed slides"
   },
   {
     "id": "gms-2026-12-01-8",
