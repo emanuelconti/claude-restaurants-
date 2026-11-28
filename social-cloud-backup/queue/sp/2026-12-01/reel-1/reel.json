@@ -1,0 +1,45 @@
+{
+ "date": "2026-12-01",
+ "title": "1 de diciembre: cinco planes para estrenar el mes",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "1 de diciembre: cinco planes para estrenar el mes\n\nDiciembre empieza hoy. Estrénalo con calma.\n\nCinco planes sencillos para empezar diciembre con buen pie.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Diciembre #Planes #VidaLocal #Habitos",
+ "music": "videokit3d music3d.py sp style, seed 805 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#120d33', 'horizon': '#a8506a', 'ground': '#0c0819', 'glow': '#ff9f62', 'frame': '#fff6ec', 'particles': ['#ffd29a', '#ff9fb0', '#b9a8ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1583422409516-2895a77efded",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1565252556328-92ee4a9a0983",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1517836357463-d25dfeac3438",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1659690402718-ea07d943fd42",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1511527661048-7fe73d85e9a4",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1517248135467-4c7edcad34c4",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Café de estreno",
+  "Entreno a primera hora",
+  "Comida con alguien",
+  "Paseo por el barrio",
+  "Cena tranquila",
+  "end card"
+ ]
+}

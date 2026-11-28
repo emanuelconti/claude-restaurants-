@@ -1,0 +1,45 @@
+{
+ "date": "2026-12-01",
+ "title": "How to plan Q1 hiring as a small startup",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "How to plan Q1 hiring as a small startup\n\nHire for the next six months, not the next six years.\n\nA simple way for founders to plan the first hires of the new year. Practical preparation for European founders. General guidance, not a promise of funding.\n\nFollow @sincronia.live for a push like this every day. Sincronia helps startups find the public funding they qualify for: link in bio.\n\n#Startup #Founders #Funding #Europe #Sincronia",
+ "music": "videokit3d music3d.py sin style, seed 138 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#120d33', 'horizon': '#a8506a', 'ground': '#0c0819', 'glow': '#ff9f62', 'frame': '#fff6ec', 'particles': ['#ffd29a', '#ff9fb0', '#b9a8ff'], 'accent': '#c8955a', 'accentInk': '#ffffff'}, layout zigzag",
+ "photos": [
+  {
+   "unsplash": "1517842645767-c639042777db",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1470252649378-9c29740c9fa8",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1506784983877-45594efa4cbe",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1554224155-6726b3ff858f",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1520607162513-77705c0f0d4a",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1501139083538-0139583c060f",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Start from the plan",
+  "Spot the bottleneck",
+  "Try freelance first",
+  "Write a clear brief",
+  "Ask your network",
+  "end card"
+ ]
+}

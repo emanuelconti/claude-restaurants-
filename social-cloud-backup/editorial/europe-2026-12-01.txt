@@ -1,0 +1,991 @@
+sp {
+  "title": "1 de diciembre: cinco planes para estrenar el mes",
+  "hook": "Diciembre empieza hoy. Estrénalo con calma.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "gym",
+    "restaurant",
+    "city",
+    "restaurant"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Diciembre #Planes #VidaLocal #Habitos",
+  "caption": "Cinco planes sencillos para empezar diciembre con buen pie.",
+  "points": [
+    [
+      "Café de estreno",
+      [
+        "En tu sitio de siempre."
+      ],
+      "Ritual."
+    ],
+    [
+      "Entreno a primera hora",
+      [
+        "El mes empieza activo."
+      ],
+      "Energía."
+    ],
+    [
+      "Comida con alguien",
+      [
+        "Sin mirar el móvil."
+      ],
+      "Charla."
+    ],
+    [
+      "Paseo por el barrio",
+      [
+        "Mira las luces nuevas."
+      ],
+      "Calma."
+    ],
+    [
+      "Cena tranquila",
+      [
+        "Para cerrar el día."
+      ],
+      "Gusto."
+    ]
+  ],
+  "cover_photo_id": "1583422409516-2895a77efded",
+  "photo_ids": [
+    "1583422409516-2895a77efded",
+    "1565252556328-92ee4a9a0983",
+    "1517836357463-d25dfeac3438",
+    "1659690402718-ea07d943fd42",
+    "1511527661048-7fe73d85e9a4",
+    "1517248135467-4c7edcad34c4"
+  ]
+}
+
+sp {
+  "title": "Por qué un gimnasio de barrio se llena con recomendaciones",
+  "hook": "El mejor anuncio de un gimnasio es un cliente contento.",
+  "photos": "life",
+  "point_sets": [
+    "gym",
+    "gym",
+    "gym",
+    "cafe",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Gimnasio #Fitness #Recomendaciones #VidaLocal",
+  "caption": "Cómo los clientes que traen nuevos clientes llenan las horas tranquilas de un gimnasio de barrio. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Un socio invita a otro",
+      [
+        "Y entrena acompañado."
+      ],
+      "Motivación."
+    ],
+    [
+      "Las horas valle se llenan",
+      [
+        "Media mañana, primera tarde."
+      ],
+      "Equilibrio."
+    ],
+    [
+      "El nuevo llega con confianza",
+      [
+        "Ya conoce a alguien."
+      ],
+      "Fácil."
+    ],
+    [
+      "Quien invita gana un detalle",
+      [
+        "Una clase, un batido."
+      ],
+      "Gracias."
+    ],
+    [
+      "Y el barrio entrena más",
+      [
+        "Más gente, más vida."
+      ],
+      "Comunidad."
+    ]
+  ],
+  "cover_photo_id": "1517836357463-d25dfeac3438",
+  "photo_ids": [
+    "1517836357463-d25dfeac3438",
+    "1620188467120-5042ed1eb5da",
+    "1534438327276-14e5300c3a48",
+    "1506126613408-eca07ce68773",
+    "1509042239860-f550ce710b93",
+    "1583422409516-2895a77efded"
+  ]
+}
+
+sp {
+  "title": "Cómo cuidarte en diciembre sin dejar de quedar",
+  "hook": "Diciembre se disfruta más si llegas descansado.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "wellness",
+    "gym",
+    "restaurant",
+    "wellness"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Bienestar #Diciembre #Autocuidado #Habitos",
+  "caption": "Pequeños gestos para cuidarte en diciembre sin renunciar a tus planes.",
+  "points": [
+    [
+      "Duerme una hora más",
+      [
+        "Antes de las cenas."
+      ],
+      "Descanso."
+    ],
+    [
+      "Un masaje a mitad de mes",
+      [
+        "Tu espalda lo agradece."
+      ],
+      "Alivio."
+    ],
+    [
+      "Mueve el cuerpo",
+      [
+        "Aunque sean veinte minutos."
+      ],
+      "Energía."
+    ],
+    [
+      "Agua entre brindis",
+      [
+        "Un vaso por copa."
+      ],
+      "Equilibrio."
+    ],
+    [
+      "Un rato a solas",
+      [
+        "También es un plan."
+      ],
+      "Calma."
+    ]
+  ],
+  "cover_photo_id": "1540555700478-4be289fbecef",
+  "photo_ids": [
+    "1540555700478-4be289fbecef",
+    "1641924675896-b6a5aaf64861",
+    "1741522509438-a120c0bb5e88",
+    "1620188467120-5042ed1eb5da",
+    "1551024709-8f23befc6f87",
+    "1506126613408-eca07ce68773"
+  ]
+}
+
+sp {
+  "title": "Peluquerías: cómo llenar los martes con clientes que traen clientes",
+  "hook": "El martes también puede tener la agenda llena.",
+  "photos": "life",
+  "point_sets": [
+    "beauty",
+    "beauty",
+    "beauty",
+    "beauty",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Peluqueria #Salon #Belleza #NegocioLocal",
+  "caption": "Ideas para que una peluquería de barrio llene los días flojos gracias a sus propios clientes. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Pregunta a tus fijas",
+      [
+        "Quién vendría con ellas."
+      ],
+      "Confianza."
+    ],
+    [
+      "Un detalle por traer a alguien",
+      [
+        "Un tratamiento, un descuento."
+      ],
+      "Gracias."
+    ],
+    [
+      "Martes y miércoles primero",
+      [
+        "Ahí sobra hueco."
+      ],
+      "Foco."
+    ],
+    [
+      "La nueva llega recomendada",
+      [
+        "Ya viene con ganas."
+      ],
+      "Fácil."
+    ],
+    [
+      "Cuenta cuántas vuelven",
+      [
+        "Eso es lo que vale."
+      ],
+      "Medida."
+    ]
+  ],
+  "cover_photo_id": "1560066984-138dadb4c035",
+  "photo_ids": [
+    "1560066984-138dadb4c035",
+    "1633681926022-84c23e8cb2d6",
+    "1732861612244-5704d12e9397",
+    "1772322586702-73125782bd99",
+    "1604654894610-df63bc536371",
+    "1484480974693-6ca0a78fb36b"
+  ]
+}
+
+sp {
+  "title": "Pequeños placeres de un martes de diciembre",
+  "hook": "Un martes cualquiera también puede ser especial.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "beauty",
+    "shop",
+    "restaurant",
+    "city"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Diciembre #PequenosPlaceres #VidaLocal #Martes",
+  "caption": "Pequeños placeres para disfrutar un martes de diciembre en tu ciudad.",
+  "points": [
+    [
+      "Un café caliente",
+      [
+        "Con alguien que te cae bien."
+      ],
+      "Mimo."
+    ],
+    [
+      "Manicura de temporada",
+      [
+        "Rojo o dorado."
+      ],
+      "Brillo."
+    ],
+    [
+      "Una tienda de barrio",
+      [
+        "Para el primer regalo."
+      ],
+      "Ilusión."
+    ],
+    [
+      "Pizza al salir",
+      [
+        "Sin planearlo."
+      ],
+      "Antojo."
+    ],
+    [
+      "Luces de camino a casa",
+      [
+        "La ciudad se viste."
+      ],
+      "Magia."
+    ]
+  ],
+  "cover_photo_id": "1641924675896-b6a5aaf64861",
+  "photo_ids": [
+    "1641924675896-b6a5aaf64861",
+    "1495474472287-4d71bcdd2085",
+    "1604654894610-df63bc536371",
+    "1472851294608-062f824d29cc",
+    "1600028068383-ea11a7a101f3",
+    "1511527661048-7fe73d85e9a4"
+  ]
+}
+
+sp {
+  "title": "Hoteles pequeños: huéspedes que recomiendan, huéspedes que vuelven",
+  "hook": "En un hotel pequeño, cada huésped cuenta.",
+  "photos": "life",
+  "point_sets": [
+    "hotel",
+    "hotel",
+    "hotel",
+    "cafe",
+    "life"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #Hoteles #HotelBoutique #Turismo #NegocioLocal",
+  "caption": "Cómo un hotel independiente puede llenar las noches flojas de diciembre con huéspedes que recomiendan. https://www.socialperkses.com/",
+  "points": [
+    [
+      "El huésped feliz habla",
+      [
+        "A su familia, a sus amigos."
+      ],
+      "Boca a boca."
+    ],
+    [
+      "Invítale a volver",
+      [
+        "Con alguien más."
+      ],
+      "Vínculo."
+    ],
+    [
+      "Las noches entre semana",
+      [
+        "Ahí está el hueco."
+      ],
+      "Foco."
+    ],
+    [
+      "Un desayuno de regalo",
+      [
+        "Para quien recomienda."
+      ],
+      "Gracias."
+    ],
+    [
+      "Mide quién llega por quién",
+      [
+        "Sin adivinar."
+      ],
+      "Claridad."
+    ]
+  ],
+  "cover_photo_id": "1551882547-ff40c63fe5fa",
+  "photo_ids": [
+    "1551882547-ff40c63fe5fa",
+    "1524758631624-e2822e304c36",
+    "1600585154340-be6161a56a0c",
+    "1538688525198-9b88f6f53126",
+    "1621523133136-cea844f32bdf",
+    "1486312338219-ce68d2c6f44d"
+  ]
+}
+
+sp {
+  "title": "Cómo decir que sí a menos planes y disfrutar más",
+  "hook": "Menos planes, mejor vividos.",
+  "photos": "life",
+  "point_sets": [
+    "life",
+    "life",
+    "cafe",
+    "wellness",
+    "restaurant"
+  ],
+  "cta": false,
+  "hashtags": "#SocialPerks #Diciembre #Bienestar #Planes #VidaReal",
+  "caption": "Cómo elegir bien tus planes de diciembre para disfrutarlos de verdad.",
+  "points": [
+    [
+      "Elige tres planes",
+      [
+        "Los que de verdad te apetecen."
+      ],
+      "Foco."
+    ],
+    [
+      "Avisa pronto",
+      [
+        "A quien vas a decir que no."
+      ],
+      "Respeto."
+    ],
+    [
+      "Un plan sencillo vale",
+      [
+        "Un café basta."
+      ],
+      "Calma."
+    ],
+    [
+      "Deja un día libre",
+      [
+        "Para ti."
+      ],
+      "Descanso."
+    ],
+    [
+      "Disfruta sin móvil",
+      [
+        "Estar es estar."
+      ],
+      "Presencia."
+    ]
+  ],
+  "cover_photo_id": "1495364141860-b0d03eccd065",
+  "photo_ids": [
+    "1495364141860-b0d03eccd065",
+    "1506784983877-45594efa4cbe",
+    "1484480974693-6ca0a78fb36b",
+    "1511920170033-f8396924c348",
+    "1610701596007-11502861dcfa",
+    "1666282020483-6ebeb210b1c3"
+  ]
+}
+
+sp {
+  "title": "Tu sitio favorito de diciembre, compartido",
+  "hook": "Diciembre sabe mejor en tu sitio de siempre.",
+  "photos": "life",
+  "point_sets": [
+    "cafe",
+    "restaurant",
+    "shop",
+    "cafe",
+    "city"
+  ],
+  "cta": true,
+  "hashtags": "#SocialPerks #SitiosFavoritos #Diciembre #VidaLocal #Recomendaciones",
+  "caption": "Por qué llevar a alguien a tu sitio favorito en diciembre ayuda a tu barrio. https://www.socialperkses.com/",
+  "points": [
+    [
+      "Elige tu sitio",
+      [
+        "El café, el gimnasio, la peluquería."
+      ],
+      "Tuyo."
+    ],
+    [
+      "Invita a alguien nuevo",
+      [
+        "Que no lo conozca."
+      ],
+      "Regalo."
+    ],
+    [
+      "El sitio gana un cliente",
+      [
+        "Que llega con confianza."
+      ],
+      "Apoyo."
+    ],
+    [
+      "Tú ganas un detalle",
+      [
+        "Por recomendar."
+      ],
+      "Gracias."
+    ],
+    [
+      "El barrio sigue vivo",
+      [
+        "Gracias a su gente."
+      ],
+      "Comunidad."
+    ]
+  ],
+  "cover_photo_id": "1538688525198-9b88f6f53126",
+  "photo_ids": [
+    "1538688525198-9b88f6f53126",
+    "1554118811-1e0d58224f24",
+    "1510812431401-41d2bd2722f3",
+    "1441986300917-64674bd600d8",
+    "1495474472287-4d71bcdd2085",
+    "1583422409516-2895a77efded"
+  ]
+}
+
+sin {
+  "title": "December is the month to fix your pitch",
+  "hook": "Investors are quieter in December. Use the time.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "city"
+  ],
+  "cta": false,
+  "caption": "How founders can use a quiet December to tighten their pitch before January. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Record yourself",
+      [
+        "Two minutes, one take."
+      ],
+      "Honest."
+    ],
+    [
+      "Cut the jargon",
+      [
+        "Say it like a friend would."
+      ],
+      "Clear."
+    ],
+    [
+      "Lead with the problem",
+      [
+        "Then the customer."
+      ],
+      "Story."
+    ],
+    [
+      "Show one number",
+      [
+        "The one that matters."
+      ],
+      "Proof."
+    ],
+    [
+      "Test it on a stranger",
+      [
+        "Watch their face."
+      ],
+      "Feedback."
+    ]
+  ],
+  "cover_photo_id": "1641924675896-b6a5aaf64861",
+  "photo_ids": [
+    "1641924675896-b6a5aaf64861",
+    "1495364141860-b0d03eccd065",
+    "1447752875215-b2761acb3c5d",
+    "1484480974693-6ca0a78fb36b",
+    "1517842645767-c639042777db",
+    "1496181133206-80ce9b88a853"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "What to send investors in your December update",
+  "hook": "A short update keeps doors open.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "What a short December investor update should include. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Three wins",
+      [
+        "Short and concrete."
+      ],
+      "Momentum."
+    ],
+    [
+      "One challenge",
+      [
+        "Be honest about it."
+      ],
+      "Trust."
+    ],
+    [
+      "Key numbers",
+      [
+        "The same ones every month."
+      ],
+      "Consistency."
+    ],
+    [
+      "One clear ask",
+      [
+        "An intro or advice."
+      ],
+      "Help."
+    ],
+    [
+      "Say thanks",
+      [
+        "One line is enough."
+      ],
+      "Warmth."
+    ]
+  ],
+  "cover_photo_id": "1554224155-6726b3ff858f",
+  "photo_ids": [
+    "1554224155-6726b3ff858f",
+    "1484480974693-6ca0a78fb36b",
+    "1470252649378-9c29740c9fa8",
+    "1506784983877-45594efa4cbe",
+    "1519389950473-47ba0277781c",
+    "1517842645767-c639042777db"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to plan Q1 hiring as a small startup",
+  "hook": "Hire for the next six months, not the next six years.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "city"
+  ],
+  "cta": false,
+  "caption": "A simple way for founders to plan the first hires of the new year. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Start from the plan",
+      [
+        "What must get done."
+      ],
+      "Purpose."
+    ],
+    [
+      "Spot the bottleneck",
+      [
+        "Where you are stuck."
+      ],
+      "Focus."
+    ],
+    [
+      "Try freelance first",
+      [
+        "Test the role."
+      ],
+      "Low risk."
+    ],
+    [
+      "Write a clear brief",
+      [
+        "One page."
+      ],
+      "Clarity."
+    ],
+    [
+      "Ask your network",
+      [
+        "Warm intros first."
+      ],
+      "Trust."
+    ]
+  ],
+  "cover_photo_id": "1517842645767-c639042777db",
+  "photo_ids": [
+    "1517842645767-c639042777db",
+    "1470252649378-9c29740c9fa8",
+    "1506784983877-45594efa4cbe",
+    "1554224155-6726b3ff858f",
+    "1520607162513-77705c0f0d4a",
+    "1501139083538-0139583c060f"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to read a grant call in twenty minutes",
+  "hook": "Most grant calls hide the key facts in a few places.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "A quick way for founders to judge a grant call before writing a word. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Check who can apply",
+      [
+        "Size, country, stage."
+      ],
+      "Eligibility."
+    ],
+    [
+      "Find the deadline",
+      [
+        "And the time zone."
+      ],
+      "Timing."
+    ],
+    [
+      "Read the scoring",
+      [
+        "That is what counts."
+      ],
+      "Criteria."
+    ],
+    [
+      "Check co-financing",
+      [
+        "How much you add."
+      ],
+      "Budget."
+    ],
+    [
+      "Decide fast",
+      [
+        "Apply or move on."
+      ],
+      "Focus."
+    ]
+  ],
+  "cover_photo_id": "1488190211105-8b0e65b80b4e",
+  "photo_ids": [
+    "1488190211105-8b0e65b80b4e",
+    "1501139083538-0139583c060f",
+    "1499209974431-9dddcece7f88",
+    "1519389950473-47ba0277781c",
+    "1554224155-6726b3ff858f",
+    "1442975631115-c4f7b05b8a2c"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Tuesday habits of calm founders",
+  "hook": "Calm is a habit, not a mood.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "city",
+    "life",
+    "life"
+  ],
+  "cta": false,
+  "caption": "Small Tuesday habits that help founders stay calm in a busy week. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Plan the day the night before",
+      [
+        "Three tasks."
+      ],
+      "Clarity."
+    ],
+    [
+      "Batch your meetings",
+      [
+        "Afternoons only."
+      ],
+      "Focus."
+    ],
+    [
+      "Walk between calls",
+      [
+        "Ten minutes outside."
+      ],
+      "Reset."
+    ],
+    [
+      "Eat a real lunch",
+      [
+        "Away from the desk."
+      ],
+      "Energy."
+    ],
+    [
+      "Stop at a fixed hour",
+      [
+        "Most days."
+      ],
+      "Rest."
+    ]
+  ],
+  "cover_photo_id": "1519389950473-47ba0277781c",
+  "photo_ids": [
+    "1519389950473-47ba0277781c",
+    "1501139083538-0139583c060f",
+    "1516321318423-f06f85e504b3",
+    "1442975631115-c4f7b05b8a2c",
+    "1554224155-6726b3ff858f",
+    "1506784983877-45594efa4cbe"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "How to ask for an intro to an investor",
+  "hook": "A warm intro beats a cold email.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "life"
+  ],
+  "cta": false,
+  "caption": "How founders can ask for a warm introduction the right way. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Pick the right person",
+      [
+        "Someone who knows them well."
+      ],
+      "Trust."
+    ],
+    [
+      "Make it easy",
+      [
+        "A short email they can forward."
+      ],
+      "Simple."
+    ],
+    [
+      "Say why this investor",
+      [
+        "One clear reason."
+      ],
+      "Fit."
+    ],
+    [
+      "Attach nothing heavy",
+      [
+        "A link is enough."
+      ],
+      "Light."
+    ],
+    [
+      "Follow up kindly",
+      [
+        "Once, after a week."
+      ],
+      "Polite."
+    ]
+  ],
+  "cover_photo_id": "1499750310107-5fef28a66643",
+  "photo_ids": [
+    "1499750310107-5fef28a66643",
+    "1541807084-5c52b6b3adef",
+    "1484480974693-6ca0a78fb36b",
+    "1554224155-6726b3ff858f",
+    "1516321318423-f06f85e504b3",
+    "1486312338219-ce68d2c6f44d"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "What a good advisor actually does",
+  "hook": "A good advisor saves you months, not minutes.",
+  "photos": "work",
+  "point_sets": [
+    "city",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "How founders can tell a useful advisor from a name on a slide. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Opens real doors",
+      [
+        "Customers or investors."
+      ],
+      "Access."
+    ],
+    [
+      "Tells you the hard truth",
+      [
+        "Kindly."
+      ],
+      "Honesty."
+    ],
+    [
+      "Has done it before",
+      [
+        "In your space."
+      ],
+      "Experience."
+    ],
+    [
+      "Gives you time",
+      [
+        "Not just a logo."
+      ],
+      "Commitment."
+    ],
+    [
+      "Asks for little",
+      [
+        "Fair terms."
+      ],
+      "Balance."
+    ]
+  ],
+  "cover_photo_id": "1506126613408-eca07ce68773",
+  "photo_ids": [
+    "1506126613408-eca07ce68773",
+    "1447752875215-b2761acb3c5d",
+    "1528712306091-ed0763094c98",
+    "1510812431401-41d2bd2722f3",
+    "1517842645767-c639042777db",
+    "1641924675896-b6a5aaf64861"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}
+
+sin {
+  "title": "Start December with a clean dashboard",
+  "hook": "If you cannot see it, you cannot fix it.",
+  "photos": "work",
+  "point_sets": [
+    "work",
+    "work",
+    "work",
+    "work",
+    "work"
+  ],
+  "cta": false,
+  "caption": "Five numbers founders can track every week from the start of December. Practical preparation for European founders. General guidance, not a promise of funding.",
+  "points": [
+    [
+      "Cash in the bank",
+      [
+        "Every Monday."
+      ],
+      "Runway."
+    ],
+    [
+      "Monthly burn",
+      [
+        "Real, not planned."
+      ],
+      "Truth."
+    ],
+    [
+      "New customers",
+      [
+        "This week."
+      ],
+      "Growth."
+    ],
+    [
+      "Customers who left",
+      [
+        "And why."
+      ],
+      "Learning."
+    ],
+    [
+      "Pipeline",
+      [
+        "The next deals."
+      ],
+      "Future."
+    ]
+  ],
+  "cover_photo_id": "1506784983877-45594efa4cbe",
+  "photo_ids": [
+    "1506784983877-45594efa4cbe",
+    "1554224155-6726b3ff858f",
+    "1499209974431-9dddcece7f88",
+    "1517842645767-c639042777db",
+    "1501139083538-0139583c060f",
+    "1470252649378-9c29740c9fa8"
+  ],
+  "hashtags": "#Startup #Founders #Funding #Europe #Sincronia"
+}

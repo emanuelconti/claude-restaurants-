@@ -1,0 +1,45 @@
+{
+ "date": "2026-12-01",
+ "title": "Cómo cuidarte en diciembre sin dejar de quedar",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Cómo cuidarte en diciembre sin dejar de quedar\n\nDiciembre se disfruta más si llegas descansado.\n\nPequeños gestos para cuidarte en diciembre sin renunciar a tus planes.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Bienestar #Diciembre #Autocuidado #Habitos",
+ "music": "videokit3d music3d.py sp style, seed 942 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#071c26', 'horizon': '#2f8f9a', 'ground': '#06141b', 'glow': '#9ff3e8', 'frame': '#effffd', 'particles': ['#b9fff4', '#ffe7b0', '#a8d8ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout left",
+ "photos": [
+  {
+   "unsplash": "1540555700478-4be289fbecef",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1741522509438-a120c0bb5e88",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1620188467120-5042ed1eb5da",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1551024709-8f23befc6f87",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1506126613408-eca07ce68773",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Duerme una hora más",
+  "Un masaje a mitad de mes",
+  "Mueve el cuerpo",
+  "Agua entre brindis",
+  "Un rato a solas",
+  "end card"
+ ]
+}

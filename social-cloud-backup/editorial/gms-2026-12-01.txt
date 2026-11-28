@@ -1,0 +1,479 @@
+{
+  "title": "Small kind things to do for a colleague today",
+  "hook": "A small kind act can change someone's Tuesday.",
+  "photos": "life",
+  "points": [
+    [
+      "Hold the lift",
+      [
+        "Wait two seconds."
+      ],
+      "Nice."
+    ],
+    [
+      "Share your snacks",
+      [
+        "Biscuits for all."
+      ],
+      "Sweet."
+    ],
+    [
+      "Say thank you properly",
+      [
+        "Name what they did."
+      ],
+      "Warm."
+    ],
+    [
+      "Ask how they really are",
+      [
+        "And listen."
+      ],
+      "Care."
+    ],
+    [
+      "Leave on time together",
+      [
+        "No guilt."
+      ],
+      "Balance."
+    ]
+  ],
+  "caption": "A small kind act can change someone's Tuesday. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Kindness #OfficeLife #SGLife",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "Advent ideas to do with your best friend",
+  "hook": "24 days of December, 24 little moments.",
+  "photos": "life",
+  "points": [
+    [
+      "Swap a small gift",
+      [
+        "Once a week."
+      ],
+      "Fun."
+    ],
+    [
+      "Watch a Christmas movie",
+      [
+        "Blanket included."
+      ],
+      "Cosy."
+    ],
+    [
+      "Bake cookies together",
+      [
+        "Messy is fine."
+      ],
+      "Sweet."
+    ],
+    [
+      "Walk the Orchard Road lights",
+      [
+        "Take photos."
+      ],
+      "Magic."
+    ],
+    [
+      "Write each other a note",
+      [
+        "Open it on the 24th."
+      ],
+      "Love."
+    ]
+  ],
+  "caption": "24 days of December, 24 little moments. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Advent #Friendship #SGFriends",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Thoughtful Christmas gifts on a small budget",
+  "hook": "The best gifts are about thought, not price.",
+  "photos": "life",
+  "points": [
+    [
+      "A handwritten card",
+      [
+        "Say what they mean to you."
+      ],
+      "Love."
+    ],
+    [
+      "A message hoodie",
+      [
+        "Words they can wear."
+      ],
+      "Cosy."
+    ],
+    [
+      "Their favourite snack",
+      [
+        "Wrapped nicely."
+      ],
+      "Sweet."
+    ],
+    [
+      "A playlist for them",
+      [
+        "Songs that remind you."
+      ],
+      "Personal."
+    ],
+    [
+      "A day out together",
+      [
+        "Time is a gift."
+      ],
+      "Memories."
+    ]
+  ],
+  "caption": "The best gifts are about thought, not price. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #GiftIdeas #ChristmasGifts #SGGifts",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}
+
+{
+  "title": "How to say I miss you without being awkward",
+  "hook": "Missing someone is easy. Saying it is harder.",
+  "photos": "life",
+  "points": [
+    [
+      "Send an old photo",
+      [
+        "It says it all."
+      ],
+      "Memories."
+    ],
+    [
+      "Ask about their week",
+      [
+        "Then really listen."
+      ],
+      "Care."
+    ],
+    [
+      "Suggest a date",
+      [
+        "Make it real."
+      ],
+      "Plan."
+    ],
+    [
+      "Keep it simple",
+      [
+        "I miss you is enough."
+      ],
+      "Honest."
+    ],
+    [
+      "Wear the hoodie they gave you",
+      [
+        "Send a selfie."
+      ],
+      "Fun."
+    ]
+  ],
+  "caption": "Missing someone is easy. Saying it is harder. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #Friendship #KindWords #SGFriends",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg"
+  ]
+}
+
+{
+  "title": "Tuesday lunch ideas for a busy day",
+  "hook": "Busy day? Lunch still matters.",
+  "photos": "life",
+  "points": [
+    [
+      "Yong tau foo",
+      [
+        "Pick your own."
+      ],
+      "Light."
+    ],
+    [
+      "Fish soup",
+      [
+        "Warm and clean."
+      ],
+      "Comfort."
+    ],
+    [
+      "Economy rice",
+      [
+        "Quick and filling."
+      ],
+      "Easy."
+    ],
+    [
+      "Lunch with a colleague",
+      [
+        "Talk about anything but work."
+      ],
+      "Break."
+    ],
+    [
+      "A cold drink after",
+      [
+        "Kopi peng or teh."
+      ],
+      "Treat."
+    ]
+  ],
+  "caption": "Busy day? Lunch still matters. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SGFood #LunchIdeas #Singapore",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg"
+  ]
+}
+
+{
+  "title": "Self care ideas for a rainy Singapore evening",
+  "hook": "Rainy evenings are made for slowing down.",
+  "photos": "life",
+  "points": [
+    [
+      "Hot Milo",
+      [
+        "Just like childhood."
+      ],
+      "Comfort."
+    ],
+    [
+      "Your softest hoodie",
+      [
+        "Instant cosy."
+      ],
+      "Warm."
+    ],
+    [
+      "A face mask",
+      [
+        "Ten quiet minutes."
+      ],
+      "Pamper."
+    ],
+    [
+      "Call your mum",
+      [
+        "She'll love it."
+      ],
+      "Love."
+    ],
+    [
+      "Early night",
+      [
+        "Listen to the rain."
+      ],
+      "Rest."
+    ]
+  ],
+  "caption": "Rainy evenings are made for slowing down. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #SelfCare #RainyDay #SGLife",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg"
+  ]
+}
+
+{
+  "title": "How to make December less stressful",
+  "hook": "December can be fun without the stress.",
+  "photos": "life",
+  "points": [
+    [
+      "Write one list",
+      [
+        "Gifts, dates, plans."
+      ],
+      "Order."
+    ],
+    [
+      "Skip some events",
+      [
+        "Pick your favourites."
+      ],
+      "Freedom."
+    ],
+    [
+      "Shop early",
+      [
+        "Before the crowds."
+      ],
+      "Smart."
+    ],
+    [
+      "Keep one weekend free",
+      [
+        "Just for you."
+      ],
+      "Rest."
+    ],
+    [
+      "Enjoy the little things",
+      [
+        "Lights, songs, friends."
+      ],
+      "Joy."
+    ]
+  ],
+  "caption": "December can be fun without the stress. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #DecemberPlans #Wellbeing #SGLife",
+  "cta": false,
+  "layouts": [
+    "text",
+    "product",
+    "text",
+    "classic",
+    "text"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg"
+  ]
+}
+
+{
+  "title": "Tuesday night ideas to recharge",
+  "hook": "Halfway to the weekend. Time to recharge.",
+  "photos": "life",
+  "points": [
+    [
+      "Stretch for ten minutes",
+      [
+        "Loosen the day."
+      ],
+      "Relax."
+    ],
+    [
+      "Cook something simple",
+      [
+        "Eggs count."
+      ],
+      "Easy."
+    ],
+    [
+      "Text someone you love",
+      [
+        "Goodnight."
+      ],
+      "Close."
+    ],
+    [
+      "Hoodie and a book",
+      [
+        "Perfect combo."
+      ],
+      "Cosy."
+    ],
+    [
+      "Phone away at ten",
+      [
+        "Sleep better."
+      ],
+      "Rest."
+    ]
+  ],
+  "caption": "Halfway to the weekend. Time to recharge. Everyday friendship and thoughtful gifts in Singapore. Discover message hoodies at https://goodmessagestudio.com/.",
+  "hashtags": "#GoodMessageStudio #Singapore #NightRoutine #SelfCare #Recharge",
+  "cta": false,
+  "layouts": [
+    "product",
+    "text",
+    "classic",
+    "text",
+    "product"
+  ],
+  "photo_urls": [
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-boat-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/cca0712a-b748-49ee-abf9-976097c16398.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/gm-back.jpg",
+    "https://cdn.shopify.com/s/files/1/1038/5401/4799/files/fab40257-cce2-49d3-89a5-dabddcf67fdb_2e90aa53-6348-4d44-a1dd-765b40adb32f.jpg"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+ "date": "2026-12-01",
+ "title": "Pequeños placeres de un martes de diciembre",
+ "video": "reel.mp4",
+ "cover": "cover.jpg",
+ "seconds": 18.6,
+ "caption": "Pequeños placeres de un martes de diciembre\n\nUn martes cualquiera también puede ser especial.\n\nPequeños placeres para disfrutar un martes de diciembre en tu ciudad.\n\nSíguenos (@socialperks.es): un empujón para tu día, cada día. Guárdalo y mándaselo a quien lo necesite.\n\n#SocialPerks #Diciembre #PequenosPlaceres #VidaLocal #Martes",
+ "music": "videokit3d music3d.py sp style, seed 905 (original, tones written in code, rights-cleared)",
+ "engine": "videokit3d reel3d.html (Three.js, bloom, frame-by-frame), palette {'top': '#05070f', 'horizon': '#24305e', 'ground': '#04060c', 'glow': '#7fb4ff', 'frame': '#f1f4ff', 'particles': ['#9fc3ff', '#ffe3a3', '#c7b2ff'], 'accent': '#ffd24a', 'accentInk': '#15161b'}, layout right",
+ "photos": [
+  {
+   "unsplash": "1641924675896-b6a5aaf64861",
+   "slide": "slide-01.jpg"
+  },
+  {
+   "unsplash": "1495474472287-4d71bcdd2085",
+   "slide": "slide-02.jpg"
+  },
+  {
+   "unsplash": "1604654894610-df63bc536371",
+   "slide": "slide-03.jpg"
+  },
+  {
+   "unsplash": "1472851294608-062f824d29cc",
+   "slide": "slide-04.jpg"
+  },
+  {
+   "unsplash": "1600028068383-ea11a7a101f3",
+   "slide": "slide-05.jpg"
+  },
+  {
+   "unsplash": "1511527661048-7fe73d85e9a4",
+   "slide": "slide-06.jpg"
+  }
+ ],
+ "scenes": [
+  "hook",
+  "Un café caliente",
+  "Manicura de temporada",
+  "Una tienda de barrio",
+  "Pizza al salir",
+  "Luces de camino a casa",
+  "end card"
+ ]
+}
