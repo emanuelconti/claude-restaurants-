@@ -119,7 +119,7 @@ def main():
         size = os.path.getsize(video)
         init = G.http("POST", UPLOAD, token, body={
             "snippet": {"title": title, "description": description, "categoryId": "26",
-                        "tags": ["goodmessagestudio", "singapore", "kindness", "hoodie", "giftideas"]},
+                        "tags": ["goodmessagestudio", "singapore", "australia", "kindness", "hoodie", "giftideas"]},
             "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False}},
             headers={"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)})
         location = init.get("_headers", {}).get("Location") or init.get("_headers", {}).get("location")

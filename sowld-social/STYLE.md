@@ -9,7 +9,7 @@
 
 **This section overrides anything below that says otherwise.** We have no ad budget, so every post has to do what a Meta campaign would: reach the right people, stop the scroll, and send them to goodmessagestudio.com. The levers we have are the audience-specific content, the search keywords in the caption, the hashtags, the timing and the shares and saves that push a post to non-followers. Use all of them, every time.
 
-**Who we target:** women in Singapore, 18 to 38. Students, young professionals in the CBD and the heartlands, young mums. English-speaking, on Instagram every day, on Facebook more as they get older. They buy for themselves (a cosy hoodie for the aircon) and as gifts (a birthday, a best friend, Christmas, a colleague's farewell).
+**Who we target (owner, 28 November 2026: Singapore AND Australia):** women in Singapore and in Australia (Sydney, Melbourne, Brisbane, Perth), 18 to 38. About half the topics work for both; the rest alternate a Singapore moment and an Australian one (beach mornings, the weekend coffee run, summer in December). Until the shop really ships to Australia, never write "ships to Australia", AUD prices or delivery times. In Singapore: Students, young professionals in the CBD and the heartlands, young mums. English-speaking, on Instagram every day, on Facebook more as they get older. They buy for themselves (a cosy hoodie for the aircon) and as gifts (a birthday, a best friend, Christmas, a colleague's farewell).
 
 **What makes the algorithm show it to new people:** sends (DMs) and saves first, then time spent swiping, then likes. So every carousel is built to be sent ("this is so you") or saved (a list, a guide, a gift idea). The cover must stop the thumb: a big specific promise, a product photo with the message clearly readable.
 
@@ -23,14 +23,17 @@
 
 **Seasonal calendar** (lead with it when it is close): 11.11 and Black Friday only if the shop really runs a promotion (never invent one); World Kindness Day, 13 November (our day: post about kindness that week); Christmas and year-end gifting from mid-November to 24 December; New Year intentions in January; Chinese New Year and Galentine's/Valentine's in January and February; Mother's Day in May; World Mental Health Day, 10 October.
 
-**Caption = search.** Instagram and Facebook search read the caption, so set `"caption"` on every topic: two or three natural sentences with what someone in Singapore would type, for example "oversized hoodie Singapore", "gift for her Singapore", "birthday gift for best friend", "cosy hoodie for office aircon", "slogan tee with a kind message". Mention the product type, Singapore, and the use or the occasion. Then end with one soft line that drives sends ("Send this to the friend who needs it today."). Never "tag 3 friends", never "comment YES": that is engagement bait and gets posts pushed down.
+**Caption = search.** Instagram and Facebook search read the caption, so set `"caption"` on every topic: two or three natural sentences with what someone in Singapore would type, for example "oversized hoodie Singapore", "gift for her Singapore", "birthday gift for best friend", "cosy hoodie for office aircon", "slogan tee with a kind message". Mention the product type, the place (Singapore, or Australia/Sydney/Melbourne for an Australian topic) and the use or the occasion: e.g. "gift for her Australia", "oversized hoodie Sydney". Then end with one soft line that drives sends ("Send this to the friend who needs it today."). Never "tag 3 friends", never "comment YES": that is engagement bait and gets posts pushed down.
 
-**Hashtags: 8 to 12, mixed by size, never the same block twice in a row.** Always `#goodmessagestudio #singapore`. Then pick:
+**Hashtags: 8 to 12, mixed by size, never the same block twice in a row.** Always `#goodmessagestudio`, then `#singapore` and/or `#australia` according to the topic (both on topics for both countries). Then pick:
+- Australia (2 or 3 on Australian or shared topics): #australia #sydney #melbourne #brisbane #ausfashion #australianfashion #giftsforheraustralia #sydneystyle #melbournestyle (never #australianmade: the products are not made there)
 - Singapore fashion and shopping (2 or 3): #sgfashion #sgootd #sgstyle #singaporefashion #sgshopping #shopsg #sgonlineshop #sgdeals (only with a real deal)
 - audience and gifts (2 or 3): #sggifts #giftideasforher #giftsforher #birthdaygiftideas #bestfriendgift #christmasgiftideas (in season) #sggirls
 - the message (2 or 3): #bekind #kindnessmatters #selflove #positivevibes #enjoythelittlethings #mentalhealthawareness #worldkindnessday (13 November)
 - the product (1 or 2): #oversizedhoodie #hoodieseason #graphichoodie #slogantee #cosyvibes
 No banned or spammy tags (#like4like, #follow4follow and the like).
+
+**Photos always varied (owner, 28 November 2026):** never the same two photos again and again. Rotate through every real product photo on goodmessagestudio.com (all colours and messages); do not reuse a photo on the same channel within 3 days. Not every post shows a product: keep the 2 daily product showcases, and let the other posts and videos be life first, with the hoodie only where it fits, or none.
 
 **Cover and photos:** the cover is a product photo where the printed message reads at a glance (gm-city, gm-back, the Be Kind back print, Do What Makes You Happy), or a model wearing it. The slides follow the products named in the points. Different cover from the day's other posts.
 
@@ -143,7 +146,7 @@ Formats that work: "5 messages worth repeating this week", "Signs you need a rem
 - `photo_urls`: the shop's product image URLs (https://cdn.shopify.com/... or https://goodmessagestudio.com/cdn/...), cover first.
 - `photos`: a fallback set for any slide without a product photo (`human` or `life`).
 - `cta`: `true` on every topic.
-- `hashtags`: 6 to 10, always `#goodmessagestudio` and `#singapore`, then ones that fit the topic and Singapore (#sgfashion, #sgstyle, #sggifts, #sgootd, #bekind, #kindness, #positivevibes, #selfcare, #mentalhealthawareness, #giftideas).
+- `hashtags`: 6 to 10, always `#goodmessagestudio`, plus `#singapore` and/or `#australia` by topic, then ones that fit the topic and Singapore (#sgfashion, #sgstyle, #sggifts, #sgootd, #bekind, #kindness, #positivevibes, #selfcare, #mentalhealthawareness, #giftideas).
 
 `carousel.py --topic <file>` refuses a topic that breaks these limits and says what to fix.
 
