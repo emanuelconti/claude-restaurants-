@@ -47,6 +47,15 @@ Owner, 22 November 2026 (wins over the text-only line above, nothing else change
 
 ## Good Message Studio
 
+### Owner, 28 November 2026: Singapore AND Australia (wins over the Singapore-only lines below)
+- Audience on every GMS channel (Instagram, Facebook, YouTube Shorts, Threads, Pinterest when active): English-speaking women aged 18-38 in Singapore and in Australia. Organic brief only, no ad targeting claimed.
+- Cultural and seasonal references must work in both countries: December is summer in Australia, so no winter, snow or cold-weather themes as a general topic. British/Australian spelling (colour, favourite, organise).
+- Never write "ships to Singapore only". Do not write "shipping to Australia" in captions until the owner confirms the Australian market is live in Shopify (AUD, shipping, policies).
+- Photos: never the same two images again and again. Rotate real product photos from goodmessagestudio.com (products.json, Shopify CDN) and the reviewed slides: a different product in each Reel and carousel. Never invented products, prices or reviews.
+- 3D Reels every day (videokit3d). Maximum care: everything checked before approval.
+- Publishing calendar, daily caps and the Asia/Singapore market day stay as they are.
+
+
 > **Owner, 28 November 2026: Singapore AND Australia, on every channel. This overrides "Market: Singapore" below.**
 > - **Two targets, same brand:** English-speaking women 18-38 in Singapore and in Australia (Sydney, Melbourne, Brisbane, Perth). Applies to carousels, Reels and the 3D code videos on Instagram, Facebook, YouTube, and TikTok when it is enabled. Organic only: no paid ads (the owner cannot pay now).
 > - **Mix:** about half of each day's topics work for both countries (friendship, self-kindness, gifting); the rest alternate one Singapore moment and one Australian moment (beach mornings, the weekend coffee run, Aussie slang used lightly and correctly, southern-hemisphere seasons: December is summer there, so no winter or snow content for Australia). Hashtags: always #goodmessagestudio, then mix Singapore tags (#singapore #sgfashion #sggifts) and Australian tags (#australia #sydney #melbourne #ausfashion #giftsforheraustralia), never #australianmade (the products are not made there). Calendar stays Asia/Singapore; Sydney is 3 hours ahead, so the evening slots (20:17, 21:17 SG) land late for Australia. Prefer Australian topics in the morning and lunch slots.
