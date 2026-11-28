@@ -38,6 +38,20 @@ class Story(unittest.TestCase):
         self.assertEqual(len(R.STORY_PICKS), 12)
         self.assertTrue(all(0 <= x < R.STORY_SECONDS for x in R.STORY_PICKS))
 
+    def test_cards_are_real_message_hoodies_and_rotate(self):
+        import json as J, tempfile
+        cards = J.loads((HERE / 'videokit3d' / 'gms_cards.json').read_text())['cards']
+        self.assertGreaterEqual(len({c['product'] for c in cards}), 4)
+        self.assertTrue(all(c['url'].startswith('https://cdn.shopify.com/') for c in cards))
+        old = R.ROOT
+        with tempfile.TemporaryDirectory() as d:
+            R.ROOT = Path(d)
+            first = R.pick_card(5)
+            f = Path(d) / 'queue' / 'gms' / '2099-01-01' / 'reel-7'; f.mkdir(parents=True)
+            (f / 'reel.json').write_text(J.dumps(dict(photos=[dict(card=first['key'])])))
+            self.assertNotEqual(R.pick_card(5)['key'], first['key'])
+        R.ROOT = old
+
     def test_story_layout_is_not_learned_as_a_reel3d_layout(self):
         self.assertNotIn('story3d-2', R.LAYOUTS)
 

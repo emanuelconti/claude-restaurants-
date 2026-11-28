@@ -1,0 +1,54 @@
+{
+ "checked": "2026-11-28: every photo inspected, the whole printed message visible; plain fronts and close-ups of the same products are excluded",
+ "cards": [
+  {
+   "key": "etlt-boat",
+   "product": "Enjoy The Little Things Hoodie",
+   "message": "Enjoy the little things.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/gm-boat-back.jpg?v=1795871044",
+   "note": "worn, back print, sea"
+  },
+  {
+   "key": "etlt-flat",
+   "product": "Enjoy The Little Things Hoodie",
+   "message": "Enjoy the little things.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/gm-back.jpg?v=1795871045",
+   "note": "flat back print"
+  },
+  {
+   "key": "dwmyh-blue",
+   "product": "Do What Makes You Happy Hoodie",
+   "message": "Do what makes you happy.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/5946603d-16fa-459e-99e4-85ff7d8f3abf.jpg?v=1795871019",
+   "note": "worn, blue, back print"
+  },
+  {
+   "key": "dwmyh-pink",
+   "product": "Do What Makes You Happy Hoodie",
+   "message": "Do what makes you happy.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/fab40257-cce2-49d3-89a5-dabddcf67fdb.jpg?v=1795871019",
+   "note": "worn, pink, back print"
+  },
+  {
+   "key": "bekind-white",
+   "product": "Be Kind Rainbow Hoodie",
+   "message": "Be kind.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/0326d32f-3a56-4329-bc0e-de51267574a9.jpg?v=1795871018",
+   "note": "worn, white, back print"
+  },
+  {
+   "key": "bekind-pink",
+   "product": "Be Kind Rainbow Hoodie",
+   "message": "Be kind.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/cca0712a-b748-49ee-abf9-976097c16398.jpg?v=1795871018",
+   "note": "worn, pink, back print"
+  },
+  {
+   "key": "peace",
+   "product": "Peace Starts With Us Hoodie",
+   "message": "Peace starts with us.",
+   "url": "https://cdn.shopify.com/s/files/1/1052/5442/0827/files/8e6a039c-9d89-44e8-9ee5-560d62af7d10_Picturetext_White.jpg?v=1795871017",
+   "note": "flat front print"
+  }
+ ]
+}

@@ -227,8 +227,31 @@ STORY_PALETTES = {
 STORY_PICKS = [0, 0.5, 1.5, 3.5, 4.6, 6.3, 8.5, 9.8, 11.5, 13.8, 15.2, 17.5]
 
 
+def pick_card(h):
+    """Owner, 28 November 2026: a different real product in each Reel. The least used card of gms_cards.json
+    (counted over every reel.json in the queue) wins; ties go by the item hash."""
+    import glob
+    cards = json.loads((HERE / 'gms_cards.json').read_text())['cards']
+    used = {c['key']: 0 for c in cards}
+    for f in glob.glob(str(ROOT / 'queue' / 'gms' / '*' / 'reel*' / 'reel.json')):
+        try:
+            for ph in json.loads(Path(f).read_text()).get('photos', []):
+                for c in cards:
+                    if ph.get('url') == c['url'] or ph.get('card') == c['key']:
+                        used[c['key']] += 1
+        except Exception:
+            continue
+    return min(cards, key=lambda c: (used[c['key']], (h + cards.index(c) * 7919) % 97))
+
+
 def story_card(spec, item_id):
-    """--card <reviewed slide path, relative to social-cloud-backup>:x0,y0,x1,y1 -> cropped real product photo in the cache."""
+    """--card <reviewed slide path, relative to social-cloud-backup>:x0,y0,x1,y1, or card:<key> from gms_cards.json
+    -> real product photo in the cache."""
+    if spec.startswith('card:'):
+        c = next(c for c in json.loads((HERE / 'gms_cards.json').read_text())['cards'] if c['key'] == spec[5:])
+        out = VK / 'assets' / item_id; out.mkdir(parents=True, exist_ok=True)
+        fetch(c['url'], out / 'card.jpg')
+        return out / 'card.jpg', dict(url=c['url'], card=c['key'], product=c['product'], product_photo=True)
     path, _, box = spec.partition(':')
     im = Image.open(ROOT / path).convert('RGB')
     crop = [int(v) for v in box.split(',')] if box else [0, 0, im.width, im.height]
@@ -259,6 +282,8 @@ def make_story(item_id, card, message, cta='Gift the message'):
     B = BRANDS[b]
     topic = topic_for(item)
     h = int(hashlib.sha256(item_id.encode()).hexdigest()[:8], 16)
+    if not card:
+        c = pick_card(h); card, message = f"card:{c['key']}", message or c['message']
     card_path, card_src = story_card(card, item_id)
     pal_name = list(STORY_PALETTES)[h % len(STORY_PALETTES)]
     pal = dict(STORY_PALETTES[pal_name], accent=B['accent'])
@@ -313,7 +338,7 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('ids', nargs='+')
     ap.add_argument('--scene', default='auto', choices=['auto', 'story3d-2'], help='auto: story3d for GMS, reel3d for the others (VK_SCENE overrides)')
-    ap.add_argument('--card', help='story3d-2: reviewed slide with the real hoodie, e.g. queue/gms/<date>/carousel-7/slide-05.jpg:0,490,1080,1350')
+    ap.add_argument('--card', help='story3d-2: omit to rotate the real products of gms_cards.json, or card:<key>, or a reviewed slide crop such as queue/gms/<date>/carousel-7/slide-05.jpg:0,490,1080,1350')
     ap.add_argument('--message', help="story3d-2: the hoodie's message as the last line, e.g. 'Enjoy the little things.'")
     ap.add_argument('--cta', default='Gift the message')
     a = ap.parse_args()
