@@ -1,4 +1,4 @@
-> Current owner instruction, 3 November 2026: read SOCIAL_MARKET_RULES.md and SOCIAL_CLOUD_RUNBOOK.md FIRST. The cloud is the sole standing publisher, also after Thursday. Chrome Claude is primary editor; Safari Claude is backup editor only. Each brand has its own audience and market calendar; GMS is English/SGD/women in Singapore/Asia-Singapore. Older schedules and channel lists below are historical.
+> Current owner instruction, 3 November 2026: read SOCIAL_MARKET_RULES.md and SOCIAL_CLOUD_RUNBOOK.md FIRST. The cloud is the sole standing publisher, also after Thursday. Chrome Claude is primary editor; Safari Claude is backup editor only. Each brand has its own audience and market calendar; GMS is English, women in Singapore AND Australia since 28 November 2026 (see the top of the GMS section in SOCIAL_MARKET_RULES.md: no Australia shipping claims until the shop ships there; vary the site photos), calendar Asia/Singapore. Older schedules and channel lists below are historical.
 
 # Social accounts: shared handoff (read this before touching any of them)
 
