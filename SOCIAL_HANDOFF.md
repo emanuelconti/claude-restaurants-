@@ -150,3 +150,14 @@ The owner: new videos must look like the latest Y Combinator launch videos (Boat
 - **Rhythm:** at least one 3D video a day per brand, replacing a carousel, never adding to the volume (1 to 2 posts a day in all).
 - **Optimise every day** from likes, comments, shares and saves (`scripts/social/weekly_ig_report.py` logic, daily): keep the scene style, captions and hooks that get interactions, change one thing at a time, write the change in this file.
 - **Never** a real brand, person or venue we do not have rights to; no logos of others; only our own words and colours.
+
+## GMS: Singapore AND Australia (owner, 28 November 2026; for every Claude and for Codex)
+Every new GMS day targets women in Singapore and Australia on every channel, videos included. The full rule is the top block of the Good Message Studio section in `SOCIAL_MARKET_RULES.md` on `codex/social-cloud-backup`, which every editor reads at the start of each run. In short:
+- **Topics:** about half work for both countries; the rest alternate a Singapore moment and an Australian one (December is summer in Australia).
+- **Hashtags:** #goodmessagestudio, then Singapore and Australian tags; never #australianmade.
+- **No promises the shop cannot keep yet:** no "ships to Australia", no AUD prices and no delivery times until the shop really ships there.
+- **Photos:** rotate the real photos from goodmessagestudio.com; never the same photo on the same channel within 3 days.
+- **Products:** 2 product showcases a day; the rest of the posts are life first.
+- **Already approved days** stay as they are.
+
+The primary editor's routine also carries this paragraph. SocialPerks and Sincronia are unchanged.
