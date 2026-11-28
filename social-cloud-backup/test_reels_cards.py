@@ -226,6 +226,20 @@ class FacebookReel(unittest.TestCase):
                     FR.main()
 
 
+class FacebookReelCount(unittest.TestCase):
+    def test_reels_listed_in_feed_and_reels_are_counted_once(self):
+        import fb_reel_publish as FR
+        feed = [dict(message=f'Post {k}\nbody', created_time=f'2026-11-27T0{k}:00:00+0000') for k in range(6)]
+        reel_rows = [dict(message=f'Post {k}\nbody', created_time=f'2026-11-27T0{k}:00:03+0000') for k in (0, 2, 4)]
+        self.assertEqual(len(FR.merge_history(feed, reel_rows)), 6)
+
+    def test_reel_missing_from_feed_still_counts(self):
+        import fb_reel_publish as FR
+        feed = [dict(message='A', created_time='2026-11-27T01:00:00+0000')]
+        self.assertEqual(len(FR.merge_history(feed, [dict(message='B', created_time='2026-11-27T02:00:00+0000'),
+                                                     dict(message='A', created_time='2026-11-27T05:00:00+0000')])), 3)
+
+
 class InstagramReelAllBrands(unittest.TestCase):
     def test_shared_reel_publisher_dedupes_caps_and_uses_cover(self):
         sys.path.insert(0, str(ROOT / 'publishers'))

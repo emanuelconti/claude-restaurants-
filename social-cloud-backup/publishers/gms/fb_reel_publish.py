@@ -40,6 +40,26 @@ def reels(page: str, token: str) -> list:
     return [dict(message=r.get("description") or "", created_time=r.get("created_time"), permalink_url=r.get("permalink_url")) for r in rows]
 
 
+def merge_history(feed: list, reel_rows: list) -> list:
+    """A Page Reel also shows up in the feed (/posts): count it once. A Reel row is dropped when a feed post has the
+    same first line within 15 minutes; otherwise six real posts (three Reels) were counted as nine and the evening
+    Reel (the seventh post) hit the daily cap every day, 20-27 November 2026."""
+    def key(p):
+        return (p.get("message") or "").strip().split("\n", 1)[0].strip()
+    def when(p):
+        try:
+            return dt.datetime.strptime(p["created_time"], "%Y-%m-%dT%H:%M:%S%z")
+        except Exception:
+            return None
+    out = list(feed)
+    for r in reel_rows:
+        rt = when(r)
+        twin = any(key(f) == key(r) and rt and when(f) and abs((when(f) - rt).total_seconds()) <= 900 for f in feed)
+        if not twin:
+            out.append(r)
+    return out
+
+
 def probe(path: str) -> dict:
     out = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height,r_frame_rate",
                                               "-show_entries", "format=duration", "-of", "json", path], text=True))
@@ -88,7 +108,7 @@ def main():
             sys.exit("wrong Facebook Page identity: nothing published")
         local = probe(path)
         first = meta["caption"].split("\n", 1)[0].strip()
-        posts = F.recent(page, token) + reels(page, token)
+        posts = merge_history(F.recent(page, token), reels(page, token))
         done = next((p for p in posts if (p.get("message") or "").strip().startswith(first)), None)
         if done:
             print(f"already published: {done.get('permalink_url')}")
