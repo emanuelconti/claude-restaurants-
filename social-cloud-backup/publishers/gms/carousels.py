@@ -524,7 +524,7 @@ FOLLOW = dict(
 )
 
 # Product photos that open a carousel, in rotation (chosen 1 November 2026: the message reads at a glance,
-# aimed at women in Singapore; 1 November: no AI-looking models, so gm-city and gm-studio are out). Never use the store's supplier ads, the balaclava photo or the "19" print.
+# aimed at women in Singapore and, since 28 November, Australia; 1 November: no AI-looking models, so gm-city and gm-studio are out). Never use the store's supplier ads, the balaclava photo or the "19" print.
 # 2 November 2026 (the owner: premium, never the plain front of a hoodie as an opener): only hero shots with the
 # printed message, alternating with typographic covers (TEXT:n = palette n). 12 distinct openers in a row.
 GMS_HEROES = [
